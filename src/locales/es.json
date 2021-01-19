@@ -1,0 +1,83 @@
+{
+  "main": {
+    "title": "Formulario de Recolección de datos de COVID-19",
+    "paragraph1": "Este formulario le tomará 2 minutos en completar.\nAntes de empezar, por favor seleccione su idioma.",
+    "hospitalCodeLabel": "Código de Hospital",
+    "patientIdLabel": "ID de Paciente",
+    "hospitalCodePlaceholder": "tipear aquí...",
+    "patientIdPlaceholder": "tipear aquí...",
+    "nextButton": "Siguiente"
+  },
+  "beforeStart": {
+    "title": "Por último, antes de empezar...",
+    "subtitle": "Para reducir el riesgo y el daño autoinfligido, le aconsejamos:",
+    "advise1": "Por favor, use su propio dispositivo y use una máscara cuando sea apropiado.",
+    "advise2": "Desinfecte su dispositivo y cualquier superficie afectada o cercana después de grabar su tos/voz.",
+    "advise3": "Si tiene una condición previa que aumente su riesgo al toser, por favor consulte con su médico antes de participar.",
+    "advise4": "Si siente que sus síntomas están empeorando, por favor contacte a su centro médico local.",
+    "startButton": "Comenzar"
+  },
+  "recordingsIntroduction": {
+    "recordCough": {
+      "header": "Grabe su tos",
+      "title": "Instrucciones",
+      "intro1": "Por favor, tosa lejos de las personas que están a su alrededor. Si se siente enfermo, por favor siéntese.",
+      "intro2": "En un ambiente silencioso, por favor presione el botón de grabar y tosa intencionalmente de 3 a 5 veces."
+    },
+    "recordSpeech": {
+      "header": "Grabe su voz",
+      "intro1": "¡El sonido de su voz también puede ayudarnos a aprender cómo suena el COVID! Por favor, presione para grabar y cuente claramente del uno al diez."
+    },
+    "next": "Siguiente",
+    "releaseButtonStart": "Suelte para empezar a grabar",
+    "releaseButtonStop": "Suelte para detener la grabación",
+    "shortRecording": "Por favor, haga una grabación de al menos 5 segundos"
+  },
+  "recordingsRecord": {
+    "recordCough": {
+      "header": "Grabe su tos"
+    },
+    "recordSpeech": {
+      "header": "Grabe su voz"
+    },
+    "next": "Continuar",
+    "delete": "Borrar",
+    "text": "Pulse el botón de grabación y tosa intencionadamente de 3 a 5 veces. Cuando haya terminado, haga clic en continuar.",
+    "textCount": "Haga clic en el botón de grabar y cuente claramente del uno al diez. Cuando haya terminado, haga clic en continuar.",
+    "upload": "sube tu propio audio"
+  },
+  "recordingsRecordManual": {
+    "header": "Subir un archivo",
+    "addFile": "Añada su archivo",
+    "constraint": "Añada hasta 5 MB",
+    "next": "Hecho",
+    "micError": "¿No puede acceder al micrófono?",
+    "micErrorDescription": "Por favor, suba un archivo de audio aquí.",
+    "fileDurationTooShort": "Por favor, suba un archivo de al menos 5 segundos",
+    "fileSizeTooBig": "Por favor, suba un archivo de menos de 5 MB",
+    "fileRequired": "Por favor, suba un archivo"
+  },
+  "recordingsListen": {
+    "recordCough": {
+      "header": "Grabe su tos",
+      "intro1": "Por favor, tosa lejos de las personas a tu alrededor. Si se siente enfermo, por favor siéntese.",
+      "intro2": "En un ambiente silencioso, por favor presione el botón de grabar y tosa intencionalmente de 3 a 5 veces."
+    },
+    "recordSpeech": {
+      "header": "Grabe su voz",
+      "intro1": "¡El sonido de su voz también puede ayudarnos a aprender cómo suena el COVID! Por favor, presione para grabar y cuente claramente del uno al diez."
+    },
+    "title": "Grabación enviada",
+    "subtitle": "Siéntase libre de escuchar la grabación.",
+    "next": "Hecho"
+  },
+  "predictionResult": {
+    "processingTitle": "Procesando",
+    "predictionResultTitle": "Resultado de la Predicción",
+    "likelihoodPrefix": "Su probabilidad de COVID-19 es",
+    "nextButton": "Submir otra tos"
+  },
+  "footerReportProblems": {
+    "message": "¿Algo mal? Reportar un problema"
+  }
+}
