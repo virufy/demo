@@ -1,0 +1,82 @@
+{
+  "main": {
+    "title": "COVID-19 Data Collection Form",
+    "paragraph1": "This form will take about 2 minutes to complete. \nBefore you begin, please select your language.",
+    "hospitalCodeLabel": "Hospital code",
+    "patientIdLabel": "Patient ID",
+    "hospitalCodePlaceholder": "type here...",
+    "patientIdPlaceholder": "type here...",
+    "nextButton": "Next"
+  },
+  "beforeStart": {
+    "title": "Lastly, before we begin...",
+    "subtitle": "To reduce risk and self-harm, we advise you to:",
+    "advise1": "Please use your own device and wear a mask when appropiate.",
+    "advise2": "Disinfect your device and any affected or nearby surfaces after recording your cough/speech.",
+    "advise3": "If you have an underlying condition that increases your risk from coughing, please check with your health care provider before participating.",
+    "advise4": "If you feel your symptoms are getting worse, please contact your local medical response.",
+    "startButton": "Start"
+  },
+  "recordingsIntroduction": {
+    "recordCough": {
+      "header": "Record your cough",
+      "intro1": "Please cough away from others around you! If you are feeling ill, please sit down.",
+      "intro2": " In a quiet environment, please press record and intentionally cough around 3-5 times."
+    },
+    "recordSpeech": {
+      "header": "Record your speech",
+      "intro1": "The sound of your voice can also help us learn what COVID sounds like! 'Please press record and count clearly from one to ten."
+    },
+    "next": "OK",
+    "releaseButtonStart": "Release to start recording",
+    "releaseButtonStop": "Release to stop recording",
+    "shortRecording": "Please, make a recording of at least 5 seconds"
+  },
+  "recordingsRecord": {
+    "recordCough": {
+      "header": "Record your cough"
+    },
+    "recordSpeech": {
+      "header": "Record your speech"
+    },
+    "next": "Done",
+    "delete": "Delete",
+    "text": "Click the record button and cough intentionally 3 to 5 times. When you are done, click submit.",
+    "textCount": "Click the record button and count clearly from one to ten. When you are done, click submit.",
+    "upload": "upload your own file"
+  },
+  "recordingsRecordManual": {
+    "header": "Upload a file",
+    "addFile": "Add your file",
+    "constraint": "Add up to 5 MB",
+    "next": "Done",
+    "micError": "Can’t access the mic?",
+    "micErrorDescription": "Please upload an audio file here.",
+    "fileDurationTooShort": "Please, upload a file of at least 5 seconds",
+    "fileSizeTooBig": "Please, upload a file of less than 5 MB",
+    "fileRequired": "Please, upload a file"
+  },
+  "recordingsListen": {
+    "recordCough": {
+      "header": "Record your cough",
+      "intro1": "Please cough away from others around you! If you are feeling ill, please sit down.",
+      "intro2": " In a quiet environment, please press record and intentionally cough around 3-5 times."
+    },
+    "recordSpeech": {
+      "header": "Record your speech",
+      "intro1": "The sound of your voice can also help us learn what COVID sounds like! 'Please press record and count clearly from one to ten."
+    },
+    "title": "Recording uploaded",
+    "subtitle": "Feel free to take a listen.",
+    "next": "Done"
+  },
+  "predictionResult": {
+    "processingTitle": "Processing",
+    "predictionResultTitle": "Prediction Result",
+    "likelihoodPrefix": "Your likelihood of COVID-19 is",
+    "nextButton": "Submit another cough"
+  },
+  "footerReportProblems": {
+    "message": "Something wrong? Report an error"
+  }
+}
