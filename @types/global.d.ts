@@ -9,8 +9,8 @@ declare module 'little-state-machine' {
 
   interface SubmitSteps {
     recordYourCough?: {
-      recordingFile: File | null;
-      uploadedFile: File | null;
-    };
+      recordingFile?: File;
+      uploadedFile?: File;
+    }
   }
 }

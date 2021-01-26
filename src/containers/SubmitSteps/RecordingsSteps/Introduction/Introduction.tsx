@@ -8,9 +8,6 @@ import { SubmitSteps, useStateMachine } from 'little-state-machine';
 // Header Control
 import useHeaderContext from 'hooks/useHeaderContext';
 
-// Components
-import ProgressIndicator from 'components/ProgressIndicator';
-
 // Utils
 import { scrollToTop } from 'helper/scrollHelper';
 import { updateAction } from 'utils/wizard';
@@ -96,10 +93,6 @@ const Introduction = ({
   return (
     <>
       <MainContainer>
-        <ProgressIndicator
-          currentStep={1}
-          totalSteps={2}
-        />
         <InstructionTitle>{t('recordingsIntroduction:recordCough.title')}</InstructionTitle>
         <Text>
           {t('recordingsIntroduction:recordCough.intro1')}

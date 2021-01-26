@@ -103,8 +103,8 @@ const PredictionResult = () => {
         }
 
         // Records
-        if (recordYourCough.recordingFile || recordYourCough.uploadedFile) {
-          body.append('cough', recordYourCough.recordingFile || recordYourCough.uploadedFile);
+        if (recordYourCough?.recordingFile || recordYourCough?.uploadedFile) {
+          body.append('cough', recordYourCough.recordingFile! || recordYourCough.uploadedFile!);
         }
 
         const response = await axiosClient.post('saveDemoSurvey', body, {

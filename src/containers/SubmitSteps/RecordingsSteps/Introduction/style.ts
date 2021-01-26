@@ -15,6 +15,7 @@ export const InstructionTitle = styled.div`
 
   text-align: center;
   margin-bottom: 16px;
+  margin-top: 32px;
 
   color: ${props => props.theme.colors.darkBlack};
 `;
