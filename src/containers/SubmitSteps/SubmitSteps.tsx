@@ -9,8 +9,8 @@ const StoreKey = 'submit-steps';
 createStore({
   [StoreKey]: {
     recordYourCough: {
-      recordingFile: null,
-      uploadedFile: null,
+      recordingFile: undefined,
+      uploadedFile: undefined,
     },
   },
 }, {
