@@ -13,8 +13,6 @@ import { scrollToTop } from 'helper/scrollHelper';
 import { updateAction } from 'utils/wizard';
 
 // Images
-import CoughLeftPNG from 'assets/images/cough-left.png';
-import SocialDistancingPNG from 'assets/images/social-distancing.png';
 import PhoneMicPNG from 'assets/images/phone-mic.png';
 import Record, { RecordType } from './Record';
 
@@ -22,10 +20,10 @@ import Record, { RecordType } from './Record';
 import {
   MainContainer,
   Text,
-  TopImage,
+  SocialDistancing,
   BottomImagesContainer,
   BottomImageLeft,
-  BottomImageRight,
+  CoughLeft,
   InstructionTitle,
 } from './style';
 
@@ -97,9 +95,7 @@ const Introduction = ({
         <Text>
           {t('recordingsIntroduction:recordCough.intro1')}
         </Text>
-        <TopImage
-          src={SocialDistancingPNG}
-        />
+        <SocialDistancing />
         <Text>
           {t('recordingsIntroduction:recordCough.intro2')}
         </Text>
@@ -107,9 +103,7 @@ const Introduction = ({
           <BottomImageLeft
             src={PhoneMicPNG}
           />
-          <BottomImageRight
-            src={CoughLeftPNG}
-          />
+          <CoughLeft />
         </BottomImagesContainer>
       </MainContainer>
 
