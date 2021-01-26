@@ -12,10 +12,6 @@ createStore({
       recordingFile: null,
       uploadedFile: null,
     },
-    recordYourSpeech: {
-      recordingFile: null,
-      uploadedFile: null,
-    },
   },
 }, {
   name: 'VirufyWizard',
@@ -28,7 +24,6 @@ const baseComponentPath = 'SubmitSteps';
 const middleComponentPathRecording = 'RecordingsSteps';
 const middleComponentPathSubmission = 'Submission';
 const recordYourCoughLogic = 'recordYourCough';
-const recordYourSpeechLogic = 'recordYourSpeech';
 
 const steps: Wizard.Step[] = [
   // Record Your Cough Steps
@@ -65,49 +60,9 @@ const steps: Wizard.Step[] = [
     props: {
       storeKey: StoreKey,
       previousStep: `${baseUrl}/step-record/cough`,
-      nextStep: `${baseUrl}/step-record/speech`,
-      metadata: {
-        currentLogic: recordYourCoughLogic,
-      },
-    },
-  },
-  // Record Your Speech Steps
-  {
-    path: '/step-record/speech',
-    componentPath: `${baseComponentPath}/${middleComponentPathRecording}/Introduction`,
-    props: {
-      storeKey: StoreKey,
-      previousStep: `${baseUrl}/step-listen/cough`,
-      nextStep: `${baseUrl}/step-listen/speech`,
-      otherSteps: {
-        manualUploadStep: `${baseUrl}/step-manual-upload/speech`,
-      },
-      metadata: {
-        currentLogic: recordYourSpeechLogic,
-      },
-    },
-  },
-  {
-    path: '/step-manual-upload/speech',
-    componentPath: `${baseComponentPath}/${middleComponentPathRecording}/RecordManualUpload`,
-    props: {
-      storeKey: StoreKey,
-      previousStep: `${baseUrl}/step-record/speech`,
-      nextStep: `${baseUrl}/step-listen/speech`,
-      metadata: {
-        currentLogic: recordYourSpeechLogic,
-      },
-    },
-  },
-  {
-    path: '/step-listen/speech',
-    componentPath: `${baseComponentPath}/${middleComponentPathRecording}/ListenAudio`,
-    props: {
-      storeKey: StoreKey,
-      previousStep: `${baseUrl}/step-record/speech`,
       nextStep: `${baseUrl}/prediction-result`,
       metadata: {
-        currentLogic: recordYourSpeechLogic,
+        currentLogic: recordYourCoughLogic,
       },
     },
   },
@@ -117,7 +72,7 @@ const steps: Wizard.Step[] = [
     componentPath: `${baseComponentPath}/${middleComponentPathSubmission}/PredictionResult`,
     props: {
       storeKey: StoreKey,
-      previousStep: `${baseUrl}/step-record/speech`,
+      previousStep: `${baseUrl}/step-record/cough`,
       nextStep: '',
     },
   },
@@ -141,7 +96,7 @@ const SubmitSteps = () => {
       let out = null;
 
       if (inputState[StoreKey]) {
-        const { recordYourCough, recordYourSpeech } = inputState[StoreKey];
+        const { recordYourCough } = inputState[StoreKey];
         const toTest = [];
 
         if (recordYourCough) {
@@ -151,15 +106,6 @@ const SubmitSteps = () => {
           }
           if (uploadedFile) {
             toTest.push({ file: uploadedFile, route: '/step-manual-upload/cough' });
-          }
-        }
-        if (recordYourSpeech) {
-          const { recordingFile, uploadedFile } = recordYourCough;
-          if (recordingFile) {
-            toTest.push({ file: recordingFile, route: '/step-record/speech' });
-          }
-          if (uploadedFile) {
-            toTest.push({ file: uploadedFile, route: '/step-manual-upload/speech' });
           }
         }
 

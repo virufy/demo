@@ -12,7 +12,7 @@
     "title": "Lastly, before we begin...",
     "subtitle": "To reduce risk and self-harm, we advise you to:",
     "advise1": "Please use your own device and wear a mask when appropiate.",
-    "advise2": "Disinfect your device and any affected or nearby surfaces after recording your cough/speech.",
+    "advise2": "Disinfect your device and any affected or nearby surfaces after recording your cough.",
     "advise3": "If you have an underlying condition that increases your risk from coughing, please check with your health care provider before participating.",
     "advise4": "If you feel your symptoms are getting worse, please contact your local medical response.",
     "startButton": "Start"
@@ -24,10 +24,6 @@
       "intro1": "Please cough away from others around you! If you are feeling ill, please sit down.",
       "intro2": "In a quiet environment, please press record and intentionally cough around 3-5 times."
     },
-    "recordSpeech": {
-      "header": "Record your speech",
-      "intro1": "The sound of your voice can also help us learn what COVID sounds like! 'Please press record and count clearly from one to ten."
-    },
     "next": "Next",
     "releaseButtonStart": "Release to start recording",
     "releaseButtonStop": "Release to stop recording",
@@ -36,9 +32,6 @@
   "recordingsRecord": {
     "recordCough": {
       "header": "Record your cough"
-    },
-    "recordSpeech": {
-      "header": "Record your speech"
     },
     "next": "Continue",
     "delete": "Delete",
@@ -62,10 +55,6 @@
       "header": "Record your cough",
       "intro1": "Please cough away from others around you! Please sit down if you are feeling ill.",
       "intro2": " In a quiet environment, please press record and intentionally cough around 3-5 times."
-    },
-    "recordSpeech": {
-      "header": "Record your speech",
-      "intro1": "The sound of your voice can also help us learn what COVID sounds like! 'Please press record and count clearly from one to ten."
     },
     "title": "Recording uploaded",
     "subtitle": "Feel free to take a listen.",

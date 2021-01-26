@@ -42,7 +42,7 @@ const PredictionResult = () => {
   const { setDoGoBack, setTitle } = useHeaderContext();
   const history = useHistory();
   const { t } = useTranslation();
-  const { state, actions } = useStateMachine({ resetStore: resetStore() });
+  const { state } = useStateMachine({ resetStore: resetStore() });
   const axiosClient = useAxios();
 
   // States
@@ -87,7 +87,6 @@ const PredictionResult = () => {
 
         const {
           recordYourCough,
-          recordYourSpeech,
         } = state['submit-steps'];
 
         const body = new FormData();
@@ -107,32 +106,19 @@ const PredictionResult = () => {
         if (recordYourCough.recordingFile || recordYourCough.uploadedFile) {
           body.append('cough', recordYourCough.recordingFile || recordYourCough.uploadedFile);
         }
-        if (recordYourSpeech.recordingFile || recordYourSpeech.uploadedFile) {
-          body.append('voice', recordYourSpeech.recordingFile || recordYourSpeech.uploadedFile);
-        }
 
-        // TODO: Use new endpoint
-        if (process.env.NODE_ENV === 'development') {
-          // Restart
-          actions.resetStore({});
+        const response = await axiosClient.post('saveDemoSurvey', body, {
+          headers: {
+            'Content-Type': 'multipart/form-data; boundary=SaveDemoSurvey',
+          },
+        });
+        // Restart
+        // actions.resetStore({});
 
+        if (response.data) {
+          console.log(response.data);
           setProcessing(false);
-
           setLikelihood(`${Math.round(Math.random() * 100)}`);
-        } else {
-          const response = await axiosClient.post('saveSurvey', body, {
-            headers: {
-              'Content-Type': 'multipart/form-data; boundary=SaveSurvey',
-            },
-          });
-
-          // Restart
-          actions.resetStore({});
-
-          if (response.data) {
-            setProcessing(false);
-            // setLikelihood(`${Math.round(Math.random() * 100)}`);
-          }
         }
       } else {
         // TODO: remove else, just for testing

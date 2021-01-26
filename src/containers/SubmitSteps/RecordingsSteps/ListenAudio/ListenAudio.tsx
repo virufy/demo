@@ -52,11 +52,6 @@ const ListenAudio = ({
   nextStep,
   metadata,
 }: Wizard.StepProps) => {
-  const isCoughLogic = React.useMemo(
-    () => (metadata ? metadata.currentLogic === 'recordYourCough' : false),
-    [metadata],
-  );
-
   // Hooks
   const { Portal } = usePortal({
     bindTo: document && document.getElementById('wizard-buttons') as HTMLDivElement,
@@ -160,14 +155,14 @@ const ListenAudio = ({
   const handleDoBack = React.useCallback(() => {
     setActiveStep(false);
     if (location.state && location.state.from) {
-      const newRoute = `/submit-steps/step-record/${isCoughLogic ? 'cough' : 'speech'}`;
+      const newRoute = '/submit-steps/step-record/cough';
       history.push(newRoute);
     } else if (previousStep) {
       history.push(previousStep);
     } else {
       history.goBack();
     }
-  }, [location.state, previousStep, history, isCoughLogic]);
+  }, [location.state, previousStep, history]);
 
   const handleRemoveFile = React.useCallback(() => {
     if (playing) {
@@ -206,13 +201,9 @@ const ListenAudio = ({
   // Effects
   useEffect(() => {
     scrollToTop();
-    if (isCoughLogic) {
-      setTitle(t('recordingsListen:recordCough.header'));
-    } else {
-      setTitle(t('recordingsListen:recordCough.header'));
-    }
+    setTitle(t('recordingsListen:recordCough.header'));
     setDoGoBack(() => handleDoBack);
-  }, [handleDoBack, isCoughLogic, setDoGoBack, setTitle, t]);
+  }, [handleDoBack, setDoGoBack, setTitle, t]);
 
   // Memos
   const {

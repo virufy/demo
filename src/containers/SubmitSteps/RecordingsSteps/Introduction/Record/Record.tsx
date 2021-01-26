@@ -50,10 +50,9 @@ const schema = Yup.object({
     }),
 }).defined();
 
-type RecordType = Yup.InferType<typeof schema>;
+export type RecordType = Yup.InferType<typeof schema>;
 
 interface RecordProps {
-  isCoughLogic: boolean,
   onNext: (values: RecordType) => void,
   onManualUpload: () => void,
   defaultValues: RecordType,
@@ -62,7 +61,6 @@ interface RecordProps {
 }
 
 const Record = ({
-  isCoughLogic,
   onNext,
   onManualUpload,
   defaultValues,
@@ -88,8 +86,6 @@ const Record = ({
   // Refs
   const micKey = React.useRef<number>(1);
 
-  // TODO: Remove
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const onManualUploadWithFile = () => {
     action({
       [currentLogic]: {
@@ -104,7 +100,7 @@ const Record = ({
     <>
       <MainContainer>
         <Text>
-          {isCoughLogic ? t('recordingsRecord:text') : t('recordingsRecord:textCount')}
+          {t('recordingsRecord:text')}
         </Text>
         <MicContainer>
           <Controller
@@ -118,10 +114,6 @@ const Record = ({
               />
             )}
           />
-          {/* <UploadContainer onClick={onManualUploadWithFile}>
-            <UploadImage src={UploadSVG} />
-            <UploadText>{t('recordingsRecord:upload')}</UploadText>
-          </UploadContainer> */}
         </MicContainer>
 
         <Portal>
