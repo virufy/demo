@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import { BlackText } from 'components/Texts';
 
+// Assets
+import { ReactComponent as SocialDistancingSVG } from 'assets/images/social-distancing.svg';
+import { ReactComponent as CoughLeftSVG } from 'assets/images/cough-left.svg';
+
 export const MainContainer = styled.div``;
 
 export const InstructionTitle = styled.div`
@@ -29,7 +33,8 @@ export const Text = styled(BlackText).attrs({ dark: true })`
   }
 `;
 
-export const TopImage = styled.img`
+// export const TopImage = styled.img`
+export const SocialDistancing = styled(SocialDistancingSVG)`
   width: 195px;
   height: 100px;
   margin: 0 auto 38px;
@@ -58,7 +63,8 @@ export const BottomImageLeft = styled.img`
   }
 `;
 
-export const BottomImageRight = styled.img`
+// export const BottomImageRight = styled.img`
+export const CoughLeft = styled(CoughLeftSVG)`
   width: 76px;
   height: 100px;
 

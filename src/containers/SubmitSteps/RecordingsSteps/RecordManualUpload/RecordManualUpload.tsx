@@ -54,7 +54,7 @@ const schema = Yup.object({
 
         audio.load();
         await new Promise(resolver => audio.addEventListener('loadedmetadata', resolver));
-        return (audio.duration >= 5);
+        return (audio.duration >= 3);
       }
       return !!value;
     }),

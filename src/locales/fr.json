@@ -26,7 +26,7 @@
     "next": "OK",
     "releaseButtonStart": "Release to start recording",
     "releaseButtonStop": "Release to stop recording",
-    "shortRecording": "Please, make a recording of at least 5 seconds"
+    "shortRecording": "Please, make a recording of at least 3 seconds"
   },
   "recordingsRecord": {
     "recordCough": {
@@ -45,7 +45,7 @@
     "next": "Done",
     "micError": "Can’t access the mic?",
     "micErrorDescription": "Please upload an audio file here.",
-    "fileDurationTooShort": "Please, upload a file of at least 5 seconds",
+    "fileDurationTooShort": "Please, upload a file of at least 3 seconds",
     "fileSizeTooBig": "Please, upload a file of less than 5 MB",
     "fileRequired": "Please, upload a file"
   },

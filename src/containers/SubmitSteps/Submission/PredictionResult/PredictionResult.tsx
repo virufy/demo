@@ -42,7 +42,7 @@ const PredictionResult = () => {
   const { setDoGoBack, setTitle } = useHeaderContext();
   const history = useHistory();
   const { t } = useTranslation();
-  const { state } = useStateMachine({ resetStore: resetStore() });
+  const { state, actions } = useStateMachine({ resetStore: resetStore() });
   const axiosClient = useAxios();
 
   // States
@@ -112,8 +112,9 @@ const PredictionResult = () => {
             'Content-Type': 'multipart/form-data; boundary=SaveDemoSurvey',
           },
         });
+
         // Restart
-        // actions.resetStore({});
+        actions.resetStore({});
 
         if (response.data) {
           console.log(response.data);
