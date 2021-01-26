@@ -42,7 +42,7 @@ import {
 const schema = Yup.object().shape({
   language: Yup.string().required(),
   hospitalCode: Yup.string().required(),
-  patientId: Yup.string().required(),
+  patientId: Yup.string().oneOf(['virufy']).required(),
 }).defined();
 
 type Step1Type = Yup.InferType<typeof schema>;
