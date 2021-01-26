@@ -12,7 +12,7 @@
     "title": "Por último, antes de empezar...",
     "subtitle": "Para reducir el riesgo y el daño autoinfligido, le aconsejamos:",
     "advise1": "Por favor, use su propio dispositivo y use una máscara cuando sea apropiado.",
-    "advise2": "Desinfecte su dispositivo y cualquier superficie afectada o cercana después de grabar su tos/voz.",
+    "advise2": "Desinfecte su dispositivo y cualquier superficie afectada o cercana después de grabar su tos.",
     "advise3": "Si tiene una condición previa que aumente su riesgo al toser, por favor consulte con su médico antes de participar.",
     "advise4": "Si siente que sus síntomas están empeorando, por favor contacte a su centro médico local.",
     "startButton": "Comenzar"
@@ -24,10 +24,6 @@
       "intro1": "Por favor, tosa lejos de las personas que están a su alrededor. Si se siente enfermo, por favor siéntese.",
       "intro2": "En un ambiente silencioso, por favor presione el botón de grabar y tosa intencionalmente de 3 a 5 veces."
     },
-    "recordSpeech": {
-      "header": "Grabe su voz",
-      "intro1": "¡El sonido de su voz también puede ayudarnos a aprender cómo suena el COVID! Por favor, presione para grabar y cuente claramente del uno al diez."
-    },
     "next": "Siguiente",
     "releaseButtonStart": "Suelte para empezar a grabar",
     "releaseButtonStop": "Suelte para detener la grabación",
@@ -36,9 +32,6 @@
   "recordingsRecord": {
     "recordCough": {
       "header": "Grabe su tos"
-    },
-    "recordSpeech": {
-      "header": "Grabe su voz"
     },
     "next": "Continuar",
     "delete": "Borrar",
@@ -62,10 +55,6 @@
       "header": "Grabe su tos",
       "intro1": "Por favor, tosa lejos de las personas a tu alrededor. Si se siente enfermo, por favor siéntese.",
       "intro2": "En un ambiente silencioso, por favor presione el botón de grabar y tosa intencionalmente de 3 a 5 veces."
-    },
-    "recordSpeech": {
-      "header": "Grabe su voz",
-      "intro1": "¡El sonido de su voz también puede ayudarnos a aprender cómo suena el COVID! Por favor, presione para grabar y cuente claramente del uno al diez."
     },
     "title": "Grabación enviada",
     "subtitle": "Siéntase libre de escuchar la grabación.",

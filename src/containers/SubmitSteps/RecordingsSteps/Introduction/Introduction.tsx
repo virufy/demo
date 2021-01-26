@@ -3,14 +3,10 @@ import { useHistory } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 // Form
-import { useStateMachine } from 'little-state-machine';
+import { SubmitSteps, useStateMachine } from 'little-state-machine';
 
 // Header Control
 import useHeaderContext from 'hooks/useHeaderContext';
-
-// Components
-import FullWidthDiv from 'components/FullWidthDiv';
-import ProgressIndicator from 'components/ProgressIndicator';
 
 // Utils
 import { scrollToTop } from 'helper/scrollHelper';
@@ -18,24 +14,30 @@ import { updateAction } from 'utils/wizard';
 
 // Images
 import CoughLeftPNG from 'assets/images/cough-left.png';
-import CoughRightPNG from 'assets/images/cough-right.png';
 import SocialDistancingPNG from 'assets/images/social-distancing.png';
 import PhoneMicPNG from 'assets/images/phone-mic.png';
-import Record from './Record';
+import Record, { RecordType } from './Record';
 
 // Styles
 import {
   MainContainer,
   Text,
-  TextSpeech,
   TopImage,
-  TopImageContainerSpeech,
-  TopImageSpeech,
   BottomImagesContainer,
   BottomImageLeft,
   BottomImageRight,
   InstructionTitle,
 } from './style';
+
+function getDefaultValue(state?: SubmitSteps, currentLogic?: 'recordYourCough'): RecordType {
+  if (state && currentLogic && state[currentLogic]?.recordingFile?.size !== undefined) {
+    return state[currentLogic] as RecordType;
+  }
+
+  return {
+    recordingFile: null,
+  };
+}
 
 const Introduction = ({
   previousStep,
@@ -44,11 +46,6 @@ const Introduction = ({
   metadata,
   storeKey,
 }: Wizard.StepProps) => {
-  const isCoughLogic = React.useMemo(
-    () => (metadata ? metadata.currentLogic === 'recordYourCough' : false),
-    [metadata],
-  );
-
   const { state, actions } = useStateMachine({ updateAction: updateAction(storeKey) });
 
   // Hooks
@@ -89,64 +86,35 @@ const Introduction = ({
   // Effects
   useEffect(() => {
     scrollToTop();
-    if (isCoughLogic) {
-      setTitle(t('recordingsIntroduction:recordCough.header'));
-    } else {
-      setTitle(t('recordingsIntroduction:recordSpeech.header'));
-    }
+    setTitle(t('recordingsIntroduction:recordCough.header'));
     setDoGoBack(() => handleDoBack);
-  }, [isCoughLogic, setTitle, handleDoBack, setDoGoBack, t]);
+  }, [setTitle, handleDoBack, setDoGoBack, t]);
 
   return (
     <>
       <MainContainer>
-        <ProgressIndicator
-          currentStep={isCoughLogic ? 1 : 2}
-          totalSteps={2}
-        />
         <InstructionTitle>{t('recordingsIntroduction:recordCough.title')}</InstructionTitle>
-        {
-          isCoughLogic ? (
-            <>
-              <Text>
-                {t('recordingsIntroduction:recordCough.intro1')}
-              </Text>
-              <TopImage
-                src={SocialDistancingPNG}
-              />
-              <Text>
-                {t('recordingsIntroduction:recordCough.intro2')}
-              </Text>
-              <BottomImagesContainer>
-                <BottomImageLeft
-                  src={PhoneMicPNG}
-                />
-                <BottomImageRight
-                  src={CoughLeftPNG}
-                />
-              </BottomImagesContainer>
-            </>
-          ) : (
-            <>
-              <TextSpeech>
-                {t('recordingsIntroduction:recordSpeech.intro1')}
-              </TextSpeech>
-              <FullWidthDiv>
-                <TopImageContainerSpeech>
-                  <TopImageSpeech
-                    src={CoughRightPNG}
-                  />
-                </TopImageContainerSpeech>
-              </FullWidthDiv>
-            </>
-          )
-        }
-
+        <Text>
+          {t('recordingsIntroduction:recordCough.intro1')}
+        </Text>
+        <TopImage
+          src={SocialDistancingPNG}
+        />
+        <Text>
+          {t('recordingsIntroduction:recordCough.intro2')}
+        </Text>
+        <BottomImagesContainer>
+          <BottomImageLeft
+            src={PhoneMicPNG}
+          />
+          <BottomImageRight
+            src={CoughLeftPNG}
+          />
+        </BottomImagesContainer>
       </MainContainer>
 
       <Record
-        isCoughLogic={isCoughLogic}
-        defaultValues={state?.[storeKey]?.[metadata?.currentLogic]}
+        defaultValues={getDefaultValue(state?.[storeKey], metadata?.currentLogic)}
         onManualUpload={handleManualUpload}
         onNext={handleNext}
         currentLogic={metadata?.currentLogic || ''}

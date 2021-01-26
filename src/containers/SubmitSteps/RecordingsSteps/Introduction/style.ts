@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { colors } from 'theme';
 import { BlackText } from 'components/Texts';
 
 export const MainContainer = styled.div``;
@@ -16,6 +15,7 @@ export const InstructionTitle = styled.div`
 
   text-align: center;
   margin-bottom: 16px;
+  margin-top: 32px;
 
   color: ${props => props.theme.colors.darkBlack};
 `;
@@ -25,19 +25,6 @@ export const Text = styled(BlackText).attrs({ dark: true })`
 
   @media screen and (${props => props.theme.breakpoints.tablet}) {
     margin-bottom: 40px;
-    font-size: 16px;
-  }
-`;
-
-export const TextSpeech = styled(Text)`
-  color: ${colors.realBlack};
-  text-align: left;
-
-  @media screen and (${props => props.theme.breakpoints.tablet}) {
-    max-width: 470px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 205px;
     font-size: 16px;
   }
 `;
@@ -52,27 +39,6 @@ export const TopImage = styled.img`
     width: 470px;
     height: 241px;
   }
-`;
-
-export const TopImageContainerSpeech = styled.div`
-  width: 100%;
-  max-width: 353px;
-  height: 100%;
-  max-height: 153px;
-  margin: 0 auto;
-  display: block;
-
-  @media screen and (${props => props.theme.breakpoints.tablet}) {
-    width: 595px;
-    height: 240px;
-    margin-bottom: 64px;
-  }
-`;
-
-export const TopImageSpeech = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
 `;
 
 export const BottomImagesContainer = styled.div`
