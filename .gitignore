@@ -32,3 +32,4 @@ _redirects
 # Local Netlify folder
 .netlify
 .env
+deploy.sh
