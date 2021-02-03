@@ -31,14 +31,13 @@ const App = () => {
             <Route path="/welcome">
               <AsyncLoad key="Welcome" container="Welcome" />
             </Route>
-            <Redirect exact from="/" to="/welcome" />
             <Route path="/submit-steps">
               <AsyncLoad key="SubmitSteps" container="SubmitSteps" />
             </Route>
+            <Redirect exact from="/" to="/welcome" />
             <Route>
               <div>404 Page</div>
             </Route>
-            <Redirect exact from="/" to="/welcome" />
           </Switch>
         </FullWidth>
         <FooterReportProblems />

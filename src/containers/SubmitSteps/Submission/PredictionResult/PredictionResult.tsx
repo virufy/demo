@@ -119,7 +119,7 @@ const PredictionResult = () => {
         if (response.data) {
           console.log(response.data);
           setProcessing(false);
-          setLikelihood(`${Math.round(Math.random() * 100)}`);
+          setLikelihood('xx');
         }
       } else {
         // TODO: remove else, just for testing
