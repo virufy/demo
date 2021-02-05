@@ -85,9 +85,20 @@ Consent forms need to be `HTML` files. If they are exported from a `.doc` extens
 >  6. In the "Encoding" tab, select "Unicode(UTF-8)".
 >  7. Accept and save the file
 
-## Available Scripts
+## Quick Start
 
-In the project directory, you can run:
+## Cloning
+If using windows, make sure to use `git config --global core.autocrlf input` before `git clone` because node requires LF line endings.
+
+### Installing Dependencies
+```
+sudo apt update
+sudo apt install npm
+npm install
+npm start
+```
+
+### Avaliable Commands
 
 ### `npm start`
 
