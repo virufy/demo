@@ -35,14 +35,14 @@ import {
   WelcomeContent,
   WelcomeSubtitle,
   WelcomeStyledForm,
-  WelcomeInput,
-  WelcomeRequiredFieldText,
+  // WelcomeInput,
+  // WelcomeRequiredFieldText,
 } from '../style';
 
 const schema = Yup.object().shape({
   language: Yup.string().required(),
-  hospitalCode: Yup.string().required(),
-  patientId: Yup.string().oneOf(['virufy']).required(),
+  // hospitalCode: Yup.string().required(),
+  // patientId: Yup.string().oneOf(['virufy']).required(),
 }).defined();
 
 type Step1Type = Yup.InferType<typeof schema>;
@@ -171,7 +171,7 @@ const Step1 = (p: Wizard.StepProps) => {
         />
 
         {/* Hospital Code */}
-        <WelcomeSubtitle
+        {/* <WelcomeSubtitle
           mt={isDesktop ? 50 : 35}
           mb={isDesktop ? 20 : 17}
           fontSize={16}
@@ -196,10 +196,10 @@ const Step1 = (p: Wizard.StepProps) => {
               autoComplete="Off"
             />
           )}
-        />
+        /> */}
 
         {/* Patient ID */}
-        <WelcomeSubtitle
+        {/* <WelcomeSubtitle
           mt={isDesktop ? 50 : 17}
           mb={isDesktop ? 20 : 17}
           fontSize={16}
@@ -223,7 +223,7 @@ const Step1 = (p: Wizard.StepProps) => {
               autoComplete="Off"
             />
           )}
-        />
+        /> */}
 
         {/* Wizard Buttons */}
         {

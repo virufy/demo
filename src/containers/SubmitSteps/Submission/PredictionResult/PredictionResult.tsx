@@ -81,8 +81,8 @@ const PredictionResult = () => {
       if (state && state.welcome && state['submit-steps']) {
         const {
           language,
-          hospitalCode,
-          patientId,
+          hospitalCode = 'virufy',
+          patientId = 'virufy',
         } = state.welcome;
 
         const {
