@@ -44,7 +44,7 @@ import {
 } from '../style';
 
 // Get a reference to the bundled asset and convert it to a tensor
-const model = await mobilenet.load();
+const model = mobilenet.load();
 const image = require('../../../assets/images/catsmall.jpg');
 
 const imageAssetPath = Image.resolveAssetSource(image);
