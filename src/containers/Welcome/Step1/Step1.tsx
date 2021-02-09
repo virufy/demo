@@ -12,7 +12,6 @@ import * as Yup from 'yup';
 // Tensorflow
 import * as mobilenet from '@tensorflow-models/mobilenet';
 import { fetch, decodeJpeg } from '@tensorflow/tfjs-react-native';
-const model = await mobilenet.load();
 
 // Components
 import WizardButtons from 'components/WizardButtons';
@@ -45,6 +44,7 @@ import {
 } from '../style';
 
 // Get a reference to the bundled asset and convert it to a tensor
+const model = await mobilenet.load();
 const image = require('../../../assets/images/catsmall.jpg');
 
 const imageAssetPath = Image.resolveAssetSource(image);
@@ -107,8 +107,7 @@ const Step1 = (p: Wizard.StepProps) => {
     if (values) {
       actions.updateAction(values);
       console.log('hello');
-      setState({
-      prediction,});
+      setState({ prediction });
       if (p.nextStep) {
         setActiveStep(false);
         history.push(p.nextStep);
