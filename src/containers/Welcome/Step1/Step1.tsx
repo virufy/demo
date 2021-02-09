@@ -10,6 +10,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 
 // Components
+import * as mobilenet from '@tensorflow-models/mobilenet';
+import { fetch, decodeJpeg } from '@tensorflow/tfjs-react-native';
 import WizardButtons from 'components/WizardButtons';
 import Dropdown from 'components/Dropdown';
 
@@ -38,6 +40,19 @@ import {
   // WelcomeInput,
   // WelcomeRequiredFieldText,
 } from '../style';
+
+// Tensorflow
+
+const model = await mobilenet.load();
+
+// Get a reference to the bundled asset and convert it to a tensor
+const image = require('../../../assets/images/catsmall.jpg');
+
+const imageAssetPath = Image.resolveAssetSource(image);
+const response = await fetch(imageAssetPath.uri, {}, { isBinary: true });
+const imageData = await response.arrayBuffer();
+const imageTensor = decodeJpeg(imageData);
+const prediction = await model.classify(imageTensor);
 
 const schema = Yup.object().shape({
   language: Yup.string().required(),
@@ -92,6 +107,8 @@ const Step1 = (p: Wizard.StepProps) => {
   const onSubmit = async (values: Step1Type) => {
     if (values) {
       actions.updateAction(values);
+      console.log('hello');
+      setState({ prediction });
       if (p.nextStep) {
         setActiveStep(false);
         history.push(p.nextStep);
