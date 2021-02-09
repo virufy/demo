@@ -10,8 +10,6 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 
 // Components
-import * as mobilenet from '@tensorflow-models/mobilenet';
-import { fetch, decodeJpeg } from '@tensorflow/tfjs-react-native';
 import WizardButtons from 'components/WizardButtons';
 import Dropdown from 'components/Dropdown';
 
@@ -42,6 +40,8 @@ import {
 } from '../style';
 
 // Tensorflow
+import * as mobilenet from '@tensorflow-models/mobilenet';
+import { fetch, decodeJpeg } from '@tensorflow/tfjs-react-native';
 
 const model = await mobilenet.load();
 
@@ -108,7 +108,8 @@ const Step1 = (p: Wizard.StepProps) => {
     if (values) {
       actions.updateAction(values);
       console.log('hello');
-      setState({ prediction });
+      setState({
+      prediction,});
       if (p.nextStep) {
         setActiveStep(false);
         history.push(p.nextStep);
