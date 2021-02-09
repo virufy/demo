@@ -1,6 +1,6 @@
 {
   "main": {
-    "title": "COVID-19 Data Collection Form",
+    "title": "COVID-19 Cough Detection",
     "paragraph1": "This form will take about 2 minutes to complete. \nBefore you begin, please select your language.",
     "hospitalCodeLabel": "Hospital code",
     "patientIdLabel": "Patient ID",

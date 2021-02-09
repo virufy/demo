@@ -36,7 +36,7 @@ export const countryData = [
 The bold text represents the new line added.
 	
 The `name` field is the text that the end user will see in the application.
-This will appear in `COVID-19 Data Collection Form`	screen dropdown and will be selectable.
+This will appear in `COVID-19 Cough Detection`	screen dropdown and will be selectable.
 Note that the name of the country in the `val`  field can't have any spaces between words and they all must start with an upper-case letter. 
 
  2. Go to `public -> static -> consent` folder and create a new folder inside for the added country. The name of the folder must match exactly what was entered in the `val` field in the previous step.
@@ -67,7 +67,7 @@ export const languageData = [
 
 The bold text represents the new line added. It will add french as a new language.
 
-The `code` fields represents the *ISO 639-1* [language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) and the `label` field represents the text to be displayed to the user in the dropdown to select languages in the `COVID-19 Data Collection Form` screen.
+The `code` fields represents the *ISO 639-1* [language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) and the `label` field represents the text to be displayed to the user in the dropdown to select languages in the `COVID-19 Cough Detection` screen.
 
  2. Export the consent form as an HTML document as detailed in the next section. It should be named exactly like the language **code** entered in the previous step. For example, to add french, a resulting file would be `fr.html`.
  
