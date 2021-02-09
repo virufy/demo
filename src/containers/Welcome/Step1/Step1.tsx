@@ -9,6 +9,11 @@ import { useStateMachine } from 'little-state-machine';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 
+// Tensorflow
+import * as mobilenet from '@tensorflow-models/mobilenet';
+import { fetch, decodeJpeg } from '@tensorflow/tfjs-react-native';
+const model = await mobilenet.load();
+
 // Components
 import WizardButtons from 'components/WizardButtons';
 import Dropdown from 'components/Dropdown';
@@ -38,12 +43,6 @@ import {
   // WelcomeInput,
   // WelcomeRequiredFieldText,
 } from '../style';
-
-// Tensorflow
-import * as mobilenet from '@tensorflow-models/mobilenet';
-import { fetch, decodeJpeg } from '@tensorflow/tfjs-react-native';
-
-const model = await mobilenet.load();
 
 // Get a reference to the bundled asset and convert it to a tensor
 const image = require('../../../assets/images/catsmall.jpg');
