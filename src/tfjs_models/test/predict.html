@@ -1,19 +1,56 @@
 <html>
     <head>
         <title>TEST</title>
-        <script src = "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+        <script src="https://unpkg.com/meyda/dist/web/meyda.min.js"></script>
     </head>
 
     <body>
         <script>
-            console.log("hi")
-            async function loadModel(){
-                const model = await tf.loadLayersModel('model.json')
-                // model.predict(tf.tensor2d([[0.15, 0.35]])).print()
-                console.log("done")
+            console.log("hello world")
+            const loadModel = async function() {
+                // const model = await tf.loadLayersModel('https://storage.googleapis.com/tfjs-models/tfjs/iris_v1/model.json');
+                const model = await tf.loadLayersModel('https://cs329s-edge.s3.us-east-2.amazonaws.com/model/model.json');
+                // const model = await tf.loadLayersModel('https://cs329s-edge.github.io/model/model.json');
+   	            console.log(model.summary());
+	              model.predict(tf.ones([1, 124, 129, 1])).print();
+                console.log("Done");
             }
 
-            loadModel()
+            const loadData = async function() {
+                var request = new XMLHttpRequest();
+                request.open('GET', 'https://raw.githubusercontent.com/virufy/virufy_data/main/clinical/original/pos/pos-0421-084-cough-m-50.mp3', true);
+                request.onload = function (e) {
+                  if (request.readyState === 4) {
+                    if (request.status === 200) {
+                      console.log("Request successful");
+                      return request.responseText;
+                    } else {
+                      console.error(request.statusText);
+                      return null;
+                    }
+                  }
+                };
+                request.send(null);
+                // console.log(request);
+            }
+
+            const preprocessData = async function(data) {
+
+            }
+
+            loadModel();
+            data = loadData();
+            features = preprocessData(data);
+            // loadData();
+
+
+            const predict = async function() {
+                model = loadModel();
+                data = loadData();
+                // run the model on data
+                return output;
+            }
         </script>
     </body>
 </html>
