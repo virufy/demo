@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>TEST</title>
+        <script src = "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    </head>
+
+    <body>
+        <script>
+            console.log("hi")
+            async function loadModel(){
+                const model = await tf.loadLayersModel('model.json')
+                // model.predict(tf.tensor2d([[0.15, 0.35]])).print()
+                console.log("done")
+            }
+
+            loadModel()
+        </script>
+    </body>
+</html>
