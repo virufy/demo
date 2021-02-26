@@ -1,7 +1,9 @@
 {
   "main": {
     "title": "COVID-19 Cough Detection",
-    "paragraph1": "This form will take about 2 minutes to complete. \nBefore you begin, please select your language.",
+    "paragraph1": "Before you begin, please select your language.",
+    "introductionText": "<strong>Important note:</strong> this app is only for demonstration purposes and does not provide a prediction. Please visit <2>virufy.org/app</2> to contribute your cough and help us to complete this app.",
+    "introductionRecomendations": "<strong>To reduce risk and self-harm, we advise you to:</strong><p>Please use your own device and wear a mask when appropriate.</p><p>Disinfect your device and any affected or nearby surfaces after recording your cough/speech.</p><p>If you have an underlying condition that increases your risk from coughing, please check with your health care provider before participating.</p><p>If you feel your symptoms are getting worse, please contact your local medical response.</p>",
     "hospitalCodeLabel": "Hospital code",
     "patientIdLabel": "Patient ID",
     "hospitalCodePlaceholder": "type here...",
@@ -20,22 +22,23 @@
   "recordingsIntroduction": {
     "recordCough": {
       "header": "Record your cough",
+      "title": "Instructions",
       "intro1": "Please cough away from others around you! If you are feeling ill, please sit down.",
-      "intro2": " In a quiet environment, please press record and intentionally cough around 3-5 times."
+      "intro2": "In a quiet environment, please press record and intentionally cough around 3-5 times."
     },
-    "next": "OK",
+    "next": "Next",
     "releaseButtonStart": "Release to start recording",
     "releaseButtonStop": "Release to stop recording",
-    "shortRecording": "Please, make a recording of at least 3 seconds"
+    "shortRecording": "Please make a recording of at least 3 seconds"
   },
   "recordingsRecord": {
     "recordCough": {
       "header": "Record your cough"
     },
-    "next": "Done",
+    "next": "Continue",
     "delete": "Delete",
-    "text": "Click the record button and cough intentionally 3 to 5 times. When you are done, click submit.",
-    "textCount": "Click the record button and count clearly from one to ten. When you are done, click submit.",
+    "text": "Click the record button and cough intentionally 3 to 5 times. When you are done, click continue.",
+    "textCount": "Click the record button and count clearly from one to ten. When you are done, click continue.",
     "upload": "upload your own file"
   },
   "recordingsRecordManual": {
@@ -45,14 +48,14 @@
     "next": "Done",
     "micError": "Can’t access the mic?",
     "micErrorDescription": "Please upload an audio file here.",
-    "fileDurationTooShort": "Please, upload a file of at least 3 seconds",
-    "fileSizeTooBig": "Please, upload a file of less than 5 MB",
-    "fileRequired": "Please, upload a file"
+    "fileDurationTooShort": "Please upload a file of at least 3 seconds",
+    "fileSizeTooBig": "Please upload a file of less than 5 MB",
+    "fileRequired": "Please upload a file"
   },
   "recordingsListen": {
     "recordCough": {
       "header": "Record your cough",
-      "intro1": "Please cough away from others around you! If you are feeling ill, please sit down.",
+      "intro1": "Please cough away from others around you! Please sit down if you are feeling ill.",
       "intro2": " In a quiet environment, please press record and intentionally cough around 3-5 times."
     },
     "title": "Recording uploaded",

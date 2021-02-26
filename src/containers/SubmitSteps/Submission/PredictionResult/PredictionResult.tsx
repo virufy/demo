@@ -1,13 +1,14 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import usePortal from 'react-useportal';
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 
 // Form
 import { useStateMachine } from 'little-state-machine';
 
 // Components
 import WizardButtons from 'components/WizardButtons';
+import Link from 'components/Link';
 
 // Hooks
 import useAxios from 'hooks/useAxios';
@@ -32,6 +33,7 @@ import {
   LikelihoodText,
   LikelihoodPercentageText,
   SubmitError,
+  IntroText,
 } from './style';
 
 const PredictionResult = () => {
@@ -158,6 +160,14 @@ const PredictionResult = () => {
             <TitleResult>
               {t('predictionResult:predictionResultTitle')}
             </TitleResult>
+
+            <IntroText>
+              <Trans i18nKey="main:introductionText">
+                <strong>Important note:</strong> this app is only for demonstration purposes and does not provide a
+                prediction. Please visit <Link to="https://virufy.org/app" target="_blank">virufy.org/app</Link> to
+                contribute your cough and help us to complete this app.
+              </Trans>
+            </IntroText>
 
             {/* Likelihood */}
             {

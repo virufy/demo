@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import usePortal from 'react-useportal';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 
 // Form
 import { useForm, Controller } from 'react-hook-form';
@@ -12,6 +12,7 @@ import * as Yup from 'yup';
 // Components
 import WizardButtons from 'components/WizardButtons';
 import Dropdown from 'components/Dropdown';
+import Link from 'components/Link';
 
 // Update Action
 import { updateAction } from 'utils/wizard';
@@ -37,6 +38,7 @@ import {
   WelcomeStyledForm,
   // WelcomeInput,
   // WelcomeRequiredFieldText,
+  IntroductionText,
 } from '../style';
 
 const schema = Yup.object().shape({
@@ -139,8 +141,9 @@ const Step1 = (p: Wizard.StepProps) => {
         {/* Content: Subtitle */}
         <WelcomeSubtitle
           fontWeight={400}
-          mb={isDesktop ? 50 : 30}
+          mb={isDesktop ? 30 : 10}
           mt={width && width > 560 ? 0 : -14}
+          lineHeight={20}
         >
           {t('main:paragraph1')}
         </WelcomeSubtitle>
@@ -169,6 +172,32 @@ const Step1 = (p: Wizard.StepProps) => {
             </Dropdown>
           )}
         />
+
+        <IntroductionText>
+          <Trans i18nKey="main:introductionText">
+            <strong>Important note:</strong> this app is only for demonstration purposes and does not provide a
+            prediction. Please visit <Link to="https://virufy.org/app" target="_blank">virufy.org/app</Link> to
+            contribute your cough and help us to complete this app.
+          </Trans>
+        </IntroductionText>
+        <IntroductionText>
+          <Trans i18nKey="main:introductionRecomendations">
+            <strong>To reduce risk and self-harm, we advise you to:</strong>
+            <p>
+              Please use your own device and wear a mask when appropriate.
+            </p>
+            <p>
+              Disinfect your device and any affected or nearby surfaces after recording your cough/speech.
+            </p>
+            <p>
+              If you have an underlying condition that increases your risk from coughing, please check with your health
+              care provider before participating.
+            </p>
+            <p>
+              If you feel your symptoms are getting worse, please contact your local medical response.
+            </p>
+          </Trans>
+        </IntroductionText>
 
         {/* Hospital Code */}
         {/* <WelcomeSubtitle
@@ -233,6 +262,7 @@ const Step1 = (p: Wizard.StepProps) => {
                 leftLabel={t('main:nextButton')}
                 leftHandler={handleSubmit(onSubmit)}
                 leftDisabled={!isValid}
+                invert
               />
             </Portal>
           )

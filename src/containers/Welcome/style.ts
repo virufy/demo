@@ -121,14 +121,14 @@ export const WelcomeSubtitle = styled.h2<WelcomeSubtitleProps>`
   color: ${({ theme, fontColor }) => (fontColor || theme.colors.ultraDarkBlack)};
   font-family: "Source Sans Pro";
   font-size: 14px;
-  ${({ fontSize = 14 }) => css`font-size: ${fontSize}px`};
-  ${({ lineHeight }) => lineHeight && css`line-height: ${lineHeight}px`};
+  ${({ fontSize = 14 }) => css`font-size: ${fontSize}px;`}
+  ${({ lineHeight }) => lineHeight && css`line-height: ${lineHeight}px;`}
   font-weight: ${props => props.fontWeight};
   margin-bottom: ${({ mb }) => `${mb}px`};
   margin-left: auto;
   margin-right: auto;
   margin-top: ${({ mt }) => `${mt}px`};
-  ${({ textAlign }) => textAlign && css`text-align: ${textAlign || 'left'}`};
+  ${({ textAlign }) => textAlign && css`text-align: ${textAlign || 'left'};`}
   white-space: pre-wrap;
 
   max-width: 320px;
@@ -213,12 +213,22 @@ export const WelcomeInput = styled.input`
   max-width: calc(100% - 12px);
 
   ::placeholder {
-    color: ${props => props.theme.colors.placeholderGray};
+    color: ${({ theme }) => theme.colors.placeholderGray};
   }
-  @media screen and (${props => props.theme.breakpoints.tablet}){
+  @media screen and (${({ theme }) => theme.breakpoints.tablet}){
     max-width: 348px;
     padding: 13px 30px;
     margin-left: auto;
     margin-right: auto;
   }
+`;
+
+export const IntroductionText = styled.div`
+  font-family: "Source Sans Pro";
+  font-size: 14px;
+  line-height: 20px;
+  color: ${({ theme }) => theme.colors.mineShaft};
+  max-width: 320px;
+  margin: 8px auto 0;
+  text-align: left;
 `;

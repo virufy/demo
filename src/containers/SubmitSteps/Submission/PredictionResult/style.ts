@@ -4,6 +4,9 @@ import styled from 'styled-components';
 import { ReactComponent as ProcessingSVG } from 'assets/images/processing.svg';
 import { ReactComponent as PredictionResultSVG } from 'assets/images/prediction-result.svg';
 
+// Shared style
+import { IntroductionText } from 'containers/Welcome/style';
+
 export const ProcessingContainer = styled.div``;
 
 export const Title = styled.h1`
@@ -47,7 +50,7 @@ export const TitleResult = styled.h1`
 `;
 
 export const LikelihoodText = styled.div`
-  margin: 92px auto 0px;
+  margin: 33px auto 0px;
   padding: 0 6px;
   background: ${props => props.theme.colors.realWhite};
   border: 1px solid ${props => props.theme.colors.mercury};
@@ -96,4 +99,9 @@ export const SubmitText = styled.p`
 export const SubmitError = styled(SubmitText)`
   color: ${props => props.theme.colors.red};
   text-align: center;
+`;
+
+export const IntroText = styled(IntroductionText)`
+  margin-top: 21px;
+  max-width: unset;
 `;
