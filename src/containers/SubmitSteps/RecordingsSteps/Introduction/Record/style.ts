@@ -10,7 +10,7 @@ export const Text = styled(BlackText)`
   color: ${props => props.theme.colors.darkBlack};
   margin-bottom: 40px;
   text-align: left;
-  font-weight: bold;
+  font-weight: 600;
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     max-width: 470px;

@@ -39,6 +39,7 @@ import {
   // WelcomeInput,
   // WelcomeRequiredFieldText,
   IntroductionText,
+  IntroductionRecommendations,
 } from '../style';
 
 const schema = Yup.object().shape({
@@ -130,7 +131,7 @@ const Step1 = (p: Wizard.StepProps) => {
 
       {/* Title */}
       <WelcomeTitle
-        fontSize={isDesktop ? 42 : 34}
+        fontSize={isDesktop ? 32 : 24}
       >
         {t('main:title')}
       </WelcomeTitle>
@@ -144,6 +145,7 @@ const Step1 = (p: Wizard.StepProps) => {
           mb={isDesktop ? 30 : 10}
           mt={width && width > 560 ? 0 : -14}
           lineHeight={20}
+          textAlign="center"
         >
           {t('main:paragraph1')}
         </WelcomeSubtitle>
@@ -180,7 +182,7 @@ const Step1 = (p: Wizard.StepProps) => {
             contribute your cough and help us to complete this app.
           </Trans>
         </IntroductionText>
-        <IntroductionText>
+        <IntroductionRecommendations>
           <Trans i18nKey="main:introductionRecomendations">
             <strong>To reduce risk and self-harm, we advise you to:</strong>
             <p>
@@ -197,7 +199,7 @@ const Step1 = (p: Wizard.StepProps) => {
               If you feel your symptoms are getting worse, please contact your local medical response.
             </p>
           </Trans>
-        </IntroductionText>
+        </IntroductionRecommendations>
 
         {/* Hospital Code */}
         {/* <WelcomeSubtitle
