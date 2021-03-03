@@ -1,7 +1,9 @@
 {
   "main": {
     "title": "COVID-19 Cough Detection",
-    "paragraph1": "This form will take about 2 minutes to complete. \nBefore you begin, please select your language.",
+    "paragraph1": "Before you begin, please select your language.",
+    "introductionText": "<strong>Important note:</strong> this app is only for demonstration purposes and does not provide a prediction. Please visit <2>virufy.org/app</2> to contribute your cough and help us to complete this app.",
+    "introductionRecomendations": "<strong>To reduce risk and self-harm, we advise you to:</strong><p>Please use your own device and wear a mask when appropriate.</p><p>Disinfect your device and any affected or nearby surfaces after recording your cough/speech.</p><p>If you have an underlying condition that increases your risk from coughing, please check with your health care provider before participating.</p><p>If you feel your symptoms are getting worse, please contact your local medical response.</p>",
     "hospitalCodeLabel": "Hospital code",
     "patientIdLabel": "Patient ID",
     "hospitalCodePlaceholder": "type here...",

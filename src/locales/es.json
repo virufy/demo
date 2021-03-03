@@ -1,7 +1,9 @@
 {
   "main": {
     "title": "Formulario de Recolección de datos de COVID-19",
-    "paragraph1": "Este formulario le tomará 2 minutos en completar.\nAntes de empezar, por favor seleccione su idioma.",
+    "paragraph1": "Antes de empezar, por favor seleccione su idioma.",
+    "introductionText": "<strong>Nota importante:</strong> esta app es sólo para fines de demostración y no proporciona una predicción. Por favor, visita <2>virufy.org/app</2> para contribuir con tu tos y ayudarnos a completar esta app.",
+    "introductionRecomendations": "<strong>Para reducir el riesgo y la autolesión, le aconsejamos:</strong><p>Por favor, utilice su propio dispositivo y use una mascarilla cuando sea apropiado.</p><p>Desinfecte su dispositivo y cualquier superficie afectada o cercana después de registrar su tos/habla. </p><p>Si tiene una enfermedad subyacente que aumente su riesgo por la tos, por favor, consulte con su proveedor de atención médica antes de participar.</p><p>Si cree que sus síntomas están empeorando, por favor, póngase en contacto con su respuesta médica local.</p>",
     "hospitalCodeLabel": "Código de Hospital",
     "patientIdLabel": "ID de Paciente",
     "hospitalCodePlaceholder": "tipear aquí...",

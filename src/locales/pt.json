@@ -1,7 +1,9 @@
 {
   "main": {
     "title": "Formulário de coleta de dados de COVID 19",
-    "paragraph1": "Este formulário levará cerca de 2 minutos para ser preenchido. \nAntes de começar, por favor, escolha seu idioma",
+    "paragraph1": "Antes de começar, por favor, escolha seu idioma",
+    "introductionText": "<strong>Nota importante:</strong> este aplicativo é apenas para fins de demonstração e não fornece uma previsão. Por favor, visite <2>virufy.org/app</2> para contribuir com sua tosse e nos ajudar a completar este aplicativo.",
+    "introductionRecomendations": "<strong>Para reduzir o risco e a auto-flagelação, aconselhamos:</strong><p>Por favor, use seu próprio dispositivo e use uma máscara quando apropriado.</p><p>Desinfecte seu dispositivo e qualquer superfície afetada ou próxima após gravar sua tosse/fala. </p><p>Se você tiver uma condição subjacente que aumente seu risco de tosse, favor verificar com seu provedor de saúde antes de participar.</p><p>Se você sentir que seus sintomas estão piorando, favor contatar sua resposta médica local.</p>",
     "hospitalCodeLabel": "Código do hospital",
     "patientIdLabel": "ID do paciente",
     "hospitalCodePlaceholder": "digite aqui...",

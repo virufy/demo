@@ -32,7 +32,7 @@ const steps: Wizard.Step[] = [
     componentPath: `${baseComponentPath}/${middleComponentPathRecording}/Introduction`,
     props: {
       storeKey: StoreKey,
-      previousStep: '/welcome/step-2',
+      previousStep: '/welcome',
       nextStep: `${baseUrl}/step-listen/cough`,
       otherSteps: {
         manualUploadStep: `${baseUrl}/step-manual-upload/cough`,
