@@ -37,9 +37,9 @@
     },
     "next": "Continuar",
     "delete": "Borrar",
-    "text": "Pulse el botón de grabación y tosa intencionadamente de 3 a 5 veces. Cuando haya terminado, haga clic en continuar.",
+    "text": "Pulse el botón de grabación y tosa intencionadamente de 3 a 5 veces <strong>durante 3 segundos como minimo.</strong>. Cuando haya terminado, haga clic en Continuar.",
     "textCount": "Haga clic en el botón de grabar y cuente claramente del uno al diez. Cuando haya terminado, haga clic en continuar.",
-    "upload": "sube tu propio audio"
+    "upload": "Sube tu propio audio"
   },
   "recordingsRecordManual": {
     "header": "Subir un archivo",

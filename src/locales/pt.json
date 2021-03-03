@@ -37,9 +37,9 @@
     },
     "next": "Continuar",
     "delete": "Deletar",
-    "text": "Clique no botão gravar e tussa intencionalmente de 3 a 5 vezes. Quando acabar, clique em continuar.",
+    "text": "Clique no botão gravar e tussa intencionalmente de 3 a 5 vezes <strong>durante 3 segundos no mínimo</strong>. Quando tiver terminado, clique em Continuar.",
     "textCount": "Clique no botão gravar e conte claramente de um até dez. Quando acabar, clique em continuar.",
-    "upload": "carregue seu próprio arquivo"
+    "upload": "Carregue seu próprio arquivo"
   },
   "recordingsRecordManual": {
     "header": "Enviar um arquivo",

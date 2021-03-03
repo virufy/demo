@@ -23,8 +23,9 @@ export const Title = styled.h1`
 export const ImageProcessing = styled(ProcessingSVG)`
   width: 287px;
   height: 221px;
-  margin: 80px auto 0px;
+  margin: 68px auto 0px;
   display: block;
+  transform: translateX(20px);
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     width: 100%;
@@ -75,7 +76,7 @@ export const LikelihoodText = styled.div`
 export const LikelihoodPercentageText = styled.span``;
 
 export const ImagePredictionResult = styled(PredictionResultSVG)`
-  margin: 97px 0px 26px -25px;
+  margin: 25px 0px 26px -25px;
   width: 100%;
   height: 100%;
   max-width: 351px;

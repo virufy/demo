@@ -37,8 +37,7 @@ export const WelcomeLogo = styled(Logo)`
 export const WelcomeTitle = styled.h1<WelcomeTitleProps>`
   color: ${props => props.theme.colors.darkBlack};
   font-family: "Open Sans";
-  font-size: 1.5rem;
-  font-size: ${({ fontSize }) => `${fontSize}px` || '1.5rem'} ;
+  font-size: ${({ fontSize }) => (fontSize ? `${fontSize}px` : '1.5rem')};
   margin-left: auto;
   margin-right: auto;
   margin-top: ${({ mt }) => `${mt || 11}px`};
@@ -120,7 +119,6 @@ export const WelcomeItemListItem = styled.li`
 export const WelcomeSubtitle = styled.h2<WelcomeSubtitleProps>`
   color: ${({ theme, fontColor }) => (fontColor || theme.colors.ultraDarkBlack)};
   font-family: "Source Sans Pro";
-  font-size: 14px;
   ${({ fontSize = 14 }) => css`font-size: ${fontSize}px;`}
   ${({ lineHeight }) => lineHeight && css`line-height: ${lineHeight}px;`}
   font-weight: ${props => props.fontWeight};
@@ -229,6 +227,22 @@ export const IntroductionText = styled.div`
   line-height: 20px;
   color: ${({ theme }) => theme.colors.mineShaft};
   max-width: 320px;
-  margin: 8px auto 0;
+  margin: 12px auto 0;
   text-align: left;
+
+  > a {
+    font-weight: normal;
+  }
+`;
+
+export const IntroductionRecommendations = styled(IntroductionText)`
+  margin: 10px auto 0;
+
+  > p {
+    margin: 1rem 21px 0;
+
+    &:first-of-type {
+      margin-top: 12px;
+    }
+  }
 `;

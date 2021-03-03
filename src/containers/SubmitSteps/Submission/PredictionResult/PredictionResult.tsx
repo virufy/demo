@@ -121,7 +121,7 @@ const PredictionResult = () => {
         if (response.data) {
           console.log(response.data);
           setProcessing(false);
-          setLikelihood('xx');
+          setLikelihood('XX');
         }
       } else {
         // TODO: remove else, just for testing

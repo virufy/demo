@@ -37,9 +37,9 @@
     },
     "next": "Continue",
     "delete": "Delete",
-    "text": "Click the record button and cough intentionally 3 to 5 times. When you are done, click continue.",
+    "text": "Click the record button and cough intentionally 3 to 5 times <strong>during 3 seconds minimum</strong>. When you are done, click Continue.",
     "textCount": "Click the record button and count clearly from one to ten. When you are done, click continue.",
-    "upload": "upload your own file"
+    "upload": "Upload your own file"
   },
   "recordingsRecordManual": {
     "header": "Upload a file",
