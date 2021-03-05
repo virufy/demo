@@ -2,6 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import usePortal from 'react-useportal';
 import { useTranslation, Trans } from 'react-i18next';
+import axios from 'axios';
 
 // Form
 import { useStateMachine } from 'little-state-machine';
@@ -36,6 +37,8 @@ import {
   IntroText,
 } from './style';
 
+const predictionEndpointUrl = process.env.REACT_APP_PREDICTION_ENDPOINT;
+
 const PredictionResult = () => {
   // Hooks
   const { Portal } = usePortal({
@@ -64,14 +67,6 @@ const PredictionResult = () => {
     }
   }, [processing]);
 
-  // Effects
-  React.useEffect(() => {
-    scrollToTop();
-    setTitle('');
-    setDoGoBack(() => {});
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   // Handlers
   const handleStartAgain = React.useCallback(() => {
     history.replace('');
@@ -83,8 +78,8 @@ const PredictionResult = () => {
       if (state && state.welcome && state['submit-steps']) {
         const {
           language,
-          hospitalCode = 'virufy',
-          patientId = 'virufy',
+          // hospitalCode = 'virufy',
+          // patientId = 'virufy',
         } = state.welcome;
 
         const body = new FormData();
@@ -93,12 +88,12 @@ const PredictionResult = () => {
         if (language) {
           body.append('language', language);
         }
-        if (hospitalCode) {
-          body.append('hospitalCode', hospitalCode);
-        }
-        if (patientId) {
-          body.append('patientId', patientId);
-        }
+        // if (hospitalCode) {
+        body.append('hospitalCode', 'virufy');
+        // }
+        // if (patientId) {
+        body.append('patientId', 'virufy');
+        // }
 
         const response = await axiosClient.post('saveDemoSurvey', body, {
           headers: {
@@ -111,13 +106,29 @@ const PredictionResult = () => {
 
         if (response.data) {
           console.log(response.data);
+          const { submissionId, coughPath } = response.data;
+          let prediction = 'XX';
+          if (predictionEndpointUrl && submissionId && coughPath) {
+            const predictionBody = new FormData();
+            predictionBody.append('id', response.data.submissionId);
+            predictionBody.append('coughPath', response.data.coughPath);
+            console.log(response.data);
+            const predictionResult = await axios.post(process.env.REACT_APP_PREDICTION_ENDPOINT
+             || '', predictionBody, {
+              headers: {
+                'Content-Type': 'multipart/form-data',
+              },
+            });
+            if (predictionResult.data && predictionResult.data.prediction) {
+              prediction = (parseFloat(predictionResult.data.prediction) * 100).toFixed(2);
+            }
+          }
+
           setProcessing(false);
-          setLikelihood('XX');
+          setLikelihood(prediction);
         }
       } else {
-        // TODO: remove else, just for testing
-        setProcessing(false);
-        setLikelihood('XX');
+        handleStartAgain();
       }
     } catch (error) {
       console.log('Error', error);
@@ -125,11 +136,12 @@ const PredictionResult = () => {
     }
   };
 
+  // Effects
   React.useEffect(() => {
-    // TODO: Update this
-    setTimeout(() => {
-      handleSubmit();
-    }, 3000);
+    scrollToTop();
+    setTitle('');
+    setDoGoBack(() => {});
+    handleSubmit();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
