@@ -11,9 +11,6 @@ import { useStateMachine } from 'little-state-machine';
 import WizardButtons from 'components/WizardButtons';
 import Link from 'components/Link';
 
-// Hooks
-import useAxios from 'hooks/useAxios';
-
 // Update Action
 import { resetStore } from 'utils/wizard';
 
@@ -37,7 +34,7 @@ import {
   IntroText,
 } from './style';
 
-const predictionEndpointUrl = process.env.REACT_APP_PREDICTION_ENDPOINT;
+const predictionEndpointUrl = process.env.REACT_APP_PREDICTION_ENDPOINT || '';
 
 const PredictionResult = () => {
   // Hooks
@@ -48,7 +45,6 @@ const PredictionResult = () => {
   const history = useHistory();
   const { t } = useTranslation();
   const { state, actions } = useStateMachine({ resetStore: resetStore() });
-  const axiosClient = useAxios();
 
   // States
   const [submitError, setSubmitError] = React.useState<string | null>(null);
@@ -77,64 +73,31 @@ const PredictionResult = () => {
       setSubmitError(null);
       if (state && state.welcome && state['submit-steps']) {
         const {
-          language,
-          // hospitalCode = 'virufy',
-          // patientId = 'virufy',
-        } = state.welcome;
-
-        const {
           recordYourCough,
         } = state['submit-steps'];
 
         const body = new FormData();
-
-        // Welcome Screens
-        if (language) {
-          body.append('language', language);
-        }
-        // if (hospitalCode) {
-        body.append('hospitalCode', 'virufy');
-        // }
-        // if (patientId) {
-        body.append('patientId', 'virufy');
-        // }
 
         // Records
         if (recordYourCough?.recordingFile || recordYourCough?.uploadedFile) {
           body.append('cough', recordYourCough.recordingFile! || recordYourCough.uploadedFile!);
         }
 
-        const response = await axiosClient.post('saveDemoSurvey', body, {
-          headers: {
-            'Content-Type': 'multipart/form-data; boundary=SaveDemoSurvey',
-          },
-        });
-
         // Restart
         actions.resetStore({});
 
-        if (response.data) {
-          console.log(response.data);
-          const { submissionId, coughPath } = response.data;
-          let prediction = 'XX';
-          if (predictionEndpointUrl && submissionId && coughPath) {
-            const predictionBody = new FormData();
-            predictionBody.append('id', response.data.submissionId);
-            predictionBody.append('coughPath', response.data.coughPath);
-            console.log(response.data);
-            const predictionResult = await axios.post(process.env.REACT_APP_PREDICTION_ENDPOINT
-             || '', predictionBody, {
-              headers: {
-                'Content-Type': 'multipart/form-data',
-              },
-            });
-            if (predictionResult.data && predictionResult.data.prediction) {
-              prediction = (parseFloat(predictionResult.data.prediction) * 100).toFixed(2);
-            }
-          }
-
+        const predictionResult = await axios.post(predictionEndpointUrl, body, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        });
+        if (predictionResult.data && ('prediction' in predictionResult.data)) {
           setProcessing(false);
-          setLikelihood(prediction);
+          const result = predictionResult.data.prediction ? 'positive' : 'negative';
+          setLikelihood(t('predictionResult:result', { context: result, defaultValue: result }));
+        } else {
+          setProcessing(false);
+          setLikelihood('-');
         }
       } else {
         handleStartAgain();
@@ -189,7 +152,7 @@ const PredictionResult = () => {
                   {t('predictionResult:likelihoodPrefix')}
                   <LikelihoodPercentageText>
                     {' '}
-                    {likelihood}%
+                    {likelihood}
                   </LikelihoodPercentageText>
                 </LikelihoodText>
               )
