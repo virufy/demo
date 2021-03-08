@@ -292,61 +292,6 @@ const Step1 = (p: Wizard.StepProps) => {
           </Trans>
         </WelcomeNote>
 
-        {/* Hospital Code */}
-        {/* <WelcomeSubtitle
-          mt={isDesktop ? 50 : 35}
-          mb={isDesktop ? 20 : 17}
-          fontSize={16}
-          fontWeight={700}
-          textAlign="left"
-        >
-          {t('main:hospitalCodeLabel')}
-          <WelcomeRequiredFieldText>*</WelcomeRequiredFieldText>
-        </WelcomeSubtitle>
-
-        <Controller
-          control={control}
-          name="hospitalCode"
-          defaultValue=""
-          render={({ onChange, value }) => (
-            <WelcomeInput
-              value={value}
-              onChange={onChange}
-              type="text"
-              id="hospitalCode"
-              placeholder={t('main:hospitalCodePlaceholder')}
-              autoComplete="Off"
-            />
-          )}
-        /> */}
-
-        {/* Patient ID */}
-        {/* <WelcomeSubtitle
-          mt={isDesktop ? 50 : 17}
-          mb={isDesktop ? 20 : 17}
-          fontSize={16}
-          fontWeight={700}
-          textAlign="left"
-        >
-          {t('main:patientIdLabel')}
-          <WelcomeRequiredFieldText>*</WelcomeRequiredFieldText>
-        </WelcomeSubtitle>
-        <Controller
-          control={control}
-          name="patientId"
-          defaultValue=""
-          render={({ onChange, value }) => (
-            <WelcomeInput
-              value={value}
-              onChange={onChange}
-              type="text"
-              id="patientId"
-              placeholder={t('main:patientIdPlaceholder')}
-              autoComplete="Off"
-            />
-          )}
-        /> */}
-
         {/* Wizard Buttons */}
         {
           activeStep && (

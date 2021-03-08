@@ -83,8 +83,11 @@
   "predictionResult": {
     "processingTitle": "Procesando",
     "predictionResultTitle": "Resultado de la Predicción",
-    "likelihoodPrefix": "Su probabilidad de COVID-19 es",
-    "nextButton": "Subir otra tos"
+    "likelihoodPrefix": "Resultado de COVID-19:",
+    "nextButton": "Subir otra tos",
+    "submitError": "Se produjo un error. Por favor, inténtelo de nuevo.",
+    "result_positive": "Positivo",
+    "result_negative": "Negativo"
   },
   "footerReportProblems": {
     "message": "¿Algo mal? Reportar un problema"
