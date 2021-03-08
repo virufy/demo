@@ -2,6 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import usePortal from 'react-useportal';
 import { useTranslation, Trans } from 'react-i18next';
+import axios from 'axios';
 
 // Form
 import { useStateMachine } from 'little-state-machine';
@@ -9,9 +10,6 @@ import { useStateMachine } from 'little-state-machine';
 // Components
 import WizardButtons from 'components/WizardButtons';
 import Link from 'components/Link';
-
-// Hooks
-import useAxios from 'hooks/useAxios';
 
 // Update Action
 import { resetStore } from 'utils/wizard';
@@ -36,6 +34,8 @@ import {
   IntroText,
 } from './style';
 
+const predictionEndpointUrl = process.env.REACT_APP_PREDICTION_ENDPOINT || '';
+
 const PredictionResult = () => {
   // Hooks
   const { Portal } = usePortal({
@@ -45,7 +45,6 @@ const PredictionResult = () => {
   const history = useHistory();
   const { t } = useTranslation();
   const { state, actions } = useStateMachine({ resetStore: resetStore() });
-  const axiosClient = useAxios();
 
   // States
   const [submitError, setSubmitError] = React.useState<string | null>(null);
@@ -64,14 +63,6 @@ const PredictionResult = () => {
     }
   }, [processing]);
 
-  // Effects
-  React.useEffect(() => {
-    scrollToTop();
-    setTitle('');
-    setDoGoBack(() => {});
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   // Handlers
   const handleStartAgain = React.useCallback(() => {
     history.replace('');
@@ -82,50 +73,36 @@ const PredictionResult = () => {
       setSubmitError(null);
       if (state && state.welcome && state['submit-steps']) {
         const {
-          language,
-          hospitalCode = 'virufy',
-          patientId = 'virufy',
-        } = state.welcome;
-
-        const {
           recordYourCough,
         } = state['submit-steps'];
 
         const body = new FormData();
-
-        // Welcome Screens
-        if (language) {
-          body.append('language', language);
-        }
-        if (hospitalCode) {
-          body.append('hospitalCode', hospitalCode);
-        }
-        if (patientId) {
-          body.append('patientId', patientId);
-        }
 
         // Records
         if (recordYourCough?.recordingFile || recordYourCough?.uploadedFile) {
           body.append('cough', recordYourCough.recordingFile! || recordYourCough.uploadedFile!);
         }
 
-        const response = await axiosClient.post('saveDemoSurvey', body, {
-          headers: {
-            'Content-Type': 'multipart/form-data; boundary=SaveDemoSurvey',
-          },
-        });
-
         // Restart
         actions.resetStore({});
 
-        if (response.data) {
-          console.log(response.data);
+        const predictionResult = await axios.post(predictionEndpointUrl, body, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        });
+        if (predictionResult.data && ('prediction' in predictionResult.data)) {
           setProcessing(false);
-          setLikelihood('XX');
+          const result = predictionResult.data.prediction;
+          console.log('Prediction: ', predictionResult.data.prediction, ' - ', typeof predictionResult.data.prediction);
+          console.log('Result: ', result);
+          setLikelihood(t('predictionResult:result', { context: result, defaultValue: result }));
+        } else {
+          setProcessing(false);
+          setLikelihood('-');
         }
       } else {
-        // TODO: remove else, just for testing
-        setProcessing(false);
+        handleStartAgain();
       }
     } catch (error) {
       console.log('Error', error);
@@ -133,11 +110,12 @@ const PredictionResult = () => {
     }
   };
 
+  // Effects
   React.useEffect(() => {
-    // TODO: Update this
-    setTimeout(() => {
-      handleSubmit();
-    }, 3000);
+    scrollToTop();
+    setTitle('');
+    setDoGoBack(() => {});
+    handleSubmit();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -176,7 +154,7 @@ const PredictionResult = () => {
                   {t('predictionResult:likelihoodPrefix')}
                   <LikelihoodPercentageText>
                     {' '}
-                    {likelihood}%
+                    {likelihood}
                   </LikelihoodPercentageText>
                 </LikelihoodText>
               )
