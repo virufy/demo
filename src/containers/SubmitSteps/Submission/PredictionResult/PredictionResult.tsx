@@ -96,7 +96,8 @@ const PredictionResult = () => {
           const result = predictionResult.data.prediction;
           console.log('Prediction: ', predictionResult.data.prediction, ' - ', typeof predictionResult.data.prediction);
           console.log('Result: ', result);
-          setLikelihood(t('predictionResult:result', { context: result, defaultValue: result }));
+          setLikelihood(`${result}`);
+          // setLikelihood(t('predictionResult:result', { context: result, defaultValue: result }));
         } else {
           setProcessing(false);
           setLikelihood('-');
