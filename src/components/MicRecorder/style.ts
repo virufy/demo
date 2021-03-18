@@ -95,7 +95,6 @@ export const MicRecorderTimerReleaseTextContainer = styled.div`
   color: ${colors.red};
   font-family: 'Source Sans Pro';
   display: 'flex';
-  height: 50px;
 `;
 
 export const MicRecorderTextP = styled.p<{ show?: boolean }>`

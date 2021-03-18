@@ -126,6 +126,7 @@ const PredictionResult = () => {
       } else {
         // TODO: remove else, just for testing
         setProcessing(false);
+        setLikelihood('XX');
       }
     } catch (error) {
       console.log('Error', error);
@@ -163,8 +164,8 @@ const PredictionResult = () => {
 
             <IntroText>
               <Trans i18nKey="main:introductionText">
-                <strong>Important note:</strong> this app is only for demonstration purposes and does not provide a
-                prediction. Please visit <Link to="https://virufy.org/app" target="_blank">virufy.org/app</Link> to
+                <strong>Important note:</strong> This app is only for demonstration purposes and does not provide a
+                prediction. Please visit <Link to="https://virufy.org/study" target="_blank">Virufy Study</Link> to
                 contribute your cough and help us to complete this app.
               </Trans>
             </IntroText>

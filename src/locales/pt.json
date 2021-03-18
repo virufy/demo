@@ -8,7 +8,7 @@
     "paragraph2": "Atualmente nosso estudo está aberto apenas para pessoas dos países abaixo. Por favor, confirme se você está no território de um desses países.",
     "selectCountry": "Selecione seu país",
     "selectRegion": "Selecione a região",
-    "introductionText": "<strong>Nota importante:</strong> este aplicativo é apenas para fins de demonstração e não fornece uma previsão. Por favor, visite <2>virufy.org/app</2> para contribuir com sua tosse e nos ajudar a completar este aplicativo.",
+    "introductionText": "<strong>Nota importante:</strong> Este aplicativo é apenas para fins de demonstração e não fornece uma previsão. Por favor, visite <2>Virufy Study</2> para contribuir com sua tosse e nos ajudar a completar este aplicativo.",
     "introductionRecomendations": "<strong>Para reduzir o risco e a auto-flagelação, aconselhamos:</strong><p>Por favor, use seu próprio dispositivo e use uma máscara quando apropriado.</p><p>Desinfecte seu dispositivo e qualquer superfície afetada ou próxima após gravar sua tosse/fala. </p><p>Se você tiver uma condição subjacente que aumente seu risco de tosse, favor verificar com seu provedor de saúde antes de participar.</p><p>Se você sentir que seus sintomas estão piorando, favor contatar sua resposta médica local.</p>",
     "hospitalCodeLabel": "Código do hospital",
     "patientIdLabel": "ID do paciente",
@@ -38,8 +38,8 @@
     "recordCough": {
       "header": "Gravar sua fala",
       "title": "Instruções",
-      "intro1": "Por favor, tussa longe de pessoas ao seu redor! Caso esteja se sentindo doente, por favor, sente-se.",
-      "intro2": "Em um ambiente silencioso, por favor, pressione o botão gravar e tussa intencionalmente cerca de 3 a 5 vezes."
+      "intro1": "Encontre um ambiente tranqüilo a pelo menos 20 pés de distância dos outros. Se você estiver se sentindo mal, por favor, sente-se.",
+      "intro2": "Coloque seu dispositivo perto do rosto e tussa no cotovelo para evitar a disseminação do vírus.  Não tussa violentamente ou com muita força."
     },
     "next": "Próximo",
     "releaseButtonStart": "Lançamento para iniciar a gravação",
@@ -52,7 +52,7 @@
     },
     "next": "Continuar",
     "delete": "Deletar",
-    "text": "Clique no botão gravar e tussa intencionalmente de 3 a 5 vezes <strong>durante 3 segundos no mínimo</strong>. Quando tiver terminado, clique em Continuar.",
+    "text": "Clique no botão gravar e tussa intencionalmente <strong>3 vezes</strong>. Quando terminar, clique em <3></3> e Continue.",
     "textCount": "Clique no botão gravar e conte claramente de um até dez. Quando acabar, clique em continuar.",
     "upload": "Carregue seu próprio arquivo"
   },

@@ -42,7 +42,7 @@ export const TitleResult = styled.h1`
   font-size: 34px;
   line-height: 48px;
   color: ${props => props.theme.colors.darkBlack};
-  text-align: left;
+  text-align: center;
   margin: 33px 0px 0px;
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
@@ -52,16 +52,16 @@ export const TitleResult = styled.h1`
 
 export const LikelihoodText = styled.div`
   margin: 33px auto 0px;
-  padding: 0 6px;
-  background: ${props => props.theme.colors.realWhite};
-  border: 1px solid ${props => props.theme.colors.mercury};
+  padding: 21px 30px 15px;
+  background: ${props => props.theme.colors.darkBlack_04};
   box-sizing: border-box;
-  border-radius: 4px;
+  border-radius: 15px;
 
   font-family: 'Source Sans Pro';
   font-weight: bold;
   font-size: 20px;
-  line-height: 48px;
+  line-height: 24px;
+  font-weight: 700;
   color: ${props => props.theme.colors.mineShaft};
 
   text-align: center;
@@ -73,7 +73,14 @@ export const LikelihoodText = styled.div`
   }
 `;
 
-export const LikelihoodPercentageText = styled.span``;
+export const LikelihoodPercentageText = styled.span`
+  display: block;
+  color: ${props => props.theme.colors.green};
+
+  font-size: 24px;
+  line-height: 1.42;
+  margin-top: 16px;
+`;
 
 export const ImagePredictionResult = styled(PredictionResultSVG)`
   margin: 25px 0px 26px -25px;

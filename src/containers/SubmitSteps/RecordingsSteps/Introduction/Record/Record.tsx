@@ -22,6 +22,7 @@ import {
   UploadText,
   Text,
   MicContainer,
+  StopImg,
 } from './style';
 
 const audioMaxSizeInMb = 5;
@@ -101,8 +102,8 @@ const Record = ({
       <MainContainer>
         <Text>
           <Trans i18nKey="recordingsRecord:text">
-            Click the record button and cough intentionally 3 to 5 times <strong>during 3 seconds minimum</strong>.
-            When you are done, click Continue
+            Click the record button and cough intentionally <strong>3 times</strong>. When you are done,
+            click <StopImg /> and Continue.
           </Trans>
         </Text>
         <MicContainer>

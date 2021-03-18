@@ -8,7 +8,7 @@
     "paragraph2": "Nuestro estudio actualmente está abierto sólo a personas dentro de los países y/o territorios listados debajo. Por favor confirme que está dentro del territorio de alguno de estos países.",
     "selectCountry": "Seleccione país",
     "selectRegion": "Seleccione region",
-    "introductionText": "<strong>Nota importante:</strong> esta app es sólo para fines de demostración y no proporciona una predicción. Por favor, visita <2>virufy.org/app</2> para contribuir con tu tos y ayudarnos a completar esta app.",
+    "introductionText": "<strong>Nota importante:</strong> Esta app es sólo para fines de demostración y no proporciona una predicción. Por favor, visita <2>Virufy Study</2> para contribuir con tu tos y ayudarnos a completar esta app.",
     "introductionRecomendations": "<strong>Para reducir el riesgo y la autolesión, le aconsejamos:</strong><p>Por favor, utilice su propio dispositivo y use una mascarilla cuando sea apropiado.</p><p>Desinfecte su dispositivo y cualquier superficie afectada o cercana después de registrar su tos/habla. </p><p>Si tiene una enfermedad subyacente que aumente su riesgo por la tos, por favor, consulte con su proveedor de atención médica antes de participar.</p><p>Si cree que sus síntomas están empeorando, por favor, póngase en contacto con su respuesta médica local.</p>",
     "hospitalCodeLabel": "Código de Hospital",
     "patientIdLabel": "ID de Paciente",
@@ -38,8 +38,8 @@
     "recordCough": {
       "header": "Grabe su tos",
       "title": "Instrucciones",
-      "intro1": "Por favor, tosa lejos de las personas que están a su alrededor. Si se siente enfermo, por favor siéntese.",
-      "intro2": "En un ambiente silencioso, por favor presione el botón de grabar y tosa intencionalmente de 3 a 5 veces."
+      "intro1": "Busque un entorno tranquilo a una distancia mínima de 6 metros de los demás. Si se siente mal, siéntese.",
+      "intro2": "Mantenga su dispositivo cerca de la cara y tosa en el codo para evitar la propagación del virus. No tosa de forma violenta o con demasiada fuerza."
     },
     "next": "Siguiente",
     "releaseButtonStart": "Suelte para empezar a grabar",
@@ -52,7 +52,7 @@
     },
     "next": "Continuar",
     "delete": "Borrar",
-    "text": "Pulse el botón de grabación y tosa intencionadamente de 3 a 5 veces <strong>durante 3 segundos como minimo.</strong>. Cuando haya terminado, haga clic en Continuar.",
+    "text": "Pulse el botón de grabación y tosa intencionadamente <strong>3 veces</strong>. Cuando haya terminado, haga clic en <3></3> y continúe.",
     "textCount": "Haga clic en el botón de grabar y cuente claramente del uno al diez. Cuando haya terminado, haga clic en continuar.",
     "upload": "Sube tu propio audio"
   },

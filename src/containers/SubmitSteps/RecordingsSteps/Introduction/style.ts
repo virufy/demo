@@ -14,14 +14,13 @@ export const InstructionTitle = styled.div`
   font-family: Open Sans;
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
-  line-height: 160%;
+  font-size: 24px;
 
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 40px;
   margin-top: 32px;
 
-  color: ${props => props.theme.colors.darkBlack};
+  color: ${props => props.theme.colors.mineShaft};
 `;
 
 export const Text = styled(BlackText).attrs({ dark: true })`

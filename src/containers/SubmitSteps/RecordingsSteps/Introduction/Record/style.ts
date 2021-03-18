@@ -2,15 +2,16 @@ import styled from 'styled-components';
 import { BlackText } from 'components/Texts';
 import { colors } from 'theme';
 
+import StopSVG from 'assets/icons/stop.svg';
+
 export const MainContainer = styled.div`
   padding: 40px 0px;
 `;
 
 export const Text = styled(BlackText)`
   color: ${props => props.theme.colors.darkBlack};
-  margin-bottom: 40px;
+  margin-bottom: 2px;
   text-align: left;
-  font-weight: 600;
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     max-width: 470px;
@@ -60,4 +61,10 @@ export const UploadText = styled.div`
   font-size: 0.75rem;
   line-height: 24px;
   color: ${colors.darkBlack};
+`;
+
+export const StopImg = styled.img.attrs(() => ({ src: StopSVG }))`
+  display: inline;
+  height: 10px;
+  margin: 0px 2px 4px;
 `;
