@@ -1,7 +1,13 @@
 {
   "main": {
     "title": "Formulario de Recolección de datos de COVID-19",
-    "paragraph1": "Antes de empezar, por favor seleccione su idioma.",
+    "logoIntro": "Una organización independiente de investigación sin ánimo de lucro",
+    "note": "<strong>Por favor, tenga en cuenta:</strong> Este formulario es sólo para recopilar datos. No predice su estado de COVID-19 ni diagnostica ninguna enfermedad, trastorno u otra condición de salud. Virufy está llevando a cabo una investigación y utilizará la información que usted proporcione sólo para esa investigación. Virufy no sustituirá a un médico y le recuerda que es su responsabilidad buscar el consejo de su médico.",
+    "paragraph1": "Bienvenido. Este estudio sólo debería tomarle unos 5 minutos en completarse.",
+    "selectYourLanguage": "Por favor, seleccione su idioma.",
+    "paragraph2": "Nuestro estudio actualmente está abierto sólo a personas dentro de los países y/o territorios listados debajo. Por favor confirme que está dentro del territorio de alguno de estos países.",
+    "selectCountry": "Seleccione país",
+    "selectRegion": "Seleccione region",
     "introductionText": "<strong>Nota importante:</strong> esta app es sólo para fines de demostración y no proporciona una predicción. Por favor, visita <2>virufy.org/app</2> para contribuir con tu tos y ayudarnos a completar esta app.",
     "introductionRecomendations": "<strong>Para reducir el riesgo y la autolesión, le aconsejamos:</strong><p>Por favor, utilice su propio dispositivo y use una mascarilla cuando sea apropiado.</p><p>Desinfecte su dispositivo y cualquier superficie afectada o cercana después de registrar su tos/habla. </p><p>Si tiene una enfermedad subyacente que aumente su riesgo por la tos, por favor, consulte con su proveedor de atención médica antes de participar.</p><p>Si cree que sus síntomas están empeorando, por favor, póngase en contacto con su respuesta médica local.</p>",
     "hospitalCodeLabel": "Código de Hospital",
@@ -10,13 +16,22 @@
     "patientIdPlaceholder": "tipear aquí...",
     "nextButton": "Siguiente"
   },
+  "helpVirufy": {
+    "title": "Acerca de Virufy",
+    "ourSupporters": "Nuestros colaboradores",
+    "aboutParagraph": "<p>Virufy es una organización sin ánimo de lucro que está trabajando para desarrollar los medios para utilizar la inteligencia artificial (Al) para detectar el COVID-19 a partir de los patrones de tos de forma rápida y sin coste alguno mediante el uso de un teléfono inteligente.</p><p>Nuestro equipo está formado por investigadores de 25 países y nos centramos en los países de bajos ingresos. Nuestra investigación ha demostrado que la tecnología Al puede ser capaz de identificar la firma única de la tos de COVID.</p><p>Mediante la recopilación de grabaciones de tos de personas de todo el mundo, Virufy está mejorando la solidez de su algoritmo de IA para reconocer el patrón de sonido único de COVID.</p><p>Usted tiene el poder de ayudar a beneficiar a millones de personas en todo el mundo contribuyendo con su tos en nuestro estudio.</p>",
+    "nextButton": "Siguiente"
+  },
   "beforeStart": {
     "title": "Por último, antes de empezar...",
-    "subtitle": "Para reducir el riesgo y el daño autoinfligido, le aconsejamos:",
-    "advise1": "Por favor, use su propio dispositivo y use una máscara cuando sea apropiado.",
-    "advise2": "Desinfecte su dispositivo y cualquier superficie afectada o cercana después de grabar su tos.",
-    "advise3": "Si tiene una condición previa que aumente su riesgo al toser, por favor consulte con su médico antes de participar.",
-    "advise4": "Si siente que sus síntomas están empeorando, por favor contacte a su centro médico local.",
+    "subtitle": "Para garantizar la seguridad, le aconsejamos:",
+    "advise_list": [
+      "Utilizar su propio dispositivo para registrar la muestra de tos y usar una máscara cuando sea apropiado.",
+      "Desinfectar su dispositivo y cualquier superficie afectada o cercana después de registrar su tos.",
+      "Si tiene una afección subyacente que aumente el riesgo de toser, consulte con su proveedor de atención médica antes de participar.",
+      "Si tiene algún síntoma o alguna pregunta o preocupación sobre su estado de salud, póngase en contacto con su proveedor de atención médica.",
+      "Si cree que sus síntomas están empeorando, póngase en contacto con los servicios de emergencia médica locales o con el personal de primeros auxilios inmediatamente."
+    ],
     "startButton": "Comenzar"
   },
   "recordingsIntroduction": {

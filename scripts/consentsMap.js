@@ -5,14 +5,14 @@ try {
   const BASE_PATH = path.join(__dirname, '..', 'public', 'static', 'consent');
   const TARGET_PATH = path.join(__dirname, '..', 'src', 'utils', 'mapOfConsentFiles.ts');
 
-  const folders = fs.readdirSync(BASE_PATH, 'utf-8');
+  const folders = fs.readdirSync(BASE_PATH, 'utf-8').filter(f => f !== '.DS_Store');
 
   if (folders && folders.length > 0) {
     fs.writeFileSync(TARGET_PATH, `export const mapOfConsentFiles = {\n`);
   
     folders.forEach(folder => {
     fs.appendFileSync(TARGET_PATH, `  ${folder}: {\n    consentLang: [`);
-      const files = fs.readdirSync(`${BASE_PATH}/${folder}`, 'utf-8');
+      const files = fs.readdirSync(`${BASE_PATH}/${folder}`, 'utf-8').filter(f => f !== '.DS_Store');
       files.forEach(file => {
         fs.appendFileSync(
           TARGET_PATH,

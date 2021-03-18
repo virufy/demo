@@ -6,6 +6,7 @@ interface WelcomeTitleProps {
   fontSize?: number;
   mt?: number;
   mb?: number;
+  textAlign?: 'center' | 'left';
 }
 
 interface WelcomeSubtitleProps {
@@ -34,6 +35,14 @@ export const WelcomeLogo = styled(Logo)`
     }
 `;
 
+export const WelcomeLogoText = styled.div`
+  font-family: 'Source Sans Pro'; /* It could be removed if default on body changes */
+  font-size: 0.75rem;
+  line-height: 1.67;
+  text-align: center;
+  color: ${props => props.theme.colors.realBlack};
+`;
+
 export const WelcomeTitle = styled.h1<WelcomeTitleProps>`
   color: ${props => props.theme.colors.darkBlack};
   font-family: "Open Sans";
@@ -43,7 +52,7 @@ export const WelcomeTitle = styled.h1<WelcomeTitleProps>`
   margin-top: ${({ mt }) => `${mt || 11}px`};
   margin-bottom: ${({ mb }) => `${mb || 16}px`};
   max-width: 320px;
-  text-align: left;
+  text-align: ${({ textAlign }) => textAlign || 'center'};
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     font-size: ${({ fontSize }) => `${fontSize}px` || '2.25rem'} ;
@@ -57,12 +66,13 @@ export const WelcomeTitle = styled.h1<WelcomeTitleProps>`
   }
 `;
 
-export const WelcomeContent = styled.div`
-  margin: 30px auto 0px auto;
+export const WelcomeContent = styled.div<{ maxWidth?: number; mt?: number; }>`
+  margin: ${({ mt = 30 }) => mt}px auto 0px;
   text-align: left;
   display: flex;
   flex-direction: column;
   height: 100%;
+  ${({ maxWidth }) => maxWidth !== undefined && css`max-width: ${maxWidth}px;`}
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     text-align: center;
@@ -161,6 +171,11 @@ export const WelcomeRequiredFieldText = styled.span`
   color: ${props => props.theme.colors.red};
 `;
 
+export const RegionContainer = styled.div`
+  margin-top: 8px;
+  text-align: center;
+`;
+
 export const WelcomeConsentForm = styled.div`
     max-width: 320px;
     margin: 10px auto 20px auto;
@@ -172,7 +187,7 @@ export const WelcomeConsentForm = styled.div`
 `;
 
 export const WomanWithPhoneFront = styled(WomanWithPhoneFrontSvg)`
-  margin: 2px auto 16px;
+  margin: 32px auto 16px;
   width: 100%;
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
@@ -182,10 +197,12 @@ export const WomanWithPhoneFront = styled(WomanWithPhoneFrontSvg)`
 
 export const WelcomeNote = styled.span<WelcomeNoteProps>`
   font-family: "Source Sans Pro";
-  font-size: 0.875rem;
+  font-size: 0.75rem;
+  line-height: 1.42;
   font-style: italic;
   font-weight: ${({ isBold }) => (isBold ? 700 : 400)};
-  line-height: 1.5rem;
+  max-width: 320px;
+  margin: 36px auto 0;
 `;
 
 export const WelcomeJumpToBottomContainer = styled.div`
@@ -245,4 +262,21 @@ export const IntroductionRecommendations = styled(IntroductionText)`
       margin-top: 12px;
     }
   }
+`;
+
+export const SupportersTitle = styled.div`
+  margin-top: 20px;
+
+  color: ${props => props.theme.colors.darkBlack};
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  line-height: 1.6;
+  font-weight: 700;
+`;
+
+export const SupportersLogos = styled.div`
+  margin-top: 36px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 `;

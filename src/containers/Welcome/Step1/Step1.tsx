@@ -12,7 +12,7 @@ import * as Yup from 'yup';
 // Components
 import WizardButtons from 'components/WizardButtons';
 import Dropdown from 'components/Dropdown';
-import Link from 'components/Link';
+import CreatedBy from 'components/CreatedBy';
 
 // Update Action
 import { updateAction } from 'utils/wizard';
@@ -22,6 +22,7 @@ import useHeaderContext from 'hooks/useHeaderContext';
 
 // Data
 import { languageData } from 'data/lang';
+import { countryData, countriesWithStates } from 'data/country';
 
 // Hooks
 import useWindowSize from 'hooks/useWindowSize';
@@ -38,14 +39,22 @@ import {
   WelcomeStyledForm,
   // WelcomeInput,
   // WelcomeRequiredFieldText,
-  IntroductionText,
-  IntroductionRecommendations,
+  WelcomeLogoText,
+  WelcomeRequiredFieldText,
+  RegionContainer,
+  WelcomeNote,
 } from '../style';
 
 const schema = Yup.object().shape({
   language: Yup.string().required(),
   // hospitalCode: Yup.string().required(),
   // patientId: Yup.string().oneOf(['virufy']).required(),
+  country: Yup.string().required(),
+  region: Yup.string().when('country', {
+    is: (val: string) => countriesWithStates.includes(val),
+    then: Yup.string().required(),
+    otherwise: Yup.string(),
+  }),
 }).defined();
 
 type Step1Type = Yup.InferType<typeof schema>;
@@ -75,6 +84,7 @@ const Step1 = (p: Wizard.StepProps) => {
     handleSubmit,
     watch,
     reset,
+    setValue,
   } = useForm({
     defaultValues: state?.[p.storeKey],
     resolver: yupResolver(schema),
@@ -102,6 +112,12 @@ const Step1 = (p: Wizard.StepProps) => {
     }
   };
 
+  const resetRegion = () => {
+    setValue('region', '', {
+      shouldValidate: true,
+    });
+  };
+
   // Effects
   React.useEffect(() => {
     scrollToTop();
@@ -112,6 +128,7 @@ const Step1 = (p: Wizard.StepProps) => {
   }, []);
 
   const lang = watch('language');
+  const country = watch('country');
 
   React.useEffect(() => {
     i18n.changeLanguage(lang);
@@ -119,6 +136,24 @@ const Step1 = (p: Wizard.StepProps) => {
 
   // Memos
   const isDesktop = React.useMemo(() => width && width > 560, [width]);
+
+  const countrySelectOptions = React.useMemo(() => [{ name: t('main:selectCountry'), consentFormUrl: '', val: '' },
+    ...countryData], [t]);
+
+  const regionSelectOptions = React.useMemo(() => {
+    const output = [
+      { name: t('main:selectRegion'), val: '' },
+    ];
+    if (country) {
+      const elem = countryData.find(a => a.val === country);
+      if (elem) {
+        elem.states.forEach(s => {
+          output.push({ name: s, val: s });
+        });
+      }
+    }
+    return output;
+  }, [t, country]);
 
   if (!width) {
     return null;
@@ -128,10 +163,14 @@ const Step1 = (p: Wizard.StepProps) => {
     <WelcomeStyledForm>
       {/* Logo */}
       <WelcomeLogo />
+      <WelcomeLogoText>
+        {t('main:logoIntro', 'An Independent Nonprofit Research Organization')}
+      </WelcomeLogoText>
 
       {/* Title */}
       <WelcomeTitle
         fontSize={isDesktop ? 32 : 24}
+        mt={32}
       >
         {t('main:title')}
       </WelcomeTitle>
@@ -141,13 +180,21 @@ const Step1 = (p: Wizard.StepProps) => {
 
         {/* Content: Subtitle */}
         <WelcomeSubtitle
-          fontWeight={400}
-          mb={isDesktop ? 30 : 10}
-          mt={width && width > 560 ? 0 : -14}
-          lineHeight={20}
-          textAlign="center"
+          fontWeight={700}
+          mb={0}
+          mt={width && width > 560 ? 0 : 10}
+          textAlign={width && width > 560 ? 'center' : 'left'}
         >
           {t('main:paragraph1')}
+        </WelcomeSubtitle>
+
+        <WelcomeSubtitle
+          mt={width && width > 560 ? 50 : 32}
+          mb={width && width > 560 ? 50 : 16}
+          fontWeight={400}
+          textAlign={width && width > 560 ? 'center' : 'left'}
+        >
+          {t('main:selectYourLanguage', 'Please select your language.')}
         </WelcomeSubtitle>
 
         {/* Language */}
@@ -175,31 +222,48 @@ const Step1 = (p: Wizard.StepProps) => {
           )}
         />
 
-        <IntroductionText>
-          <Trans i18nKey="main:introductionText">
-            <strong>Important note:</strong> this app is only for demonstration purposes and does not provide a
-            prediction. Please visit <Link to="https://virufy.org/app" target="_blank">virufy.org/app</Link> to
-            contribute your cough and help us to complete this app.
+        <WelcomeSubtitle
+          mt={width && width > 560 ? 50 : 32}
+          mb={width && width > 560 ? 50 : 16}
+          fontWeight={400}
+          textAlign={width && width > 560 ? 'center' : 'left'}
+        >
+          {t('main:paragraph2')}
+          <WelcomeRequiredFieldText> *</WelcomeRequiredFieldText>
+        </WelcomeSubtitle>
+
+        <Controller
+          control={control}
+          name="country"
+          defaultValue={countrySelectOptions[0].val}
+          render={({ onChange, value }) => (
+            <Dropdown onChange={e => { onChange(e.currentTarget.value); resetRegion(); }} value={value}>
+              {countrySelectOptions.map(({ name, val }) => <option key={name} id={name} value={val}>{name}</option>)}
+            </Dropdown>
+          )}
+        />
+
+        <Controller
+          control={control}
+          name="region"
+          defaultValue={regionSelectOptions[0].val}
+          render={({ onChange, value }) => (regionSelectOptions.length > 1 ? (
+            <RegionContainer>
+              <Dropdown onChange={e => onChange(e.currentTarget.value)} value={value}>
+                {regionSelectOptions.map(({ name, val }) => <option key={name} id={name} value={val}>{name}</option>)}
+              </Dropdown>
+            </RegionContainer>
+          ) : <></>)}
+        />
+
+        <WelcomeNote>
+          <Trans i18nKey="main:note">
+            <strong>Please note:</strong> This form is for data collection only. It will not predict your COVID-19
+            status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and
+            will use the information you provide for that research only. Virufy will not take place of a doctor and
+            would like to remind you it is your responsibility to seek medical advice from your doctor.
           </Trans>
-        </IntroductionText>
-        <IntroductionRecommendations>
-          <Trans i18nKey="main:introductionRecomendations">
-            <strong>To reduce risk and self-harm, we advise you to:</strong>
-            <p>
-              Please use your own device and wear a mask when appropriate.
-            </p>
-            <p>
-              Disinfect your device and any affected or nearby surfaces after recording your cough/speech.
-            </p>
-            <p>
-              If you have an underlying condition that increases your risk from coughing, please check with your health
-              care provider before participating.
-            </p>
-            <p>
-              If you feel your symptoms are getting worse, please contact your local medical response.
-            </p>
-          </Trans>
-        </IntroductionRecommendations>
+        </WelcomeNote>
 
         {/* Hospital Code */}
         {/* <WelcomeSubtitle
@@ -266,6 +330,8 @@ const Step1 = (p: Wizard.StepProps) => {
                 leftDisabled={!isValid}
                 invert
               />
+
+              <CreatedBy inline />
             </Portal>
           )
         }

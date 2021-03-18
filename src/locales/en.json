@@ -1,7 +1,13 @@
 {
   "main": {
     "title": "COVID-19 Cough Detection",
-    "paragraph1": "Before you begin, please select your language.",
+    "logoIntro": "An Independent Nonprofit Research Organization",
+    "note": "<strong>Please note:</strong> This form is for data collection only. It will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
+    "paragraph1": "Welcome! This study should only take about 5 minutes to complete.",
+    "selectYourLanguage": "Please select your language.",
+    "paragraph2": "Our study is currently only open to people within the below countries and/or territories. Please confirm that you are within one of these locations.",
+    "selectCountry": "Select country",
+    "selectRegion": "Select region",
     "introductionText": "<strong>Important note:</strong> this app is only for demonstration purposes and does not provide a prediction. Please visit <2>virufy.org/app</2> to contribute your cough and help us to complete this app.",
     "introductionRecomendations": "<strong>To reduce risk and self-harm, we advise you to:</strong><p>Please use your own device and wear a mask when appropriate.</p><p>Disinfect your device and any affected or nearby surfaces after recording your cough/speech.</p><p>If you have an underlying condition that increases your risk from coughing, please check with your health care provider before participating.</p><p>If you feel your symptoms are getting worse, please contact your local medical response.</p>",
     "hospitalCodeLabel": "Hospital code",
@@ -10,13 +16,22 @@
     "patientIdPlaceholder": "type here...",
     "nextButton": "Next"
   },
+  "helpVirufy": {
+    "title": "About Virufy",
+    "ourSupporters": "Our Supporters",
+    "aboutParagraph": "<p>Virufy is a nonprofit organization that is working to develop the means to use artificial intelligence (Al) to screen for COVID-19 from cough patterns rapidly and at no cost through use of a smartphone.</p><p>Our team includes researchers from 25 countries and our focus is low-income countries. Our research has shown that Al technology may be able to identify COVID's unique cough signature.</p><p>By collecting coughs recordings from people around the world, Virufy is improving the robustness of its AI algorithm in recognizing COVID's unique sound pattern.</p><p>You have the power to help benefit millions of people across the globe by contributing your cough in our study.</p>",
+    "nextButton": "Next"
+  },
   "beforeStart": {
     "title": "Lastly, before we begin...",
-    "subtitle": "To reduce risk and self-harm, we advise you to:",
-    "advise1": "Please use your own device and wear a mask when appropiate.",
-    "advise2": "Disinfect your device and any affected or nearby surfaces after recording your cough.",
-    "advise3": "If you have an underlying condition that increases your risk from coughing, please check with your health care provider before participating.",
-    "advise4": "If you feel your symptoms are getting worse, please contact your local medical response.",
+    "subtitle": "To ensure safety, we advise you to:",
+    "advise_list": [
+      "Use your own device to record the cough sample and wear a mask when appropriate.",
+      "Disinfect your device and any affected or nearby surfaces after recording your cough.",
+      "If you have an underlying condition that increases your risk from coughing, please check with your healthcare provider before participating.",
+      "If you have any symptoms or any questions or concerns about your health condition, please contact your healthcare provider.",
+      "If you feel your symptoms are getting worse, please contact your local medical emergency services or first responders immediately."
+    ],
     "startButton": "Start"
   },
   "recordingsIntroduction": {

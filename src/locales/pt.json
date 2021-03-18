@@ -1,7 +1,13 @@
 {
   "main": {
     "title": "Formulário de coleta de dados de COVID 19",
-    "paragraph1": "Antes de começar, por favor, escolha seu idioma",
+    "logoIntro": "Uma organização independente de pesquisa sem fins lucrativos",
+    "note": "<strong>Por favor, observe:</strong> Este formulário é apenas para coleta de dados. Ele não irá prever seu status de COVID-19 ou diagnosticar qualquer doença, distúrbio ou outra condição de saúde. A Virufy está realizando pesquisas e utilizará as informações que você fornecer somente para essa pesquisa. A Virufy não realizará pesquisas com um médico e gostaria de lembrá-lo que é sua responsabilidade buscar aconselhamento médico de seu médico.",
+    "paragraph1": "Seja bem-vindo! Este estudo deve levar apenas cerca de 5 minutos para ser concluído.",
+    "selectYourLanguage": "Por favor, escolha seu idioma.",
+    "paragraph2": "Atualmente nosso estudo está aberto apenas para pessoas dos países abaixo. Por favor, confirme se você está no território de um desses países.",
+    "selectCountry": "Selecione seu país",
+    "selectRegion": "Selecione a região",
     "introductionText": "<strong>Nota importante:</strong> este aplicativo é apenas para fins de demonstração e não fornece uma previsão. Por favor, visite <2>virufy.org/app</2> para contribuir com sua tosse e nos ajudar a completar este aplicativo.",
     "introductionRecomendations": "<strong>Para reduzir o risco e a auto-flagelação, aconselhamos:</strong><p>Por favor, use seu próprio dispositivo e use uma máscara quando apropriado.</p><p>Desinfecte seu dispositivo e qualquer superfície afetada ou próxima após gravar sua tosse/fala. </p><p>Se você tiver uma condição subjacente que aumente seu risco de tosse, favor verificar com seu provedor de saúde antes de participar.</p><p>Se você sentir que seus sintomas estão piorando, favor contatar sua resposta médica local.</p>",
     "hospitalCodeLabel": "Código do hospital",
@@ -10,13 +16,22 @@
     "patientIdPlaceholder": "digite aqui...",
     "nextButton": "Próximo"
   },
+  "helpVirufy": {
+    "title": "Sobre a Virufy",
+    "ourSupporters": "Nossos apoiadores",
+    "aboutParagraph": "<p>A Virufy é uma organização sem fins lucrativos que está trabalhando para desenvolver os meios de usar a inteligência artificial (Al) para selecionar COVID-19 a partir de padrões de tosse rapidamente e sem custo através do uso de um smartphone.</p><p>Nossa equipe inclui pesquisadores de 25 países e nosso foco são os países de baixa renda. Nossa pesquisa mostrou que a tecnologia Al pode ser capaz de identificar a assinatura única da tosse da COVID.</p><p>Ao coletar gravações de tosse de pessoas do mundo inteiro, a Virufy está melhorando a robustez de seu algoritmo de IA ao reconhecer o padrão de som único da COVID.</p><p>Você tem o poder de ajudar a beneficiar milhões de pessoas em todo o mundo, contribuindo com sua tosse em nosso estudo.</p>",
+    "nextButton": "Próximo"
+  },
   "beforeStart": {
     "title": "Por último, antes de começarmos...",
-    "subtitle": "Para reduzir o risco e a automutilação, recomendamos que você:",
-    "advise1": "Por favor, use seu próprio dispositivo e use uma máscara quando apropriado.",
-    "advise2": "Desinfecte seu dispositivo e qualquer superfície afetada ou próxima após a gravação da sua tosse.",
-    "advise3": "Se você possuir qualquer condição que aumente seus riscos ao tossir, por favor, entre em contato com seu médico antes de participar.",
-    "advise4": "Se você perceber que seus sintomas estão piorando, por favor, busque imediatamente por um atendimento médico local",
+    "subtitle": "Para garantir a segurança, nós o aconselhamos a fazê-lo:",
+    "advise_list": [
+      "Usar seu próprio dispositivo para registrar a amostra de tosse e usar uma máscara quando apropriado.",
+      "Desinfecte seu dispositivo e qualquer superfície afetada ou próxima após registrar sua tosse.",
+      "Se você tiver uma condição subjacente que aumente seu risco de tosse, favor verificar com seu provedor de saúde antes de participar.",
+      "Se você tiver quaisquer sintomas ou quaisquer perguntas ou preocupações sobre sua condição de saúde, favor entrar em contato com seu provedor de saúde.",
+      "Se você sentir que seus sintomas estão piorando, favor entrar em contato com os serviços de emergência médica locais ou com os primeiros socorros imediatamente."
+    ],
     "startButton": "Começar"
   },
   "recordingsIntroduction": {
