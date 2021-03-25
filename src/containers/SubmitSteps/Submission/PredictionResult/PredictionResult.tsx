@@ -87,10 +87,6 @@ const PredictionResult = () => {
           patientId = 'virufy',
         } = state.welcome;
 
-        const {
-          recordYourCough,
-        } = state['submit-steps'];
-
         const body = new FormData();
 
         // Welcome Screens
@@ -102,11 +98,6 @@ const PredictionResult = () => {
         }
         if (patientId) {
           body.append('patientId', patientId);
-        }
-
-        // Records
-        if (recordYourCough?.recordingFile || recordYourCough?.uploadedFile) {
-          body.append('cough', recordYourCough.recordingFile! || recordYourCough.uploadedFile!);
         }
 
         const response = await axiosClient.post('saveDemoSurvey', body, {
