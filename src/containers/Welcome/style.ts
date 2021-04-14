@@ -218,17 +218,19 @@ export const WelcomeJumpToBottomContainer = styled.div`
 
 export const WelcomeInput = styled.input`
   height: 50px;
-  border: 1px solid #E6E6E6;
+  border: 0;
+  background-color: ${({ theme }) => theme.colors.lightGray};
+  color: ${({ theme }) => theme.colors.darkGray};
   border-radius: 4px;
   width: 100%;
   font-family: 'Source Sans Pro';
   line-height: 24px;
   padding: 13px 14px;
-  margin: 0 6px;
-  max-width: calc(100% - 12px);
+  margin: 0 auto;
+  max-width: 320px;
 
   ::placeholder {
-    color: ${({ theme }) => theme.colors.placeholderGray};
+    color: ${({ theme }) => theme.colors.lightDarkGray};
   }
   @media screen and (${({ theme }) => theme.breakpoints.tablet}){
     max-width: 348px;

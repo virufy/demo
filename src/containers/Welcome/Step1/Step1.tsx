@@ -43,10 +43,12 @@ import {
   WelcomeRequiredFieldText,
   RegionContainer,
   WelcomeNote,
+  WelcomeInput,
 } from '../style';
 
 const schema = Yup.object().shape({
   language: Yup.string().required(),
+  accessCode: Yup.string(),
   // hospitalCode: Yup.string().required(),
   // patientId: Yup.string().oneOf(['virufy']).required(),
   country: Yup.string().required(),
@@ -254,6 +256,31 @@ const Step1 = (p: Wizard.StepProps) => {
               </Dropdown>
             </RegionContainer>
           ) : <></>)}
+        />
+
+        <WelcomeSubtitle
+          mt={width && width > 560 ? 50 : 32}
+          mb={width && width > 560 ? 50 : 16}
+          fontWeight={400}
+          textAlign={width && width > 560 ? 'center' : 'left'}
+        >
+          {t('main:provideAccessCode', 'If provided, please enter your access code.')}
+        </WelcomeSubtitle>
+
+        {/* Language */}
+        <Controller
+          control={control}
+          name="accessCode"
+          render={({ onChange, value, name }) => (
+            <WelcomeInput
+              name={name}
+              value={value}
+              onChange={onChange}
+              type="text"
+              placeholder={t('main:enterAccessCode', 'Enter your access code')}
+              autoComplete="Off"
+            />
+          )}
         />
 
         <WelcomeNote>

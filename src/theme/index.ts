@@ -16,6 +16,7 @@ export const colors = {
   midDarkGray: '#D1D1D1',
   mineShaft: '#393939',
   placeholderGray: '#BBBBBB',
+  lightDarkGray: '#A3A3A3',
   darkGray: '#434343',
   darkGray_50: 'rgba(67, 67, 67, 0.5)', // '#434343'
   darkGray_70: 'rgba(67, 67, 67, 0.7)', // '#434343'

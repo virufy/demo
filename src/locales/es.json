@@ -14,7 +14,10 @@
     "patientIdLabel": "ID de Paciente",
     "hospitalCodePlaceholder": "tipear aquí...",
     "patientIdPlaceholder": "tipear aquí...",
-    "nextButton": "Siguiente"
+    "nextButton": "Siguiente",
+    "createdBy": "Creado por",
+    "provideAccessCode": "Si se le proporciona, introduzca su código de acceso.",
+    "enterAccessCode": "Introduzca su código de acceso"
   },
   "helpVirufy": {
     "title": "Acerca de Virufy",
