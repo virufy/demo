@@ -79,9 +79,12 @@ const PredictionResult = () => {
         const body = new FormData();
 
         // Records
-        if (recordYourCough?.recordingFile || recordYourCough?.uploadedFile) {
-          body.append('cough', recordYourCough.recordingFile! || recordYourCough.uploadedFile!);
+        const coughFile = recordYourCough?.recordingFile || recordYourCough?.uploadedFile;
+        if (coughFile) {
+          body.append('cough', coughFile, coughFile.name || 'filename.wav');
         }
+
+        body.append('accessCode', state.welcome?.accessCode ?? '');
 
         // Restart
         actions.resetStore({});
@@ -94,13 +97,11 @@ const PredictionResult = () => {
         if (predictionResult.data && ('prediction' in predictionResult.data)) {
           setProcessing(false);
           const result = predictionResult.data.prediction;
-          console.log('Prediction: ', predictionResult.data.prediction, ' - ', typeof predictionResult.data.prediction);
-          console.log('Result: ', result);
           setLikelihood(`${result}`);
           // setLikelihood(t('predictionResult:result', { context: result, defaultValue: result }));
         } else {
           setProcessing(false);
-          setLikelihood('-');
+          setLikelihood('Your likelihood of COVID is XX%');
         }
       } else {
         handleStartAgain();
@@ -152,9 +153,7 @@ const PredictionResult = () => {
             {
               likelihood && (
                 <LikelihoodText>
-                  {t('predictionResult:likelihoodPrefix')}
                   <LikelihoodPercentageText>
-                    {' '}
                     {likelihood}
                   </LikelihoodPercentageText>
                 </LikelihoodText>

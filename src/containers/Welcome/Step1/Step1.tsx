@@ -271,6 +271,7 @@ const Step1 = (p: Wizard.StepProps) => {
         <Controller
           control={control}
           name="accessCode"
+          defaultValue=""
           render={({ onChange, value, name }) => (
             <WelcomeInput
               name={name}

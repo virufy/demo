@@ -79,7 +79,7 @@ export const LikelihoodPercentageText = styled.span`
 
   font-size: 24px;
   line-height: 1.42;
-  margin-top: 16px;
+  /* margin-top: 16px; */
 `;
 
 export const ImagePredictionResult = styled(PredictionResultSVG)`
