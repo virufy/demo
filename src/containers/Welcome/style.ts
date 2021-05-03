@@ -1,6 +1,9 @@
 import styled, { css } from 'styled-components';
+
+// Components
 import { ReactComponent as Logo } from 'assets/virufyLogo.svg';
 import { ReactComponent as WomanWithPhoneFrontSvg } from 'assets/images/womanWithPhoneFront.svg';
+import { ReactComponent as ArrowRight } from 'assets/icons/arrowRight.svg';
 
 interface WelcomeTitleProps {
   fontSize?: number;
@@ -13,38 +16,49 @@ interface WelcomeSubtitleProps {
   fontColor?: string;
   mt?: number,
   mb?: number;
-  fontWeight?: number;
   fontSize?: number;
   lineHeight?: number;
   textAlign?: string;
+  isBold?: boolean;
 }
 
 interface WelcomeNoteProps {
   isBold?: boolean;
 }
+interface NextButtonProps {
+  alignSelf?: string;
+  isDisable?: boolean;
+}
 
 export const WelcomeLogo = styled(Logo)`
-   display: none;
-
+  display: none;
+  
     @media screen and (${props => props.theme.breakpoints.tablet}){
       display: block;
       margin: 0 auto;
 
-      width: 112px;
-      height: 60px;
+      width: 156px;
+      height: 93px;
     }
+`;
+
+export const ArrowRightSVG = styled(ArrowRight)`
+    display: block;
+    margin: 0 auto;
+    
+    width: 32px;
+    height: 32px;
 `;
 
 export const WelcomeLogoText = styled.div`
   font-family: 'Source Sans Pro'; /* It could be removed if default on body changes */
   font-size: 0.75rem;
-  line-height: 1.67;
+  line-height: 0.75;
   text-align: center;
-  color: ${props => props.theme.colors.realBlack};
+  color: ${props => props.theme.colors.purple};
 `;
 
 export const WelcomeTitle = styled.h1<WelcomeTitleProps>`
-  color: ${props => props.theme.colors.darkBlack};
   font-family: "Open Sans";
   font-size: ${({ fontSize }) => (fontSize ? `${fontSize}px` : '1.5rem')};
   margin-left: auto;
@@ -127,23 +141,22 @@ export const WelcomeItemListItem = styled.li`
 `;
 
 export const WelcomeSubtitle = styled.h2<WelcomeSubtitleProps>`
-  color: ${({ theme, fontColor }) => (fontColor || theme.colors.ultraDarkBlack)};
+  color: ${({ theme, fontColor }) => (fontColor || theme.colors.mineShaft)};
   font-family: "Source Sans Pro";
   ${({ fontSize = 14 }) => css`font-size: ${fontSize}px;`}
   ${({ lineHeight }) => lineHeight && css`line-height: ${lineHeight}px;`}
-  font-weight: ${props => props.fontWeight};
   margin-bottom: ${({ mb }) => `${mb}px`};
   margin-left: auto;
   margin-right: auto;
   margin-top: ${({ mt }) => `${mt}px`};
   ${({ textAlign }) => textAlign && css`text-align: ${textAlign || 'left'};`}
   white-space: pre-wrap;
+  font-weight: ${({ isBold }) => (isBold ? 600 : 200)};
 
-  max-width: 320px;
+  max-width: 335px;
   width: 100%;
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
-    font-size: 1rem;
     max-width: 348px;
   }
 `;
@@ -205,6 +218,14 @@ export const WelcomeNote = styled.span<WelcomeNoteProps>`
   margin: 36px auto 0;
 `;
 
+export const WelcomeSubNote = styled.p`
+  font-family: "Source Sans Pro";
+  font-size: 0.6rem;
+  font-style: italic;
+  max-width: 320px;
+  margin: 3px auto 0;
+`;
+
 export const WelcomeJumpToBottomContainer = styled.div`
     max-width: 470px;
     width: 100%;
@@ -219,25 +240,59 @@ export const WelcomeJumpToBottomContainer = styled.div`
 export const WelcomeInput = styled.input`
   height: 50px;
   border: 0;
-  background-color: ${({ theme }) => theme.colors.lightGray};
-  color: ${({ theme }) => theme.colors.darkGray};
-  border-radius: 4px;
+  background-color: ${({ theme }) => theme.colors.purple_5};
+  color: ${({ theme }) => theme.colors.darkBlack};
+  border-radius: 15px;
   width: 100%;
   font-family: 'Source Sans Pro';
   line-height: 24px;
-  padding: 13px 14px;
+  padding: 12px 15px;
   margin: 0 auto;
   max-width: 320px;
+  font-size:14px;
 
   ::placeholder {
-    color: ${({ theme }) => theme.colors.lightDarkGray};
+    color: ${({ theme }) => theme.colors.darkBlack};
   }
   @media screen and (${({ theme }) => theme.breakpoints.tablet}){
     max-width: 348px;
-    padding: 13px 30px;
     margin-left: auto;
     margin-right: auto;
   }
+`;
+
+export const NextButton = styled.button<NextButtonProps>`
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: ${({ theme }) => theme.colors.purple_10}; 
+  opacity: ${({ isDisable }) => (isDisable ? '0.5' : '1')};
+  border: 0px;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-right:91px;
+  ${({ alignSelf }) => alignSelf && css`align-self: ${alignSelf};`}
+
+  @media screen and (${props => props.theme.breakpoints.tablet}){
+    margin-right:0px;
+  }
+`;
+
+export const WelcomeBullets = styled.div`
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: ${({ theme }) => theme.colors.purple_10}; 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+`;
+
+export const BulletIndicator = styled.p`
+  color: ${({ theme }) => theme.colors.purple}; 
+  font-weight: 600;
+  margin:0px;
 `;
 
 export const IntroductionText = styled.div`
@@ -281,4 +336,10 @@ export const SupportersLogos = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+`;
+
+export const HeaderImage = styled.img`
+  width: 100%;
+  height: 350px;
+  display: block;
 `;

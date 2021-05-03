@@ -10,7 +10,7 @@ interface CreatedByProps {
   color?: string;
 }
 
-const CreatedBy = ({ inline = false, mt, color }: CreatedByProps) => {
+const CreatedBy = ({ inline = false, mt = '22px', color = '#393939' }: CreatedByProps) => {
   const { t } = useTranslation();
   return (
     <Container inline={inline} mt={mt}>

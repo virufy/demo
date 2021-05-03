@@ -44,7 +44,14 @@ const Header = () => {
   return (
     <HeaderContainer>
       {doGoBack && <ArrowLefContainer onClick={doGoBack}><ArrowLeft /></ArrowLefContainer>}
-      {title ? <Title>{title}</Title> : <Logo />}
+      {title ? (
+        <>
+          <Logo />
+          <Title>{title}</Title>
+        </>
+      ) : (
+        <Logo />
+      )}
     </HeaderContainer>
   );
 };

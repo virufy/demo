@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import usePortal from 'react-useportal';
 
 // Header Control
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import useHeaderContext from 'hooks/useHeaderContext';
 
 // Components
@@ -99,27 +99,6 @@ const Step4 = (p: Wizard.StepProps) => {
           textAlign={width && width > 560 ? 'center' : 'left'}
         >
           {t('beforeStart:subtitle')}
-        </WelcomeSubtitle>
-
-        <WelcomeSubtitle mt={0} mb={0} textAlign="left" fontColor={colors.darkBlack}>
-          <Trans i18nKey="helpVirufy:aboutParagraph">
-            <p>
-              Virufy is a nonprofit organization that is working to develop the means to use artificial intelligence
-              (Al) to screen for COVID-19 from cough patterns rapidly and at no cost through use of a smartphone.
-            </p>
-            <p>
-              Our team includes researchers from 25 countries and our focus is low-income countries. Our research has
-              shown that Al technology may be able to identify COVID&apos;s unique cough signature.
-            </p>
-            <p>
-              By collecting coughs recordings from people around the world, Virufy is improving the robustness of its AI
-              algorithm in recognizing COVID&apos;s unique sound pattern.
-            </p>
-            <p>
-              You have the power to help benefit millions of people across the globe by contributing your cough in our
-              study.
-            </p>
-          </Trans>
         </WelcomeSubtitle>
       </WelcomeContent>
 

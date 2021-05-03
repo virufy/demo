@@ -4,8 +4,9 @@
     "logoIntro": "Uma organização independente de pesquisa sem fins lucrativos",
     "note": "<strong>Por favor, observe:</strong> Este formulário é apenas para coleta de dados. Ele não irá prever seu status de COVID-19 ou diagnosticar qualquer doença, distúrbio ou outra condição de saúde. A Virufy está realizando pesquisas e utilizará as informações que você fornecer somente para essa pesquisa. A Virufy não realizará pesquisas com um médico e gostaria de lembrá-lo que é sua responsabilidade buscar aconselhamento médico de seu médico.",
     "paragraph1": "Seja bem-vindo! Este estudo deve levar apenas cerca de 5 minutos para ser concluído.",
-    "selectYourLanguage": "Por favor, escolha seu idioma.",
-    "paragraph2": "Atualmente nosso estudo está aberto apenas para pessoas dos países abaixo. Por favor, confirme se você está no território de um desses países.",
+    "selectYourLanguage": "Idioma",
+    "paragraph2": "Estudo de coleta de dados sobre tosse Covid-19",
+    "selectLocation": "localização",
     "selectCountry": "Selecione seu país",
     "selectRegion": "Selecione a região",
     "introductionText": "<strong>Nota importante:</strong> Este aplicativo é apenas para fins de demonstração e não fornece uma previsão. Por favor, visite <2>Virufy Study</2> para contribuir com sua tosse e nos ajudar a completar este aplicativo.",
@@ -16,14 +17,20 @@
     "patientIdPlaceholder": "digite aqui...",
     "nextButton": "Próximo",
     "createdBy": "Criado por",
-    "provideAccessCode": "Se fornecido, por favor, digite seu código de acesso.",
+    "provideAccessCode": "Código de acesso",
+    "ifAccessCode": "Se foi fornecido",
     "enterAccessCode": "Digite seu código de acesso"
   },
   "helpVirufy": {
     "title": "Sobre a Virufy",
     "ourSupporters": "Nossos apoiadores",
+    "introParagraph": "<p>Bem-vindo ao nosso estudo! Isso deve levar apenas cerca de 5 minutos para ser concluído. Antes de começar, vamos discutir o que iremos cobrir:</p>",
     "aboutParagraph": "<p>A Virufy é uma organização sem fins lucrativos que está trabalhando para desenvolver os meios de usar a inteligência artificial (Al) para selecionar COVID-19 a partir de padrões de tosse rapidamente e sem custo através do uso de um smartphone.</p><p>Nossa equipe inclui pesquisadores de 25 países e nosso foco são os países de baixa renda. Nossa pesquisa mostrou que a tecnologia Al pode ser capaz de identificar a assinatura única da tosse da COVID.</p><p>Ao coletar gravações de tosse de pessoas do mundo inteiro, a Virufy está melhorando a robustez de seu algoritmo de IA ao reconhecer o padrão de som único da COVID.</p><p>Você tem o poder de ajudar a beneficiar milhões de pessoas em todo o mundo, contribuindo com sua tosse em nosso estudo.</p>",
-    "nextButton": "Próximo"
+    "bulletsIntro": "<strong> Intro: </strong> Sobre nós e segurança",
+    "bulletCough": "<strong> Cough Into Phone </strong>",
+    "bulletQuestions": "<strong> Perguntas rápidas sobre saúde </strong>",
+    "installApp": "Instalar como um aplicativo",
+    "nextButton": "Comecemos"
   },
   "beforeStart": {
     "title": "Por último, antes de começarmos...",

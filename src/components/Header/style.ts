@@ -53,8 +53,6 @@ export const ArrowLeft = styled(ArrowftSvg)`
 
 export const Logo = styled(LogoSvg)`
   margin: 0 auto;
-  width: 4.6875rem;
-
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     display: none;

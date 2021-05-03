@@ -4,8 +4,9 @@
     "logoIntro": "An Independent Nonprofit Research Organization",
     "note": "<strong>Please note:</strong> This form is for data collection only. It will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
     "paragraph1": "Welcome! This study should only take about 5 minutes to complete.",
-    "selectYourLanguage": "Please select your language.",
-    "paragraph2": "Our study is currently only open to people within the below countries and/or territories. Please confirm that you are within one of these locations.",
+    "selectYourLanguage": "Language",
+    "paragraph2": "Covid-19 Cough Data Collection Study",
+    "selectLocation": "Location",
     "selectCountry": "Select country",
     "selectRegion": "Select region",
     "introductionText": "<strong>Important note:</strong> This app is only for demonstration purposes and does not provide a prediction. Please visit <2>Virufy Study</2> to contribute your cough and help us to complete this app.",
@@ -19,8 +20,13 @@
   "helpVirufy": {
     "title": "About Virufy",
     "ourSupporters": "Our Supporters",
+    "introParagraph": "<p>Welcome to our study! This should only take you about 5 minutes to complete. Before we begin, let’s discuss what we will cover:</p>",
     "aboutParagraph": "<p>Virufy is a nonprofit organization that is working to develop the means to use artificial intelligence (Al) to screen for COVID-19 from cough patterns rapidly and at no cost through use of a smartphone.</p><p>Our team includes researchers from 25 countries and our focus is low-income countries. Our research has shown that Al technology may be able to identify COVID's unique cough signature.</p><p>By collecting coughs recordings from people around the world, Virufy is improving the robustness of its AI algorithm in recognizing COVID's unique sound pattern.</p><p>You have the power to help benefit millions of people across the globe by contributing your cough in our study.</p>",
-    "nextButton": "Next"
+    "bulletsIntro": "<strong>Intro:</strong> About us and Safety Reminders",
+    "bulletCough": "<strong>Cough Into Phone</strong>",
+    "bulletQuestions": "<strong>Quick Health Questions</strong>",
+    "installApp": "Install as an app",
+    "nextButton": "Let’s start"
   },
   "beforeStart": {
     "title": "Lastly, before we begin...",

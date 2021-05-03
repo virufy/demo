@@ -8,19 +8,16 @@ import Link from 'components/Link';
 // Data
 import { reportProblemForm } from 'data/reportProblemForm';
 
-// Styles
-import { FooterContainer } from './style';
-
-const FooterReportProblems = () => {
+const FooterInstallAsApp = () => {
   const { t, i18n } = useTranslation();
   const location = useLocation();
 
   const lang = i18n.language;
 
-  if (location.pathname === '/welcome' || location.pathname === '/welcome/step-2') return null;
+  if (location.pathname !== '/welcome/step-2') return null;
 
   return (
-    <FooterContainer
+    <div
       id="footer-report-problems"
     >
       {
@@ -30,8 +27,8 @@ const FooterReportProblems = () => {
           </Link>
         )
       }
-    </FooterContainer>
+    </div>
   );
 };
 
-export default React.memo(FooterReportProblems);
+export default React.memo(FooterInstallAsApp);
