@@ -18,14 +18,14 @@
     "nextButton": "Próximo",
     "createdBy": "Criado por",
     "provideAccessCode": "Código de acesso",
-    "ifAccessCode": "Se foi fornecido",
-    "enterAccessCode": "Digite seu código de acesso"
+    "enterAccessCode": "Digite seu código de acesso",
+    "aboutUsTitle": "Sobre Nós"
   },
   "helpVirufy": {
     "title": "Sobre a Virufy",
     "ourSupporters": "Nossos apoiadores",
     "introParagraph": "<p>Bem-vindo ao nosso estudo! Isso deve levar apenas cerca de 5 minutos para ser concluído. Antes de começar, vamos discutir o que iremos cobrir:</p>",
-    "aboutParagraph": "<p>A Virufy é uma organização sem fins lucrativos que está trabalhando para desenvolver os meios de usar a inteligência artificial (Al) para selecionar COVID-19 a partir de padrões de tosse rapidamente e sem custo através do uso de um smartphone.</p><p>Nossa equipe inclui pesquisadores de 25 países e nosso foco são os países de baixa renda. Nossa pesquisa mostrou que a tecnologia Al pode ser capaz de identificar a assinatura única da tosse da COVID.</p><p>Ao coletar gravações de tosse de pessoas do mundo inteiro, a Virufy está melhorando a robustez de seu algoritmo de IA ao reconhecer o padrão de som único da COVID.</p><p>Você tem o poder de ajudar a beneficiar milhões de pessoas em todo o mundo, contribuindo com sua tosse em nosso estudo.</p>",
+    "aboutParagraph": "<p> Virufy é uma <strong> organização sem fins lucrativos </strong> que está trabalhando para desenvolver meios de usar <strong> inteligência artificial (IA) para rastrear COVID-19 de padrões de tosse </strong> rapidamente e sem nenhum custo através do uso de um smartphone para o benefício de países de baixa renda. </p> <p> Nossa equipe inclui pesquisadores de mais de <strong> 25 países </strong>. Nossa pesquisa mostrou que Al a tecnologia pode ser capaz de identificar a assinatura de tosse exclusiva do COVID. </p> <p> Ao coletar <strong> gravações de tosse </strong> de pessoas ao redor do mundo, a Virufy está aprimorando a robustez de seu algoritmo de IA no reconhecimento do padrão de som único do COVID. </p><p> <strong> Você tem o poder </strong> de ajudar a beneficiar milhões de pessoas em todo o mundo, <strong> contribuindo com sua tosse </strong> em nosso estudo. </p> ",
     "bulletsIntro": "<strong> Intro: </strong> Sobre nós e segurança",
     "bulletCough": "<strong> Cough Into Phone </strong>",
     "bulletQuestions": "<strong> Perguntas rápidas sobre saúde </strong>",
@@ -36,11 +36,10 @@
     "title": "Por último, antes de começarmos...",
     "subtitle": "Para garantir a segurança, nós o aconselhamos a fazê-lo:",
     "advise_list": [
-      "Usar seu próprio dispositivo para registrar a amostra de tosse e usar uma máscara quando apropriado.",
-      "Desinfecte seu dispositivo e qualquer superfície afetada ou próxima após registrar sua tosse.",
-      "Se você tiver uma condição subjacente que aumente seu risco de tosse, favor verificar com seu provedor de saúde antes de participar.",
-      "Se você tiver quaisquer sintomas ou quaisquer perguntas ou preocupações sobre sua condição de saúde, favor entrar em contato com seu provedor de saúde.",
-      "Se você sentir que seus sintomas estão piorando, favor entrar em contato com os serviços de emergência médica locais ou com os primeiros socorros imediatamente."
+      "Use seu próprio dispositivo e use uma máscara quando apropriado.",
+      "Desinfete seu dispositivo e qualquer superfície afetada ou próxima após registrar sua tosse / fala.",
+      "Se você tiver uma doença subjacente que aumente o risco de tosse, verifique com seu médico antes de participar.",
+      "Se você sentir que seus sintomas estão piorando, entre em contato com o atendimento médico local."
     ],
     "startButton": "Começar"
   },

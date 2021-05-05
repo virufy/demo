@@ -6,6 +6,17 @@ interface BeforeInstallPromptEvent extends Event {
   userChoice: Promise<string>;
 }
 
+declare global {
+
+  interface App {
+    id: string;
+  }
+  interface Navigator {
+    standalone?: boolean; // Available on Apple's iOS Safari only.
+    getInstalledRelatedApps?: () => Promise<App[] | null>; // Available on chrome only
+  }
+}
+
 const usePWAHelpers = (buttonId: string) => {
   const deferredInstallPromptRef = React.useRef<BeforeInstallPromptEvent | null>(null);
   const [isInstalled, setIsInstalled] = React.useState<boolean | null>(null);
@@ -33,18 +44,20 @@ const usePWAHelpers = (buttonId: string) => {
 
     return () => {
       window.removeEventListener('beforeinstallprompt', beforeInstallPromptFn as EventListener);
-      // Removing listeners
       window.removeEventListener('appinstalled', appInstalledFn as EventListener);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   React.useEffect(() => {
-    const nav = navigator as any;
-    if ('getInstalledRelatedApps' in nav) {
-      Promise.resolve(nav.getInstalledRelatedApps()).then(x => {
-        const condApp = !!(window.matchMedia('(display-mode: standalone)').matches || nav?.standalone || x?.length > 0);
-        setIsInstalled(condApp);
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+    if (isStandalone) {
+      setIsInstalled(true);
+    } else if (window.navigator.getInstalledRelatedApps) {
+      window.navigator.getInstalledRelatedApps().then(r => {
+        if (r) {
+          setIsInstalled(r.length > 0);
+        }
       });
     }
   }, []);

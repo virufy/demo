@@ -2,11 +2,13 @@ import styled, { css } from 'styled-components';
 
 // Components
 import { ReactComponent as Logo } from 'assets/virufyLogo.svg';
-import { ReactComponent as WomanWithPhoneFrontSvg } from 'assets/images/womanWithPhoneFront.svg';
+import { ReactComponent as CoupleAboutUsSVG } from 'assets/images/coupleAboutUs.svg';
 import { ReactComponent as ArrowRight } from 'assets/icons/arrowRight.svg';
+import { ReactComponent as LogoSplash } from 'assets/images/logoSplash.svg';
 
 interface WelcomeTitleProps {
   fontSize?: number;
+  fontColor?: string;
   mt?: number;
   mb?: number;
   textAlign?: 'center' | 'left';
@@ -31,15 +33,15 @@ interface NextButtonProps {
 }
 
 export const WelcomeLogo = styled(Logo)`
-  display: none;
-  
-    @media screen and (${props => props.theme.breakpoints.tablet}){
-      display: block;
-      margin: 0 auto;
+  display: none; 
 
-      width: 156px;
-      height: 93px;
-    }
+  @media screen and (${props => props.theme.breakpoints.tablet}){
+    display: block;
+    margin: 0 auto;
+
+    width: 156px;
+    height: 93px;
+  }
 `;
 
 export const ArrowRightSVG = styled(ArrowRight)`
@@ -58,6 +60,16 @@ export const WelcomeLogoText = styled.div`
   color: ${props => props.theme.colors.purple};
 `;
 
+export const WelcomeHeaderContainer = styled.div`
+  width:100%;
+  background-color: ${({ theme }) => theme.colors.purple_10};
+  display:flex;
+  flex-direction:column;
+  align-items: center; 
+  margin:0px;
+  padding-top: 20px;
+`;
+
 export const WelcomeTitle = styled.h1<WelcomeTitleProps>`
   font-family: "Open Sans";
   font-size: ${({ fontSize }) => (fontSize ? `${fontSize}px` : '1.5rem')};
@@ -67,6 +79,7 @@ export const WelcomeTitle = styled.h1<WelcomeTitleProps>`
   margin-bottom: ${({ mb }) => `${mb || 16}px`};
   max-width: 320px;
   text-align: ${({ textAlign }) => textAlign || 'center'};
+  color: ${({ theme, fontColor }) => (fontColor || theme.colors.mineShaft)};
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     font-size: ${({ fontSize }) => `${fontSize}px` || '2.25rem'} ;
@@ -81,7 +94,7 @@ export const WelcomeTitle = styled.h1<WelcomeTitleProps>`
 `;
 
 export const WelcomeContent = styled.div<{ maxWidth?: number; mt?: number; }>`
-  margin: ${({ mt = 30 }) => mt}px auto 0px;
+  margin: ${({ mt = 30 }) => mt}px auto ${({ mt = 30 }) => mt}px;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -90,12 +103,12 @@ export const WelcomeContent = styled.div<{ maxWidth?: number; mt?: number; }>`
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     text-align: center;
-    margin: 30px auto;
+    margin: ${({ mt = 30 }) => mt}px auto ${({ mt = 30 }) => mt}px;
   };
 `;
 
 export const WelcomeItemList = styled.ul`
-  color: ${props => props.theme.colors.ultraDarkBlack};
+  color: ${props => props.theme.colors.mineShaft};
   display: flex;
   flex-direction: column;
   font-family: "Source Sans Pro";
@@ -104,6 +117,7 @@ export const WelcomeItemList = styled.ul`
   line-height: 1.25rem;
   list-style: none;
   margin: auto;
+  margin-bottom:1.2rem;
   max-width: 278px;
   padding: 0;
 
@@ -123,7 +137,7 @@ export const WelcomeItemListItem = styled.li`
 
 
   &:before {
-    background-color: ${props => props.theme.colors.darkBlack};
+    background-color: ${props => props.theme.colors.purple};
     border-radius: 50%;
     content: '';
     display: inline-block;
@@ -131,8 +145,8 @@ export const WelcomeItemListItem = styled.li`
     position: relative;
     top: -2.5px;
 
-    height: 4px;
-    width: 4px;
+    height: 6px;
+    width: 6px;
   }
 
   &:not(:first-of-type){
@@ -174,9 +188,9 @@ export const WelcomeStyledForm = styled.form`
 `;
 
 export const WelcomeStyledFormAlternative = styled.form`
+    padding: 0px !important; 
     @media screen and (${props => props.theme.breakpoints.tablet}){
-      padding-top: 32px;
-      padding-bottom: 24px;
+      padding: 0px !important;
     }
 `;
 
@@ -199,31 +213,35 @@ export const WelcomeConsentForm = styled.div`
     }
 `;
 
-export const WomanWithPhoneFront = styled(WomanWithPhoneFrontSvg)`
-  margin: 32px auto 16px;
-  width: 100%;
+export const WelcomeBorderContainer = styled.div`
+    width:100%;
+    border-radius: 0px 90px 0px 0px;
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+`;
+
+export const CoupleAboutUs = styled(CoupleAboutUsSVG)`
+  margin: -40px auto 16px;
+  width: 220px; 
+  height: 199px;
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
-    margin: -20px auto 14px;
+    margin: -70px auto 14px;
+    width: 320px; 
+    height: 299px;
   }
 `;
 
 export const WelcomeNote = styled.span<WelcomeNoteProps>`
   font-family: "Source Sans Pro";
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.42;
   font-style: italic;
   font-weight: ${({ isBold }) => (isBold ? 700 : 400)};
-  max-width: 320px;
+  max-width: 335px;
   margin: 36px auto 0;
-`;
-
-export const WelcomeSubNote = styled.p`
-  font-family: "Source Sans Pro";
-  font-size: 0.6rem;
-  font-style: italic;
-  max-width: 320px;
-  margin: 3px auto 0;
+  text-align:left;
 `;
 
 export const WelcomeJumpToBottomContainer = styled.div`
@@ -241,23 +259,37 @@ export const WelcomeInput = styled.input`
   height: 50px;
   border: 0;
   background-color: ${({ theme }) => theme.colors.purple_5};
-  color: ${({ theme }) => theme.colors.darkBlack};
+  color: ${({ theme }) => theme.colors.mineShaft};
   border-radius: 15px;
   width: 100%;
   font-family: 'Source Sans Pro';
   line-height: 24px;
   padding: 12px 15px;
   margin: 0 auto;
-  max-width: 320px;
+  max-width: 335px;
   font-size:14px;
 
   ::placeholder {
-    color: ${({ theme }) => theme.colors.darkBlack};
+    color: ${({ theme }) => theme.colors.mineShaft_50};
   }
   @media screen and (${({ theme }) => theme.breakpoints.tablet}){
     max-width: 348px;
     margin-left: auto;
     margin-right: auto;
+  }
+`;
+
+export const ContainerNextButton = styled.div`
+  width: 100%;
+  margin: auto;
+  max-width: 335px;
+  display:flex;
+  justify-content:flex-end;
+
+  @media screen and (${({ theme }) => theme.breakpoints.tablet}){
+    max-width: 348px;
+    display:flex;
+    justify-content: center;
   }
 `;
 
@@ -269,13 +301,8 @@ export const NextButton = styled.button<NextButtonProps>`
   opacity: ${({ isDisable }) => (isDisable ? '0.5' : '1')};
   border: 0px;
   margin-bottom: 30px;
-  margin-top: 50px;
-  margin-right:91px;
-  ${({ alignSelf }) => alignSelf && css`align-self: ${alignSelf};`}
-
-  @media screen and (${props => props.theme.breakpoints.tablet}){
-    margin-right:0px;
-  }
+  margin-top: 97px;
+  margin-right: 10px;
 `;
 
 export const WelcomeBullets = styled.div`
@@ -339,7 +366,23 @@ export const SupportersLogos = styled.div`
 `;
 
 export const HeaderImage = styled.img`
-  width: 100%;
-  height: 350px;
-  display: block;
+  max-width: 375px;
+  max-height:325px;
+
+  @media screen and (${props => props.theme.breakpoints.tablet}){
+    max-width: 768px;
+    max-height: 488px;
+  }
+`;
+
+export const LogoWhiteBG = styled(LogoSplash)`
+  margin-top: -50%;
+  width:100%;
+  max-width: 134px;
+  max-height: 177px;
+
+  @media screen and (${props => props.theme.breakpoints.tablet}){
+    max-width: 212px;
+    max-height: 280px;
+  }
 `;

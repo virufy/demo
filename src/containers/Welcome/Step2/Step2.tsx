@@ -15,19 +15,21 @@ import useWindowSize from 'hooks/useWindowSize';
 // Theme
 import { colors } from 'theme';
 
+// Assets
+// import HeaderSplash from 'assets/images/headerSplash.png';
+
 // Utils
 import { scrollToTop } from 'helper/scrollHelper';
 
-// Assets
-import HeaderSplash from 'assets/images/headerSplash.png';
 // Styles
 import {
   WelcomeContent,
   WelcomeSubtitle,
   WelcomeStyledFormAlternative,
-  HeaderImage,
+  // HeaderImage,
   WelcomeBullets,
   BulletIndicator,
+  LogoWhiteBG,
 } from '../style';
 
 const Step2 = (p: Wizard.StepProps) => {
@@ -70,9 +72,8 @@ const Step2 = (p: Wizard.StepProps) => {
 
   return (
     <WelcomeStyledFormAlternative>
-      <HeaderImage
-        src={HeaderSplash}
-      />
+
+      <LogoWhiteBG />
 
       <WelcomeSubtitle
         mt={width && width > 560 ? 38 : 12}

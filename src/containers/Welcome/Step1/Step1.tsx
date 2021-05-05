@@ -31,15 +31,14 @@ import { scrollToTop } from 'helper/scrollHelper';
 // Styles
 import {
   WelcomeLogo,
-  WelcomeTitle,
   WelcomeContent,
   WelcomeSubtitle,
   WelcomeStyledForm,
   // WelcomeInput,
   // WelcomeRequiredFieldText,
-  WelcomeSubNote,
   RegionContainer,
   WelcomeInput,
+  ContainerNextButton,
   NextButton,
   ArrowRightSVG,
 } from '../style';
@@ -60,12 +59,13 @@ const schema = Yup.object().shape({
 type Step1Type = Yup.InferType<typeof schema>;
 
 const Step1 = (p: Wizard.StepProps) => {
+  const {
+    doGoBack, setDoGoBack, setLogoSize, setType,
+  } = useHeaderContext();
   // Hooks
   const history = useHistory();
   const { width } = useWindowSize();
   const { t, i18n } = useTranslation();
-
-  const { doGoBack, setDoGoBack } = useHeaderContext();
 
   // States
   const [activeStep, setActiveStep] = React.useState(true);
@@ -115,12 +115,13 @@ const Step1 = (p: Wizard.StepProps) => {
     });
   };
 
-  // Effects
   React.useEffect(() => {
     scrollToTop();
-
     // Hide back arrow in header if neccesary
     if (doGoBack) setDoGoBack(null);
+
+    setType('primary');
+    setLogoSize('big');
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -130,9 +131,6 @@ const Step1 = (p: Wizard.StepProps) => {
   React.useEffect(() => {
     i18n.changeLanguage(lang);
   }, [i18n, lang]);
-
-  // Memos
-  const isDesktop = React.useMemo(() => width && width > 560, [width]);
 
   const countrySelectOptions = React.useMemo(() => [{ name: t('main:selectCountry'), consentFormUrl: '', val: '' },
     ...countryData], [t]);
@@ -161,20 +159,13 @@ const Step1 = (p: Wizard.StepProps) => {
       {/* Logo */}
       <WelcomeLogo />
 
-      {/* Title */}
-      <WelcomeTitle
-        fontSize={isDesktop ? 32 : 24}
-        mt={1}
-      >
-        Demo
-      </WelcomeTitle>
-
       {/* Content */}
-      <WelcomeContent>
+      <WelcomeContent mt={53}>
         <WelcomeSubtitle
           mt={width && width > 560 ? 50 : 40}
           mb={16}
           textAlign={width && width > 560 ? 'center' : 'left'}
+          isBold
         >
           {t('main:selectYourLanguage', 'Language')}
         </WelcomeSubtitle>
@@ -208,6 +199,7 @@ const Step1 = (p: Wizard.StepProps) => {
           mt={width && width > 560 ? 50 : 40}
           mb={16}
           textAlign={width && width > 560 ? 'center' : 'left'}
+          isBold
         >
           {t('main:selectLocation', 'Location')}
         </WelcomeSubtitle>
@@ -240,12 +232,11 @@ const Step1 = (p: Wizard.StepProps) => {
           mt={width && width > 560 ? 50 : 40}
           mb={16}
           textAlign={width && width > 560 ? 'center' : 'left'}
+          isBold
         >
           {t('main:provideAccessCode', 'Access code')}
-          <WelcomeSubNote>{t('main:ifAccessCode', 'If provided')}</WelcomeSubNote>
         </WelcomeSubtitle>
 
-        {/* Language */}
         <Controller
           control={control}
           name="accessCode"
@@ -265,13 +256,14 @@ const Step1 = (p: Wizard.StepProps) => {
         {
           activeStep && (
             <>
-              <NextButton
-                alignSelf={width && width > 560 ? 'center' : 'flex-end'}
-                onClick={handleSubmit(onSubmit)}
-                isDisable={!isValid}
-              >
-                <ArrowRightSVG />
-              </NextButton>
+              <ContainerNextButton>
+                <NextButton
+                  onClick={handleSubmit(onSubmit)}
+                  isDisable={!isValid}
+                >
+                  <ArrowRightSVG />
+                </NextButton>
+              </ContainerNextButton>
               <CreatedBy inline />
             </>
           )

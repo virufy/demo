@@ -2,32 +2,48 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 
-// Components
-import Link from 'components/Link';
+// Modals
+import PWAInstallModal from 'modals/PWAInstallModal';
 
-// Data
-import { reportProblemForm } from 'data/reportProblemForm';
+// Hooks
+import usePWAHelpers from 'hooks/usePWAHelpers';
+
+// Styles
+import { FooterContainer, DownloadSVG } from './style';
 
 const FooterInstallAsApp = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const location = useLocation();
-
-  const lang = i18n.language;
-
+  const installPwaButtonId = 'virufy-install-button';
+  const pwaModalRef = React.useRef<PWAInstallModal>(null);
+  const { handlePrompt, isInstalled, setIsInstalled } = usePWAHelpers(installPwaButtonId);
+  const handleClickInstall = React.useCallback(() => {
+    if (handlePrompt) {
+      const promise = handlePrompt();
+      if (promise) {
+        promise.then((userChoiceResult: any) => {
+          if (userChoiceResult && userChoiceResult.outcome === 'accepted') {
+            setIsInstalled(true);
+          }
+        }).catch(() => pwaModalRef.current?.show());
+      } else {
+        pwaModalRef.current?.show();
+      }
+    }
+  }, [handlePrompt, setIsInstalled]);
   if (location.pathname !== '/welcome/step-2') return null;
 
   return (
-    <div
-      id="footer-report-problems"
-    >
-      {
-        lang && (
-          <Link to={reportProblemForm[lang as FeedbackLanguage]} target="_blank">
-            { t('footerReportProblems:message')}
-          </Link>
-        )
-      }
-    </div>
+    <>
+      { !isInstalled
+          && (
+            <FooterContainer id={installPwaButtonId} onClick={handleClickInstall}>
+              <DownloadSVG />
+              { t('helpVirufy:installApp')}
+            </FooterContainer>
+          )}
+      <PWAInstallModal ref={pwaModalRef} />
+    </>
   );
 };
 

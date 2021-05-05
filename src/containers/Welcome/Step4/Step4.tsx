@@ -20,6 +20,7 @@ import { scrollToTop } from 'helper/scrollHelper';
 
 // Styles
 import {
+  WelcomeHeaderContainer,
   WelcomeLogo,
   WelcomeTitle,
   WelcomeContent,
@@ -27,14 +28,14 @@ import {
   WelcomeItemList,
   WelcomeItemListItem,
   WelcomeStyledFormAlternative,
+  WelcomeBorderContainer,
 } from '../style';
 
 const defaultAdviseList = [
-  'Use your own device to record the cough sample and wear a mask when appropriate.',
-  'Disinfect your device and any affected or nearby surfaces after recording your cough.',
-  'If you have an underlying condition that increases your risk from coughing, please check with your healthcare provider before participating.',
-  'If you have any symptoms or any questions or concerns about your health condition, please contact your healthcare provider.',
-  'If you feel your symptoms are getting worse, please contact your local medical emergency services or first responders immediately.',
+  'Please use your own device and wear a mask when appropriate.',
+  'Disinfect your device and any affected or nearby surfaces after recording your cough/speech.',
+  'If you have an underlying condition that increases your risk from coughing, please check with your health care provider before participating.',
+  'If you feel your symptoms are getting worse, please contact your local medical response',
 ];
 
 const Step4 = (p: Wizard.StepProps) => {
@@ -45,7 +46,9 @@ const Step4 = (p: Wizard.StepProps) => {
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [activeStep, setActiveStep] = useState(true);
-  const { setDoGoBack, setTitle, title } = useHeaderContext();
+  const {
+    setDoGoBack, setTitle, title, setType, setLogoSize,
+  } = useHeaderContext();
 
   const history = useHistory();
 
@@ -76,49 +79,57 @@ const Step4 = (p: Wizard.StepProps) => {
     setDoGoBack(() => doBack);
   }, [doBack, setDoGoBack]);
 
+  useEffect(() => {
+    setType('secondary');
+    setLogoSize('regular');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const { t } = useTranslation();
 
   const adviseList: string[] = t('beforeStart:advise_list', { returnObjects: true, defaultValue: defaultAdviseList });
 
   return (
     <WelcomeStyledFormAlternative>
-      <WelcomeLogo />
-
-      <WelcomeTitle
-        mt={width && width > 560 ? 32 : 30}
-        textAlign={width && width > 560 ? 'center' : 'left'}
-      >
-        {t('beforeStart:title')}
-      </WelcomeTitle>
-
-      <WelcomeContent mt={40}>
-        <WelcomeSubtitle
-          fontColor={colors.darkBlack}
-          mb={16}
-          mt={0}
-          textAlign={width && width > 560 ? 'center' : 'left'}
+      <WelcomeHeaderContainer>
+        <WelcomeLogo />
+        <WelcomeTitle
+          mt={width && width > 560 ? 32 : 30}
+          textAlign="center"
+          fontColor="#3578DE"
         >
-          {t('beforeStart:subtitle')}
-        </WelcomeSubtitle>
+          {t('beforeStart:title')}
+        </WelcomeTitle>
+        <WelcomeBorderContainer>
+          <WelcomeSubtitle
+            fontColor={colors.mineShaft}
+            mb={15}
+            mt={40}
+            textAlign="left"
+            isBold
+          >
+            {t('beforeStart:subtitle')}
+          </WelcomeSubtitle>
+        </WelcomeBorderContainer>
+      </WelcomeHeaderContainer>
+      <WelcomeContent mt={40}>
+        <WelcomeItemList>
+          {adviseList.map((advise, idx) => (
+            // eslint-disable-next-line react/no-array-index-key
+            <WelcomeItemListItem key={`advise_${idx}`}>{advise}</WelcomeItemListItem>
+          ))}
+        </WelcomeItemList>
+
+        {activeStep && (
+          <Portal>
+            <WizardButtons
+              leftLabel={t('beforeStart:startButton')}
+              leftHandler={handleNext}
+              invert
+            />
+          </Portal>
+        )}
       </WelcomeContent>
-
-      <WelcomeItemList>
-        {adviseList.map((advise, idx) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <WelcomeItemListItem key={`advise_${idx}`}>{advise}</WelcomeItemListItem>
-        ))}
-      </WelcomeItemList>
-
-      {activeStep && (
-        <Portal>
-          <WizardButtons
-            leftLabel={t('beforeStart:startButton')}
-            leftHandler={handleNext}
-            invert
-          />
-        </Portal>
-      )}
-
     </WelcomeStyledFormAlternative>
   );
 };

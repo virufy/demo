@@ -19,7 +19,7 @@ export const StyledSelect = styled.select<StyledSelectProps>`
   font-size: 14px;
   
   height: 48px;
-  max-width: ${({ isMobileFullWidth }) => (isMobileFullWidth ? 'none' : '320px')};
+  max-width: ${({ isMobileFullWidth }) => (isMobileFullWidth ? 'none' : '335px')};
   width: 100%;
 
 

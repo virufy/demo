@@ -15,13 +15,14 @@
     "patientIdLabel": "Patient ID",
     "hospitalCodePlaceholder": "type here...",
     "patientIdPlaceholder": "type here...",
-    "nextButton": "Next"
+    "nextButton": "Next",
+    "aboutUsTitle": "About Us"
   },
   "helpVirufy": {
     "title": "About Virufy",
     "ourSupporters": "Our Supporters",
     "introParagraph": "<p>Welcome to our study! This should only take you about 5 minutes to complete. Before we begin, let’s discuss what we will cover:</p>",
-    "aboutParagraph": "<p>Virufy is a nonprofit organization that is working to develop the means to use artificial intelligence (Al) to screen for COVID-19 from cough patterns rapidly and at no cost through use of a smartphone.</p><p>Our team includes researchers from 25 countries and our focus is low-income countries. Our research has shown that Al technology may be able to identify COVID's unique cough signature.</p><p>By collecting coughs recordings from people around the world, Virufy is improving the robustness of its AI algorithm in recognizing COVID's unique sound pattern.</p><p>You have the power to help benefit millions of people across the globe by contributing your cough in our study.</p>",
+    "aboutParagraph": "<p>Virufy is a <strong>nonprofit organization<strong> that is working to develop the means to use <strong>artificial intelligence (Al) to screen for COVID-19 from cough patterns</strong> rapidly and at no cost through use of a smartphone for the benefit of low-income countries.</p><p>Our team includes researchers from over <strong>25 countries</strong>.Our research has shown that Al technology may be able to identify COVID's unique cough signature.</p><p>By collecting <strong>coughs recordings<strong> from people around the world, Virufy is improving the robustness of its AI algorithm in recognizing COVID's unique sound pattern.</p><p><strong>You have the power</strong>to help benefit millions of people across the globe by <strong>contributing your cough</strong> in our study.</p>",
     "bulletsIntro": "<strong>Intro:</strong> About us and Safety Reminders",
     "bulletCough": "<strong>Cough Into Phone</strong>",
     "bulletQuestions": "<strong>Quick Health Questions</strong>",
@@ -32,11 +33,10 @@
     "title": "Lastly, before we begin...",
     "subtitle": "To ensure safety, we advise you to:",
     "advise_list": [
-      "Use your own device to record the cough sample and wear a mask when appropriate.",
-      "Disinfect your device and any affected or nearby surfaces after recording your cough.",
-      "If you have an underlying condition that increases your risk from coughing, please check with your healthcare provider before participating.",
-      "If you have any symptoms or any questions or concerns about your health condition, please contact your healthcare provider.",
-      "If you feel your symptoms are getting worse, please contact your local medical emergency services or first responders immediately."
+      "Please use your own device and wear a mask when appropriate.",
+      "Disinfect your device and any affected or nearby surfaces after recording your cough/speech.",
+      "If you have an underlying condition that increases your risk from coughing, please check with your health care provider before participating.",
+      "If you feel your symptoms are getting worse, please contact your local medical response."
     ],
     "startButton": "Start"
   },

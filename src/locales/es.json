@@ -18,14 +18,14 @@
     "nextButton": "Siguiente",
     "createdBy": "Creado por",
     "provideAccessCode": "Código de acceso",
-    "ifAccessCode": "Si fue proporcionado",
-    "enterAccessCode": "Introduzca su código de acceso"
+    "enterAccessCode": "Introduzca el código de acceso",
+    "aboutUsTitle": "Sobre Nosotros"
   },
   "helpVirufy": {
     "title": "Acerca de Virufy",
     "ourSupporters": "Nuestros colaboradores",
     "introParagraph": "<p>¡Bienvenidos a nuestro estudio! Esto solo debería llevarle unos 5 minutos para completar. Antes de comenzar, analicemos lo que cubriremos:</p>",
-    "aboutParagraph": "<p>Virufy es una organización sin ánimo de lucro que está trabajando para desarrollar los medios para utilizar la inteligencia artificial (Al) para detectar el COVID-19 a partir de los patrones de tos de forma rápida y sin coste alguno mediante el uso de un teléfono inteligente.</p><p>Nuestro equipo está formado por investigadores de 25 países y nos centramos en los países de bajos ingresos. Nuestra investigación ha demostrado que la tecnología Al puede ser capaz de identificar la firma única de la tos de COVID.</p><p>Mediante la recopilación de grabaciones de tos de personas de todo el mundo, Virufy está mejorando la solidez de su algoritmo de IA para reconocer el patrón de sonido único de COVID.</p><p>Usted tiene el poder de ayudar a beneficiar a millones de personas en todo el mundo contribuyendo con su tos en nuestro estudio.</p>",
+    "aboutParagraph": "<p>Virufy es una <strong>organización sin ánimo de lucro</strong> que está trabajando para desarrollar los medios para utilizar la <strong>inteligencia artificial (Al) para detectar el COVID-19 a partir de los patrones de tos</strong> de forma rápida y sin coste alguno mediante el uso de un teléfono inteligente para el beneficio de los países de bajos recursos.</p><p>Nuestro equipo está formado por investigadores de más de <strong>25 países</strong>. Nuestra investigación ha demostrado que la tecnología Al puede ser capaz de identificar la firma única de la tos de COVID.</p><p>Mediante la recopilación de <strong>grabaciones de tos</strong> de personas de todo el mundo, Virufy está mejorando la solidez de su algoritmo de IA para reconocer el patrón de sonido único de COVID.</p><p><strong>Usted tiene el poder</strong> de ayudar a beneficiar a millones de personas en todo el mundo contribuyendo con su tos en nuestro estudio.</p>",
     "bulletsIntro": "<strong> Intro: </strong> Sobre nosotros y seguridad",
     "bulletCough": "<strong> Toser en el teléfono </strong>",
     "bulletQuestions": "<strong> Preguntas breves sobre la salud </strong>",
@@ -36,11 +36,10 @@
     "title": "Por último, antes de empezar...",
     "subtitle": "Para garantizar la seguridad, le aconsejamos:",
     "advise_list": [
-      "Utilizar su propio dispositivo para registrar la muestra de tos y usar una máscara cuando sea apropiado.",
-      "Desinfectar su dispositivo y cualquier superficie afectada o cercana después de registrar su tos.",
-      "Si tiene una afección subyacente que aumente el riesgo de toser, consulte con su proveedor de atención médica antes de participar.",
-      "Si tiene algún síntoma o alguna pregunta o preocupación sobre su estado de salud, póngase en contacto con su proveedor de atención médica.",
-      "Si cree que sus síntomas están empeorando, póngase en contacto con los servicios de emergencia médica locales o con el personal de primeros auxilios inmediatamente."
+      "Utilice su propio dispositivo y use una máscara cuando sea apropiado.",
+      "Desinfecte su dispositivo y cualquier superficie afectada o cercana después de registrar su tos/habla",
+      "Si tiene una afección subyacente que aumenta el riesgo de toser, consulte con su proveedor de atención médica antes de participar.",
+      "Si cree que sus síntomas están empeorando, póngase en contacto con los servicios de emergencia médica locales."
     ],
     "startButton": "Comenzar"
   },
