@@ -17,7 +17,7 @@ export const StyledButton = styled.button<StyledButtonProps>`
   width: 100%;
 
   ${({ dark, disabled }) => {
-    const color = disabled ? colors.purple_10 : colors.purple;
+    const color = disabled ? colors.purple_50 : colors.purple;
     return dark ? `
     background-color: ${color};
     color: ${colors.white};

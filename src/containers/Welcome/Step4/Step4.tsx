@@ -94,7 +94,9 @@ const Step4 = (p: Wizard.StepProps) => {
       <WelcomeHeaderContainer>
         <WelcomeLogo />
         <WelcomeTitle
-          mt={width && width > 560 ? 32 : 30}
+          fontSize={32}
+          mt={width && width > 560 ? 32 : 15}
+          mb={45}
           textAlign="center"
           fontColor="#3578DE"
         >
@@ -112,7 +114,7 @@ const Step4 = (p: Wizard.StepProps) => {
           </WelcomeSubtitle>
         </WelcomeBorderContainer>
       </WelcomeHeaderContainer>
-      <WelcomeContent mt={40}>
+      <WelcomeContent mt={10} mb={95}>
         <WelcomeItemList>
           {adviseList.map((advise, idx) => (
             // eslint-disable-next-line react/no-array-index-key

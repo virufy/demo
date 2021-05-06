@@ -47,8 +47,11 @@
     "recordCough": {
       "header": "Record your cough",
       "title": "Instructions",
-      "intro1": "Find a quiet environment at least 20 feet away from others. If you are feeling ill, please sit down.",
-      "intro2": "Hold your device near your face and cough into your elbow to prevent virus spread. Do not cough violently or too forcefully."
+      "intro1": "Find a quiet environment that is 20 feet away from those around you.",
+      "intro2": "Wear a surgical or cloth mask and hold your device two hands-length away from your face.",
+      "text": "Click the record button below and <strong>cough intentionally three times with a deep breath between each cough.</strong> When you are done, tap the stop button.",
+      "record": "Record",
+      "stop": "Stop"
     },
     "next": "Next",
     "releaseButtonStart": "Release to start recording",
@@ -61,8 +64,7 @@
     },
     "next": "Continue",
     "delete": "Delete",
-    "text": "Click the record button and cough intentionally <strong>3 times</strong>. When you are done, click <3></3> and Continue.",
-    "textCount": "Click the record button and count clearly from one to ten. When you are done, click continue.",
+    "textCount": "Click continue to proceed.",
     "upload": "Upload your own file"
   },
   "recordingsRecordManual": {

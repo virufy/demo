@@ -80,6 +80,7 @@ export const WelcomeTitle = styled.h1<WelcomeTitleProps>`
   max-width: 320px;
   text-align: ${({ textAlign }) => textAlign || 'center'};
   color: ${({ theme, fontColor }) => (fontColor || theme.colors.mineShaft)};
+  line-height: 1;
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     font-size: ${({ fontSize }) => `${fontSize}px` || '2.25rem'} ;
@@ -93,9 +94,9 @@ export const WelcomeTitle = styled.h1<WelcomeTitleProps>`
   }
 `;
 
-export const WelcomeContent = styled.div<{ maxWidth?: number; mt?: number; }>`
-  margin: ${({ mt = 30 }) => mt}px auto ${({ mt = 30 }) => mt}px;
-  text-align: left;
+export const WelcomeContent = styled.div<{ maxWidth?: number; mt?: number; mb?: number;}>`
+  margin: ${({ mt = 30 }) => mt}px auto ${({ mb = 30 }) => mb}px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -103,7 +104,7 @@ export const WelcomeContent = styled.div<{ maxWidth?: number; mt?: number; }>`
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     text-align: center;
-    margin: ${({ mt = 30 }) => mt}px auto ${({ mt = 30 }) => mt}px;
+    margin: ${({ mt = 30 }) => mt}px auto ${({ mb = 30 }) => mb}px;
   };
 `;
 
@@ -116,8 +117,7 @@ export const WelcomeItemList = styled.ul`
   font-weight: 400;
   line-height: 1.25rem;
   list-style: none;
-  margin: auto;
-  margin-bottom:1.2rem;
+  margin: 0px 0px 1.2rem 25px;
   max-width: 278px;
   padding: 0;
 
@@ -165,7 +165,10 @@ export const WelcomeSubtitle = styled.h2<WelcomeSubtitleProps>`
   margin-top: ${({ mt }) => `${mt}px`};
   ${({ textAlign }) => textAlign && css`text-align: ${textAlign || 'left'};`}
   white-space: pre-wrap;
-  font-weight: ${({ isBold }) => (isBold ? 600 : 200)};
+  font-weight: 200;
+  >strong{
+    font-weight: ${({ isBold }) => (isBold ? 600 : 200)}
+  }
 
   max-width: 335px;
   width: 100%;
@@ -189,6 +192,7 @@ export const WelcomeStyledForm = styled.form`
 
 export const WelcomeStyledFormAlternative = styled.form`
     padding: 0px !important; 
+    text-align: center !important;
     @media screen and (${props => props.theme.breakpoints.tablet}){
       padding: 0px !important;
     }
@@ -215,7 +219,7 @@ export const WelcomeConsentForm = styled.div`
 
 export const WelcomeBorderContainer = styled.div`
     width:100%;
-    border-radius: 0px 90px 0px 0px;
+    border-radius: 0px 70px 0px 0px;
     background-color: #FFF;
     display: flex;
     justify-content: center;
@@ -240,7 +244,7 @@ export const WelcomeNote = styled.span<WelcomeNoteProps>`
   font-style: italic;
   font-weight: ${({ isBold }) => (isBold ? 700 : 400)};
   max-width: 335px;
-  margin: 36px auto 0;
+  margin: 25px auto 0;
   text-align:left;
 `;
 
@@ -318,7 +322,7 @@ export const WelcomeBullets = styled.div`
 
 export const BulletIndicator = styled.p`
   color: ${({ theme }) => theme.colors.purple}; 
-  font-weight: 600;
+  font-weight: bold;
   margin:0px;
 `;
 
@@ -366,23 +370,24 @@ export const SupportersLogos = styled.div`
 `;
 
 export const HeaderImage = styled.img`
-  max-width: 375px;
-  max-height:325px;
+  width: 375px;
+  height:325px;
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
-    max-width: 768px;
-    max-height: 488px;
+    width: 768px;
+    height: 488px;
   }
 `;
 
 export const LogoWhiteBG = styled(LogoSplash)`
-  margin-top: -50%;
-  width:100%;
-  max-width: 134px;
-  max-height: 177px;
+  margin-top: -90%;
+  width: 134px;
+  height: 177px;
+  text-align: center !important;
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
-    max-width: 212px;
-    max-height: 280px;
+    margin-top: -60%;
+    width: 212px;
+    height: 280px;
   }
 `;

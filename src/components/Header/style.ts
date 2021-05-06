@@ -8,7 +8,7 @@ export type HeaderType = 'primary' | 'secondary';
 export const HeaderContainer = styled.div<{ backgroundType?: HeaderType; }>`
   align-items: center;
   display: flex;
-  padding-top: 1rem;
+  padding-top: 1.3rem;
   position:relative;
   width: 100%;
   background-color: ${({ backgroundType }) => {
@@ -23,7 +23,7 @@ export const HeaderContainer = styled.div<{ backgroundType?: HeaderType; }>`
   ;
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
-    padding-top: 0px;
+    padding-top: 1.3rem;
   }
 `;
 
@@ -58,11 +58,11 @@ export const Logo = styled(LogoSvg)<{ size?: LogoSize }>`
 
 export const Title = styled.h1`
   font-family: "Open Sans";
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.25rem;
-  padding-top: 8px;
   margin: 0 auto;
+  color: ${props => props.theme.colors.purple};
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     padding-top: 0;
@@ -75,10 +75,10 @@ export const ArrowLefContainer = styled.div`
   padding-bottom: 10px;
   padding-left: 20px;
   position: absolute;
+  top:20px;
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     padding: 0px 20px;
-    top: 12px;
     margin-left: -8px;
     > svg {
       width: 13.62px;

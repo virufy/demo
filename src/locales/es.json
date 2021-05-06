@@ -47,8 +47,11 @@
     "recordCough": {
       "header": "Grabe su tos",
       "title": "Instrucciones",
-      "intro1": "Busque un entorno tranquilo a una distancia mínima de 6 metros de los demás. Si se siente mal, siéntese.",
-      "intro2": "Mantenga su dispositivo cerca de la cara y tosa en el codo para evitar la propagación del virus. No tosa de forma violenta o con demasiada fuerza."
+      "intro1": "Busque un entorno tranquilo a una distancia mínima de 6 metros de los demás.",
+      "intro2": "Use una mascarilla quirúrgica o de tela y sostenga su dispositivo a dos manos de distancia de su cara.",
+      "text": "Pulse el botón de grabación a continuación y <strong> tosa intencionalmente tres veces con una respiración profunda entre cada tos. </strong> Cuando haya terminado, toque el botón de detener.",
+      "record": "Grabar",
+      "stop": "Parar"
     },
     "next": "Siguiente",
     "releaseButtonStart": "Suelte para empezar a grabar",
@@ -61,8 +64,7 @@
     },
     "next": "Continuar",
     "delete": "Borrar",
-    "text": "Pulse el botón de grabación y tosa intencionadamente <strong>3 veces</strong>. Cuando haya terminado, haga clic en <3></3> y continúe.",
-    "textCount": "Haga clic en el botón de grabar y cuente claramente del uno al diez. Cuando haya terminado, haga clic en continuar.",
+    "textCount": "Pulse el botón continuar para avanzar.",
     "upload": "Sube tu propio audio"
   },
   "recordingsRecordManual": {

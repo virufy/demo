@@ -12,5 +12,5 @@ export const StepContainer = styled.div`
 `;
 
 export const WizardNavControlPortal = styled.div`
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 `;

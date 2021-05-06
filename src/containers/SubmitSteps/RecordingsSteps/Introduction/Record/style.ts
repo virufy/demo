@@ -5,7 +5,7 @@ import { colors } from 'theme';
 import StopSVG from 'assets/icons/stop.svg';
 
 export const MainContainer = styled.div`
-  padding: 40px 0px;
+  padding: 0px 0px;
 `;
 
 export const Text = styled(BlackText)`

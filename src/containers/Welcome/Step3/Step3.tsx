@@ -71,12 +71,12 @@ const Step3 = (p: Wizard.StepProps) => {
     <WelcomeStyledFormAlternative>
       <WelcomeHeaderContainer>
         <WelcomeLogo />
-        <WelcomeTitle mb={width && width > 560 ? 90 : 50} mt={50} fontColor="#3578DE">{t('main:aboutUsTitle')}</WelcomeTitle>
+        <WelcomeTitle mb={width && width > 560 ? 90 : 50} mt={15} fontColor="#3578DE" fontSize={32}>{t('main:aboutUsTitle')}</WelcomeTitle>
         <WelcomeBorderContainer>
           <CoupleAboutUs />
         </WelcomeBorderContainer>
       </WelcomeHeaderContainer>
-      <WelcomeContent mt={40}>
+      <WelcomeContent mt={21}>
         <WelcomeSubtitle mt={0} mb={0} textAlign="left" fontColor={colors.mineShaft} isBold>
           <Trans i18nKey="helpVirufy:aboutParagraph">
             <p>

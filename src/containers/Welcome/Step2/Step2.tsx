@@ -16,7 +16,7 @@ import useWindowSize from 'hooks/useWindowSize';
 import { colors } from 'theme';
 
 // Assets
-// import HeaderSplash from 'assets/images/headerSplash.png';
+import HeaderSplash from 'assets/images/headerSplash.png';
 
 // Utils
 import { scrollToTop } from 'helper/scrollHelper';
@@ -26,7 +26,7 @@ import {
   WelcomeContent,
   WelcomeSubtitle,
   WelcomeStyledFormAlternative,
-  // HeaderImage,
+  HeaderImage,
   WelcomeBullets,
   BulletIndicator,
   LogoWhiteBG,
@@ -72,11 +72,12 @@ const Step2 = (p: Wizard.StepProps) => {
 
   return (
     <WelcomeStyledFormAlternative>
-
+      <HeaderImage
+        src={HeaderSplash}
+      />
       <LogoWhiteBG />
-
       <WelcomeSubtitle
-        mt={width && width > 560 ? 38 : 12}
+        mt={width && width > 560 ? 38 : 0}
         fontSize={isDesktop ? 32 : 24}
         fontColor="#3578DE"
         textAlign="center"
@@ -95,7 +96,7 @@ const Step2 = (p: Wizard.StepProps) => {
           </Trans>
         </WelcomeSubtitle>
 
-        <WelcomeSubtitle mt={20} isBold textAlign="left">
+        <WelcomeSubtitle mt={width && width > 560 ? 15 : 7} isBold textAlign="left">
           <WelcomeBullets>
             <BulletIndicator>1</BulletIndicator>
           </WelcomeBullets>
@@ -103,7 +104,7 @@ const Step2 = (p: Wizard.StepProps) => {
             <strong>Intro:</strong>About us and Safety Reminders
           </Trans>
         </WelcomeSubtitle>
-        <WelcomeSubtitle mt={20} isBold textAlign="left">
+        <WelcomeSubtitle mt={width && width > 560 ? 20 : 10} isBold textAlign="left">
           <WelcomeBullets>
             <BulletIndicator>2</BulletIndicator>
           </WelcomeBullets>
@@ -111,7 +112,7 @@ const Step2 = (p: Wizard.StepProps) => {
             <strong>Cough Into Phone</strong>
           </Trans>
         </WelcomeSubtitle>
-        <WelcomeSubtitle mt={20} isBold textAlign="left">
+        <WelcomeSubtitle mt={width && width > 560 ? 20 : 10} isBold textAlign="left">
           <WelcomeBullets>
             <BulletIndicator>3</BulletIndicator>
           </WelcomeBullets>

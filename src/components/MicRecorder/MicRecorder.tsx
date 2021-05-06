@@ -21,6 +21,9 @@ import {
   MicRecorderTimerContainer,
   MicRecorderTimerReleaseTextContainer,
   MicRecorderTextP,
+  MicButtonsContainer,
+  MicNote,
+  MicButtonWithText,
 } from './style';
 
 interface MicRecorderProps {
@@ -248,26 +251,6 @@ const MicRecorder = ({
             </MicRecorderTextP>
           )}
       </MicRecorderTimerReleaseTextContainer>
-      <MicRecorderButton
-        disabled={!micAllowed}
-        onClick={recordingInProgress ? handleStopRecording : handleStartRecording}
-        onMouseDown={handleStartLongPress}
-        onMouseUp={handleEndLongPress}
-        onTouchStart={handleStartLongPress}
-        onTouchEnd={handleEndLongPress}
-        onMouseLeave={handleEndLongPress}
-      >
-        <MicRecorderStartImage
-          src={StartSVG}
-          alt="Start"
-          show={!recordingInProgress}
-        />
-        <MicRecorderStopImage
-          src={StopSVG}
-          alt="Stop"
-          show={recordingInProgress}
-        />
-      </MicRecorderButton>
       <MicRecorderTimerContainer>
         <Timer
           ref={timerRef}
@@ -284,6 +267,44 @@ const MicRecorder = ({
           <Timer.Seconds formatValue={handleFormatValue} />
         </Timer>
       </MicRecorderTimerContainer>
+      <MicButtonsContainer>
+        <MicButtonWithText>
+          <MicRecorderButton
+            opacity={recordingInProgress}
+            disabled={!micAllowed}
+            onClick={handleStartRecording}
+            onMouseDown={handleStartLongPress}
+            onMouseUp={handleEndLongPress}
+            onTouchStart={handleStartLongPress}
+            onTouchEnd={handleEndLongPress}
+            onMouseLeave={handleEndLongPress}
+          >
+            <MicRecorderStartImage
+              src={StartSVG}
+              alt="Start"
+            />
+          </MicRecorderButton>
+          <MicNote>{t('recordingsIntroduction:recordCough.record')}</MicNote>
+        </MicButtonWithText>
+        <MicButtonWithText>
+          <MicRecorderButton
+            opacity={!recordingInProgress}
+            disabled={!micAllowed}
+            onClick={handleStopRecording}
+            onMouseDown={handleStartLongPress}
+            onMouseUp={handleEndLongPress}
+            onTouchStart={handleStartLongPress}
+            onTouchEnd={handleEndLongPress}
+            onMouseLeave={handleEndLongPress}
+          >
+            <MicRecorderStopImage
+              src={StopSVG}
+              alt="Stop"
+            />
+          </MicRecorderButton>
+          <MicNote>{t('recordingsIntroduction:recordCough.stop')}</MicNote>
+        </MicButtonWithText>
+      </MicButtonsContainer>
     </MicRecorderContainer>
   );
 };

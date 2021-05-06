@@ -47,8 +47,11 @@
     "recordCough": {
       "header": "Gravar sua fala",
       "title": "Instruções",
-      "intro1": "Encontre um ambiente tranqüilo a pelo menos 20 pés de distância dos outros. Se você estiver se sentindo mal, por favor, sente-se.",
-      "intro2": "Coloque seu dispositivo perto do rosto e tussa no cotovelo para evitar a disseminação do vírus.  Não tussa violentamente ou com muita força."
+      "intro1": "Encontre um ambiente tranquilo a 6 metros de distância das pessoas ao seu redor.",
+      "intro2": "Use uma máscara cirúrgica ou de pano e segure o dispositivo a duas mãos de distância do rosto.",
+      "text": "Clique no botão gravar abaixo e <strong> tussa intencionalmente três vezes, respirando fundo entre cada tosse. </strong> Quando terminar, toque no botão parar.",
+      "record": "Gravar",
+      "stop": "Parar"
     },
     "next": "Próximo",
     "releaseButtonStart": "Lançamento para iniciar a gravação",
@@ -61,7 +64,6 @@
     },
     "next": "Continuar",
     "delete": "Deletar",
-    "text": "Clique no botão gravar e tussa intencionalmente <strong>3 vezes</strong>. Quando terminar, clique em <3></3> e Continue.",
     "textCount": "Clique no botão gravar e conte claramente de um até dez. Quando acabar, clique em continuar.",
     "upload": "Carregue seu próprio arquivo"
   },
