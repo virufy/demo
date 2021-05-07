@@ -1,35 +1,51 @@
 import styled from 'styled-components';
-
 import { ReactComponent as ArrowftSvg } from 'assets/icons/arrowLeft.svg';
-import { ReactComponent as LogoSvg } from 'assets/virufyLogo.svg';
 
-export type HeaderType = 'primary' | 'secondary';
+export type HeaderType = 'shapeDown' | 'noShape' | 'shapeUp';
 
 export const HeaderContainer = styled.div<{ backgroundType?: HeaderType; }>`
   align-items: center;
+  justify-content: center;
   display: flex;
   padding-top: 1.3rem;
   position:relative;
   width: 100%;
   background-color: ${({ backgroundType }) => {
     switch (backgroundType) {
-      case 'primary':
+      case 'noShape':
         return '#FFF';
-      case 'secondary':
+      case 'shapeDown':
+        return 'rgba(53, 120, 222, 0.1)';
+      case 'shapeUp':
       default:
         return 'rgba(53, 120, 222, 0.1)';
     }
-  }}
-  ;
+  }};
+  border-radius: ${({ backgroundType }) => {
+    switch (backgroundType) {
+      case 'noShape':
+        return '0px';
+      case 'shapeDown':
+        return '0px';
+      case 'shapeUp':
+      default:
+        return '0px 0px 70px 70px';
+    }
+  }};
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     padding-top: 1.3rem;
   }
 `;
 
+export const TitleContainer = styled.div`
+  display:flex;
+  flex-direction: column;
+`;
+
 export type LogoSize = 'regular' | 'big';
 
-export const Logo = styled(LogoSvg)<{ size?: LogoSize }>`
+export const LogoDemo = styled.img<{ size?: LogoSize }>`
   margin: 0 auto;
   width: ${({ size }) => {
     switch (size) {
@@ -51,22 +67,70 @@ export const Logo = styled(LogoSvg)<{ size?: LogoSize }>`
   }};
 
 
-  @media screen and (${props => props.theme.breakpoints.tablet}){
-    display: none;
-    }
+@media screen and (${props => props.theme.breakpoints.tablet}){
+
+  }
 `;
 
-export const Title = styled.h1`
+export const Subtitle = styled.h1<{ colorType?: HeaderType; pb?: number}>`
   font-family: "Open Sans";
-  font-size: 14px;
   font-weight: 700;
-  line-height: 1.25rem;
+  line-height: 1.1;
   margin: 0 auto;
-  color: ${props => props.theme.colors.purple};
+  padding-bottom: ${({ pb }) => `${pb || 0}px`}};
+  font-size: ${({ colorType }) => {
+    switch (colorType) {
+      case 'noShape':
+        return '32px';
+      case 'shapeDown':
+        return '32px';
+      case 'shapeUp':
+      default:
+        return '24px';
+    }
+  }};
+  color: ${({ colorType }) => {
+    switch (colorType) {
+      case 'noShape':
+        return '#393939';
+      case 'shapeDown':
+        return '#3578DE';
+      case 'shapeUp':
+      default:
+        return '#393939';
+    }
+  }};
+  text-align: center;
+  margin-top: ${({ colorType }) => {
+    switch (colorType) {
+      case 'noShape':
+        return '33px';
+      case 'shapeDown':
+        return '33px';
+      case 'shapeUp':
+      default:
+        return '45px';
+    }
+  }};
+  
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     padding-top: 0;
-    margin-top: -2px;
+  }
+`;
+
+export const Title = styled.h3<{ pb?: number;}>`
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.1;
+  margin: 0 auto;
+  color: ${props => props.theme.colors.purple};
+  text-align: center;
+  padding-bottom: ${({ pb }) => `${pb || 0}px`}};
+
+  @media screen and (${props => props.theme.breakpoints.tablet}){
+    padding-top: 0;
   }
 `;
 
@@ -75,11 +139,11 @@ export const ArrowLefContainer = styled.div`
   padding-bottom: 10px;
   padding-left: 20px;
   position: absolute;
-  top:20px;
+  left:-8px;
+  top: 20px;
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     padding: 0px 20px;
-    margin-left: -8px;
     > svg {
       width: 13.62px;
       height: 23.1px;

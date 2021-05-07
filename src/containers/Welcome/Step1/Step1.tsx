@@ -30,7 +30,6 @@ import { scrollToTop } from 'helper/scrollHelper';
 
 // Styles
 import {
-  WelcomeLogo,
   WelcomeContent,
   WelcomeSubtitle,
   WelcomeStyledForm,
@@ -120,7 +119,7 @@ const Step1 = (p: Wizard.StepProps) => {
     // Hide back arrow in header if neccesary
     if (doGoBack) setDoGoBack(null);
 
-    setType('primary');
+    setType('noShape');
     setLogoSize('big');
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -156,9 +155,6 @@ const Step1 = (p: Wizard.StepProps) => {
 
   return (
     <WelcomeStyledForm>
-      {/* Logo */}
-      <WelcomeLogo />
-
       {/* Content */}
       <WelcomeContent mt={53}>
         <WelcomeSubtitle
@@ -167,7 +163,7 @@ const Step1 = (p: Wizard.StepProps) => {
           textAlign={width && width > 560 ? 'center' : 'left'}
           isBold
         >
-          {t('main:selectYourLanguage', 'Language')}
+          <strong>{t('main:selectYourLanguage', 'Language')}</strong>
         </WelcomeSubtitle>
 
         {/* Language */}
@@ -201,7 +197,7 @@ const Step1 = (p: Wizard.StepProps) => {
           textAlign={width && width > 560 ? 'center' : 'left'}
           isBold
         >
-          {t('main:selectLocation', 'Location')}
+          <strong>{t('main:selectLocation', 'Location')}</strong>
         </WelcomeSubtitle>
 
         <Controller
@@ -234,7 +230,7 @@ const Step1 = (p: Wizard.StepProps) => {
           textAlign={width && width > 560 ? 'center' : 'left'}
           isBold
         >
-          {t('main:provideAccessCode', 'Access code')}
+          <strong>{t('main:provideAccessCode', 'Access code')}</strong>
         </WelcomeSubtitle>
 
         <Controller

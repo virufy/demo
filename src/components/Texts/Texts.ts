@@ -16,7 +16,7 @@ export const BlackText = styled.div<{ dark?: boolean; fontSize?: string; }>`
 export const BaseTitle = styled.div`
   font-family: 'Open Sans';
   font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 34.24px;
+  font-size: 24px;
+  line-height: 1;
   color: ${colors.darkBlack};
 `;

@@ -23,13 +23,11 @@ import { scrollToTop } from 'helper/scrollHelper';
 import {
   MainContainer,
   Title,
-  Text,
-  TextAddFile,
-  TextFileConstraints,
   TextErrorContainer,
   UploadContainer,
   UploadInput,
   UploadButton,
+  CloudsSVG,
 } from './style';
 
 const audioMaxSizeInMb = 5;
@@ -70,7 +68,9 @@ const RecordManualUpload = ({
   const { Portal } = usePortal({
     bindTo: document && document.getElementById('wizard-buttons') as HTMLDivElement,
   });
-  const { setDoGoBack, setTitle } = useHeaderContext();
+  const {
+    setDoGoBack, setTitle, setSubtitle, setType,
+  } = useHeaderContext();
   const history = useHistory();
   const { state, actions } = useStateMachine({ updateAction: updateAction(storeKey) });
   const {
@@ -133,8 +133,10 @@ const RecordManualUpload = ({
   useEffect(() => {
     scrollToTop();
     setTitle(t('recordingsRecordManual:header'));
+    setSubtitle('');
+    setType('shapeUp');
     setDoGoBack(() => handleDoBack);
-  }, [handleDoBack, setDoGoBack, setTitle, t]);
+  }, [handleDoBack, setDoGoBack, setType, setSubtitle, setTitle, t]);
 
   return (
     <>
@@ -142,9 +144,7 @@ const RecordManualUpload = ({
         <Title>
           {t('recordingsRecordManual:micError')}
         </Title>
-        <Text>
-          {t('recordingsRecordManual:micErrorDescription')}
-        </Text>
+        <CloudsSVG />
         <Controller
           control={control}
           name="uploadedFile"
@@ -161,12 +161,6 @@ const RecordManualUpload = ({
             </UploadContainer>
           )}
         />
-        <TextAddFile>
-          {t('recordingsRecordManual:addFile')}
-        </TextAddFile>
-        <TextFileConstraints>
-          {t('recordingsRecordManual:constraint')}
-        </TextFileConstraints>
       </MainContainer>
       <TextErrorContainer>
         {errorMsg}
@@ -176,7 +170,7 @@ const RecordManualUpload = ({
         <Portal>
           <WizardButtons
             invert
-            leftLabel={t('recordingsRecordManual:next')}
+            leftLabel={t('recordingsRecordManual:uploadFile')}
             leftDisabled={!isValid}
             leftHandler={handleSubmit(handleNext)}
           />

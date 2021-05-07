@@ -6,9 +6,6 @@ import usePortal from 'react-useportal';
 import { useTranslation, Trans } from 'react-i18next';
 import useHeaderContext from 'hooks/useHeaderContext';
 
-// Hooks
-import useWindowSize from 'hooks/useWindowSize';
-
 // Components
 import WizardButtons from 'components/WizardButtons';
 
@@ -20,19 +17,16 @@ import { scrollToTop } from 'helper/scrollHelper';
 
 // Styles
 import {
-  WelcomeHeaderContainer,
-  WelcomeLogo,
   WelcomeBorderContainer,
   WelcomeContent,
   WelcomeSubtitle,
   WelcomeStyledFormAlternative,
   WelcomeNote,
   CoupleAboutUs,
-  WelcomeTitle,
+  ShapeDownContainer,
 } from '../style';
 
 const Step3 = (p: Wizard.StepProps) => {
-  const { width } = useWindowSize();
   const { Portal } = usePortal({
     bindTo: document && document.getElementById('wizard-buttons') as HTMLDivElement,
   });
@@ -40,11 +34,11 @@ const Step3 = (p: Wizard.StepProps) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [activeStep, setActiveStep] = useState(true);
   const {
-    doGoBack, setDoGoBack, setTitle, title, setType, setLogoSize,
+    doGoBack, setDoGoBack, setTitle, title, setType, setLogoSize, setSubtitle,
   } = useHeaderContext();
 
   const history = useHistory();
-
+  const { t } = useTranslation();
   const handleNext = React.useCallback(() => {
     if (p.nextStep) {
       history.push(p.nextStep);
@@ -60,22 +54,19 @@ const Step3 = (p: Wizard.StepProps) => {
   useEffect(() => {
     scrollToTop();
     if (doGoBack) setDoGoBack(null);
-    setType('secondary');
+    setType('shapeDown');
     setLogoSize('regular');
+    setSubtitle(t('main:aboutUsTitle'));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const { t } = useTranslation();
-
   return (
     <WelcomeStyledFormAlternative>
-      <WelcomeHeaderContainer>
-        <WelcomeLogo />
-        <WelcomeTitle mb={width && width > 560 ? 90 : 50} mt={15} fontColor="#3578DE" fontSize={32}>{t('main:aboutUsTitle')}</WelcomeTitle>
+      <ShapeDownContainer>
         <WelcomeBorderContainer>
           <CoupleAboutUs />
         </WelcomeBorderContainer>
-      </WelcomeHeaderContainer>
+      </ShapeDownContainer>
       <WelcomeContent mt={21}>
         <WelcomeSubtitle mt={0} mb={0} textAlign="left" fontColor={colors.mineShaft} isBold>
           <Trans i18nKey="helpVirufy:aboutParagraph">
@@ -118,7 +109,6 @@ const Step3 = (p: Wizard.StepProps) => {
           />
         </Portal>
       )}
-
     </WelcomeStyledFormAlternative>
   );
 };

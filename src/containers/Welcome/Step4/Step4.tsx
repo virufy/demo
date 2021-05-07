@@ -9,9 +9,6 @@ import useHeaderContext from 'hooks/useHeaderContext';
 // Components
 import WizardButtons from 'components/WizardButtons';
 
-// Hooks
-import useWindowSize from 'hooks/useWindowSize';
-
 // Theme
 import { colors } from 'theme';
 
@@ -20,15 +17,13 @@ import { scrollToTop } from 'helper/scrollHelper';
 
 // Styles
 import {
-  WelcomeHeaderContainer,
-  WelcomeLogo,
-  WelcomeTitle,
   WelcomeContent,
   WelcomeSubtitle,
   WelcomeItemList,
   WelcomeItemListItem,
   WelcomeStyledFormAlternative,
   WelcomeBorderContainer,
+  ShapeDownContainer,
 } from '../style';
 
 const defaultAdviseList = [
@@ -39,7 +34,6 @@ const defaultAdviseList = [
 ];
 
 const Step4 = (p: Wizard.StepProps) => {
-  const { width } = useWindowSize();
   const { Portal } = usePortal({
     bindTo: document && document.getElementById('wizard-buttons') as HTMLDivElement,
   });
@@ -47,10 +41,11 @@ const Step4 = (p: Wizard.StepProps) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [activeStep, setActiveStep] = useState(true);
   const {
-    setDoGoBack, setTitle, title, setType, setLogoSize,
+    setDoGoBack, setTitle, title, setType, setLogoSize, setSubtitle,
   } = useHeaderContext();
 
   const history = useHistory();
+  const { t } = useTranslation();
 
   const handleNext = React.useCallback(() => {
     if (p.nextStep) {
@@ -80,40 +75,29 @@ const Step4 = (p: Wizard.StepProps) => {
   }, [doBack, setDoGoBack]);
 
   useEffect(() => {
-    setType('secondary');
+    setType('shapeDown');
     setLogoSize('regular');
+    setSubtitle(t('beforeStart:title'));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  const { t } = useTranslation();
 
   const adviseList: string[] = t('beforeStart:advise_list', { returnObjects: true, defaultValue: defaultAdviseList });
 
   return (
     <WelcomeStyledFormAlternative>
-      <WelcomeHeaderContainer>
-        <WelcomeLogo />
-        <WelcomeTitle
-          fontSize={32}
-          mt={width && width > 560 ? 32 : 15}
-          mb={45}
-          textAlign="center"
-          fontColor="#3578DE"
-        >
-          {t('beforeStart:title')}
-        </WelcomeTitle>
+      <ShapeDownContainer>
         <WelcomeBorderContainer>
           <WelcomeSubtitle
             fontColor={colors.mineShaft}
             mb={15}
-            mt={40}
+            mt={20}
             textAlign="left"
             isBold
           >
-            {t('beforeStart:subtitle')}
+            <strong>{t('beforeStart:subtitle')}</strong>
           </WelcomeSubtitle>
         </WelcomeBorderContainer>
-      </WelcomeHeaderContainer>
+      </ShapeDownContainer>
       <WelcomeContent mt={10} mb={95}>
         <WelcomeItemList>
           {adviseList.map((advise, idx) => (

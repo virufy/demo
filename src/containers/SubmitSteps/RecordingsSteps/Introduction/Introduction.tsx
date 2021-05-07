@@ -21,11 +21,9 @@ import Record, { RecordType } from './Record';
 // Styles
 import {
   MainContainer,
-  InstructionsHeaderContainer,
   InstructionSubtitle,
   SocialDistancing,
   CoughLeft,
-  InstructionTitle,
   InstructionBullets,
   BulletIndicator,
   InstructionContainer,
@@ -51,7 +49,9 @@ const Introduction = ({
   const { state, actions } = useStateMachine({ updateAction: updateAction(storeKey) });
 
   // Hooks
-  const { setDoGoBack, setTitle, setType } = useHeaderContext();
+  const {
+    setDoGoBack, setTitle, setType, setSubtitle,
+  } = useHeaderContext();
   const history = useHistory();
   const { t } = useTranslation();
   const { width } = useWindowSize();
@@ -90,15 +90,13 @@ const Introduction = ({
     scrollToTop();
     setTitle(t('recordingsIntroduction:recordCough.header'));
     setDoGoBack(() => handleDoBack);
-    setType('secondary');
-  }, [setTitle, handleDoBack, setDoGoBack, t, setType]);
+    setType('shapeUp');
+    setSubtitle(t('recordingsIntroduction:recordCough.title'));
+  }, [setTitle, setSubtitle, handleDoBack, setDoGoBack, t, setType]);
 
   return (
     <>
       <MainContainer>
-        <InstructionsHeaderContainer>
-          <InstructionTitle>{t('recordingsIntroduction:recordCough.title')}</InstructionTitle>
-        </InstructionsHeaderContainer>
         <InstructionContainer mt={40} mb={30}>
           <InstructionBullets>
             <BulletIndicator>1</BulletIndicator>

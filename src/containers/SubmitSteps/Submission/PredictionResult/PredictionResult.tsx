@@ -41,7 +41,9 @@ const PredictionResult = () => {
   const { Portal } = usePortal({
     bindTo: document && document.getElementById('wizard-buttons') as HTMLDivElement,
   });
-  const { setDoGoBack, setTitle } = useHeaderContext();
+  const {
+    setDoGoBack, setTitle, setSubtitle, setType,
+  } = useHeaderContext();
   const history = useHistory();
   const { t } = useTranslation();
   const { state, actions } = useStateMachine({ resetStore: resetStore() });
@@ -116,6 +118,8 @@ const PredictionResult = () => {
   React.useEffect(() => {
     scrollToTop();
     setTitle('');
+    setSubtitle('');
+    setType('noShape');
     setDoGoBack(() => {});
     handleSubmit();
     // eslint-disable-next-line react-hooks/exhaustive-deps

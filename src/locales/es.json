@@ -72,7 +72,8 @@
     "addFile": "Añada su archivo",
     "constraint": "Añada hasta 5 MB",
     "next": "Hecho",
-    "micError": "¿No puede acceder al micrófono?",
+    "uploadFile" : "Subir Archivo",
+    "micError": "¿No puede acceder al micrófono? Suba un archivo de audio.",
     "micErrorDescription": "Por favor, suba un archivo de audio aquí.",
     "fileDurationTooShort": "Por favor, suba un archivo de al menos 3 segundos",
     "fileSizeTooBig": "Por favor, suba un archivo de menos de 5 MB",
@@ -84,12 +85,13 @@
       "intro1": "Por favor, tosa lejos de las personas a tu alrededor. Si se siente enfermo, por favor siéntese.",
       "intro2": "En un ambiente silencioso, por favor presione el botón de grabar y tosa intencionalmente de 3 a 5 veces."
     },
-    "title": "Grabación enviada",
-    "subtitle": "Siéntase libre de escuchar la grabación.",
-    "next": "Hecho"
+    "title": "Grabación completada",
+    "subtitle": "Siéntase libre de escuchar la grabación!",
+    "next": "Hecho",
+    "retake": "Retomar"
   },
   "predictionResult": {
-    "processingTitle": "Procesando",
+    "processingTitle": "Procesando...",
     "predictionResultTitle": "Resultado de la Predicción",
     "likelihoodPrefix": "Resultado de COVID-19:",
     "nextButton": "Subir otra tos",

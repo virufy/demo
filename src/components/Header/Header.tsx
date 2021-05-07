@@ -1,14 +1,19 @@
 import React, { createContext, useContext, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
+// Assets
+import Logo from 'assets/virufyLogo.png';
+
 // Styles
 import {
-  HeaderContainer, Title, Logo, ArrowLeft, ArrowLefContainer, LogoSize, HeaderType,
+  HeaderContainer, Title, ArrowLeft, ArrowLefContainer, LogoSize, HeaderType, LogoDemo, TitleContainer, Subtitle,
 } from './style';
 
 type ContextType = {
   title: string,
   setTitle: (newTitle: string) => string | void,
+  subtitle: string,
+  setSubtitle: (newSubtitle: string) => string | void,
   logoSize: LogoSize;
   setLogoSize: (newLogo: LogoSize) => string | void,
   type: HeaderType,
@@ -22,7 +27,9 @@ export const HeaderContext = createContext<ContextType>({
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   title: '',
   setTitle: noop,
-  type: 'secondary',
+  subtitle: '',
+  setSubtitle: noop,
+  type: 'noShape',
   setType: noop,
   setDoGoBack: noop,
   logoSize: 'regular',
@@ -35,7 +42,8 @@ interface HeaderProps {
 
 export const HeaderContextProvider = ({ children }: HeaderProps) => {
   const [title, setTitle] = useState('');
-  const [type, setType] = useState<HeaderType>('secondary');
+  const [subtitle, setSubtitle] = useState('');
+  const [type, setType] = useState<HeaderType>('noShape');
   const [logoSize, setLogoSize] = useState<LogoSize>('regular');
   const [doGoBack, setDoGoBack] = useState<null | any>(null);
 
@@ -43,6 +51,8 @@ export const HeaderContextProvider = ({ children }: HeaderProps) => {
     () => ({
       title,
       setTitle,
+      subtitle,
+      setSubtitle,
       type,
       setType,
       logoSize,
@@ -50,7 +60,7 @@ export const HeaderContextProvider = ({ children }: HeaderProps) => {
       doGoBack,
       setDoGoBack,
     }),
-    [title, type, logoSize, doGoBack],
+    [title, subtitle, type, logoSize, doGoBack],
   );
 
   return <HeaderContext.Provider value={value}>{children}</HeaderContext.Provider>;
@@ -58,7 +68,7 @@ export const HeaderContextProvider = ({ children }: HeaderProps) => {
 
 const Header = () => {
   const {
-    title, type, logoSize, doGoBack,
+    title, subtitle, type, logoSize, doGoBack,
   } = useContext(HeaderContext);
   const location = useLocation();
 
@@ -67,11 +77,12 @@ const Header = () => {
   return (
     <HeaderContainer backgroundType={type}>
       {doGoBack && <ArrowLefContainer onClick={doGoBack}><ArrowLeft /></ArrowLefContainer>}
-      {title ? (
-        <Title>{title}</Title>
-      ) : (
-        <Logo size={logoSize} />
-      )}
+      <TitleContainer>
+        {type === 'noShape' && <LogoDemo src={Logo} size={logoSize} />}
+        {(type !== 'noShape' && title && subtitle) && <><Title>{title}</Title> <Subtitle pb={30} colorType={type}>{subtitle}</Subtitle></>}
+        {(type !== 'noShape' && !title) && <><LogoDemo src={Logo} size={logoSize} /> <Subtitle colorType={type}>{subtitle}</Subtitle></>}
+        {(type !== 'noShape' && title && !subtitle) && <Title pb={40}>{title}</Title>}
+      </TitleContainer>
     </HeaderContainer>
   );
 };

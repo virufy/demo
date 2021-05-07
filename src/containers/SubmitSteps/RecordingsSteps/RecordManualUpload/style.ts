@@ -2,6 +2,9 @@ import styled from 'styled-components';
 import { colors } from 'theme';
 import { BaseTitle, BlackText } from 'components/Texts';
 
+// Assets
+import { ReactComponent as Clouds } from 'assets/images/Clouds.svg';
+
 export const MainContainer = styled.div`
   @media screen and (${props => props.theme.breakpoints.tablet}) {
     margin-bottom: 64px;
@@ -9,13 +12,10 @@ export const MainContainer = styled.div`
 `;
 
 export const Title = styled(BaseTitle)`
-  margin-top: 48px;
+  margin-top: 65px;
   margin-bottom: 16px;
+  margin-left: 20px;
 
-  @media screen and (${props => props.theme.breakpoints.tablet}) {
-    margin-top: 64px;
-    margin-bottom: 40px;
-  }
 `;
 
 export const Text = styled(BlackText)`
@@ -75,19 +75,19 @@ export const UploadInput = styled.input`
 `;
 
 export const UploadButton = styled.label`
-  width: 88px;
-  height: 88px;
-  background-color: ${colors.green};
+  width: 98px;
+  height: 98px;
+  background-color: ${colors.purple_10};
   border-radius: 50%;
   cursor: pointer;
   position: relative;
-  margin-bottom: 25px;
+  margin-top: -40%;
 
   &:before,
   &:after {
     content: '';
     position: absolute;
-    background-color: ${colors.white};
+    background-color: ${colors.purple};
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -104,8 +104,8 @@ export const UploadButton = styled.label`
   }
 
   @media screen and (${props => props.theme.breakpoints.tablet}) {
-    width: 275px;
-    height: 275px;
+    width: 200px;
+    height: 200px;
     margin-bottom: 30px;
 
     &:before {
@@ -117,5 +117,18 @@ export const UploadButton = styled.label`
       width: 9px;
       height: 65px;
     }
+  }
+`;
+
+export const CloudsSVG = styled(Clouds)`
+  width: 197px;
+  height: 122px;
+  margin: 0 auto;
+  margin-top: 110px;
+  display: block;
+
+  @media screen and (${props => props.theme.breakpoints.tablet}) {
+    width: 374px;
+    height: 299px;
   }
 `;

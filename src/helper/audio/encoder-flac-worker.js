@@ -3,7 +3,7 @@
 /* global Flac */
 
 export default function () {
-  importScripts('https://virufy.local/workers/encoders/libflac.dev.js'); // eslint-disable-line
+  importScripts('http://localhost:3000/workers/encoders/libflac.dev.js'); // eslint-disable-line
 
   let flacEncoder;
   let CHANNELS = 1;

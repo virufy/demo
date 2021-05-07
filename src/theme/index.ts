@@ -10,7 +10,7 @@ export const colors = {
   darkBlack_65: 'rgba(33, 36, 44, 0.65)', // 21242C
   ultraDarkBlack: '#1F1F1F',
   lightGray: '#F2F2F2',
-  gray: '#5E5D5D', // viejo C4C4C4
+  gray: '#C4C4C4',
   mercury: '#E6E6E6',
   midGray: '#DEDEDE',
   midDarkGray: '#D1D1D1',
@@ -23,7 +23,7 @@ export const colors = {
   darkGray_70: 'rgba(67, 67, 67, 0.7)', // '#434343'
   gray3: '#F5F5F5',
   green_25: 'rgba(0,165,136,0.25)', // #00A588
-  green: '#74ECA4', // viejo '#00A588',
+  green: '#74ECA4',
   darkGreen: '#30DA74',
   lightGreen_25: 'rgba(19, 194, 194, 0.25)', // #13C2C2, 25%
   white: '#FEFEFE', // white for all

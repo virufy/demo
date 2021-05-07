@@ -60,6 +60,12 @@ export const WelcomeLogoText = styled.div`
   color: ${props => props.theme.colors.purple};
 `;
 
+export const ShapeDownContainer = styled.div`
+  width:100%;
+  background-color: ${({ theme }) => theme.colors.purple_10};
+  padding-top: 55px;
+`;
+
 export const WelcomeHeaderContainer = styled.div`
   width:100%;
   background-color: ${({ theme }) => theme.colors.purple_10};
@@ -184,11 +190,7 @@ export const WelcomeSubtitleBold = styled(WelcomeSubtitle).attrs({
   font-weight: 700;
 `;
 
-export const WelcomeStyledForm = styled.form`
-    @media screen and (${props => props.theme.breakpoints.tablet}){
-      padding-top: 102px;
-    }
-`;
+export const WelcomeStyledForm = styled.form``;
 
 export const WelcomeStyledFormAlternative = styled.form`
     padding: 0px !important; 
@@ -231,7 +233,7 @@ export const CoupleAboutUs = styled(CoupleAboutUsSVG)`
   height: 199px;
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
-    margin: -70px auto 14px;
+    margin: 0px auto 14px;
     width: 320px; 
     height: 299px;
   }

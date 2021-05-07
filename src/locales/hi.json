@@ -30,7 +30,7 @@
     "nextButton": "Let’s start"
   },
   "beforeStart": {
-    "title": "Lastly, before we begin...",
+    "title": "Lastly, before we start...",
     "subtitle": "To ensure safety, we advise you to:",
     "advise_list": [
       "Please use your own device and wear a mask when appropriate.",
@@ -69,7 +69,8 @@
     "addFile": "Add your file",
     "constraint": "Add up to 5 MB",
     "next": "Done",
-    "micError": "Can’t access the mic?",
+    "uploadFile" : "Upload File",
+    "micError": "Can’t access the mic? Upload an audio file.",
     "micErrorDescription": "Please upload an audio file here.",
     "fileDurationTooShort": "Please upload a file of at least 3 seconds",
     "fileSizeTooBig": "Please upload a file of less than 5 MB",
@@ -81,12 +82,13 @@
       "intro1": "Please cough away from others around you! Please sit down if you are feeling ill.",
       "intro2": " In a quiet environment, please press record and intentionally cough around 3-5 times."
     },
-    "title": "Recording uploaded",
-    "subtitle": "Feel free to take a listen.",
-    "next": "Done"
+    "title": "Upload Complete",
+    "subtitle": "Feel free to take a listen!",
+    "next": "Done",
+    "retake": "Retake"
   },
   "predictionResult": {
-    "processingTitle": "Processing",
+    "processingTitle": "Processing...",
     "predictionResultTitle": "Prediction Result",
     "likelihoodPrefix": "COVID-19 result:",
     "nextButton": "Submit another cough",
