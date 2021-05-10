@@ -72,7 +72,7 @@ export const LogoDemo = styled.img<{ size?: LogoSize }>`
   }
 `;
 
-export const Subtitle = styled.h1<{ colorType?: HeaderType; pb?: number}>`
+export const Subtitle = styled.h1<{ colorType?: HeaderType; pb?: number; mt?: number}>`
   font-family: "Open Sans";
   font-weight: 700;
   line-height: 1.1;
@@ -101,19 +101,8 @@ export const Subtitle = styled.h1<{ colorType?: HeaderType; pb?: number}>`
     }
   }};
   text-align: center;
-  margin-top: ${({ colorType }) => {
-    switch (colorType) {
-      case 'noShape':
-        return '33px';
-      case 'shapeDown':
-        return '33px';
-      case 'shapeUp':
-      default:
-        return '45px';
-    }
-  }};
+  margin-top: ${({ mt }) => `${mt || 33}px`}};
   
-
   @media screen and (${props => props.theme.breakpoints.tablet}){
     padding-top: 0;
   }

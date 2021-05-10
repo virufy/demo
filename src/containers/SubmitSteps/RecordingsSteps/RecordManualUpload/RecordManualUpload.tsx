@@ -89,7 +89,7 @@ const RecordManualUpload = ({
   } = formState;
 
   // States
-  const [activeStep, setActiveStep] = React.useState(false);
+  const [activeStep, setActiveStep] = React.useState(true);
   const [errorMsg, setErrorMsg] = React.useState('');
 
   // Handlers
@@ -165,7 +165,8 @@ const RecordManualUpload = ({
       <TextErrorContainer>
         {errorMsg}
       </TextErrorContainer>
-      {/* Bottom Buttons */}
+      {/* Bottom Buttons
+      CREAR USE REF DEL UPLOAD INPUT Y PASARLO AL HANDLER */}
       {activeStep && (
         <Portal>
           <WizardButtons

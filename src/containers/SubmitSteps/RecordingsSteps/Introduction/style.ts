@@ -80,7 +80,7 @@ export const InstructionSubtitle = styled.h2<InstructionSubtitleProps>`
     font-weight: ${({ isBold }) => (isBold ? 600 : 200)}
   }
 
-  max-width: 335px;
+  max-width: 289px;
   width: 100%;
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
@@ -90,14 +90,18 @@ export const InstructionSubtitle = styled.h2<InstructionSubtitleProps>`
 `;
 
 export const InstructionBullets = styled.div`
-  width: 40px;
+  width: 30px;
   height: 30px;
   border-radius: 50%;
   background-color: ${({ theme }) => theme.colors.purple_10}; 
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0px 1rem;
+  margin: 0px 16px 0px 20px;
+  
+  @media screen and (${props => props.theme.breakpoints.tablet}) {
+    margin: 0px 1rem;
+  }
 `;
 
 export const BulletIndicator = styled.p`

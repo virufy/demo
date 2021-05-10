@@ -37,8 +37,8 @@ interface MicRecorderProps {
 const baseConfig = {
   usingMediaRecorder: false,
   sampleRate: 44100,
-  manualEncoderId: 'flac', // wav / mp3 / flac
-  processorBufferSize: 4096, // 4096 flac / 2048 wav
+  manualEncoderId: 'wav', // wav / mp3 / flac
+  processorBufferSize: 2048, // 4096 flac / 2048 wav
 };
 
 export interface RecorderServiceType {
@@ -103,7 +103,7 @@ const MicRecorder = ({
     const { detail } = e;
     const { recording } = detail;
     const blob = await fetch(recording.blobUrl).then(r => r.blob());
-    const fileName = 'Filename.flac';
+    const fileName = 'Filename.wav';
 
     const url = (window.URL || window.webkitURL).createObjectURL(blob);
     const link = window.document.createElement('a');

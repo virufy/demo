@@ -80,7 +80,8 @@ const Header = () => {
       <TitleContainer>
         {type === 'noShape' && <LogoDemo src={Logo} size={logoSize} />}
         {(type !== 'noShape' && title && subtitle) && <><Title>{title}</Title> <Subtitle pb={30} colorType={type}>{subtitle}</Subtitle></>}
-        {(type !== 'noShape' && !title) && <><LogoDemo src={Logo} size={logoSize} /> <Subtitle colorType={type}>{subtitle}</Subtitle></>}
+        {(type === 'shapeDown' && !title) && <><LogoDemo src={Logo} size={logoSize} /> <Subtitle colorType={type}>{subtitle}</Subtitle></>}
+        {(type === 'shapeUp' && !title) && <><LogoDemo src={Logo} size={logoSize} /> <Subtitle colorType={type} pb={30} mt={20}>{subtitle}</Subtitle></>}
         {(type !== 'noShape' && title && !subtitle) && <Title pb={40}>{title}</Title>}
       </TitleContainer>
     </HeaderContainer>

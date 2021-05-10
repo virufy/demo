@@ -264,7 +264,10 @@ const ListenAudio = ({
           </PlayerContainerTop>
           <PlayerContainerBottom>
             <PlayerBottomTop>
-              <PlayerBottomTrack />
+              <PlayerBottomTrack
+                playing={playing}
+                progress={trackProgress}
+              />
               <PlayerBottomThumb
                 playing={playing}
                 progress={trackProgress}

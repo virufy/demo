@@ -35,6 +35,13 @@ export const Subtitle = styled.h2`
   text-align: left;
   white-space: pre-wrap;
   width: 100%;
+  
+  @media screen and (${props => props.theme.breakpoints.tablet}) {
+    
+    align-text: center; 
+    max-width: 592px;
+    margin: 30px auto;
+  }
 `;
 
 export const PlayerContainer = styled.div`
@@ -130,10 +137,21 @@ export const PlayerBottomTop = styled.div`
   margin-bottom: 4px;
 `;
 
-export const PlayerBottomTrack = styled.div`
+export const PlayerBottomTrack = styled.div<{ progress?: number; playing?: boolean }>`
+  position: relative;
   width: 100%;
   height: 4px;
   background-color: ${colors.purple_10};
+  ${props => (props.playing ? 'transition: width 0.2s linear;' : '')};
+
+  &:after{
+    content: '';
+    position: absolute; 
+    height: 4px;
+    background-color: ${colors.purple};;
+    transform: translateX(-4px);
+    width: ${props => (props.progress ? `${props.progress}%` : '0%')}; 
+  }
 `;
 
 export const PlayerBottomThumb = styled.div<{ progress?: number; playing?: boolean }>`
