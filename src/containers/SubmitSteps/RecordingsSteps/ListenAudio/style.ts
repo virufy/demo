@@ -1,29 +1,10 @@
 /* eslint-disable no-nested-ternary */
 import styled from 'styled-components';
 import { colors } from 'theme';
-import { BaseTitle, BlackText } from 'components/Texts';
+import { BlackText } from 'components/Texts';
 
 export const MainContainer = styled.div`
   margin-bottom: 77px;
-`;
-
-export const Title = styled(BaseTitle)`
-  margin-top: 48px;
-  margin-bottom: 16px;
-
-  @media screen and (${props => props.theme.breakpoints.tablet}) {
-    margin-top: 64px;
-    margin-bottom: 40px;
-  }
-`;
-
-export const Text = styled(BlackText)`
-  margin-bottom: 52px;
-  color: ${props => props.theme.colors.darkGray_70};
-
-  @media screen and (${props => props.theme.breakpoints.tablet}) {
-    margin-bottom: 85px;
-  }
 `;
 
 export const Subtitle = styled.h2`
@@ -37,7 +18,6 @@ export const Subtitle = styled.h2`
   width: 100%;
   
   @media screen and (${props => props.theme.breakpoints.tablet}) {
-    
     align-text: center; 
     max-width: 592px;
     margin: 30px auto;
@@ -142,15 +122,16 @@ export const PlayerBottomTrack = styled.div<{ progress?: number; playing?: boole
   width: 100%;
   height: 4px;
   background-color: ${colors.purple_10};
-  ${props => (props.playing ? 'transition: width 0.2s linear;' : '')};
 
   &:after{
     content: '';
     position: absolute; 
+    left: 0;
     height: 4px;
-    background-color: ${colors.purple};;
-    transform: translateX(-4px);
-    width: ${props => (props.progress ? `${props.progress}%` : '0%')}; 
+    background-color: ${colors.purple};
+    width: ${props => (props.progress ? `${props.progress}%` : '0%')};
+    ${props => (props.playing ? 'transition: width 0.2s linear;' : '')}
+
   }
 `;
 

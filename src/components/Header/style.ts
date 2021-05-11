@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { ReactComponent as ArrowftSvg } from 'assets/icons/arrowLeft.svg';
+import { ReactComponent as CloseX } from 'assets/icons/closeX.svg';
 
 export type HeaderType = 'shapeDown' | 'noShape' | 'shapeUp';
 
@@ -141,5 +142,9 @@ export const ArrowLefContainer = styled.div`
 `;
 
 export const ArrowLeft = styled(ArrowftSvg)`
+  fill: ${props => props.theme.colors.purple};
+`;
+
+export const CloseLeft = styled(CloseX)`
   fill: ${props => props.theme.colors.purple};
 `;

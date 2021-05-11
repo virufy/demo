@@ -371,24 +371,31 @@ export const SupportersLogos = styled.div`
   align-items: center;
 `;
 
-export const HeaderImage = styled.img`
-  width: 375px;
-  height:325px;
+export const HeaderImageContainer = styled.div`
+  position: relative;
+  min-width: 375px;
+  height: 325px;
+  margin-bottom: 30px;
 
-  @media screen and (${props => props.theme.breakpoints.tablet}){
-    width: 768px;
-    height: 488px;
-  }
+@media screen and (${props => props.theme.breakpoints.tablet}){
+  max-width: 768px;
+  height: 488px;
+}
+`;
+export const HeaderImage = styled.img`
+  width: 100%;
+  height: 100%;
 `;
 
 export const LogoWhiteBG = styled(LogoSplash)`
-  margin-top: -90%;
   width: 134px;
   height: 177px;
-  text-align: center !important;
+  margin: auto;
+  position: absolute;
+  margin-left: -68%;
+  top: 26%;
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
-    margin-top: -60%;
     width: 212px;
     height: 280px;
   }

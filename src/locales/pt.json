@@ -92,6 +92,13 @@
   },
   "predictionResult": {
     "processingTitle": "Em processamento...",
+    "resultModal": "Este aplicativo não prevê seu status COVID-19 nem diagnostica qualquer doença, distúrbio ou outro problema de saúde. Virufy está conduzindo pesquisas e usará as informações fornecidas apenas para essa pesquisa. Virufy não substituirá um médico e gostaria de lembrar que é sua responsabilidade consultar seu médico.",
+    "resultNotDetected": "COVID-19: NÃO DETECTADO",
+    "resultNotDetectedText": "Sua voz não parece ter indicadores de COVID-19. <strong> Continue a tomar as medidas adequadas </strong> com base no conselho de seu profissional de saúde ou órgão regulador aplicável e reavalie-se em nosso aplicativo diariamente.",
+    "resultNotAnalyze": "Incapaz de analisar",
+    "resultNotAnalyzeText": "Nosso algoritmo não é capaz de determinar seu status COVID-19. <strong> Continue a tomar as medidas adequadas </strong> com base no conselho de seu profissional de saúde ou órgão regulador aplicável e reavalie-se em nosso aplicativo diariamente.",
+    "resultDetected": "COVID-19: DETECTADO",
+    "resultDetectedText": "Sua voz tem indicadores de COVID-19. Contacte o seu profissional de saúde e tome precauções adicionais.",
     "predictionResultTitle": "Resultado de previsão",
     "likelihoodPrefix": "Resultado da COVID-19:",
     "nextButton": "Envie outra tosse",

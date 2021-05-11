@@ -1,8 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import usePortal from 'react-useportal';
-import { useTranslation } from 'react-i18next';
-// import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 import axios from 'axios';
 
 // Form
@@ -55,12 +54,12 @@ const PredictionResult = () => {
   } = useHeaderContext();
   const history = useHistory();
   const { t } = useTranslation();
-  const { state/* , actions */ } = useStateMachine({ resetStore: resetStore() });
+  const { state, actions } = useStateMachine({ resetStore: resetStore() });
 
   // States
   const [submitError, setSubmitError] = React.useState<string | null>(null);
   const [processing, setProcessing] = React.useState<boolean>(true);
-  const [likelihood, setLikelihood] = React.useState<string>();
+  const [likelihood, setLikelihood] = React.useState<number>(-1);
   const { isOpen, openModal, closeModal } = useModal();
 
   React.useEffect(() => {
@@ -99,7 +98,7 @@ const PredictionResult = () => {
         body.append('accessCode', state.welcome?.accessCode ?? '');
 
         // Restart
-        // actions.resetStore({});
+        actions.resetStore({});
 
         const predictionResult = await axios.post(predictionEndpointUrl, body, {
           headers: {
@@ -109,13 +108,17 @@ const PredictionResult = () => {
         if (predictionResult.data && ('prediction' in predictionResult.data)) {
           setProcessing(false);
           const result = predictionResult.data.prediction;
-          result.match(/\D*(?<percentage>[\d.]+)/);
-          setLikelihood(`${result}`);
-          console.log(likelihood);
+          let resultPercentage = -1;
+          try {
+            resultPercentage = parseFloat(result.match(/\D*(?<percentage>[\d.]+)/)?.groups?.percentage ?? -1);
+          } catch {
+            resultPercentage = -1;
+          }
+          setLikelihood(resultPercentage);
           // setLikelihood(t('predictionResult:result', { context: result, defaultValue: result }));
         } else {
           setProcessing(false);
-          setLikelihood('XX');
+          setLikelihood(-1);
         }
       } else {
         handleStartAgain();
@@ -130,6 +133,12 @@ const PredictionResult = () => {
   React.useEffect(() => {
     scrollToTop();
     setTitle('');
+    setDoGoBack(() => {});
+    handleSubmit();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  React.useEffect(() => {
     if (processing) {
       setSubtitle('');
       setType('noShape');
@@ -138,8 +147,6 @@ const PredictionResult = () => {
       setType('shapeUp');
       openModal();
     }
-    setDoGoBack(() => {});
-    handleSubmit();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [processing]);
 
@@ -164,39 +171,49 @@ const PredictionResult = () => {
               toggle={closeModal}
               onConfirm={closeModal}
             >
-              prueba
+              <Trans i18nKey="predictionResult:resultModal">
+                This app will not predict your COVID-19 status or diagnose any disease, disorder,
+                or other health condition. Virufy is conducting research and will use the information
+                you provide for that research only. Virufy will not take place of a doctor and would like to
+                remind you it is your responsiblity to seek medical advice from your doctor.
+              </Trans>
             </ConfirmationModal>
             <PredictionResultContainer>
               {/* Title, text and image conditional based on range result */}
-              {(likelihood !== undefined && likelihood <= '40') && (
+              {(likelihood !== -1 && likelihood < 40) && (
                 <>
-                  <TitleResult color="#3DA63B">COVID-19: NOT DETECTED</TitleResult>
+                  <TitleResult color="#3DA63B">{t('predictionResult:resultNotDetected')}</TitleResult>
                   <IntroText>
-                    Our algorithm is not able to determine your COVID-19 status.
-                    Please <strong>continue to take appropriate measures</strong> based on the advice of your
-                    healthcare professional or applicable regulatory body and reassess yourself in our app daily.
+                    <Trans i18nKey="predictionResult:resultNotDetectedText">
+                      Your voice does not seem to have indicators of COVID-19. Please
+                      <strong>continue to take appropriate measures</strong> based on the advice of
+                      your healthcare professional or applicable regulatory body and reassess yourself in our app daily.
+                    </Trans>
                   </IntroText>
                   <VLogo />
                 </>
               )}
-              {(((likelihood !== undefined) && (likelihood > '40' && likelihood < '70')) || (likelihood === undefined)) && (
+              {((likelihood >= 40 && likelihood < 70) || likelihood === -1) && (
               <>
-                <TitleResult color="#C0B81E">Unable to analyze</TitleResult>
+                <TitleResult color="#C0B81E">{t('predictionResult:resultNotAnalyze')}</TitleResult>
                 <IntroText>
-                  Our algorithm is not able to determine your COVID-19 status.
-                  Please <strong>continue to take appropriate measures</strong> based on the advice of your
-                  healthcare professional or applicable regulatory body and reassess yourself in our app daily.
+                  <Trans i18nKey="predictionResult:resultNotAnalyzeText">
+                    Our algorithm is not able to determine your COVID-19 status. Please
+                    <strong>continue to take appropriate measures</strong> based on the advice of your healthcare
+                    professional or applicable regulatory body and reassess yourself in our app daily.
+                  </Trans>
                 </IntroText>
                 <ImagePredictionResult />
               </>
               )}
-              {(likelihood !== undefined && likelihood >= '70)') && (
+              {likelihood >= 70 && (
               <>
-                <TitleResult color="#F15B5B">COVID-19: DETECTED</TitleResult>
+                <TitleResult color="#F15B5B">{t('predictionResult:resultDetected')}</TitleResult>
                 <IntroText>
-                  Our algorithm is not able to determine your COVID-19 status.
-                  Please <strong>continue to take appropriate measures</strong> based on the advice of your
-                  healthcare professional or applicable regulatory body and reassess yourself in our app daily.
+                  <Trans i18nKey="predictionResult:resultDetectedText">
+                    Your voice has indicators of COVID-19. Please contact your
+                    healthcare professional and take additional precautions.
+                  </Trans>
                 </IntroText>
                 <ImagePredictionResult />
               </>

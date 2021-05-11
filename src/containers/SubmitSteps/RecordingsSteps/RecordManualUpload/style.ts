@@ -4,6 +4,7 @@ import { BaseTitle, BlackText } from 'components/Texts';
 
 // Assets
 import { ReactComponent as Clouds } from 'assets/images/Clouds.svg';
+import { ReactComponent as Arrow } from 'assets/icons/arrowUp.svg';
 
 export const MainContainer = styled.div`
   @media screen and (${props => props.theme.breakpoints.tablet}) {
@@ -68,6 +69,7 @@ export const UploadContainer = styled.div`
   justify-content: center;
   width: fit-content;
   margin: 0 auto;
+  position: relative;
 `;
 
 export const UploadInput = styled.input`
@@ -77,47 +79,32 @@ export const UploadInput = styled.input`
 export const UploadButton = styled.label`
   width: 98px;
   height: 98px;
-  background-color: ${colors.purple_10};
+  background-color: #EBF1FC;
   border-radius: 50%;
   cursor: pointer;
   position: relative;
   margin-top: -40%;
 
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    background-color: ${colors.purple};
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  &:before {
-    width: 20px;
-    height: 3px;
-  }
-
-  &:after {
-    width: 3px;
-    height: 20px;
-  }
-
   @media screen and (${props => props.theme.breakpoints.tablet}) {
     width: 200px;
     height: 200px;
     margin-bottom: 30px;
-
-    &:before {
-      width: 65px;
-      height: 9px;
-    }
-
-    &:after {
-      width: 9px;
-      height: 65px;
-    }
   }
+`;
+
+export const ArrowUp = styled(Arrow)`
+  width: 39px;
+  height: 39px;
+  position: absolute; 
+  bottom: 55%;
+  cursor: pointer; 
+
+  @media screen and (${props => props.theme.breakpoints.tablet}) {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 60%;
+  } 
 `;
 
 export const CloudsSVG = styled(Clouds)`

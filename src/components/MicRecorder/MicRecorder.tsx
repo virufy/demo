@@ -103,16 +103,7 @@ const MicRecorder = ({
     const { detail } = e;
     const { recording } = detail;
     const blob = await fetch(recording.blobUrl).then(r => r.blob());
-    const fileName = 'Filename.wav';
-
-    const url = (window.URL || window.webkitURL).createObjectURL(blob);
-    const link = window.document.createElement('a');
-    link.href = url;
-    link.download = fileName;
-    // NOTE: FireFox requires a MouseEvent (in Chrome a simple Event would do the trick)
-    const click = document.createEvent('MouseEvent');
-    click.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
-    link.dispatchEvent(click);
+    const fileName = `Filename.${baseConfig.manualEncoderId}`;
 
     const file = FileHelper.blobToFile(blob, fileName);
     const humanReadableSize = FileHelper.sizeAsHuman(file.size, true);
@@ -270,8 +261,7 @@ const MicRecorder = ({
       <MicButtonsContainer>
         <MicButtonWithText>
           <MicRecorderButton
-            opacity={recordingInProgress}
-            disabled={!micAllowed}
+            disabled={!micAllowed || recordingInProgress}
             onClick={handleStartRecording}
             onMouseDown={handleStartLongPress}
             onMouseUp={handleEndLongPress}
@@ -288,8 +278,7 @@ const MicRecorder = ({
         </MicButtonWithText>
         <MicButtonWithText>
           <MicRecorderButton
-            opacity={!recordingInProgress}
-            disabled={!micAllowed}
+            disabled={!micAllowed || !recordingInProgress}
             onClick={handleStopRecording}
             onMouseDown={handleStartLongPress}
             onMouseUp={handleEndLongPress}

@@ -1,23 +1,24 @@
 import styled from 'styled-components';
 
-export const Modal = styled.div`
-  width: 100%;
-  height: 328px;
-  background-color: #EBF1FC;
-  border-radius: 15px 15px 0px 0px;
-  position: absolute;
-  bottom: 0;
-`;
-
 export const ModalBody = styled.div`
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  @media screen and (${props => props.theme.breakpoints.tablet}) {
+    height: 100%;
+    max-width: 400px;
+    margin: auto;
 `;
 
 export const ModalTitle = styled.div`
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 17px;
 `;
 
 export const ModalContent = styled.div`
-  display: flex; 
-  align-items: center; 
+  font-size: 14px;
+  margin-bottom: 17px;
 `;

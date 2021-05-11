@@ -55,7 +55,7 @@ const ListenAudio = ({
   const { Portal } = usePortal({
     bindTo: document && document.getElementById('wizard-buttons') as HTMLDivElement,
   });
-  const { setDoGoBack, setTitle, setSubtitle } = useHeaderContext();
+  const { setDoGoBack, setSubtitle } = useHeaderContext();
   const history = useHistory();
   const location = useLocation<{ from: string }>();
   const { state, actions } = useStateMachine({ updateAction: updateAction(storeKey) });
@@ -199,10 +199,9 @@ const ListenAudio = ({
   // Effects
   useEffect(() => {
     scrollToTop();
-    setTitle(t('recordingsListen:recordCough.header'));
     setSubtitle(t('recordingsListen:title'));
     setDoGoBack(() => handleDoBack);
-  }, [handleDoBack, setDoGoBack, setSubtitle, setTitle, t]);
+  }, [handleDoBack, setDoGoBack, setSubtitle, t]);
 
   // Memos
   const {

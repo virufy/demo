@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 import usePortal from 'react-useportal';
 import { useTranslation } from 'react-i18next';
@@ -28,6 +28,7 @@ import {
   UploadInput,
   UploadButton,
   CloudsSVG,
+  ArrowUp,
 } from './style';
 
 const audioMaxSizeInMb = 5;
@@ -74,9 +75,7 @@ const RecordManualUpload = ({
   const history = useHistory();
   const { state, actions } = useStateMachine({ updateAction: updateAction(storeKey) });
   const {
-    handleSubmit,
     control,
-    formState,
   } = useForm({
     mode: 'onChange',
     defaultValues: state?.[storeKey]?.[metadata?.currentLogic],
@@ -84,13 +83,10 @@ const RecordManualUpload = ({
   });
   const { t } = useTranslation();
 
-  const {
-    isValid,
-  } = formState;
-
   // States
   const [activeStep, setActiveStep] = React.useState(true);
   const [errorMsg, setErrorMsg] = React.useState('');
+  const inputUpload = useRef<HTMLInputElement>(null);
 
   // Handlers
   const handleNext = React.useCallback((values: File) => {
@@ -151,7 +147,9 @@ const RecordManualUpload = ({
           render={({ name }) => (
             <UploadContainer>
               <UploadButton htmlFor="uploaded-file" />
+              <ArrowUp onClick={() => inputUpload.current?.click()} />
               <UploadInput
+                ref={inputUpload}
                 id="uploaded-file"
                 type="file"
                 name={name}
@@ -165,15 +163,13 @@ const RecordManualUpload = ({
       <TextErrorContainer>
         {errorMsg}
       </TextErrorContainer>
-      {/* Bottom Buttons
-      CREAR USE REF DEL UPLOAD INPUT Y PASARLO AL HANDLER */}
+      {/* Bottom Buttons */}
       {activeStep && (
         <Portal>
           <WizardButtons
             invert
             leftLabel={t('recordingsRecordManual:uploadFile')}
-            leftDisabled={!isValid}
-            leftHandler={handleSubmit(handleNext)}
+            leftHandler={() => inputUpload.current?.click()}
           />
         </Portal>
       )}

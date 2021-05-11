@@ -6,7 +6,8 @@ import Logo from 'assets/virufyLogo.png';
 
 // Styles
 import {
-  HeaderContainer, Title, ArrowLeft, ArrowLefContainer, LogoSize, HeaderType, LogoDemo, TitleContainer, Subtitle,
+  HeaderContainer, Title, ArrowLeft, CloseLeft, ArrowLefContainer, LogoSize, HeaderType, LogoDemo,
+  TitleContainer, Subtitle,
 } from './style';
 
 type ContextType = {
@@ -76,7 +77,8 @@ const Header = () => {
 
   return (
     <HeaderContainer backgroundType={type}>
-      {doGoBack && <ArrowLefContainer onClick={doGoBack}><ArrowLeft /></ArrowLefContainer>}
+      {(doGoBack && title && !subtitle) && <ArrowLefContainer onClick={doGoBack}><CloseLeft /></ArrowLefContainer>}
+      {(doGoBack && subtitle) && <ArrowLefContainer onClick={doGoBack}><ArrowLeft /></ArrowLefContainer>}
       <TitleContainer>
         {type === 'noShape' && <LogoDemo src={Logo} size={logoSize} />}
         {(type !== 'noShape' && title && subtitle) && <><Title>{title}</Title> <Subtitle pb={30} colorType={type}>{subtitle}</Subtitle></>}

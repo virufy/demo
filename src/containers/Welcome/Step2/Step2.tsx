@@ -26,6 +26,7 @@ import {
   WelcomeContent,
   WelcomeSubtitle,
   WelcomeStyledFormAlternative,
+  HeaderImageContainer,
   HeaderImage,
   WelcomeBullets,
   BulletIndicator,
@@ -72,10 +73,12 @@ const Step2 = (p: Wizard.StepProps) => {
 
   return (
     <WelcomeStyledFormAlternative>
-      <HeaderImage
-        src={HeaderSplash}
-      />
-      <LogoWhiteBG />
+      <HeaderImageContainer>
+        <HeaderImage
+          src={HeaderSplash}
+        />
+        <LogoWhiteBG />
+      </HeaderImageContainer>
       <WelcomeSubtitle
         mt={width && width > 560 ? 38 : 0}
         fontSize={isDesktop ? 32 : 24}
@@ -83,7 +86,7 @@ const Step2 = (p: Wizard.StepProps) => {
         textAlign="center"
         isBold
       >
-        {t('main:paragraph2', 'Covid-19 Cough Data Collection Study')}
+        <strong>{t('main:paragraph2', 'Covid-19 Cough Data Collection Study')}</strong>
       </WelcomeSubtitle>
 
       <WelcomeContent maxWidth={335}>
