@@ -97,7 +97,7 @@ export const ArrowUp = styled(Arrow)`
   height: 39px;
   position: absolute; 
   bottom: 55%;
-  cursor: pointer; 
+  pointer-events: none;
 
   @media screen and (${props => props.theme.breakpoints.tablet}) {
     width: 80px;

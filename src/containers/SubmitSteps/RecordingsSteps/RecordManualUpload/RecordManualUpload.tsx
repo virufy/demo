@@ -147,7 +147,7 @@ const RecordManualUpload = ({
           render={({ name }) => (
             <UploadContainer>
               <UploadButton htmlFor="uploaded-file" />
-              <ArrowUp onClick={() => inputUpload.current?.click()} />
+              <ArrowUp />
               <UploadInput
                 ref={inputUpload}
                 id="uploaded-file"
