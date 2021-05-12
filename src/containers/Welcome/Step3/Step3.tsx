@@ -8,7 +8,7 @@ import useHeaderContext from 'hooks/useHeaderContext';
 
 // Components
 import WizardButtons from 'components/WizardButtons';
-import LinkGreen from 'components/LinkGreen';
+import LinkPurple from 'components/LinkPurple';
 
 // Theme
 import { colors } from 'theme';
@@ -79,7 +79,7 @@ const Step3 = (p: Wizard.StepProps) => {
             </p>
             <p>
               Our team includes researchers from over <strong>25 countries</strong>.
-              <LinkGreen to={`https://virufy.org/${i18n.language || 'en'}/our-approach`} target="_blank">Our research</LinkGreen> has shown that Al technology may be able to identify
+              <LinkPurple to={`https://virufy.org/${i18n.language || 'en'}/our-approach`} target="_blank">Our research</LinkPurple> has shown that Al technology may be able to identify
               COVID&apos;s unique cough signature.
             </p>
             <p>
