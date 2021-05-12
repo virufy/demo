@@ -160,7 +160,7 @@ const Step1 = (p: Wizard.StepProps) => {
         <WelcomeSubtitle
           mt={width && width > 560 ? 50 : 40}
           mb={16}
-          textAlign={width && width > 560 ? 'center' : 'left'}
+          textAlign="left"
           isBold
         >
           <strong>{t('main:selectYourLanguage', 'Language')}</strong>
@@ -194,7 +194,7 @@ const Step1 = (p: Wizard.StepProps) => {
         <WelcomeSubtitle
           mt={width && width > 560 ? 50 : 40}
           mb={16}
-          textAlign={width && width > 560 ? 'center' : 'left'}
+          textAlign="left"
           isBold
         >
           <strong>{t('main:selectLocation', 'Location')}</strong>
@@ -227,7 +227,7 @@ const Step1 = (p: Wizard.StepProps) => {
         <WelcomeSubtitle
           mt={width && width > 560 ? 50 : 40}
           mb={16}
-          textAlign={width && width > 560 ? 'center' : 'left'}
+          textAlign="left"
           isBold
         >
           <strong>{t('main:provideAccessCode', 'Access code')}</strong>
