@@ -110,7 +110,10 @@ const PredictionResult = () => {
           const result = predictionResult.data.prediction;
           let resultPercentage = -1;
           try {
-            resultPercentage = parseFloat(result.match(/\D*(?<percentage>[\d.]+)/)?.groups?.percentage ?? -1);
+            resultPercentage = parseFloat(result.match(/\D*(?<percentage>[\d.]+)/)?.groups?.percentage);
+            if (Number.isNaN(resultPercentage)) {
+              resultPercentage = -1;
+            }
           } catch {
             resultPercentage = -1;
           }

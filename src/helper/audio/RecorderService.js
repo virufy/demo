@@ -121,7 +121,7 @@ export default class RecorderService {
     if (!this.config.usingMediaRecorder) {
       if (this.config.manualEncoderId === 'mp3') {
         this.encoderWorker = this.createWorker(EncoderMp3);
-        const baseUrl = `${document.location.protocol}//${document.location.host}`;
+        const baseUrl = process.env.PUBLIC_URL || 'https://virufy.org/demo';
         this.encoderWorker.postMessage([
           'init',
           { baseUrl, sampleRate: this.audioCtx.sampleRate },
@@ -129,10 +129,9 @@ export default class RecorderService {
         this.encoderMimeType = 'audio/mpeg';
       } else if (this.config.manualEncoderId === 'flac') {
         this.encoderWorker = this.createWorker(EncoderFlac);
-        const baseUrl = `${document.location.protocol}//${document.location.host}`;
         this.encoderWorker.postMessage([
           'init',
-          { baseUrl },
+          { sampleRate: this.audioCtx.sampleRate },
         ]);
         this.encoderMimeType = 'audio/flac';
       } else {
@@ -225,7 +224,7 @@ export default class RecorderService {
     this.outputGainNode.connect(this.destinationNode);
 
     if (this.config.usingMediaRecorder) {
-      this.mediaRecorder = new MediaRecorder(this.destinationNode.stream, { mimeType: 'audio/flac' });
+      this.mediaRecorder = new MediaRecorder(this.destinationNode.stream, { mimeType: this.encoderMimeType || 'audio/wav' });
       this.mediaRecorder.addEventListener('dataavailable', evt => this._onDataAvailable(evt));
       this.mediaRecorder.addEventListener('error', evt => this._onError(evt));
 
