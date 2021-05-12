@@ -25,7 +25,7 @@
     "title": "Sobre a Virufy",
     "ourSupporters": "Nossos apoiadores",
     "introParagraph": "<p>Bem-vindo ao nosso estudo! Isso deve levar apenas cerca de 5 minutos para ser concluído. Antes de começar, vamos discutir o que iremos cobrir:</p>",
-    "aboutParagraph": "<p> Virufy é uma <strong> organização sem fins lucrativos </strong> que está trabalhando para desenvolver meios de usar <strong> inteligência artificial (IA) para rastrear COVID-19 de padrões de tosse </strong> rapidamente e sem nenhum custo através do uso de um smartphone para o benefício de países de baixa renda. </p> <p> Nossa equipe inclui pesquisadores de mais de <strong> 25 países </strong>. Nossa pesquisa mostrou que Al a tecnologia pode ser capaz de identificar a assinatura de tosse exclusiva do COVID. </p> <p> Ao coletar <strong> gravações de tosse </strong> de pessoas ao redor do mundo, a Virufy está aprimorando a robustez de seu algoritmo de IA no reconhecimento do padrão de som único do COVID. </p><p> <strong> Você tem o poder </strong> de ajudar a beneficiar milhões de pessoas em todo o mundo, <strong> contribuindo com sua tosse </strong> em nosso estudo. </p> ",
+    "aboutParagraph": "<0>Virufy é uma <strong>organização sem fins lucrativos</strong> que está trabalhando para desenvolver os meios para usar <strong> inteligência artificial (Al) para selecionar COVID-19 a partir de padrões de tosse</strong>rapidamente e sem custo através do uso de um smartphone em benefício de países de baixa renda.</0><1>Nossa equipe inclui pesquisadores de mais de <strong>25 países</strong>. <3>Nossa pesquisa</3> mostrou que a tecnologia Al pode ser capaz de identificar a assinatura única da COVID.</1><2> Ao coletar <strong> gravações de tosse</strong> de pessoas ao redor do mundo, a Virufy está melhorando a robustez de seu algoritmo de IA ao reconhecer o padrão de som único da COVID. </2><3><strong>Você tem o poder</strong> de ajudar a beneficiar milhões de pessoas em todo o mundo ao <strong>contribuir com sua tosse</strong> em nosso estudo.</3>",
     "bulletsIntro": "<strong> Intro: </strong> Sobre nós e segurança",
     "bulletCough": "<strong> Cough Into Phone </strong>",
     "bulletQuestions": "<strong> Perguntas rápidas sobre saúde </strong>",
@@ -87,7 +87,7 @@
     },
     "title": "Gravação concluída",
     "subtitle": "Fique à vontade para ouvir!",
-    "next": "Feito",
+    "next": "Próximo",
     "retake": "Retomar"
   },
   "predictionResult": {

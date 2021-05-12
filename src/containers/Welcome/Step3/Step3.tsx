@@ -8,6 +8,7 @@ import useHeaderContext from 'hooks/useHeaderContext';
 
 // Components
 import WizardButtons from 'components/WizardButtons';
+import LinkGreen from 'components/LinkGreen';
 
 // Theme
 import { colors } from 'theme';
@@ -38,7 +39,7 @@ const Step3 = (p: Wizard.StepProps) => {
   } = useHeaderContext();
 
   const history = useHistory();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const handleNext = React.useCallback(() => {
     if (p.nextStep) {
       history.push(p.nextStep);
@@ -78,7 +79,8 @@ const Step3 = (p: Wizard.StepProps) => {
             </p>
             <p>
               Our team includes researchers from over <strong>25 countries</strong>.
-              Our research has shown that Al technology may be able to identify COVID&apos;s unique cough signature.
+              <LinkGreen to={`https://virufy.org/${i18n.language || 'en'}/our-approach`} target="_blank">Our research</LinkGreen> has shown that Al technology may be able to identify
+              COVID&apos;s unique cough signature.
             </p>
             <p>
               By collecting <strong>coughs recordings</strong> from people around the world,

@@ -75,8 +75,10 @@ export const InstructionSubtitle = styled.h2<InstructionSubtitleProps>`
   ${({ textAlign }) => textAlign && css`text-align: ${textAlign || 'left'};`}
   white-space: pre-wrap;
   font-weight: 200;
-
   >strong{
+    font-weight: ${({ isBold }) => (isBold ? 600 : 200)}
+  }
+  >p>strong{
     font-weight: ${({ isBold }) => (isBold ? 600 : 200)}
   }
 

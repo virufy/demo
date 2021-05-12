@@ -175,6 +175,9 @@ export const WelcomeSubtitle = styled.h2<WelcomeSubtitleProps>`
   >strong{
     font-weight: ${({ isBold }) => (isBold ? 600 : 200)}
   }
+  >p>strong{
+    font-weight: ${({ isBold }) => (isBold ? 600 : 200)}
+  }
 
   max-width: 335px;
   width: 100%;

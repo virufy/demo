@@ -25,7 +25,7 @@
     "title": "Acerca de Virufy",
     "ourSupporters": "Nuestros colaboradores",
     "introParagraph": "<p>¡Bienvenidos a nuestro estudio! Esto solo debería llevarle unos 5 minutos para completar. Antes de comenzar, analicemos lo que cubriremos:</p>",
-    "aboutParagraph": "<p>Virufy es una <strong>organización sin ánimo de lucro</strong> que está trabajando para desarrollar los medios para utilizar la <strong>inteligencia artificial (Al) para detectar el COVID-19 a partir de los patrones de tos</strong> de forma rápida y sin coste alguno mediante el uso de un teléfono inteligente para el beneficio de los países de bajos recursos.</p><p>Nuestro equipo está formado por investigadores de más de <strong>25 países</strong>. Nuestra investigación ha demostrado que la tecnología Al puede ser capaz de identificar la firma única de la tos de COVID.</p><p>Mediante la recopilación de <strong>grabaciones de tos</strong> de personas de todo el mundo, Virufy está mejorando la solidez de su algoritmo de IA para reconocer el patrón de sonido único de COVID.</p><p><strong>Usted tiene el poder</strong> de ayudar a beneficiar a millones de personas en todo el mundo contribuyendo con su tos en nuestro estudio.</p>",
+    "aboutParagraph": "<0>Virufy es una <strong>organización sin ánimo de lucro</strong> que está trabajando para desarrollar los medios para utilizar <strong>la inteligencia artificial (Al) para detectar la COVID-19 a partir de los patrones de tos</strong> rápidamente y sin coste alguno mediante el uso de un smartphone en beneficio de los países de bajos ingresos.</0><1>Nuestro equipo incluye investigadores de más de <strong>25 países</strong>. <3>Nuestra investigación</3> ha demostrado que la tecnología Al puede ser capaz de identificar la firma única de la tos de COVID.</1><2>Al recopilar <strong>grabaciones de tos</strong> de personas de todo el mundo, Virufy está mejorando la solidez de su algoritmo de IA para reconocer el patrón de sonido único de COVID. </2><3><strong>Tú tienes el poder</strong> de ayudar a beneficiar a millones de personas en todo el mundo <strong>contribuyendo con tu tos</strong> en nuestro estudio.</3>",
     "bulletsIntro": "<strong> Intro: </strong> Sobre nosotros y seguridad",
     "bulletCough": "<strong> Toser en el teléfono </strong>",
     "bulletQuestions": "<strong> Preguntas breves sobre la salud </strong>",
@@ -87,7 +87,7 @@
     },
     "title": "Grabación completada",
     "subtitle": "Siéntase libre de escuchar la grabación!",
-    "next": "Hecho",
+    "next": "Continuar",
     "retake": "Retomar"
   },
   "predictionResult": {
