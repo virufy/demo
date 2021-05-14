@@ -25,6 +25,7 @@ import { scrollToTop } from 'helper/scrollHelper';
 import {
   WelcomeContent,
   WelcomeSubtitle,
+  WelcomeSubtitleBold,
   WelcomeStyledFormAlternative,
   HeaderImageContainer,
   HeaderImage,
@@ -79,7 +80,7 @@ const Step2 = (p: Wizard.StepProps) => {
         />
         <LogoWhiteBG />
       </HeaderImageContainer>
-      <WelcomeSubtitle
+      <WelcomeSubtitleBold
         mt={width && width > 560 ? 38 : 0}
         fontSize={isDesktop ? 32 : 24}
         fontColor="#3578DE"
@@ -87,7 +88,7 @@ const Step2 = (p: Wizard.StepProps) => {
         isBold
       >
         <strong>{t('main:paragraph2', 'Covid-19 Cough Data Collection Study')}</strong>
-      </WelcomeSubtitle>
+      </WelcomeSubtitleBold>
 
       <WelcomeContent maxWidth={335}>
         <WelcomeSubtitle mt={0} mb={0} textAlign="left" fontColor={colors.mineShaft}>

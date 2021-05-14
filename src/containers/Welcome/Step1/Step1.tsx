@@ -31,7 +31,7 @@ import { scrollToTop } from 'helper/scrollHelper';
 // Styles
 import {
   WelcomeContent,
-  WelcomeSubtitle,
+  WelcomeSubtitleBold,
   WelcomeStyledForm,
   // WelcomeInput,
   // WelcomeRequiredFieldText,
@@ -157,14 +157,14 @@ const Step1 = (p: Wizard.StepProps) => {
     <WelcomeStyledForm>
       {/* Content */}
       <WelcomeContent mt={53}>
-        <WelcomeSubtitle
+        <WelcomeSubtitleBold
           mt={width && width > 560 ? 50 : 40}
           mb={16}
           textAlign="left"
           isBold
         >
           <strong>{t('main:selectYourLanguage', 'Language')}</strong>
-        </WelcomeSubtitle>
+        </WelcomeSubtitleBold>
 
         {/* Language */}
         <Controller
@@ -191,14 +191,14 @@ const Step1 = (p: Wizard.StepProps) => {
           )}
         />
 
-        <WelcomeSubtitle
+        <WelcomeSubtitleBold
           mt={width && width > 560 ? 50 : 40}
           mb={16}
           textAlign="left"
           isBold
         >
           <strong>{t('main:selectLocation', 'Location')}</strong>
-        </WelcomeSubtitle>
+        </WelcomeSubtitleBold>
 
         <Controller
           control={control}
@@ -224,14 +224,14 @@ const Step1 = (p: Wizard.StepProps) => {
           ) : <></>)}
         />
 
-        <WelcomeSubtitle
+        <WelcomeSubtitleBold
           mt={width && width > 560 ? 50 : 40}
           mb={16}
           textAlign="left"
           isBold
         >
           <strong>{t('main:provideAccessCode', 'Access code')}</strong>
-        </WelcomeSubtitle>
+        </WelcomeSubtitleBold>
 
         <Controller
           control={control}

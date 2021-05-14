@@ -187,10 +187,31 @@ export const WelcomeSubtitle = styled.h2<WelcomeSubtitleProps>`
   }
 `;
 
-export const WelcomeSubtitleBold = styled(WelcomeSubtitle).attrs({
-  as: 'span',
-})`
-  font-weight: 700;
+export const WelcomeSubtitleBold = styled.h2<WelcomeSubtitleProps>`
+  color: ${({ theme, fontColor }) => (fontColor || theme.colors.mineShaft)};
+  font-family: "Biko";
+  ${({ fontSize = 14 }) => css`font-size: ${fontSize}px;`}
+  ${({ lineHeight }) => lineHeight && css`line-height: ${lineHeight}px;`}
+  margin-bottom: ${({ mb }) => `${mb}px`};
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: ${({ mt }) => `${mt}px`};
+  ${({ textAlign }) => textAlign && css`text-align: ${textAlign || 'left'};`}
+  white-space: pre-wrap;
+  font-weight: 200;
+  >strong{
+    font-weight: ${({ isBold }) => (isBold ? 600 : 200)}
+  }
+  >p>strong{
+    font-weight: ${({ isBold }) => (isBold ? 600 : 200)}
+  }
+
+  max-width: 335px;
+  width: 100%;
+
+  @media screen and (${props => props.theme.breakpoints.tablet}){
+    max-width: 348px;
+  }
 `;
 
 export const WelcomeStyledForm = styled.form``;

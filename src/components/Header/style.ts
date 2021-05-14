@@ -74,7 +74,14 @@ export const LogoDemo = styled.img<{ size?: LogoSize }>`
 `;
 
 export const Subtitle = styled.h1<{ colorType?: HeaderType; pb?: number; mt?: number}>`
-  font-family: "Open Sans";
+  font-family: ${({ colorType }) => {
+    switch (colorType) {
+      case 'shapeDown':
+        return 'Biko';
+      default:
+        return 'Open Sans';
+    }
+  }};
   font-weight: 700;
   line-height: 1.1;
   margin: 0 auto;
