@@ -1,7 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import usePortal from 'react-useportal';
-import { Trans, useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 // Form
 import { useForm, Controller } from 'react-hook-form';
@@ -10,7 +9,6 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 
 // Components
-import WizardButtons from 'components/WizardButtons';
 import Dropdown from 'components/Dropdown';
 import CreatedBy from 'components/CreatedBy';
 
@@ -32,18 +30,16 @@ import { scrollToTop } from 'helper/scrollHelper';
 
 // Styles
 import {
-  WelcomeLogo,
-  WelcomeTitle,
   WelcomeContent,
-  WelcomeSubtitle,
+  WelcomeSubtitleBold,
   WelcomeStyledForm,
   // WelcomeInput,
   // WelcomeRequiredFieldText,
-  WelcomeLogoText,
-  WelcomeRequiredFieldText,
   RegionContainer,
-  WelcomeNote,
   WelcomeInput,
+  ContainerNextButton,
+  NextButton,
+  ArrowRightSVG,
 } from '../style';
 
 const schema = Yup.object().shape({
@@ -62,15 +58,13 @@ const schema = Yup.object().shape({
 type Step1Type = Yup.InferType<typeof schema>;
 
 const Step1 = (p: Wizard.StepProps) => {
+  const {
+    doGoBack, setDoGoBack, setLogoSize, setType,
+  } = useHeaderContext();
   // Hooks
   const history = useHistory();
   const { width } = useWindowSize();
   const { t, i18n } = useTranslation();
-
-  const { Portal } = usePortal({
-    bindTo: document && document.getElementById('wizard-buttons') as HTMLDivElement,
-  });
-  const { doGoBack, setDoGoBack } = useHeaderContext();
 
   // States
   const [activeStep, setActiveStep] = React.useState(true);
@@ -120,12 +114,13 @@ const Step1 = (p: Wizard.StepProps) => {
     });
   };
 
-  // Effects
   React.useEffect(() => {
     scrollToTop();
-
     // Hide back arrow in header if neccesary
     if (doGoBack) setDoGoBack(null);
+
+    setType('noShape');
+    setLogoSize('big');
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -135,9 +130,6 @@ const Step1 = (p: Wizard.StepProps) => {
   React.useEffect(() => {
     i18n.changeLanguage(lang);
   }, [i18n, lang]);
-
-  // Memos
-  const isDesktop = React.useMemo(() => width && width > 560, [width]);
 
   const countrySelectOptions = React.useMemo(() => [{ name: t('main:selectCountry'), consentFormUrl: '', val: '' },
     ...countryData], [t]);
@@ -163,41 +155,16 @@ const Step1 = (p: Wizard.StepProps) => {
 
   return (
     <WelcomeStyledForm>
-      {/* Logo */}
-      <WelcomeLogo />
-      <WelcomeLogoText>
-        {t('main:logoIntro', 'An Independent Nonprofit Research Organization')}
-      </WelcomeLogoText>
-
-      {/* Title */}
-      <WelcomeTitle
-        fontSize={isDesktop ? 32 : 24}
-        mt={32}
-      >
-        {t('main:title')}
-      </WelcomeTitle>
-
       {/* Content */}
-      <WelcomeContent>
-
-        {/* Content: Subtitle */}
-        <WelcomeSubtitle
-          fontWeight={700}
-          mb={0}
-          mt={width && width > 560 ? 0 : 10}
-          textAlign={width && width > 560 ? 'center' : 'left'}
+      <WelcomeContent mt={53}>
+        <WelcomeSubtitleBold
+          mt={width && width > 560 ? 50 : 40}
+          mb={16}
+          textAlign="left"
+          isBold
         >
-          {t('main:paragraph1')}
-        </WelcomeSubtitle>
-
-        <WelcomeSubtitle
-          mt={width && width > 560 ? 50 : 32}
-          mb={width && width > 560 ? 50 : 16}
-          fontWeight={400}
-          textAlign={width && width > 560 ? 'center' : 'left'}
-        >
-          {t('main:selectYourLanguage', 'Please select your language.')}
-        </WelcomeSubtitle>
+          <strong>{t('main:selectYourLanguage', 'Language')}</strong>
+        </WelcomeSubtitleBold>
 
         {/* Language */}
         <Controller
@@ -224,15 +191,14 @@ const Step1 = (p: Wizard.StepProps) => {
           )}
         />
 
-        <WelcomeSubtitle
-          mt={width && width > 560 ? 50 : 32}
-          mb={width && width > 560 ? 50 : 16}
-          fontWeight={400}
-          textAlign={width && width > 560 ? 'center' : 'left'}
+        <WelcomeSubtitleBold
+          mt={width && width > 560 ? 50 : 40}
+          mb={16}
+          textAlign="left"
+          isBold
         >
-          {t('main:paragraph2')}
-          <WelcomeRequiredFieldText> *</WelcomeRequiredFieldText>
-        </WelcomeSubtitle>
+          <strong>{t('main:selectLocation', 'Location')}</strong>
+        </WelcomeSubtitleBold>
 
         <Controller
           control={control}
@@ -258,16 +224,15 @@ const Step1 = (p: Wizard.StepProps) => {
           ) : <></>)}
         />
 
-        <WelcomeSubtitle
-          mt={width && width > 560 ? 50 : 32}
-          mb={width && width > 560 ? 50 : 16}
-          fontWeight={400}
-          textAlign={width && width > 560 ? 'center' : 'left'}
+        <WelcomeSubtitleBold
+          mt={width && width > 560 ? 50 : 40}
+          mb={16}
+          textAlign="left"
+          isBold
         >
-          {t('main:provideAccessCode', 'If provided, please enter your access code.')}
-        </WelcomeSubtitle>
+          <strong>{t('main:provideAccessCode', 'Access code')}</strong>
+        </WelcomeSubtitleBold>
 
-        {/* Language */}
         <Controller
           control={control}
           name="accessCode"
@@ -284,28 +249,19 @@ const Step1 = (p: Wizard.StepProps) => {
           )}
         />
 
-        <WelcomeNote>
-          <Trans i18nKey="main:note">
-            <strong>Please note:</strong> This form is for data collection only. It will not predict your COVID-19
-            status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and
-            will use the information you provide for that research only. Virufy will not take place of a doctor and
-            would like to remind you it is your responsibility to seek medical advice from your doctor.
-          </Trans>
-        </WelcomeNote>
-
-        {/* Wizard Buttons */}
         {
           activeStep && (
-            <Portal>
-              <WizardButtons
-                leftLabel={t('main:nextButton')}
-                leftHandler={handleSubmit(onSubmit)}
-                leftDisabled={!isValid}
-                invert
-              />
-
+            <>
+              <ContainerNextButton>
+                <NextButton
+                  onClick={handleSubmit(onSubmit)}
+                  isDisable={!isValid}
+                >
+                  <ArrowRightSVG />
+                </NextButton>
+              </ContainerNextButton>
               <CreatedBy inline />
-            </Portal>
+            </>
           )
         }
       </WelcomeContent>

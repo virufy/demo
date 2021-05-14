@@ -15,26 +15,23 @@ import useWindowSize from 'hooks/useWindowSize';
 // Theme
 import { colors } from 'theme';
 
+// Assets
+import HeaderSplash from 'assets/images/headerSplash.png';
+
 // Utils
 import { scrollToTop } from 'helper/scrollHelper';
 
-// Assets
-import H4RLogo from 'assets/images/supporters/h4r-logo.png';
-import H4RLogo_2x from 'assets/images/supporters/h4r-logo@2x.png';
-import H4RLogo_3x from 'assets/images/supporters/h4r-logo@3x.png';
-import OYWBlue from 'assets/images/supporters/OYW_blue.png';
-import OYWBlue_2x from 'assets/images/supporters/OYW_blue@2x.png';
-import OYWBlue_3x from 'assets/images/supporters/OYW_blue@3x.png';
 // Styles
 import {
-  WelcomeLogo,
-  WelcomeTitle,
   WelcomeContent,
   WelcomeSubtitle,
+  WelcomeSubtitleBold,
   WelcomeStyledFormAlternative,
-  WomanWithPhoneFront,
-  SupportersTitle,
-  SupportersLogos,
+  HeaderImageContainer,
+  HeaderImage,
+  WelcomeBullets,
+  BulletIndicator,
+  LogoWhiteBG,
 } from '../style';
 
 const Step2 = (p: Wizard.StepProps) => {
@@ -70,77 +67,74 @@ const Step2 = (p: Wizard.StepProps) => {
     setDoGoBack(() => doBack);
   }, [doBack, setDoGoBack]);
 
+  // Memos
+  const isDesktop = React.useMemo(() => width && width > 560, [width]);
+
   const { t } = useTranslation();
 
   return (
     <WelcomeStyledFormAlternative>
-      <WelcomeLogo />
-
-      <WelcomeTitle
-        mt={width && width > 560 ? 38 : 12}
+      <HeaderImageContainer>
+        <HeaderImage
+          src={HeaderSplash}
+        />
+        <LogoWhiteBG />
+      </HeaderImageContainer>
+      <WelcomeSubtitleBold
+        mt={width && width > 560 ? 38 : 0}
+        fontSize={isDesktop ? 32 : 24}
+        fontColor="#3578DE"
+        textAlign="center"
+        isBold
       >
-        {t('helpVirufy:title')}
-      </WelcomeTitle>
+        <strong>{t('main:paragraph2', 'Covid-19 Cough Data Collection Study')}</strong>
+      </WelcomeSubtitleBold>
 
-      <WomanWithPhoneFront />
-
-      <WelcomeContent maxWidth={320}>
-        <WelcomeSubtitle fontWeight={400} mt={0} mb={0} textAlign="left" fontColor={colors.darkBlack}>
-          <Trans i18nKey="helpVirufy:aboutParagraph">
+      <WelcomeContent maxWidth={335}>
+        <WelcomeSubtitle mt={0} mb={0} textAlign="left" fontColor={colors.mineShaft}>
+          <Trans i18nKey="helpVirufy:introParagraph">
             <p>
-              Virufy is a nonprofit organization that is working to develop the means to use artificial intelligence
-              (Al) to screen for COVID-19 from cough patterns rapidly and at no cost through use of a smartphone.
-            </p>
-            <p>
-              Our team includes researchers from 25 countries and our focus is low-income countries. Our research has
-              shown that Al technology may be able to identify COVID&apos;s unique cough signature.
-            </p>
-            <p>
-              By collecting coughs recordings from people around the world, Virufy is improving the robustness of its AI
-              algorithm in recognizing COVID&apos;s unique sound pattern.
-            </p>
-            <p>
-              You have the power to help benefit millions of people across the globe by contributing your cough in our
-              study.
+              Welcome to our study! This should only take you about 5 minutes to complete.
+              Before we begin, let’s discuss what we will cover:
             </p>
           </Trans>
         </WelcomeSubtitle>
 
-        <SupportersTitle>
-          {t('helpVirufy:ourSupporters', 'Our Supporters')}
-        </SupportersTitle>
-        <SupportersLogos>
-          <picture>
-            <source
-              srcSet={
-                `${H4RLogo_2x} 2x`
-                + `, ${H4RLogo_3x} 3x`
-              }
+        <WelcomeSubtitle mt={width && width > 560 ? 15 : 7} isBold textAlign="left">
+          <WelcomeBullets>
+            <BulletIndicator>1</BulletIndicator>
+          </WelcomeBullets>
+          <Trans i18nKey="helpVirufy:bulletsIntro">
+            <strong>Intro:</strong>About us and Safety Reminders
+          </Trans>
+        </WelcomeSubtitle>
+        <WelcomeSubtitle mt={width && width > 560 ? 20 : 10} isBold textAlign="left">
+          <WelcomeBullets>
+            <BulletIndicator>2</BulletIndicator>
+          </WelcomeBullets>
+          <Trans i18nKey="helpVirufy:bulletCough">
+            <strong>Cough Into Phone</strong>
+          </Trans>
+        </WelcomeSubtitle>
+        <WelcomeSubtitle mt={width && width > 560 ? 20 : 10} isBold textAlign="left">
+          <WelcomeBullets>
+            <BulletIndicator>3</BulletIndicator>
+          </WelcomeBullets>
+          <Trans i18nKey="helpVirufy:bulletQuestions">
+            <strong>Quick Health Questions</strong>
+          </Trans>
+        </WelcomeSubtitle>
+
+        {activeStep && (
+          <Portal>
+            <WizardButtons
+              invert
+              leftLabel={t('helpVirufy:nextButton')}
+              leftHandler={handleNext}
             />
-            <img src={H4RLogo} alt="Stanford - Hacking 4 Recovery" />
-          </picture>
-          <picture>
-            <source
-              srcSet={
-                `${OYWBlue_2x} 2x`
-                + `, ${OYWBlue_3x} 3x`
-              }
-            />
-            <img src={OYWBlue} alt="One Young World" />
-          </picture>
-        </SupportersLogos>
+          </Portal>
+        )}
       </WelcomeContent>
-
-      {activeStep && (
-        <Portal>
-          <WizardButtons
-            invert
-            leftLabel={t('helpVirufy:nextButton')}
-            leftHandler={handleNext}
-          />
-        </Portal>
-      )}
-
     </WelcomeStyledFormAlternative>
   );
 };

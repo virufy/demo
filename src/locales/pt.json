@@ -4,8 +4,9 @@
     "logoIntro": "Uma organização independente de pesquisa sem fins lucrativos",
     "note": "<strong>Por favor, observe:</strong> Este formulário é apenas para coleta de dados. Ele não irá prever seu status de COVID-19 ou diagnosticar qualquer doença, distúrbio ou outra condição de saúde. A Virufy está realizando pesquisas e utilizará as informações que você fornecer somente para essa pesquisa. A Virufy não realizará pesquisas com um médico e gostaria de lembrá-lo que é sua responsabilidade buscar aconselhamento médico de seu médico.",
     "paragraph1": "Seja bem-vindo! Este estudo deve levar apenas cerca de 5 minutos para ser concluído.",
-    "selectYourLanguage": "Por favor, escolha seu idioma.",
-    "paragraph2": "Atualmente nosso estudo está aberto apenas para pessoas dos países abaixo. Por favor, confirme se você está no território de um desses países.",
+    "selectYourLanguage": "Idioma",
+    "paragraph2": "Estudo de coleta de dados sobre tosse Covid-19",
+    "selectLocation": "localização",
     "selectCountry": "Selecione seu país",
     "selectRegion": "Selecione a região",
     "introductionText": "<strong>Nota importante:</strong> Este aplicativo é apenas para fins de demonstração e não fornece uma previsão. Por favor, visite <2>Virufy Study</2> para contribuir com sua tosse e nos ajudar a completar este aplicativo.",
@@ -16,24 +17,29 @@
     "patientIdPlaceholder": "digite aqui...",
     "nextButton": "Próximo",
     "createdBy": "Criado por",
-    "provideAccessCode": "Se fornecido, por favor, digite seu código de acesso.",
-    "enterAccessCode": "Digite seu código de acesso"
+    "provideAccessCode": "Código de acesso",
+    "enterAccessCode": "Digite seu código de acesso",
+    "aboutUsTitle": "Sobre Nós"
   },
   "helpVirufy": {
     "title": "Sobre a Virufy",
     "ourSupporters": "Nossos apoiadores",
-    "aboutParagraph": "<p>A Virufy é uma organização sem fins lucrativos que está trabalhando para desenvolver os meios de usar a inteligência artificial (Al) para selecionar COVID-19 a partir de padrões de tosse rapidamente e sem custo através do uso de um smartphone.</p><p>Nossa equipe inclui pesquisadores de 25 países e nosso foco são os países de baixa renda. Nossa pesquisa mostrou que a tecnologia Al pode ser capaz de identificar a assinatura única da tosse da COVID.</p><p>Ao coletar gravações de tosse de pessoas do mundo inteiro, a Virufy está melhorando a robustez de seu algoritmo de IA ao reconhecer o padrão de som único da COVID.</p><p>Você tem o poder de ajudar a beneficiar milhões de pessoas em todo o mundo, contribuindo com sua tosse em nosso estudo.</p>",
-    "nextButton": "Próximo"
+    "introParagraph": "<p>Bem-vindo ao nosso estudo! Isso deve levar apenas cerca de 5 minutos para ser concluído. Antes de começar, vamos discutir o que iremos cobrir:</p>",
+    "aboutParagraph": "<0>Virufy é uma <strong>organização sem fins lucrativos</strong> que está trabalhando para desenvolver os meios para usar <strong> inteligência artificial (Al) para selecionar COVID-19 a partir de padrões de tosse</strong>rapidamente e sem custo através do uso de um smartphone em benefício de países de baixa renda.</0><1>Nossa equipe inclui pesquisadores de mais de <strong>25 países</strong>. <3>Nossa pesquisa</3> mostrou que a tecnologia Al pode ser capaz de identificar a assinatura única da COVID.</1><2> Ao coletar <strong> gravações de tosse</strong> de pessoas ao redor do mundo, a Virufy está melhorando a robustez de seu algoritmo de IA ao reconhecer o padrão de som único da COVID. </2><3><strong>Você tem o poder</strong> de ajudar a beneficiar milhões de pessoas em todo o mundo ao <strong>contribuir com sua tosse</strong> em nosso estudo.</3>",
+    "bulletsIntro": "<strong> Intro: </strong> Sobre nós e segurança",
+    "bulletCough": "<strong> Cough Into Phone </strong>",
+    "bulletQuestions": "<strong> Perguntas rápidas sobre saúde </strong>",
+    "installApp": "Instalar como um aplicativo",
+    "nextButton": "Comecemos"
   },
   "beforeStart": {
     "title": "Por último, antes de começarmos...",
     "subtitle": "Para garantir a segurança, nós o aconselhamos a fazê-lo:",
     "advise_list": [
-      "Usar seu próprio dispositivo para registrar a amostra de tosse e usar uma máscara quando apropriado.",
-      "Desinfecte seu dispositivo e qualquer superfície afetada ou próxima após registrar sua tosse.",
-      "Se você tiver uma condição subjacente que aumente seu risco de tosse, favor verificar com seu provedor de saúde antes de participar.",
-      "Se você tiver quaisquer sintomas ou quaisquer perguntas ou preocupações sobre sua condição de saúde, favor entrar em contato com seu provedor de saúde.",
-      "Se você sentir que seus sintomas estão piorando, favor entrar em contato com os serviços de emergência médica locais ou com os primeiros socorros imediatamente."
+      "Use seu próprio dispositivo e use uma máscara quando apropriado.",
+      "Desinfete seu dispositivo e qualquer superfície afetada ou próxima após registrar sua tosse / fala.",
+      "Se você tiver uma doença subjacente que aumente o risco de tosse, verifique com seu médico antes de participar.",
+      "Se você sentir que seus sintomas estão piorando, entre em contato com o atendimento médico local."
     ],
     "startButton": "Começar"
   },
@@ -41,8 +47,11 @@
     "recordCough": {
       "header": "Gravar sua fala",
       "title": "Instruções",
-      "intro1": "Encontre um ambiente tranqüilo a pelo menos 20 pés de distância dos outros. Se você estiver se sentindo mal, por favor, sente-se.",
-      "intro2": "Coloque seu dispositivo perto do rosto e tussa no cotovelo para evitar a disseminação do vírus.  Não tussa violentamente ou com muita força."
+      "intro1": "Encontre um ambiente tranquilo a 6 metros de distância das pessoas ao seu redor.",
+      "intro2": "Use uma máscara cirúrgica ou de pano e segure o dispositivo a duas mãos de distância do rosto.",
+      "text": "Clique no botão gravar abaixo e <strong> tussa intencionalmente três vezes, respirando fundo entre cada tosse. </strong> Quando terminar, toque no botão parar.",
+      "record": "Gravar",
+      "stop": "Parar"
     },
     "next": "Próximo",
     "releaseButtonStart": "Lançamento para iniciar a gravação",
@@ -55,7 +64,6 @@
     },
     "next": "Continuar",
     "delete": "Deletar",
-    "text": "Clique no botão gravar e tussa intencionalmente <strong>3 vezes</strong>. Quando terminar, clique em <3></3> e Continue.",
     "textCount": "Clique no botão gravar e conte claramente de um até dez. Quando acabar, clique em continuar.",
     "upload": "Carregue seu próprio arquivo"
   },
@@ -64,7 +72,8 @@
     "addFile": "Adicionar arquivo",
     "constraint": "Adicione até 5 MB",
     "next": "Feito",
-    "micError": "Não consegue acessar o microfone?",
+    "uploadFile" : "Subir Arquivo",
+    "micError": "Não consegue acessar o microfone? Envie o arquivo de áudio",
     "micErrorDescription": "Por favor, envie o arquivo de áudio aqui",
     "fileDurationTooShort": "Por favor, carregue um arquivo de pelo menos 3 segundos",
     "fileSizeTooBig": "Por favor, carregue um arquivo de menos de 5 MB",
@@ -76,12 +85,20 @@
       "intro1": "Por favor, tussa longe de outras pessoas ao seu redor! Caso esteja se sentindo doente, por favor, sente-se.",
       "intro2": "Em um ambiente silencioso, por favor, pressione o botão gravar e tussa intencionalmente cerca de 3 a 5 vezes."
     },
-    "title": "Gravação enviada",
-    "subtitle": "Fique à vontade para ouvir",
-    "next": "Feito"
+    "title": "Gravação concluída",
+    "subtitle": "Fique à vontade para ouvir!",
+    "next": "Próximo",
+    "retake": "Retomar"
   },
   "predictionResult": {
-    "processingTitle": "Em processamento",
+    "processingTitle": "Em processamento...",
+    "resultModal": "Este aplicativo não prevê seu status COVID-19 nem diagnostica qualquer doença, distúrbio ou outro problema de saúde. Virufy está conduzindo pesquisas e usará as informações fornecidas apenas para essa pesquisa. Virufy não substituirá um médico e gostaria de lembrar que é sua responsabilidade consultar seu médico.",
+    "resultNotDetected": "COVID-19: NÃO DETECTADO",
+    "resultNotDetectedText": "Sua voz não parece ter indicadores de COVID-19. <strong> Continue a tomar as medidas adequadas </strong> com base no conselho de seu profissional de saúde ou órgão regulador aplicável e reavalie-se em nosso aplicativo diariamente.",
+    "resultNotAnalyze": "Incapaz de analisar",
+    "resultNotAnalyzeText": "Nosso algoritmo não é capaz de determinar seu status COVID-19. <strong> Continue a tomar as medidas adequadas </strong> com base no conselho de seu profissional de saúde ou órgão regulador aplicável e reavalie-se em nosso aplicativo diariamente.",
+    "resultDetected": "COVID-19: DETECTADO",
+    "resultDetectedText": "Sua voz tem indicadores de COVID-19. Contacte o seu profissional de saúde e tome precauções adicionais.",
     "predictionResultTitle": "Resultado de previsão",
     "likelihoodPrefix": "Resultado da COVID-19:",
     "nextButton": "Envie outra tosse",

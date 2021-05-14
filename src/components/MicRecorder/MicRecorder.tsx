@@ -21,6 +21,9 @@ import {
   MicRecorderTimerContainer,
   MicRecorderTimerReleaseTextContainer,
   MicRecorderTextP,
+  MicButtonsContainer,
+  MicNote,
+  MicButtonWithText,
 } from './style';
 
 interface MicRecorderProps {
@@ -34,8 +37,8 @@ interface MicRecorderProps {
 const baseConfig = {
   usingMediaRecorder: false,
   sampleRate: 44100,
-  manualEncoderId: 'flac', // wav / mp3 / flac
-  processorBufferSize: 4096, // 4096 flac / 2048 wav
+  manualEncoderId: 'wav', // wav / mp3 / flac
+  processorBufferSize: 2048, // 4096 flac / 2048 wav
 };
 
 export interface RecorderServiceType {
@@ -100,16 +103,7 @@ const MicRecorder = ({
     const { detail } = e;
     const { recording } = detail;
     const blob = await fetch(recording.blobUrl).then(r => r.blob());
-    const fileName = 'Filename.flac';
-
-    const url = (window.URL || window.webkitURL).createObjectURL(blob);
-    const link = window.document.createElement('a');
-    link.href = url;
-    link.download = fileName;
-    // NOTE: FireFox requires a MouseEvent (in Chrome a simple Event would do the trick)
-    const click = document.createEvent('MouseEvent');
-    click.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
-    link.dispatchEvent(click);
+    const fileName = `Filename.${baseConfig.manualEncoderId}`;
 
     const file = FileHelper.blobToFile(blob, fileName);
     const humanReadableSize = FileHelper.sizeAsHuman(file.size, true);
@@ -248,26 +242,6 @@ const MicRecorder = ({
             </MicRecorderTextP>
           )}
       </MicRecorderTimerReleaseTextContainer>
-      <MicRecorderButton
-        disabled={!micAllowed}
-        onClick={recordingInProgress ? handleStopRecording : handleStartRecording}
-        onMouseDown={handleStartLongPress}
-        onMouseUp={handleEndLongPress}
-        onTouchStart={handleStartLongPress}
-        onTouchEnd={handleEndLongPress}
-        onMouseLeave={handleEndLongPress}
-      >
-        <MicRecorderStartImage
-          src={StartSVG}
-          alt="Start"
-          show={!recordingInProgress}
-        />
-        <MicRecorderStopImage
-          src={StopSVG}
-          alt="Stop"
-          show={recordingInProgress}
-        />
-      </MicRecorderButton>
       <MicRecorderTimerContainer>
         <Timer
           ref={timerRef}
@@ -284,6 +258,42 @@ const MicRecorder = ({
           <Timer.Seconds formatValue={handleFormatValue} />
         </Timer>
       </MicRecorderTimerContainer>
+      <MicButtonsContainer>
+        <MicButtonWithText>
+          <MicRecorderButton
+            disabled={!micAllowed || recordingInProgress}
+            onClick={handleStartRecording}
+            onMouseDown={handleStartLongPress}
+            onMouseUp={handleEndLongPress}
+            onTouchStart={handleStartLongPress}
+            onTouchEnd={handleEndLongPress}
+            onMouseLeave={handleEndLongPress}
+          >
+            <MicRecorderStartImage
+              src={StartSVG}
+              alt="Start"
+            />
+          </MicRecorderButton>
+          <MicNote>{t('recordingsIntroduction:recordCough.record')}</MicNote>
+        </MicButtonWithText>
+        <MicButtonWithText>
+          <MicRecorderButton
+            disabled={!micAllowed || !recordingInProgress}
+            onClick={handleStopRecording}
+            onMouseDown={handleStartLongPress}
+            onMouseUp={handleEndLongPress}
+            onTouchStart={handleStartLongPress}
+            onTouchEnd={handleEndLongPress}
+            onMouseLeave={handleEndLongPress}
+          >
+            <MicRecorderStopImage
+              src={StopSVG}
+              alt="Stop"
+            />
+          </MicRecorderButton>
+          <MicNote>{t('recordingsIntroduction:recordCough.stop')}</MicNote>
+        </MicButtonWithText>
+      </MicButtonsContainer>
     </MicRecorderContainer>
   );
 };

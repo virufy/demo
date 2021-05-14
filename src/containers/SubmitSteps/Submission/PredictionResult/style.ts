@@ -3,47 +3,52 @@ import styled from 'styled-components';
 // Images
 import { ReactComponent as ProcessingSVG } from 'assets/images/processing.svg';
 import { ReactComponent as PredictionResultSVG } from 'assets/images/prediction-result.svg';
+import { ReactComponent as VLogoSVG } from 'assets/VLogo.svg';
 
 // Shared style
 import { IntroductionText } from 'containers/Welcome/style';
 
-export const ProcessingContainer = styled.div``;
+export const ProcessingContainer = styled.div`
+  margin: 0px;
+  padding: 0px;
+`;
 
 export const Title = styled.h1`
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: bold;
-  font-size: 34px;
+  font-size: 30px;
   line-height: 48px;
   color: ${props => props.theme.colors.darkBlack};
   text-align: center;
-  margin: 140px auto 0px;
+  margin: 46px auto 0px;
 `;
 
 export const ImageProcessing = styled(ProcessingSVG)`
-  width: 287px;
-  height: 221px;
-  margin: 68px auto 0px;
+  width: 100%;
+  height: 371px;
   display: block;
-  transform: translateX(20px);
+  margin-top: 69px;
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     width: 100%;
-    max-width: 714px;
   }
 `;
 
-export const PredictionResultContainer = styled.div``;
+export const PredictionResultContainer = styled.div`
+  margin: 0px;
+  padding: 0px;
+`;
 
-export const TitleResult = styled.h1`
+export const TitleResult = styled.h1<{ color?: string; }>`
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: bold;
-  font-size: 34px;
+  font-size: 22px;
   line-height: 48px;
-  color: ${props => props.theme.colors.darkBlack};
+  color: ${({ theme, color }) => (color || theme.colors.mineShaft)};
   text-align: center;
-  margin: 33px 0px 0px;
+  margin: 55px 0px 10px 0px;
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     text-align: center;
@@ -51,8 +56,6 @@ export const TitleResult = styled.h1`
 `;
 
 export const LikelihoodText = styled.div`
-  margin: 33px auto 0px;
-  padding: 21px 30px 15px;
   background: ${props => props.theme.colors.darkBlack_04};
   box-sizing: border-box;
   border-radius: 15px;
@@ -83,15 +86,24 @@ export const LikelihoodPercentageText = styled.span`
 `;
 
 export const ImagePredictionResult = styled(PredictionResultSVG)`
-  margin: 25px 0px 26px -25px;
   width: 100%;
-  height: 100%;
-  max-width: 351px;
-  max-height: 249px;
+  max-height: 330px;
+  margin-bottom: 43px;
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     max-width: 714px;
-    margin: 97px 0px 26px;
+    margin-top: 70px;
+  }
+`;
+
+export const VLogo = styled(VLogoSVG)`
+  width: 100%;
+  max-height: 195px;
+  margin-bottom: 175px;
+
+  @media screen and (${props => props.theme.breakpoints.tablet}){
+    max-width: 714px;
+    margin-top: 97px;
   }
 `;
 
@@ -107,9 +119,18 @@ export const SubmitText = styled.p`
 export const SubmitError = styled(SubmitText)`
   color: ${props => props.theme.colors.red};
   text-align: center;
+  margin-top: 30px;
+  @media screen and (${props => props.theme.breakpoints.tablet}){
+    margin-top: 50px;
+  }
 `;
 
 export const IntroText = styled(IntroductionText)`
-  margin-top: 21px;
-  max-width: unset;
+  max-width: 307px;
+  margin: 0px auto 36px auto;
+  font-size: 16px;
+
+  >strong{
+    font-weight: 600;
+  }
 `;
