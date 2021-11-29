@@ -2,10 +2,10 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import usePortal from 'react-useportal';
 import { useTranslation, Trans } from 'react-i18next';
-import axios from 'axios';
+// import axios from 'axios';
 
 // Form
-import { useStateMachine } from 'little-state-machine';
+// import { useStateMachine } from 'little-state-machine';
 
 // Hooks
 import { useModal } from 'hooks/useModals';
@@ -18,7 +18,7 @@ import WizardButtons from 'components/WizardButtons';
 import ConfirmationModal from 'modals/ConfirmationModal';
 
 // Update Action
-import { resetStore } from 'utils/wizard';
+// import { resetStore } from 'utils/wizard';
 
 // Header Control
 import useHeaderContext from 'hooks/useHeaderContext';
@@ -34,15 +34,15 @@ import {
   PredictionResultContainer,
   TitleResult,
   ImagePredictionResult,
-  VLogo,
+  // VLogo,
   // LikelihoodText,
   // LikelihoodPercentageText,
-  SubmitError,
+  // SubmitError,
   IntroText,
   // IntroText,
 } from './style';
 
-const predictionEndpointUrl = process.env.REACT_APP_PREDICTION_ENDPOINT || '';
+// const predictionEndpointUrl = process.env.REACT_APP_PREDICTION_ENDPOINT || '';
 
 const PredictionResult = () => {
   // Hooks
@@ -54,12 +54,12 @@ const PredictionResult = () => {
   } = useHeaderContext();
   const history = useHistory();
   const { t } = useTranslation();
-  const { state, actions } = useStateMachine({ resetStore: resetStore() });
+  // const { state, actions } = useStateMachine({ resetStore: resetStore() });
 
   // States
-  const [submitError, setSubmitError] = React.useState<string | null>(null);
+  // const [submitError, setSubmitError] = React.useState<string | null>(null);
   const [processing, setProcessing] = React.useState<boolean>(true);
-  const [likelihood, setLikelihood] = React.useState<number>(-1);
+  // const [likelihood, setLikelihood] = React.useState<number>(-1);
   const { isOpen, openModal, closeModal } = useModal();
 
   React.useEffect(() => {
@@ -79,7 +79,7 @@ const PredictionResult = () => {
     history.replace('');
   }, [history]);
 
-  const handleSubmit = async () => {
+  /* const handleSubmit = async () => {
     try {
       setSubmitError(null);
       if (state && state.welcome && state['submit-steps']) {
@@ -130,14 +130,18 @@ const PredictionResult = () => {
       console.log('Error', error);
       setSubmitError(t('predictionResult:submitError'));
     }
-  };
+  }; */
 
   // Effects
   React.useEffect(() => {
     scrollToTop();
     setTitle('');
     setDoGoBack(() => {});
-    handleSubmit();
+    const timer1 = setTimeout(() => setProcessing(false), 5000);
+    return () => {
+      clearTimeout(timer1);
+    };
+    // handleSubmit();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -152,6 +156,9 @@ const PredictionResult = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [processing]);
+
+  // Always positive result hardcoded
+  const likelihood = 70;
 
   return (
     <>
@@ -182,7 +189,7 @@ const PredictionResult = () => {
               </Trans>
             </ConfirmationModal>
             <PredictionResultContainer>
-              {/* Title, text and image conditional based on range result */}
+              {/* Title, text and image conditional based on range result }
               {(likelihood !== -1 && likelihood < 40) && (
                 <>
                   <TitleResult color="#3DA63B">{t('predictionResult:resultNotDetected')}</TitleResult>
@@ -208,7 +215,7 @@ const PredictionResult = () => {
                 </IntroText>
                 <ImagePredictionResult />
               </>
-              )}
+              ) */}
               {likelihood >= 70 && (
               <>
                 <TitleResult color="#F15B5B">{t('predictionResult:resultDetected')}</TitleResult>
@@ -226,14 +233,14 @@ const PredictionResult = () => {
         )
       }
 
-      {/* Bottom Buttons */}
+      {/* Bottom Buttons }
       {
         submitError && (
           <SubmitError>
             {submitError}
           </SubmitError>
         )
-      }
+      */}
       {
         !processing && (
           <Portal>
