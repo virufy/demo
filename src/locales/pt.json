@@ -9,12 +9,6 @@
     "selectLocation": "localização",
     "selectCountry": "Selecione seu país",
     "selectRegion": "Selecione a região",
-    "introductionText": "<strong>Nota importante:</strong> Este aplicativo é apenas para fins de demonstração e não fornece uma previsão. Por favor, visite <2>Virufy Study</2> para contribuir com sua tosse e nos ajudar a completar este aplicativo.",
-    "introductionRecomendations": "<strong>Para reduzir o risco e a auto-flagelação, aconselhamos:</strong><p>Por favor, use seu próprio dispositivo e use uma máscara quando apropriado.</p><p>Desinfecte seu dispositivo e qualquer superfície afetada ou próxima após gravar sua tosse/fala. </p><p>Se você tiver uma condição subjacente que aumente seu risco de tosse, favor verificar com seu provedor de saúde antes de participar.</p><p>Se você sentir que seus sintomas estão piorando, favor contatar sua resposta médica local.</p>",
-    "hospitalCodeLabel": "Código do hospital",
-    "patientIdLabel": "ID do paciente",
-    "hospitalCodePlaceholder": "digite aqui...",
-    "patientIdPlaceholder": "digite aqui...",
     "nextButton": "Próximo",
     "createdBy": "Criado por",
     "provideAccessCode": "Código de acesso",
@@ -22,9 +16,8 @@
     "aboutUsTitle": "Sobre Nós"
   },
   "helpVirufy": {
-    "title": "Sobre a Virufy",
     "ourSupporters": "Nossos apoiadores",
-    "introParagraph": "<p>Bem-vindo ao nosso estudo! Isso deve levar apenas cerca de 5 minutos para ser concluído. Antes de começar, vamos discutir o que iremos cobrir:</p>",
+    "introParagraph": "Bem-vindo ao nosso estudo! Isso deve levar apenas cerca de 5 minutos para ser concluído. Antes de começar, vamos discutir o que iremos cobrir:",
     "aboutParagraph": "<0>Virufy é uma <strong>organização sem fins lucrativos</strong> que está trabalhando para desenvolver os meios para usar <strong> inteligência artificial (Al) para selecionar COVID-19 a partir de padrões de tosse</strong>rapidamente e sem custo através do uso de um smartphone em benefício de países de baixa renda.</0><1>Nossa equipe inclui pesquisadores de mais de <strong>25 países</strong>. <3>Nossa pesquisa</3> mostrou que a tecnologia Al pode ser capaz de identificar a assinatura única da COVID.</1><2> Ao coletar <strong> gravações de tosse</strong> de pessoas ao redor do mundo, a Virufy está melhorando a robustez de seu algoritmo de IA ao reconhecer o padrão de som único da COVID. </2><3><strong>Você tem o poder</strong> de ajudar a beneficiar milhões de pessoas em todo o mundo ao <strong>contribuir com sua tosse</strong> em nosso estudo.</3>",
     "bulletsIntro": "<strong> Intro: </strong> Sobre nós e segurança",
     "bulletCough": "<strong> Cough Into Phone </strong>",
@@ -47,9 +40,9 @@
     "recordCough": {
       "header": "Gravar sua fala",
       "title": "Instruções",
-      "intro1": "Encontre um ambiente tranquilo a 6 metros de distância das pessoas ao seu redor.",
-      "intro2": "Use uma máscara cirúrgica ou de pano e segure o dispositivo a duas mãos de distância do rosto.",
-      "text": "Clique no botão gravar abaixo e <strong> tussa intencionalmente três vezes, respirando fundo entre cada tosse. </strong> Quando terminar, toque no botão parar.",
+      "intro1": "Encontre um <strong>ambiente silencioso</strong> a pelo menos <strong>6m</strong> de distância dos outros e use um pano ou máscara cirúrgica. Se você estiver se sentindo doente, por favor, sente-se.",
+      "intro2": "Mantenha seu dispositivo a <strong>30-60 cm</strong> de distância de sua boca e <strong>não obstrua</strong> ou cubra seu dispositivo com plástico. Não tossir violentamente ou com muita força.",
+      "textCough": "Toque no botão gravar e <strong>tussa intencionalmente</strong> no fundo de seu telefone <strong>3 vezes</strong> com uma <strong>respiração profunda</strong> entre cada tosse. Quando terminar, toque no botão de parada.",
       "record": "Gravar",
       "stop": "Parar"
     },

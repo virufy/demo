@@ -1,111 +1,105 @@
 {
   "main": {
-    "title": "COVID-19 Cough Detection",
-    "logoIntro": "An Independent Nonprofit Research Organization",
-    "note": "<strong>Please note:</strong> This form is for data collection only. It will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
-    "paragraph1": "Welcome! This study should only take about 5 minutes to complete.",
-    "selectYourLanguage": "Language",
-    "selectLocation": "Location",
-    "paragraph2": "Covid-19 Cough Data Collection Study",
-    "selectCountry": "Select country",
-    "selectRegion": "Select region",
-    "introductionText": "<strong>Important note:</strong> This app is only for demonstration purposes and does not provide a prediction. Please visit <2>Virufy Study</2> to contribute your cough and help us to complete this app.",
-    "introductionRecomendations": "<strong>To reduce risk and self-harm, we advise you to:</strong><p>Please use your own device and wear a mask when appropriate.</p><p>Disinfect your device and any affected or nearby surfaces after recording your cough/speech.</p><p>If you have an underlying condition that increases your risk from coughing, please check with your health care provider before participating.</p><p>If you feel your symptoms are getting worse, please contact your local medical response.</p>",
-    "hospitalCodeLabel": "Hospital code",
-    "patientIdLabel": "Patient ID",
-    "hospitalCodePlaceholder": "type here...",
-    "patientIdPlaceholder": "type here...",
-    "nextButton": "Next",
-    "createdBy": "Created By",
-    "provideAccessCode": "Access code",
-    "enterAccessCode": "Enter access  code",
-    "aboutUsTitle": "About Us"
+    "title": "कोविद-19 खांसी का पता लगाना",
+    "logoIntro": "एक स्वतंत्र गैर-लाभकारी \nअनुसंधान संगठन",
+    "note": "कृपया ध्यान दीजिये : यह प्रपत्र केवल आंकड़े संग्रह के लिए है। यह आपकी कोविड-19 स्थिति की भविष्यवाणी नहीं करेगा या किसी बीमारी, विकार या अन्य स्वास्थ्य स्थिति का निदान नहीं करेगा। विरुफाई अनुसंधान कर रहा है और आपके द्वारा प्रदान की गई जानकारी का उपयोग केवल उस अनुसंधान के लिए करेगा। \nविरुफाई एक डॉक्टर की जगह नहीं लेगा और आपको याद दिलाना चाहेंगे कि यह आपकी जिम्मेदारी है कि आप अपने डॉक्टर से चिकित्सा परामर्श लें।",
+    "paragraph1": "स्वागत! इस अध्ययन को पूरा \nहोने में केवल 5 मिनट का \nसमय लगना चाहिए।",
+    "selectYourLanguage": "भाषा",
+    "selectLocation": "स्थान",
+    "paragraph2": "कोविद -19 खांसी डेटा संग्रह अध्ययन",
+    "selectCountry": "देश चुनें",
+    "regionRequired": "कृपया क्षेत्र चुनें",
+    "selectRegion": "क्षेत्र का चयन करें",
+    "nextButton": "अगला",
+    "createdBy": "के द्वारा बनाई गई",
+    "provideAccessCode": "एक्सेस कोड",
+    "enterAccessCode": "एक्सेस कोड दर्ज करें",
+    "aboutUsTitle": "हमारे बारे में"
   },
   "helpVirufy": {
-    "title": "About Virufy",
-    "ourSupporters": "Our Supporters",
-    "introParagraph": "<p>Welcome to our study! This should only take you about 5 minutes to complete. Before we begin, let’s discuss what we will cover:</p>",
-    "aboutParagraph": "<0>Virufy is a <strong>nonprofit organization</strong> that is working to develop the means to use <strong> artificial intelligence (Al) to screen for COVID-19 from cough patterns</strong>rapidly and at no cost through use of a smartphone for the benefit of low-income countries.</0><1>Our team includes researchers from over <strong>25 countries</strong>.<3>Our research</3> has shown that Al technology may be able to identify COVID's unique cough signature.</1><2>By collecting <strong>coughs recordings</strong> from people around the world, Virufy is improving the robustness of its AI algorithm in recognizing COVID's unique sound pattern.</2><3><strong>You have the power</strong>to help benefit millions of people across the globe by <strong>contributing your cough</strong> in our study.</3>",
-    "bulletsIntro": "<strong>Intro:</strong> About us and Safety Reminders",
-    "bulletCough": "<strong>Cough Into Phone</strong>",
-    "bulletQuestions": "<strong>Quick Health Questions</strong>",
-    "installApp": "Install as an app",
-    "nextButton": "Let’s start"
+    "ourSupporters": "हमारे समर्थक",
+    "introParagraph": "हमारे अनुसंधान में आपका स्वागत है!\nइसे पूरा करने में आपको केवल 5 मिनट का समय लगना चाहिए।\nशुरू करने से पहले, आइए चर्चा करें कि हम क्या शामिल करेंगे:",
+    "aboutParagraph": "विरुफाई एक गैर-लाभकारी संगठन है जो कम आय वाले देशों के लाभ के लिए स्मार्टफोन के उपयोग के माध्यम से खांसी के पैटर्न से तेजी से और बिना किसी कीमत के कोविड-19 की जांच के लिए कृत्रिम बुद्धिमत्ता (Al) का उपयोग करने के साधन विकसित करने के लिए काम कर रहा है। हमारी टीम में 25 से अधिक देशों के शोधकर्ता शामिल हैं। हमारे शोध से पता चला है कि अल तकनीक कोविड के अद्वितीय खांसी हस्ताक्षर की पहचान करने में सक्षम हो सकती है।दुनिया भर के लोगों से खांसी की रिकॉर्डिंग एकत्र करके, विरुफाई कोविड के अद्वितीय ध्वनि पैटर्न को पहचानने में अपने AI एल्गोरिथम की मजबूती में सुधार कर रहा है।\nआपके पास हमारे अनुसंधान में अपनी खांसी का योगदान देकर दुनिया भर में लाखों लोगों को लाभान्वित करने में मदद करने की शक्ति है।",
+    "bulletsIntro": "प्रस्तावना: , हमारे बारे में और सुरक्षा अनुस्मारक",
+    "bulletCough": "फोन में खांसी",
+    "bulletQuestions": "स्वास्थ्य प्रश्न",
+    "nextButton": "अगला",
+    "installApp": "एक ऐप के रूप में स्थापित करें"
   },
   "beforeStart": {
-    "title": "Lastly, before we start...",
-    "subtitle": "To ensure safety, we advise you to:",
+    "title": "अंत में, शुरू करने से पहले...",
+    "subtitle": "सुरक्षा सुनिश्चित करने के लिए, हम आपको परामर्श देते हैं:",
     "advise_list": [
-      "Please use your own device and wear a mask when appropriate.",
-      "Disinfect your device and any affected or nearby surfaces after recording your cough/speech.",
-      "If you have an underlying condition that increases your risk from coughing, please check with your health care provider before participating.",
-      "If you feel your symptoms are getting worse, please contact your local medical response."
+        "कृपया अपने खुद का मोबाइल का उपयोग करें और उपयुक्त होने पर \nमुखौटा पहनें।",
+        "अपनी खांसी/भाषण रिकॉर्ड करने के बाद अपने मोबाइल और किसी भी प्रभावित या आस-पास की सतहों को कीटाणुरहित करें।",
+        "यदि आपकी कोई अंतर्निहित स्थिति है जो खांसी से आपके जोखिम को बढ़ाती है, तो कृपया भाग लेने से पहले अपने स्वास्थ्य देखभाल प्रदाता से संपर्क करें।",
+        "यदि आपको लगता है कि आपके लक्षण बदतर हो रहे हैं, तो कृपया अपने स्थानीय चिकित्सक से संपर्क करें।"
     ],
-    "startButton": "Start"
+    "startButton": "अगला"
   },
   "recordingsIntroduction": {
     "recordCough": {
-      "header": "Record your cough",
-      "title": "Instructions",
-      "intro1": "Find a quiet environment that is 20 feet away from those around you.",
-      "intro2": "Wear a surgical or cloth mask and hold your device two hands-length away from your face.",
-      "text": "Click the record button below and <strong>cough intentionally three times with a deep breath between each cough.</strong> When you are done, tap the stop button.",
-      "record": "Record",
-      "stop": "Stop"
+      "header": "अपनी खांसी रिकॉर्ड करें",
+      "title": "निर्देश",
+      "intro1": "दूसरों से कम से कम 20 फीट (6 मीटर) दूर एक शांत वातावरण खोजें और एक कपड़ा या सर्जिकल मास्क पहनें। यदि आप बीमार महसूस कर रहे हैं, तो कृपया बैठ जाएं।",
+      "intro2": "अपने डिवाइस को <strong>1-2 फीट (30-60 सेंटीमीटर)</strong> अपने मुंह से दूर रखें और <strong>बाधित न करें</strong> या अपने डिवाइस को प्लास्टिक से ढक दें। जोर से या बहुत जोर से खांसें नहीं।",
+      "text": "रिकॉर्ड बटन को दबाएँ और प्रत्येक खाँसी के बीच एक गहरी साँस के साथ अपने फ़ोन के निचले भाग में 3 बार जबर्दस्ती खाँसें। इसके बाद, स्टॉप बटन दबाएँ।",
+      "record": "रिकॉर्ड",
+      "stop": "स्र्कें"
     },
-    "next": "Next",
-    "releaseButtonStart": "Release to start recording",
-    "releaseButtonStop": "Release to stop recording",
-    "shortRecording": "Please make a recording of at least 3 seconds"
+    "next": "अगला",
+    "releaseButtonStart": "रिकॉर्डिंग शुरू करने के लिए रिलीज",
+    "releaseButtonStop": "रिकॉर्डिंग बंद करने के लिए रिलीज",
+    "shortRecording": "कृपया कम से कम 5 सेकंड की रिकॉर्डिंग करें"
   },
   "recordingsRecord": {
     "recordCough": {
-      "header": "Record your cough"
+      "header": "अपनी खांसी रिकॉर्ड करें"
     },
-    "next": "Continue",
-    "delete": "Delete",
-    "textCount": "Click continue to proceed.",
-    "upload": "Upload your own file"
+    "next": "जारी रखना",
+    "delete": "हटाएं",
+    "textCount": "आगे बढ़ने के लिए जारी रखें पर क्लिक करें।",
+    "upload": "अपनी खुद की फ़ाइल अपलोड करें"
   },
   "recordingsRecordManual": {
-    "header": "Upload a file",
-    "addFile": "Add your file",
-    "constraint": "Add up to 5 MB",
-    "uploadFile" : "Upload File",
-    "next": "Done",
-    "micError": "Can’t access the mic? Upload an audio file.",
-    "micErrorDescription": "Please upload an audio file here.",
-    "fileDurationTooShort": "Please upload a file of at least 3 seconds",
-    "fileSizeTooBig": "Please upload a file of less than 5 MB",
-    "fileRequired": "Please upload a file"
+    "header": "एक फ़ाइल अपलोड करें",
+    "addFile": "अपनी फ़ाइल जोड़ें",
+    "constraint": "5 एमबी तक जोड़ें",
+    "next": "पूर्ण",
+    "micError": "माइक एक्सेस नहीं कर सकते? एक ऑडियो फ़ाइल अपलोड करें (.wav/.wave/.mp3/.ogg)",
+    "micErrorDescription": "कृपया यहां एक ऑडियो फाइल अपलोड करें।",
+    "fileDurationTooShort": "कृपया कम से कम ३ सेकंड की फ़ाइल अपलोड करें",
+    "fileSizeTooBig": "कृपया 5 एमबी से कम की फ़ाइल अपलोड करें",
+    "fileRequired": "कृपया एक फ़ाइल अपलोड करें",
+    "uploadFile": "फ़ाइल अपलोड करें"
   },
   "recordingsListen": {
     "recordCough": {
-      "header": "Record your cough",
-      "intro1": "Please cough away from others around you! Please sit down if you are feeling ill.",
-      "intro2": " In a quiet environment, please press record and intentionally cough around 3-5 times."
+      "header": "अपनी खांसी रिकॉर्ड करें",
+      "intro1": "कृपया अपने आस-पास के अन्य लोगों से खांसी दूर करें। यदि आप बीमार महसूस कर रहे हैं, तो कृपया बैठ जाएं।",
+      "intro2": "शांत वातावरण में, कृपया रिकॉर्ड को दबाएं और जानबूझकर लगभग 3-5 बार खांसें।"
     },
-    "title": "Upload Complete",
-    "subtitle": "Feel free to take a listen!",
-    "next": "Continue",
-    "retake": "Retake"
+    "title": "अपलोड पूरा हुआ",
+    "subtitle": "सुनने के लिए स्वतंत्र महसूस करें।",
+    "next": "जारी रखना",
+    "retake": "फिर से लेना"
   },
   "predictionResult": {
-    "processingTitle": "Processing...",
-    "resultModal": "This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsiblity to seek medical advice from your doctor.",
-    "resultNotDetected": "COVID-19: NOT DETECTED",
-    "resultNotDetectedText": "Your voice does not seem to have indicators of COVID-19. Please <strong>continue to take appropriate measures</strong> based on the advice of your healthcare professional or applicable regulatory body and reassess yourself in our app daily.",
-    "resultNotAnalyze": "Unable to analyze",
-    "resultNotAnalyzeText": "Our algorithm is not able to determine your COVID-19 status. Please <strong>continue to take appropriate measures</strong> based on the advice of your healthcare professional or applicable regulatory body and reassess yourself in our app daily.",
-    "resultDetected": "COVID-19: DETECTED",
-    "resultDetectedText": "Your voice has indicators of COVID-19. Please contact your healthcare professional and take additional precautions.",
-    "likelihoodPrefix": "COVID-19 result:",
-    "nextButton": "Submit another cough",
-    "submitError": "An error occurred. Please try again.",
-    "result_positive": "Positive",
-    "result_negative": "Negative"
+    "processingTitle": "प्रसंस्करण...",
+    "resultModal": "यह ऐप आपकी कोविड -19 स्थिति की भविष्यवाणी नहीं करेगा या किसी बीमारी, विकार या अन्य स्वास्थ्य स्थिति का निदान नहीं करेगा। विरुफी अनुसंधान कर रहा है और आपके द्वारा प्रदान की गई जानकारी का उपयोग केवल उस शोध के लिए करेगा। विरुफी एक डॉक्टर की जगह नहीं लेगा और आपको याद दिलाना चाहूंगा कि अपने डॉक्टर से चिकित्सा सलाह लेना आपकी जिम्मेदारी है।",
+    "resultNotDetected": "कोविड -19: पता नहीं चला",
+    "resultNotDetectedText": " ऐसा लगता है कि आपकी आवाज़ में कोविड-19 के संकेतक नहीं हैं। कृपया अपने स्वास्थ्य देखभाल पेशेवर या लागू नियामक निकाय की सलाह के आधार पर <strong>उचित उपाय करना जारी रखें</strong> और प्रतिदिन हमारे ऐप में अपना पुनर्मूल्यांकन करें।",
+    "resultNotAnalyze": "विश्लेषण करने में असमर्थ",
+    "resultNotAnalyzeText": "हमारा एल्गोरिदम आपकी कोविड-19 स्थिति निर्धारित करने में सक्षम नहीं है। कृपया अपने स्वास्थ्य देखभाल पेशेवर या लागू नियामक निकाय की सलाह के आधार पर <strong>उचित उपाय करना जारी रखें</strong> और प्रतिदिन हमारे ऐप में अपना पुनर्मूल्यांकन करें।",
+    "resultDetected": "कोविड -19: पता चला",
+    "resultDetectedText": "आपकी आवाज में कोविड-19 के संकेतक हैं। कृपया अपने स्वास्थ्य देखभाल पेशेवर से संपर्क करें और अतिरिक्त सावधानी बरतें।",
+    "likelihoodPrefix": "कोविड -19 परिणाम:",
+    "nextButton": "एक और खांसी जमा करें",
+    "submitError": "एक त्रुटि पाई गई। कृपया पुन: प्रयास करें।",
+    "result_positive": "सकारात्मक",
+    "result_negative": "नकारात्मक"
   },
   "footerReportProblems": {
-    "message": "Something wrong? Report an error"
+    "message": "कुछ गलत? त्रुटि की रिपोर्ट करें"
   }
 }

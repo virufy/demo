@@ -1,111 +1,104 @@
 {
   "main": {
-    "title": "COVID-19 Cough Detection",
-    "logoIntro": "An Independent Nonprofit Research Organization",
-    "note": "<strong>Please note:</strong> This form is for data collection only. It will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
-    "paragraph1": "Welcome! This study should only take about 5 minutes to complete.",
-    "selectYourLanguage": "Language",
-    "selectLocation": "Location",
-    "paragraph2": "Covid-19 Cough Data Collection Study",
-    "selectCountry": "Select country",
-    "selectRegion": "Select region",
-    "introductionText": "<strong>Important note:</strong> This app is only for demonstration purposes and does not provide a prediction. Please visit <2>Virufy Study</2> to contribute your cough and help us to complete this app.",
-    "introductionRecomendations": "<strong>To reduce risk and self-harm, we advise you to:</strong><p>Please use your own device and wear a mask when appropriate.</p><p>Disinfect your device and any affected or nearby surfaces after recording your cough/speech.</p><p>If you have an underlying condition that increases your risk from coughing, please check with your health care provider before participating.</p><p>If you feel your symptoms are getting worse, please contact your local medical response.</p>",
-    "hospitalCodeLabel": "Hospital code",
-    "patientIdLabel": "Patient ID",
-    "hospitalCodePlaceholder": "type here...",
-    "patientIdPlaceholder": "type here...",
-    "nextButton": "Next",
-    "createdBy": "Created By",
-    "provideAccessCode": "Access code",
-    "enterAccessCode": "Enter access  code",
-    "aboutUsTitle": "About Us"
+    "title": "COVID-19 咳の検出",
+    "logoIntro": "独立した非営利研究機関",
+    "note": "<strong>Please note:</strong> このフォームはデータ収集のみを目的としています。COVID-19の状態を予測したり、病気や障害、その他の健康状態を診断したりするものではありません。Virufyは研究を行っており、あなたが提供した情報をその研究のためだけに使用します。また、Virufyは医師の代わりにはなりませんので、ご自身の責任において医師の診断を受けるようにしてください。",
+    "paragraph1": "ようこそ! この調査は、約5分で完了します。",
+    "selectYourLanguage": "言語",
+    "selectLocation": "所在地",
+    "paragraph2": "Covid-19 咳のデータ収集調査",
+    "selectCountry": "国を選択",
+    "selectRegion": "地域を選択",
+    "nextButton": "次のページ",
+    "createdBy": "作成者",
+    "provideAccessCode": "アクセスコード",
+    "enterAccessCode": "アクセスコードの入力",
+    "aboutUsTitle": "会社概要"
   },
   "helpVirufy": {
-    "title": "About Virufy",
-    "ourSupporters": "Our Supporters",
-    "introParagraph": "<p>Welcome to our study! This should only take you about 5 minutes to complete. Before we begin, let’s discuss what we will cover:</p>",
-    "aboutParagraph": "<0>Virufy is a <strong>nonprofit organization</strong> that is working to develop the means to use <strong> artificial intelligence (Al) to screen for COVID-19 from cough patterns</strong>rapidly and at no cost through use of a smartphone for the benefit of low-income countries.</0><1>Our team includes researchers from over <strong>25 countries</strong>.<3>Our research</3> has shown that Al technology may be able to identify COVID's unique cough signature.</1><2>By collecting <strong>coughs recordings</strong> from people around the world, Virufy is improving the robustness of its AI algorithm in recognizing COVID's unique sound pattern.</2><3><strong>You have the power</strong>to help benefit millions of people across the globe by <strong>contributing your cough</strong> in our study.</3>",
-    "bulletsIntro": "<strong>Intro:</strong> About us and Safety Reminders",
-    "bulletCough": "<strong>Cough Into Phone</strong>",
-    "bulletQuestions": "<strong>Quick Health Questions</strong>",
-    "installApp": "Install as an app",
-    "nextButton": "Let’s start"
+    "ourSupporters": "サポーター",
+    "introParagraph": "私たちの研究にようこそ! このページは、5分程度でご覧いただけます。始める前に、何を取り上げるかについて説明します。",
+    "aboutParagraph": "<0>Virufyは<strong>非営利団体</strong>で、低所得国のために、スマートフォンを使って、<strong>人工知能（Al）を使って咳のパターンからCOVID-19をスクリーニングする手段を、迅速かつ無料で開発しようとしています</0><1>。</1><2>世界中の人々から<strong>咳の録音</strong>を集めることで、VirufyはCOVIDのユニークな音のパターンを認識するAIアルゴリズムの堅牢性を向上させています。</2><3><strong>あなたの咳を私たちの研究に<strong>貢献することで、世界中の何百万人もの人々に利益をもたらす力があります。",
+    "bulletsIntro": "<strong>Intro: </strong>会社概要と安全に関する注意事項",
+    "bulletCough": "<strong>電話に向かって咳をする</strong>。",
+    "bulletQuestions": "<strong>健康に関する簡単な質問</strong>",
+    "nextButton": "次のページ",
+    "installApp": "アプリとしてインストールする"
   },
   "beforeStart": {
-    "title": "Lastly, before we start...",
-    "subtitle": "To ensure safety, we advise you to:",
-    "advise_list": [
-      "Please use your own device and wear a mask when appropriate.",
-      "Disinfect your device and any affected or nearby surfaces after recording your cough/speech.",
-      "If you have an underlying condition that increases your risk from coughing, please check with your health care provider before participating.",
-      "If you feel your symptoms are getting worse, please contact your local medical response."
-    ],
-    "startButton": "Start"
+    "title": "最後に、始める前に...",
+        "subtitle": "<strong>安全性を確保するために、次のことをお勧めします：</strong>。",
+        "advise_list": [
+            "ご自身の機器を使用し、必要に応じてマスクを着用してください。",
+            "咳や話し声を録音した後は、デバイスとその周辺の表面を消毒してください。",
+            "咳のリスクを高める基礎疾患をお持ちの方は、参加する前に医療従事者に確認してください。",
+            "症状が悪化していると感じた場合は、お近くの医療機関にご相談ください。"
+        ],
+        "startButton": "次へ"
   },
   "recordingsIntroduction": {
     "recordCough": {
-      "header": "Record your cough",
-      "title": "Instructions",
-      "intro1": "Find a quiet environment that is 20 feet away from those around you.",
-      "intro2": "Wear a surgical or cloth mask and hold your device two hands-length away from your face.",
-      "text": "Click the record button below and <strong>cough intentionally three times with a deep breath between each cough.</strong> When you are done, tap the stop button.",
-      "record": "Record",
-      "stop": "Stop"
+      "header": "咳を記録する",
+      "title": "手順",
+      "intro1": "他の人から少なくとも<strong>20フィート（6m）</strong>離れた<strong>静かな環境</strong>を見つけ、布やサージカルマスクを着用してください。体調が悪いときは、座ってください。",
+      "intro2": "デバイスを<strong>30-60 cm</strong>口から話して持ち、 プラスチックなどでデバイスを覆ったり<strong>遮ったり</strong> しないようにしてください。咳を強くしすぎないように注意しましょう。",
+      "text": "録音ボタンをタップして、携帯電話の下部に向かって<strong>意図的に</strong>咳を<strong>3回</strong>してください。終わったら、停止ボタンをタップします。",
+      "record": "記録する",
+      "stop": "停止する"
     },
-    "next": "Next",
-    "releaseButtonStart": "Release to start recording",
-    "releaseButtonStop": "Release to stop recording",
-    "shortRecording": "Please make a recording of at least 3 seconds"
+    "next": "次へ",
+    "releaseButtonStart": "離すと録音開始",
+    "releaseButtonStop": "手を離すと録音が止まります",
+    "shortRecording": "最低でも5秒間は録音してください"
   },
   "recordingsRecord": {
     "recordCough": {
-      "header": "Record your cough"
+      "header": "咳を録音する"
     },
-    "next": "Continue",
-    "delete": "Delete",
-    "textCount": "Click continue to proceed.",
-    "upload": "Upload your own file"
+    "next": "続ける",
+    "delete": "削除",
+    "textCount": "続ける」をクリックして次に進みます。",
+    "upload": "自分のファイルをアップロードする"
   },
   "recordingsRecordManual": {
-    "header": "Upload a file",
-    "addFile": "Add your file",
-    "constraint": "Add up to 5 MB",
-    "uploadFile" : "Upload File",
-    "next": "Done",
-    "micError": "Can’t access the mic? Upload an audio file.",
-    "micErrorDescription": "Please upload an audio file here.",
-    "fileDurationTooShort": "Please upload a file of at least 3 seconds",
-    "fileSizeTooBig": "Please upload a file of less than 5 MB",
-    "fileRequired": "Please upload a file"
+    "header": "ファイルのアップロード",
+    "addFile": "自分のファイルを追加する",
+    "constraint": "5MBまで追加可能",
+    "next": "完了",
+    "micError": "マイクにアクセスできない場合 音声ファイル（.wav/.wave/.mp3/.ogg）のアップロード",
+    "micErrorDescription": "ここに音声ファイルをアップロードしてください。",
+    "fileDurationTooShort": "3秒以上のファイルをアップロードしてください。",
+    "fileSizeTooBig": "5MB以下のファイルをアップロードしてください。",
+    "fileRequired": "ファイルをアップロードしてください",
+    "uploadFile": "ファイルをアップロードする"
   },
   "recordingsListen": {
     "recordCough": {
-      "header": "Record your cough",
-      "intro1": "Please cough away from others around you! Please sit down if you are feeling ill.",
-      "intro2": " In a quiet environment, please press record and intentionally cough around 3-5 times."
+      "header": "咳を録音する",
+      "intro1": "咳をするときは、周りの人に迷惑をかけないようにしてください。体調が悪いときは座ってください。",
+      "intro2": "静かな環境で、録音ボタンを押して、意図的に3～5回程度の咳をしてください。"
     },
-    "title": "Upload Complete",
-    "subtitle": "Feel free to take a listen!",
-    "next": "Continue",
-    "retake": "Retake"
+    "title": "アップロード完了",
+    "subtitle": "ご自由にお聴きください。",
+    "next": "続ける",
+    "retake": "リテイク"
   },
   "predictionResult": {
-    "processingTitle": "Processing...",
-    "resultModal": "This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsiblity to seek medical advice from your doctor.",
-    "resultNotDetected": "COVID-19: NOT DETECTED",
-    "resultNotDetectedText": "Your voice does not seem to have indicators of COVID-19. Please <strong>continue to take appropriate measures</strong> based on the advice of your healthcare professional or applicable regulatory body and reassess yourself in our app daily.",
-    "resultNotAnalyze": "Unable to analyze",
-    "resultNotAnalyzeText": "Our algorithm is not able to determine your COVID-19 status. Please <strong>continue to take appropriate measures</strong> based on the advice of your healthcare professional or applicable regulatory body and reassess yourself in our app daily.",
-    "resultDetected": "COVID-19: DETECTED",
-    "resultDetectedText": "Your voice has indicators of COVID-19. Please contact your healthcare professional and take additional precautions.",
-    "likelihoodPrefix": "COVID-19 result:",
-    "nextButton": "Submit another cough",
-    "submitError": "An error occurred. Please try again.",
-    "result_positive": "Positive",
-    "result_negative": "Negative"
+    "processingTitle": "加工...",
+    "resultModal": "本アプリは、COVID-19の状態を予測したり、病気や障害、その他の健康状態を診断するものではありません。Virufyは研究を行っており、提供された情報はその研究のためにのみ使用されます。また、Virufyは医師の代わりにはなりませんので、医師の診断を受けるのはご自身の責任であることをご理解ください。",
+    "resultNotDetected": "COVID-19: 検出されず",
+    "resultNotDetectedText": "あなたの声にはCOVID-19の指標がないようです。 医療専門家や該当する規制機関のアドバイスに基づいて、<strong>適切な対策を継続し、日々アプリで自分自身を見つめ直してください</strong>",
+    "resultNotAnalyze": "分析できない",
+    "resultNotAnalyzeText": "当社のアルゴリズムでは、あなたのCOVID-19の状態を判断することはできません。 医療専門家や該当する規制機関のアドバイスに基づいて、<strong>適切な対策を継続し、日々アプリで自分自身を見つめ直してください</strong>",
+    "resultDetected": "COVID-19: 検出された",
+    "resultDetectedText": "あなたの声にCOVID-19の指標があります。医療従事者に連絡し、さらに注意を払ってください。",
+    "likelihoodPrefix": "COVID-19の結果。",
+    "nextButton": "別の咳を送信する",
+    "submitError": "エラーが発生しました。もう一度お試しください。",
+    "result_positive": "陽性",
+    "result_negative": "陰性"
   },
   "footerReportProblems": {
-    "message": "Something wrong? Report an error"
+    "message": "何か問題がありますか？エラーを報告する"
   }
 }
