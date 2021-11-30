@@ -11,6 +11,7 @@ export const HeaderContainer = styled.div<{ backgroundType?: HeaderType; }>`
   padding-top: 1.3rem;
   position:relative;
   width: 100%;
+  
   background-color: ${({ backgroundType }) => {
     switch (backgroundType) {
       case 'noShape':
@@ -36,6 +37,7 @@ export const HeaderContainer = styled.div<{ backgroundType?: HeaderType; }>`
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     padding-top: 1.3rem;
+    background-color: #FFF;
   }
 `;
 

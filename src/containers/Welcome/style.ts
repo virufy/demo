@@ -64,6 +64,10 @@ export const ShapeDownContainer = styled.div`
   width:100%;
   background-color: ${({ theme }) => theme.colors.purple_10};
   padding-top: 55px;
+
+  @media screen and (${props => props.theme.breakpoints.tablet}){
+    background-color: #FFF;
+  }
 `;
 
 export const WelcomeHeaderContainer = styled.div`
