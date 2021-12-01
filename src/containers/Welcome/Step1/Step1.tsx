@@ -20,7 +20,7 @@ import useHeaderContext from 'hooks/useHeaderContext';
 
 // Data
 import { languageData } from 'data/lang';
-import { countryData, countriesWithStates } from 'data/country';
+// import { countryData, countriesWithStates } from 'data/country';
 
 // Hooks
 import useWindowSize from 'hooks/useWindowSize';
@@ -35,8 +35,8 @@ import {
   WelcomeStyledForm,
   // WelcomeInput,
   // WelcomeRequiredFieldText,
-  RegionContainer,
-  WelcomeInput,
+  // RegionContainer,
+  // WelcomeInput,
   ContainerNextButton,
   NextButton,
   ArrowRightSVG,
@@ -44,15 +44,15 @@ import {
 
 const schema = Yup.object().shape({
   language: Yup.string().required(),
-  accessCode: Yup.string(),
+  // accessCode: Yup.string(),
   // hospitalCode: Yup.string().required(),
   // patientId: Yup.string().oneOf(['virufy']).required(),
-  country: Yup.string().required(),
-  region: Yup.string().when('country', {
+  // country: Yup.string().required(),
+  /* region: Yup.string().when('country', {
     is: (val: string) => countriesWithStates.includes(val),
     then: Yup.string().required(),
     otherwise: Yup.string(),
-  }),
+  }), */
 }).defined();
 
 type Step1Type = Yup.InferType<typeof schema>;
@@ -80,7 +80,7 @@ const Step1 = (p: Wizard.StepProps) => {
     handleSubmit,
     watch,
     reset,
-    setValue,
+    // setValue,
   } = useForm({
     defaultValues: state?.[p.storeKey],
     resolver: yupResolver(schema),
@@ -108,11 +108,11 @@ const Step1 = (p: Wizard.StepProps) => {
     }
   };
 
-  const resetRegion = () => {
+  /* const resetRegion = () => {
     setValue('region', '', {
       shouldValidate: true,
     });
-  };
+  }; */
 
   React.useEffect(() => {
     scrollToTop();
@@ -125,13 +125,13 @@ const Step1 = (p: Wizard.StepProps) => {
   }, []);
 
   const lang = watch('language');
-  const country = watch('country');
+  // const country = watch('country');
 
   React.useEffect(() => {
     i18n.changeLanguage(lang);
   }, [i18n, lang]);
 
-  const countrySelectOptions = React.useMemo(() => [{ name: t('main:selectCountry'), consentFormUrl: '', val: '' },
+  /* const countrySelectOptions = React.useMemo(() => [{ name: t('main:selectCountry'), consentFormUrl: '', val: '' },
     ...countryData], [t]);
 
   const regionSelectOptions = React.useMemo(() => {
@@ -147,7 +147,7 @@ const Step1 = (p: Wizard.StepProps) => {
       }
     }
     return output;
-  }, [t, country]);
+  }, [t, country]); */
 
   if (!width) {
     return null;
@@ -191,7 +191,7 @@ const Step1 = (p: Wizard.StepProps) => {
           )}
         />
 
-        <WelcomeSubtitleBold
+        {/* <WelcomeSubtitleBold
           mt={width && width > 560 ? 50 : 40}
           mb={16}
           textAlign="left"
@@ -247,7 +247,7 @@ const Step1 = (p: Wizard.StepProps) => {
               autoComplete="Off"
             />
           )}
-        />
+          /> */}
 
         {
           activeStep && (

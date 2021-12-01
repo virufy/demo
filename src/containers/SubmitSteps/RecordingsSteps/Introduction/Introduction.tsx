@@ -101,8 +101,12 @@ const Introduction = ({
           <InstructionBullets>
             <BulletIndicator>1</BulletIndicator>
           </InstructionBullets>
-          <InstructionSubtitle mt={width && width > 560 ? 0 : 0} textAlign="left">
-            {t('recordingsIntroduction:recordCough.intro1')}
+          <InstructionSubtitle mt={width && width > 560 ? 0 : 0} textAlign="left" isBold>
+            <Trans i18nKey="recordingsIntroduction:recordCough.intro1">
+              Find a <strong>quiet environment</strong> at least
+              <strong>20 ft (6m)</strong> away from others and wear a cloth or surgical mask.
+              If you are feeling ill, please sit down.
+            </Trans>
           </InstructionSubtitle>
         </InstructionContainer>
         <SocialDistancing />
@@ -110,8 +114,12 @@ const Introduction = ({
           <InstructionBullets>
             <BulletIndicator>2</BulletIndicator>
           </InstructionBullets>
-          <InstructionSubtitle mt={width && width > 560 ? 0 : 0} textAlign="left">
-            {t('recordingsIntroduction:recordCough.intro2')}
+          <InstructionSubtitle mt={width && width > 560 ? 0 : 0} textAlign="left" isBold>
+            <Trans i18nKey="recordingsIntroduction:recordCough.intro2">
+              Hold your device <strong>1-2 ft (30-60 cm)</strong> away from your mouth and
+              <strong>do not obstruct</strong> or cover your device with plastic.
+              Do not cough violently or too forcefully.
+            </Trans>
           </InstructionSubtitle>
         </InstructionContainer>
         <CoughLeft />

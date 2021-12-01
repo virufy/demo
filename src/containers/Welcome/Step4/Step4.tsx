@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import usePortal from 'react-useportal';
 
 // Header Control
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import useHeaderContext from 'hooks/useHeaderContext';
 
 // Components
@@ -94,7 +94,9 @@ const Step4 = (p: Wizard.StepProps) => {
             textAlign="left"
             isBold
           >
-            <strong>{t('beforeStart:subtitle')}</strong>
+            <Trans i18nKey="beforeStart:subtitle">
+              <strong>To ensure safety, we advise you to:</strong>
+            </Trans>
           </WelcomeSubtitle>
         </WelcomeBorderContainer>
       </ShapeDownContainer>

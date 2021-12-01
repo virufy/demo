@@ -9,12 +9,6 @@
     "selectLocation": "Ubicación",
     "selectCountry": "Seleccione país",
     "selectRegion": "Seleccione region",
-    "introductionText": "<strong>Nota importante:</strong> Esta app es sólo para fines de demostración y no proporciona una predicción. Por favor, visita <2>Virufy Study</2> para contribuir con tu tos y ayudarnos a completar esta app.",
-    "introductionRecomendations": "<strong>Para reducir el riesgo y la autolesión, le aconsejamos:</strong><p>Por favor, utilice su propio dispositivo y use una mascarilla cuando sea apropiado.</p><p>Desinfecte su dispositivo y cualquier superficie afectada o cercana después de registrar su tos/habla. </p><p>Si tiene una enfermedad subyacente que aumente su riesgo por la tos, por favor, consulte con su proveedor de atención médica antes de participar.</p><p>Si cree que sus síntomas están empeorando, por favor, póngase en contacto con su respuesta médica local.</p>",
-    "hospitalCodeLabel": "Código de Hospital",
-    "patientIdLabel": "ID de Paciente",
-    "hospitalCodePlaceholder": "tipear aquí...",
-    "patientIdPlaceholder": "tipear aquí...",
     "nextButton": "Siguiente",
     "createdBy": "Creado por",
     "provideAccessCode": "Código de acceso",
@@ -22,9 +16,8 @@
     "aboutUsTitle": "Sobre Nosotros"
   },
   "helpVirufy": {
-    "title": "Acerca de Virufy",
     "ourSupporters": "Nuestros colaboradores",
-    "introParagraph": "<p>¡Bienvenidos a nuestro estudio! Esto solo debería llevarle unos 5 minutos para completar. Antes de comenzar, analicemos lo que cubriremos:</p>",
+    "introParagraph": "¡Bienvenidos a nuestro estudio! Esto solo debería llevarle unos 5 minutos para completar. Antes de comenzar, analicemos lo que cubriremos:",
     "aboutParagraph": "<0>Virufy es una <strong>organización sin ánimo de lucro</strong> que está trabajando para desarrollar los medios para utilizar <strong>la inteligencia artificial (Al) para detectar la COVID-19 a partir de los patrones de tos</strong> rápidamente y sin coste alguno mediante el uso de un smartphone en beneficio de los países de bajos ingresos.</0><1>Nuestro equipo incluye investigadores de más de <strong>25 países</strong>. <3>Nuestra investigación</3> ha demostrado que la tecnología Al puede ser capaz de identificar la firma única de la tos de COVID.</1><2>Al recopilar <strong>grabaciones de tos</strong> de personas de todo el mundo, Virufy está mejorando la solidez de su algoritmo de IA para reconocer el patrón de sonido único de COVID. </2><3><strong>Tú tienes el poder</strong> de ayudar a beneficiar a millones de personas en todo el mundo <strong>contribuyendo con tu tos</strong> en nuestro estudio.</3>",
     "bulletsIntro": "<strong> Intro: </strong> Sobre nosotros y seguridad",
     "bulletCough": "<strong> Toser en el teléfono </strong>",
@@ -34,7 +27,7 @@
   },
   "beforeStart": {
     "title": "Por último, antes de empezar...",
-    "subtitle": "Para garantizar la seguridad, le aconsejamos:",
+    "subtitle": "<strong>Para garantizar la seguridad, le aconsejamos:</strong>",
     "advise_list": [
       "Utilice su propio dispositivo y use una máscara cuando sea apropiado.",
       "Desinfecte su dispositivo y cualquier superficie afectada o cercana después de registrar su tos/habla",
@@ -47,16 +40,16 @@
     "recordCough": {
       "header": "Grabe su tos",
       "title": "Instrucciones",
-      "intro1": "Busque un entorno tranquilo a una distancia mínima de 6 metros de los demás.",
-      "intro2": "Use una mascarilla quirúrgica o de tela y sostenga su dispositivo a dos manos de distancia de su cara.",
-      "text": "Pulse el botón de grabación a continuación y <strong> tosa intencionalmente tres veces con una respiración profunda entre cada tos. </strong> Cuando haya terminado, toque el botón de detener.",
+      "intro1": "Busque un <strong>entorno tranquilo</strong>, al menos a <strong>6 metros </strong> de distancia de los demás, y utilice una mascarilla quirúrgica o de tela. Si se siente mal, siéntese.",
+      "intro2": "Mantenga el dispositivo a una distancia de <strong> 30-60 centímetros </strong> de su boca y <strong>no obstruya</strong> ni cubra el dispositivo con plástico. No tosa violentamente o con demasiada fuerza.",
+      "text": "Haga clic en el botón de grabación (el micrófono) y <strong>tosa intencionalmente tres veces, con una respiración profunda entre cada tos</strong>, dirigiendo su tos a la parte inferior de su dispositivo. Cuando haya terminado, haga clic en el botón de detener (stop)",
       "record": "Grabar",
       "stop": "Parar"
     },
     "next": "Siguiente",
     "releaseButtonStart": "Suelte para empezar a grabar",
     "releaseButtonStop": "Suelte para detener la grabación",
-    "shortRecording": "Por favor, haga una grabación de al menos 3 segundos"
+    "shortRecording": "Por favor, haga una grabación de al menos 5 segundos"
   },
   "recordingsRecord": {
     "recordCough": {
@@ -92,6 +85,8 @@
   },
   "predictionResult": {
     "processingTitle": "Procesando...",
+    "note": "Nota importante:",
+    "result": "Resultados",
     "resultModal": "Esta aplicación no predecirá su estado de COVID-19 ni diagnosticará ninguna enfermedad, trastorno u otra condición de salud. Virufy está realizando una investigación y utilizará la información que proporcione solo para esa investigación. Virufy no sustituirá a un médico y quisiera recordarle que es su responsabilidad buscar el consejo médico de su médico.",
     "resultNotDetected": "COVID-19: NO DETECTADO",
     "resultNotDetectedText": "Su voz no parece tener indicadores de COVID-19. <strong> Continúe tomando las medidas adecuadas </strong> según los consejos de su profesional sanitario o del organismo regulador correspondiente y vuelva a evaluarse en nuestra aplicación a diario.",
