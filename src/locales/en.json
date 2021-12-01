@@ -49,7 +49,7 @@
     "next": "Next",
     "releaseButtonStart": "Release to start recording",
     "releaseButtonStop": "Release to stop recording",
-    "shortRecording": "Please make a recording of at least 3 seconds"
+    "shortRecording": "Please make a recording of at least 5 seconds"
   },
   "recordingsRecord": {
     "recordCough": {
