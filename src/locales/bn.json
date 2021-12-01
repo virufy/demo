@@ -47,6 +47,7 @@
         "stop": "থামুন"
       },
       "next": "পরবর্তী",
+      "retryButton": "আবার চেষ্টা করুন",
       "releaseButtonStart": "রেকর্ড শুরু করুন",
       "releaseButtonStop": "রেকর্ড শেষ করুন",
       "shortRecording": "কমপক্ষে ৫ সেকেন্ডের রেকর্ডিং করুন"

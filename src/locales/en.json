@@ -47,6 +47,7 @@
       "stop": "Stop"
     },
     "next": "Next",
+    "retryButton": "Retry",
     "releaseButtonStart": "Release to start recording",
     "releaseButtonStop": "Release to stop recording",
     "shortRecording": "Please make a recording of at least 5 seconds"
