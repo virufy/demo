@@ -27,7 +27,7 @@
   },
   "beforeStart": {
     "title": "Por último, antes de empezar...",
-    "subtitle": "Para garantizar la seguridad, le aconsejamos:",
+    "subtitle": "<strong>Para garantizar la seguridad, le aconsejamos:</strong>",
     "advise_list": [
       "Utilice su propio dispositivo y use una máscara cuando sea apropiado.",
       "Desinfecte su dispositivo y cualquier superficie afectada o cercana después de registrar su tos/habla",
@@ -85,6 +85,8 @@
   },
   "predictionResult": {
     "processingTitle": "Procesando...",
+    "note": "Nota importante:",
+    "result": "Resultados",
     "resultModal": "Esta aplicación no predecirá su estado de COVID-19 ni diagnosticará ninguna enfermedad, trastorno u otra condición de salud. Virufy está realizando una investigación y utilizará la información que proporcione solo para esa investigación. Virufy no sustituirá a un médico y quisiera recordarle que es su responsabilidad buscar el consejo médico de su médico.",
     "resultNotDetected": "COVID-19: NO DETECTADO",
     "resultNotDetectedText": "Su voz no parece tener indicadores de COVID-19. <strong> Continúe tomando las medidas adecuadas </strong> según los consejos de su profesional sanitario o del organismo regulador correspondiente y vuelva a evaluarse en nuestra aplicación a diario.",

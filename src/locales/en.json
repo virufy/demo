@@ -27,7 +27,7 @@
   },
   "beforeStart": {
     "title": "Lastly, before we start...",
-    "subtitle": "To ensure safety, we advise you to:",
+    "subtitle": "<strong>To ensure safety, we advise you to:</strong>",
     "advise_list": [
       "Please use your own device and wear a mask when appropriate.",
       "Disinfect your device and any affected or nearby surfaces after recording your cough/speech.",
@@ -85,6 +85,8 @@
   },
   "predictionResult": {
     "processingTitle": "Processing...",
+    "note": "Important Note:",
+    "result": "Results",
     "resultModal": "This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsiblity to seek medical advice from your doctor.",
     "resultNotDetected": "COVID-19: NOT DETECTED",
     "resultNotDetectedText": "Your voice does not seem to have indicators of COVID-19. Please <strong>continue to take appropriate measures</strong> based on the advice of your healthcare professional or applicable regulatory body and reassess yourself in our app daily.",

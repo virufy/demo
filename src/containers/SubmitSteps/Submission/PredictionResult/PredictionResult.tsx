@@ -150,7 +150,7 @@ const PredictionResult = () => {
       setSubtitle('');
       setType('noShape');
     } else {
-      setSubtitle('Results');
+      setSubtitle(`${t('predictionResult:result')}`);
       setType('shapeUp');
       openModal();
     }
@@ -177,7 +177,7 @@ const PredictionResult = () => {
           <>
             <ConfirmationModal
               isOpen={isOpen}
-              modalTitle="Important Note: "
+              modalTitle={t('predictionResult:note')}
               toggle={closeModal}
               onConfirm={closeModal}
             >

@@ -27,7 +27,7 @@
   },
   "beforeStart": {
     "title": "Por último, antes de começarmos...",
-    "subtitle": "Para garantir a segurança, nós o aconselhamos a fazê-lo:",
+    "subtitle": "<strong>Para garantir a segurança, nós o aconselhamos a fazê-lo:</strong>",
     "advise_list": [
       "Use seu próprio dispositivo e use uma máscara quando apropriado.",
       "Desinfete seu dispositivo e qualquer superfície afetada ou próxima após registrar sua tosse / fala.",
@@ -85,6 +85,8 @@
   },
   "predictionResult": {
     "processingTitle": "Em processamento...",
+    "note": "Nota importante:",
+    "result": "Resultados",
     "resultModal": "Este aplicativo não prevê seu status COVID-19 nem diagnostica qualquer doença, distúrbio ou outro problema de saúde. Virufy está conduzindo pesquisas e usará as informações fornecidas apenas para essa pesquisa. Virufy não substituirá um médico e gostaria de lembrar que é sua responsabilidade consultar seu médico.",
     "resultNotDetected": "COVID-19: NÃO DETECTADO",
     "resultNotDetectedText": "Sua voz não parece ter indicadores de COVID-19. <strong> Continue a tomar as medidas adequadas </strong> com base no conselho de seu profissional de saúde ou órgão regulador aplicável e reavalie-se em nosso aplicativo diariamente.",
