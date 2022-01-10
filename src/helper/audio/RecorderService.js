@@ -5,6 +5,7 @@
 
 import EncoderWav from './encoder-wav-worker';
 import EncoderMp3 from './encoder-mp3-worker';
+import EncoderFlac from './encoder-flac-worker';
 // import EncoderOgg from './encoder-ogg-worker';
 
 export default class RecorderService {
@@ -120,19 +121,26 @@ export default class RecorderService {
     if (!this.config.usingMediaRecorder) {
       if (this.config.manualEncoderId === 'mp3') {
         this.encoderWorker = this.createWorker(EncoderMp3);
-        const baseUrl = `${document.location.protocol}//${document.location.host}`;
+        const baseUrl = process.env.PUBLIC_URL || 'https://virufy.org/demo';
         this.encoderWorker.postMessage([
           'init',
           { baseUrl, sampleRate: this.audioCtx.sampleRate },
         ]);
         this.encoderMimeType = 'audio/mpeg';
+      } else if (this.config.manualEncoderId === 'flac') {
+        this.encoderWorker = this.createWorker(EncoderFlac);
+        this.encoderWorker.postMessage([
+          'init',
+          { sampleRate: this.audioCtx.sampleRate },
+        ]);
+        this.encoderMimeType = 'audio/flac';
       } else {
         this.encoderWorker = this.createWorker(EncoderWav);
         this.encoderMimeType = 'audio/wav';
       }
       this.encoderWorker.addEventListener('message', e => {
         const event = new Event('dataavailable');
-        if (this.config.manualEncoderId === 'ogg') {
+        if (this.config.manualEncoderId === 'ogg' || this.config.manualEncoderId === 'flac') {
           event.data = e.data;
         } else {
           event.data = new Blob(e.data, { type: this.encoderMimeType });
@@ -216,7 +224,7 @@ export default class RecorderService {
     this.outputGainNode.connect(this.destinationNode);
 
     if (this.config.usingMediaRecorder) {
-      this.mediaRecorder = new MediaRecorder(this.destinationNode.stream, { mimeType: 'audio/wav' });
+      this.mediaRecorder = new MediaRecorder(this.destinationNode.stream, { mimeType: this.encoderMimeType || 'audio/wav' });
       this.mediaRecorder.addEventListener('dataavailable', evt => this._onDataAvailable(evt));
       this.mediaRecorder.addEventListener('error', evt => this._onError(evt));
 

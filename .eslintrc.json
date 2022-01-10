@@ -40,6 +40,7 @@
     "react-hooks/exhaustive-deps": "warn",
     "react/jsx-props-no-spreading": 0,
     "react/jsx-one-expression-per-line": "off",
+    "react/require-default-props": 0,
     "global-require": 0
   },
   "settings": {

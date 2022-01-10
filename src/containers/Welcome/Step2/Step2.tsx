@@ -1,9 +1,9 @@
 import React, { useEffect, useCallback, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { useTranslation, Trans } from 'react-i18next';
 import usePortal from 'react-useportal';
 
 // Header Control
-import { useTranslation } from 'react-i18next';
 import useHeaderContext from 'hooks/useHeaderContext';
 
 // Components
@@ -15,18 +15,23 @@ import useWindowSize from 'hooks/useWindowSize';
 // Theme
 import { colors } from 'theme';
 
+// Assets
+import HeaderSplash from 'assets/images/headerSplash.png';
+
 // Utils
 import { scrollToTop } from 'helper/scrollHelper';
 
 // Styles
 import {
-  WelcomeLogo,
-  WelcomeTitle,
   WelcomeContent,
   WelcomeSubtitle,
-  WelcomeItemList,
-  WelcomeItemListItem,
+  WelcomeSubtitleBold,
   WelcomeStyledFormAlternative,
+  HeaderImageContainer,
+  HeaderImage,
+  WelcomeBullets,
+  BulletIndicator,
+  LogoWhiteBG,
 } from '../style';
 
 const Step2 = (p: Wizard.StepProps) => {
@@ -37,7 +42,7 @@ const Step2 = (p: Wizard.StepProps) => {
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [activeStep, setActiveStep] = useState(true);
-  const { setDoGoBack, setTitle, title } = useHeaderContext();
+  const { setDoGoBack } = useHeaderContext();
 
   const history = useHistory();
 
@@ -58,53 +63,78 @@ const Step2 = (p: Wizard.StepProps) => {
   }, []);
 
   useEffect(() => {
-    // Clear title if needed
-    if (title) setTitle('');
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [title]);
-
-  useEffect(() => {
     scrollToTop();
     setDoGoBack(() => doBack);
   }, [doBack, setDoGoBack]);
+
+  // Memos
+  const isDesktop = React.useMemo(() => width && width > 560, [width]);
 
   const { t } = useTranslation();
 
   return (
     <WelcomeStyledFormAlternative>
-      <WelcomeLogo />
+      <HeaderImageContainer>
+        <HeaderImage
+          src={HeaderSplash}
+        />
+        <LogoWhiteBG />
+      </HeaderImageContainer>
+      <WelcomeSubtitleBold
+        mt={width && width > 560 ? 38 : 0}
+        fontSize={isDesktop ? 32 : 24}
+        fontColor="#3578DE"
+        textAlign="center"
+        isBold
+      >
+        <strong>{t('main:paragraph2', 'Covid-19 Cough Data Collection Study')}</strong>
+      </WelcomeSubtitleBold>
 
-      <WelcomeTitle mt={width && width > 560 ? 38 : 12}>{t('beforeStart:title')}</WelcomeTitle>
-
-      <WelcomeContent>
-        <WelcomeSubtitle
-          fontWeight={700}
-          fontColor={colors.darkBlack}
-          mb={width && width > 560 ? 11 : 1}
-          mt={width && width > 560 ? -10 : -14}
-          textAlign={width && width > 560 ? 'center' : 'left'}
-        >
-          {t('beforeStart:subtitle')}
+      <WelcomeContent maxWidth={335}>
+        <WelcomeSubtitle mt={0} mb={0} textAlign="left" fontColor={colors.mineShaft}>
+          <Trans i18nKey="helpVirufy:introParagraph">
+            <p>
+              Welcome to our study! This should only take you about 5 minutes to complete.
+              Before we begin, let’s discuss what we will cover:
+            </p>
+          </Trans>
         </WelcomeSubtitle>
+
+        <WelcomeSubtitle mt={width && width > 560 ? 15 : 7} isBold textAlign="left">
+          <WelcomeBullets>
+            <BulletIndicator>1</BulletIndicator>
+          </WelcomeBullets>
+          <Trans i18nKey="helpVirufy:bulletsIntro">
+            <strong>Intro:</strong>About us and Safety Reminders
+          </Trans>
+        </WelcomeSubtitle>
+        <WelcomeSubtitle mt={width && width > 560 ? 20 : 10} isBold textAlign="left">
+          <WelcomeBullets>
+            <BulletIndicator>2</BulletIndicator>
+          </WelcomeBullets>
+          <Trans i18nKey="helpVirufy:bulletCough">
+            <strong>Cough Into Phone</strong>
+          </Trans>
+        </WelcomeSubtitle>
+        <WelcomeSubtitle mt={width && width > 560 ? 20 : 10} isBold textAlign="left">
+          <WelcomeBullets>
+            <BulletIndicator>3</BulletIndicator>
+          </WelcomeBullets>
+          <Trans i18nKey="helpVirufy:bulletQuestions">
+            <strong>Quick Health Questions</strong>
+          </Trans>
+        </WelcomeSubtitle>
+
+        {activeStep && (
+          <Portal>
+            <WizardButtons
+              invert
+              leftLabel={t('helpVirufy:nextButton')}
+              leftHandler={handleNext}
+            />
+          </Portal>
+        )}
       </WelcomeContent>
-
-      <WelcomeItemList>
-        <WelcomeItemListItem>{t('beforeStart:advise1')}</WelcomeItemListItem>
-        <WelcomeItemListItem>{t('beforeStart:advise2')}</WelcomeItemListItem>
-        <WelcomeItemListItem>{t('beforeStart:advise3')}</WelcomeItemListItem>
-        <WelcomeItemListItem>{t('beforeStart:advise4')}</WelcomeItemListItem>
-      </WelcomeItemList>
-
-      {activeStep && (
-        <Portal>
-          <WizardButtons
-            leftLabel={t('beforeStart:startButton')}
-            leftHandler={handleNext}
-            invert
-          />
-        </Portal>
-      )}
-
     </WelcomeStyledFormAlternative>
   );
 };

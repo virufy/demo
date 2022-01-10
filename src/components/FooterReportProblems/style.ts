@@ -5,6 +5,7 @@ export const FooterContainer = styled.div`
   justify-content: center;
   align-items: center;
   text-decoration-line: underline;
+  margin-top: 15px;
 
   margin-bottom: 43px;
   
@@ -19,6 +20,6 @@ export const FooterContainer = styled.div`
     font-size: 14px;
     line-height: 20px;
 
-    color: ${props => props.theme.colors.green} !important;
+    color: ${props => props.theme.colors.purple} !important;
   }
 `;

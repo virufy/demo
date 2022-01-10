@@ -2,6 +2,10 @@ import styled from 'styled-components';
 import { colors } from 'theme';
 import { BaseTitle, BlackText } from 'components/Texts';
 
+// Assets
+import { ReactComponent as Clouds } from 'assets/images/Clouds.svg';
+import { ReactComponent as Arrow } from 'assets/icons/arrowUp.svg';
+
 export const MainContainer = styled.div`
   @media screen and (${props => props.theme.breakpoints.tablet}) {
     margin-bottom: 64px;
@@ -9,13 +13,10 @@ export const MainContainer = styled.div`
 `;
 
 export const Title = styled(BaseTitle)`
-  margin-top: 48px;
+  margin-top: 65px;
   margin-bottom: 16px;
+  margin-left: 20px;
 
-  @media screen and (${props => props.theme.breakpoints.tablet}) {
-    margin-top: 64px;
-    margin-bottom: 40px;
-  }
 `;
 
 export const Text = styled(BlackText)`
@@ -68,6 +69,7 @@ export const UploadContainer = styled.div`
   justify-content: center;
   width: fit-content;
   margin: 0 auto;
+  position: relative;
 `;
 
 export const UploadInput = styled.input`
@@ -75,47 +77,45 @@ export const UploadInput = styled.input`
 `;
 
 export const UploadButton = styled.label`
-  width: 88px;
-  height: 88px;
-  background-color: ${colors.green};
+  width: 98px;
+  height: 98px;
+  background-color: #EBF1FC;
   border-radius: 50%;
   cursor: pointer;
   position: relative;
-  margin-bottom: 25px;
-
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    background-color: ${colors.white};
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  &:before {
-    width: 20px;
-    height: 3px;
-  }
-
-  &:after {
-    width: 3px;
-    height: 20px;
-  }
+  margin-top: -40%;
 
   @media screen and (${props => props.theme.breakpoints.tablet}) {
-    width: 275px;
-    height: 275px;
+    width: 200px;
+    height: 200px;
     margin-bottom: 30px;
+  }
+`;
 
-    &:before {
-      width: 65px;
-      height: 9px;
-    }
+export const ArrowUp = styled(Arrow)`
+  width: 39px;
+  height: 39px;
+  position: absolute; 
+  bottom: 55%;
+  pointer-events: none;
 
-    &:after {
-      width: 9px;
-      height: 65px;
-    }
+  @media screen and (${props => props.theme.breakpoints.tablet}) {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 60%;
+  } 
+`;
+
+export const CloudsSVG = styled(Clouds)`
+  width: 197px;
+  height: 122px;
+  margin: 0 auto;
+  margin-top: 110px;
+  display: block;
+
+  @media screen and (${props => props.theme.breakpoints.tablet}) {
+    width: 374px;
+    height: 299px;
   }
 `;

@@ -27,8 +27,7 @@ import CrossSVG from 'assets/icons/cross.svg';
 import fileHelper from 'helper/fileHelper';
 import {
   MainContainer,
-  Title,
-  Text,
+  Subtitle,
   PlayerContainer,
   PlayerContainerTop,
   PlayerContainerBottom,
@@ -36,8 +35,8 @@ import {
   PlayerCross,
   PlayerFileName,
   PlayerTopMiddle,
-  PlayerFileSize,
   PlayerPlayContainer,
+  PlayerPlayButton,
   PlayerCrossContainer,
   PlayerBottomTop,
   PlayerBottomTrack,
@@ -56,7 +55,7 @@ const ListenAudio = ({
   const { Portal } = usePortal({
     bindTo: document && document.getElementById('wizard-buttons') as HTMLDivElement,
   });
-  const { setDoGoBack, setTitle } = useHeaderContext();
+  const { setDoGoBack, setSubtitle } = useHeaderContext();
   const history = useHistory();
   const location = useLocation<{ from: string }>();
   const { state, actions } = useStateMachine({ updateAction: updateAction(storeKey) });
@@ -98,8 +97,25 @@ const ListenAudio = ({
       clearTimeout(refTimer.current);
     };
 
-    const fnLoad = (e: any) => {
-      setDuration(e.target.duration);
+    const fnLoad = async (e: any) => {
+      const audioDuration: number = await new Promise(resolver => {
+        if (e.target.duration !== Infinity) {
+          resolver(e.target.duration);
+        }
+        const tempFn = () => {
+          e.target.pause();
+          e.target.volume = 1;
+          e.target.currentTime = 0;
+          resolver(e.target.duration);
+          e.target.removeEventListener('durationchange', tempFn);
+        };
+
+        e.target.addEventListener('durationchange', tempFn);
+        e.target.volume = 0;
+        e.target.currentTime = 24 * 60 * 60; // Unprobable time
+      });
+      e.target.volume = 1;
+      setDuration(audioDuration);
     };
 
     if (refAudio.current) {
@@ -123,7 +139,6 @@ const ListenAudio = ({
   const {
     fileUrl,
     fileName,
-    fileSize,
   } = React.useMemo(() => {
     const out = {
       fileUrl: '',
@@ -201,9 +216,9 @@ const ListenAudio = ({
   // Effects
   useEffect(() => {
     scrollToTop();
-    setTitle(t('recordingsListen:recordCough.header'));
+    setSubtitle(t('recordingsListen:title'));
     setDoGoBack(() => handleDoBack);
-  }, [handleDoBack, setDoGoBack, setTitle, t]);
+  }, [handleDoBack, setDoGoBack, setSubtitle, t]);
 
   // Memos
   const {
@@ -245,28 +260,15 @@ const ListenAudio = ({
         )
       }
       <MainContainer>
-        <Title>
-          {t('recordingsListen:title')}
-        </Title>
-        <Text>
+        <Subtitle>
           {t('recordingsListen:subtitle')}
-        </Text>
+        </Subtitle>
         <PlayerContainer>
           <PlayerContainerTop>
-            <PlayerPlayContainer
-              onClick={handlePlay}
-            >
-              <PlayerPlay
-                src={PlaySVG}
-              />
-            </PlayerPlayContainer>
             <PlayerTopMiddle>
               <PlayerFileName>
                 {fileName}
               </PlayerFileName>
-              <PlayerFileSize>
-                {fileSize}
-              </PlayerFileSize>
             </PlayerTopMiddle>
             <PlayerCrossContainer
               onClick={handleRemoveFile}
@@ -278,7 +280,10 @@ const ListenAudio = ({
           </PlayerContainerTop>
           <PlayerContainerBottom>
             <PlayerBottomTop>
-              <PlayerBottomTrack />
+              <PlayerBottomTrack
+                playing={playing}
+                progress={trackProgress}
+              />
               <PlayerBottomThumb
                 playing={playing}
                 progress={trackProgress}
@@ -294,6 +299,15 @@ const ListenAudio = ({
             </PlayerBottomBottom>
           </PlayerContainerBottom>
         </PlayerContainer>
+        <PlayerPlayContainer
+          onClick={handlePlay}
+        >
+          <PlayerPlayButton>
+            <PlayerPlay
+              src={PlaySVG}
+            />
+          </PlayerPlayButton>
+        </PlayerPlayContainer>
       </MainContainer>
       {activeStep && (
         <Portal>
@@ -301,6 +315,8 @@ const ListenAudio = ({
             invert
             leftLabel={t('recordingsListen:next')}
             leftHandler={handleNext}
+            rightLabel={t('recordingsListen:retake')}
+            rightHandler={handleRemoveFile}
           />
         </Portal>
       )}

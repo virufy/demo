@@ -1,7 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import usePortal from 'react-useportal';
-import { Trans, useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 // Form
 import { useForm, Controller } from 'react-hook-form';
@@ -10,9 +9,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 
 // Components
-import WizardButtons from 'components/WizardButtons';
 import Dropdown from 'components/Dropdown';
-import Link from 'components/Link';
+import CreatedBy from 'components/CreatedBy';
 
 // Update Action
 import { updateAction } from 'utils/wizard';
@@ -22,6 +20,7 @@ import useHeaderContext from 'hooks/useHeaderContext';
 
 // Data
 import { languageData } from 'data/lang';
+// import { countryData, countriesWithStates } from 'data/country';
 
 // Hooks
 import useWindowSize from 'hooks/useWindowSize';
@@ -31,35 +30,41 @@ import { scrollToTop } from 'helper/scrollHelper';
 
 // Styles
 import {
-  WelcomeLogo,
-  WelcomeTitle,
   WelcomeContent,
-  WelcomeSubtitle,
+  WelcomeSubtitleBold,
   WelcomeStyledForm,
   // WelcomeInput,
   // WelcomeRequiredFieldText,
-  IntroductionText,
-  IntroductionRecommendations,
+  // RegionContainer,
+  // WelcomeInput,
+  ContainerNextButton,
+  NextButton,
+  ArrowRightSVG,
 } from '../style';
 
 const schema = Yup.object().shape({
   language: Yup.string().required(),
+  // accessCode: Yup.string(),
   // hospitalCode: Yup.string().required(),
   // patientId: Yup.string().oneOf(['virufy']).required(),
+  // country: Yup.string().required(),
+  /* region: Yup.string().when('country', {
+    is: (val: string) => countriesWithStates.includes(val),
+    then: Yup.string().required(),
+    otherwise: Yup.string(),
+  }), */
 }).defined();
 
 type Step1Type = Yup.InferType<typeof schema>;
 
 const Step1 = (p: Wizard.StepProps) => {
+  const {
+    doGoBack, setDoGoBack, setLogoSize, setType,
+  } = useHeaderContext();
   // Hooks
   const history = useHistory();
   const { width } = useWindowSize();
   const { t, i18n } = useTranslation();
-
-  const { Portal } = usePortal({
-    bindTo: document && document.getElementById('wizard-buttons') as HTMLDivElement,
-  });
-  const { doGoBack, setDoGoBack } = useHeaderContext();
 
   // States
   const [activeStep, setActiveStep] = React.useState(true);
@@ -75,6 +80,7 @@ const Step1 = (p: Wizard.StepProps) => {
     handleSubmit,
     watch,
     reset,
+    // setValue,
   } = useForm({
     defaultValues: state?.[p.storeKey],
     resolver: yupResolver(schema),
@@ -102,23 +108,46 @@ const Step1 = (p: Wizard.StepProps) => {
     }
   };
 
-  // Effects
+  /* const resetRegion = () => {
+    setValue('region', '', {
+      shouldValidate: true,
+    });
+  }; */
+
   React.useEffect(() => {
     scrollToTop();
-
     // Hide back arrow in header if neccesary
     if (doGoBack) setDoGoBack(null);
+
+    setType('noShape');
+    setLogoSize('big');
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const lang = watch('language');
+  // const country = watch('country');
 
   React.useEffect(() => {
     i18n.changeLanguage(lang);
   }, [i18n, lang]);
 
-  // Memos
-  const isDesktop = React.useMemo(() => width && width > 560, [width]);
+  /* const countrySelectOptions = React.useMemo(() => [{ name: t('main:selectCountry'), consentFormUrl: '', val: '' },
+    ...countryData], [t]);
+
+  const regionSelectOptions = React.useMemo(() => {
+    const output = [
+      { name: t('main:selectRegion'), val: '' },
+    ];
+    if (country) {
+      const elem = countryData.find(a => a.val === country);
+      if (elem) {
+        elem.states.forEach(s => {
+          output.push({ name: s, val: s });
+        });
+      }
+    }
+    return output;
+  }, [t, country]); */
 
   if (!width) {
     return null;
@@ -126,29 +155,16 @@ const Step1 = (p: Wizard.StepProps) => {
 
   return (
     <WelcomeStyledForm>
-      {/* Logo */}
-      <WelcomeLogo />
-
-      {/* Title */}
-      <WelcomeTitle
-        fontSize={isDesktop ? 32 : 24}
-      >
-        {t('main:title')}
-      </WelcomeTitle>
-
       {/* Content */}
-      <WelcomeContent>
-
-        {/* Content: Subtitle */}
-        <WelcomeSubtitle
-          fontWeight={400}
-          mb={isDesktop ? 30 : 10}
-          mt={width && width > 560 ? 0 : -14}
-          lineHeight={20}
-          textAlign="center"
+      <WelcomeContent mt={53}>
+        <WelcomeSubtitleBold
+          mt={width && width > 560 ? 50 : 40}
+          mb={16}
+          textAlign="left"
+          isBold
         >
-          {t('main:paragraph1')}
-        </WelcomeSubtitle>
+          <strong>{t('main:selectYourLanguage', 'Language')}</strong>
+        </WelcomeSubtitleBold>
 
         {/* Language */}
         <Controller
@@ -175,43 +191,77 @@ const Step1 = (p: Wizard.StepProps) => {
           )}
         />
 
-        <IntroductionText>
-          <Trans i18nKey="main:introductionText">
-            <strong>Important note:</strong> this app is only for demonstration purposes and does not provide a
-            prediction. Please visit <Link to="https://virufy.org/app" target="_blank">virufy.org/app</Link> to
-            contribute your cough and help us to complete this app.
-          </Trans>
-        </IntroductionText>
-        <IntroductionRecommendations>
-          <Trans i18nKey="main:introductionRecomendations">
-            <strong>To reduce risk and self-harm, we advise you to:</strong>
-            <p>
-              Please use your own device and wear a mask when appropriate.
-            </p>
-            <p>
-              Disinfect your device and any affected or nearby surfaces after recording your cough/speech.
-            </p>
-            <p>
-              If you have an underlying condition that increases your risk from coughing, please check with your health
-              care provider before participating.
-            </p>
-            <p>
-              If you feel your symptoms are getting worse, please contact your local medical response.
-            </p>
-          </Trans>
-        </IntroductionRecommendations>
+        {/* <WelcomeSubtitleBold
+          mt={width && width > 560 ? 50 : 40}
+          mb={16}
+          textAlign="left"
+          isBold
+        >
+          <strong>{t('main:selectLocation', 'Location')}</strong>
+        </WelcomeSubtitleBold>
 
-        {/* Wizard Buttons */}
+        <Controller
+          control={control}
+          name="country"
+          defaultValue={countrySelectOptions[0].val}
+          render={({ onChange, value }) => (
+            <Dropdown onChange={e => { onChange(e.currentTarget.value); resetRegion(); }} value={value}>
+              {countrySelectOptions.map(({ name, val }) => <option key={name} id={name} value={val}>{name}</option>)}
+            </Dropdown>
+          )}
+        />
+
+        <Controller
+          control={control}
+          name="region"
+          defaultValue={regionSelectOptions[0].val}
+          render={({ onChange, value }) => (regionSelectOptions.length > 1 ? (
+            <RegionContainer>
+              <Dropdown onChange={e => onChange(e.currentTarget.value)} value={value}>
+                {regionSelectOptions.map(({ name, val }) => <option key={name} id={name} value={val}>{name}</option>)}
+              </Dropdown>
+            </RegionContainer>
+          ) : <></>)}
+        />
+
+        <WelcomeSubtitleBold
+          mt={width && width > 560 ? 50 : 40}
+          mb={16}
+          textAlign="left"
+          isBold
+        >
+          <strong>{t('main:provideAccessCode', 'Access code')}</strong>
+        </WelcomeSubtitleBold>
+
+        <Controller
+          control={control}
+          name="accessCode"
+          defaultValue=""
+          render={({ onChange, value, name }) => (
+            <WelcomeInput
+              name={name}
+              value={value}
+              onChange={onChange}
+              type="text"
+              placeholder={t('main:enterAccessCode', 'Enter your access code')}
+              autoComplete="Off"
+            />
+          )}
+          /> */}
+
         {
           activeStep && (
-            <Portal>
-              <WizardButtons
-                leftLabel={t('main:nextButton')}
-                leftHandler={handleSubmit(onSubmit)}
-                leftDisabled={!isValid}
-                invert
-              />
-            </Portal>
+            <>
+              <ContainerNextButton>
+                <NextButton
+                  onClick={handleSubmit(onSubmit)}
+                  isDisable={!isValid}
+                >
+                  <ArrowRightSVG />
+                </NextButton>
+              </ContainerNextButton>
+              <CreatedBy inline />
+            </>
           )
         }
       </WelcomeContent>

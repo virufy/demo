@@ -1,6 +1,6 @@
 import React from 'react';
 import usePortal from 'react-useportal';
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 // Form
 import { Controller, useForm } from 'react-hook-form';
@@ -20,7 +20,6 @@ import {
   UploadContainer,
   UploadImage,
   UploadText,
-  Text,
   MicContainer,
 } from './style';
 
@@ -41,10 +40,21 @@ const schema = Yup.object({
       if (value) {
         const file = value as File;
         const audio = new Audio(URL.createObjectURL(file));
-
         audio.load();
         await new Promise(resolver => audio.addEventListener('loadedmetadata', resolver));
-        return (audio.duration >= 3);
+        const duration: number = await new Promise(resolver => {
+          if (audio.duration !== Infinity) {
+            resolver(audio.duration);
+          }
+          audio.addEventListener('durationchange', () => {
+            audio.remove();
+            resolver(audio.duration);
+          });
+          audio.volume = 0;
+          audio.currentTime = 24 * 60 * 60; // Unprobable time
+          audio.play();
+        });
+        return (duration >= 3);
       }
       return !!value;
     }),
@@ -99,12 +109,6 @@ const Record = ({
   return (
     <>
       <MainContainer>
-        <Text>
-          <Trans i18nKey="recordingsRecord:text">
-            Click the record button and cough intentionally 3 to 5 times <strong>during 3 seconds minimum</strong>.
-            When you are done, click Continue
-          </Trans>
-        </Text>
         <MicContainer>
           <Controller
             control={control}

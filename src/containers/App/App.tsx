@@ -6,6 +6,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import FullWidth from 'components/FullWidthDiv';
 import Header, { HeaderContextProvider } from 'components/Header';
 import FooterReportProblems from 'components/FooterReportProblems';
+import FooterInstallAsApp from 'components/FooterInstallAsApp';
 
 // hooks
 import { useInitializeGoogleAnalytics } from 'hooks/useInitializeGoogleAnalytics';
@@ -41,6 +42,7 @@ const App = () => {
           </Switch>
         </FullWidth>
         <FooterReportProblems />
+        <FooterInstallAsApp />
       </HeaderContextProvider>
     </AppContainer>
   );
