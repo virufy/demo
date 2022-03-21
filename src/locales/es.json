@@ -50,7 +50,7 @@
     "retryButton": "Reintentar",
     "releaseButtonStart": "Suelte para empezar a grabar",
     "releaseButtonStop": "Suelte para detener la grabación",
-    "shortRecording": "Por favor, haga una grabación de al menos 5 segundos"
+    "shortRecording": "Por favor, haga una grabación de al menos 3 segundos"
   },
   "recordingsRecord": {
     "recordCough": {
