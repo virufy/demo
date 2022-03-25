@@ -50,7 +50,7 @@
     "retryButton": "Yeniden deneyin",
     "releaseButtonStart": "Kaydı başlatmak için bırakın",
     "releaseButtonStop": "Kaydı durdurmak için bırakın",
-    "shortRecording": "Lütfen en az 3 saniyelik bir kayıt yapın"
+    "shortRecording": "Lütfen en az 2 saniyelik bir kayıt yapın"
   },
   "recordingsRecord": {
     "recordCough": {

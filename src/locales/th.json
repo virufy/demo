@@ -50,7 +50,7 @@
       "retryButton": "ลองอีกครั้ง",
       "releaseButtonStart": "ปล่อยเพื่อเริ่มบันทึก",
       "releaseButtonStop": "ปล่อยเพื่อหยุด",
-      "shortRecording": "กรุณาบันทึกเสียงของท่านอย่างน้อย 3 วินาที"
+      "shortRecording": "กรุณาบันทึกเสียงของท่านอย่างน้อย 2 วินาที"
     },
     "recordingsRecord": {
       "recordCough": {

@@ -54,7 +54,7 @@ const schema = Yup.object({
           audio.currentTime = 24 * 60 * 60; // Unprobable time
           audio.play();
         });
-        return (duration >= 3);
+        return (duration >= 2);
       }
       return !!value;
     }),

@@ -50,7 +50,7 @@
       "retryButton": "Дахин оролдоно уу",
       "releaseButtonStart": "Бичлэгийг эхлүүлэхийн тулд дарна уу",
       "releaseButtonStop": "Бичлэгийг зогсоохын тулд дарна уу",
-      "shortRecording": "Дор хаяж 3 секундын бичлэг хийгээрэй"
+      "shortRecording": "Дор хаяж 2 секундын бичлэг хийгээрэй"
     },
     "recordingsRecord": {
       "recordCough": {
