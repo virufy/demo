@@ -7,6 +7,17 @@ export const MainContainer = styled.div`
   margin-bottom: 77px;
 `;
 
+export const ImportantNote = styled.span<{ isBold?: boolean }>`
+  font-family: "Source Sans Pro";
+  font-size: 0.75rem;
+  line-height: 1.42;
+  font-weight: ${({ isBold }) => (isBold ? 700 : 400)};
+ 
+  display: block;
+  max-width: 320px;
+  margin: 52px auto;
+`;
+
 export const Subtitle = styled.h2`
   color: ${({ theme }) => theme.colors.mineShaft};
   font-size: 18px;
