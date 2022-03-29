@@ -50,7 +50,7 @@
       "retryButton": "আবার চেষ্টা করুন",
       "releaseButtonStart": "রেকর্ড শুরু করুন",
       "releaseButtonStop": "রেকর্ড শেষ করুন",
-      "shortRecording": "কমপক্ষে ৫ সেকেন্ডের রেকর্ডিং করুন"
+      "shortRecording": "কমপক্ষে 2 সেকেন্ডের জন্য রেকর্ড করুন"
     },
     "recordingsRecord": {
       "recordCough": {  
@@ -88,13 +88,13 @@
       "processingTitle": "প্রক্রিয়াকরণ...",
       "note": "গুরুত্বপূর্ণ তথ্য:",
       "result": "ফলাফল",
-      "resultModal": "এই অ্যাপটি আপনার COVID-19 স্থিতির পূর্বাভাস দেবে না বা কোনও রোগ, ব্যাধি বা অন্যান্য স্বাস্থ্যের অবস্থা নির্ণয় করবে না। Virufy গবেষণা পরিচালনা করছে এবং শুধুমাত্র সেই গবেষণার জন্য আপনার দেওয়া তথ্য ব্যবহার করবে। Virufy একজন ডাক্তারের জায়গা নেবে না এবং আপনাকে মনে করিয়ে দিতে চাই যে আপনার ডাক্তারের কাছ থেকে চিকিৎসার পরামর্শ নেওয়া আপনার দায়িত্ব।",
+      "resultModal": "Important note: This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
       "resultNotDetected": "COVID এর: সনাক্ত করা হয়নি",
       "resultNotDetectedText": "আপনার কণ্ঠস্বরে COVID এর সূচক আছে বলে মনে হচ্ছে না। <strong> অনুগ্রহ করে আপনার স্বাস্থ্যসেবা </strong>পেশাদার বা প্রযোজ্য নিয়ন্ত্রক সংস্থার পরামর্শের ভিত্তিতে যথাযথ ব্যবস্থা গ্রহণ করা চালিয়ে যান এবং প্রতিদিন আমাদের অ্যাপে নিজেকে পুনরায় মূল্যায়ন করুন।",
       "resultNotAnalyze": "Unable to analyze",
-      "resultNotAnalyzeText": "আমাদের অ্যালগরিদম আপনার COVID এর স্ট্যাটাস নির্ধারণ করতে সক্ষম নয়। <strong> অনুগ্রহ করে আপনার স্বাস্থ্যসেবা </strong>পেশাদার বা প্রযোজ্য নিয়ন্ত্রক সংস্থার পরামর্শের ভিত্তিতে যথাযথ ব্যবস্থা গ্রহণ করা চালিয়ে যান এবং প্রতিদিন আমাদের অ্যাপে নিজেকে পুনরায় মূল্যায়ন করুন।",
+      "resultNotAnalyzeText": "Our algorithm is not able to determine your COVID-19 status. Please submit another cough.",
       "resultDetected": "COVID এর: শনাক্ত করা হয়েছে",
-      "resultDetectedText": "আপনার কন্ঠস্বরে COVID এর সূচক রয়েছে। অনুগ্রহ করে আপনার স্বাস্থ্যসেবা পেশাদারের সাথে যোগাযোগ করুন এবং অতিরিক্ত সতর্কতা অবলম্বন করুন।",
+      "resultDetectedText": "Your voice has indicators of possible COVID-19. Please contact your healthcare professional and take additional precautions.",
       "likelihoodPrefix": "COVID এর ফলাফল:",
       "nextButton": "আরেকটা কাশি রেকর্ড করুন",
       "submitError": "একটি ত্রুটি ঘটেছে ।  অনুগ্রহপূর্বক আবার চেষ্টা করুন । ",

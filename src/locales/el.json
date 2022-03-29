@@ -50,7 +50,7 @@
       "retryButton": "Επανάληψη",
       "releaseButtonStart": "Απελευθερώστε για να ξεκινήσει η εγγραφή",
       "releaseButtonStop": "Αφήστε το για να σταματήσετε την εγγραφή.",
-      "shortRecording": "Παρακαλώ κάντε μια εγγραφή τουλάχιστον 5 δευτερολέπτων."
+      "shortRecording": "Παρακαλώ κάντε μια εγγραφή τουλάχιστον 2 δευτερολέπτων."
     },
     "recordingsRecord": {
       "recordCough": {
@@ -88,13 +88,13 @@
       "processingTitle": "Επεξεργασία...",
       "note": "Σημαντική σημείωση:",
       "result": "Αποτελέσματα",
-      "resultModal": "Αυτή η εφαρμογή δεν μπορεί να προβλέψει την κατάσταση του COVID-19 ή να διαγνώσει οποιαδήποτε ασθένεια, διαταραχή ή άλλη κατάσταση υγείας. Η Virufy διεξάγει έρευνα και θα χρησιμοποιήσει τις πληροφορίες που παρέχετε μόνο για την έρευνα αυτή. Το Virufy δεν θα αντικαταστήσει έναν γιατρό και θα ήθελε να σας υπενθυμίσει ότι είναι δική σας ευθύνη να ζητάτε ιατρική συμβουλή από τον γιατρό σας.",
+      "resultModal": "Important note: This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
       "resultNotDetected": "COVID-19: ΔΕΝ ΕΝΤΟΠΙΖΕΤΑΙ",
       "resultNotDetectedText": "Η φωνή σας δεν φαίνεται να έχει δείκτες COVID-19. Παρακαλούμε <strong>συνεχίστε να λαμβάνετε τα κατάλληλα μέτρα</strong> βάσει των συμβουλών του επαγγελματία υγείας σας ή του αρμόδιου ρυθμιστικού φορέα και επανεκτιμήστε τον εαυτό σας στην εφαρμογή μας καθημερινά.",
       "resultNotAnalyze": "Αδυναμία ανάλυσης",
-      "resultNotAnalyzeText": "Ο αλγόριθμός μας δεν είναι σε θέση να προσδιορίσει την κατάσταση του COVID-19. Παρακαλούμε <strong>συνεχίστε να λαμβάνετε τα κατάλληλα μέτρα</strong> βάσει των συμβουλών του επαγγελματία υγείας σας ή του αρμόδιου ρυθμιστικού φορέα και επανεκτιμήστε τον εαυτό σας στην εφαρμογή μας καθημερινά.",
+      "resultNotAnalyzeText": "Our algorithm is not able to determine your COVID-19 status. Please submit another cough.",
       "resultDetected": "COVID-19: ανιχνεύεται",
-      "resultDetectedText": "Η φωνή σας έχει δείκτες COVID-19. Επικοινωνήστε με τον επαγγελματία υγείας σας και λάβετε πρόσθετες προφυλάξεις.",
+      "resultDetectedText": "Your voice has indicators of possible COVID-19. Please contact your healthcare professional and take additional precautions.",
       "likelihoodPrefix": "Αποτέλεσμα COVID-19:",
       "nextButton": "Υποβάλετε άλλο δέιγμα βήχα",
       "submitError": "Εμφανίστηκε σφάλμα. Προσπαθήστε ξανά.",

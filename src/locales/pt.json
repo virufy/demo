@@ -50,7 +50,7 @@
     "retryButton": "Tente novamente",
     "releaseButtonStart": "Lançamento para iniciar a gravação",
     "releaseButtonStop": "Liberação para parar a gravação",
-    "shortRecording": "Por favor, faça uma gravação de pelo menos 5 segundos"
+    "shortRecording": "Por favor, faça uma gravação de pelo menos 2 segundos"
   },
   "recordingsRecord": {
     "recordCough": {
@@ -88,13 +88,13 @@
     "processingTitle": "Em processamento...",
     "note": "Nota importante:",
     "result": "Resultados",
-    "resultModal": "Este aplicativo não prevê seu status COVID-19 nem diagnostica qualquer doença, distúrbio ou outro problema de saúde. Virufy está conduzindo pesquisas e usará as informações fornecidas apenas para essa pesquisa. Virufy não substituirá um médico e gostaria de lembrar que é sua responsabilidade consultar seu médico.",
+    "resultModal": "Important note: This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
     "resultNotDetected": "COVID-19: NÃO DETECTADO",
     "resultNotDetectedText": "Sua voz não parece ter indicadores de COVID-19. <strong> Continue a tomar as medidas adequadas </strong> com base no conselho de seu profissional de saúde ou órgão regulador aplicável e reavalie-se em nosso aplicativo diariamente.",
     "resultNotAnalyze": "Incapaz de analisar",
-    "resultNotAnalyzeText": "Nosso algoritmo não é capaz de determinar seu status COVID-19. <strong> Continue a tomar as medidas adequadas </strong> com base no conselho de seu profissional de saúde ou órgão regulador aplicável e reavalie-se em nosso aplicativo diariamente.",
+    "resultNotAnalyzeText": "Our algorithm is not able to determine your COVID-19 status. Please submit another cough.",
     "resultDetected": "COVID-19: DETECTADO",
-    "resultDetectedText": "Sua voz tem indicadores de COVID-19. Contacte o seu profissional de saúde e tome precauções adicionais.",
+    "resultDetectedText": "Your voice has indicators of possible COVID-19. Please contact your healthcare professional and take additional precautions.",
     "predictionResultTitle": "Resultado de previsão",
     "likelihoodPrefix": "Resultado da COVID-19:",
     "nextButton": "Envie outra tosse",

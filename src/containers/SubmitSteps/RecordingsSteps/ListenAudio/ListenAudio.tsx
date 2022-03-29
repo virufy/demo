@@ -4,7 +4,7 @@
 import React, { useEffect } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import usePortal from 'react-useportal';
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 
 // Form
 import { useStateMachine } from 'little-state-machine';
@@ -43,6 +43,7 @@ import {
   PlayerBottomThumb,
   PlayerBottomBottom,
   PlayerTimeIndicator,
+  ImportantNote,
 } from './style';
 
 const ListenAudio = ({
@@ -309,6 +310,14 @@ const ListenAudio = ({
           </PlayerPlayButton>
         </PlayerPlayContainer>
       </MainContainer>
+      <ImportantNote>
+        <Trans i18nKey="main:note">
+          <strong>Please note:</strong> This form is for data collection only. It will not predict your COVID-19
+          status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and
+          will use the information you provide for that research only. Virufy will not take place of a doctor and
+          would like to remind you it is your responsibility to seek medical advice from your doctor.
+        </Trans>
+      </ImportantNote>
       {activeStep && (
         <Portal>
           <WizardButtons
