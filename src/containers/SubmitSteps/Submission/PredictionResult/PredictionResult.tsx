@@ -1,24 +1,21 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
-import usePortal from 'react-useportal';
 import { useTranslation, Trans } from 'react-i18next';
 // import axios from 'axios';
 
 // Form
-// import { useStateMachine } from 'little-state-machine';
+import { useStateMachine } from 'little-state-machine';
 
 // Hooks
 import { useModal } from 'hooks/useModals';
 
 // Components
-import WizardButtons from 'components/WizardButtons';
 // import Link from 'components/Link';
 
 // Modals
 import ConfirmationModal from 'modals/ConfirmationModal';
 
 // Update Action
-// import { resetStore } from 'utils/wizard';
+import { resetStore } from 'utils/wizard';
 
 // Header Control
 import useHeaderContext from 'hooks/useHeaderContext';
@@ -46,15 +43,11 @@ import {
 
 const PredictionResult = () => {
   // Hooks
-  const { Portal } = usePortal({
-    bindTo: document && document.getElementById('wizard-buttons') as HTMLDivElement,
-  });
   const {
     setDoGoBack, setTitle, setSubtitle, setType,
   } = useHeaderContext();
-  const history = useHistory();
   const { t } = useTranslation();
-  // const { state, actions } = useStateMachine({ resetStore: resetStore() });
+  const { actions } = useStateMachine({ resetStore: resetStore() });
 
   // States
   // const [submitError, setSubmitError] = React.useState<string | null>(null);
@@ -75,10 +68,6 @@ const PredictionResult = () => {
   }, [processing]);
 
   // Handlers
-  const handleStartAgain = React.useCallback(() => {
-    history.replace('');
-  }, [history]);
-
   /* const handleSubmit = async () => {
     try {
       setSubmitError(null);
@@ -137,7 +126,7 @@ const PredictionResult = () => {
     scrollToTop();
     setTitle('');
     setDoGoBack(() => {});
-    const timer1 = setTimeout(() => setProcessing(false), 5000);
+    const timer1 = setTimeout(() => { setProcessing(false); actions.resetStore({}); }, 5000);
     return () => {
       clearTimeout(timer1);
     };
@@ -241,18 +230,6 @@ const PredictionResult = () => {
           </SubmitError>
         )
       */}
-      {
-        !processing && (
-          <Portal>
-            <WizardButtons
-              invert
-              leftLabel={t('predictionResult:nextButton')}
-              leftHandler={handleStartAgain}
-              leftDisabled={false}
-            />
-          </Portal>
-        )
-      }
     </>
   );
 };
