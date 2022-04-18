@@ -36,6 +36,7 @@ import {
   // LikelihoodPercentageText,
   // SubmitError,
   IntroText,
+  VLogo,
   // IntroText,
 } from './style';
 
@@ -147,7 +148,7 @@ const PredictionResult = () => {
   }, [processing]);
 
   // Always positive result hardcoded
-  const likelihood = 70;
+  const likelihood = -1;
 
   return (
     <>
@@ -178,7 +179,7 @@ const PredictionResult = () => {
               </Trans>
             </ConfirmationModal>
             <PredictionResultContainer>
-              {/* Title, text and image conditional based on range result }
+              {/* Title, text and image conditional based on range result */}
               {(likelihood !== -1 && likelihood < 40) && (
                 <>
                   <TitleResult color="#3DA63B">{t('predictionResult:resultNotDetected')}</TitleResult>
@@ -204,7 +205,7 @@ const PredictionResult = () => {
                 </IntroText>
                 <ImagePredictionResult />
               </>
-              ) */}
+              )}
               {likelihood >= 70 && (
               <>
                 <TitleResult color="#F15B5B">{t('predictionResult:resultDetected')}</TitleResult>
