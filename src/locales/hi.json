@@ -89,7 +89,7 @@
     "processingTitle": "प्रसंस्करण...",
     "note": "महत्वपूर्ण लेख:",
     "result": "परिणाम",
-    "resultModal": "Important note: This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
+    "resultModal": "<strong>Important note:</strong> This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
     "resultNotDetected": "कोविड -19: पता नहीं चला",
     "resultNotDetectedText": " ऐसा लगता है कि आपकी आवाज़ में कोविड-19 के संकेतक नहीं हैं। कृपया अपने स्वास्थ्य देखभाल पेशेवर या लागू नियामक निकाय की सलाह के आधार पर <strong>उचित उपाय करना जारी रखें</strong> और प्रतिदिन हमारे ऐप में अपना पुनर्मूल्यांकन करें।",
     "resultNotAnalyze": "विश्लेषण करने में असमर्थ",
@@ -100,7 +100,9 @@
     "nextButton": "एक और खांसी जमा करें",
     "submitError": "एक त्रुटि पाई गई। कृपया पुन: प्रयास करें।",
     "result_positive": "सकारात्मक",
-    "result_negative": "नकारात्मक"
+    "result_negative": "नकारात्मक",
+    "nextSteps": "अगले कदम",
+    "noteStatement": "<i>इन उत्पादों के संबंध में दिए गए बयानों का मूल्यांकन अमेरिकी खाद्य एवं औषधि प्रशासन द्वारा नहीं किया गया है। एफडीए द्वारा अनुमोदित अनुसंधान द्वारा इन उत्पादों की प्रभावकारिता की पुष्टि नहीं की गई है। इन उत्पादों का उद्देश्य किसी भी बीमारी का निदान, उपचार, इलाज या रोकथाम नहीं है।</i>"
   },
   "footerReportProblems": {
     "message": "कुछ गलत? त्रुटि की रिपोर्ट करें"

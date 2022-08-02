@@ -88,7 +88,7 @@
     "processingTitle": "İşleme...",
     "note": "Önemli Not:",
     "result": "Sonuçlar",
-    "resultModal": "Important note: This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
+    "resultModal": "<strong>Important note:</strong> This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
     "resultNotDetected": "COVID-19: TESPİT EDİLMEDİ",
     "resultNotDetectedText": "Sesinizde COVID-19 belirtileri yok gibi görünüyor. Lütfen sağlık uzmanınızın veya geçerli düzenleyici kurumun tavsiyelerine göre <strong>uygun önlemleri almaya devam edin</strong> ve uygulamamızda her gün kendinizi yeniden değerlendirin.",
     "resultNotAnalyze": "analiz edilemiyor",
@@ -99,7 +99,9 @@
     "nextButton": "Başka bir öksürük gönderin",
     "submitError": "Bir hata oluştu. Lütfen tekrar deneyin.",
     "result_positive": "Olumlu",
-    "result_negative": "Olumsuz"
+    "result_negative": "Olumsuz",
+    "nextSteps": "Sonraki Adımlar",
+    "noteStatement": "<i>Bu ürünlerle ilgili olarak yapılan açıklamalar ABD Gıda ve İlaç Dairesi tarafından değerlendirilmemiştir. Bu ürünlerin etkinliği FDA onaylı araştırmalarla teyit edilmemiştir. Bu ürünler herhangi bir hastalığı teşhis, tedavi, iyileştirme veya önleme amacı taşımamaktadır.</i>"
   },
   "footerReportProblems": {
     "message": "Bir sorun mu var? Hata bildir"

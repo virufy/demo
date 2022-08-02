@@ -88,7 +88,7 @@
       "processingTitle": "กำลังประมวลผล...",
       "note": "โน๊ตสำคัญ:",
       "result": "ผลลัพธ์",
-      "resultModal": "Important note: This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
+      "resultModal": "<strong>Important note:</strong> This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
       "resultNotDetected": "โควิด-19: ตรวจไม่พบ",
       "resultNotDetectedText": "เสียงของคุณดูเหมือนจะไม่มีตัวบ่งชี้ของ COVID-19 โปรด<strong>ดำเนินมาตรการที่เหมาะสมต่อไป</strong>ตามคำแนะนำของบุคลากรทางการแพทย์หรือหน่วยงานกำกับดูแลที่เกี่ยวข้อง และประเมินตนเองในแอปของเราทุกวัน",
       "resultNotAnalyze": "วิเคราะห์ไม่ได้",
@@ -99,7 +99,9 @@
       "nextButton": "บันทึกการไอเพิ่มอีก",
       "submitError": "เกิดข้อผิดพลาด กรุณาลองอีกครั้ง",
       "result_positive": "ผลเป็นบวก",
-      "result_negative": "ผลเป็นลบ"
+      "result_negative": "ผลเป็นลบ",
+      "nextSteps": "ขั้นตอนถัดไป",
+      "noteStatement": "<i>คำชี้แจงเกี่ยวกับผลิตภัณฑ์เหล่านี้ยังไม่ได้รับการประเมินโดยสำนักงานคณะกรรมการอาหารและยาประเทศสหรัฐอเมริกา ประสิทธิภาพของผลิตภัณฑ์เหล่านี้ยังไม่ได้รับการยืนยันโดยการวิจัยที่ได้รับการอนุมัติจาก FDA ผลิตภัณฑ์เหล่านี้ไม่ได้มีวัตถุประสงค์เพื่อวินิจฉัย บำบัด รักษา หรือป้องกันโรคใดๆ</i>"  
     },
     "footerReportProblems": {
       "message": "บางสิ่งผิดปกติ? รายงานข้อผิดพลาด"

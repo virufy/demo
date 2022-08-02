@@ -133,4 +133,9 @@ export const IntroText = styled(IntroductionText)`
   >strong{
     font-weight: 600;
   }
+  >i {
+    margin-top: 20px;
+    display: block;
+  }
+
 `;

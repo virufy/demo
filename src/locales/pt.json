@@ -88,7 +88,7 @@
     "processingTitle": "Em processamento...",
     "note": "Nota importante:",
     "result": "Resultados",
-    "resultModal": "Important note: This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
+    "resultModal": "<strong>Important note:</strong> This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
     "resultNotDetected": "COVID-19: NÃO DETECTADO",
     "resultNotDetectedText": "Sua voz não parece ter indicadores de COVID-19. <strong> Continue a tomar as medidas adequadas </strong> com base no conselho de seu profissional de saúde ou órgão regulador aplicável e reavalie-se em nosso aplicativo diariamente.",
     "resultNotAnalyze": "Incapaz de analisar",
@@ -100,7 +100,9 @@
     "nextButton": "Envie outra tosse",
     "submitError": "Aconteceu um erro. Por favor, tente novamente.",
     "result_positive": "Positivo",
-    "result_negative": "Negativo"
+    "result_negative": "Negativo",
+    "nextSteps": "Próximos Passos",
+    "noteStatement": "<i>As declarações feitas a respeito destes produtos não foram avaliadas pela U.S. Food and Drug Administration. A eficácia destes produtos não foi confirmada pela investigação aprovada pela FDA. Estes produtos não se destinam a diagnosticar, tratar, curar ou prevenir qualquer doença.</i>"
   },
   "footerReportProblems": {
     "message": "Algo errado? Reporte um erro"

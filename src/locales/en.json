@@ -88,7 +88,7 @@
     "processingTitle": "Processing...",
     "note": "Important Note:",
     "result": "Results",
-    "resultModal": "Important note: This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
+    "resultModal": "<strong>Important note:</strong> This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
     "resultNotDetected": "COVID-19: NOT DETECTED",
     "resultNotDetectedText": "Your voice does not seem to have indicators of COVID-19. Please <strong>continue to take appropriate measures</strong> based on the advice of your healthcare professional or applicable regulatory body and reassess yourself in our app daily.",
     "resultNotAnalyze": "Unable to analyze",
@@ -99,7 +99,9 @@
     "nextButton": "Submit another cough",
     "submitError": "An error occurred. Please try again.",
     "result_positive": "Positive",
-    "result_negative": "Negative"
+    "result_negative": "Negative",
+    "nextSteps": "Next Steps",
+    "noteStatement": "<i>The statements made regarding these products have not been evaluated by the U.S. Food and Drug Administration. The efficacy of these products has not been confirmed by FDA-approved research. These products are not intended to diagnose, treat, cure or prevent any disease.</i>"
   },
   "footerReportProblems": {
     "message": "Something wrong? Report an error"
