@@ -48,6 +48,7 @@ const Step2 = (p: Wizard.StepProps) => {
 
   const handleNext = React.useCallback(() => {
     if (p.nextStep) {
+      setActiveStep(false);
       history.push(p.nextStep);
     }
   }, [history, p.nextStep]);

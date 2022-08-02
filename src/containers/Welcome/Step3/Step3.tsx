@@ -32,7 +32,6 @@ const Step3 = (p: Wizard.StepProps) => {
     bindTo: document && document.getElementById('wizard-buttons') as HTMLDivElement,
   });
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [activeStep, setActiveStep] = useState(true);
   const {
     doGoBack, setDoGoBack, setTitle, title, setType, setLogoSize, setSubtitle,
@@ -42,6 +41,7 @@ const Step3 = (p: Wizard.StepProps) => {
   const { t, i18n } = useTranslation();
   const handleNext = React.useCallback(() => {
     if (p.nextStep) {
+      setActiveStep(false);
       history.push(p.nextStep);
     }
   }, [history, p.nextStep]);

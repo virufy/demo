@@ -38,7 +38,6 @@ const Step4 = (p: Wizard.StepProps) => {
     bindTo: document && document.getElementById('wizard-buttons') as HTMLDivElement,
   });
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [activeStep, setActiveStep] = useState(true);
   const {
     setDoGoBack, setTitle, title, setType, setLogoSize, setSubtitle,
