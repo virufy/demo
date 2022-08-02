@@ -97,7 +97,9 @@
     "nextButton": "Submit another cough",
     "submitError": "An error occurred. Please try again.",
     "result_positive": "Positive",
-    "result_negative": "Negative"
+    "result_negative": "Negative",
+    "nextSteps": "Les prochaines étapes",
+    "noteStatement": "<i>Les déclarations faites concernant ces produits n'ont pas été évaluées par la Food and Drug Administration des États-Unis. L'efficacité de ces produits n'a pas été confirmée par des recherches approuvées par la FDA. Ces produits ne sont pas destinés à diagnostiquer, traiter, guérir ou prévenir une quelconque maladie.</i>"
   },
   "footerReportProblems": {
     "message": "Something wrong? Report an error"

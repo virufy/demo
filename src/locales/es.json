@@ -100,7 +100,9 @@
     "nextButton": "Subir otra tos",
     "submitError": "Se produjo un error. Por favor, inténtelo de nuevo.",
     "result_positive": "Positivo",
-    "result_negative": "Negativo"
+    "result_negative": "Negativo",
+    "nextSteps": "Próximos pasos",
+    "noteStatement": "<i>Las afirmaciones realizadas en relación con estos productos no han sido evaluadas por la Administración de Alimentos y Medicamentos de los Estados Unidos. La eficacia de estos productos no ha sido confirmada por investigaciones aprobadas por la FDA. Estos productos no están destinados a diagnosticar, tratar, curar o prevenir ninguna enfermedad.</i>"
   },
   "footerReportProblems": {
     "message": "¿Algo mal? Reportar un problema"

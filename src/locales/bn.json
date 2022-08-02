@@ -88,7 +88,7 @@
       "processingTitle": "প্রক্রিয়াকরণ...",
       "note": "গুরুত্বপূর্ণ তথ্য:",
       "result": "ফলাফল",
-      "resultModal": "Important note: This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
+      "resultModal": "<strong>Important note:</strong> This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
       "resultNotDetected": "COVID এর: সনাক্ত করা হয়নি",
       "resultNotDetectedText": "আপনার কণ্ঠস্বরে COVID এর সূচক আছে বলে মনে হচ্ছে না। <strong> অনুগ্রহ করে আপনার স্বাস্থ্যসেবা </strong>পেশাদার বা প্রযোজ্য নিয়ন্ত্রক সংস্থার পরামর্শের ভিত্তিতে যথাযথ ব্যবস্থা গ্রহণ করা চালিয়ে যান এবং প্রতিদিন আমাদের অ্যাপে নিজেকে পুনরায় মূল্যায়ন করুন।",
       "resultNotAnalyze": "Unable to analyze",
@@ -99,7 +99,9 @@
       "nextButton": "আরেকটা কাশি রেকর্ড করুন",
       "submitError": "একটি ত্রুটি ঘটেছে ।  অনুগ্রহপূর্বক আবার চেষ্টা করুন । ",
       "result_positive": "পজিটিভ",
-      "result_negative": "নেগেটিভ"
+      "result_negative": "নেগেটিভ",
+      "nextSteps": "পরবর্তী পদক্ষেপ",
+      "noteStatement": "<i>এই পণ্য সম্পর্কিত বিবৃতিগুলি মার্কিন খাদ্য ও ওষুধ প্রশাসন দ্বারা মূল্যায়ন করা হয়নি। এই পণ্যগুলির কার্যকারিতা এফডিএ-অনুমোদিত গবেষণা দ্বারা নিশ্চিত করা হয়নি। এই পণ্যগুলি কোন রোগ নির্ণয়, চিকিত্সা, নিরাময় বা প্রতিরোধ করার উদ্দেশ্যে নয়।</i>"  
     },
     "footerReportProblems": {
       "message": "কোন সমস্যা হলে এখানে রিপোর্ট করুন"

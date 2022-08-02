@@ -88,7 +88,7 @@
       "processingTitle": "Επεξεργασία...",
       "note": "Σημαντική σημείωση:",
       "result": "Αποτελέσματα",
-      "resultModal": "Important note: This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
+      "resultModal": "<strong>Important note:</strong> This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
       "resultNotDetected": "COVID-19: ΔΕΝ ΕΝΤΟΠΙΖΕΤΑΙ",
       "resultNotDetectedText": "Η φωνή σας δεν φαίνεται να έχει δείκτες COVID-19. Παρακαλούμε <strong>συνεχίστε να λαμβάνετε τα κατάλληλα μέτρα</strong> βάσει των συμβουλών του επαγγελματία υγείας σας ή του αρμόδιου ρυθμιστικού φορέα και επανεκτιμήστε τον εαυτό σας στην εφαρμογή μας καθημερινά.",
       "resultNotAnalyze": "Αδυναμία ανάλυσης",
@@ -99,7 +99,9 @@
       "nextButton": "Υποβάλετε άλλο δέιγμα βήχα",
       "submitError": "Εμφανίστηκε σφάλμα. Προσπαθήστε ξανά.",
       "result_positive": "Θετικό",
-      "result_negative": "Αρνητικό"
+      "result_negative": "Αρνητικό",
+      "nextSteps": "Επόμενα βήματα",
+      "noteStatement": "<i>Οι δηλώσεις που γίνονται σχετικά με αυτά τα προϊόντα δεν έχουν αξιολογηθεί από τον Οργανισμό Τροφίμων και Φαρμάκων των ΗΠΑ. Η αποτελεσματικότητα αυτών των προϊόντων δεν έχει επιβεβαιωθεί από έρευνα εγκεκριμένη από τον FDA. Τα προϊόντα αυτά δεν προορίζονται για τη διάγνωση, τη θεραπεία, τη θεραπεία ή την πρόληψη οποιασδήποτε ασθένειας.</i>"  
     },
     "footerReportProblems": {
       "message": "Συμβαίνει κάτι λάθος; Αναφέρετε ένα σφάλμα"

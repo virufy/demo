@@ -88,7 +88,7 @@
       "processingTitle": "Боловсруулж байна...",
       "note": "Чухал тэмдэглэл:",
       "result": "Үр дүн",
-      "resultModal": "Important note: This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
+      "resultModal": "<strong>Important note:</strong> This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
       "resultNotDetected": "COVID-19: ИЛРҮҮЛГЭЭГҮЙ",
       "resultNotDetectedText": "Таны хоолойд COVID-19-ийн шинж тэмдэг байхгүй бололтой. Эрүүл мэндийн мэргэжилтэн эсвэл холбогдох зохицуулах байгууллагын зөвлөгөөнд үндэслэн <strong>зохих арга хэмжээг үргэлжлүүлэн авч</strong> өдөр бүр манай аппликейшн дээр өөрийгөө дахин үнэлнэ үү.",
       "resultNotAnalyze": "Шинжилгээ хийх боломжгүй",
@@ -99,7 +99,9 @@
       "nextButton": "Өөр ханиалгаж буй бичлэг илгээх",
       "submitError": "Алдаа гарлаа. Дахин оролдоно уу.",
       "result_positive": "Эерэг",
-      "result_negative": "Сөрөг"
+      "result_negative": "Сөрөг",
+      "nextSteps": "Дараагийн алхмууд",
+      "noteStatement": "<i>Эдгээр бүтээгдэхүүний талаар хийсэн мэдэгдлийг АНУ-ын Хүнс, эмийн хяналтын газраас үнэлээгүй байна. Эдгээр бүтээгдэхүүний үр нөлөө нь FDA-аас батлагдсан судалгаагаар батлагдаагүй байна. Эдгээр бүтээгдэхүүн нь аливаа өвчнийг оношлох, эмчлэх, эмчлэх, урьдчилан сэргийлэх зорилготой биш юм.</i>"  
     },
     "footerReportProblems": {
       "message": "Ямар нэг зүйл буруу байна уу? Алдаа мэдээлэх"

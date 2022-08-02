@@ -5,14 +5,8 @@ import { useTranslation, Trans } from 'react-i18next';
 // Form
 import { useStateMachine } from 'little-state-machine';
 
-// Hooks
-import { useModal } from 'hooks/useModals';
-
 // Components
 // import Link from 'components/Link';
-
-// Modals
-import ConfirmationModal from 'modals/ConfirmationModal';
 
 // Update Action
 import { resetStore } from 'utils/wizard';
@@ -54,7 +48,6 @@ const PredictionResult = () => {
   // const [submitError, setSubmitError] = React.useState<string | null>(null);
   const [processing, setProcessing] = React.useState<boolean>(true);
   // const [likelihood, setLikelihood] = React.useState<number>(-1);
-  const { isOpen, openModal, closeModal } = useModal();
 
   React.useEffect(() => {
     // Hide the Footer Report Problems while processing
@@ -142,7 +135,6 @@ const PredictionResult = () => {
     } else {
       setSubtitle(`${t('predictionResult:result')}`);
       setType('shapeUp');
-      openModal();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [processing]);
@@ -165,19 +157,6 @@ const PredictionResult = () => {
           </ProcessingContainer>
         ) : (
           <>
-            <ConfirmationModal
-              isOpen={isOpen}
-              modalTitle={t('predictionResult:note')}
-              toggle={closeModal}
-              onConfirm={closeModal}
-            >
-              <Trans i18nKey="predictionResult:resultModal">
-                This app will not predict your COVID-19 status or diagnose any disease, disorder,
-                or other health condition. Virufy is conducting research and will use the information
-                you provide for that research only. Virufy will not take place of a doctor and would like to
-                remind you it is your responsiblity to seek medical advice from your doctor.
-              </Trans>
-            </ConfirmationModal>
             <PredictionResultContainer>
               {/* Title, text and image conditional based on range result */}
               {(likelihood !== -1 && likelihood < 40) && (
@@ -195,12 +174,19 @@ const PredictionResult = () => {
               )}
               {((likelihood >= 40 && likelihood < 70) || likelihood === -1) && (
               <>
-                <TitleResult color="#C0B81E">{t('predictionResult:resultNotAnalyze')}</TitleResult>
+                <TitleResult color="#C0B81E">{t('predictionResult:nextSteps')}</TitleResult>
                 <IntroText>
-                  <Trans i18nKey="predictionResult:resultNotAnalyzeText">
-                    Our algorithm is not able to determine your COVID-19 status. Please
-                    <strong>continue to take appropriate measures</strong> based on the advice of your healthcare
-                    professional or applicable regulatory body and reassess yourself in our app daily.
+                  <Trans i18nKey="predictionResult:resultModal">
+                    This app will not predict your COVID-19 status or diagnose any disease, disorder,
+                    or other health condition. Virufy is conducting research and will use the information
+                    you provide for that research only. Virufy will not take place of a doctor and would like to
+                    remind you it is your responsiblity to seek medical advice from your doctor.
+                  </Trans>
+                  <Trans i18nKey="predictionResult:noteStatement">
+                    This app will not predict your COVID-19 status or diagnose any disease, disorder,
+                    or other health condition. Virufy is conducting research and will use the information
+                    you provide for that research only. Virufy will not take place of a doctor and would like to
+                    remind you it is your responsiblity to seek medical advice from your doctor.
                   </Trans>
                 </IntroText>
                 <ImagePredictionResult />
