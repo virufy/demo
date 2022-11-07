@@ -112,6 +112,10 @@ export const WelcomeContent = styled.div<{ maxWidth?: number; mt?: number; mb?: 
   height: 100%;
   ${({ maxWidth }) => maxWidth !== undefined && css`max-width: ${maxWidth}px;`}
 
+  @media screen and (${props => props.theme.breakpoints.mobile}){
+    padding: 0 15px;
+  }
+
   @media screen and (${props => props.theme.breakpoints.tablet}){
     text-align: center;
     margin: ${({ mt = 30 }) => mt}px auto ${({ mb = 30 }) => mb}px;

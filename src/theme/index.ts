@@ -43,6 +43,7 @@ export const layout = {
 };
 
 export const breakpoints = {
+  mobile: 'max-width: 360px',
   tablet: 'min-width: 560px',
 };
 
