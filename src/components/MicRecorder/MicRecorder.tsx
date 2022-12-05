@@ -4,7 +4,9 @@
 import React from 'react';
 import Timer from 'react-compound-timer';
 import { useTranslation } from 'react-i18next';
+
 // Utils
+import { isSafari, isIOS } from 'react-device-detect';
 import RecorderService from 'helper/audio/RecorderService';
 import FileHelper from 'helper/fileHelper';
 
@@ -39,9 +41,9 @@ interface MicRecorderProps {
 
 const baseConfig = {
   usingMediaRecorder: false,
-  sampleRate: 44100,
-  manualEncoderId: 'wav', // wav / mp3 / flac
-  processorBufferSize: 2048, // 4096 flac / 2048 wav
+  sampleRate: 48000,
+  manualEncoderId: isSafari || isIOS ? 'wav' : 'flac', // wav / mp3 / flac
+  processorBufferSize: isSafari || isIOS ? 2048 : 4096, // 4096 flac / 2048 wav
 };
 
 export interface RecorderServiceType {
