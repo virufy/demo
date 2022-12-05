@@ -4,7 +4,7 @@ export default {
     const shouldReload = confirm('A new version is available. Do you want to update?');
     if (shouldReload) {
       registration.unregister().then(() => {
-        window.location.reload();
+        window.location.replace(process.env.PUBLIC_URL);
       });
     }
   },
