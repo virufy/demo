@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 import { isSafari, isIOS } from 'react-device-detect';
 import RecorderService from 'helper/audio/RecorderService';
 import FileHelper from 'helper/fileHelper';
+import { getDuration } from 'helper/getDuration';
 
 // Modals
 import RecordErrorModal from 'modals/RecordErrorModal';
@@ -142,9 +143,11 @@ const MicRecorder = ({
       if (file.size) {
         const audio = new Audio(URL.createObjectURL(file));
         audio.load();
-        const listenerFn = () => {
-          timerRef.current?.setTime(audio.duration * 1000);
+        const listenerFn = async () => {
           audio.removeEventListener('loadedmetadata', listenerFn);
+          getDuration(audio).then(result => {
+            timerRef.current?.setTime(result * 1000);
+          });
         };
         audio.addEventListener('loadedmetadata', listenerFn);
       }
