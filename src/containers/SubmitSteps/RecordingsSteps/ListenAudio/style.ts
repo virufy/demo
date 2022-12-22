@@ -85,6 +85,7 @@ export const PlayerCrossContainer = styled.div`
   margin-right: -20px;
   padding-right: 20px;
   box-sizing: content-box;
+  cursor: pointer;
 `;
 
 export const PlayerCross = styled.img`
