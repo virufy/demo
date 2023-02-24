@@ -8,7 +8,6 @@ import { Controller, useForm } from 'react-hook-form';
 import { useStateMachine } from 'little-state-machine';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-import { isSafari, isIOS } from 'react-device-detect';
 
 // Components
 import WizardButtons from 'components/WizardButtons';
@@ -35,8 +34,6 @@ import {
 const audioMaxSizeInMb = 5;
 
 const mimeTypes = 'audio/wav,audio/wave,audio/wav,audio/x-wav,audio/x-pn-wav,audio/mp3,audio/ogg';
-
-mimeTypes.concat(isSafari || isIOS ? '' : 'audio/flac');
 
 const schema = Yup.object({
   uploadedFile: Yup.mixed()
