@@ -19,11 +19,13 @@ export const StyledSelect = styled.select<StyledSelectProps>`
   font-size: 14px;
   
   height: 48px;
-  max-width: ${({ isMobileFullWidth }) => (isMobileFullWidth ? 'none' : '335px')};
-  width: 100%;
+  max-width: ${({ isMobileFullWidth }) => (isMobileFullWidth ? 'none' : '100%')};
+  width: calc(100% - 40px);
+  margin-left: 20px;
+  margin-right: 20px;
 
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
-    max-width: 348px;
+    max-width: 470px;
     }
 `;

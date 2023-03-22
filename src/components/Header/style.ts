@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { ReactComponent as ArrowftSvg } from 'assets/icons/arrowLeft.svg';
 import { ReactComponent as CloseX } from 'assets/icons/closeX.svg';
 
-export type HeaderType = 'shapeDown' | 'noShape' | 'shapeUp';
+export type HeaderType = 'shapeDown' | 'noShape' | 'shapeUp' | 'nothing';
 
 export const HeaderContainer = styled.div<{ backgroundType?: HeaderType; }>`
   align-items: center;
@@ -35,9 +35,17 @@ export const HeaderContainer = styled.div<{ backgroundType?: HeaderType; }>`
     }
   }};
 
+  ${({ backgroundType }) => backgroundType === 'nothing' && `
+    padding: 0;
+  `}
+
   @media screen and (${props => props.theme.breakpoints.tablet}){
     padding-top: 1.3rem;
     background-color: #FFF;
+
+    ${({ backgroundType }) => backgroundType === 'nothing' && `
+      padding: 0;
+    `}
   }
 `;
 

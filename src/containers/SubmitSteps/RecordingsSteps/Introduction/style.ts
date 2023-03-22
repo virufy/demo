@@ -87,7 +87,7 @@ export const InstructionSubtitle = styled.h2<InstructionSubtitleProps>`
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     margin-left: 0px;
-    max-width: 348px;
+    max-width: 470px;
   }
 `;
 

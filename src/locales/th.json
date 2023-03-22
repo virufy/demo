@@ -13,16 +13,17 @@
       "createdBy": "สร้างโดย",
       "provideAccessCode": "รหัสการเข้าถึง",
       "enterAccessCode": "ใส่รหัสเข้าใช้",
-      "aboutUsTitle": "เกี่ยวกับเรา"
+      "aboutUsTitle": "เกี่ยวกับเรา",
+      "privacyPolicy": "การดำเนินการต่อถือว่าคุณยอมรับเงื่อนไขของนโยบายความเป็นส่วนตัวของเรา"
     },
     "helpVirufy": {
       "ourSupporters": "ผู้สนับสนุนของเรา",
-      "introParagraph": "ยินดีต้อนรับ ! การวิจัยนี้ใช้เวลาประมาณ 5 นาทีเท่านั้น ก่อนเริ่มต้น มารู้จักเรากันก่อน",
-      "aboutParagraph": "<0>Virufy เป็น<strong>องค์กรไม่แสวงหาผลกำไร</strong>ที่กำลังพัฒนาวิธีการใช้<strong>ปัญญาประดิษฐ์ (Al) เพื่อตรวจหา COVID-19 จากรูปแบบการไอ</strong>อย่างรวดเร็วและไม่มีค่าใช้จ่าย ผ่านการใช้สมาร์ทโฟนเพื่อประโยชน์ของประเทศที่มีรายได้น้อย</0><1>ทีมของเราประกอบด้วยนักวิจัยจากกว่า <strong>25 ประเทศ</strong> <3>การวิจัยของเรา</3>แสดงให้เห็นว่าเทคโนโลยี Al อาจสามารถระบุรูปแบบการไอเฉพาะของ COVID ได้</1><2>โดยการรวบรวม<strong>บันทึกการไอ</strong>จากผู้คนทั่วโลก Virufy ทำการปรับปรุงความสามารถของเทคโนโลยี AI ในการจดจำรูปแบบเสียงการไอที่เป็นเอกลักษณ์ของโควิด</2><3><strong>คุณก็เป็นส่วนหนึ่งกับเราได้</strong>ที่จะช่วยผู้คนนับล้านทั่วโลกด้วยการ<strong>ร่วมสนับสนุนอาการไอของคุณ</strong> strong> ในการศึกษาของเรา</3>",
+      "introParagraph": "<strong>โปรดทราบ:</strong> <i>แบบฟอร์มนี้มีไว้สำหรับการรวบรวมข้อมูลเท่านั้น จะไม่ทำนายสถานะ COVID-19 ของคุณหรือวินิจฉัยโรค ความผิดปกติ หรือภาวะสุขภาพอื่นๆ Virufy กำลังดำเนินการวิจัยและจะใช้ข้อมูลที่คุณให้ไว้สำหรับการวิจัยนั้นเท่านั้น Virufy จะไม่ใช้แทนแพทย์ และขอเตือนคุณว่าคุณต้องรับผิดชอบในการขอคำแนะนำทางการแพทย์จากแพทย์ของคุณ</i>",
+    "aboutParagraph": "<0><strong>Virufy</strong> เป็นบริษัท<strong>501(c)(3) ไม่แสวงหากำไร</strong>ที่แข็งแกร่ง โดยมี<strong>อาสาสมัคร/พนักงาน 250 คน</strong> และ <strong>องค์กรพันธมิตร 50 แห่ง< /strong> รวมถึง Amazon Web Services, Stanford COVID-19 Response Innovation Lab และ One Young World เราได้พัฒนาแอปบนสมาร์ทโฟนซึ่งใช้ประโยชน์จาก AI เพื่อวิเคราะห์ลายเซ็นของอาการไอที่บันทึกไว้เพื่อ<strong>ระบุความคล้ายคลึงกันกับข้อมูลการไอที่เป็นบวกของ COVID</strong> Virufy ได้รับการสนับสนุนจากคณาจารย์และศิษย์เก่าจาก UW, Stanford, UC Berkeley, MIT, Harvard และ CMU</0> <1>ด้วยการรวบรวม <strong>บันทึกการไอ</strong> จากผู้คนทั่วโลก Virufy กำลังปรับปรุง ความทนทานของอัลกอริทึม AI ในการจดจำรูปแบบเสียงที่เป็นเอกลักษณ์ของ COVID</1><2><strong>คุณมีอำนาจ</strong>ที่จะช่วยสร้างประโยชน์ให้กับผู้คนนับล้านทั่วโลกด้วยการ<strong>ช่วยไอของคุณ</strong> ในการศึกษาของเรา</2>",
       "bulletsIntro": "<strong>บทนำ: </strong>เกี่ยวกับเราและการแจ้งเตือนความปลอดภัย",
       "bulletCough": "<strong>ไอเข้าโทรศัพท์</strong>",
       "bulletQuestions": "<strong>คำถามสุขภาพเบื้องต้น</strong>",
-      "nextButton": "ต่อไป",
+      "nextButton": "ยินยอม",
       "installApp": "ติดตั้งแอปพลิเคชั่น"
     },
     "beforeStart": {
@@ -91,10 +92,13 @@
       "resultModal": "<strong>Important note:</strong> This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
       "resultNotDetected": "โควิด-19: ตรวจไม่พบ",
       "resultNotDetectedText": "เสียงของคุณดูเหมือนจะไม่มีตัวบ่งชี้ของ COVID-19 โปรด<strong>ดำเนินมาตรการที่เหมาะสมต่อไป</strong>ตามคำแนะนำของบุคลากรทางการแพทย์หรือหน่วยงานกำกับดูแลที่เกี่ยวข้อง และประเมินตนเองในแอปของเราทุกวัน",
-      "resultNotAnalyze": "วิเคราะห์ไม่ได้",
-      "resultNotAnalyzeText": "Our algorithm is not able to determine your COVID-19 status. Please submit another cough.",
+      "resultNotAnalyze": "ไม่สามารถวิเคราะห์อาการไอได้",
+      "resultModalDummy": "<strong>หมายเหตุสำคัญ:</strong> แอปนี้มีไว้สำหรับการสาธิตเท่านั้น และไม่ได้ให้คำทำนายที่แท้จริง โปรดไปที่ Virufy Study เพื่อช่วยเหลืออาการไอของคุณ",
+      "resultNotAnalyzeText": "อัลกอริทึมของเราไม่สามารถระบุสถานะ COVID-19 ของคุณได้ <strong>โปรดส่งไออีกครั้ง</strong>",
+      "resultDetectedDummy": "COVID-19: ตรวจพบ <br/>(ตัวอย่างจำลอง)",
+      "resultDetectedText": "เสียงของคุณมีตัวบ่งชี้ของ COVID-19 ที่เป็นไปได้ <strong>โปรดติดต่อบุคลากรทางการแพทย์ของคุณ</strong> และใช้มาตรการป้องกันเพิ่มเติม",
+      "testForCovid": "การทดสอบสำหรับ COVID-19",
       "resultDetected": "โควิด-19: ตรวจพบ",
-      "resultDetectedText": "Your voice has indicators of possible COVID-19. Please contact your healthcare professional and take additional precautions",
       "likelihoodPrefix": "ผลลัพธ์ของ COVID-19:",
       "nextButton": "บันทึกการไอเพิ่มอีก",
       "submitError": "เกิดข้อผิดพลาด กรุณาลองอีกครั้ง",

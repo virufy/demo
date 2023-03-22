@@ -3,17 +3,23 @@ import { useHistory } from 'react-router-dom';
 import { useTranslation, Trans } from 'react-i18next';
 import usePortal from 'react-useportal';
 
+// Form
+import { useForm, Controller } from 'react-hook-form';
+import { useStateMachine } from 'little-state-machine';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as Yup from 'yup';
+
 // Header Control
 import useHeaderContext from 'hooks/useHeaderContext';
 
 // Components
 import WizardButtons from 'components/WizardButtons';
+import Dropdown from 'components/Dropdown';
 
-// Hooks
-import useWindowSize from 'hooks/useWindowSize';
+// Update Action
+import { updateAction } from 'utils/wizard';
 
 // Theme
-import { colors } from 'theme';
 
 // Assets
 import HeaderSplash from 'assets/images/headerSplash.png';
@@ -21,37 +27,71 @@ import HeaderSplash from 'assets/images/headerSplash.png';
 // Utils
 import { scrollToTop } from 'helper/scrollHelper';
 
+// Data
+import { languageData } from 'data/lang';
+
 // Styles
+import Link from 'components/Link';
 import {
   WelcomeContent,
-  WelcomeSubtitle,
-  WelcomeSubtitleBold,
   WelcomeStyledFormAlternative,
   HeaderImageContainer,
   HeaderImage,
-  WelcomeBullets,
-  BulletIndicator,
   LogoWhiteBG,
+  WelcomeInput,
+  BoldBlackText,
+  WelcomeNote,
+  BoldBlackTextPrivacy,
 } from '../style';
 
 const Step2 = (p: Wizard.StepProps) => {
-  const { width } = useWindowSize();
   const { Portal } = usePortal({
     bindTo: document && document.getElementById('wizard-buttons') as HTMLDivElement,
   });
+  const schema = Yup.object().shape({
+    language: Yup.string().required(),
+  }).defined();
+
+  type Step1Type = Yup.InferType<typeof schema>;
+
+  const {
+    state,
+    actions,
+  } = useStateMachine({ updateAction: updateAction(p.storeKey) });
+  const {
+    setDoGoBack,
+    setType,
+    setTitle,
+  } = useHeaderContext();
+
+  // Hook Form
+  const {
+    control,
+    formState,
+    handleSubmit,
+    watch,
+    reset,
+    // setValue,
+  } = useForm({
+    defaultValues: state?.[p.storeKey],
+    resolver: yupResolver(schema),
+    mode: 'onChange',
+  });
+  const { isValid } = formState;
+  const { t, i18n } = useTranslation();
+
+  React.useEffect(() => {
+    // NOTE: repopulate default values
+    if (state && state[p.storeKey]) {
+      reset(state[p.storeKey]);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [activeStep, setActiveStep] = useState(true);
-  const { setDoGoBack } = useHeaderContext();
 
   const history = useHistory();
-
-  const handleNext = React.useCallback(() => {
-    if (p.nextStep) {
-      setActiveStep(false);
-      history.push(p.nextStep);
-    }
-  }, [history, p.nextStep]);
 
   const doBack = useCallback(() => {
     if (p.previousStep) {
@@ -63,15 +103,28 @@ const Step2 = (p: Wizard.StepProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const onSubmit = async (values: Step1Type) => {
+    if (values) {
+      actions.updateAction(values);
+      if (p.nextStep) {
+        setActiveStep(false);
+        history.push(p.nextStep);
+      }
+    }
+  };
+
   useEffect(() => {
     scrollToTop();
     setDoGoBack(() => doBack);
-  }, [doBack, setDoGoBack]);
+    setType('nothing');
+    setTitle('');
+  }, [doBack, setDoGoBack, setTitle, setType]);
 
-  // Memos
-  const isDesktop = React.useMemo(() => width && width > 560, [width]);
+  const lang = watch('language');
 
-  const { t } = useTranslation();
+  React.useEffect(() => {
+    i18n.changeLanguage(lang);
+  }, [i18n, lang]);
 
   return (
     <WelcomeStyledFormAlternative>
@@ -81,57 +134,82 @@ const Step2 = (p: Wizard.StepProps) => {
         />
         <LogoWhiteBG />
       </HeaderImageContainer>
-      <WelcomeSubtitleBold
-        mt={width && width > 560 ? 38 : 0}
-        fontSize={isDesktop ? 32 : 24}
-        fontColor="#3578DE"
-        textAlign="center"
-        isBold
-      >
-        <strong>{t('main:paragraph2', 'Covid-19 Cough Data Collection Study')}</strong>
-      </WelcomeSubtitleBold>
 
-      <WelcomeContent maxWidth={335}>
-        <WelcomeSubtitle mt={0} mb={0} textAlign="left" fontColor={colors.mineShaft}>
-          <Trans i18nKey="helpVirufy:introParagraph">
-            <p>
-              Welcome to our study! This should only take you about 5 minutes to complete.
-              Before we begin, let’s discuss what we will cover:
-            </p>
-          </Trans>
-        </WelcomeSubtitle>
+      {/* Language */}
+      <BoldBlackText>
+        {t('main:selectYourLanguage', 'Language')}
+      </BoldBlackText>
 
-        <WelcomeSubtitle mt={width && width > 560 ? 15 : 7} isBold textAlign="left">
-          <WelcomeBullets>
-            <BulletIndicator>1</BulletIndicator>
-          </WelcomeBullets>
-          <Trans i18nKey="helpVirufy:bulletsIntro">
-            <strong>Intro:</strong>About us and Safety Reminders
+      <Controller
+        control={control}
+        name="language"
+        defaultValue={i18n.language.split('-')[0] || languageData[0].code}
+        render={({ onChange, value }) => (
+          <Dropdown
+            onChange={e => onChange(e.currentTarget.value)}
+            value={value}
+          >
+            {
+                languageData.map(({ code, label }) => (
+                  <option
+                    key={code}
+                    id={code}
+                    value={code}
+                  >
+                    {label}
+                  </option>
+                ))
+              }
+          </Dropdown>
+        )}
+      />
+
+      {/* Language */}
+      <BoldBlackText>
+        {t('main:enterAccessCode', 'Enter access code:')}
+      </BoldBlackText>
+      <Controller
+        control={control}
+        name="accessCode"
+        defaultValue=""
+        render={({ onChange, value, name }) => (
+          <>
+            <WelcomeInput
+              name={name}
+              value={value}
+              onChange={onChange}
+              type="text"
+              autoComplete="Off"
+            />
+          </>
+        )}
+      />
+
+      <WelcomeContent>
+        <WelcomeNote>
+          <Trans i18nKey="main:note">
+            <strong>Please note:</strong> This form is for data collection only. It will not predict your COVID-19
+            status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and
+            will use the information you provide for that research only. Virufy will not take place of a doctor and
+            would like to remind you it is your responsibility to seek medical advice from your doctor.
           </Trans>
-        </WelcomeSubtitle>
-        <WelcomeSubtitle mt={width && width > 560 ? 20 : 10} isBold textAlign="left">
-          <WelcomeBullets>
-            <BulletIndicator>2</BulletIndicator>
-          </WelcomeBullets>
-          <Trans i18nKey="helpVirufy:bulletCough">
-            <strong>Cough Into Phone</strong>
-          </Trans>
-        </WelcomeSubtitle>
-        <WelcomeSubtitle mt={width && width > 560 ? 20 : 10} isBold textAlign="left">
-          <WelcomeBullets>
-            <BulletIndicator>3</BulletIndicator>
-          </WelcomeBullets>
-          <Trans i18nKey="helpVirufy:bulletQuestions">
-            <strong>Quick Health Questions</strong>
-          </Trans>
-        </WelcomeSubtitle>
+        </WelcomeNote>
+
+        <BoldBlackTextPrivacy>
+          <Link to="https://virufy.org/es/privacy_policy/" target="_blank">
+            <Trans i18nKey="main:privacyPolicy">
+              By proceeding you accept the terms of our Privacy Policy
+            </Trans>
+          </Link>
+        </BoldBlackTextPrivacy>
 
         {activeStep && (
           <Portal>
             <WizardButtons
               invert
               leftLabel={t('helpVirufy:nextButton')}
-              leftHandler={handleNext}
+              leftHandler={handleSubmit(onSubmit)}
+              leftDisabled={!isValid}
             />
           </Portal>
         )}

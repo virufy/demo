@@ -1,12 +1,11 @@
 import React from 'react';
 import { useTranslation, Trans } from 'react-i18next';
-// import axios from 'axios';
+import usePortal from 'react-useportal';
+import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 // Form
 import { useStateMachine } from 'little-state-machine';
-
-// Components
-// import Link from 'components/Link';
 
 // Update Action
 import { resetStore } from 'utils/wizard';
@@ -18,6 +17,7 @@ import useHeaderContext from 'hooks/useHeaderContext';
 import { scrollToTop } from 'helper/scrollHelper';
 
 // Styles
+import WizardButtons from 'components/WizardButtons';
 import {
   Title,
   ImageProcessing,
@@ -25,16 +25,13 @@ import {
   PredictionResultContainer,
   TitleResult,
   ImagePredictionResult,
-  // VLogo,
-  // LikelihoodText,
-  // LikelihoodPercentageText,
-  // SubmitError,
   IntroText,
-  VLogo,
-  // IntroText,
+  StyledLow,
+  StyledHigh,
+  SubmitError,
 } from './style';
 
-// const predictionEndpointUrl = process.env.REACT_APP_PREDICTION_ENDPOINT || '';
+const predictionEndpointUrl = process.env.REACT_APP_PREDICTION_ENDPOINT || '';
 
 const PredictionResult = () => {
   // Hooks
@@ -42,12 +39,18 @@ const PredictionResult = () => {
     setDoGoBack, setTitle, setSubtitle, setType,
   } = useHeaderContext();
   const { t } = useTranslation();
-  const { actions } = useStateMachine({ resetStore: resetStore() });
+  const { actions, state } = useStateMachine({ resetStore: resetStore() });
+  const { Portal } = usePortal({
+    bindTo: document && document.getElementById('wizard-buttons') as HTMLDivElement,
+  });
+  const history = useHistory();
 
   // States
-  // const [submitError, setSubmitError] = React.useState<string | null>(null);
+  const [errorCode, setErrorCode] = React.useState<string | null>(null);
+  const [accessCode, setAccessCode] = React.useState<string | null>(null);
   const [processing, setProcessing] = React.useState<boolean>(true);
-  // const [likelihood, setLikelihood] = React.useState<number>(-1);
+  const [prediction, setPrediction] = React.useState<string>('unknown');
+  const [submitError, setSubmitError] = React.useState<string | null>(null);
 
   React.useEffect(() => {
     // Hide the Footer Report Problems while processing
@@ -62,7 +65,7 @@ const PredictionResult = () => {
   }, [processing]);
 
   // Handlers
-  /* const handleSubmit = async () => {
+  const handleSubmit = async () => {
     try {
       setSubmitError(null);
       if (state && state.welcome && state['submit-steps']) {
@@ -80,70 +83,65 @@ const PredictionResult = () => {
 
         body.append('accessCode', state.welcome?.accessCode ?? '');
 
-        // Restart
-        actions.resetStore({});
+        body.append('patientId', 'demo-app');
 
         const predictionResult = await axios.post(predictionEndpointUrl, body, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
         });
-        if (predictionResult.data && ('prediction' in predictionResult.data)) {
+        if (predictionResult.data) {
           setProcessing(false);
-          const result = predictionResult.data.prediction;
-          let resultPercentage = -1;
-          try {
-            resultPercentage = parseFloat(result.match(/\D*(?<percentage>[\d.]+)/)?.groups?.percentage);
-            if (Number.isNaN(resultPercentage)) {
-              resultPercentage = -1;
-            }
-          } catch {
-            resultPercentage = -1;
-          }
-          setLikelihood(resultPercentage);
-          // setLikelihood(t('predictionResult:result', { context: result, defaultValue: result }));
-        } else {
-          setProcessing(false);
-          setLikelihood(-1);
+          setPrediction(predictionResult.data.prediction);
+          setErrorCode(predictionResult.data.errorCode);
+          actions.resetStore({});
         }
       } else {
-        handleStartAgain();
+        actions.resetStore({});
       }
-    } catch (error) {
-      console.log('Error', error);
+    } catch (err) {
+      console.log('Error', err);
       setSubmitError(t('predictionResult:submitError'));
     }
-  }; */
+  };
+
+  const handleReturnMain = React.useCallback(() => {
+    history.replace('step-record/cough');
+  }, [history]);
 
   // Effects
   React.useEffect(() => {
+    setAccessCode(state.welcome?.accessCode ?? '');
     scrollToTop();
     setTitle('');
     setDoGoBack(() => {});
+    setType('noShape');
     const timer1 = setTimeout(() => { setProcessing(false); actions.resetStore({}); }, 5000);
     return () => {
       clearTimeout(timer1);
     };
-    // handleSubmit();
+    handleSubmit();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   React.useEffect(() => {
     if (processing) {
       setSubtitle('');
-      setType('noShape');
     } else {
       setSubtitle(`${t('predictionResult:result')}`);
-      setType('shapeUp');
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [processing]);
 
   // Always positive result hardcoded
-  const likelihood = -1;
 
   return (
     <>
+      {(errorCode || submitError) && (
+      <SubmitError>
+        {errorCode ? `${t('predictionResult:error')} ${errorCode}` : submitError}
+      </SubmitError>
+      )}
       {
         processing ? (
           <ProcessingContainer>
@@ -157,66 +155,114 @@ const PredictionResult = () => {
           </ProcessingContainer>
         ) : (
           <>
-            <PredictionResultContainer>
-              {/* Title, text and image conditional based on range result */}
-              {(likelihood !== -1 && likelihood < 40) && (
-                <>
-                  <TitleResult color="#3DA63B">{t('predictionResult:resultNotDetected')}</TitleResult>
+            {
+            !accessCode
+              ? (
+                <PredictionResultContainer>
+                  <Title>
+                    {t('predictionResult:result')}
+                  </Title>
+                  <TitleResult color="#FF4444">
+                    <Trans i18nKey="predictionResult:resultDetectedDummy" />
+                  </TitleResult>
+                  <StyledHigh />
                   <IntroText>
-                    <Trans i18nKey="predictionResult:resultNotDetectedText">
-                      Your voice does not seem to have indicators of COVID-19. Please
-                      <strong>continue to take appropriate measures</strong> based on the advice of
-                      your healthcare professional or applicable regulatory body and reassess yourself in our app daily.
+                    <Trans i18nKey="predictionResult:resultDetectedText">
+                      {/* eslint-disable-next-line max-len */}
+                      Your voice has indicators of COVID-19. Please contact your
+                      healthcare professional and take additional precautions.
                     </Trans>
                   </IntroText>
-                  <VLogo />
+                  <ImagePredictionResult />
+                </PredictionResultContainer>
+              ) : (
+                <>
+                  <PredictionResultContainer>
+                    <Title>
+                      {t('predictionResult:result')}
+                    </Title>
+                    {/* Title, text and image conditional based on range result */}
+                    {prediction === 'positive' && (
+                      <>
+                        <TitleResult color="#4FDB76">{t('predictionResult:resultNotDetected')}</TitleResult>
+                        <StyledLow />
+                        <IntroText>
+                          <Trans i18nKey="predictionResult:resultNotDetectedText">
+                            {/* eslint-disable-next-line max-len */}
+                            Your voice does not seem to have indicators of COVID-19. Please <strong>continue to take appropriate measures</strong> based on the advice of your healthcare professional or applicable regulatory body and reassess yourself in our app daily.
+                          </Trans>
+                        </IntroText>
+                      </>
+                    )}
+                    {prediction === 'unknown' && (
+                      <>
+                        <TitleResult>{t('predictionResult:resultNotAnalyze')}</TitleResult>
+                        <IntroText>
+                          <Trans i18nKey="predictionResult:resultNotAnalyzeText">
+                            Our algorithm is not able to determine your COVID-19 status.
+                            <strong>Please submit another cough</strong>.
+                          </Trans>
+                        </IntroText>
+                      </>
+                    )}
+                    {prediction === 'negative' && (
+                      <>
+                        <StyledHigh />
+                        <TitleResult color="#FF4444">{t('predictionResult:resultDetected')}</TitleResult>
+                        <IntroText>
+                          <Trans i18nKey="predictionResult:resultDetectedText">
+                            Your voice has indicators of COVID-19. Please contact your
+                            healthcare professional and take additional precautions.
+                          </Trans>
+                        </IntroText>
+                      </>
+                    )}
+                  </PredictionResultContainer>
                 </>
-              )}
-              {((likelihood >= 40 && likelihood < 70) || likelihood === -1) && (
-              <>
-                <TitleResult color="#C0B81E">{t('predictionResult:nextSteps')}</TitleResult>
-                <IntroText>
-                  <Trans i18nKey="predictionResult:resultModal">
-                    This app will not predict your COVID-19 status or diagnose any disease, disorder,
-                    or other health condition. Virufy is conducting research and will use the information
-                    you provide for that research only. Virufy will not take place of a doctor and would like to
-                    remind you it is your responsiblity to seek medical advice from your doctor.
-                  </Trans>
-                  <Trans i18nKey="predictionResult:noteStatement">
-                    This app will not predict your COVID-19 status or diagnose any disease, disorder,
-                    or other health condition. Virufy is conducting research and will use the information
-                    you provide for that research only. Virufy will not take place of a doctor and would like to
-                    remind you it is your responsiblity to seek medical advice from your doctor.
-                  </Trans>
-                </IntroText>
-                <ImagePredictionResult />
-              </>
-              )}
-              {likelihood >= 70 && (
-              <>
-                <TitleResult color="#F15B5B">{t('predictionResult:resultDetected')}</TitleResult>
-                <IntroText>
-                  <Trans i18nKey="predictionResult:resultDetectedText">
-                    Your voice has indicators of COVID-19. Please contact your
-                    healthcare professional and take additional precautions.
-                  </Trans>
-                </IntroText>
-                <ImagePredictionResult />
-              </>
-              )}
-            </PredictionResultContainer>
+              )
+          }
           </>
         )
       }
 
-      {/* Bottom Buttons }
-      {
+      {/* Bottom Buttons */}
+      <Portal>
+        {
+          !processing && (
+            <>
+              <IntroText>
+                {
+                  accessCode
+                    ? (
+                      <Trans i18nKey="predictionResult:resultModal">
+                        {/* eslint-disable-next-line max-len */}
+                        <strong>Aviso importante:</strong> Esta aplicación no predecirá su estado de COVID-19 ni diagnosticará ninguna enfermedad, trastorno u otra condición de salud. Virufy está llevando a cabo una investigación y utilizará la información que proporciones únicamente para dicha investigación. Virufy no sustituirá a un médico y le recuerda que es su responsabilidad buscar consejo médico de su médico.
+                      </Trans>
+                    ) : (
+                      <Trans i18nKey="predictionResult:resultModalDummy">
+                        {/* eslint-disable-next-line max-len */}
+                        <strong>Aviso importante:</strong> Esta aplicación no predecirá su estado de COVID-19 ni diagnosticará ninguna enfermedad, trastorno u otra condición de salud. Virufy está llevando a cabo una investigación y utilizará la información que proporciones únicamente para dicha investigación. Virufy no sustituirá a un médico y le recuerda que es su responsabilidad buscar consejo médico de su médico.
+                      </Trans>
+                    )
+                }
+              </IntroText>
+              <WizardButtons
+                nuevaLogo={prediction === 'positive'}
+                invert
+                leftLabel={prediction === 'positive' ? t('predictionResult:testForCovid') : t('predictionResult:nextButton')}
+                leftHandler={prediction === 'positive' ? handleReturnMain : handleReturnMain}
+              />
+            </>
+          )
+        }
+        {
         submitError && (
           <SubmitError>
             {submitError}
           </SubmitError>
         )
-      */}
+      }
+      </Portal>
     </>
   );
 };

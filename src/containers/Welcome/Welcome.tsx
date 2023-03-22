@@ -20,15 +20,7 @@ const baseUrl = '/welcome';
 
 const stepsWithoutDots: Wizard.Step[] = [
   {
-    path: '',
-    componentPath: 'Welcome/Step1',
-    props: {
-      storeKey: StoreKey,
-      nextStep: `${baseUrl}/step-2`,
-    },
-  },
-  {
-    path: '/step-2',
+    path: '/',
     componentPath: 'Welcome/Step2',
     props: {
       storeKey: StoreKey,
@@ -45,15 +37,6 @@ const steps: Wizard.Step[] = [
     props: {
       storeKey: StoreKey,
       previousStep: `${baseUrl}/step-2`,
-      nextStep: `${baseUrl}/step-4`,
-    },
-  },
-  {
-    path: '/step-4',
-    componentPath: 'Welcome/Step4',
-    props: {
-      storeKey: StoreKey,
-      previousStep: `${baseUrl}/step-3`,
       nextStep: '/submit-steps/step-record/cough',
     },
   },
