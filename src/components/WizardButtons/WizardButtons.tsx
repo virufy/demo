@@ -18,7 +18,7 @@ interface WizardButtonsProps {
   rightLabel?: string;
   rightDisabled?: boolean;
   rightHandler?: () => void;
-  nuevaLogo?: boolean;
+  showNuevaLogo?: boolean;
 }
 
 const WizardButtons = React.memo(({
@@ -29,11 +29,11 @@ const WizardButtons = React.memo(({
   rightLabel,
   rightDisabled,
   rightHandler,
-  nuevaLogo,
+  showNuevaLogo,
 }: WizardButtonsProps) => (
   <WizardButtonsContainer>
     {
-      nuevaLogo && <NuevaLogo />
+      showNuevaLogo && <NuevaLogo />
     }
     <Button
       dark={invert}

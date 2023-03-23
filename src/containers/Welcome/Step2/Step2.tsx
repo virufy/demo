@@ -44,16 +44,17 @@ import {
   BoldBlackTextPrivacy,
 } from '../style';
 
+const schema = Yup.object().shape({
+  language: Yup.string().required(),
+  accessCode: Yup.string(),
+}).defined();
+
+type Step2Type = Yup.InferType<typeof schema>;
+
 const Step2 = (p: Wizard.StepProps) => {
   const { Portal } = usePortal({
     bindTo: document && document.getElementById('wizard-buttons') as HTMLDivElement,
   });
-  const schema = Yup.object().shape({
-    language: Yup.string().required(),
-  }).defined();
-
-  type Step1Type = Yup.InferType<typeof schema>;
-
   const {
     state,
     actions,
@@ -103,7 +104,7 @@ const Step2 = (p: Wizard.StepProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const onSubmit = async (values: Step1Type) => {
+  const onSubmit = async (values: Step2Type) => {
     if (values) {
       actions.updateAction(values);
       if (p.nextStep) {

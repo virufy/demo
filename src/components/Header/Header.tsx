@@ -87,7 +87,6 @@ const Header = () => {
         {(type === 'shapeDown' && !title) && <><LogoDemo src={Logo} size={logoSize} /> <Subtitle colorType={type}>{subtitle}</Subtitle></>}
         {(type === 'shapeUp' && !title) && <><LogoDemo src={Logo} size={logoSize} /> <Subtitle colorType={type} pb={30} mt={20}>{subtitle}</Subtitle></>}
         {(type !== 'noShape' && title && !subtitle) && <Title pb={40}>{title}</Title>}
-        {(type === 'nothing')}
       </TitleContainer>
     </HeaderContainer>
   );

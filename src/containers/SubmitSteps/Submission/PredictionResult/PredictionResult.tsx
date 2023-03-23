@@ -247,7 +247,7 @@ const PredictionResult = () => {
                 }
               </IntroText>
               <WizardButtons
-                nuevaLogo={prediction === 'positive'}
+                showNuevaLogo={prediction === 'positive'}
                 invert
                 leftLabel={prediction === 'positive' ? t('predictionResult:testForCovid') : t('predictionResult:nextButton')}
                 leftHandler={prediction === 'positive' ? handleReturnMain : handleReturnMain}
