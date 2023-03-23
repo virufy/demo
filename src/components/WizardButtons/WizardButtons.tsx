@@ -6,6 +6,7 @@ import Button from 'components/Button';
 
 // Styles
 import {
+  NuevaLogo,
   WizardButtonsContainer,
 } from './style';
 
@@ -17,6 +18,7 @@ interface WizardButtonsProps {
   rightLabel?: string;
   rightDisabled?: boolean;
   rightHandler?: () => void;
+  showNuevaLogo?: boolean;
 }
 
 const WizardButtons = React.memo(({
@@ -27,8 +29,12 @@ const WizardButtons = React.memo(({
   rightLabel,
   rightDisabled,
   rightHandler,
+  showNuevaLogo,
 }: WizardButtonsProps) => (
   <WizardButtonsContainer>
+    {
+      showNuevaLogo && <NuevaLogo />
+    }
     <Button
       dark={invert}
       disabled={leftDisabled}

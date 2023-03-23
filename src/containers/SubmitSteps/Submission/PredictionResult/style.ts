@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 // Images
+import { ReactComponent as HighSVG } from 'assets/images/high.svg';
+import { ReactComponent as LowSVG } from 'assets/images/low.svg';
 import { ReactComponent as ProcessingSVG } from 'assets/images/processing.svg';
 import { ReactComponent as PredictionResultSVG } from 'assets/images/prediction-result.svg';
 import { ReactComponent as VLogoSVG } from 'assets/VLogo.svg';
@@ -45,10 +47,10 @@ export const TitleResult = styled.h1<{ color?: string; }>`
   font-style: normal;
   font-weight: bold;
   font-size: 22px;
-  line-height: 48px;
+  line-height: 28px;
   color: ${({ theme, color }) => (color || theme.colors.mineShaft)};
   text-align: center;
-  margin: 55px 0px 10px 0px;
+  margin: 44px 0px 10px 0px;
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     text-align: center;
@@ -126,9 +128,11 @@ export const SubmitError = styled(SubmitText)`
 `;
 
 export const IntroText = styled(IntroductionText)`
-  max-width: 307px;
+  max-width: 100%;
   margin: 0px auto 36px auto;
-  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 14px;
 
   >strong{
     font-weight: 600;
@@ -138,4 +142,19 @@ export const IntroText = styled(IntroductionText)`
     display: block;
   }
 
+  @media screen and (${props => props.theme.breakpoints.tablet}){
+    max-width: 470px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+`;
+
+export const StyledLow = styled(LowSVG)`
+  margin: 37px auto -20px;
+  display: block;
+`;
+
+export const StyledHigh = styled(HighSVG)`
+  margin: 37px auto -20px;
+  display: block;
 `;

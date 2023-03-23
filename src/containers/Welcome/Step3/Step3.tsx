@@ -22,7 +22,6 @@ import {
   WelcomeContent,
   WelcomeSubtitle,
   WelcomeStyledFormAlternative,
-  WelcomeNote,
   CoupleAboutUs,
   ShapeDownContainer,
 } from '../style';
@@ -92,14 +91,6 @@ const Step3 = (p: Wizard.StepProps) => {
             </p>
           </Trans>
         </WelcomeSubtitle>
-        <WelcomeNote>
-          <Trans i18nKey="main:note">
-            <strong>Please note:</strong> This form is for data collection only. It will not predict your COVID-19
-            status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and
-            will use the information you provide for that research only. Virufy will not take place of a doctor and
-            would like to remind you it is your responsibility to seek medical advice from your doctor.
-          </Trans>
-        </WelcomeNote>
       </WelcomeContent>
 
       {activeStep && (

@@ -13,16 +13,17 @@
     "createdBy": "作成者",
     "provideAccessCode": "アクセスコード",
     "enterAccessCode": "アクセスコードの入力",
-    "aboutUsTitle": "会社概要"
+    "aboutUsTitle": "会社概要",
+    "privacyPolicy": "次に進むと、当社のプライバシーポリシーの条項に同意したことになります。"
   },
   "helpVirufy": {
     "ourSupporters": "サポーター",
-    "introParagraph": "私たちの研究にようこそ! このページは、5分程度でご覧いただけます。始める前に、何を取り上げるかについて説明します。",
-    "aboutParagraph": "<0>Virufyは<strong>非営利団体</strong>で、低所得国のために、スマートフォンを使って、<strong>人工知能（Al）を使って咳のパターンからCOVID-19をスクリーニングする手段を、迅速かつ無料で開発しようとしています</0><1>。</1><2>世界中の人々から<strong>咳の録音</strong>を集めることで、VirufyはCOVIDのユニークな音のパターンを認識するAIアルゴリズムの堅牢性を向上させています。</2><3><strong>あなたの咳を私たちの研究に<strong>貢献することで、世界中の何百万人もの人々に利益をもたらす力があります。",
+    "introParagraph": "<strong>ご注意ください：</strong> <i>このフォームはデータ収集のためだけのものです。あなたのCOVID-19の状態を予測したり、病気、障害、その他の健康状態を診断するものではありません。Virufyは研究を行っており、提供された情報はその研究のためにのみ使用されます。Virufyは医師の代わりにはなりませんので、医師の診断を受けるのはご自身の責任であることをご理解ください。</i>",
+    "aboutParagraph": "<0><strong>Virufy</strong> は <strong>501(c)(3) 非営利団体</strong> であり、<strong>250 人のボランティア/スタッフ</strong> と <strong>50 のパートナー組織<strong>を擁しています。 /strong> には、アマゾン ウェブ サービス、スタンフォード COVID-19 対応イノベーション ラボ、One Young World が含まれます。 AI を活用して記録された咳の特徴を分析し、<strong>COVID 陽性の咳データとの類似性を判断する</strong>スマートフォン アプリを開発しました。 Virufy は、UW、スタンフォード、UC バークレー、MIT、ハーバード、CMU の教職員と卒業生によってサポートされています。</0> <1>世界中の人々から<strong>咳の記録</strong>を収集することで、Virufy はCOVID の独特な音のパターンを認識する AI アルゴリズムの堅牢性。</1><2><strong>あなたには、<strong>咳をする</strong>ことで世界中の何百万人もの人々に利益をもたらす力があります</strong>。 </2>",
     "bulletsIntro": "<strong>Intro: </strong>会社概要と安全に関する注意事項",
     "bulletCough": "<strong>電話に向かって咳をする</strong>。",
     "bulletQuestions": "<strong>健康に関する簡単な質問</strong>",
-    "nextButton": "次のページ",
+    "nextButton": "コンセンサス",
     "installApp": "アプリとしてインストールする"
   },
   "beforeStart": {
@@ -91,10 +92,13 @@
     "resultModal": "<strong>Important note:</strong> This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
     "resultNotDetected": "COVID-19: 検出されず",
     "resultNotDetectedText": "あなたの声にはCOVID-19の指標がないようです。 医療専門家や該当する規制機関のアドバイスに基づいて、<strong>適切な対策を継続し、日々アプリで自分自身を見つめ直してください</strong>",
-    "resultNotAnalyze": "分析できない",
-    "resultNotAnalyzeText": "Our algorithm is not able to determine your COVID-19 status. Please submit another cough.",
+    "resultNotAnalyze": "咳の分析ができない",
+    "resultModalDummy": "<strong>重要なお知らせです：</strong> 本アプリはデモ用であり、真の予測を提供するものではありません。咳の投稿はVirufy Studyでお願いします。",
+    "resultNotAnalyzeText": "当社のアルゴリズムでは、お客様のCOVID-19の状態を判断することができません。<strong>別の咳を提出してください</strong>.",
+    "resultDetectedDummy": "COVID-19: ディテクト <br/>(ダミーの例)",
+    "resultDetectedText": "あなたの声にはCOVID-19の可能性を示す指標があります。 <strong>医療従事者にご相談ください</strong>に連絡し、追加の予防策を講じてください。",
+    "testForCovid": "COVID-19のテスト",
     "resultDetected": "COVID-19: 検出された",
-    "resultDetectedText": "Your voice has indicators of possible COVID-19. Please contact your healthcare professional and take additional precautions.",
     "likelihoodPrefix": "COVID-19の結果。",
     "nextButton": "別の咳を送信する",
     "submitError": "エラーが発生しました。もう一度お試しください。",

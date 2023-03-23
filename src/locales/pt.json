@@ -13,17 +13,18 @@
     "createdBy": "Criado por",
     "provideAccessCode": "Código de acesso",
     "enterAccessCode": "Digite seu código de acesso",
-    "aboutUsTitle": "Sobre Nós"
+    "aboutUsTitle": "Sobre Nós",
+    "privacyPolicy": "Ao proceder, aceita os termos da nossa Política de Privacidade"
   },
   "helpVirufy": {
     "ourSupporters": "Nossos apoiadores",
-    "introParagraph": "Bem-vindo ao nosso estudo! Isso deve levar apenas cerca de 5 minutos para ser concluído. Antes de começar, vamos discutir o que iremos cobrir:",
-    "aboutParagraph": "<0>Virufy é uma <strong>organização sem fins lucrativos</strong> que está trabalhando para desenvolver os meios para usar <strong> inteligência artificial (Al) para selecionar COVID-19 a partir de padrões de tosse</strong>rapidamente e sem custo através do uso de um smartphone em benefício de países de baixa renda.</0><1>Nossa equipe inclui pesquisadores de mais de <strong>25 países</strong>. <3>Nossa pesquisa</3> mostrou que a tecnologia Al pode ser capaz de identificar a assinatura única da COVID.</1><2> Ao coletar <strong> gravações de tosse</strong> de pessoas ao redor do mundo, a Virufy está melhorando a robustez de seu algoritmo de IA ao reconhecer o padrão de som único da COVID. </2><3><strong>Você tem o poder</strong> de ajudar a beneficiar milhões de pessoas em todo o mundo ao <strong>contribuir com sua tosse</strong> em nosso estudo.</3>",
+    "introParagraph": "<strong>Por favor note:</strong> <i>Este formulário é apenas para recolha de dados. Não irá prever o seu estatuto de COVID-19 nem diagnosticar qualquer doença, desordem, ou outro estado de saúde. A Virufy está a realizar investigação e utilizará a informação que fornecer apenas para essa investigação. A Virufy não terá lugar por parte de um médico e gostaria de lhe lembrar que é da sua responsabilidade procurar aconselhamento médico junto do seu médico.</i>",
+    "aboutParagraph": "<0><strong>Virufy</strong> é uma robusta empresa <strong>501(c)(3) sem fins lucrativos</strong> com <strong>250 voluntários/funcionários</strong> e <strong>50 organizações parceiras< /strong> incluindo Amazon Web Services, Stanford COVID-19 Response Innovation Lab e One Young World. Desenvolvemos um aplicativo para smartphone que aproveita a IA para analisar a assinatura de tosses registradas para <strong>determinar sua semelhança com dados de tosse positiva para COVID</strong>. O Virufy é apoiado por professores e ex-alunos da UW, Stanford, UC Berkeley, MIT, Harvard e CMU.</0> <1>Ao coletar <strong>gravações de tosse</strong> de pessoas ao redor do mundo, o Virufy está melhorando a robustez de seu algoritmo de IA em reconhecer o padrão de som exclusivo do COVID.</1><2><strong>Você tem o poder</strong> de ajudar a beneficiar milhões de pessoas em todo o mundo <strong>contribuindo com sua tosse</strong> em nosso estudo.</2>",
     "bulletsIntro": "<strong> Intro: </strong> Sobre nós e segurança",
     "bulletCough": "<strong> Cough Into Phone </strong>",
     "bulletQuestions": "<strong> Perguntas rápidas sobre saúde </strong>",
     "installApp": "Instalar como um aplicativo",
-    "nextButton": "Comecemos"
+    "nextButton": "Consentimento"
   },
   "beforeStart": {
     "title": "Por último, antes de começarmos...",
@@ -91,10 +92,13 @@
     "resultModal": "<strong>Important note:</strong> This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
     "resultNotDetected": "COVID-19: NÃO DETECTADO",
     "resultNotDetectedText": "Sua voz não parece ter indicadores de COVID-19. <strong> Continue a tomar as medidas adequadas </strong> com base no conselho de seu profissional de saúde ou órgão regulador aplicável e reavalie-se em nosso aplicativo diariamente.",
-    "resultNotAnalyze": "Incapaz de analisar",
-    "resultNotAnalyzeText": "Our algorithm is not able to determine your COVID-19 status. Please submit another cough.",
+    "resultNotAnalyze": "Incapaz de analisar a tosse",
+    "resultModalDummy": "<strong>Nota importante:</strong> Esta aplicação é apenas para fins de demonstração e não fornece uma previsão verdadeira. Por favor, visite o Estudo Virufy para contribuir com a sua tosse.",
+    "resultNotAnalyzeText": "O nosso algoritmo não é capaz de determinar o seu estatuto de COVID-19. <strong>Por favor submeta outra tosse</strong>.",
+    "resultDetectedDummy": "COVID-19: DETECTADO <br/>(Exemplo de boneco)",
+    "resultDetectedText": "Sua voz tem indicadores de possível COVID-19. <strong>Entre em contato com seu profissional de saúde</strong> e tome precauções adicionais.",
+    "testForCovid": "Teste para COVID-19",
     "resultDetected": "COVID-19: DETECTADO",
-    "resultDetectedText": "Your voice has indicators of possible COVID-19. Please contact your healthcare professional and take additional precautions.",
     "predictionResultTitle": "Resultado de previsão",
     "likelihoodPrefix": "Resultado da COVID-19:",
     "nextButton": "Envie outra tosse",

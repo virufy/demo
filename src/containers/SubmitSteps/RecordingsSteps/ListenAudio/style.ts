@@ -5,6 +5,12 @@ import { BlackText } from 'components/Texts';
 
 export const MainContainer = styled.div`
   margin-bottom: 77px;
+
+  @media screen and (${props => props.theme.breakpoints.tablet}) {
+    max-width: 470px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 export const ImportantNote = styled.span<{ isBold?: boolean }>`
@@ -14,8 +20,16 @@ export const ImportantNote = styled.span<{ isBold?: boolean }>`
   font-weight: ${({ isBold }) => (isBold ? 700 : 400)};
  
   display: block;
-  max-width: 320px;
+  max-width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: 52px auto;
+  
+  @media screen and (${props => props.theme.breakpoints.tablet}) {
+    max-width: 470px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 export const Subtitle = styled.h2`

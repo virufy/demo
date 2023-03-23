@@ -187,11 +187,15 @@ export const WelcomeSubtitle = styled.h2<WelcomeSubtitleProps>`
     font-weight: ${({ isBold }) => (isBold ? 600 : 200)}
   }
 
-  max-width: 335px;
+  max-width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
   width: 100%;
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
-    max-width: 348px;
+    max-width: 470px;
+    padding-left: 0;
+    padding-right: 0;
   }
 `;
 
@@ -277,9 +281,15 @@ export const WelcomeNote = styled.span<WelcomeNoteProps>`
   line-height: 1.42;
   font-style: italic;
   font-weight: ${({ isBold }) => (isBold ? 700 : 400)};
-  max-width: 335px;
-  margin: 25px auto 0;
+  max-width: 100%;
+  margin: 7px 20px 0;
   text-align:left;
+
+  @media screen and (${props => props.theme.breakpoints.tablet}){
+    max-width: 470px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 export const WelcomeJumpToBottomContainer = styled.div`
@@ -299,19 +309,19 @@ export const WelcomeInput = styled.input`
   background-color: ${({ theme }) => theme.colors.purple_5};
   color: ${({ theme }) => theme.colors.mineShaft};
   border-radius: 15px;
-  width: 100%;
+  width: calc(100% - 40px);
   font-family: 'Source Sans Pro';
   line-height: 24px;
   padding: 12px 15px;
-  margin: 0 auto;
-  max-width: 335px;
+  margin: 0 20px;
+  max-width: 100%;
   font-size:14px;
 
   ::placeholder {
     color: ${({ theme }) => theme.colors.mineShaft_50};
   }
   @media screen and (${({ theme }) => theme.breakpoints.tablet}){
-    max-width: 348px;
+    max-width: 470px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -430,5 +440,57 @@ export const LogoWhiteBG = styled(LogoSplash)`
   @media screen and (${props => props.theme.breakpoints.tablet}){
     width: 212px;
     height: 280px;
+  }
+`;
+
+export const BoldBlackText = styled.h2`
+  font-family: 'Biko';
+  font-size: 14px;
+  line-height: 20px;
+  color: ${({ theme }) => theme.colors.mineShaft}; 
+  text-align: left;
+  font-weight: 700;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  white-space: pre-wrap;
+
+  max-width: 100%;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media screen and (${props => props.theme.breakpoints.tablet}){
+    max-width: 470px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+`;
+
+export const BoldBlackTextPrivacy = styled.h2`
+  font-family: 'Biko';
+  font-size: 14px;
+  line-height: 20px;
+  color: ${({ theme }) => theme.colors.mineShaft}; 
+  text-align: center;
+  font-weight: 700;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: -10px;
+  white-space: pre-wrap;
+
+  max-width: 190px;
+  width: 100%;
+  a {
+    text-decoration: none;
+  }
+  strong {
+    text-decoration: underline;
+  }
+
+  @media screen and (${props => props.theme.breakpoints.tablet}){
+    max-width: 470px;
   }
 `;

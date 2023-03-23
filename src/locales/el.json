@@ -13,16 +13,17 @@
       "createdBy": "Δημιουργήθηκε από",
       "provideAccessCode": "Κωδικός πρόσβασης",
       "enterAccessCode": "Εισάγετε τον κωδικό πρόσβασης",
-      "aboutUsTitle": "Συναίνεση για τη μελέτη"
+      "aboutUsTitle": "Συναίνεση για τη μελέτη",
+      "privacyPolicy": "Προχωρώντας αποδέχεστε τους όρους της Πολιτικής Απορρήτου μας"
     },
     "helpVirufy": {
       "ourSupporters": "Οι υποστηρικτές μας",
-      "introParagraph": "Καλώς ήρθατε στη μελέτη μας! Θα χρειαστείτε περίπου μόνο 5 λεπτά για να συμπληρώσετε τη φόρμα. Πριν ξεκινήσουμε, ας συζητήσουμε τι θα καλύψουμε:",
-      "aboutParagraph": "<0>Το Virufy είναι ένας <strong>μη κερδοσκοπικός οργανισμός</strong> που εργάζεται για την ανάπτυξη των μέσων για τη χρήση <strong> τεχνητής νοημοσύνης (AI) για τον έλεγχο του COVID-19 από μοτίβα βήχα</strong> γρήγορα και χωρίς κόστος μέσω της χρήσης ενός smartphone προς όφελος των χωρών με χαμηλό εισόδημα.</0><1>Η ομάδα μας περιλαμβάνει ερευνητές από περισσότερες από <strong>25 χώρες</strong>. <3>Η έρευνά μας</3> έχει δείξει ότι η τεχνολογία AI μπορεί να είναι σε θέση να αναγνωρίσει τη μοναδική υπογραφή βήχα του COVID.</1><2>Συγκεντρώνοντας <strong>καταγραφές βήχα</strong> από ανθρώπους σε όλο τον κόσμο, το Virufy βελτιώνει την ευρωστία του αλγορίθμου AI στην αναγνώριση του μοναδικού μοτίβου ήχου του COVID.</2><3><strong>Έχετε τη δύναμη</strong> να βοηθήσετε προς όφελος εκατομμυρίων ανθρώπων σε όλο τον κόσμο, <strong>συμβάλλοντας τον βήχα σας</strong> στη μελέτη μας.</3>",
+      "introParagraph": "<strong>Παρακαλώ σημειώστε</strong> <i>Το παρόν έντυπο προορίζεται μόνο για τη συλλογή δεδομένων. Δεν θα προβλέψει την κατάσταση COVID-19 ή θα διαγνώσει οποιαδήποτε ασθένεια, διαταραχή ή άλλη κατάσταση υγείας. Η Virufy διεξάγει έρευνα και θα χρησιμοποιήσει τις πληροφορίες που παρέχετε μόνο για την έρευνα αυτή. Το Virufy δεν θα αντικαταστήσει τον γιατρό και θα ήθελε να σας υπενθυμίσει ότι είναι δική σας ευθύνη να ζητάτε ιατρική συμβουλή από τον γιατρό σας.</i>",
+      "aboutParagraph": "<0><strong>Virufy</strong> είναι μια ισχυρή <strong>501(c)(3) μη κερδοσκοπική</strong> εταιρεία με <strong>250 εθελοντές/προσωπικό</strong> και <strong>50 συνεργαζόμενους οργανισμούς< /strong> συμπεριλαμβανομένων των υπηρεσιών Web της Amazon, του Stanford COVID-19 Response Innovation Lab και του One Young World. Αναπτύξαμε μια εφαρμογή για smartphone που αξιοποιεί την τεχνητή νοημοσύνη για να αναλύσει την υπογραφή των καταγεγραμμένων βήχα για να <strong>προσδιορίσει την ομοιότητά τους με τα δεδομένα βήχα θετικού COVID</strong>. Το Virufy υποστηρίζεται από καθηγητές και αποφοίτους από το UW, το Stanford, το UC Berkeley, το MIT, το Harvard και το CMU.</0> <1>Συλλέγοντας <strong>ηχογραφήσεις βήχα</strong> από ανθρώπους σε όλο τον κόσμο, το Virufy βελτιώνει την την ευρωστία του αλγορίθμου τεχνητής νοημοσύνης στην αναγνώριση του μοναδικού ηχητικού μοτίβου του COVID. </1><2><strong>Έχετε τη δύναμη</strong> να βοηθήσετε εκατομμύρια ανθρώπους σε όλο τον κόσμο <strong>συμβάλλοντας στον βήχα σας</strong> στη μελέτη μας.</2>",
       "bulletsIntro": "<strong>Εισαγωγή: </strong>Σχετικά με εμάς και υπενθυμίσεις ασφαλείας",
       "bulletCough": "<strong>Βήχας στο τηλέφωνο</strong>",
       "bulletQuestions": "<strong>Γρήγορες ερωτήσεις για την υγεία</strong>",
-      "nextButton": "Επόμενο",
+      "nextButton": "Συναίνεση",
       "installApp": "Εγκατάσταση ως εφαρμογή"
     },
     "beforeStart": {
@@ -91,10 +92,13 @@
       "resultModal": "<strong>Important note:</strong> This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
       "resultNotDetected": "COVID-19: ΔΕΝ ΕΝΤΟΠΙΖΕΤΑΙ",
       "resultNotDetectedText": "Η φωνή σας δεν φαίνεται να έχει δείκτες COVID-19. Παρακαλούμε <strong>συνεχίστε να λαμβάνετε τα κατάλληλα μέτρα</strong> βάσει των συμβουλών του επαγγελματία υγείας σας ή του αρμόδιου ρυθμιστικού φορέα και επανεκτιμήστε τον εαυτό σας στην εφαρμογή μας καθημερινά.",
-      "resultNotAnalyze": "Αδυναμία ανάλυσης",
-      "resultNotAnalyzeText": "Our algorithm is not able to determine your COVID-19 status. Please submit another cough.",
+      "resultNotAnalyze": "Αδυναμία ανάλυσης του βήχα",
+      "resultModalDummy": "<strong>Σημαντική σημείωση:</strong> Αυτή η εφαρμογή είναι μόνο για σκοπούς επίδειξης και δεν παρέχει πραγματική πρόβλεψη. Παρακαλούμε επισκεφθείτε τη μελέτη Virufy για να συνεισφέρετε το βήχα σας.",
+      "resultNotAnalyzeText": "Ο αλγόριθμός μας δεν είναι σε θέση να προσδιορίσει την κατάστασή σας COVID-19. <strong>Παρακαλώ υποβάλετε άλλο βήχα</strong>.",
+      "resultDetectedDummy": "COVID-19: DETECTED <br/>(Παράδειγμα Dummy)",
+      "resultDetectedText": "Η φωνή σας έχει ενδείξεις πιθανού COVID-19.  <strong>Επικοινωνήστε με τον επαγγελματία υγείας σας</strong> και λάβετε πρόσθετες προφυλάξεις.",
+      "testForCovid": "Δοκιμή για COVID-19",
       "resultDetected": "COVID-19: ανιχνεύεται",
-      "resultDetectedText": "Your voice has indicators of possible COVID-19. Please contact your healthcare professional and take additional precautions.",
       "likelihoodPrefix": "Αποτέλεσμα COVID-19:",
       "nextButton": "Υποβάλετε άλλο δέιγμα βήχα",
       "submitError": "Εμφανίστηκε σφάλμα. Προσπαθήστε ξανά.",
