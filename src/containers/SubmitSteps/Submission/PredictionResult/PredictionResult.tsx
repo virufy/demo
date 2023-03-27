@@ -83,8 +83,6 @@ const PredictionResult = () => {
 
         body.append('accessCode', state.welcome?.accessCode ?? '');
 
-        body.append('patientId', 'demo-app');
-
         const predictionResult = await axios.post(predictionEndpointUrl, body, {
           headers: {
             'Content-Type': 'multipart/form-data',
