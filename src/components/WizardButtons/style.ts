@@ -1,8 +1,5 @@
 import styled from 'styled-components';
 
-// Images
-import { ReactComponent as NuevaSVG } from 'assets/images/nueva.svg';
-
 export const WizardButtonsContainer = styled.div`
   display: flex;
   align-items: center;
@@ -25,9 +22,4 @@ export const WizardButtonsContainer = styled.div`
   @media screen and (${props => props.theme.breakpoints.tablet}){
     max-width: 470px;
   }
-`;
-
-export const NuevaLogo = styled(NuevaSVG)`
-  position: absolute;
-  left: 36px;
 `;
