@@ -116,10 +116,6 @@ const PredictionResult = () => {
     setTitle('');
     setDoGoBack(() => {});
     setType('noShape');
-    const timer1 = setTimeout(() => { setProcessing(false); actions.resetStore({}); }, 5000);
-    return () => {
-      clearTimeout(timer1);
-    };
     handleSubmit();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -137,11 +133,6 @@ const PredictionResult = () => {
 
   return (
     <>
-      {(errorCode || submitError) && (
-      <SubmitError>
-        {errorCode ? `${t('predictionResult:error')} ${errorCode}` : submitError}
-      </SubmitError>
-      )}
       {
         processing ? (
           <ProcessingContainer>
@@ -247,21 +238,18 @@ const PredictionResult = () => {
                 }
               </IntroText>
               <WizardButtons
-                showNuevaLogo={prediction === 'positive'}
                 invert
-                leftLabel={prediction === 'positive' ? t('predictionResult:testForCovid') : t('predictionResult:nextButton')}
-                leftHandler={prediction === 'positive' ? handleReturnMain : handleReturnMain}
+                leftLabel={t('predictionResult:nextButton')}
+                leftHandler={handleReturnMain}
               />
             </>
           )
         }
-        {
-        submitError && (
-          <SubmitError>
-            {submitError}
-          </SubmitError>
-        )
-      }
+        {(errorCode || submitError) && (
+        <SubmitError>
+          {errorCode ? `${t('predictionResult:error')} ${errorCode}` : submitError}
+        </SubmitError>
+        )}
       </Portal>
     </>
   );
