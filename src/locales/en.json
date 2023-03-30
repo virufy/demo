@@ -1,14 +1,8 @@
 {
   "main": {
     "title": "COVID-19 Cough Detection",
-    "logoIntro": "An Independent Nonprofit Research Organization",
     "note": "<strong>Please note:</strong> This form is for data collection only. It will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
-    "paragraph1": "Welcome! This study should only take about 5 minutes to complete.",
     "selectYourLanguage": "Language",
-    "selectLocation": "Location",
-    "paragraph2": "Covid-19 Cough Data Collection Study",
-    "selectCountry": "Select country",
-    "selectRegion": "Select region",
     "nextButton": "Next",
     "createdBy": "Created By",
     "provideAccessCode": "Access code",
@@ -17,12 +11,7 @@
     "privacyPolicy": "By proceeding you accept the terms of our <strong>Privacy Policy</strong>"
   },
   "helpVirufy": {
-    "ourSupporters": "Our Supporters",
-    "introParagraph": "<strong>Please note:</strong> <i>This form is for data collection only. It will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.</i>",
     "aboutParagraph": "<0><strong>Virufy</strong> is a robust <strong>501(c)(3) nonprofit</strong> company with <strong>250 volunteers/staff</strong> and <strong>50 partner organizations</strong> including Amazon Web Services, Stanford COVID-19 Response Innovation Lab, and One Young World. We've developed a smartphone app which leverages AI to analyze the signature of recorded coughs to <strong>determine their similarity with COVID positive cough data</strong>. Virufy is supported by faculty and alumni from UW, Stanford, UC Berkeley, MIT, Harvard, and CMU.</0> <1>By collecting <strong>coughs recordings</strong> from people around the world, Virufy is improving the robustness of its AI algorithm in recognizing COVID’s unique sound pattern.</1><2><strong>You have the power</strong> to help benefit millions of people across the globe by <strong>contributing your cough</strong> in our study.</2>",
-    "bulletsIntro": "<strong>Intro: </strong>About us and Safety Reminders",
-    "bulletCough": "<strong>Cough Into Phone</strong>",
-    "bulletQuestions": "<strong>Quick Health Questions</strong>",
     "installApp": "Install as an app",
     "nextButton": "Consent"
   },
@@ -99,13 +88,9 @@
     "resultDetectedDummy": "COVID-19: DETECTED <br/>(Dummy Example)",
     "resultDetectedText": "Your voice has indicators of possible COVID-19. <strong>Please contact your healthcare professional</strong> and take additional precautions.",
     "testForCovid": "Test for COVID-19",
-    "likelihoodPrefix": "COVID-19 result:",
     "nextButton": "Submit another cough",
     "submitError": "An error occurred. Please try again.",
-    "result_positive": "Positive",
-    "result_negative": "Negative",
-    "nextSteps": "Next Steps",
-    "noteStatement": "<i>The statements made regarding these products have not been evaluated by the U.S. Food and Drug Administration. The efficacy of these products has not been confirmed by FDA-approved research. These products are not intended to diagnose, treat, cure or prevent any disease.</i>"
+    "nextSteps": "Next Steps"
   },
   "footerReportProblems": {
     "message": "Something wrong? Report an error"

@@ -1,14 +1,8 @@
 {
   "main": {
     "title": "COVID-19 Cough Detection",
-    "logoIntro": "An Independent Nonprofit Research Organization",
     "note": "<strong>Please note:</strong> This form is for data collection only. It will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
-    "paragraph1": "Welcome! This study should only take about 5 minutes to complete.",
     "selectYourLanguage": "Language",
-    "selectLocation": "Location",
-    "paragraph2": "Covid-19 Cough Data Collection Study",
-    "selectCountry": "Select country",
-    "selectRegion": "Select region",
     "nextButton": "Next",
     "createdBy": "Created By",
     "provideAccessCode": "Access code",
@@ -17,12 +11,7 @@
     "privacyPolicy": "En poursuivant, vous acceptez les termes de notre politique de confidentialité."
   },
   "helpVirufy": {
-    "ourSupporters": "Our Supporters",
-    "introParagraph": "<strong>A noter :</strong> <i>Ce formulaire ne sert qu'à recueillir des données. Il ne permet pas de prédire votre statut COVID-19 ni de diagnostiquer une maladie, un trouble ou un autre état de santé. Virufy mène des recherches et utilisera les informations que vous fournissez uniquement dans le cadre de ces recherches. Virufy ne se substitue pas à un médecin et vous rappelle qu'il est de votre responsabilité de demander l'avis de votre médecin.</i>",
     "aboutParagraph": "<0><strong>Virufy</strong> est une entreprise solide à but non lucratif <strong>501(c)(3)</strong> avec <strong>250 bénévoles/employés</strong> et <strong>50 organisations partenaires< /strong> y compris Amazon Web Services, Stanford COVID-19 Response Innovation Lab et One Young World. Nous avons développé une application pour smartphone qui exploite l'IA pour analyser la signature des toux enregistrées afin de <strong>déterminer leur similitude avec les données de toux positives au COVID</strong>. Virufy est soutenu par des professeurs et des anciens de l'UW, de Stanford, de l'UC Berkeley, du MIT, de Harvard et de la CMU.</0> <1>En collectant des <strong>enregistrements de la toux</strong> de personnes du monde entier, Virufy améliore la robustesse de son algorithme d'IA pour reconnaître le modèle sonore unique de COVID.</1><2><strong>Vous avez le pouvoir</strong> d'aider des millions de personnes à travers le monde en <strong>contribuant votre toux</strong> dans notre étude.</2>",
-    "bulletsIntro": "<strong>Intro:</strong> About us and Safety Reminders",
-    "bulletCough": "<strong>Cough Into Phone</strong>",
-    "bulletQuestions": "<strong>Quick Health Questions</strong>",
     "installApp": "Install as an app",
     "nextButton": "Consentement"
   },
@@ -97,14 +86,9 @@
     "resultDetectedText": "Votre voix présente des indicateurs d'un possible COVID-19.<strong>Veuillez contacter votre professionnel de la santé</strong> et prendre des précautions supplémentaires.",
     "testForCovid": "Test for COVID-19",
     "resultDetected": "COVID-19: DETECTED",
-
-    "likelihoodPrefix": "COVID-19 result:",
     "nextButton": "Submit another cough",
     "submitError": "An error occurred. Please try again.",
-    "result_positive": "Positive",
-    "result_negative": "Negative",
-    "nextSteps": "Les prochaines étapes",
-    "noteStatement": "<i>Les déclarations faites concernant ces produits n'ont pas été évaluées par la Food and Drug Administration des États-Unis. L'efficacité de ces produits n'a pas été confirmée par des recherches approuvées par la FDA. Ces produits ne sont pas destinés à diagnostiquer, traiter, guérir ou prévenir une quelconque maladie.</i>"
+    "nextSteps": "Les prochaines étapes"
   },
   "footerReportProblems": {
     "message": "Something wrong? Report an error"

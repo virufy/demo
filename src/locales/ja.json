@@ -1,14 +1,8 @@
 {
   "main": {
     "title": "COVID-19 咳の検出",
-    "logoIntro": "独立した非営利研究機関",
-    "note": "<strong>Please note:</strong> このフォームはデータ収集のみを目的としています。COVID-19の状態を予測したり、病気や障害、その他の健康状態を診断したりするものではありません。Virufyは研究を行っており、あなたが提供した情報をその研究のためだけに使用します。また、Virufyは医師の代わりにはなりませんので、ご自身の責任において医師の診断を受けるようにしてください。",
-    "paragraph1": "ようこそ! この調査は、約5分で完了します。",
+    "note": "<strong>ご注意ください:</strong> このフォームはデータ収集のみを目的としています。COVID-19の状態を予測したり、病気や障害、その他の健康状態を診断したりするものではありません。Virufyは研究を行っており、あなたが提供した情報をその研究のためだけに使用します。また、Virufyは医師の代わりにはなりませんので、ご自身の責任において医師の診断を受けるようにしてください。",
     "selectYourLanguage": "言語",
-    "selectLocation": "所在地",
-    "paragraph2": "Covid-19 咳のデータ収集調査",
-    "selectCountry": "国を選択",
-    "selectRegion": "地域を選択",
     "nextButton": "次のページ",
     "createdBy": "作成者",
     "provideAccessCode": "アクセスコード",
@@ -17,12 +11,7 @@
     "privacyPolicy": "次に進むと、当社のプライバシーポリシーの条項に同意したことになります。"
   },
   "helpVirufy": {
-    "ourSupporters": "サポーター",
-    "introParagraph": "<strong>ご注意ください：</strong> <i>このフォームはデータ収集のためだけのものです。あなたのCOVID-19の状態を予測したり、病気、障害、その他の健康状態を診断するものではありません。Virufyは研究を行っており、提供された情報はその研究のためにのみ使用されます。Virufyは医師の代わりにはなりませんので、医師の診断を受けるのはご自身の責任であることをご理解ください。</i>",
     "aboutParagraph": "<0><strong>Virufy</strong> は <strong>501(c)(3) 非営利団体</strong> であり、<strong>250 人のボランティア/スタッフ</strong> と <strong>50 のパートナー組織<strong>を擁しています。 /strong> には、アマゾン ウェブ サービス、スタンフォード COVID-19 対応イノベーション ラボ、One Young World が含まれます。 AI を活用して記録された咳の特徴を分析し、<strong>COVID 陽性の咳データとの類似性を判断する</strong>スマートフォン アプリを開発しました。 Virufy は、UW、スタンフォード、UC バークレー、MIT、ハーバード、CMU の教職員と卒業生によってサポートされています。</0> <1>世界中の人々から<strong>咳の記録</strong>を収集することで、Virufy はCOVID の独特な音のパターンを認識する AI アルゴリズムの堅牢性。</1><2><strong>あなたには、<strong>咳をする</strong>ことで世界中の何百万人もの人々に利益をもたらす力があります</strong>。 </2>",
-    "bulletsIntro": "<strong>Intro: </strong>会社概要と安全に関する注意事項",
-    "bulletCough": "<strong>電話に向かって咳をする</strong>。",
-    "bulletQuestions": "<strong>健康に関する簡単な質問</strong>",
     "nextButton": "コンセンサス",
     "installApp": "アプリとしてインストールする"
   },
@@ -99,13 +88,9 @@
     "resultDetectedText": "あなたの声にはCOVID-19の可能性を示す指標があります。 <strong>医療従事者にご相談ください</strong>に連絡し、追加の予防策を講じてください。",
     "testForCovid": "COVID-19のテスト",
     "resultDetected": "COVID-19: 検出された",
-    "likelihoodPrefix": "COVID-19の結果。",
     "nextButton": "別の咳を送信する",
     "submitError": "エラーが発生しました。もう一度お試しください。",
-    "result_positive": "陽性",
-    "result_negative": "陰性",
-    "nextSteps": "次のステップ",
-    "noteStatement": "<i>これらの製品に関する記述は、米国食品医薬品局（FDA）によって評価されたものではありません。これらの製品の有効性は、FDAが承認した研究によって確認されたものではありません。これらの製品は、いかなる疾病の診断、治療、治癒または予防を目的としたものではありません。</i>"
+    "nextSteps": "次のステップ"
   },
   "footerReportProblems": {
     "message": "何か問題がありますか？エラーを報告する"

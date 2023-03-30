@@ -1,14 +1,8 @@
 {
   "main": {
     "title": "COVID-19 Öksürük Tespiti",
-    "logoIntro": "Kar Amacı Gütmeyen Bağımsız Bir Araştırma Kuruluşu",
     "note": "<strong>Lütfen dikkat:</strong> Bu form yalnızca veri toplamak içindir. COVID-19 durumunuzu tahmin etmeyecek veya herhangi bir hastalık, rahatsızlık veya diğer sağlık durumlarını teşhis etmeyecektir. Virufy araştırma yürütmektedir ve verdiğiniz bilgileri sadece o araştırma için kullanacaktir. Virufy bir doktorun yerini tutmaz, doktorunuzdan tıbbi yardım almanın sizin sorumluluğunuzda olduğunu hatırlatmak isteriz.",
-    "paragraph1": "Hoş geldiniz! Tamamlanması yalnızca 5 dakika sürecektir.",
     "selectYourLanguage": "Dil",
-    "selectLocation": "Konum",
-    "paragraph2": "Covid-19 Öksürük Veri Toplama Çalışması",
-    "selectCountry": "Ülke seç",
-    "selectRegion": "Bölge seç",
     "nextButton": "Sonraki",
     "createdBy": "Oluşturan",
     "provideAccessCode": "Giriş kodu",
@@ -17,12 +11,7 @@
     "privacyPolicy": "Devam ederek Gizlilik Politikamızın şartlarını kabul etmiş olursunuz"
   },
   "helpVirufy": {
-    "ourSupporters": "Destekçilerimiz",
-    "introParagraph": "<strong>Lütfen dikkat:</strong> <i>Bu form sadece veri toplamak içindir. COVID-19 durumunuzu tahmin etmeyecek veya herhangi bir hastalık, bozukluk veya başka bir sağlık durumunu teşhis etmeyecektir. Virufy bir araştırma yürütmektedir ve sağladığınız bilgileri yalnızca bu araştırma için kullanacaktır. Virufy bir doktorun yerini almayacaktır ve doktorunuzdan tıbbi tavsiye almanın sizin sorumluluğunuzda olduğunu hatırlatmak isteriz.</i>",
     "aboutParagraph": "<0><strong>Virufy</strong>, <strong>250 gönüllü/personel</strong> ve <strong>50 ortak kuruluş< ile güçlü bir <strong>501(c)(3) kar amacı gütmeyen</strong> şirkettir. /strong> Amazon Web Services, Stanford COVID-19 Response Innovation Lab ve One Young World dahil. <strong>COVID pozitif öksürük verileriyle benzerliklerini belirlemek</strong> amacıyla kaydedilen öksürüklerin imzasını analiz etmek için yapay zekadan yararlanan bir akıllı telefon uygulaması geliştirdik. Virufy, UW, Stanford, UC Berkeley, MIT, Harvard ve CMU'dan fakülte ve mezunlar tarafından desteklenmektedir.</0> <1>Virufy, dünyanın dört bir yanındaki insanlardan <strong>öksürük kayıtları</strong> toplayarak, AI algoritmasının COVID'in benzersiz ses modelini tanıma konusundaki sağlamlığı.</1><2><strong>Öksürüğe katkıda bulunarak</strong> dünya çapında milyonlarca kişiye fayda sağlama gücüne sahipsiniz</strong> çalışmamızda.</2>",
-    "bulletsIntro": "<strong>Giriş: </strong>Hakkımızda ve Güvenlik Hatırlatıcıları",
-    "bulletCough": "<strong>Telefona Öksürük</strong>",
-    "bulletQuestions": "<strong>Hızlı Sağlık Soruları</strong>",
     "nextButton": "Rıza",
     "installApp": "Uygulamaui yükleyin"
   },
@@ -99,13 +88,9 @@
     "resultDetectedText": "Sesinizde olası COVID-19 göstergeleri var. <strong>Lütfen sağlık uzmanınıza başvurun</strong> ve ek önlemler alın.",
     "testForCovid": "COVID-19 için Test",
     "resultDetected": "COVID-19: TESPİT EDİLDİ",
-    "likelihoodPrefix": "COVID-19 sonucu:",
     "nextButton": "Başka bir öksürük gönderin",
     "submitError": "Bir hata oluştu. Lütfen tekrar deneyin.",
-    "result_positive": "Olumlu",
-    "result_negative": "Olumsuz",
-    "nextSteps": "Sonraki Adımlar",
-    "noteStatement": "<i>Bu ürünlerle ilgili olarak yapılan açıklamalar ABD Gıda ve İlaç Dairesi tarafından değerlendirilmemiştir. Bu ürünlerin etkinliği FDA onaylı araştırmalarla teyit edilmemiştir. Bu ürünler herhangi bir hastalığı teşhis, tedavi, iyileştirme veya önleme amacı taşımamaktadır.</i>"
+    "nextSteps": "Sonraki Adımlar"
   },
   "footerReportProblems": {
     "message": "Bir sorun mu var? Hata bildir"

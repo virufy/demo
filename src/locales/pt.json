@@ -1,14 +1,8 @@
 {
   "main": {
     "title": "Formulário de coleta de dados de COVID 19",
-    "logoIntro": "Uma organização independente de pesquisa sem fins lucrativos",
     "note": "<strong>Por favor, observe:</strong> Este formulário é apenas para coleta de dados. Ele não irá prever seu status de COVID-19 ou diagnosticar qualquer doença, distúrbio ou outra condição de saúde. A Virufy está realizando pesquisas e utilizará as informações que você fornecer somente para essa pesquisa. A Virufy não realizará pesquisas com um médico e gostaria de lembrá-lo que é sua responsabilidade buscar aconselhamento médico de seu médico.",
-    "paragraph1": "Seja bem-vindo! Este estudo deve levar apenas cerca de 5 minutos para ser concluído.",
     "selectYourLanguage": "Idioma",
-    "paragraph2": "Estudo de coleta de dados sobre tosse Covid-19",
-    "selectLocation": "localização",
-    "selectCountry": "Selecione seu país",
-    "selectRegion": "Selecione a região",
     "nextButton": "Próximo",
     "createdBy": "Criado por",
     "provideAccessCode": "Código de acesso",
@@ -17,12 +11,7 @@
     "privacyPolicy": "Ao proceder, aceita os termos da nossa Política de Privacidade"
   },
   "helpVirufy": {
-    "ourSupporters": "Nossos apoiadores",
-    "introParagraph": "<strong>Por favor note:</strong> <i>Este formulário é apenas para recolha de dados. Não irá prever o seu estatuto de COVID-19 nem diagnosticar qualquer doença, desordem, ou outro estado de saúde. A Virufy está a realizar investigação e utilizará a informação que fornecer apenas para essa investigação. A Virufy não terá lugar por parte de um médico e gostaria de lhe lembrar que é da sua responsabilidade procurar aconselhamento médico junto do seu médico.</i>",
     "aboutParagraph": "<0><strong>Virufy</strong> é uma robusta empresa <strong>501(c)(3) sem fins lucrativos</strong> com <strong>250 voluntários/funcionários</strong> e <strong>50 organizações parceiras< /strong> incluindo Amazon Web Services, Stanford COVID-19 Response Innovation Lab e One Young World. Desenvolvemos um aplicativo para smartphone que aproveita a IA para analisar a assinatura de tosses registradas para <strong>determinar sua semelhança com dados de tosse positiva para COVID</strong>. O Virufy é apoiado por professores e ex-alunos da UW, Stanford, UC Berkeley, MIT, Harvard e CMU.</0> <1>Ao coletar <strong>gravações de tosse</strong> de pessoas ao redor do mundo, o Virufy está melhorando a robustez de seu algoritmo de IA em reconhecer o padrão de som exclusivo do COVID.</1><2><strong>Você tem o poder</strong> de ajudar a beneficiar milhões de pessoas em todo o mundo <strong>contribuindo com sua tosse</strong> em nosso estudo.</2>",
-    "bulletsIntro": "<strong> Intro: </strong> Sobre nós e segurança",
-    "bulletCough": "<strong> Cough Into Phone </strong>",
-    "bulletQuestions": "<strong> Perguntas rápidas sobre saúde </strong>",
     "installApp": "Instalar como um aplicativo",
     "nextButton": "Consentimento"
   },
@@ -100,13 +89,9 @@
     "testForCovid": "Teste para COVID-19",
     "resultDetected": "COVID-19: DETECTADO",
     "predictionResultTitle": "Resultado de previsão",
-    "likelihoodPrefix": "Resultado da COVID-19:",
     "nextButton": "Envie outra tosse",
     "submitError": "Aconteceu um erro. Por favor, tente novamente.",
-    "result_positive": "Positivo",
-    "result_negative": "Negativo",
-    "nextSteps": "Próximos Passos",
-    "noteStatement": "<i>As declarações feitas a respeito destes produtos não foram avaliadas pela U.S. Food and Drug Administration. A eficácia destes produtos não foi confirmada pela investigação aprovada pela FDA. Estes produtos não se destinam a diagnosticar, tratar, curar ou prevenir qualquer doença.</i>"
+    "nextSteps": "Próximos Passos"
   },
   "footerReportProblems": {
     "message": "Algo errado? Reporte um erro"

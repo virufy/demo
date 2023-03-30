@@ -20,7 +20,6 @@ import useHeaderContext from 'hooks/useHeaderContext';
 
 // Data
 import { languageData } from 'data/lang';
-// import { countryData, countriesWithStates } from 'data/country';
 
 // Hooks
 import useWindowSize from 'hooks/useWindowSize';
@@ -33,10 +32,6 @@ import {
   WelcomeContent,
   WelcomeSubtitleBold,
   WelcomeStyledForm,
-  // WelcomeInput,
-  // WelcomeRequiredFieldText,
-  // RegionContainer,
-  // WelcomeInput,
   ContainerNextButton,
   NextButton,
   ArrowRightSVG,
@@ -44,15 +39,6 @@ import {
 
 const schema = Yup.object().shape({
   language: Yup.string().required(),
-  // accessCode: Yup.string(),
-  // hospitalCode: Yup.string().required(),
-  // patientId: Yup.string().oneOf(['virufy']).required(),
-  // country: Yup.string().required(),
-  /* region: Yup.string().when('country', {
-    is: (val: string) => countriesWithStates.includes(val),
-    then: Yup.string().required(),
-    otherwise: Yup.string(),
-  }), */
 }).defined();
 
 type Step1Type = Yup.InferType<typeof schema>;
@@ -108,12 +94,6 @@ const Step1 = (p: Wizard.StepProps) => {
     }
   };
 
-  /* const resetRegion = () => {
-    setValue('region', '', {
-      shouldValidate: true,
-    });
-  }; */
-
   React.useEffect(() => {
     scrollToTop();
     // Hide back arrow in header if neccesary
@@ -130,24 +110,6 @@ const Step1 = (p: Wizard.StepProps) => {
   React.useEffect(() => {
     i18n.changeLanguage(lang);
   }, [i18n, lang]);
-
-  /* const countrySelectOptions = React.useMemo(() => [{ name: t('main:selectCountry'), consentFormUrl: '', val: '' },
-    ...countryData], [t]);
-
-  const regionSelectOptions = React.useMemo(() => {
-    const output = [
-      { name: t('main:selectRegion'), val: '' },
-    ];
-    if (country) {
-      const elem = countryData.find(a => a.val === country);
-      if (elem) {
-        elem.states.forEach(s => {
-          output.push({ name: s, val: s });
-        });
-      }
-    }
-    return output;
-  }, [t, country]); */
 
   if (!width) {
     return null;
@@ -190,64 +152,6 @@ const Step1 = (p: Wizard.StepProps) => {
             </Dropdown>
           )}
         />
-
-        {/* <WelcomeSubtitleBold
-          mt={width && width > 560 ? 50 : 40}
-          mb={16}
-          textAlign="left"
-          isBold
-        >
-          <strong>{t('main:selectLocation', 'Location')}</strong>
-        </WelcomeSubtitleBold>
-
-        <Controller
-          control={control}
-          name="country"
-          defaultValue={countrySelectOptions[0].val}
-          render={({ onChange, value }) => (
-            <Dropdown onChange={e => { onChange(e.currentTarget.value); resetRegion(); }} value={value}>
-              {countrySelectOptions.map(({ name, val }) => <option key={name} id={name} value={val}>{name}</option>)}
-            </Dropdown>
-          )}
-        />
-
-        <Controller
-          control={control}
-          name="region"
-          defaultValue={regionSelectOptions[0].val}
-          render={({ onChange, value }) => (regionSelectOptions.length > 1 ? (
-            <RegionContainer>
-              <Dropdown onChange={e => onChange(e.currentTarget.value)} value={value}>
-                {regionSelectOptions.map(({ name, val }) => <option key={name} id={name} value={val}>{name}</option>)}
-              </Dropdown>
-            </RegionContainer>
-          ) : <></>)}
-        />
-
-        <WelcomeSubtitleBold
-          mt={width && width > 560 ? 50 : 40}
-          mb={16}
-          textAlign="left"
-          isBold
-        >
-          <strong>{t('main:provideAccessCode', 'Access code')}</strong>
-        </WelcomeSubtitleBold>
-
-        <Controller
-          control={control}
-          name="accessCode"
-          defaultValue=""
-          render={({ onChange, value, name }) => (
-            <WelcomeInput
-              name={name}
-              value={value}
-              onChange={onChange}
-              type="text"
-              placeholder={t('main:enterAccessCode', 'Enter your access code')}
-              autoComplete="Off"
-            />
-          )}
-          /> */}
 
         {
           activeStep && (
