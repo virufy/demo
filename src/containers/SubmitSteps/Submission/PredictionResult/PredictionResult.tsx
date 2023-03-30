@@ -104,7 +104,7 @@ const PredictionResult = () => {
   };
 
   const handleReturnMain = React.useCallback(() => {
-    history.replace('step-record/cough');
+    history.replace('/welcome');
   }, [history]);
 
   // Effects
@@ -129,6 +129,8 @@ const PredictionResult = () => {
 
   // Always positive result hardcoded
 
+  console.log('errorCode', errorCode);
+
   return (
     <>
       {
@@ -145,7 +147,7 @@ const PredictionResult = () => {
         ) : (
           <>
             {
-            !accessCode
+            (!accessCode || errorCode)
               ? (
                 <PredictionResultContainer>
                   <Title>
@@ -243,9 +245,9 @@ const PredictionResult = () => {
             </>
           )
         }
-        {(errorCode || submitError) && (
+        {submitError && (
         <SubmitError>
-          {errorCode ? `${t('predictionResult:error')} ${errorCode}` : submitError}
+          {`${t('predictionResult:error')} ${submitError}`}
         </SubmitError>
         )}
       </Portal>

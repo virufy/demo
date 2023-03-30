@@ -197,7 +197,7 @@ const Step2 = (p: Wizard.StepProps) => {
         </WelcomeNote>
 
         <BoldBlackTextPrivacy>
-          <Link to="https://virufy.org/es/privacy_policy/" target="_blank">
+          <Link to="https://virufy.org/privacy_policy/" target="_blank">
             <Trans i18nKey="main:privacyPolicy">
               By proceeding you accept the terms of our Privacy Policy
             </Trans>
