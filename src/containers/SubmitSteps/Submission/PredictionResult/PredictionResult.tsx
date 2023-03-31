@@ -147,7 +147,7 @@ const PredictionResult = () => {
         ) : (
           <>
             {
-            (!accessCode || errorCode)
+            (!accessCode || errorCode === 'invalid_access_code')
               ? (
                 <PredictionResultContainer>
                   <Title>
