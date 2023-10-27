@@ -47,7 +47,6 @@ const PredictionResult = () => {
 
   // States
   const [errorCode, setErrorCode] = React.useState<string | null>(null);
-  const [accessCode, setAccessCode] = React.useState<string | null>(null);
   const [processing, setProcessing] = React.useState<boolean>(true);
   const [prediction, setPrediction] = React.useState<string>('unknown');
   const [submitError, setSubmitError] = React.useState<string | null>(null);
@@ -81,8 +80,6 @@ const PredictionResult = () => {
           body.append('cough', coughFile, coughFile.name || 'filename.wav');
         }
 
-        body.append('accessCode', state.welcome?.accessCode ?? '');
-
         const predictionResult = await axios.post(predictionEndpointUrl, body, {
           headers: {
             'Content-Type': 'multipart/form-data',
@@ -109,7 +106,6 @@ const PredictionResult = () => {
 
   // Effects
   React.useEffect(() => {
-    setAccessCode(state.welcome?.accessCode ?? '');
     scrollToTop();
     setTitle('');
     setDoGoBack(() => {});
@@ -147,7 +143,7 @@ const PredictionResult = () => {
         ) : (
           <>
             {
-            (!accessCode || errorCode === 'invalid_access_code')
+            (errorCode === 'invalid_access_code')
               ? (
                 <PredictionResultContainer>
                   <Title>
@@ -222,20 +218,10 @@ const PredictionResult = () => {
           !processing && (
             <>
               <IntroText>
-                {
-                  accessCode
-                    ? (
-                      <Trans i18nKey="predictionResult:resultModal">
-                        {/* eslint-disable-next-line max-len */}
-                        <strong>Aviso importante:</strong> Esta aplicación no predecirá su estado de COVID-19 ni diagnosticará ninguna enfermedad, trastorno u otra condición de salud. Virufy está llevando a cabo una investigación y utilizará la información que proporciones únicamente para dicha investigación. Virufy no sustituirá a un médico y le recuerda que es su responsabilidad buscar consejo médico de su médico.
-                      </Trans>
-                    ) : (
-                      <Trans i18nKey="predictionResult:resultModalDummy">
-                        {/* eslint-disable-next-line max-len */}
-                        <strong>Aviso importante:</strong> Esta aplicación no predecirá su estado de COVID-19 ni diagnosticará ninguna enfermedad, trastorno u otra condición de salud. Virufy está llevando a cabo una investigación y utilizará la información que proporciones únicamente para dicha investigación. Virufy no sustituirá a un médico y le recuerda que es su responsabilidad buscar consejo médico de su médico.
-                      </Trans>
-                    )
-                }
+                <Trans i18nKey="predictionResult:resultModalDummy">
+                  {/* eslint-disable-next-line max-len */}
+                  <strong>Aviso importante:</strong> Esta aplicación no predecirá su estado de COVID-19 ni diagnosticará ninguna enfermedad, trastorno u otra condición de salud. Virufy está llevando a cabo una investigación y utilizará la información que proporciones únicamente para dicha investigación. Virufy no sustituirá a un médico y le recuerda que es su responsabilidad buscar consejo médico de su médico.
+                </Trans>
               </IntroText>
               <WizardButtons
                 invert

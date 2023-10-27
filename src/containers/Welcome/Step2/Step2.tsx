@@ -38,7 +38,6 @@ import {
   HeaderImageContainer,
   HeaderImage,
   LogoWhiteBG,
-  WelcomeInput,
   BoldBlackText,
   WelcomeNote,
   BoldBlackTextPrivacy,
@@ -46,7 +45,6 @@ import {
 
 const schema = Yup.object().shape({
   language: Yup.string().required(),
-  accessCode: Yup.string(),
 }).defined();
 
 type Step2Type = Yup.InferType<typeof schema>;
@@ -162,27 +160,6 @@ const Step2 = (p: Wizard.StepProps) => {
                 ))
               }
           </Dropdown>
-        )}
-      />
-
-      {/* Language */}
-      <BoldBlackText>
-        {t('main:enterAccessCode', 'Enter access code:')}
-      </BoldBlackText>
-      <Controller
-        control={control}
-        name="accessCode"
-        defaultValue=""
-        render={({ onChange, value, name }) => (
-          <>
-            <WelcomeInput
-              name={name}
-              value={value}
-              onChange={onChange}
-              type="text"
-              autoComplete="Off"
-            />
-          </>
         )}
       />
 
