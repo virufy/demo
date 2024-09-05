@@ -6,12 +6,6 @@ import usePortal from 'react-useportal';
 // import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 
-// Form
-// import { useStateMachine } from 'little-state-machine';
-
-// Update Action
-// import { resetStore } from 'utils/wizard';
-
 // Header Control
 import useHeaderContext from 'hooks/useHeaderContext';
 
@@ -33,27 +27,22 @@ import {
   SubmitError,
 } from './style';
 
-// const predictionEndpointUrl = process.env.REACT_APP_PREDICTION_ENDPOINT || '';
-
 const PredictionResult = () => {
   // Hooks
   const {
     setDoGoBack, setTitle, setSubtitle, setType,
   } = useHeaderContext();
   const { t } = useTranslation();
-  // const { actions, state } = useStateMachine({ resetStore: resetStore() });
   const { Portal } = usePortal({
     bindTo: document && document.getElementById('wizard-buttons') as HTMLDivElement,
   });
   const history = useHistory();
 
   // States
-  // const [errorCode, setErrorCode] = React.useState<string | null>(null);
   const errorCode = null;
   const [processing, setProcessing] = React.useState<boolean>(true);
   const [prediction, setPrediction] = React.useState<string>('unknown');
   const submitError = null;
-  // const [submitError, setSubmitError] = React.useState<string | null>(null);
 
   React.useEffect(() => {
     // Hide the Footer Report Problems while processing
@@ -72,39 +61,6 @@ const PredictionResult = () => {
     setPrediction('positive');
     await new Promise(resolve => setTimeout(resolve, 2000));
     setProcessing(false);
-    // try {
-    //   setSubmitError(null);
-    //   if (state && state.welcome && state['submit-steps']) {
-    //     const {
-    //       recordYourCough,
-    //     } = state['submit-steps'];
-
-    //     const body = new FormData();
-
-    //     // Records
-    //     const coughFile = recordYourCough?.recordingFile || recordYourCough?.uploadedFile;
-    //     if (coughFile) {
-    //       body.append('cough', coughFile, coughFile.name || 'filename.wav');
-    //     }
-
-    //     const predictionResult = await axios.post(predictionEndpointUrl, body, {
-    //       headers: {
-    //         'Content-Type': 'multipart/form-data',
-    //       },
-    //     });
-    //     if (predictionResult.data) {
-    //       setProcessing(false);
-    //       setPrediction(predictionResult.data.prediction);
-    //       setErrorCode(predictionResult.data.errorCode);
-    //       actions.resetStore({});
-    //     }
-    //   } else {
-    //     actions.resetStore({});
-    //   }
-    // } catch (err) {
-    //   console.log('Error', err);
-    //   setSubmitError(t('predictionResult:submitError'));
-    // }
   };
 
   const handleReturnMain = React.useCallback(() => {
@@ -131,12 +87,7 @@ const PredictionResult = () => {
   }, [processing]);
 
   // Always positive result hardcoded
-
   console.log('errorCode', errorCode);
-  console.log('proccessing', processing);
-  console.log('prediction', prediction);
-
-  console.log('error ', submitError);
 
   return (
     <>
