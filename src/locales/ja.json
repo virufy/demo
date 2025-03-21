@@ -1,0 +1,98 @@
+{
+  "main": {
+    "title": "COVID-19 咳の検出",
+    "note": "<strong>注意:</strong> このフォームはデータ収集のみを目的としています。COVID-19の状態を予測したり、病気や障害、その他の健康状態を診断するものではございません。Virufyでは研究を行っており、提供していただいた情報はその研究のためだけに使用いたします。また、Virufyは医師の代わりにはなりませんので、ご自身の責任において医師の診断を受けるようにしてください。",
+    "selectYourLanguage": "言語",
+    "nextButton": "次のページ",
+    "createdBy": "作成者",
+    "provideAccessCode": "アクセスコード",
+    "enterAccessCode": "アクセスコードの入力",
+    "aboutUsTitle": "会社概要",
+    "privacyPolicy": "次に進むと、当社のプライバシーポリシーの条項に同意したことになります。"
+  },
+  "helpVirufy": {
+    "aboutParagraph": "<0><strong>Virufy</strong> は <strong>501(c)(3) 非営利団体</strong> であり、<strong>250人のボランティア、スタッフ</strong> と <strong>50のパートナー組織</strong>を擁しています。 パートナー組織には、アマゾンウェブサービス、スタンフォードCOVID-19対応イノベーションラボ、One Young Worldなどが含まれます。 AIを活用して記録された咳の特徴を分析し、<strong>COVID 陽性の咳データとの類似性を判断する</strong>スマートフォンアプリを開発いたしました。 Virufy は、UW、スタンフォード、UC バークレー、MIT、ハーバード、CMU の教職員や卒業生によってサポートされています。</0> <1>世界中の人々から<strong>咳の記録</strong>を収集することで、Virufy はCOVID の独特な音のパターンを認識する AI アルゴリズムの確実性を高めています。</1><2><strong>あなたには、<strong>咳をする</strong>ことで世界中の何百万人もの人々に利益をもたらす力があります</strong>。 </2>",
+    "nextButton": "同意",
+    "installApp": "アプリとしてインストールする"
+  },
+  "beforeStart": {
+    "title": "最後に、始める前に...",
+    "subtitle": "<strong>安全性を確保するために、次のことをお勧めします：</strong>。",
+    "advise_list": [
+        "ご自身の機器を使用し、必要に応じてマスクを着用してください。",
+        "咳や話し声を録音した後は、デバイスとその周辺の表面を消毒してください。",
+        "咳のリスクを高める基礎疾患をお持ちの方は、参加する前に医療従事者に確認してください。",
+        "症状が悪化していると感じた場合は、お近くの医療機関にご相談ください。"
+    ],
+    "startButton": "次へ"
+  },
+  "recordingsIntroduction": {
+    "recordCough": {
+      "header": "咳を記録する",
+      "title": "手順",
+      "intro1": "他の人から少なくとも<strong>20フィート（6m）</strong>離れた<strong>静かな環境</strong>を見つけ、布やサージカルマスクを着用してください。体調が悪いときは、座ってください。",
+      "intro2": "デバイスを<strong>30-60 cm</strong>口から離して持ち、 プラスチックなどでデバイスを覆ったり<strong>遮ったり</strong> しないようにしてください。咳を強くしすぎないように注意しましょう。",
+      "text": "録音ボタンをタップして、携帯電話の下部に向かって<strong>意図的に</strong>咳を<strong>3回</strong>してください。終わったら、停止ボタンをタップします。",
+      "record": "記録する",
+      "stop": "停止する"
+    },
+    "next": "次へ",
+    "retryButton": "リトライ",
+    "releaseButtonStart": "離すと録音開始",
+    "releaseButtonStop": "手を離すと録音が止まります",
+    "shortRecording": "少なくとも2秒間録音する"
+  },
+  "recordingsRecord": {
+    "recordCough": {
+      "header": "咳を録音する"
+    },
+    "next": "続ける",
+    "delete": "削除",
+    "textCount": "「続ける」をクリックして次に進みます。",
+    "upload": "自分のファイルをアップロードする"
+  },
+  "recordingsRecordManual": {
+    "header": "ファイルのアップロード",
+    "addFile": "自分のファイルを追加する",
+    "constraint": "5MBまで追加可能",
+    "next": "完了",
+    "micError": "マイクにアクセスできない場合 音声ファイル（.wav/.wave/.mp3/.ogg）のアップロード",
+    "micErrorDescription": "ここに音声ファイルをアップロードしてください。",
+    "fileDurationTooShort": "3秒以上のファイルをアップロードしてください。",
+    "fileSizeTooBig": "5MB以下のファイルをアップロードしてください。",
+    "fileRequired": "ファイルをアップロードしてください",
+    "uploadFile": "ファイルをアップロードする"
+  },
+  "recordingsListen": {
+    "recordCough": {
+      "header": "咳を録音する",
+      "intro1": "咳をするときは、周りの人に迷惑をかけないようにしてください。体調が悪いときは座ってください。",
+      "intro2": "静かな環境で、録音ボタンを押して、意図的に3～5回程度の咳をしてください。"
+    },
+    "title": "アップロード完了",
+    "subtitle": "ご自由にお聴きください。",
+    "next": "続ける",
+    "retake": "再試行"
+  },
+  "predictionResult": {
+    "processingTitle": "診断中...",
+    "note": "注意：",
+    "result": "結果",
+    "resultModal": "<strong>Important note:</strong> This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
+    "resultNotDetected": "COVID-19: 陰性",
+    "resultNotDetectedText": "あなたの声にはCOVID-19の指標がないようです。 医療専門家や該当する規制機関のアドバイスに基づいて、<strong>適切な対策を継続し、日々アプリで自分自身を見つめ直してください</strong>",
+    "resultNotAnalyze": "咳の分析ができない",
+    "resultModalDummy": "<strong注意：</strong> 本アプリはデモンストレーション目的であり、実際の予測結果を提供するものではございません。咳の提供はVirufy Studyで行うようお願いいたします。",
+    "resultNotAnalyzeText": "当団体のアルゴリズムでは、お客様のCOVID-19の状態を判断することができません。<strong>別の咳を提出してください</strong>.",
+    "resultDetectedDummy": "COVID-19: 陽性 <br/>(ダミーの例)",
+    "resultDetectedText": "あなたの声にはCOVID-19の可能性を示す指標があります。 <strong>医療従事者</strong>に連絡し、追加の予防策を講じてください。",
+    "testForCovid": "COVID-19のテスト",
+    "resultDetected": "COVID-19: 陽性",
+    "nextButton": "再度咳を送信する",
+    "submitError": "エラーが発生しました。もう一度お試しください。",
+    "nextSteps": "次のステップ"
+  },
+  "footerReportProblems": {
+    "message": "何か問題がありますか？エラーを報告する"
+  }
+}
