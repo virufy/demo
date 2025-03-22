@@ -27,7 +27,7 @@ export const MicNote = styled.p`
   margin-top: 8px;
   margin-bottom: 0px;
 `;
-export const MicRecorderButton = styled.button<{ disabled?: boolean; opacity?: boolean}>`
+export const MicRecorderButton = styled.button<{ disabled?: boolean; opacity?: boolean }>`
   background-color: ${colors.purple};
   width: 56px;
   height: 56px;

@@ -104,7 +104,7 @@ export const WelcomeTitle = styled.h1<WelcomeTitleProps>`
   }
 `;
 
-export const WelcomeContent = styled.div<{ maxWidth?: number; mt?: number; mb?: number;}>`
+export const WelcomeContent = styled.div<{ maxWidth?: number; mt?: number; mb?: number; }>`
   margin: ${({ mt = 30 }) => mt}px auto ${({ mb = 30 }) => mb}px;
   text-align: center;
   display: flex;

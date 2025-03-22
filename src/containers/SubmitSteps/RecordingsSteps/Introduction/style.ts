@@ -56,7 +56,7 @@ export const Text = styled(BlackText).attrs({ dark: true })`
   }
 `;
 
-export const InstructionContainer = styled.div<{mt?: number; mb?: number;}>`
+export const InstructionContainer = styled.div<{ mt?: number; mb?: number; }>`
   display:flex;
   margin: ${({ mt = 30 }) => mt}px auto ${({ mb = 30 }) => mb}px;
   @media screen and (${props => props.theme.breakpoints.tablet}) {
