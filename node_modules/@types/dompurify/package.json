@@ -1,0 +1,46 @@
+{
+    "name": "@types/dompurify",
+    "version": "2.2.1",
+    "description": "TypeScript definitions for DOM Purify",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "Dave Taylor https://github.com/davetayls\n//                 Samira Bazuzi",
+            "url": "https://github.com/bazuzi",
+            "githubUsername": "bazuzi"
+        },
+        {
+            "name": "FlowCrypt",
+            "url": "https://github.com/FlowCrypt",
+            "githubUsername": "FlowCrypt"
+        },
+        {
+            "name": "Exigerr",
+            "url": "https://github.com/Exigerr",
+            "githubUsername": "Exigerr"
+        },
+        {
+            "name": "Piotr Błażejewicz",
+            "url": "https://github.com/peterblazejewicz",
+            "githubUsername": "peterblazejewicz"
+        },
+        {
+            "name": "Nicholas Ellul",
+            "url": "https://github.com/NicholasEllul",
+            "githubUsername": "NicholasEllul"
+        }
+    ],
+    "main": "",
+    "types": "index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/dompurify"
+    },
+    "scripts": {},
+    "dependencies": {
+        "@types/trusted-types": "*"
+    },
+    "typesPublisherContentHash": "d58ba63d85f30889441566efb54a26bd3b03f057dce123c5fa45e0367b23fbe9",
+    "typeScriptVersion": "3.3"
+}
