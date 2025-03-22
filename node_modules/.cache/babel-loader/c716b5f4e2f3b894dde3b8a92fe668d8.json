@@ -1,0 +1,1 @@
+{"ast":null,"code":"var createNonEnumerableProperty = require('../internals/create-non-enumerable-property');\n\nmodule.exports = function (target, key, value, options) {\n  if (options && options.enumerable) target[key] = value;else createNonEnumerableProperty(target, key, value);\n};","map":null,"metadata":{},"sourceType":"script"}
