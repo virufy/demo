@@ -1,0 +1,99 @@
+{
+    "main": {
+      "title": "COVID-19 Détection de la toux",
+      "note": "<strong>PA noter:</strong> Ce formulaire ne sert qu'à recueillir des données. Il ne permet pas de prédire votre statut COVID-19 ni de diagnostiquer une maladie, un trouble ou un autre état de santé. Virufy effectue des recherches et utilisera les informations que vous fournissez uniquement dans le cadre de ces recherches. Virufy ne se substitue pas à un médecin et vous rappelle qu'il est de votre responsabilité de demander l'avis de votre médecin.",
+      "selectYourLanguage": "Langue",
+      "nextButton": "Suivant",
+      "createdBy": "Created By",
+      "provideAccessCode": "Access code",
+      "enterAccessCode": "Enter access  code",
+      "aboutUsTitle": "À propos de nous",
+      "privacyPolicy": "En poursuivant, vous acceptez les conditions de notre <strong>Politique de confidentialité</strong>"
+    },
+    "helpVirufy": {
+      "aboutParagraph": "<0><strong>Virufy</strong> is a robust <strong>501(c)(3) nonprofit</strong> company with <strong>250 volunteers/staff</strong> and <strong>50 partner organizations</strong> including Amazon Web Services, Stanford COVID-19 Response Innovation Lab, and One Young World. We've developed a smartphone app which leverages AI to analyze the signature of recorded coughs to <strong>determine their similarity with COVID positive cough data</strong>. Virufy is supported by faculty and alumni from UW, Stanford, UC Berkeley, MIT, Harvard, and CMU.</0> <1>By collecting <strong>coughs recordings</strong> from people around the world, Virufy is improving the robustness of its AI algorithm in recognizing COVID’s unique sound pattern.</1><2><strong>You have the power</strong> to help benefit millions of people across the globe by <strong>contributing your cough</strong> in our study.</2>",
+      "installApp": "Install as an app",
+      "nextButton": "Consentement"
+    },
+    "beforeStart": {
+      "title": "Lastly, before we start...",
+      "subtitle": "<strong>To ensure safety, we advise you to:</strong>",
+      "advise_list": [
+        "Please use your own device and wear a mask when appropriate.",
+        "Disinfect your device and any affected or nearby surfaces after recording your cough/speech.",
+        "If you have an underlying condition that increases your risk from coughing, please check with your health care provider before participating.",
+        "If you feel your symptoms are getting worse, please contact your local medical response."
+      ],
+      "startButton": "Start"
+    },
+    "recordingsIntroduction": {
+      "recordCough": {
+        "header": "Record your cough",
+        "title": "Instructions",
+        "intro1": "Find a <strong>quiet environment</strong> at least <strong>20 ft (6m)</strong> away from others and wear a cloth or surgical mask. If you are feeling ill, please sit down.",
+        "intro2": "Hold your device <strong>1-2 ft (30-60 cm)</strong> away from your mouth and <strong>do not obstruct</strong> or cover your device with plastic. Do not cough violently or too forcefully.",
+        "text": "Tap the record button and <strong>cough intentionally</strong> into the bottom of your phone <strong>3 times</strong> with a <strong>deep breath</strong> between each cough. When you are done, tap the stop button. ",
+        "record": "Record",
+        "stop": "Stop"
+      },
+      "next": "Next",
+      "retryButton": "Retry",
+      "releaseButtonStart": "Release to start recording",
+      "releaseButtonStop": "Release to stop recording",
+      "shortRecording": "Please make a recording of at least 2 seconds"
+    },
+    "recordingsRecord": {
+      "recordCough": {
+        "header": "Record your cough"
+      },
+      "next": "Continue",
+      "delete": "Delete",
+      "textCount": "Click continue to proceed.",
+      "upload": "Upload your own file"
+    },
+    "recordingsRecordManual": {
+      "header": "Upload a file",
+      "addFile": "Add your file",
+      "constraint": "Add up to 5 MB",
+      "uploadFile" : "Upload File",
+      "next": "Done",
+      "micError": "Can’t access the mic? Upload an audio file.",
+      "micErrorDescription": "Please upload an audio file here.",
+      "fileDurationTooShort": "Please upload a file of at least 3 seconds",
+      "fileSizeTooBig": "Please upload a file of less than 5 MB",
+      "fileRequired": "Please upload a file"
+    },
+    "recordingsListen": {
+      "recordCough": {
+        "header": "Record your cough",
+        "intro1": "Please cough away from others around you! Please sit down if you are feeling ill.",
+        "intro2": " In a quiet environment, please press record and intentionally cough around 3-5 times."
+      },
+      "title": "Upload Complete",
+      "subtitle": "Feel free to take a listen!",
+      "next": "Continue",
+      "retake": "Retake"
+    },
+    "predictionResult": {
+      "processingTitle": "Processing...",
+      "note": "Important Note:",
+      "result": "Results",
+      "resultModal": "<strong>Important note:</strong> This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
+      "resultNotDetected": "COVID-19: NOT DETECTED",
+      "resultNotDetectedText": "Your voice does not seem to have indicators of COVID-19. Please <strong>continue to take appropriate measures</strong> based on the advice of your healthcare professional or applicable regulatory body and reassess yourself in our app daily.",
+      "resultDetected": "COVID-19: DETECTED",
+      "resultNotAnalyze": "Unable to Analyze Cough",
+      "resultModalDummy": "<strong>Important note:</strong> This app is only for demonstration purposes and does not provide a true prediction. Please visit the Virufy Study to contribute your cough.",
+      "resultNotAnalyzeText": "Our algorithm is not able to determine your COVID-19 status. <strong>Please submit another cough</strong>.",
+      "resultDetectedDummy": "COVID-19: DETECTED <br/>(Dummy Example)",
+      "resultDetectedText": "Your voice has indicators of possible COVID-19. <strong>Please contact your healthcare professional</strong> and take additional precautions.",
+      "testForCovid": "Test for COVID-19",
+      "nextButton": "Submit another cough",
+      "submitError": "An error occurred. Please try again.",
+      "nextSteps": "Next Steps"
+    },
+    "footerReportProblems": {
+      "message": "Something wrong? Report an error"
+    }
+  }
+  
