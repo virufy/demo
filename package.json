@@ -2,7 +2,7 @@
   "name": "pwa-demo",
   "version": "1.0.13",
   "private": true,
-  "homepage": "/",
+  "homepage": "/demo",
   "scripts": {
     "preinstall": "npx only-allow npm",
     "start": "npm run generate:consent-map && react-scripts start",
