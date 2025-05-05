@@ -58,7 +58,7 @@ const PredictionResult = () => {
 
   // Handlers
   const handleSubmit = async () => {
-    setPrediction('positive');
+    setPrediction('negative');
     await new Promise(resolve => setTimeout(resolve, 2000));
     setProcessing(false);
   };
