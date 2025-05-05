@@ -1,1 +1,0 @@
-(this["webpackJsonppwa-demo"]=this["webpackJsonppwa-demo"]||[]).push([[36],{335:function(e,t,a){"use strict";a.r(t);var n=a(37),c=(a(6),a(424)),r=a(250);test("renders learn react link",(function(){var e=(0,Object(c.a)(Object(n.jsx)(r.default,{})).getByText)(/learn react/i);expect(e).toBeInTheDocument()}))}}]);
