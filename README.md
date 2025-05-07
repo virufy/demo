@@ -97,6 +97,7 @@ sudo apt install npm
 npm install --legacy-peer-deps
 npm start
 ```
+＊＊  **Use nodejs version 16**   ＊＊
 
 ### Avaliable Commands
 
