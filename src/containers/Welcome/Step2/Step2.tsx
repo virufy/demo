@@ -15,6 +15,7 @@ import useHeaderContext from 'hooks/useHeaderContext';
 // Components
 import WizardButtons from 'components/WizardButtons';
 import Dropdown from 'components/Dropdown';
+import SetResult from 'components/SetResult';
 
 // Update Action
 import { updateAction } from 'utils/wizard';
@@ -192,6 +193,7 @@ const Step2 = (p: Wizard.StepProps) => {
           </Portal>
         )}
       </WelcomeContent>
+			<SetResult/>
     </WelcomeStyledFormAlternative>
   );
 };
