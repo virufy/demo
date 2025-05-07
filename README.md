@@ -94,7 +94,7 @@ If using windows, make sure to use `git config --global core.autocrlf input` bef
 ```
 sudo apt update
 sudo apt install npm
-npm install
+npm install --legacy-peer-deps
 npm start
 ```
 
