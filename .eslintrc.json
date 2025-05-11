@@ -45,7 +45,8 @@
     "react/react-in-jsx-scope": "off",
     "react/require-default-props": 0,
     "global-require": 0,
-    "linebreak-style": 0
+    "linebreak-style": 0,
+    "react/destructuring-assignment": "off"
   },
   "settings": {
     "import/parsers": {

@@ -76,7 +76,7 @@ const Start = () => (
   <ThemeProvider theme={theme}>
     <Helmet titleTemplate="%s - Virufy" defaultTitle="Virufy" />
     <GlobalStyle />
-    <BrowserRouter basename={process.env.REACT_APP_BASENAME}>
+    <BrowserRouter basename="/demo">
       <App />
     </BrowserRouter>
   </ThemeProvider>

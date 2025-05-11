@@ -83,7 +83,7 @@ export const LogoDemo = styled.img<{ size?: LogoSize }>`
   }
 `;
 
-export const Subtitle = styled.h1<{ colorType?: HeaderType; pb?: number; mt?: number}>`
+export const Subtitle = styled.h1<{ colorType?: HeaderType; pb?: number; mt?: number }>`
   font-family: ${({ colorType }) => {
     switch (colorType) {
       case 'shapeDown':
@@ -126,7 +126,7 @@ export const Subtitle = styled.h1<{ colorType?: HeaderType; pb?: number; mt?: nu
   }
 `;
 
-export const Title = styled.h3<{ pb?: number;}>`
+export const Title = styled.h3<{ pb?: number; }>`
   font-family: "Open Sans";
   font-size: 14px;
   font-weight: bold;

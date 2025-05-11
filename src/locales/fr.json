@@ -1,98 +1,98 @@
 {
-    "main": {
-      "title": "COVID-19 Détection de la toux",
-      "note": "<strong>À noter :</strong> Ce formulaire ne sert qu'à recueillir des données. Il ne permet pas de prédire votre statut COVID-19 ni de diagnostiquer une maladie, un trouble ou un autre état de santé. Virufy effectue des recherches et utilisera les informations que vous fournissez uniquement dans le cadre de ces recherches. Virufy ne se substitue pas à un médecin et vous rappelle qu'il est de votre responsabilité de demander l'avis de votre médecin.",
-      "selectYourLanguage": "Langue",
-      "nextButton": "Suivant",
-      "createdBy": "Créé par",
-      "provideAccessCode": "Code d'accès",
-      "enterAccessCode": "Entrer le code d'accès",
-      "aboutUsTitle": "À propos de nous",
-      "privacyPolicy": "En poursuivant, vous acceptez les conditions de notre <strong>Politique de confidentialité</strong>"
+  "main": {
+    "title": "COVID-19 Détection de la toux",
+    "note": "<strong>À noter :</strong> Ce formulaire ne sert qu'à recueillir des données. Il ne permet pas de prédire votre statut COVID-19 ni de diagnostiquer une maladie, un trouble ou un autre état de santé. Virufy effectue des recherches et utilisera les informations que vous fournissez uniquement dans le cadre de ces recherches. Virufy ne se substitue pas à un médecin et vous rappelle qu'il est de votre responsabilité de demander l'avis de votre médecin.",
+    "selectYourLanguage": "Langue",
+    "nextButton": "Suivant",
+    "createdBy": "Créé par",
+    "provideAccessCode": "Code d'accès",
+    "enterAccessCode": "Entrer le code d'accès",
+    "aboutUsTitle": "À propos de nous",
+    "privacyPolicy": "En poursuivant, vous acceptez les conditions de notre <strong>Politique de confidentialité</strong>"
+  },
+  "helpVirufy": {
+    "aboutParagraph": "<0><strong>Virufy</strong> est une organisation <strong>501(c)(3) à but non lucratif</strong> avec <strong>250 bénévoles/personnel</strong> et <strong>50 organisations partenaires</strong>, dont Amazon Web Services, Stanford COVID-19 Response Innovation Lab et One Young World. Nous avons développé une application mobile utilisant l'IA pour analyser la signature des toux enregistrées et <strong>déterminer leur similarité avec les toux positives au COVID</strong>. Virufy est soutenu par des professeurs et des anciens élèves de UW, Stanford, UC Berkeley, MIT, Harvard et CMU.</0> <1>En collectant des <strong>enregistrements de toux</strong> du monde entier, Virufy améliore la robustesse de son algorithme d'IA pour reconnaître le son unique du COVID.</1><2><strong>Vous avez le pouvoir</strong> d'aider des millions de personnes en <strong>contribuant avec votre toux</strong> à notre étude.</2>",
+    "installApp": "Installer comme application",
+    "nextButton": "Consentement"
+  },
+  "beforeStart": {
+    "title": "Avant de commencer...",
+    "subtitle": "<strong>Pour garantir votre sécurité, nous vous conseillons de :</strong>",
+    "advise_list": [
+      "Utiliser votre propre appareil et porter un masque si nécessaire.",
+      "Désinfecter votre appareil et les surfaces environnantes après l'enregistrement de votre toux/parole.",
+      "Si vous avez une condition sous-jacente augmentant votre risque en toussant, consultez votre professionnel de santé avant de participer.",
+      "Si vos symptômes s'aggravent, contactez votre service médical local."
+    ],
+    "startButton": "Commencer"
+  },
+  "recordingsIntroduction": {
+    "recordCough": {
+      "header": "Enregistrer votre toux",
+      "title": "Instructions",
+      "intro1": "Trouvez un <strong>environnement calme</strong> à au moins <strong>6 m</strong> des autres et portez un masque en tissu ou chirurgical. Si vous vous sentez malade, asseyez-vous.",
+      "intro2": "Tenez votre appareil à <strong>30-60 cm</strong> de votre bouche et <strong>n'obstruez pas</strong> le microphone. Ne toussez pas violemment ou trop fort.",
+      "text": "Appuyez sur le bouton d'enregistrement et <strong>toussez intentionnellement</strong> trois fois avec une <strong>respiration profonde</strong> entre chaque toux. Une fois terminé, appuyez sur le bouton d'arrêt.",
+      "record": "Enregistrer",
+      "stop": "Arrêter"
     },
-    "helpVirufy": {
-      "aboutParagraph": "<0><strong>Virufy</strong> est une organisation <strong>501(c)(3) à but non lucratif</strong> avec <strong>250 bénévoles/personnel</strong> et <strong>50 organisations partenaires</strong>, dont Amazon Web Services, Stanford COVID-19 Response Innovation Lab et One Young World. Nous avons développé une application mobile utilisant l'IA pour analyser la signature des toux enregistrées et <strong>déterminer leur similarité avec les toux positives au COVID</strong>. Virufy est soutenu par des professeurs et des anciens élèves de UW, Stanford, UC Berkeley, MIT, Harvard et CMU.</0> <1>En collectant des <strong>enregistrements de toux</strong> du monde entier, Virufy améliore la robustesse de son algorithme d'IA pour reconnaître le son unique du COVID.</1><2><strong>Vous avez le pouvoir</strong> d'aider des millions de personnes en <strong>contribuant avec votre toux</strong> à notre étude.</2>",
-      "installApp": "Installer comme application",
-      "nextButton": "Consentement"
+    "next": "Suivant",
+    "retryButton": "Réessayer",
+    "releaseButtonStart": "Relâcher pour commencer l'enregistrement",
+    "releaseButtonStop": "Relâcher pour arrêter l'enregistrement",
+    "shortRecording": "Veuillez enregistrer au moins 2 secondes"
+  },
+  "recordingsRecord": {
+    "recordCough": {
+      "header": "Enregistrer votre toux"
     },
-    "beforeStart": {
-      "title": "Avant de commencer...",
-      "subtitle": "<strong>Pour garantir votre sécurité, nous vous conseillons de :</strong>",
-      "advise_list": [
-        "Utiliser votre propre appareil et porter un masque si nécessaire.",
-        "Désinfecter votre appareil et les surfaces environnantes après l'enregistrement de votre toux/parole.",
-        "Si vous avez une condition sous-jacente augmentant votre risque en toussant, consultez votre professionnel de santé avant de participer.",
-        "Si vos symptômes s'aggravent, contactez votre service médical local."
-      ],
-      "startButton": "Commencer"
+    "next": "Continuer",
+    "delete": "Supprimer",
+    "textCount": "Cliquez sur continuer pour avancer.",
+    "upload": "Téléverser un fichier"
+  },
+  "recordingsRecordManual": {
+    "header": "Téléverser un fichier",
+    "addFile": "Ajouter votre fichier",
+    "constraint": "Ajouter jusqu'à 5 Mo",
+    "uploadFile" : "Téléverser le fichier",
+    "next": "Terminé",
+    "micError": "Micro inaccessible ? Téléversez un fichier audio.",
+    "micErrorDescription": "Veuillez téléverser un fichier audio ici.",
+    "fileDurationTooShort": "Veuillez téléverser un fichier d'au moins 3 secondes",
+    "fileSizeTooBig": "Veuillez téléverser un fichier de moins de 5 Mo",
+    "fileRequired": "Veuillez téléverser un fichier"
+  },
+  "recordingsListen": {
+    "recordCough": {
+      "header": "Enregistrer votre toux",
+      "intro1": "Toussez loin des autres ! Asseyez-vous si vous vous sentez malade.",
+      "intro2": " Dans un environnement calme, appuyez sur enregistrer et toussez intentionnellement 3 à 5 fois."
     },
-    "recordingsIntroduction": {
-      "recordCough": {
-        "header": "Enregistrer votre toux",
-        "title": "Instructions",
-        "intro1": "Trouvez un <strong>environnement calme</strong> à au moins <strong>6 m</strong> des autres et portez un masque en tissu ou chirurgical. Si vous vous sentez malade, asseyez-vous.",
-        "intro2": "Tenez votre appareil à <strong>30-60 cm</strong> de votre bouche et <strong>n'obstruez pas</strong> le microphone. Ne toussez pas violemment ou trop fort.",
-        "text": "Appuyez sur le bouton d'enregistrement et <strong>toussez intentionnellement</strong> trois fois avec une <strong>respiration profonde</strong> entre chaque toux. Une fois terminé, appuyez sur le bouton d'arrêt.",
-        "record": "Enregistrer",
-        "stop": "Arrêter"
-      },
-      "next": "Suivant",
-      "retryButton": "Réessayer",
-      "releaseButtonStart": "Relâcher pour commencer l'enregistrement",
-      "releaseButtonStop": "Relâcher pour arrêter l'enregistrement",
-      "shortRecording": "Veuillez enregistrer au moins 2 secondes"
-    },
-    "recordingsRecord": {
-      "recordCough": {
-        "header": "Enregistrer votre toux"
-      },
-      "next": "Continuer",
-      "delete": "Supprimer",
-      "textCount": "Cliquez sur continuer pour avancer.",
-      "upload": "Téléverser un fichier"
-    },
-    "recordingsRecordManual": {
-      "header": "Téléverser un fichier",
-      "addFile": "Ajouter votre fichier",
-      "constraint": "Ajouter jusqu'à 5 Mo",
-      "uploadFile" : "Téléverser le fichier",
-      "next": "Terminé",
-      "micError": "Micro inaccessible ? Téléversez un fichier audio.",
-      "micErrorDescription": "Veuillez téléverser un fichier audio ici.",
-      "fileDurationTooShort": "Veuillez téléverser un fichier d'au moins 3 secondes",
-      "fileSizeTooBig": "Veuillez téléverser un fichier de moins de 5 Mo",
-      "fileRequired": "Veuillez téléverser un fichier"
-    },
-    "recordingsListen": {
-      "recordCough": {
-        "header": "Enregistrer votre toux",
-        "intro1": "Toussez loin des autres ! Asseyez-vous si vous vous sentez malade.",
-        "intro2": " Dans un environnement calme, appuyez sur enregistrer et toussez intentionnellement 3 à 5 fois."
-      },
-      "title": "Téléversement terminé",
-      "subtitle": "Écoutez votre enregistrement si vous le souhaitez.",
-      "next": "Continuer",
-      "retake": "Reprendre"
-    },
-    "predictionResult": {
-      "processingTitle": "Traitement en cours...",
-      "note": "Remarque importante :",
-      "result": "Résultats",
-      "resultModal": "<strong>Remarque importante :</strong> Cette application ne prédit pas votre statut COVID-19 et ne diagnostique aucune maladie. Virufy effectue des recherches et utilise uniquement vos informations dans ce cadre. Virufy ne remplace pas un médecin. Consultez un professionnel de santé si nécessaire.",
-      "resultNotDetected": "COVID-19 : NON DÉTECTÉ",
-      "resultNotDetectedText": "Votre voix ne semble pas indiquer de signes de COVID-19. <strong>Continuez à suivre les mesures appropriées</strong> et réévaluez-vous quotidiennement avec notre application.",
-      "resultDetected": "COVID-19 : DÉTECTÉ",
-      "resultNotAnalyze": "Impossible d'analyser la toux",
-      "resultModalDummy": "<strong>Remarque importante :</strong> Cette application est uniquement à des fins de démonstration et ne fournit pas de prédiction réelle. Participez à l'étude Virufy pour contribuer.",
-      "resultNotAnalyzeText": "Notre algorithme n'a pas pu déterminer votre statut COVID-19. <strong>Veuillez soumettre une autre toux.</strong>",
-      "resultDetectedDummy": "COVID-19 : DÉTECTÉ <br/>(Exemple fictif)",
-      "resultDetectedText": "Votre voix présente des indicateurs possibles de COVID-19. <strong>Contactez un professionnel de santé</strong> et prenez des précautions supplémentaires.",
-      "testForCovid": "Test COVID-19",
-      "nextButton": "Soumettre une autre toux",
-      "submitError": "Une erreur est survenue. Veuillez réessayer.",
-      "nextSteps": "Étapes suivantes"
-    },
-    "footerReportProblems": {
-      "message": "Un problème ? Signaler une erreur"
-    }
+    "title": "Téléversement terminé",
+    "subtitle": "Écoutez votre enregistrement si vous le souhaitez.",
+    "next": "Continuer",
+    "retake": "Reprendre"
+  },
+  "predictionResult": {
+    "processingTitle": "Traitement en cours...",
+    "note": "Remarque importante :",
+    "result": "Résultats",
+    "resultModal": "<strong>Remarque importante :</strong> Cette application ne prédit pas votre statut COVID-19 et ne diagnostique aucune maladie. Virufy effectue des recherches et utilise uniquement vos informations dans ce cadre. Virufy ne remplace pas un médecin. Consultez un professionnel de santé si nécessaire.",
+    "resultNotDetected": "COVID-19 : NON DÉTECTÉ",
+    "resultNotDetectedText": "Votre voix ne semble pas indiquer de signes de COVID-19. <strong>Continuez à suivre les mesures appropriées</strong> et réévaluez-vous quotidiennement avec notre application.",
+    "resultDetected": "COVID-19 : DÉTECTÉ",
+    "resultNotAnalyze": "Impossible d'analyser la toux",
+    "resultModalDummy": "<strong>Remarque importante :</strong> Cette application est uniquement à des fins de démonstration et ne fournit pas de prédiction réelle. Participez à l'étude Virufy pour contribuer.",
+    "resultNotAnalyzeText": "Notre algorithme n'a pas pu déterminer votre statut COVID-19. <strong>Veuillez soumettre une autre toux.</strong>",
+    "resultDetectedDummy": "COVID-19 : DÉTECTÉ <br/>(Exemple fictif)",
+    "resultDetectedText": "Votre voix présente des indicateurs possibles de COVID-19. <strong>Contactez un professionnel de santé</strong> et prenez des précautions supplémentaires.",
+    "testForCovid": "Test COVID-19",
+    "nextButton": "Soumettre une autre toux",
+    "submitError": "Une erreur est survenue. Veuillez réessayer.",
+    "nextSteps": "Étapes suivantes"
+  },
+  "footerReportProblems": {
+    "message": "Un problème ? Signaler une erreur"
   }
+}
