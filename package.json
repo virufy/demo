@@ -113,5 +113,10 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": "eslint --cache --fix"
+  },
+  "overrides": {
+    "postcss-safe-parser": {
+      "postcss": "7.0.0"
+    }
   }
 }
