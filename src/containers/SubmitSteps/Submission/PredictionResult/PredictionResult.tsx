@@ -59,7 +59,6 @@ const PredictionResult = () => {
   // Handlers
   const handleSubmit = async () => {
 		const predictionResult = localStorage.getItem('predictionResult') || 'negative';
-		console.log('predictionResult', predictionResult);
     setPrediction(predictionResult);
     await new Promise(resolve => setTimeout(resolve, 2000));
     setProcessing(false);

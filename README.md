@@ -101,6 +101,9 @@ npm start
 
 ### Avaliable Commands
 
+### `export NODE_OPTIONS=--openssl-legacy-provider`
+Allows the application to run with 'npm start'.
+
 ### `npm start`
 
 Runs the app in the development mode.\
