@@ -57,12 +57,15 @@ module.exports = {
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/comma-dangle.md
     // The TypeScript version also adds 3 new options, all of which should be set to the same value as the base config
     'comma-dangle': 'off',
-    '@typescript-eslint/comma-dangle': [baseStyleRules['comma-dangle'][0], {
-      ...baseStyleRules['comma-dangle'][1],
-      enums: baseStyleRules['comma-dangle'][1].arrays,
-      generics: baseStyleRules['comma-dangle'][1].arrays,
-      tuples: baseStyleRules['comma-dangle'][1].arrays,
-    }],
+    '@typescript-eslint/comma-dangle': [
+      baseStyleRules['comma-dangle'][0],
+      {
+        ...baseStyleRules['comma-dangle'][1],
+        enums: baseStyleRules['comma-dangle'][1].arrays,
+        generics: baseStyleRules['comma-dangle'][1].arrays,
+        tuples: baseStyleRules['comma-dangle'][1].arrays,
+      },
+    ],
 
     // Replace Airbnb 'comma-spacing' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/comma-spacing.md
@@ -185,6 +188,26 @@ module.exports = {
     'space-before-function-paren': 'off',
     '@typescript-eslint/space-before-function-paren': baseStyleRules['space-before-function-paren'],
 
+    // Replace Airbnb 'require-await' rule with '@typescript-eslint' version
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/require-await.md
+    'require-await': 'off',
+    '@typescript-eslint/require-await': baseBestPracticesRules['require-await'],
+
+    // Replace Airbnb 'no-return-await' rule with '@typescript-eslint' version
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/return-await.md
+    'no-return-await': 'off',
+    '@typescript-eslint/return-await': baseBestPracticesRules['no-return-await'],
+
+    // Replace Airbnb 'space-infix-ops' rule with '@typescript-eslint' version
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/space-infix-ops.md
+    'space-infix-ops': 'off',
+    '@typescript-eslint/space-infix-ops': baseStyleRules['space-infix-ops'],
+
+    // Replace Airbnb 'object-curly-spacing' rule with '@typescript-eslint' version
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/object-curly-spacing.md
+    'object-curly-spacing': 'off',
+    '@typescript-eslint/object-curly-spacing': baseStyleRules['object-curly-spacing'],
+
     // Append 'ts' and 'tsx' to Airbnb 'import/extensions' rule
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
     'import/extensions': [
@@ -205,7 +228,14 @@ module.exports = {
         ...baseImportsRules['import/no-extraneous-dependencies'][1],
         devDependencies: baseImportsRules[
           'import/no-extraneous-dependencies'
-        ][1].devDependencies.map((glob) => glob.replace('js,jsx', 'js,jsx,ts,tsx')),
+        ][1].devDependencies.reduce((result, devDep) => {
+          const toAppend = [devDep];
+          const devDepWithTs = devDep.replace(/\bjs(x?)\b/g, 'ts$1');
+          if (devDepWithTs !== devDep) {
+            toAppend.push(devDepWithTs);
+          }
+          return [...result, ...toAppend];
+        }, []),
       },
     ],
   },

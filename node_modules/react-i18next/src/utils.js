@@ -40,34 +40,8 @@ export function loadNamespaces(i18n, ns, cb) {
   });
 }
 
-export function hasLoadedNamespace(ns, i18n, options = {}) {
-  /*
-
-  IN I18NEXT > v19.4.5 WE CAN (INTRODUCED JUNE 2020)
-
-  return i18n.hasLoadedNamespace(ns, {
-    precheck: (i18nInstance, loadNotPending) => {
-      if (
-        options.bindI18n &&
-        options.bindI18n.indexOf('languageChanging') > -1 &&
-        i18n.services.backendConnector.backend &&
-        i18n.isLanguageChangingTo &&
-        !loadNotPending(i18n.isLanguageChangingTo, ns)
-      )
-        return false;
-    }
-  })
-
-  // WILL BE BREAKING AS DEPENDS ON SPECIFIC I18NEXT VERSION
-  // WAIT A LITTLE FOR I18NEXT BEING UPDATED IN THE WILD
-
-  */
-
-  if (!i18n.languages || !i18n.languages.length) {
-    warnOnce('i18n.languages were undefined or empty', i18n.languages);
-    return true;
-  }
-
+// WAIT A LITTLE FOR I18NEXT BEING UPDATED IN THE WILD, before removing this old i18next version support
+function oldI18nextHasLoadedNamespace(ns, i18n, options = {}) {
   const lng = i18n.languages[0];
   const fallbackLng = i18n.options ? i18n.options.fallbackLng : false;
   const lastLng = i18n.languages[i18n.languages.length - 1];
@@ -96,12 +70,44 @@ export function hasLoadedNamespace(ns, i18n, options = {}) {
   if (i18n.hasResourceBundle(lng, ns)) return true;
 
   // were not loading at all -> SEMI SUCCESS
-  if (!i18n.services.backendConnector.backend) return true;
+  if (
+    !i18n.services.backendConnector.backend ||
+    (i18n.options.resources && !i18n.options.partialBundledLanguages)
+  )
+    return true;
 
   // failed loading ns - but at least fallback is not pending -> SEMI SUCCESS
   if (loadNotPending(lng, ns) && (!fallbackLng || loadNotPending(lastLng, ns))) return true;
 
   return false;
+}
+
+export function hasLoadedNamespace(ns, i18n, options = {}) {
+  if (!i18n.languages || !i18n.languages.length) {
+    warnOnce('i18n.languages were undefined or empty', i18n.languages);
+    return true;
+  }
+
+  // ignoreJSONStructure was introduced in v20.0.0 (MARCH 2021)
+  const isNewerI18next = i18n.options.ignoreJSONStructure !== undefined;
+  if (!isNewerI18next) {
+    // WAIT A LITTLE FOR I18NEXT BEING UPDATED IN THE WILD, before removing this old i18next version support
+    return oldI18nextHasLoadedNamespace(ns, i18n, options);
+  }
+
+  // IN I18NEXT > v19.4.5 WE CAN (INTRODUCED JUNE 2020)
+  return i18n.hasLoadedNamespace(ns, {
+    precheck: (i18nInstance, loadNotPending) => {
+      if (
+        options.bindI18n &&
+        options.bindI18n.indexOf('languageChanging') > -1 &&
+        i18nInstance.services.backendConnector.backend &&
+        i18nInstance.isLanguageChangingTo &&
+        !loadNotPending(i18nInstance.isLanguageChangingTo, ns)
+      )
+        return false;
+    },
+  });
 }
 
 export function getDisplayName(Component) {
