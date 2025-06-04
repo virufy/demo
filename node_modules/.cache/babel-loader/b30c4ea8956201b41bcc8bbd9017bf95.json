@@ -1,1 +1,0 @@
-{"ast":null,"code":"var path = require('../internals/path');\n\nmodule.exports = function (CONSTRUCTOR) {\n  return path[CONSTRUCTOR + 'Prototype'];\n};","map":null,"metadata":{},"sourceType":"script"}
