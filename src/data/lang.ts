@@ -5,4 +5,5 @@ export const languageData = [
   { code: 'ar', label: 'العربية' },
   { code: 'kr', label: '한국어' },
   { code: 'fr', label: 'Français' },
+  { code: 'ur', label: 'اردو' },
 ];
