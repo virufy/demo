@@ -21,25 +21,26 @@ const baseUrl = '/welcome';
 const stepsWithoutDots: Wizard.Step[] = [
   {
     path: '/',
-    componentPath: 'Welcome/Step2',
+    componentPath: 'Welcome/CombinedSplashScreen', // NEW: Use your combined component
     props: {
       storeKey: StoreKey,
-      previousStep: `${baseUrl}`,
-      nextStep: `${baseUrl}/step-3`,
+      nextStep: '/submit-steps/step-record/cough', // Skip directly to recording
     },
   },
 ];
 
+// Optional: Keep this if you want a second step, or remove it entirely
 const steps: Wizard.Step[] = [
-  {
-    path: '/step-3',
-    componentPath: 'Welcome/Step3',
-    props: {
-      storeKey: StoreKey,
-      previousStep: `${baseUrl}/step-2`,
-      nextStep: '/submit-steps/step-record/cough',
-    },
-  },
+  // Remove or comment out the old step-3 since everything is now combined
+  // {
+  //   path: '/step-3',
+  //   componentPath: 'Welcome/Step3',
+  //   props: {
+  //     storeKey: StoreKey,
+  //     previousStep: `${baseUrl}/step-2`,
+  //     nextStep: '/submit-steps/step-record/cough',
+  //   },
+  // },
 ];
 
 const Welcome = () => {
@@ -54,7 +55,8 @@ const Welcome = () => {
     <Wizard
       steps={[...stepsWithoutDots, ...steps]}
     >
-      {active >= 0 && (
+      {/* Remove dots since we only have one step now */}
+      {active >= 0 && steps.length > 1 && (
         <DotIndicators
           current={active}
           total={steps.length}
