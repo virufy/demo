@@ -97,9 +97,12 @@ const CombinedSplashScreen = (p: Wizard.StepProps) => {
 
   const onSubmit = async (values: CombinedStepType) => {
     if (values) {
+      // Store the user's selection for later use
       actions.updateAction(values);
+      setActiveStep(false);
+      
+      // Always go to recording first
       if (p.nextStep) {
-        setActiveStep(false);
         history.push(p.nextStep);
       }
     }
@@ -213,16 +216,17 @@ const CombinedSplashScreen = (p: Wizard.StepProps) => {
           </Link>
         </BoldBlackTextPrivacy>
 
-        {/* Result Selection - Inline style to match your screenshot */}
+        {/* Result Selection - Conditional layout for RTL languages */}
         <div style={{ 
           display: 'flex', 
           alignItems: 'center', 
           justifyContent: 'center',
           gap: '10px',
-          marginBottom: '32px'
+          marginBottom: '32px',
+          flexDirection: (lang === 'ur' || lang === 'ar') ? 'row-reverse' : 'row'
         }}>
           <span style={{ fontSize: '16px', fontWeight: 'normal' }}>
-            Select Result :
+            {t('main:selectResult', 'Select Result :')}
           </span>
           <Controller
             control={control}
@@ -237,8 +241,11 @@ const CombinedSplashScreen = (p: Wizard.StepProps) => {
                   minWidth: '120px'
                 }}
               >
-                <option value="positive">Positive</option>
-                <option value="negative">Negative</option>
+                <option value="" disabled>
+                  {t('main:selectResult', 'Select result')}
+                </option>
+                <option value="positive">{t('main:positive', 'Positive')}</option>
+                <option value="negative">{t('main:negative', 'Negative')}</option>
               </Dropdown>
             )}
           />
@@ -249,7 +256,7 @@ const CombinedSplashScreen = (p: Wizard.StepProps) => {
           <Portal>
             <WizardButtons
               invert
-              leftLabel="Consent"
+              leftLabel={t('main:consent', 'Consent')}
               leftHandler={handleSubmit(onSubmit)}
               leftDisabled={!isValid}
             />

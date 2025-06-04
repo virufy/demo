@@ -6,6 +6,10 @@
     "nextButton": "Suivant",
     "createdBy": "Créé par",
     "provideAccessCode": "Code d'accès",
+    "selectResult": "Sélectionner le Résultat :",
+    "consent": "Consentement",
+    "positive": "Positif",
+    "negative": "Négatif",
     "enterAccessCode": "Entrer le code d'accès",
     "aboutUsTitle": "À propos de nous",
     "privacyPolicy": "En poursuivant, vous acceptez les conditions de notre <strong>Politique de confidentialité</strong>"
