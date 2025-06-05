@@ -25,7 +25,6 @@ yarn-error.log*
 .vscode
 .eslintcache
 
-_redirects
 .env.production
 .env.local
 
