@@ -33,3 +33,4 @@ _redirects
 .netlify
 .env
 deploy.sh
+build/
