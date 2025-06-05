@@ -6,6 +6,10 @@
     "nextButton": "Next",
     "createdBy": "Created By",
     "provideAccessCode": "Access code",
+    "selectResult": "Select Result :",
+    "consent": "Consent",
+    "positive": "Positive",
+    "negative": "Negative",
     "enterAccessCode": "Enter access  code",
     "aboutUsTitle": "About Us",
     "privacyPolicy": "By proceeding you accept the terms of our <strong>Privacy Policy</strong>"

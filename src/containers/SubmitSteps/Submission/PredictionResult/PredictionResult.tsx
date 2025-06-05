@@ -1,10 +1,8 @@
-// Showing positive egardless of what user submits //
-
 import React from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 import usePortal from 'react-useportal';
-// import axios from 'axios';
 import { useHistory } from 'react-router-dom';
+import { useStateMachine } from 'little-state-machine'; // ADD THIS IMPORT
 
 // Header Control
 import useHeaderContext from 'hooks/useHeaderContext';
@@ -37,6 +35,10 @@ const PredictionResult = () => {
     bindTo: document && document.getElementById('wizard-buttons') as HTMLDivElement,
   });
   const history = useHistory();
+  
+  // ADD THIS: Get user's selection from splash screen
+  const { state } = useStateMachine();
+  const userSelection = state?.welcome?.result; // 'positive' or 'negative'
 
   // States
   const errorCode = null;
@@ -58,7 +60,8 @@ const PredictionResult = () => {
 
   // Handlers
   const handleSubmit = async () => {
-		const predictionResult = localStorage.getItem('predictionResult') || 'negative';
+    // CHANGE THIS: Use user's selection instead of localStorage
+    const predictionResult = userSelection || 'negative'; // Use splash screen selection
     setPrediction(predictionResult);
     await new Promise(resolve => setTimeout(resolve, 2000));
     setProcessing(false);
@@ -87,8 +90,8 @@ const PredictionResult = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [processing]);
 
-  // Always positive result hardcoded
-  console.log('errorCode', errorCode);
+  console.log('User selected on splash screen:', userSelection);
+  console.log('Final prediction result:', prediction);
 
   return (
     <>

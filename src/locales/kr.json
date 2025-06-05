@@ -6,6 +6,10 @@
       "nextButton": "다음",
       "createdBy": "제작자",
       "provideAccessCode": "접근 코드",
+      "selectResult": "결과 선택 :",
+      "consent": "동의",
+      "positive": "양성",
+      "negative": "음성",
       "enterAccessCode": "접근 코드를 입력하세요",
       "aboutUsTitle": "Virufy 소개",
       "privacyPolicy": "계속 진행하면 <strong>개인 정보 보호 정책</strong>에 동의하는 것으로 간주됩니다."

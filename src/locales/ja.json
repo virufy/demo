@@ -7,6 +7,10 @@
     "createdBy": "作成者",
     "provideAccessCode": "アクセスコード",
     "enterAccessCode": "アクセスコードの入力",
+      "selectResult": "結果を選択 :",
+    "consent": "同意する",
+    "positive": "陽性",
+    "negative": "陰性",
     "aboutUsTitle": "会社概要",
     "privacyPolicy": "次に進むと、当社のプライバシーポリシーの条項に同意したことになります。"
   },
