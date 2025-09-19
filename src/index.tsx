@@ -4,6 +4,7 @@ import loadable from '@loadable/component';
 
 import 'react-datepicker/dist/react-datepicker.css';
 import './i18n';
+import './global.css';
 
 // Utils
 import swConfig from 'utils/swConfig';
