@@ -24,8 +24,7 @@
     "typeRoots": [
       "node_modules/@types"
     ],
-    "noFallthroughCasesInSwitch": true,
-    "types": []
+    "noFallthroughCasesInSwitch": true
   },
   "include": [
     "src",

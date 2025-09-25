@@ -37,21 +37,5 @@ i18n
     },
     debug: true,
   });
-//Handle RTL for Arabic
-
-const applyDirFor = (lng?: string) => {
-  const dir = lng === 'ar' ? 'rtl' : 'ltr';
-  document.documentElement.setAttribute('dir', dir);
-  document.documentElement.setAttribute('lang', lng || 'en');
-};
-
-// Apply once after init
-applyDirFor(i18n.language);
-
-// Update whenever the language changes
-i18n.on('languageChanged', (lng) => {
-  applyDirFor(lng);
-
-});
 
 export default i18n;

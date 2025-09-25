@@ -32,7 +32,7 @@ const PredictionResult = () => {
   const {
     setDoGoBack, setTitle, setSubtitle, setType,
   } = useHeaderContext();
-  const { t, i18n  } = useTranslation();
+  const { t } = useTranslation();
   const { Portal } = usePortal({
     bindTo: document && document.getElementById('wizard-buttons') as HTMLDivElement,
   });
@@ -116,8 +116,8 @@ const PredictionResult = () => {
                     <Trans i18nKey="predictionResult:resultDetectedDummy" />
                   </TitleResult>
                   <StyledHigh />
-                  <IntroText className="instruction"  dir={i18n.language === 'ar' ? 'rtl' : undefined}>
-                    <Trans i18nKey="predictionResult:resultDetectedText" components={{ strong: <strong className="rtl-chunk" /> }}>
+                  <IntroText>
+                    <Trans i18nKey="predictionResult:resultDetectedText">
                       {/* eslint-disable-next-line max-len */}
                       Your voice has indicators of COVID-19. Please contact your
                       healthcare professional and take additional precautions.
@@ -136,8 +136,10 @@ const PredictionResult = () => {
                       <>
                         <TitleResult color="#4FDB76">{t('predictionResult:resultNotDetected')}</TitleResult>
                         <StyledLow />
-                        <IntroText className="instruction" dir={i18n.language === 'ar' ? 'rtl' : undefined}>
+                        <IntroText>
                           <Trans i18nKey="predictionResult:resultNotDetectedText">
+                            {/* eslint-disable-next-line max-len */}
+                            Your voice does not seem to have indicators of COVID-19. Please <strong>continue to take appropriate measures</strong> based on the advice of your healthcare professional or applicable regulatory body and reassess yourself in our app daily.
                           </Trans>
                         </IntroText>
                       </>
@@ -177,8 +179,10 @@ const PredictionResult = () => {
         {
           !processing && (
             <>
-              <IntroText className="instruction" dir={i18n.language === 'ar' ? 'rtl' : undefined}>
-                <Trans i18nKey="predictionResult:resultModalDummy" components={{ strong: <strong className="rtl-chunk" /> }}>
+              <IntroText>
+                <Trans i18nKey="predictionResult:resultModalDummy">
+                  {/* eslint-disable-next-line max-len */}
+                  <strong>Aviso importante:</strong> Esta aplicación no predecirá su estado de COVID-19 ni diagnosticará ninguna enfermedad, trastorno u otra condición de salud. Virufy está llevando a cabo una investigación y utilizará la información que proporciones únicamente para dicha investigación. Virufy no sustituirá a un médico y le recuerda que es su responsabilidad buscar consejo médico de su médico.
                 </Trans>
               </IntroText>
               <WizardButtons
