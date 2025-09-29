@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { colors } from 'theme';
 import { BlackText } from 'components/Texts';
 
+
 export const MainContainer = styled.div`
   margin-bottom: 77px;
 
@@ -18,17 +19,34 @@ export const ImportantNote = styled.span<{ isBold?: boolean }>`
   font-size: 0.75rem;
   line-height: 1.42;
   font-weight: ${({ isBold }) => (isBold ? 700 : 400)};
- 
   display: block;
   max-width: 100%;
   padding-left: 20px;
   padding-right: 20px;
   margin: 52px auto;
-  
+
   @media screen and (${props => props.theme.breakpoints.tablet}) {
     max-width: 470px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  /* 🔒 Hard-force RTL and isolate the paragraph from surrounding bidi context */
+  &:dir(rtl),
+  html[dir="rtl"] & {
+    direction: rtl !important;
+    text-align: right !important;
+    unicode-bidi: bidi-override !important; /* key: force RTL ordering across wrapped lines */
+    white-space: normal !important;
+    word-break: normal !important;
+    letter-spacing: 0 !important;
+  }
+
+  /* keep inline bold safe */
+  &:dir(rtl) strong,
+  html[dir="rtl"] & strong {
+    unicode-bidi: isolate;
+    direction: rtl;
   }
 `;
 

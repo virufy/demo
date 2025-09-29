@@ -62,7 +62,7 @@ const ListenAudio = ({
   const history = useHistory();
   const location = useLocation<{ from: string }>();
   const { state, actions } = useStateMachine({ updateAction: updateAction(storeKey) });
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const myState = state?.[storeKey]?.[metadata?.currentLogic];
   const file: File | null = myState ? myState.recordingFile || myState.uploadedFile : null;
@@ -313,13 +313,10 @@ const ListenAudio = ({
           </PlayerPlayButton>
         </PlayerPlayContainer>
       </MainContainer>
-      <ImportantNote>
-        <Trans i18nKey="main:note">
-          <strong>Please note:</strong> This form is for data collection only. It will not predict your COVID-19
-          status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and
-          will use the information you provide for that research only. Virufy will not take place of a doctor and
-          would like to remind you it is your responsibility to seek medical advice from your doctor.
-        </Trans>
+      <ImportantNote className="instruction" dir={i18n.language === 'ar' ? 'rtl' : undefined} >
+        <strong className="rtl-chunk">{t('main:noteLabel')}</strong>{' '}
+        {t('main:noteBody')}
+
       </ImportantNote>
       {activeStep && (
         <Portal>

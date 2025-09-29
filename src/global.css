@@ -1,4 +1,5 @@
 /* Base RTL when Arabic is active */
+html[dir="rtl"] .instruction { text-align: right !important; direction: rtl !important; unicode-bidi: plaintext !important; }
 html[dir="rtl"],
 html[dir="rtl"] body {
   direction: rtl;
