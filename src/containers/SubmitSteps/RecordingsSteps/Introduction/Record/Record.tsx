@@ -11,15 +11,9 @@ import * as Yup from 'yup';
 import MicRecorder from 'components/MicRecorder';
 import WizardButtons from 'components/WizardButtons';
 
-// Images
-import UploadSVG from 'assets/icons/upload.svg';
-
 // Styles
 import {
   MainContainer,
-  UploadContainer,
-  UploadImage,
-  UploadText,
   MicContainer,
 } from './style';
 
@@ -64,7 +58,6 @@ export type RecordType = Yup.InferType<typeof schema>;
 
 interface RecordProps {
   onNext: (values: RecordType) => void,
-  onManualUpload: () => void,
   defaultValues: RecordType,
   currentLogic: string,
   action:any,
@@ -72,7 +65,6 @@ interface RecordProps {
 
 const Record = ({
   onNext,
-  onManualUpload,
   defaultValues,
   currentLogic,
   action,
@@ -95,16 +87,6 @@ const Record = ({
 
   // Refs
   const micKey = React.useRef<number>(1);
-
-  const onManualUploadWithFile = () => {
-    action({
-      [currentLogic]: {
-        recordingFile: getValues('recordingFile') || null,
-        uploadedFile: null,
-      },
-    });
-    onManualUpload?.();
-  };
 
   return (
     <>
@@ -130,11 +112,6 @@ const Record = ({
             leftDisabled={!isValid}
             leftHandler={handleSubmit(onNext)}
           />
-          {/* Upload Container */}
-          <UploadContainer onClick={onManualUploadWithFile}>
-            <UploadImage src={UploadSVG} />
-            <UploadText>{t('recordingsRecord:upload')}</UploadText>
-          </UploadContainer>
         </Portal>
       </MainContainer>
     </>

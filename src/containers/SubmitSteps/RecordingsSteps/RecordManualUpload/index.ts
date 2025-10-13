@@ -1,1 +1,2 @@
+// Manual upload removed; export stub to keep imports safe during migration
 export { default } from './RecordManualUpload';

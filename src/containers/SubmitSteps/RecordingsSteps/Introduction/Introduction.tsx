@@ -64,11 +64,6 @@ const Introduction = ({
     }
   }, [history, previousStep]);
 
-  const handleManualUpload = React.useCallback(() => {
-    if (otherSteps && otherSteps.manualUploadStep) {
-      history.push(otherSteps.manualUploadStep);
-    }
-  }, [otherSteps, history]);
 
   const handleNext = React.useCallback(
     values => {
@@ -137,7 +132,6 @@ const Introduction = ({
         </InstructionContainer>
         <Record
           defaultValues={getDefaultValue(state?.[storeKey], metadata?.currentLogic)}
-          onManualUpload={handleManualUpload}
           onNext={handleNext}
           currentLogic={metadata?.currentLogic || ''}
           action={actions.updateAction}

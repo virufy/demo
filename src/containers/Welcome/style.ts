@@ -33,15 +33,7 @@ interface NextButtonProps {
 }
 
 export const WelcomeLogo = styled(Logo)`
-  display: none; 
-
-  @media screen and (${props => props.theme.breakpoints.tablet}){
-    display: block;
-    margin: 0 auto;
-
-    width: 156px;
-    height: 93px;
-  }
+  display: none !important; 
 `;
 
 export const ArrowRightSVG = styled(ArrowRight)`
