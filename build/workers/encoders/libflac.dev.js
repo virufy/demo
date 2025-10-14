@@ -41,7 +41,7 @@ var Module = typeof Module !== 'undefined' ? Module : {};
 	}
 
 }(typeof self !== 'undefined' ? self : typeof window !== 'undefined' ? window : this, function (global, expLib, require) {
-'use strict';
+
 
 var Module = Module || {};
 var _flac_ready = false;
@@ -981,7 +981,7 @@ function asmFunc(global, env, buffer) {
    $6 = i64toi32_i32$0 | $6 | 0;
    $6$hi = i64toi32_i32$2;
    $1 = $3 + $5 | 0;
-   label$2 : while (1) {
+   while (1) {
     i64toi32_i32$2 = $6$hi;
     i64toi32_i32$0 = $1;
     HEAP32[($1 + 24 | 0) >> 2] = $6;
@@ -998,9 +998,9 @@ function asmFunc(global, env, buffer) {
     $1 = $1 + 32 | 0;
     $2 = $2 + -32 | 0;
     if ($2 >>> 0 > 31 >>> 0) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
   }
   return $0 | 0;
@@ -1040,7 +1040,7 @@ function asmFunc(global, env, buffer) {
       break label$4;
      }
      $2 = $0;
-     label$7 : while (1) {
+     while (1) {
       HEAP8[$2 >> 0] = HEAPU8[$1 >> 0] | 0;
       $1 = $1 + 1 | 0;
       $2 = $2 + 1 | 0;
@@ -1048,9 +1048,9 @@ function asmFunc(global, env, buffer) {
        break label$4
       }
       if ($2 & 3 | 0) {
-       continue label$7
+       continue
       }
-      break label$7;
+      break;
      };
     }
     label$8 : {
@@ -1062,7 +1062,7 @@ function asmFunc(global, env, buffer) {
      if ($2 >>> 0 > $5 >>> 0) {
       break label$8
      }
-     label$9 : while (1) {
+     while (1) {
       HEAP32[$2 >> 2] = HEAP32[$1 >> 2] | 0;
       HEAP32[($2 + 4 | 0) >> 2] = HEAP32[($1 + 4 | 0) >> 2] | 0;
       HEAP32[($2 + 8 | 0) >> 2] = HEAP32[($1 + 8 | 0) >> 2] | 0;
@@ -1082,20 +1082,20 @@ function asmFunc(global, env, buffer) {
       $1 = $1 + 64 | 0;
       $2 = $2 + 64 | 0;
       if ($2 >>> 0 <= $5 >>> 0) {
-       continue label$9
+       continue
       }
-      break label$9;
+      break;
      };
     }
     if ($2 >>> 0 >= $4 >>> 0) {
      break label$2
     }
-    label$10 : while (1) {
+    while (1) {
      HEAP32[$2 >> 2] = HEAP32[$1 >> 2] | 0;
      $1 = $1 + 4 | 0;
      $2 = $2 + 4 | 0;
      if ($2 >>> 0 < $4 >>> 0) {
-      continue label$10
+      continue
      }
      break label$2;
     };
@@ -1116,7 +1116,7 @@ function asmFunc(global, env, buffer) {
     break label$2;
    }
    $2 = $0;
-   label$13 : while (1) {
+   while (1) {
     HEAP8[$2 >> 0] = HEAPU8[$1 >> 0] | 0;
     HEAP8[($2 + 1 | 0) >> 0] = HEAPU8[($1 + 1 | 0) >> 0] | 0;
     HEAP8[($2 + 2 | 0) >> 0] = HEAPU8[($1 + 2 | 0) >> 0] | 0;
@@ -1124,23 +1124,23 @@ function asmFunc(global, env, buffer) {
     $1 = $1 + 4 | 0;
     $2 = $2 + 4 | 0;
     if ($2 >>> 0 <= $4 >>> 0) {
-     continue label$13
+     continue
     }
-    break label$13;
+    break;
    };
   }
   label$14 : {
    if ($2 >>> 0 >= $3 >>> 0) {
     break label$14
    }
-   label$15 : while (1) {
+   while (1) {
     HEAP8[$2 >> 0] = HEAPU8[$1 >> 0] | 0;
     $1 = $1 + 1 | 0;
     $2 = $2 + 1 | 0;
     if (($2 | 0) != ($3 | 0)) {
-     continue label$15
+     continue
     }
-    break label$15;
+    break;
    };
   }
   return $0 | 0;
@@ -1149,7 +1149,7 @@ function asmFunc(global, env, buffer) {
  function dlmalloc($0) {
   $0 = $0 | 0;
   var $4 = 0, $5 = 0, $6 = 0, $8 = 0, $3 = 0, $2 = 0, $11 = 0, $7 = 0, i64toi32_i32$0 = 0, $9 = 0, i64toi32_i32$1 = 0, i64toi32_i32$2 = 0, $1 = 0, $10 = 0, $13 = 0, $12 = 0, $88 = 0, $101 = 0, $112 = 0, $120 = 0, $128 = 0, $222 = 0, $233 = 0, $241 = 0, $249 = 0, $284 = 0, $362 = 0, $369 = 0, $462 = 0, $473 = 0, $481 = 0, $489 = 0, $1200 = 0, $1207 = 0, $1329 = 0, $1331 = 0, $1401 = 0, $1408 = 0, $1652 = 0, $1659 = 0, wasm2js_i32$0 = 0, wasm2js_i32$1 = 0;
-  label$1 : {
+  {
    $1 = global$0 - 16 | 0;
    $12 = $1;
    if ($1 >>> 0 < global$86 >>> 0) {
@@ -1304,7 +1304,7 @@ function asmFunc(global, env, buffer) {
               $4 = ((HEAP32[($5 + 4 | 0) >> 2] | 0) & -8 | 0) - $3 | 0;
               $6 = $5;
               label$24 : {
-               label$25 : while (1) {
+               while (1) {
                 label$26 : {
                  $0 = HEAP32[($6 + 16 | 0) >> 2] | 0;
                  if ($0) {
@@ -1321,7 +1321,7 @@ function asmFunc(global, env, buffer) {
                 $4 = $6 ? $284 : $4;
                 $5 = $6 ? $0 : $5;
                 $6 = $0;
-                continue label$25;
+                continue;
                };
               }
               $10 = HEAP32[($5 + 24 | 0) >> 2] | 0;
@@ -1353,20 +1353,20 @@ function asmFunc(global, env, buffer) {
                }
                $6 = $5 + 16 | 0;
               }
-              label$30 : while (1) {
+              while (1) {
                $11 = $6;
                $8 = $0;
                $6 = $0 + 20 | 0;
                $0 = HEAP32[$6 >> 2] | 0;
                if ($0) {
-                continue label$30
+                continue
                }
                $6 = $8 + 16 | 0;
                $0 = HEAP32[($8 + 16 | 0) >> 2] | 0;
                if ($0) {
-                continue label$30
+                continue
                }
-               break label$30;
+               break;
               };
               HEAP32[$11 >> 2] = 0;
               break label$4;
@@ -1417,7 +1417,7 @@ function asmFunc(global, env, buffer) {
                 $5 = $3 << (($11 | 0) == (31 | 0) ? 0 : 25 - ($11 >>> 1 | 0) | 0) | 0;
                 $0 = 0;
                 $8 = 0;
-                label$36 : while (1) {
+                while (1) {
                  label$37 : {
                   $2 = ((HEAP32[($4 + 4 | 0) >> 2] | 0) & -8 | 0) - $3 | 0;
                   if ($2 >>> 0 >= $6 >>> 0) {
@@ -1438,9 +1438,9 @@ function asmFunc(global, env, buffer) {
                  $0 = $2 ? (($2 | 0) == ($4 | 0) ? $0 : $2) : $0;
                  $5 = $5 << (($4 | 0) != (0 | 0)) | 0;
                  if ($4) {
-                  continue label$36
+                  continue
                  }
-                 break label$36;
+                 break;
                 };
                }
                label$38 : {
@@ -1472,7 +1472,7 @@ function asmFunc(global, env, buffer) {
                 break label$32
                }
               }
-              label$39 : while (1) {
+              while (1) {
                $2 = ((HEAP32[($0 + 4 | 0) >> 2] | 0) & -8 | 0) - $3 | 0;
                $5 = $2 >>> 0 < $6 >>> 0;
                label$40 : {
@@ -1486,9 +1486,9 @@ function asmFunc(global, env, buffer) {
                $8 = $5 ? $0 : $8;
                $0 = $4;
                if ($0) {
-                continue label$39
+                continue
                }
-               break label$39;
+               break;
               };
              }
              if (!$8) {
@@ -1526,20 +1526,20 @@ function asmFunc(global, env, buffer) {
               }
               $4 = $8 + 16 | 0;
              }
-             label$44 : while (1) {
+             while (1) {
               $2 = $4;
               $5 = $0;
               $4 = $0 + 20 | 0;
               $0 = HEAP32[$4 >> 2] | 0;
               if ($0) {
-               continue label$44
+               continue
               }
               $4 = $5 + 16 | 0;
               $0 = HEAP32[($5 + 16 | 0) >> 2] | 0;
               if ($0) {
-               continue label$44
+               continue
               }
-              break label$44;
+              break;
              };
              HEAP32[$2 >> 2] = 0;
              break label$5;
@@ -1643,7 +1643,7 @@ function asmFunc(global, env, buffer) {
                 break label$54
                }
                $0 = 12036;
-               label$55 : while (1) {
+               while (1) {
                 label$56 : {
                  $6 = HEAP32[$0 >> 2] | 0;
                  if ($6 >>> 0 > $4 >>> 0) {
@@ -1655,9 +1655,9 @@ function asmFunc(global, env, buffer) {
                 }
                 $0 = HEAP32[($0 + 8 | 0) >> 2] | 0;
                 if ($0) {
-                 continue label$55
+                 continue
                 }
-                break label$55;
+                break;
                };
               }
               $5 = sbrk(0 | 0) | 0;
@@ -1790,7 +1790,7 @@ function asmFunc(global, env, buffer) {
            break label$66
           }
           $0 = 12036;
-          label$67 : while (1) {
+          while (1) {
            $6 = HEAP32[$0 >> 2] | 0;
            $8 = HEAP32[($0 + 4 | 0) >> 2] | 0;
            if (($5 | 0) == ($6 + $8 | 0 | 0)) {
@@ -1798,7 +1798,7 @@ function asmFunc(global, env, buffer) {
            }
            $0 = HEAP32[($0 + 8 | 0) >> 2] | 0;
            if ($0) {
-            continue label$67
+            continue
            }
            break label$64;
           };
@@ -1821,16 +1821,16 @@ function asmFunc(global, env, buffer) {
          HEAP32[(0 + 11620 | 0) >> 2] = -1;
          HEAP32[(0 + 11624 | 0) >> 2] = HEAP32[(0 + 12060 | 0) >> 2] | 0;
          HEAP32[(0 + 12048 | 0) >> 2] = 0;
-         label$70 : while (1) {
+         while (1) {
           $4 = $0 << 3 | 0;
           $6 = $4 + 11628 | 0;
           HEAP32[($4 + 11636 | 0) >> 2] = $6;
           HEAP32[($4 + 11640 | 0) >> 2] = $6;
           $0 = $0 + 1 | 0;
           if (($0 | 0) != (32 | 0)) {
-           continue label$70
+           continue
           }
-          break label$70;
+          break;
          };
          $0 = $2 + -40 | 0;
          $4 = ($5 + 8 | 0) & 7 | 0 ? (-8 - $5 | 0) & 7 | 0 : 0;
@@ -1881,13 +1881,13 @@ function asmFunc(global, env, buffer) {
            label$76 : {
             label$77 : {
              label$78 : {
-              label$79 : while (1) {
+              while (1) {
                if ((HEAP32[$0 >> 2] | 0 | 0) == ($6 | 0)) {
                 break label$78
                }
                $0 = HEAP32[($0 + 8 | 0) >> 2] | 0;
                if ($0) {
-                continue label$79
+                continue
                }
                break label$77;
               };
@@ -1897,7 +1897,7 @@ function asmFunc(global, env, buffer) {
              }
             }
             $0 = 12036;
-            label$80 : while (1) {
+            while (1) {
              label$81 : {
               $6 = HEAP32[$0 >> 2] | 0;
               if ($6 >>> 0 > $4 >>> 0) {
@@ -1909,7 +1909,7 @@ function asmFunc(global, env, buffer) {
               }
              }
              $0 = HEAP32[($0 + 8 | 0) >> 2] | 0;
-             continue label$80;
+             continue;
             };
            }
            HEAP32[$0 >> 2] = $5;
@@ -2008,20 +2008,20 @@ function asmFunc(global, env, buffer) {
                $2 = 0;
                break label$90;
               }
-              label$94 : while (1) {
+              while (1) {
                $8 = $4;
                $2 = $3;
                $4 = $3 + 20 | 0;
                $3 = HEAP32[$4 >> 2] | 0;
                if ($3) {
-                continue label$94
+                continue
                }
                $4 = $2 + 16 | 0;
                $3 = HEAP32[($2 + 16 | 0) >> 2] | 0;
                if ($3) {
-                continue label$94
+                continue
                }
-               break label$94;
+               break;
               };
               HEAP32[$8 >> 2] = 0;
              }
@@ -2134,7 +2134,7 @@ function asmFunc(global, env, buffer) {
             }
             $4 = $0 << (($4 | 0) == (31 | 0) ? 0 : 25 - ($4 >>> 1 | 0) | 0) | 0;
             $5 = HEAP32[$3 >> 2] | 0;
-            label$104 : while (1) {
+            while (1) {
              $3 = $5;
              if (((HEAP32[($5 + 4 | 0) >> 2] | 0) & -8 | 0 | 0) == ($0 | 0)) {
               break label$74
@@ -2144,9 +2144,9 @@ function asmFunc(global, env, buffer) {
              $8 = ($3 + ($5 & 4 | 0) | 0) + 16 | 0;
              $5 = HEAP32[$8 >> 2] | 0;
              if ($5) {
-              continue label$104
+              continue
              }
-             break label$104;
+             break;
             };
             HEAP32[$8 >> 2] = $6;
             HEAP32[($6 + 24 | 0) >> 2] = $3;
@@ -2186,14 +2186,14 @@ function asmFunc(global, env, buffer) {
           HEAP32[(0 + 12036 | 0) >> 2] = $5;
           HEAP32[(0 + 12048 | 0) >> 2] = 0;
           $0 = $8 + 24 | 0;
-          label$105 : while (1) {
+          while (1) {
            HEAP32[($0 + 4 | 0) >> 2] = 7;
            $5 = $0 + 8 | 0;
            $0 = $0 + 4 | 0;
            if ($6 >>> 0 > $5 >>> 0) {
-            continue label$105
+            continue
            }
-           break label$105;
+           break;
           };
           if (($8 | 0) == ($4 | 0)) {
            break label$63
@@ -2267,7 +2267,7 @@ function asmFunc(global, env, buffer) {
            }
            $0 = $2 << (($0 | 0) == (31 | 0) ? 0 : 25 - ($0 >>> 1 | 0) | 0) | 0;
            $5 = HEAP32[$6 >> 2] | 0;
-           label$112 : while (1) {
+           while (1) {
             $6 = $5;
             if (((HEAP32[($5 + 4 | 0) >> 2] | 0) & -8 | 0 | 0) == ($2 | 0)) {
              break label$72
@@ -2277,9 +2277,9 @@ function asmFunc(global, env, buffer) {
             $8 = ($6 + ($5 & 4 | 0) | 0) + 16 | 0;
             $5 = HEAP32[$8 >> 2] | 0;
             if ($5) {
-             continue label$112
+             continue
             }
-            break label$112;
+            break;
            };
            HEAP32[$8 >> 2] = $4;
            HEAP32[($4 + 24 | 0) >> 2] = $6;
@@ -2446,7 +2446,7 @@ function asmFunc(global, env, buffer) {
        }
        $0 = $6 << (($0 | 0) == (31 | 0) ? 0 : 25 - ($0 >>> 1 | 0) | 0) | 0;
        $3 = HEAP32[$4 >> 2] | 0;
-       label$127 : while (1) {
+       while (1) {
         $4 = $3;
         if (((HEAP32[($4 + 4 | 0) >> 2] | 0) & -8 | 0 | 0) == ($6 | 0)) {
          break label$124
@@ -2456,9 +2456,9 @@ function asmFunc(global, env, buffer) {
         $2 = ($4 + ($3 & 4 | 0) | 0) + 16 | 0;
         $3 = HEAP32[$2 >> 2] | 0;
         if ($3) {
-         continue label$127
+         continue
         }
-        break label$127;
+        break;
        };
        HEAP32[$2 >> 2] = $5;
        HEAP32[($5 + 24 | 0) >> 2] = $4;
@@ -2560,7 +2560,7 @@ function asmFunc(global, env, buffer) {
    }
    $0 = $5 + 8 | 0;
   }
-  label$137 : {
+  {
    $13 = $1 + 16 | 0;
    if ($13 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -2660,20 +2660,20 @@ function asmFunc(global, env, buffer) {
        $5 = 0;
        break label$8;
       }
-      label$12 : while (1) {
+      while (1) {
        $6 = $2;
        $5 = $4;
        $2 = $5 + 20 | 0;
        $4 = HEAP32[$2 >> 2] | 0;
        if ($4) {
-        continue label$12
+        continue
        }
        $2 = $5 + 16 | 0;
        $4 = HEAP32[($5 + 16 | 0) >> 2] | 0;
        if ($4) {
-        continue label$12
+        continue
        }
-       break label$12;
+       break;
       };
       HEAP32[$6 >> 2] = 0;
      }
@@ -2829,20 +2829,20 @@ function asmFunc(global, env, buffer) {
         $5 = 0;
         break label$25;
        }
-       label$29 : while (1) {
+       while (1) {
         $6 = $2;
         $5 = $4;
         $2 = $5 + 20 | 0;
         $4 = HEAP32[$2 >> 2] | 0;
         if ($4) {
-         continue label$29
+         continue
         }
         $2 = $5 + 16 | 0;
         $4 = HEAP32[($5 + 16 | 0) >> 2] | 0;
         if ($4) {
-         continue label$29
+         continue
         }
-        break label$29;
+        break;
        };
        HEAP32[$6 >> 2] = 0;
       }
@@ -2961,7 +2961,7 @@ function asmFunc(global, env, buffer) {
       }
       $2 = $0 << (($2 | 0) == (31 | 0) ? 0 : 25 - ($2 >>> 1 | 0) | 0) | 0;
       $5 = HEAP32[$4 >> 2] | 0;
-      label$41 : while (1) {
+      while (1) {
        $4 = $5;
        if (((HEAP32[($5 + 4 | 0) >> 2] | 0) & -8 | 0 | 0) == ($0 | 0)) {
         break label$38
@@ -2971,9 +2971,9 @@ function asmFunc(global, env, buffer) {
        $3 = ($4 + ($5 & 4 | 0) | 0) + 16 | 0;
        $5 = HEAP32[$3 >> 2] | 0;
        if ($5) {
-        continue label$41
+        continue
        }
-       break label$41;
+       break;
       };
       HEAP32[$3 >> 2] = $1;
       HEAP32[($1 + 24 | 0) >> 2] = $4;
@@ -2995,13 +2995,13 @@ function asmFunc(global, env, buffer) {
     break label$1
    }
    $1 = 12044;
-   label$42 : while (1) {
+   while (1) {
     $0 = HEAP32[$1 >> 2] | 0;
     $1 = $0 + 8 | 0;
     if ($0) {
-     continue label$42
+     continue
     }
-    break label$42;
+    break;
    };
    HEAP32[(0 + 11620 | 0) >> 2] = -1;
   }
@@ -3274,20 +3274,20 @@ function asmFunc(global, env, buffer) {
        $7 = 0;
        break label$16;
       }
-      label$20 : while (1) {
+      while (1) {
        $6 = $3;
        $7 = $4;
        $3 = $7 + 20 | 0;
        $4 = HEAP32[$3 >> 2] | 0;
        if ($4) {
-        continue label$20
+        continue
        }
        $3 = $7 + 16 | 0;
        $4 = HEAP32[($7 + 16 | 0) >> 2] | 0;
        if ($4) {
-        continue label$20
+        continue
        }
-       break label$20;
+       break;
       };
       HEAP32[$6 >> 2] = 0;
      }
@@ -3433,20 +3433,20 @@ function asmFunc(global, env, buffer) {
        $6 = 0;
        break label$8;
       }
-      label$12 : while (1) {
+      while (1) {
        $4 = $3;
        $6 = $5;
        $3 = $6 + 20 | 0;
        $5 = HEAP32[$3 >> 2] | 0;
        if ($5) {
-        continue label$12
+        continue
        }
        $3 = $6 + 16 | 0;
        $5 = HEAP32[($6 + 16 | 0) >> 2] | 0;
        if ($5) {
-        continue label$12
+        continue
        }
-       break label$12;
+       break;
       };
       HEAP32[$4 >> 2] = 0;
      }
@@ -3595,20 +3595,20 @@ function asmFunc(global, env, buffer) {
         $6 = 0;
         break label$25;
        }
-       label$29 : while (1) {
+       while (1) {
         $4 = $3;
         $6 = $5;
         $3 = $6 + 20 | 0;
         $5 = HEAP32[$3 >> 2] | 0;
         if ($5) {
-         continue label$29
+         continue
         }
         $3 = $6 + 16 | 0;
         $5 = HEAP32[($6 + 16 | 0) >> 2] | 0;
         if ($5) {
-         continue label$29
+         continue
         }
-        break label$29;
+        break;
        };
        HEAP32[$4 >> 2] = 0;
       }
@@ -3726,7 +3726,7 @@ function asmFunc(global, env, buffer) {
      }
      $3 = $1 << (($3 | 0) == (31 | 0) ? 0 : 25 - ($3 >>> 1 | 0) | 0) | 0;
      $6 = HEAP32[$5 >> 2] | 0;
-     label$40 : while (1) {
+     while (1) {
       $5 = $6;
       if (((HEAP32[($6 + 4 | 0) >> 2] | 0) & -8 | 0 | 0) == ($1 | 0)) {
        break label$37
@@ -3736,9 +3736,9 @@ function asmFunc(global, env, buffer) {
       $2 = ($5 + ($6 & 4 | 0) | 0) + 16 | 0;
       $6 = HEAP32[$2 >> 2] | 0;
       if ($6) {
-       continue label$40
+       continue
       }
-      break label$40;
+      break;
      };
      HEAP32[$2 >> 2] = $0;
      HEAP32[($0 + 24 | 0) >> 2] = $5;
@@ -3798,7 +3798,7 @@ function asmFunc(global, env, buffer) {
       break label$3
      }
      $4 = $1 & 255 | 0;
-     label$4 : while (1) {
+     while (1) {
       if ((HEAPU8[$0 >> 0] | 0 | 0) == ($4 | 0)) {
        break label$2
       }
@@ -3809,9 +3809,9 @@ function asmFunc(global, env, buffer) {
        break label$3
       }
       if ($0 & 3 | 0) {
-       continue label$4
+       continue
       }
-      break label$4;
+      break;
      };
     }
     if (!$3) {
@@ -3826,7 +3826,7 @@ function asmFunc(global, env, buffer) {
      break label$5
     }
     $4 = Math_imul($1 & 255 | 0, 16843009);
-    label$6 : while (1) {
+    while (1) {
      $3 = (HEAP32[$0 >> 2] | 0) ^ $4 | 0;
      if ((($3 ^ -1 | 0) & ($3 + -16843009 | 0) | 0) & -2139062144 | 0) {
       break label$5
@@ -3834,16 +3834,16 @@ function asmFunc(global, env, buffer) {
      $0 = $0 + 4 | 0;
      $2 = $2 + -4 | 0;
      if ($2 >>> 0 > 3 >>> 0) {
-      continue label$6
+      continue
      }
-     break label$6;
+     break;
     };
    }
    if (!$2) {
     break label$1
    }
    $3 = $1 & 255 | 0;
-   label$7 : while (1) {
+   while (1) {
     label$8 : {
      if ((HEAPU8[$0 >> 0] | 0 | 0) != ($3 | 0)) {
       break label$8
@@ -3853,9 +3853,9 @@ function asmFunc(global, env, buffer) {
     $0 = $0 + 1 | 0;
     $2 = $2 + -1 | 0;
     if ($2) {
-     continue label$7
+     continue
     }
-    break label$7;
+    break;
    };
   }
   return 0 | 0;
@@ -4136,7 +4136,7 @@ function asmFunc(global, env, buffer) {
   $1 = $1 | 0;
   $1$hi = $1$hi | 0;
   var i64toi32_i32$0 = 0, i64toi32_i32$5 = 0, i64toi32_i32$4 = 0, i64toi32_i32$2 = 0, i64toi32_i32$3 = 0, i64toi32_i32$1 = 0, $6 = 0, $6$hi = 0, $7$hi = 0, $7 = 0, $2 = 0, $3 = 0, $44 = 0, $46 = 0, $47 = 0, $48 = 0, $49 = 0, $51 = 0, $52 = 0, $5 = 0, $4 = 0, $18 = 0, $18$hi = 0, $20$hi = 0, $23 = 0, $23$hi = 0, $25$hi = 0, $39$hi = 0, $43 = 0, $45 = 0, $50 = 0, $50$hi = 0, $52$hi = 0, $80 = 0, $80$hi = 0, $84$hi = 0, $87 = 0, $87$hi = 0, $89 = 0, $89$hi = 0, $93 = 0, $93$hi = 0, $95 = 0, $96$hi = 0, $106$hi = 0, $117 = 0, $117$hi = 0;
-  label$1 : {
+  {
    $2 = global$0 - 32 | 0;
    $4 = $2;
    if ($2 >>> 0 < global$86 >>> 0) {
@@ -4516,7 +4516,7 @@ function asmFunc(global, env, buffer) {
    $7 = i64toi32_i32$5;
    $7$hi = i64toi32_i32$3;
   }
-  label$8 : {
+  {
    $5 = $2 + 32 | 0;
    if ($5 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -4550,14 +4550,14 @@ function asmFunc(global, env, buffer) {
    if (!$1) {
     break label$1
    }
-   label$2 : while (1) {
+   while (1) {
     $2 = HEAPU8[((global$1 + 1024 | 0) + ((HEAPU8[$0 >> 0] | 0) ^ ($2 & 255 | 0) | 0) | 0) >> 0] | 0;
     $0 = $0 + 1 | 0;
     $1 = $1 + -1 | 0;
     if ($1) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
   }
   return $2 & 255 | 0 | 0;
@@ -4572,7 +4572,7 @@ function asmFunc(global, env, buffer) {
    if ($1 >>> 0 <= 7 >>> 0) {
     break label$1
    }
-   label$2 : while (1) {
+   while (1) {
     $3 = HEAPU8[$0 >> 0] | 0 | ((HEAPU8[($0 + 1 | 0) >> 0] | 0) << 8 | 0) | 0;
     $4 = global$1 + 1280 | 0;
     $2 = (($3 << 24 | 0 | (($3 << 8 | 0) & 16711680 | 0) | 0) >>> 16 | 0) ^ $2 | 0;
@@ -4580,23 +4580,23 @@ function asmFunc(global, env, buffer) {
     $0 = $0 + 8 | 0;
     $1 = $1 + -8 | 0;
     if ($1 >>> 0 > 7 >>> 0) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
   }
   label$3 : {
    if (!$1) {
     break label$3
    }
-   label$4 : while (1) {
+   while (1) {
     $2 = (HEAPU16[((global$1 + 1280 | 0) + (((HEAPU8[$0 >> 0] | 0) ^ (($2 & 65280 | 0) >>> 8 | 0) | 0) << 1 | 0) | 0) >> 1] | 0) ^ ($2 << 8 | 0) | 0;
     $0 = $0 + 1 | 0;
     $1 = $1 + -1 | 0;
     if ($1) {
-     continue label$4
+     continue
     }
-    break label$4;
+    break;
    };
   }
   return $2 & 65535 | 0 | 0;
@@ -4611,7 +4611,7 @@ function asmFunc(global, env, buffer) {
    if ($1 >>> 0 < 2 >>> 0) {
     break label$1
    }
-   label$2 : while (1) {
+   while (1) {
     $3 = global$1 + 1280 | 0;
     $4 = HEAP32[$0 >> 2] | 0;
     $2 = $2 ^ ($4 >>> 16 | 0) | 0;
@@ -4621,9 +4621,9 @@ function asmFunc(global, env, buffer) {
     $0 = $0 + 8 | 0;
     $1 = $1 + -2 | 0;
     if ($1 >>> 0 > 1 >>> 0) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
   }
   label$3 : {
@@ -4675,7 +4675,7 @@ function asmFunc(global, env, buffer) {
        break label$4;
       }
       $3 = $0;
-      label$8 : while (1) {
+      while (1) {
        if (!$2) {
         break label$1
        }
@@ -4686,7 +4686,7 @@ function asmFunc(global, env, buffer) {
        if (!($3 & 3 | 0)) {
         break label$4
        }
-       continue label$8;
+       continue;
       };
      }
      label$9 : {
@@ -4697,7 +4697,7 @@ function asmFunc(global, env, buffer) {
        if (!(($0 + $2 | 0) & 3 | 0)) {
         break label$10
        }
-       label$11 : while (1) {
+       while (1) {
         if (!$2) {
          break label$1
         }
@@ -4705,31 +4705,31 @@ function asmFunc(global, env, buffer) {
         $3 = $0 + $2 | 0;
         HEAP8[$3 >> 0] = HEAPU8[($1 + $2 | 0) >> 0] | 0;
         if ($3 & 3 | 0) {
-         continue label$11
+         continue
         }
-        break label$11;
+        break;
        };
       }
       if ($2 >>> 0 <= 3 >>> 0) {
        break label$9
       }
-      label$12 : while (1) {
+      while (1) {
        $2 = $2 + -4 | 0;
        HEAP32[($0 + $2 | 0) >> 2] = HEAP32[($1 + $2 | 0) >> 2] | 0;
        if ($2 >>> 0 > 3 >>> 0) {
-        continue label$12
+        continue
        }
-       break label$12;
+       break;
       };
      }
      if (!$2) {
       break label$1
      }
-     label$13 : while (1) {
+     while (1) {
       $2 = $2 + -1 | 0;
       HEAP8[($0 + $2 | 0) >> 0] = HEAPU8[($1 + $2 | 0) >> 0] | 0;
       if ($2) {
-       continue label$13
+       continue
       }
       break label$1;
      };
@@ -4737,29 +4737,29 @@ function asmFunc(global, env, buffer) {
     if ($2 >>> 0 <= 3 >>> 0) {
      break label$3
     }
-    label$14 : while (1) {
+    while (1) {
      HEAP32[$3 >> 2] = HEAP32[$1 >> 2] | 0;
      $1 = $1 + 4 | 0;
      $3 = $3 + 4 | 0;
      $2 = $2 + -4 | 0;
      if ($2 >>> 0 > 3 >>> 0) {
-      continue label$14
+      continue
      }
-     break label$14;
+     break;
     };
    }
    if (!$2) {
     break label$1
    }
-   label$15 : while (1) {
+   while (1) {
     HEAP8[$3 >> 0] = HEAPU8[$1 >> 0] | 0;
     $3 = $3 + 1 | 0;
     $1 = $1 + 1 | 0;
     $2 = $2 + -1 | 0;
     if ($2) {
-     continue label$15
+     continue
     }
-    break label$15;
+    break;
    };
   }
   return $0 | 0;
@@ -4889,15 +4889,15 @@ function asmFunc(global, env, buffer) {
      break label$4
     }
     $6 = HEAP32[((HEAP32[$0 >> 2] | 0) + ($2 << 2 | 0) | 0) >> 2] | 0;
-    label$5 : while (1) {
+    while (1) {
      $5 = (($5 << 8 | 0) & 65280 | 0) ^ (HEAPU16[(global$2 + (((($6 >>> (24 - $4 | 0) | 0) & 255 | 0) ^ ($5 >>> 8 | 0) | 0) << 1 | 0) | 0) >> 1] | 0) | 0;
      $2 = $4 >>> 0 < 24 >>> 0;
      $7 = $4 + 8 | 0;
      $4 = $7;
      if ($2) {
-      continue label$5
+      continue
      }
-     break label$5;
+     break;
     };
     HEAP32[($0 + 32 | 0) >> 2] = $7;
    }
@@ -4917,13 +4917,13 @@ function asmFunc(global, env, buffer) {
     break label$6
    }
    $6 = HEAP32[((HEAP32[$0 >> 2] | 0) + ((HEAP32[($0 + 16 | 0) >> 2] | 0) << 2 | 0) | 0) >> 2] | 0;
-   label$7 : while (1) {
+   while (1) {
     $4 = (($4 << 8 | 0) & 65280 | 0) ^ (HEAPU16[(global$2 + ((($4 >>> 8 | 0) ^ (($6 >>> (24 - $5 | 0) | 0) & 255 | 0) | 0) << 1 | 0) | 0) >> 1] | 0) | 0;
     $5 = $5 + 8 | 0;
     if ($5 >>> 0 < $2 >>> 0) {
-     continue label$7
+     continue
     }
-    break label$7;
+    break;
    };
    HEAP32[($0 + 32 | 0) >> 2] = $5;
    HEAP32[($0 + 24 | 0) >> 2] = $4;
@@ -4958,7 +4958,7 @@ function asmFunc(global, env, buffer) {
       break label$3
      }
      label$4 : {
-      label$5 : while (1) {
+      while (1) {
        $3 = HEAP32[($0 + 8 | 0) >> 2] | 0;
        $4 = HEAP32[($0 + 16 | 0) >> 2] | 0;
        $5 = HEAP32[($0 + 20 | 0) >> 2] | 0;
@@ -4966,9 +4966,9 @@ function asmFunc(global, env, buffer) {
         break label$4
        }
        if (bitreader_read_from_client_($0 | 0) | 0) {
-        continue label$5
+        continue
        }
-       break label$5;
+       break;
       };
       return 0 | 0;
      }
@@ -5041,7 +5041,7 @@ function asmFunc(global, env, buffer) {
  function bitreader_read_from_client_($0) {
   $0 = $0 | 0;
   var $3 = 0, $6 = 0, $4 = 0, $7 = 0, $8 = 0, $1 = 0, $5 = 0, $2 = 0, $10 = 0, $9 = 0, $186 = 0;
-  label$1 : {
+  {
    $1 = global$0 - 16 | 0;
    $9 = $1;
    if ($1 >>> 0 < global$86 >>> 0) {
@@ -5083,15 +5083,15 @@ function asmFunc(global, env, buffer) {
       break label$8
      }
      $7 = HEAP32[((HEAP32[$0 >> 2] | 0) + ($4 << 2 | 0) | 0) >> 2] | 0;
-     label$9 : while (1) {
+     while (1) {
       $6 = (($6 << 8 | 0) & 65280 | 0) ^ (HEAPU16[(global$2 + (((($7 >>> (24 - $3 | 0) | 0) & 255 | 0) ^ ($6 >>> 8 | 0) | 0) << 1 | 0) | 0) >> 1] | 0) | 0;
       $4 = $3 >>> 0 < 24 >>> 0;
       $8 = $3 + 8 | 0;
       $3 = $8;
       if ($4) {
-       continue label$9
+       continue
       }
-      break label$9;
+      break;
      };
      HEAP32[($0 + 32 | 0) >> 2] = $8;
     }
@@ -5138,16 +5138,16 @@ function asmFunc(global, env, buffer) {
      break label$12
     }
     $7 = HEAP32[$0 >> 2] | 0;
-    label$13 : while (1) {
+    while (1) {
      $3 = $7 + ($6 << 2 | 0) | 0;
      $186 = $3;
      $3 = HEAP32[$3 >> 2] | 0;
      HEAP32[$186 >> 2] = $3 << 24 | 0 | (($3 << 8 | 0) & 16711680 | 0) | 0 | (($3 >>> 8 | 0) & 65280 | 0 | ($3 >>> 24 | 0) | 0) | 0;
      $6 = $6 + 1 | 0;
      if (($6 | 0) != ($4 | 0)) {
-      continue label$13
+      continue
      }
-     break label$13;
+     break;
     };
     $7 = (HEAP32[($0 + 8 | 0) >> 2] | 0) << 2 | 0;
     $3 = HEAP32[($0 + 12 | 0) >> 2] | 0;
@@ -5157,7 +5157,7 @@ function asmFunc(global, env, buffer) {
    HEAP32[($0 + 8 | 0) >> 2] = $3 >>> 2 | 0;
    $6 = 1;
   }
-  label$14 : {
+  {
    $10 = $1 + 16 | 0;
    if ($10 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -5172,7 +5172,7 @@ function asmFunc(global, env, buffer) {
   $1 = $1 | 0;
   $2 = $2 | 0;
   var $3 = 0, $5 = 0, $4 = 0;
-  label$1 : {
+  {
    $3 = global$0 - 16 | 0;
    $4 = $3;
    if ($3 >>> 0 < global$86 >>> 0) {
@@ -5192,7 +5192,7 @@ function asmFunc(global, env, buffer) {
    $2 = 1 << ($2 + -1 | 0) | 0;
    HEAP32[$1 >> 2] = ((HEAP32[($3 + 12 | 0) >> 2] | 0) ^ $2 | 0) - $2 | 0;
   }
-  label$5 : {
+  {
    $5 = $3 + 16 | 0;
    if ($5 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -5207,7 +5207,7 @@ function asmFunc(global, env, buffer) {
   $1 = $1 | 0;
   $2 = $2 | 0;
   var i64toi32_i32$0 = 0, $3 = 0, i64toi32_i32$2 = 0, i64toi32_i32$1 = 0, i64toi32_i32$4 = 0, $7 = 0, i64toi32_i32$3 = 0, $7$hi = 0, $4 = 0, $17 = 0, $6 = 0, $5 = 0, $29 = 0, $36 = 0, $36$hi = 0;
-  label$1 : {
+  {
    $3 = global$0 - 16 | 0;
    $5 = $3;
    if ($3 >>> 0 < global$86 >>> 0) {
@@ -5281,7 +5281,7 @@ function asmFunc(global, env, buffer) {
    HEAP32[(i64toi32_i32$0 + 4 | 0) >> 2] = i64toi32_i32$1;
    $4 = 1;
   }
-  label$7 : {
+  {
    $6 = $3 + 16 | 0;
    if ($6 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -5295,7 +5295,7 @@ function asmFunc(global, env, buffer) {
   $0 = $0 | 0;
   $1 = $1 | 0;
   var $2 = 0, $4 = 0, $3 = 0, $6 = 0, $5 = 0;
-  label$1 : {
+  {
    $2 = global$0 - 16 | 0;
    $5 = $2;
    if ($2 >>> 0 < global$86 >>> 0) {
@@ -5327,7 +5327,7 @@ function asmFunc(global, env, buffer) {
    HEAP32[$1 >> 2] = $0;
    $3 = 1;
   }
-  label$4 : {
+  {
    $6 = $2 + 16 | 0;
    if ($6 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -5341,7 +5341,7 @@ function asmFunc(global, env, buffer) {
   $0 = $0 | 0;
   $1 = $1 | 0;
   var $4 = 0, $2 = 0, $3 = 0, $5 = 0, $7 = 0, $6 = 0;
-  label$1 : {
+  {
    $2 = global$0 - 16 | 0;
    $6 = $2;
    if ($2 >>> 0 < global$86 >>> 0) {
@@ -5373,7 +5373,7 @@ function asmFunc(global, env, buffer) {
       break label$6
      }
      label$7 : {
-      label$8 : while (1) {
+      while (1) {
        label$9 : {
         if (HEAP32[($0 + 20 | 0) >> 2] | 0) {
          break label$9
@@ -5382,7 +5382,7 @@ function asmFunc(global, env, buffer) {
          if ($4 >>> 0 <= 3 >>> 0) {
           break label$10
          }
-         label$11 : while (1) {
+         while (1) {
           label$12 : {
            label$13 : {
             $5 = HEAP32[($0 + 16 | 0) >> 2] | 0;
@@ -5398,15 +5398,15 @@ function asmFunc(global, env, buffer) {
            }
           }
           if ($4 >>> 0 > 3 >>> 0) {
-           continue label$11
+           continue
           }
-          break label$11;
+          break;
          };
          if (!$4) {
           break label$7
          }
         }
-        label$14 : while (1) {
+        while (1) {
          if (!(FLAC__bitreader_read_raw_uint32($0 | 0, $2 + 12 | 0 | 0, 8 | 0) | 0)) {
           break label$4
          }
@@ -5414,7 +5414,7 @@ function asmFunc(global, env, buffer) {
          if (!$4) {
           break label$7
          }
-         continue label$14;
+         continue;
         };
        }
        if (!(FLAC__bitreader_read_raw_uint32($0 | 0, $2 + 12 | 0 | 0, 8 | 0) | 0)) {
@@ -5422,9 +5422,9 @@ function asmFunc(global, env, buffer) {
        }
        $4 = $4 + -1 | 0;
        if ($4) {
-        continue label$8
+        continue
        }
-       break label$8;
+       break;
       };
      }
      $1 = $1 & 7 | 0;
@@ -5438,7 +5438,7 @@ function asmFunc(global, env, buffer) {
    }
    $3 = 0;
   }
-  label$15 : {
+  {
    $7 = $2 + 16 | 0;
    if ($7 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -5452,7 +5452,7 @@ function asmFunc(global, env, buffer) {
   $0 = $0 | 0;
   $1 = $1 | 0;
   var $2 = 0, $3 = 0, $4 = 0, $6 = 0, $5 = 0;
-  label$1 : {
+  {
    $2 = global$0 - 16 | 0;
    $5 = $2;
    if ($2 >>> 0 < global$86 >>> 0) {
@@ -5466,7 +5466,7 @@ function asmFunc(global, env, buffer) {
     break label$3
    }
    label$4 : {
-    label$5 : while (1) {
+    while (1) {
      label$6 : {
       if (HEAP32[($0 + 20 | 0) >> 2] | 0) {
        break label$6
@@ -5475,7 +5475,7 @@ function asmFunc(global, env, buffer) {
        if ($1 >>> 0 < 4 >>> 0) {
         break label$7
        }
-       label$8 : while (1) {
+       while (1) {
         label$9 : {
          label$10 : {
           $4 = HEAP32[($0 + 16 | 0) >> 2] | 0;
@@ -5491,9 +5491,9 @@ function asmFunc(global, env, buffer) {
          }
         }
         if ($1 >>> 0 > 3 >>> 0) {
-         continue label$8
+         continue
         }
-        break label$8;
+        break;
        };
        if ($1) {
         break label$7
@@ -5501,13 +5501,13 @@ function asmFunc(global, env, buffer) {
        $3 = 1;
        break label$3;
       }
-      label$11 : while (1) {
+      while (1) {
        if (!(FLAC__bitreader_read_raw_uint32($0 | 0, $2 + 12 | 0 | 0, 8 | 0) | 0)) {
         break label$4
        }
        $1 = $1 + -1 | 0;
        if ($1) {
-        continue label$11
+        continue
        }
        break label$3;
       };
@@ -5517,14 +5517,14 @@ function asmFunc(global, env, buffer) {
      }
      $1 = $1 + -1 | 0;
      if ($1) {
-      continue label$5
+      continue
      }
      break label$3;
     };
    }
    $3 = 0;
   }
-  label$12 : {
+  {
    $6 = $2 + 16 | 0;
    if ($6 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -5539,7 +5539,7 @@ function asmFunc(global, env, buffer) {
   $1 = $1 | 0;
   $2 = $2 | 0;
   var $4 = 0, $3 = 0, $7 = 0, $6 = 0, $5 = 0;
-  label$1 : {
+  {
    $3 = global$0 - 16 | 0;
    $5 = $3;
    if ($3 >>> 0 < global$86 >>> 0) {
@@ -5555,7 +5555,7 @@ function asmFunc(global, env, buffer) {
     $4 = 1;
     break label$3;
    }
-   label$5 : while (1) {
+   while (1) {
     label$6 : {
      if (HEAP32[($0 + 20 | 0) >> 2] | 0) {
       break label$6
@@ -5564,7 +5564,7 @@ function asmFunc(global, env, buffer) {
       if ($2 >>> 0 < 4 >>> 0) {
        break label$7
       }
-      label$8 : while (1) {
+      while (1) {
        label$9 : {
         label$10 : {
          $4 = HEAP32[($0 + 16 | 0) >> 2] | 0;
@@ -5589,9 +5589,9 @@ function asmFunc(global, env, buffer) {
         break label$3;
        }
        if ($2 >>> 0 > 3 >>> 0) {
-        continue label$8
+        continue
        }
-       break label$8;
+       break;
       };
       if ($2) {
        break label$7
@@ -5599,7 +5599,7 @@ function asmFunc(global, env, buffer) {
       $4 = 1;
       break label$3;
      }
-     label$11 : while (1) {
+     while (1) {
       label$12 : {
        if (FLAC__bitreader_read_raw_uint32($0 | 0, $3 + 12 | 0 | 0, 8 | 0) | 0) {
         break label$12
@@ -5612,7 +5612,7 @@ function asmFunc(global, env, buffer) {
       $1 = $1 + 1 | 0;
       $2 = $2 + -1 | 0;
       if ($2) {
-       continue label$11
+       continue
       }
       break label$3;
      };
@@ -5629,12 +5629,12 @@ function asmFunc(global, env, buffer) {
     $1 = $1 + 1 | 0;
     $2 = $2 + -1 | 0;
     if ($2) {
-     continue label$5
+     continue
     }
-    break label$5;
+    break;
    };
   }
-  label$14 : {
+  {
    $6 = $3 + 16 | 0;
    if ($6 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -5650,7 +5650,7 @@ function asmFunc(global, env, buffer) {
   var $3 = 0, $2 = 0, $4 = 0;
   HEAP32[$1 >> 2] = 0;
   label$1 : {
-   label$2 : while (1) {
+   while (1) {
     label$3 : {
      label$4 : {
       $2 = HEAP32[($0 + 16 | 0) >> 2] | 0;
@@ -5662,7 +5662,7 @@ function asmFunc(global, env, buffer) {
      }
      $3 = HEAP32[($0 + 20 | 0) >> 2] | 0;
      $4 = HEAP32[$0 >> 2] | 0;
-     label$5 : while (1) {
+     while (1) {
       label$6 : {
        $2 = (HEAP32[($4 + ($2 << 2 | 0) | 0) >> 2] | 0) << $3 | 0;
        if (!$2) {
@@ -5686,9 +5686,9 @@ function asmFunc(global, env, buffer) {
       $2 = (HEAP32[($0 + 16 | 0) >> 2] | 0) + 1 | 0;
       HEAP32[($0 + 16 | 0) >> 2] = $2;
       if ($2 >>> 0 < (HEAP32[($0 + 8 | 0) >> 2] | 0) >>> 0) {
-       continue label$5
+       continue
       }
-      break label$5;
+      break;
      };
     }
     label$7 : {
@@ -5710,9 +5710,9 @@ function asmFunc(global, env, buffer) {
      HEAP32[($0 + 20 | 0) >> 2] = $4;
     }
     if (bitreader_read_from_client_($0 | 0) | 0) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
    $2 = 0;
   }
@@ -5725,7 +5725,7 @@ function asmFunc(global, env, buffer) {
   $2 = $2 | 0;
   $3 = $3 | 0;
   var $7 = 0, $12 = 0, $13 = 0, $4 = 0, $9 = 0, $15 = 0, $8 = 0, $6 = 0, $10 = 0, $5 = 0, $11 = 0, $14 = 0, $17 = 0, $16 = 0;
-  label$1 : {
+  {
    $4 = global$0 - 16 | 0;
    $16 = $4;
    if ($4 >>> 0 < global$86 >>> 0) {
@@ -5743,7 +5743,7 @@ function asmFunc(global, env, buffer) {
     if (($2 | 0) < (1 | 0)) {
      break label$3
     }
-    label$5 : while (1) {
+    while (1) {
      label$6 : {
       if (FLAC__bitreader_read_unary_unsigned($0 | 0, $4 + 8 | 0 | 0) | 0) {
        break label$6
@@ -5756,7 +5756,7 @@ function asmFunc(global, env, buffer) {
      HEAP32[$1 >> 2] = ($2 >>> 1 | 0) ^ (0 - ($2 & 1 | 0) | 0) | 0;
      $1 = $1 + 4 | 0;
      if ($1 >>> 0 < $5 >>> 0) {
-      continue label$5
+      continue
      }
      break label$3;
     };
@@ -5781,7 +5781,7 @@ function asmFunc(global, env, buffer) {
     }
     $2 = 1;
    }
-   label$10 : while (1) {
+   while (1) {
     label$11 : {
      label$12 : {
       label$13 : {
@@ -5796,7 +5796,7 @@ function asmFunc(global, env, buffer) {
              break label$18
             }
             $14 = 32 - $3 | 0;
-            label$19 : while (1) {
+            while (1) {
              $2 = $7;
              $9 = $13;
              label$20 : {
@@ -5809,7 +5809,7 @@ function asmFunc(global, env, buffer) {
                $15 = $9;
                break label$20;
               }
-              label$22 : while (1) {
+              while (1) {
                $2 = $2 + 1 | 0;
                if ($2 >>> 0 >= $8 >>> 0) {
                 break label$17
@@ -5818,9 +5818,9 @@ function asmFunc(global, env, buffer) {
                $15 = Math_clz32($12);
                $9 = $15 + $9 | 0;
                if (!$12) {
-                continue label$22
+                continue
                }
-               break label$22;
+               break;
               };
              }
              $12 = ($12 << $15 | 0) << 1 | 0;
@@ -5851,9 +5851,9 @@ function asmFunc(global, env, buffer) {
              HEAP32[$1 >> 2] = ($2 >>> 1 | 0) ^ (0 - ($2 & 1 | 0) | 0) | 0;
              $1 = $1 + 4 | 0;
              if ($1 >>> 0 < $5 >>> 0) {
-              continue label$19
+              continue
              }
-             break label$19;
+             break;
             };
            }
            $2 = $7 >>> 0 < $8 >>> 0;
@@ -5905,13 +5905,13 @@ function asmFunc(global, env, buffer) {
       }
      }
      $2 = 1;
-     continue label$10;
+     continue;
     }
     $2 = 0;
-    continue label$10;
+    continue;
    };
   }
-  label$25 : {
+  {
    $17 = $4 + 16 | 0;
    if ($17 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -5927,7 +5927,7 @@ function asmFunc(global, env, buffer) {
   $2 = $2 | 0;
   $3 = $3 | 0;
   var $6 = 0, $7 = 0, $8 = 0, $4 = 0, $5 = 0, $9 = 0, $11 = 0, $10 = 0;
-  label$1 : {
+  {
    $4 = global$0 - 16 | 0;
    $10 = $4;
    if ($4 >>> 0 < global$86 >>> 0) {
@@ -6014,7 +6014,7 @@ function asmFunc(global, env, buffer) {
         if ($2) {
          break label$14
         }
-        label$15 : while (1) {
+        while (1) {
          if (!(FLAC__bitreader_read_raw_uint32($0 | 0, $4 + 12 | 0 | 0, 8 | 0) | 0)) {
           break label$3
          }
@@ -6025,12 +6025,12 @@ function asmFunc(global, env, buffer) {
          $6 = $7 & 63 | 0 | ($6 << 6 | 0) | 0;
          $8 = $8 + -1 | 0;
          if ($8) {
-          continue label$15
+          continue
          }
          break label$8;
         };
        }
-       label$16 : while (1) {
+       while (1) {
         if (!(FLAC__bitreader_read_raw_uint32($0 | 0, $4 + 12 | 0 | 0, 8 | 0) | 0)) {
          break label$3
         }
@@ -6044,9 +6044,9 @@ function asmFunc(global, env, buffer) {
         $6 = $7 & 63 | 0 | ($6 << 6 | 0) | 0;
         $8 = $8 + -1 | 0;
         if ($8) {
-         continue label$16
+         continue
         }
-        break label$16;
+        break;
        };
       }
       HEAP32[$1 >> 2] = $6;
@@ -6059,7 +6059,7 @@ function asmFunc(global, env, buffer) {
    }
    $5 = 1;
   }
-  label$17 : {
+  {
    $11 = $4 + 16 | 0;
    if ($11 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -6075,7 +6075,7 @@ function asmFunc(global, env, buffer) {
   $2 = $2 | 0;
   $3 = $3 | 0;
   var $6 = 0, i64toi32_i32$1 = 0, $5 = 0, i64toi32_i32$0 = 0, i64toi32_i32$2 = 0, i64toi32_i32$4 = 0, $4 = 0, i64toi32_i32$3 = 0, $10 = 0, $10$hi = 0, $21 = 0, $7 = 0, $22 = 0, $9 = 0, $8 = 0, $94$hi = 0, $97$hi = 0, $121$hi = 0, $124$hi = 0;
-  label$1 : {
+  {
    $4 = global$0 - 16 | 0;
    $8 = $4;
    if ($4 >>> 0 < global$86 >>> 0) {
@@ -6193,7 +6193,7 @@ function asmFunc(global, env, buffer) {
        if ($2) {
         break label$17
        }
-       label$18 : while (1) {
+       while (1) {
         label$19 : {
          if (FLAC__bitreader_read_raw_uint32($0 | 0, $4 + 12 | 0 | 0, 8 | 0) | 0) {
           break label$19
@@ -6229,12 +6229,12 @@ function asmFunc(global, env, buffer) {
         $10$hi = i64toi32_i32$2;
         $5 = $5 + -1 | 0;
         if ($5) {
-         continue label$18
+         continue
         }
         break label$8;
        };
       }
-      label$20 : while (1) {
+      while (1) {
        label$21 : {
         if (FLAC__bitreader_read_raw_uint32($0 | 0, $4 + 12 | 0 | 0, 8 | 0) | 0) {
          break label$21
@@ -6273,9 +6273,9 @@ function asmFunc(global, env, buffer) {
        $10$hi = i64toi32_i32$1;
        $5 = $5 + -1 | 0;
        if ($5) {
-        continue label$20
+        continue
        }
-       break label$20;
+       break;
       };
      }
      i64toi32_i32$1 = $10$hi;
@@ -6291,7 +6291,7 @@ function asmFunc(global, env, buffer) {
    }
    $5 = 1;
   }
-  label$22 : {
+  {
    $9 = $4 + 16 | 0;
    if ($9 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -6307,7 +6307,7 @@ function asmFunc(global, env, buffer) {
   $2 = $2 | 0;
   $3 = $3 | 0;
   var $4 = 0, $8 = 0, $7 = 0, $5 = 0, $6 = 0, $10 = 0, $9 = 0, $39 = 0, $132 = 0;
-  label$1 : {
+  {
    $4 = global$0 - 208 | 0;
    $9 = $4;
    if ($4 >>> 0 < global$86 >>> 0) {
@@ -6328,16 +6328,16 @@ function asmFunc(global, env, buffer) {
    $1 = $2;
    $7 = $1;
    $8 = 2;
-   label$4 : while (1) {
+   while (1) {
     $39 = $7 + $2 | 0;
     $7 = $1;
     $1 = $39 + $1 | 0;
     HEAP32[(($4 + 16 | 0) + ($8 << 2 | 0) | 0) >> 2] = $1;
     $8 = $8 + 1 | 0;
     if ($1 >>> 0 < $5 >>> 0) {
-     continue label$4
+     continue
     }
-    break label$4;
+    break;
    };
    label$5 : {
     label$6 : {
@@ -6351,7 +6351,7 @@ function asmFunc(global, env, buffer) {
     }
     $8 = 1;
     $1 = 1;
-    label$7 : while (1) {
+    while (1) {
      label$8 : {
       label$9 : {
        if (($8 & 3 | 0 | 0) != (3 | 0)) {
@@ -6388,13 +6388,13 @@ function asmFunc(global, env, buffer) {
      HEAP32[($4 + 8 | 0) >> 2] = $8;
      $0 = $0 + $2 | 0;
      if ($0 >>> 0 < $7 >>> 0) {
-      continue label$7
+      continue
      }
-     break label$7;
+     break;
     };
    }
    trinkle($0 | 0, $2 | 0, $3 | 0, $4 + 8 | 0 | 0, $1 | 0, 0 | 0, $4 + 16 | 0 | 0);
-   label$13 : while (1) {
+   while (1) {
     label$14 : {
      label$15 : {
       label$16 : {
@@ -6434,10 +6434,10 @@ function asmFunc(global, env, buffer) {
      $1 = $7;
     }
     $0 = $0 + $6 | 0;
-    continue label$13;
+    continue;
    };
   }
-  label$18 : {
+  {
    $10 = $4 + 208 | 0;
    if ($10 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -6453,7 +6453,7 @@ function asmFunc(global, env, buffer) {
   $3 = $3 | 0;
   $4 = $4 | 0;
   var $5 = 0, $8 = 0, $6 = 0, $9 = 0, $10 = 0, $12 = 0, $11 = 0, $7 = 0;
-  label$1 : {
+  {
    $5 = global$0 - 240 | 0;
    $11 = $5;
    if ($5 >>> 0 < global$86 >>> 0) {
@@ -6470,7 +6470,7 @@ function asmFunc(global, env, buffer) {
    $7 = 0 - $1 | 0;
    $6 = 1;
    $8 = $0;
-   label$4 : while (1) {
+   while (1) {
     label$5 : {
      $9 = $8 + $7 | 0;
      $10 = $3 + -2 | 0;
@@ -6501,11 +6501,11 @@ function asmFunc(global, env, buffer) {
     }
     $0 = HEAP32[$5 >> 2] | 0;
     $3 = $10;
-    continue label$4;
+    continue;
    };
   }
   cycle($1 | 0, $5 | 0, $6 | 0);
-  label$8 : {
+  {
    $12 = $5 + 240 | 0;
    if ($12 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -6546,7 +6546,7 @@ function asmFunc(global, env, buffer) {
   $5 = $5 | 0;
   $6 = $6 | 0;
   var $7 = 0, $8 = 0, $9 = 0, $11 = 0, $13 = 0, $12 = 0, $10 = 0, $84 = 0;
-  label$1 : {
+  {
    $7 = global$0 - 240 | 0;
    $12 = $7;
    if ($7 >>> 0 < global$86 >>> 0) {
@@ -6581,7 +6581,7 @@ function asmFunc(global, env, buffer) {
       $11 = !$5;
       $9 = 1;
       label$8 : {
-       label$9 : while (1) {
+       while (1) {
         $3 = $8;
         label$10 : {
          if (!($11 & 1 | 0)) {
@@ -6618,7 +6618,7 @@ function asmFunc(global, env, buffer) {
         $0 = $3;
         $8 = $3 - (HEAP32[($6 + ($4 << 2 | 0) | 0) >> 2] | 0) | 0;
         if ((FUNCTION_TABLE[$2]($8, HEAP32[$7 >> 2] | 0) | 0 | 0) > (0 | 0)) {
-         continue label$9
+         continue
         }
         break label$5;
        };
@@ -6635,7 +6635,7 @@ function asmFunc(global, env, buffer) {
    cycle($1 | 0, $7 | 0, $9 | 0);
    sift($3 | 0, $1 | 0, $2 | 0, $4 | 0, $6 | 0);
   }
-  label$12 : {
+  {
    $13 = $7 + 240 | 0;
    if ($13 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -6686,7 +6686,7 @@ function asmFunc(global, env, buffer) {
   $1 = $1 | 0;
   $2 = $2 | 0;
   var $5 = 0, $3 = 0, $6 = 0, $7 = 0, $4 = 0, $9 = 0, $8 = 0;
-  label$1 : {
+  {
    $3 = global$0 - 256 | 0;
    $8 = $3;
    if ($3 >>> 0 < global$86 >>> 0) {
@@ -6704,29 +6704,29 @@ function asmFunc(global, env, buffer) {
     break label$3
    }
    $5 = $3;
-   label$4 : while (1) {
+   while (1) {
     $6 = $0 >>> 0 < 256 >>> 0 ? $0 : 256;
     memcpy($5 | 0, HEAP32[$1 >> 2] | 0 | 0, $6 | 0) | 0;
     $5 = 0;
-    label$5 : while (1) {
+    while (1) {
      $7 = $1 + ($5 << 2 | 0) | 0;
      $5 = $5 + 1 | 0;
      memcpy(HEAP32[$7 >> 2] | 0 | 0, HEAP32[($1 + ($5 << 2 | 0) | 0) >> 2] | 0 | 0, $6 | 0) | 0;
      HEAP32[$7 >> 2] = (HEAP32[$7 >> 2] | 0) + $6 | 0;
      if (($5 | 0) != ($2 | 0)) {
-      continue label$5
+      continue
      }
-     break label$5;
+     break;
     };
     $0 = $0 - $6 | 0;
     if (!$0) {
      break label$3
     }
     $5 = HEAP32[$4 >> 2] | 0;
-    continue label$4;
+    continue;
    };
   }
-  label$6 : {
+  {
    $9 = $3 + 256 | 0;
    if ($9 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -6773,7 +6773,7 @@ function asmFunc(global, env, buffer) {
   $4 = 0;
   $4$hi = i64toi32_i32$0;
   $3 = 1;
-  label$2 : while (1) {
+  while (1) {
    i64toi32_i32$0 = $4$hi;
    $5 = $4;
    $5$hi = i64toi32_i32$0;
@@ -6805,9 +6805,9 @@ function asmFunc(global, env, buffer) {
    $3 = 0;
    $0 = $0 + 1 | 0;
    if ($0 >>> 0 < $1 >>> 0) {
-    continue label$2
+    continue
    }
-   break label$2;
+   break;
   };
   return 1 | 0;
  }
@@ -6833,7 +6833,7 @@ function asmFunc(global, env, buffer) {
      break label$2
     }
     $3 = 1;
-    label$3 : while (1) {
+    while (1) {
      label$4 : {
       label$5 : {
        $5 = HEAP32[($0 + 4 | 0) >> 2] | 0;
@@ -6890,9 +6890,9 @@ function asmFunc(global, env, buffer) {
      }
      $3 = $3 + 1 | 0;
      if ($3 >>> 0 < $4 >>> 0) {
-      continue label$3
+      continue
      }
-     break label$3;
+     break;
     };
    }
    if ($1 >>> 0 >= $4 >>> 0) {
@@ -6900,7 +6900,7 @@ function asmFunc(global, env, buffer) {
    }
    $5 = HEAP32[($0 + 4 | 0) >> 2] | 0;
    $2 = $1;
-   label$6 : while (1) {
+   while (1) {
     $3 = $5 + Math_imul($2, 24) | 0;
     HEAP32[($3 + 16 | 0) >> 2] = 0;
     i64toi32_i32$3 = $3;
@@ -6912,9 +6912,9 @@ function asmFunc(global, env, buffer) {
     HEAP32[(i64toi32_i32$3 + 4 | 0) >> 2] = i64toi32_i32$1;
     $2 = $2 + 1 | 0;
     if (($2 | 0) != ($4 | 0)) {
-     continue label$6
+     continue
     }
-    break label$6;
+    break;
    };
   }
   return $1 | 0;
@@ -7140,7 +7140,7 @@ function asmFunc(global, env, buffer) {
          $5 = $4 + -1 | 0;
          $6 = HEAP32[($0 + 152 | 0) >> 2] | 0;
          $3 = 0;
-         label$11 : while (1) {
+         while (1) {
           $0 = $6 + ($3 << 5 | 0) | 0;
           if (!(HEAPU8[($0 + 8 | 0) >> 0] | 0)) {
            break label$3
@@ -7166,7 +7166,7 @@ function asmFunc(global, env, buffer) {
            }
            $8 = $0 + 24 | 0;
            $0 = 0;
-           label$15 : while (1) {
+           while (1) {
             label$16 : {
              if (!$0) {
               break label$16
@@ -7178,15 +7178,15 @@ function asmFunc(global, env, buffer) {
             }
             $0 = $0 + 1 | 0;
             if ($0 >>> 0 < $7 >>> 0) {
-             continue label$15
+             continue
             }
-            break label$15;
+            break;
            };
           }
           $0 = 1;
           $3 = $3 + 1 | 0;
           if (($3 | 0) != ($4 | 0)) {
-           continue label$11
+           continue
           }
           break label$1;
          };
@@ -7194,7 +7194,7 @@ function asmFunc(global, env, buffer) {
         $5 = $3 + -1 | 0;
         $6 = HEAP32[($0 + 152 | 0) >> 2] | 0;
         $4 = 0;
-        label$17 : while (1) {
+        while (1) {
          $0 = $6 + ($4 << 5 | 0) | 0;
          $1 = HEAPU8[($0 + 8 | 0) >> 0] | 0;
          if (!$1) {
@@ -7259,7 +7259,7 @@ function asmFunc(global, env, buffer) {
           }
           $8 = HEAP32[($0 + 24 | 0) >> 2] | 0;
           $0 = 0;
-          label$24 : while (1) {
+          while (1) {
            label$25 : {
             $1 = $8 + ($0 << 4 | 0) | 0;
             i64toi32_i32$1 = HEAP32[$1 >> 2] | 0;
@@ -7288,15 +7288,15 @@ function asmFunc(global, env, buffer) {
            }
            $0 = $0 + 1 | 0;
            if ($0 >>> 0 < $7 >>> 0) {
-            continue label$24
+            continue
            }
-           break label$24;
+           break;
           };
          }
          $0 = 1;
          $4 = $4 + 1 | 0;
          if (($4 | 0) != ($3 | 0)) {
-          continue label$17
+          continue
          }
          break label$1;
         };
@@ -7351,7 +7351,7 @@ function asmFunc(global, env, buffer) {
      break label$2
     }
     label$3 : {
-     label$4 : while (1) {
+     while (1) {
       if ((($3 + -32 | 0) & 255 | 0) >>> 0 >= 95 >>> 0) {
        break label$3
       }
@@ -7360,7 +7360,7 @@ function asmFunc(global, env, buffer) {
       if (!$3) {
        break label$2
       }
-      continue label$4;
+      continue;
      };
     }
     $4 = 0;
@@ -7375,7 +7375,7 @@ function asmFunc(global, env, buffer) {
    if (!(HEAPU8[$3 >> 0] | 0)) {
     break label$1
    }
-   label$5 : while (1) {
+   while (1) {
     label$6 : {
      $2 = utf8len_($3 | 0) | 0;
      if ($2) {
@@ -7390,9 +7390,9 @@ function asmFunc(global, env, buffer) {
     }
     $3 = $3 + $2 | 0;
     if (HEAPU8[$3 >> 0] | 0) {
-     continue label$5
+     continue
     }
-    break label$5;
+    break;
    };
   }
   return $4 | 0;
@@ -7404,16 +7404,16 @@ function asmFunc(global, env, buffer) {
   $2 = $2 | 0;
   var $3 = 0;
   label$1 : {
-   label$2 : while (1) {
+   while (1) {
     $3 = $0;
     if (!$3) {
      break label$1
     }
     $0 = $3 + -1 | 0;
     if (($1 >>> $3 | 0) >>> 0 <= $2 >>> 0) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
   }
   return $3 | 0;
@@ -7428,14 +7428,14 @@ function asmFunc(global, env, buffer) {
     if ($0 & 1 | 0) {
      break label$2
     }
-    label$3 : while (1) {
+    while (1) {
      $1 = $1 + 1 | 0;
      $2 = $0 & 2 | 0;
      $0 = $0 >>> 1 | 0;
      if (!$2) {
-      continue label$3
+      continue
      }
-     break label$3;
+     break;
     };
     $0 = 15;
     if ($1 >>> 0 > 14 >>> 0) {
@@ -7640,13 +7640,13 @@ function asmFunc(global, env, buffer) {
     $3 = HEAP32[$0 >> 2] | 0;
     $4 = 0;
     $1 = 0;
-    label$3 : while (1) {
+    while (1) {
      $1 = (HEAP32[(((($1 >>> 24 | 0) ^ (HEAPU8[($3 + $4 | 0) >> 0] | 0) | 0) << 2 | 0) + 6512 | 0) >> 2] | 0) ^ ($1 << 8 | 0) | 0;
      $4 = $4 + 1 | 0;
      if (($4 | 0) != ($2 | 0)) {
-      continue label$3
+      continue
      }
-     break label$3;
+     break;
     };
    }
    label$4 : {
@@ -7656,13 +7656,13 @@ function asmFunc(global, env, buffer) {
     }
     $3 = HEAP32[($0 + 8 | 0) >> 2] | 0;
     $4 = 0;
-    label$5 : while (1) {
+    while (1) {
      $1 = (HEAP32[(((($1 >>> 24 | 0) ^ (HEAPU8[($3 + $4 | 0) >> 0] | 0) | 0) << 2 | 0) + 6512 | 0) >> 2] | 0) ^ ($1 << 8 | 0) | 0;
      $4 = $4 + 1 | 0;
      if (($4 | 0) != ($2 | 0)) {
-      continue label$5
+      continue
      }
-     break label$5;
+     break;
     };
    }
    HEAP8[((HEAP32[$0 >> 2] | 0) + 22 | 0) >> 0] = $1;
@@ -7705,7 +7705,7 @@ function asmFunc(global, env, buffer) {
      break label$3;
     }
     $8 = 0;
-    label$5 : while (1) {
+    while (1) {
      $9 = HEAP32[(($1 + ($7 << 3 | 0) | 0) + 4 | 0) >> 2] | 0;
      if (($9 | 0) < (0 | 0)) {
       break label$1
@@ -7716,9 +7716,9 @@ function asmFunc(global, env, buffer) {
      $8 = $9 + $8 | 0;
      $7 = $7 + 1 | 0;
      if (($7 | 0) != ($2 | 0)) {
-      continue label$5
+      continue
      }
-     break label$5;
+     break;
     };
    }
    $10 = ($8 | 0) / (255 | 0) | 0;
@@ -7814,7 +7814,7 @@ function asmFunc(global, env, buffer) {
     }
     $9 = HEAP32[($0 + 8 | 0) >> 2] | 0;
     $7 = 0;
-    label$18 : while (1) {
+    while (1) {
      $136 = (HEAP32[$0 >> 2] | 0) + $9 | 0;
      $9 = $1 + ($7 << 3 | 0) | 0;
      memcpy($136 | 0, HEAP32[$9 >> 2] | 0 | 0, HEAP32[($9 + 4 | 0) >> 2] | 0 | 0) | 0;
@@ -7822,9 +7822,9 @@ function asmFunc(global, env, buffer) {
      HEAP32[($0 + 8 | 0) >> 2] = $9;
      $7 = $7 + 1 | 0;
      if (($7 | 0) != ($2 | 0)) {
-      continue label$18
+      continue
      }
-     break label$18;
+     break;
     };
    }
    $1 = HEAP32[($0 + 28 | 0) >> 2] | 0;
@@ -7840,7 +7840,7 @@ function asmFunc(global, env, buffer) {
     }
     $5 = HEAP32[($0 + 20 | 0) >> 2] | 0;
     $7 = 0;
-    label$21 : while (1) {
+    while (1) {
      $9 = $1 + $7 | 0;
      HEAP32[($2 + ($9 << 2 | 0) | 0) >> 2] = 255;
      i64toi32_i32$2 = $0;
@@ -7852,9 +7852,9 @@ function asmFunc(global, env, buffer) {
      HEAP32[(i64toi32_i32$0 + 4 | 0) >> 2] = i64toi32_i32$1;
      $7 = $7 + 1 | 0;
      if (($7 | 0) != ($10 | 0)) {
-      continue label$21
+      continue
      }
-     break label$21;
+     break;
     };
     $7 = $10;
    }
@@ -8002,7 +8002,7 @@ function asmFunc(global, env, buffer) {
   $0 = $0 | 0;
   $1 = $1 | 0;
   var $2 = 0, $4 = 0, $3 = 0, i64toi32_i32$1 = 0;
-  label$1 : {
+  {
    $2 = global$0 - 16 | 0;
    $3 = $2;
    if ($2 >>> 0 < global$86 >>> 0) {
@@ -8014,7 +8014,7 @@ function asmFunc(global, env, buffer) {
   HEAP32[($2 + 12 | 0) >> 2] = HEAP32[($1 + 4 | 0) >> 2] | 0;
   i64toi32_i32$1 = HEAP32[($1 + 20 | 0) >> 2] | 0;
   $1 = ogg_stream_iovecin($0 | 0, $2 + 8 | 0 | 0, 1 | 0, HEAP32[($1 + 12 | 0) >> 2] | 0 | 0, HEAP32[($1 + 16 | 0) >> 2] | 0 | 0, i64toi32_i32$1 | 0) | 0;
-  label$3 : {
+  {
    $4 = $2 + 16 | 0;
    if ($4 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -8069,7 +8069,7 @@ function asmFunc(global, env, buffer) {
       }
       $9 = 0;
       $6 = ($6 | 0) > (0 | 0) ? $6 : 0;
-      label$6 : while (1) {
+      while (1) {
        i64toi32_i32$0 = 0;
        $14 = 0;
        $14$hi = i64toi32_i32$0;
@@ -8080,9 +8080,9 @@ function asmFunc(global, env, buffer) {
        $11 = $9 + 1 | 0;
        $9 = $11;
        if ((HEAPU8[($10 + (HEAP32[($0 + 16 | 0) >> 2] | 0) | 0) >> 0] | 0 | 0) == (255 | 0)) {
-        continue label$6
+        continue
        }
-       break label$6;
+       break;
       };
       $6 = $11;
       break label$3;
@@ -8096,7 +8096,7 @@ function asmFunc(global, env, buffer) {
      $9 = 0;
      $6 = 0;
      label$7 : {
-      label$8 : while (1) {
+      while (1) {
        label$9 : {
         if (($9 | 0) <= ($3 | 0)) {
          break label$9
@@ -8124,9 +8124,9 @@ function asmFunc(global, env, buffer) {
        $9 = $11 + $9 | 0;
        $6 = $6 + 1 | 0;
        if (($6 | 0) != ($12 | 0)) {
-        continue label$8
+        continue
        }
-       break label$8;
+       break;
       };
       $6 = $12;
      }
@@ -8288,15 +8288,15 @@ function asmFunc(global, env, buffer) {
      break label$13
     }
     $6 = 0;
-    label$14 : while (1) {
+    while (1) {
      $10 = HEAP32[($3 + ($6 << 2 | 0) | 0) >> 2] | 0;
      HEAP8[(($6 + $0 | 0) + 67 | 0) >> 0] = $10;
      $9 = ($10 & 255 | 0) + $9 | 0;
      $6 = $6 + 1 | 0;
      if (($6 | 0) != ($11 | 0)) {
-      continue label$14
+      continue
      }
-     break label$14;
+     break;
     };
    }
    HEAP32[$1 >> 2] = $12;
@@ -8328,13 +8328,13 @@ function asmFunc(global, env, buffer) {
     $10 = HEAP32[$1 >> 2] | 0;
     $6 = 0;
     $0 = 0;
-    label$16 : while (1) {
+    while (1) {
      $0 = (HEAP32[(((($0 >>> 24 | 0) ^ (HEAPU8[($10 + $6 | 0) >> 0] | 0) | 0) << 2 | 0) + 6512 | 0) >> 2] | 0) ^ ($0 << 8 | 0) | 0;
      $6 = $6 + 1 | 0;
      if (($6 | 0) != ($9 | 0)) {
-      continue label$16
+      continue
      }
-     break label$16;
+     break;
     };
    }
    label$17 : {
@@ -8344,13 +8344,13 @@ function asmFunc(global, env, buffer) {
     }
     $10 = HEAP32[($1 + 8 | 0) >> 2] | 0;
     $6 = 0;
-    label$18 : while (1) {
+    while (1) {
      $0 = (HEAP32[(((($0 >>> 24 | 0) ^ (HEAPU8[($10 + $6 | 0) >> 0] | 0) | 0) << 2 | 0) + 6512 | 0) >> 2] | 0) ^ ($0 << 8 | 0) | 0;
      $6 = $6 + 1 | 0;
      if (($6 | 0) != ($9 | 0)) {
-      continue label$18
+      continue
      }
-     break label$18;
+     break;
     };
    }
    HEAP8[((HEAP32[$1 >> 2] | 0) + 22 | 0) >> 0] = $0;
@@ -8564,7 +8564,7 @@ function asmFunc(global, env, buffer) {
   $0 = $0 | 0;
   $1 = $1 | 0;
   var $6 = 0, $3 = 0, $4 = 0, $7 = 0, $8 = 0, $2 = 0, $5 = 0, $15 = 0, $16 = 0, $17 = 0, $18 = 0, $19 = 0, i64toi32_i32$0 = 0, $9 = 0, $10 = 0, $11 = 0, $13 = 0, $12 = 0;
-  label$1 : {
+  {
    $2 = global$0 - 16 | 0;
    $12 = $2;
    if ($2 >>> 0 < global$86 >>> 0) {
@@ -8606,14 +8606,14 @@ function asmFunc(global, env, buffer) {
          }
          $8 = HEAP32[($0 + 24 | 0) >> 2] | 0;
          $4 = 0;
-         label$10 : while (1) {
+         while (1) {
           $8 = $8 + (HEAPU8[(($4 + $6 | 0) + 27 | 0) >> 0] | 0) | 0;
           HEAP32[($0 + 24 | 0) >> 2] = $8;
           $4 = $4 + 1 | 0;
           if ($4 >>> 0 < (HEAPU8[($6 + 26 | 0) >> 0] | 0) >>> 0) {
-           continue label$10
+           continue
           }
-          break label$10;
+          break;
          };
         }
         HEAP32[($0 + 20 | 0) >> 2] = $7;
@@ -8643,13 +8643,13 @@ function asmFunc(global, env, buffer) {
         }
         $7 = 0;
         $3 = 0;
-        label$12 : while (1) {
+        while (1) {
          $3 = (HEAP32[(((($3 >>> 24 | 0) ^ (HEAPU8[($6 + $7 | 0) >> 0] | 0) | 0) << 2 | 0) + 6512 | 0) >> 2] | 0) ^ ($3 << 8 | 0) | 0;
          $7 = $7 + 1 | 0;
          if (($7 | 0) != ($8 | 0)) {
-          continue label$12
+          continue
          }
-         break label$12;
+         break;
         };
        }
        $11 = $6 + 22 | 0;
@@ -8658,13 +8658,13 @@ function asmFunc(global, env, buffer) {
          break label$13
         }
         $7 = $6 + $8 | 0;
-        label$14 : while (1) {
+        while (1) {
          $3 = (HEAP32[(((($3 >>> 24 | 0) ^ (HEAPU8[($7 + $4 | 0) >> 0] | 0) | 0) << 2 | 0) + 6512 | 0) >> 2] | 0) ^ ($3 << 8 | 0) | 0;
          $4 = $4 + 1 | 0;
          if (($4 | 0) != ($10 | 0)) {
-          continue label$14
+          continue
          }
-         break label$14;
+         break;
         };
        }
        HEAP8[($6 + 22 | 0) >> 0] = $3;
@@ -8724,7 +8724,7 @@ function asmFunc(global, env, buffer) {
    HEAP32[($0 + 12 | 0) >> 2] = $3 - $4 | 0;
    $3 = $6 - $3 | 0;
   }
-  label$17 : {
+  {
    $13 = $2 + 16 | 0;
    if ($13 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -8743,7 +8743,7 @@ function asmFunc(global, env, buffer) {
    if ((HEAP32[($0 + 4 | 0) >> 2] | 0 | 0) < (0 | 0)) {
     break label$1
    }
-   label$2 : while (1) {
+   while (1) {
     label$3 : {
      $2 = ogg_sync_pageseek($0 | 0, $1 | 0) | 0;
      if (($2 | 0) <= (0 | 0)) {
@@ -8758,9 +8758,9 @@ function asmFunc(global, env, buffer) {
      return 0 | 0;
     }
     if (HEAP32[($0 + 16 | 0) >> 2] | 0) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
    HEAP32[($0 + 16 | 0) >> 2] = 1;
    $2 = -1;
@@ -8853,13 +8853,13 @@ function asmFunc(global, env, buffer) {
      $2 = HEAP32[($0 + 8 | 0) >> 2] | 0;
      $12 = HEAP32[($0 + 16 | 0) >> 2] | 0;
      $1 = $10;
-     label$8 : while (1) {
+     while (1) {
       $2 = $2 - (HEAPU8[($12 + ($1 << 2 | 0) | 0) >> 0] | 0) | 0;
       $1 = $1 + 1 | 0;
       if (($1 | 0) < ($3 | 0)) {
-       continue label$8
+       continue
       }
-      break label$8;
+      break;
      };
      HEAP32[($0 + 8 | 0) >> 2] = $2;
     }
@@ -8896,7 +8896,7 @@ function asmFunc(global, env, buffer) {
      break label$9;
     }
     $1 = 0;
-    label$12 : while (1) {
+    while (1) {
      $2 = $1 + 1 | 0;
      $1 = HEAPU8[(($1 + $4 | 0) + 27 | 0) >> 0] | 0;
      $6 = $6 - $1 | 0;
@@ -8906,9 +8906,9 @@ function asmFunc(global, env, buffer) {
      }
      $1 = $2;
      if (($1 | 0) != ($8 | 0)) {
-      continue label$12
+      continue
      }
-     break label$12;
+     break;
     };
     $2 = $8;
    }
@@ -9030,7 +9030,7 @@ function asmFunc(global, env, buffer) {
      if (($2 | 0) == ($8 | 0)) {
       break label$28
      }
-     label$29 : while (1) {
+     while (1) {
       $7 = HEAPU8[(($2 + $4 | 0) + 27 | 0) >> 0] | 0;
       HEAP32[($12 + ($1 << 2 | 0) | 0) >> 2] = $7;
       i64toi32_i32$0 = $3 + ($1 << 3 | 0) | 0;
@@ -9049,9 +9049,9 @@ function asmFunc(global, env, buffer) {
       }
       $1 = $6;
       if (($2 | 0) != ($8 | 0)) {
-       continue label$29
+       continue
       }
-      break label$29;
+      break;
      };
     }
     if (($11 | 0) == (-1 | 0)) {
@@ -9192,16 +9192,16 @@ function asmFunc(global, env, buffer) {
      $7 = $8;
      break label$3;
     }
-    label$5 : while (1) {
+    while (1) {
      $4 = $4 + 1 | 0;
      $8 = HEAP32[($5 + ($4 << 2 | 0) | 0) >> 2] | 0;
      $2 = $8 & 512 | 0 ? 512 : $2;
      $8 = $8 & 255 | 0;
      $7 = $8 + $7 | 0;
      if (($8 | 0) == (255 | 0)) {
-      continue label$5
+      continue
      }
-     break label$5;
+     break;
     };
    }
    label$6 : {
@@ -9329,7 +9329,7 @@ function asmFunc(global, env, buffer) {
   $4 = $4 | 0;
   $5 = $5 | 0;
   var $8 = 0, $15 = 0, $16 = 0, $6 = 0, $7 = 0, $20 = 0, $9 = 0, $10 = 0, $11 = 0, $12 = 0, $18 = 0, $19 = 0, $17 = 0, $13 = 0, $14 = 0;
-  label$1 : {
+  {
    $6 = global$0 - 16 | 0;
    $17 = $6;
    if ($6 >>> 0 < global$86 >>> 0) {
@@ -9353,7 +9353,7 @@ function asmFunc(global, env, buffer) {
      $13 = HEAP32[global$4 >> 2] | 0;
      $14 = (HEAPU8[global$5 >> 0] | 0) & 255 | 0;
      $8 = 0;
-     label$6 : while (1) {
+     while (1) {
       if (HEAP32[($0 + 408 | 0) >> 2] | 0) {
        break label$5
       }
@@ -9489,13 +9489,13 @@ function asmFunc(global, env, buffer) {
       }
       $8 = HEAP32[$2 >> 2] | 0;
       if ($7 >>> 0 > $8 >>> 0) {
-       continue label$6
+       continue
       }
-      break label$6;
+      break;
      };
     }
     $0 = HEAP32[($0 + 408 | 0) >> 2] | 0;
-    label$20 : {
+    {
      $18 = $6 + 16 | 0;
      if ($18 >>> 0 < global$86 >>> 0) {
       __handle_stack_overflow()
@@ -9506,7 +9506,7 @@ function asmFunc(global, env, buffer) {
    }
    $15 = 5;
   }
-  label$22 : {
+  {
    $19 = $6 + 16 | 0;
    if ($19 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -9907,7 +9907,7 @@ function asmFunc(global, env, buffer) {
                    $12 = HEAP32[($1 + 4 | 0) >> 2] | 0;
                    $13 = HEAP32[$1 >> 2] | 0;
                    $2 = 0;
-                   label$28 : while (1) {
+                   while (1) {
                     $1 = $2 << 2 | 0;
                     HEAP32[$5 >> 2] = HEAP32[($13 + $1 | 0) >> 2] | 0;
                     HEAP32[($5 + 4 | 0) >> 2] = HEAP32[($12 + $1 | 0) >> 2] | 0;
@@ -9920,7 +9920,7 @@ function asmFunc(global, env, buffer) {
                     $5 = $5 + 32 | 0;
                     $2 = $2 + 1 | 0;
                     if (($2 | 0) != ($3 | 0)) {
-                     continue label$28
+                     continue
                     }
                     break label$6;
                    };
@@ -9935,7 +9935,7 @@ function asmFunc(global, env, buffer) {
                    $10 = HEAP32[($1 + 4 | 0) >> 2] | 0;
                    $11 = HEAP32[$1 >> 2] | 0;
                    $2 = 0;
-                   label$29 : while (1) {
+                   while (1) {
                     $1 = $2 << 2 | 0;
                     HEAP32[$5 >> 2] = HEAP32[($11 + $1 | 0) >> 2] | 0;
                     HEAP32[($5 + 4 | 0) >> 2] = HEAP32[($10 + $1 | 0) >> 2] | 0;
@@ -9946,7 +9946,7 @@ function asmFunc(global, env, buffer) {
                     $5 = $5 + 24 | 0;
                     $2 = $2 + 1 | 0;
                     if (($2 | 0) != ($3 | 0)) {
-                     continue label$29
+                     continue
                     }
                     break label$6;
                    };
@@ -9959,7 +9959,7 @@ function asmFunc(global, env, buffer) {
                    $7 = HEAP32[($1 + 4 | 0) >> 2] | 0;
                    $9 = HEAP32[$1 >> 2] | 0;
                    $2 = 0;
-                   label$30 : while (1) {
+                   while (1) {
                     $1 = $2 << 2 | 0;
                     HEAP32[$5 >> 2] = HEAP32[($9 + $1 | 0) >> 2] | 0;
                     HEAP32[($5 + 4 | 0) >> 2] = HEAP32[($7 + $1 | 0) >> 2] | 0;
@@ -9968,7 +9968,7 @@ function asmFunc(global, env, buffer) {
                     $5 = $5 + 16 | 0;
                     $2 = $2 + 1 | 0;
                     if (($2 | 0) != ($3 | 0)) {
-                     continue label$30
+                     continue
                     }
                     break label$6;
                    };
@@ -9979,14 +9979,14 @@ function asmFunc(global, env, buffer) {
                    $4 = HEAP32[($1 + 4 | 0) >> 2] | 0;
                    $6 = HEAP32[$1 >> 2] | 0;
                    $1 = 0;
-                   label$31 : while (1) {
+                   while (1) {
                     $2 = $1 << 2 | 0;
                     HEAP32[$5 >> 2] = HEAP32[($6 + $2 | 0) >> 2] | 0;
                     HEAP32[($5 + 4 | 0) >> 2] = HEAP32[($4 + $2 | 0) >> 2] | 0;
                     $5 = $5 + 8 | 0;
                     $1 = $1 + 1 | 0;
                     if (($1 | 0) != ($3 | 0)) {
-                     continue label$31
+                     continue
                     }
                     break label$6;
                    };
@@ -10003,12 +10003,12 @@ function asmFunc(global, env, buffer) {
                  }
                  $2 = HEAP32[$1 >> 2] | 0;
                  $1 = 0;
-                 label$32 : while (1) {
+                 while (1) {
                   HEAP32[$5 >> 2] = HEAP32[($2 + ($1 << 2 | 0) | 0) >> 2] | 0;
                   $5 = $5 + 4 | 0;
                   $1 = $1 + 1 | 0;
                   if (($1 | 0) != ($3 | 0)) {
-                   continue label$32
+                   continue
                   }
                   break label$6;
                  };
@@ -10017,7 +10017,7 @@ function asmFunc(global, env, buffer) {
                  break label$6
                 }
                 $2 = 0;
-                label$33 : while (1) {
+                while (1) {
                  $6 = $2 << 2 | 0;
                  $4 = HEAP32[((HEAP32[$1 >> 2] | 0) + $6 | 0) >> 2] | 0;
                  HEAP8[$5 >> 0] = $4;
@@ -10030,7 +10030,7 @@ function asmFunc(global, env, buffer) {
                  $5 = $5 + 6 | 0;
                  $2 = $2 + 1 | 0;
                  if (($2 | 0) != ($3 | 0)) {
-                  continue label$33
+                  continue
                  }
                  break label$6;
                 };
@@ -10039,7 +10039,7 @@ function asmFunc(global, env, buffer) {
                 break label$6
                }
                $2 = 0;
-               label$34 : while (1) {
+               while (1) {
                 $4 = HEAP32[((HEAP32[$1 >> 2] | 0) + ($2 << 2 | 0) | 0) >> 2] | 0;
                 HEAP8[$5 >> 0] = $4;
                 HEAP8[($5 + 2 | 0) >> 0] = $4 >>> 16 | 0;
@@ -10047,7 +10047,7 @@ function asmFunc(global, env, buffer) {
                 $5 = $5 + 3 | 0;
                 $2 = $2 + 1 | 0;
                 if (($2 | 0) != ($3 | 0)) {
-                 continue label$34
+                 continue
                 }
                 break label$6;
                };
@@ -10064,7 +10064,7 @@ function asmFunc(global, env, buffer) {
               $12 = HEAP32[($1 + 4 | 0) >> 2] | 0;
               $13 = HEAP32[$1 >> 2] | 0;
               $2 = 0;
-              label$35 : while (1) {
+              while (1) {
                $1 = $2 << 2 | 0;
                HEAP16[$5 >> 1] = HEAP32[($13 + $1 | 0) >> 2] | 0;
                HEAP16[($5 + 2 | 0) >> 1] = HEAP32[($12 + $1 | 0) >> 2] | 0;
@@ -10077,7 +10077,7 @@ function asmFunc(global, env, buffer) {
                $5 = $5 + 16 | 0;
                $2 = $2 + 1 | 0;
                if (($2 | 0) != ($3 | 0)) {
-                continue label$35
+                continue
                }
                break label$6;
               };
@@ -10092,7 +10092,7 @@ function asmFunc(global, env, buffer) {
              $10 = HEAP32[($1 + 4 | 0) >> 2] | 0;
              $11 = HEAP32[$1 >> 2] | 0;
              $2 = 0;
-             label$36 : while (1) {
+             while (1) {
               $1 = $2 << 2 | 0;
               HEAP16[$5 >> 1] = HEAP32[($11 + $1 | 0) >> 2] | 0;
               HEAP16[($5 + 2 | 0) >> 1] = HEAP32[($10 + $1 | 0) >> 2] | 0;
@@ -10103,7 +10103,7 @@ function asmFunc(global, env, buffer) {
               $5 = $5 + 12 | 0;
               $2 = $2 + 1 | 0;
               if (($2 | 0) != ($3 | 0)) {
-               continue label$36
+               continue
               }
               break label$6;
              };
@@ -10116,7 +10116,7 @@ function asmFunc(global, env, buffer) {
             $7 = HEAP32[($1 + 4 | 0) >> 2] | 0;
             $9 = HEAP32[$1 >> 2] | 0;
             $2 = 0;
-            label$37 : while (1) {
+            while (1) {
              $1 = $2 << 2 | 0;
              HEAP16[$5 >> 1] = HEAP32[($9 + $1 | 0) >> 2] | 0;
              HEAP16[($5 + 2 | 0) >> 1] = HEAP32[($7 + $1 | 0) >> 2] | 0;
@@ -10125,7 +10125,7 @@ function asmFunc(global, env, buffer) {
              $5 = $5 + 8 | 0;
              $2 = $2 + 1 | 0;
              if (($2 | 0) != ($3 | 0)) {
-              continue label$37
+              continue
              }
              break label$6;
             };
@@ -10136,14 +10136,14 @@ function asmFunc(global, env, buffer) {
            $4 = HEAP32[($1 + 4 | 0) >> 2] | 0;
            $6 = HEAP32[$1 >> 2] | 0;
            $1 = 0;
-           label$38 : while (1) {
+           while (1) {
             $2 = $1 << 2 | 0;
             HEAP16[$5 >> 1] = HEAP32[($6 + $2 | 0) >> 2] | 0;
             HEAP16[($5 + 2 | 0) >> 1] = HEAP32[($4 + $2 | 0) >> 2] | 0;
             $5 = $5 + 4 | 0;
             $1 = $1 + 1 | 0;
             if (($1 | 0) != ($3 | 0)) {
-             continue label$38
+             continue
             }
             break label$6;
            };
@@ -10153,12 +10153,12 @@ function asmFunc(global, env, buffer) {
           }
           $2 = HEAP32[$1 >> 2] | 0;
           $1 = 0;
-          label$39 : while (1) {
+          while (1) {
            HEAP16[$5 >> 1] = HEAP32[($2 + ($1 << 2 | 0) | 0) >> 2] | 0;
            $5 = $5 + 2 | 0;
            $1 = $1 + 1 | 0;
            if (($1 | 0) != ($3 | 0)) {
-            continue label$39
+            continue
            }
            break label$6;
           };
@@ -10167,7 +10167,7 @@ function asmFunc(global, env, buffer) {
           break label$6
          }
          $4 = 0;
-         label$40 : while (1) {
+         while (1) {
           $2 = $4 << 2 | 0;
           HEAP8[$5 >> 0] = HEAP32[((HEAP32[$1 >> 2] | 0) + $2 | 0) >> 2] | 0;
           HEAP8[($5 + 1 | 0) >> 0] = HEAP32[((HEAP32[($1 + 4 | 0) >> 2] | 0) + $2 | 0) >> 2] | 0;
@@ -10180,7 +10180,7 @@ function asmFunc(global, env, buffer) {
           $5 = $5 + 8 | 0;
           $4 = $4 + 1 | 0;
           if (($4 | 0) != ($3 | 0)) {
-           continue label$40
+           continue
           }
           break label$6;
          };
@@ -10189,7 +10189,7 @@ function asmFunc(global, env, buffer) {
          break label$6
         }
         $4 = 0;
-        label$41 : while (1) {
+        while (1) {
          $2 = $4 << 2 | 0;
          HEAP8[$5 >> 0] = HEAP32[((HEAP32[$1 >> 2] | 0) + $2 | 0) >> 2] | 0;
          HEAP8[($5 + 1 | 0) >> 0] = HEAP32[((HEAP32[($1 + 4 | 0) >> 2] | 0) + $2 | 0) >> 2] | 0;
@@ -10200,7 +10200,7 @@ function asmFunc(global, env, buffer) {
          $5 = $5 + 6 | 0;
          $4 = $4 + 1 | 0;
          if (($4 | 0) != ($3 | 0)) {
-          continue label$41
+          continue
          }
          break label$6;
         };
@@ -10209,7 +10209,7 @@ function asmFunc(global, env, buffer) {
         break label$6
        }
        $4 = 0;
-       label$42 : while (1) {
+       while (1) {
         $2 = $4 << 2 | 0;
         HEAP8[$5 >> 0] = HEAP32[((HEAP32[$1 >> 2] | 0) + $2 | 0) >> 2] | 0;
         HEAP8[($5 + 1 | 0) >> 0] = HEAP32[((HEAP32[($1 + 4 | 0) >> 2] | 0) + $2 | 0) >> 2] | 0;
@@ -10218,7 +10218,7 @@ function asmFunc(global, env, buffer) {
         $5 = $5 + 4 | 0;
         $4 = $4 + 1 | 0;
         if (($4 | 0) != ($3 | 0)) {
-         continue label$42
+         continue
         }
         break label$6;
        };
@@ -10227,14 +10227,14 @@ function asmFunc(global, env, buffer) {
        break label$6
       }
       $2 = 0;
-      label$43 : while (1) {
+      while (1) {
        $4 = $2 << 2 | 0;
        HEAP8[$5 >> 0] = HEAP32[((HEAP32[$1 >> 2] | 0) + $4 | 0) >> 2] | 0;
        HEAP8[($5 + 1 | 0) >> 0] = HEAP32[((HEAP32[($1 + 4 | 0) >> 2] | 0) + $4 | 0) >> 2] | 0;
        $5 = $5 + 2 | 0;
        $2 = $2 + 1 | 0;
        if (($2 | 0) != ($3 | 0)) {
-        continue label$43
+        continue
        }
        break label$6;
       };
@@ -10243,12 +10243,12 @@ function asmFunc(global, env, buffer) {
       break label$6
      }
      $2 = 0;
-     label$44 : while (1) {
+     while (1) {
       HEAP8[$5 >> 0] = HEAP32[((HEAP32[$1 >> 2] | 0) + ($2 << 2 | 0) | 0) >> 2] | 0;
       $5 = $5 + 1 | 0;
       $2 = $2 + 1 | 0;
       if (($2 | 0) != ($3 | 0)) {
-       continue label$44
+       continue
       }
       break label$6;
      };
@@ -10263,20 +10263,20 @@ function asmFunc(global, env, buffer) {
        break label$6
       }
       $6 = 0;
-      label$49 : while (1) {
+      while (1) {
        $4 = 0;
-       label$50 : while (1) {
+       while (1) {
         HEAP32[$5 >> 2] = HEAP32[((HEAP32[($1 + ($4 << 2 | 0) | 0) >> 2] | 0) + ($6 << 2 | 0) | 0) >> 2] | 0;
         $5 = $5 + 4 | 0;
         $4 = $4 + 1 | 0;
         if (($4 | 0) != ($2 | 0)) {
-         continue label$50
+         continue
         }
-        break label$50;
+        break;
        };
        $6 = $6 + 1 | 0;
        if (($6 | 0) != ($3 | 0)) {
-        continue label$49
+        continue
        }
        break label$6;
       };
@@ -10288,9 +10288,9 @@ function asmFunc(global, env, buffer) {
        break label$6
       }
       $7 = 0;
-      label$51 : while (1) {
+      while (1) {
        $4 = 0;
-       label$52 : while (1) {
+       while (1) {
         $6 = HEAP32[((HEAP32[($1 + ($4 << 2 | 0) | 0) >> 2] | 0) + ($7 << 2 | 0) | 0) >> 2] | 0;
         HEAP8[$5 >> 0] = $6;
         HEAP8[($5 + 2 | 0) >> 0] = $6 >>> 16 | 0;
@@ -10298,13 +10298,13 @@ function asmFunc(global, env, buffer) {
         $5 = $5 + 3 | 0;
         $4 = $4 + 1 | 0;
         if (($4 | 0) != ($2 | 0)) {
-         continue label$52
+         continue
         }
-        break label$52;
+        break;
        };
        $7 = $7 + 1 | 0;
        if (($7 | 0) != ($3 | 0)) {
-        continue label$51
+        continue
        }
        break label$6;
       };
@@ -10316,20 +10316,20 @@ function asmFunc(global, env, buffer) {
        break label$6
       }
       $6 = 0;
-      label$53 : while (1) {
+      while (1) {
        $4 = 0;
-       label$54 : while (1) {
+       while (1) {
         HEAP16[$5 >> 1] = HEAP32[((HEAP32[($1 + ($4 << 2 | 0) | 0) >> 2] | 0) + ($6 << 2 | 0) | 0) >> 2] | 0;
         $5 = $5 + 2 | 0;
         $4 = $4 + 1 | 0;
         if (($4 | 0) != ($2 | 0)) {
-         continue label$54
+         continue
         }
-        break label$54;
+        break;
        };
        $6 = $6 + 1 | 0;
        if (($6 | 0) != ($3 | 0)) {
-        continue label$53
+        continue
        }
        break label$6;
       };
@@ -10346,22 +10346,22 @@ function asmFunc(global, env, buffer) {
      break label$6
     }
     $6 = 0;
-    label$55 : while (1) {
+    while (1) {
      $4 = 0;
-     label$56 : while (1) {
+     while (1) {
       HEAP8[$5 >> 0] = HEAP32[((HEAP32[($1 + ($4 << 2 | 0) | 0) >> 2] | 0) + ($6 << 2 | 0) | 0) >> 2] | 0;
       $5 = $5 + 1 | 0;
       $4 = $4 + 1 | 0;
       if (($4 | 0) != ($2 | 0)) {
-       continue label$56
+       continue
       }
-      break label$56;
+      break;
      };
      $6 = $6 + 1 | 0;
      if (($6 | 0) != ($3 | 0)) {
-      continue label$55
+      continue
      }
-     break label$55;
+     break;
     };
    }
    $5 = HEAP32[($0 + 80 | 0) >> 2] | 0;
@@ -10394,7 +10394,7 @@ function asmFunc(global, env, buffer) {
      if ($1 >>> 0 < 64 >>> 0) {
       break label$60
      }
-     label$61 : while (1) {
+     while (1) {
       i64toi32_i32$1 = $5;
       i64toi32_i32$2 = HEAPU8[$5 >> 0] | 0 | ((HEAPU8[($5 + 1 | 0) >> 0] | 0) << 8 | 0) | 0 | ((HEAPU8[($5 + 2 | 0) >> 0] | 0) << 16 | 0 | ((HEAPU8[($5 + 3 | 0) >> 0] | 0) << 24 | 0) | 0) | 0;
       i64toi32_i32$0 = HEAPU8[($5 + 4 | 0) >> 0] | 0 | ((HEAPU8[($5 + 5 | 0) >> 0] | 0) << 8 | 0) | 0 | ((HEAPU8[($5 + 6 | 0) >> 0] | 0) << 16 | 0 | ((HEAPU8[($5 + 7 | 0) >> 0] | 0) << 24 | 0) | 0) | 0;
@@ -10511,9 +10511,9 @@ function asmFunc(global, env, buffer) {
       $5 = $5 + 64 | 0;
       $1 = $1 + -64 | 0;
       if ($1 >>> 0 > 63 >>> 0) {
-       continue label$61
+       continue
       }
-      break label$61;
+      break;
      };
     }
     memcpy($0 | 0, $5 | 0, $1 | 0) | 0;
@@ -10551,7 +10551,7 @@ function asmFunc(global, env, buffer) {
   $1 = $1 | 0;
   $2 = $2 | 0;
   var $3 = 0, $4 = 0, $5 = 0, $6 = 0, $8 = 0, $7 = 0;
-  label$1 : {
+  {
    $3 = global$0 - 32 | 0;
    $7 = $3;
    if ($3 >>> 0 < global$86 >>> 0) {
@@ -10602,7 +10602,7 @@ function asmFunc(global, env, buffer) {
    HEAP32[($0 + 4 | 0) >> 2] = $5 + 1 | 0;
    HEAP8[(($2 + $1 | 0) + -1 | 0) >> 0] = HEAPU8[$5 >> 0] | 0;
   }
-  label$8 : {
+  {
    $8 = $3 + 32 | 0;
    if ($8 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -10618,7 +10618,7 @@ function asmFunc(global, env, buffer) {
   $1$hi = $1$hi | 0;
   $2 = $2 | 0;
   var $3 = 0, i64toi32_i32$1 = 0, i64toi32_i32$0 = 0, $5 = 0, $4 = 0;
-  label$1 : {
+  {
    $3 = global$0 - 16 | 0;
    $4 = $3;
    if ($3 >>> 0 < global$86 >>> 0) {
@@ -10646,7 +10646,7 @@ function asmFunc(global, env, buffer) {
    HEAP32[($3 + 8 | 0) >> 2] = -1;
    HEAP32[($3 + 12 | 0) >> 2] = i64toi32_i32$1;
   }
-  label$5 : {
+  {
    $5 = $3 + 16 | 0;
    if ($5 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -10693,7 +10693,7 @@ function asmFunc(global, env, buffer) {
     if (!$0) {
      break label$5
     }
-    label$6 : while (1) {
+    while (1) {
      $1 = 0;
      label$7 : {
       if ((HEAP32[($0 + 76 | 0) >> 2] | 0 | 0) < (0 | 0)) {
@@ -10715,9 +10715,9 @@ function asmFunc(global, env, buffer) {
      }
      $0 = HEAP32[($0 + 56 | 0) >> 2] | 0;
      if ($0) {
-      continue label$6
+      continue
      }
-     break label$6;
+     break;
     };
    }
    __ofl_unlock();
@@ -10840,7 +10840,7 @@ function asmFunc(global, env, buffer) {
     break label$1
    }
    label$2 : {
-    label$3 : while (1) {
+    while (1) {
      $4 = HEAPU8[$0 >> 0] | 0;
      $5 = HEAPU8[$1 >> 0] | 0;
      if (($4 | 0) != ($5 | 0)) {
@@ -10850,7 +10850,7 @@ function asmFunc(global, env, buffer) {
      $0 = $0 + 1 | 0;
      $2 = $2 + -1 | 0;
      if ($2) {
-      continue label$3
+      continue
      }
      break label$1;
     };
@@ -11086,14 +11086,14 @@ function asmFunc(global, env, buffer) {
     break label$1
    }
    $4 = 0;
-   label$2 : while (1) {
+   while (1) {
     $5 = $4 << 2 | 0;
     HEAPF32[($2 + $5 | 0) >> 2] = Math_fround(Math_fround(HEAPF32[($1 + $5 | 0) >> 2]) * Math_fround(HEAP32[($0 + $5 | 0) >> 2] | 0 | 0));
     $4 = $4 + 1 | 0;
     if (($4 | 0) != ($3 | 0)) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
   }
  }
@@ -11111,40 +11111,40 @@ function asmFunc(global, env, buffer) {
      break label$2
     }
     $5 = 0;
-    label$3 : while (1) {
+    while (1) {
      $5 = $5 + 1 | 0;
      if ($5 >>> 0 <= $4 >>> 0) {
-      continue label$3
+      continue
      }
      break label$1;
     };
    }
    $5 = 0;
    $6 = memset($3 | 0, 0 | 0, $2 << 2 | 0 | 0) | 0;
-   label$4 : while (1) {
+   while (1) {
     $9 = Math_fround(HEAPF32[($0 + ($5 << 2 | 0) | 0) >> 2]);
     $7 = 0;
-    label$5 : while (1) {
+    while (1) {
      $8 = $6 + ($7 << 2 | 0) | 0;
      HEAPF32[$8 >> 2] = Math_fround(Math_fround(HEAPF32[$8 >> 2]) + Math_fround($9 * Math_fround(HEAPF32[($0 + (($7 + $5 | 0) << 2 | 0) | 0) >> 2])));
      $7 = $7 + 1 | 0;
      if (($7 | 0) != ($2 | 0)) {
-      continue label$5
+      continue
      }
-     break label$5;
+     break;
     };
     $5 = $5 + 1 | 0;
     if ($5 >>> 0 <= $4 >>> 0) {
-     continue label$4
+     continue
     }
-    break label$4;
+    break;
    };
   }
   label$6 : {
    if ($5 >>> 0 >= $1 >>> 0) {
     break label$6
    }
-   label$7 : while (1) {
+   while (1) {
     label$8 : {
      $2 = $1 - $5 | 0;
      if (!$2) {
@@ -11152,21 +11152,21 @@ function asmFunc(global, env, buffer) {
      }
      $9 = Math_fround(HEAPF32[($0 + ($5 << 2 | 0) | 0) >> 2]);
      $7 = 0;
-     label$9 : while (1) {
+     while (1) {
       $8 = $3 + ($7 << 2 | 0) | 0;
       HEAPF32[$8 >> 2] = Math_fround(Math_fround(HEAPF32[$8 >> 2]) + Math_fround($9 * Math_fround(HEAPF32[($0 + (($7 + $5 | 0) << 2 | 0) | 0) >> 2])));
       $7 = $7 + 1 | 0;
       if ($7 >>> 0 < $2 >>> 0) {
-       continue label$9
+       continue
       }
-      break label$9;
+      break;
      };
     }
     $5 = $5 + 1 | 0;
     if (($5 | 0) != ($1 | 0)) {
-     continue label$7
+     continue
     }
-    break label$7;
+    break;
    };
   }
  }
@@ -11177,7 +11177,7 @@ function asmFunc(global, env, buffer) {
   $2 = $2 | 0;
   $3 = $3 | 0;
   var $9 = 0, $14 = 0.0, $6 = 0, $4 = 0, $13 = 0.0, $10 = 0, $15 = 0.0, $7 = 0, $8 = 0, $12 = 0, $11 = 0, $5 = 0, $79 = 0;
-  label$1 : {
+  {
    $4 = global$0 - 256 | 0;
    $11 = $4;
    if ($4 >>> 0 < global$86 >>> 0) {
@@ -11189,7 +11189,7 @@ function asmFunc(global, env, buffer) {
   $13 = +Math_fround(HEAPF32[$0 >> 2]);
   $6 = 0;
   label$3 : {
-   label$4 : while (1) {
+   while (1) {
     if (($6 | 0) == ($5 | 0)) {
      break label$3
     }
@@ -11202,13 +11202,13 @@ function asmFunc(global, env, buffer) {
       }
       $8 = $6 >>> 1 | 0;
       $9 = 0;
-      label$7 : while (1) {
+      while (1) {
        $14 = $14 - +HEAPF64[($4 + ($9 << 3 | 0) | 0) >> 3] * +Math_fround(HEAPF32[($0 + (($6 - $9 | 0) << 2 | 0) | 0) >> 2]);
        $9 = $9 + 1 | 0;
        if (($9 | 0) != ($6 | 0)) {
-        continue label$7
+        continue
        }
-       break label$7;
+       break;
       };
       $14 = $14 / $13;
       HEAPF64[($4 + ($6 << 3 | 0) | 0) >> 3] = $14;
@@ -11217,7 +11217,7 @@ function asmFunc(global, env, buffer) {
        if (!$8) {
         break label$8
        }
-       label$9 : while (1) {
+       while (1) {
         $10 = $4 + ($9 << 3 | 0) | 0;
         $79 = $10;
         $15 = +HEAPF64[$10 >> 3];
@@ -11226,9 +11226,9 @@ function asmFunc(global, env, buffer) {
         HEAPF64[$10 >> 3] = $14 * $15 + +HEAPF64[$10 >> 3];
         $9 = $9 + 1 | 0;
         if (($9 | 0) != ($8 | 0)) {
-         continue label$9
+         continue
         }
-        break label$9;
+        break;
        };
       }
       if (!($6 & 1 | 0)) {
@@ -11244,25 +11244,25 @@ function asmFunc(global, env, buffer) {
     }
     $14 = 1.0 - $14 * $14;
     $9 = 0;
-    label$10 : while (1) {
+    while (1) {
      HEAPF32[(($2 + ($6 << 7 | 0) | 0) + ($9 << 2 | 0) | 0) >> 2] = Math_fround(-Math_fround(+HEAPF64[($4 + ($9 << 3 | 0) | 0) >> 3]));
      $9 = $9 + 1 | 0;
      if ($9 >>> 0 <= $6 >>> 0) {
-      continue label$10
+      continue
      }
-     break label$10;
+     break;
     };
     $13 = $13 * $14;
     HEAPF64[($3 + ($6 << 3 | 0) | 0) >> 3] = $13;
     $6 = $7;
     if ($13 != 0.0) {
-     continue label$4
+     continue
     }
-    break label$4;
+    break;
    };
    HEAP32[$1 >> 2] = $7;
   }
-  label$11 : {
+  {
    $12 = $4 + 256 | 0;
    if ($12 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -11278,7 +11278,7 @@ function asmFunc(global, env, buffer) {
   $3 = $3 | 0;
   $4 = $4 | 0;
   var $7 = 0, $15 = 0.0, $5 = 0, $6 = 0, $11 = 0, $8 = 0, $10 = 0, $9 = 0, $16 = 0.0, $13 = 0, $12 = 0, $90 = 0, $14 = Math_fround(0), $137 = 0;
-  label$1 : {
+  {
    $5 = global$0 - 16 | 0;
    $12 = $5;
    if ($5 >>> 0 < global$86 >>> 0) {
@@ -11300,14 +11300,14 @@ function asmFunc(global, env, buffer) {
    $2 = 0;
    $10 = 0 - $8 | 0;
    $15 = 0.0;
-   label$5 : while (1) {
+   while (1) {
     $16 = +Math_fround(Math_abs(Math_fround(HEAPF32[($0 + ($2 << 2 | 0) | 0) >> 2])));
     $15 = $15 < $16 ? $16 : $15;
     $2 = $2 + 1 | 0;
     if (($2 | 0) != ($1 | 0)) {
-     continue label$5
+     continue
     }
-    break label$5;
+    break;
    };
    $6 = 2;
    if ($15 <= 0.0) {
@@ -11345,7 +11345,7 @@ function asmFunc(global, env, buffer) {
     }
     $15 = 0.0;
     $2 = 0;
-    label$9 : while (1) {
+    while (1) {
      $11 = $2 << 2 | 0;
      $90 = $3 + $11 | 0;
      $15 = $15 + +Math_fround(Math_fround(HEAPF32[($0 + $11 | 0) >> 2]) * Math_fround(1 << $7 | 0 | 0));
@@ -11358,7 +11358,7 @@ function asmFunc(global, env, buffer) {
      }
      $15 = $15 - +($7 | 0);
      $7 = HEAP32[$4 >> 2] | 0;
-     continue label$9;
+     continue;
     };
    }
    label$10 : {
@@ -11368,7 +11368,7 @@ function asmFunc(global, env, buffer) {
     $2 = 0;
     $14 = Math_fround(1 << (0 - $7 | 0) | 0 | 0);
     $15 = 0.0;
-    label$11 : while (1) {
+    while (1) {
      $7 = $2 << 2 | 0;
      $137 = $3 + $7 | 0;
      $15 = $15 + +Math_fround(Math_fround(HEAPF32[($0 + $7 | 0) >> 2]) / $14);
@@ -11378,15 +11378,15 @@ function asmFunc(global, env, buffer) {
      $15 = $15 - +($7 | 0);
      $2 = $2 + 1 | 0;
      if (($2 | 0) != ($1 | 0)) {
-      continue label$11
+      continue
      }
-     break label$11;
+     break;
     };
    }
    $6 = 0;
    HEAP32[$4 >> 2] = 0;
   }
-  label$12 : {
+  {
    $13 = $5 + 16 | 0;
    if ($13 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -11414,7 +11414,7 @@ function asmFunc(global, env, buffer) {
     }
     $6 = 0;
     $7 = $3 + -13 | 0;
-    label$3 : while (1) {
+    while (1) {
      $8 = 0;
      $9 = 0;
      $10 = 0;
@@ -11487,7 +11487,7 @@ function asmFunc(global, env, buffer) {
      HEAP32[($5 + $26 | 0) >> 2] = (HEAP32[($0 + $26 | 0) >> 2] | 0) - ($3 >> $4 | 0) | 0;
      $6 = $6 + 1 | 0;
      if (($6 | 0) != ($1 | 0)) {
-      continue label$3
+      continue
      }
      break label$1;
     };
@@ -11530,7 +11530,7 @@ function asmFunc(global, env, buffer) {
       $7 = HEAP32[($2 + 36 | 0) >> 2] | 0;
       $27 = HEAP32[($2 + 40 | 0) >> 2] | 0;
       $2 = 0;
-      label$28 : while (1) {
+      while (1) {
        $19 = $20;
        $20 = $21;
        $21 = $22;
@@ -11548,7 +11548,7 @@ function asmFunc(global, env, buffer) {
        $17 = $19;
        $2 = $2 + 1 | 0;
        if (($2 | 0) != ($1 | 0)) {
-        continue label$28
+        continue
        }
        break label$1;
       };
@@ -11581,7 +11581,7 @@ function asmFunc(global, env, buffer) {
      $28 = HEAP32[($2 + 40 | 0) >> 2] | 0;
      $29 = HEAP32[($2 + 44 | 0) >> 2] | 0;
      $2 = 0;
-     label$29 : while (1) {
+     while (1) {
       $18 = $19;
       $19 = $20;
       $20 = $21;
@@ -11600,7 +11600,7 @@ function asmFunc(global, env, buffer) {
       $16 = $18;
       $2 = $2 + 1 | 0;
       if (($2 | 0) != ($1 | 0)) {
-       continue label$29
+       continue
       }
       break label$1;
      };
@@ -11631,7 +11631,7 @@ function asmFunc(global, env, buffer) {
      $11 = HEAP32[($2 + 28 | 0) >> 2] | 0;
      $10 = HEAP32[($2 + 32 | 0) >> 2] | 0;
      $2 = 0;
-     label$31 : while (1) {
+     while (1) {
       $21 = $22;
       $22 = $23;
       $23 = $24;
@@ -11647,7 +11647,7 @@ function asmFunc(global, env, buffer) {
       $19 = $21;
       $2 = $2 + 1 | 0;
       if (($2 | 0) != ($1 | 0)) {
-       continue label$31
+       continue
       }
       break label$1;
      };
@@ -11676,7 +11676,7 @@ function asmFunc(global, env, buffer) {
     $9 = HEAP32[($2 + 32 | 0) >> 2] | 0;
     $8 = HEAP32[($2 + 36 | 0) >> 2] | 0;
     $2 = 0;
-    label$32 : while (1) {
+    while (1) {
      $20 = $21;
      $21 = $22;
      $22 = $23;
@@ -11693,7 +11693,7 @@ function asmFunc(global, env, buffer) {
      $18 = $20;
      $2 = $2 + 1 | 0;
      if (($2 | 0) != ($1 | 0)) {
-      continue label$32
+      continue
      }
      break label$1;
     };
@@ -11728,7 +11728,7 @@ function asmFunc(global, env, buffer) {
       $15 = HEAP32[($2 + 20 | 0) >> 2] | 0;
       $14 = HEAP32[($2 + 24 | 0) >> 2] | 0;
       $2 = 0;
-      label$36 : while (1) {
+      while (1) {
        $23 = $24;
        $24 = $25;
        $25 = $26;
@@ -11742,7 +11742,7 @@ function asmFunc(global, env, buffer) {
        $21 = $23;
        $2 = $2 + 1 | 0;
        if (($2 | 0) != ($1 | 0)) {
-        continue label$36
+        continue
        }
        break label$1;
       };
@@ -11767,7 +11767,7 @@ function asmFunc(global, env, buffer) {
      $13 = HEAP32[($2 + 24 | 0) >> 2] | 0;
      $12 = HEAP32[($2 + 28 | 0) >> 2] | 0;
      $2 = 0;
-     label$37 : while (1) {
+     while (1) {
       $22 = $23;
       $23 = $24;
       $24 = $25;
@@ -11782,7 +11782,7 @@ function asmFunc(global, env, buffer) {
       $20 = $22;
       $2 = $2 + 1 | 0;
       if (($2 | 0) != ($1 | 0)) {
-       continue label$37
+       continue
       }
       break label$1;
      };
@@ -11805,7 +11805,7 @@ function asmFunc(global, env, buffer) {
      $19 = HEAP32[($2 + 12 | 0) >> 2] | 0;
      $18 = HEAP32[($2 + 16 | 0) >> 2] | 0;
      $2 = 0;
-     label$39 : while (1) {
+     while (1) {
       $25 = $26;
       $26 = $3;
       $3 = $6;
@@ -11817,7 +11817,7 @@ function asmFunc(global, env, buffer) {
       $23 = $25;
       $2 = $2 + 1 | 0;
       if (($2 | 0) != ($1 | 0)) {
-       continue label$39
+       continue
       }
       break label$1;
      };
@@ -11838,7 +11838,7 @@ function asmFunc(global, env, buffer) {
     $17 = HEAP32[($2 + 16 | 0) >> 2] | 0;
     $16 = HEAP32[($2 + 20 | 0) >> 2] | 0;
     $2 = 0;
-    label$40 : while (1) {
+    while (1) {
      $24 = $25;
      $25 = $26;
      $26 = $3;
@@ -11851,7 +11851,7 @@ function asmFunc(global, env, buffer) {
      $22 = $24;
      $2 = $2 + 1 | 0;
      if (($2 | 0) != ($1 | 0)) {
-      continue label$40
+      continue
      }
      break label$1;
     };
@@ -11874,7 +11874,7 @@ function asmFunc(global, env, buffer) {
      $23 = HEAP32[($2 + 4 | 0) >> 2] | 0;
      $22 = HEAP32[($2 + 8 | 0) >> 2] | 0;
      $2 = 0;
-     label$43 : while (1) {
+     while (1) {
       $3 = $6;
       $6 = $26;
       $26 = $2 << 2 | 0;
@@ -11884,7 +11884,7 @@ function asmFunc(global, env, buffer) {
       $25 = $3;
       $2 = $2 + 1 | 0;
       if (($2 | 0) != ($1 | 0)) {
-       continue label$43
+       continue
       }
       break label$1;
      };
@@ -11901,7 +11901,7 @@ function asmFunc(global, env, buffer) {
     $21 = HEAP32[($2 + 8 | 0) >> 2] | 0;
     $20 = HEAP32[($2 + 12 | 0) >> 2] | 0;
     $2 = 0;
-    label$44 : while (1) {
+    while (1) {
      $26 = $3;
      $3 = $6;
      $6 = $25;
@@ -11912,7 +11912,7 @@ function asmFunc(global, env, buffer) {
      $24 = $26;
      $2 = $2 + 1 | 0;
      if (($2 | 0) != ($1 | 0)) {
-      continue label$44
+      continue
      }
      break label$1;
     };
@@ -11927,7 +11927,7 @@ function asmFunc(global, env, buffer) {
     $6 = HEAP32[($0 + -4 | 0) >> 2] | 0;
     $26 = HEAP32[$2 >> 2] | 0;
     $2 = 0;
-    label$46 : while (1) {
+    while (1) {
      $3 = Math_imul($6, $26);
      $6 = $2 << 2 | 0;
      $1334 = $5 + $6 | 0;
@@ -11935,7 +11935,7 @@ function asmFunc(global, env, buffer) {
      HEAP32[$1334 >> 2] = $6 - ($3 >> $4 | 0) | 0;
      $2 = $2 + 1 | 0;
      if (($2 | 0) != ($1 | 0)) {
-      continue label$46
+      continue
      }
      break label$1;
     };
@@ -11948,7 +11948,7 @@ function asmFunc(global, env, buffer) {
    $25 = HEAP32[$2 >> 2] | 0;
    $24 = HEAP32[($2 + 4 | 0) >> 2] | 0;
    $2 = 0;
-   label$47 : while (1) {
+   while (1) {
     $6 = $3;
     $3 = $2 << 2 | 0;
     $1366 = $5 + $3 | 0;
@@ -11957,9 +11957,9 @@ function asmFunc(global, env, buffer) {
     $26 = $6;
     $2 = $2 + 1 | 0;
     if (($2 | 0) != ($1 | 0)) {
-     continue label$47
+     continue
     }
-    break label$47;
+    break;
    };
   }
  }
@@ -11985,7 +11985,7 @@ function asmFunc(global, env, buffer) {
     $18$hi = i64toi32_i32$0;
     $6 = 0;
     $7 = $3 + -13 | 0;
-    label$3 : while (1) {
+    while (1) {
      i64toi32_i32$0 = 0;
      $19 = 0;
      $19$hi = i64toi32_i32$0;
@@ -12878,7 +12878,7 @@ function asmFunc(global, env, buffer) {
      HEAP32[$347 >> 2] = $351 - $558 | 0;
      $6 = $6 + 1 | 0;
      if (($6 | 0) != ($1 | 0)) {
-      continue label$3
+      continue
      }
      break label$1;
     };
@@ -12958,7 +12958,7 @@ function asmFunc(global, env, buffer) {
       $29 = i64toi32_i32$2;
       $29$hi = i64toi32_i32$0;
       $2 = 0;
-      label$28 : while (1) {
+      while (1) {
        $16 = $14;
        $14 = $13;
        $13 = $12;
@@ -13200,7 +13200,7 @@ function asmFunc(global, env, buffer) {
        $15 = $16;
        $2 = $2 + 1 | 0;
        if (($2 | 0) != ($1 | 0)) {
-        continue label$28
+        continue
        }
        break label$1;
       };
@@ -13273,7 +13273,7 @@ function asmFunc(global, env, buffer) {
      $30 = i64toi32_i32$5;
      $30$hi = i64toi32_i32$2;
      $2 = 0;
-     label$29 : while (1) {
+     while (1) {
       $8 = $16;
       $16 = $14;
       $14 = $13;
@@ -13536,7 +13536,7 @@ function asmFunc(global, env, buffer) {
       $17 = $8;
       $2 = $2 + 1 | 0;
       if (($2 | 0) != ($1 | 0)) {
-       continue label$29
+       continue
       }
       break label$1;
      };
@@ -13598,7 +13598,7 @@ function asmFunc(global, env, buffer) {
      $27 = i64toi32_i32$0;
      $27$hi = i64toi32_i32$2;
      $2 = 0;
-     label$31 : while (1) {
+     while (1) {
       $13 = $12;
       $12 = $11;
       $11 = $10;
@@ -13798,7 +13798,7 @@ function asmFunc(global, env, buffer) {
       $16 = $13;
       $2 = $2 + 1 | 0;
       if (($2 | 0) != ($1 | 0)) {
-       continue label$31
+       continue
       }
       break label$1;
      };
@@ -13861,7 +13861,7 @@ function asmFunc(global, env, buffer) {
     $28 = i64toi32_i32$5;
     $28$hi = i64toi32_i32$1;
     $2 = 0;
-    label$32 : while (1) {
+    while (1) {
      $14 = $13;
      $13 = $12;
      $12 = $11;
@@ -14082,7 +14082,7 @@ function asmFunc(global, env, buffer) {
      $8 = $14;
      $2 = $2 + 1 | 0;
      if (($2 | 0) != ($1 | 0)) {
-      continue label$32
+      continue
      }
      break label$1;
     };
@@ -14142,7 +14142,7 @@ function asmFunc(global, env, buffer) {
       $25 = i64toi32_i32$2;
       $25$hi = i64toi32_i32$5;
       $2 = 0;
-      label$36 : while (1) {
+      while (1) {
        $11 = $10;
        $10 = $9;
        $9 = $7;
@@ -14300,7 +14300,7 @@ function asmFunc(global, env, buffer) {
        $13 = $11;
        $2 = $2 + 1 | 0;
        if (($2 | 0) != ($1 | 0)) {
-        continue label$36
+        continue
        }
        break label$1;
       };
@@ -14353,7 +14353,7 @@ function asmFunc(global, env, buffer) {
      $26 = i64toi32_i32$5;
      $26$hi = i64toi32_i32$0;
      $2 = 0;
-     label$37 : while (1) {
+     while (1) {
       $12 = $11;
       $11 = $10;
       $10 = $9;
@@ -14532,7 +14532,7 @@ function asmFunc(global, env, buffer) {
       $14 = $12;
       $2 = $2 + 1 | 0;
       if (($2 | 0) != ($1 | 0)) {
-       continue label$37
+       continue
       }
       break label$1;
      };
@@ -14574,7 +14574,7 @@ function asmFunc(global, env, buffer) {
      $23 = i64toi32_i32$0;
      $23$hi = i64toi32_i32$4;
      $2 = 0;
-     label$39 : while (1) {
+     while (1) {
       $9 = $7;
       $7 = $3;
       $3 = $6;
@@ -14690,7 +14690,7 @@ function asmFunc(global, env, buffer) {
       $11 = $9;
       $2 = $2 + 1 | 0;
       if (($2 | 0) != ($1 | 0)) {
-       continue label$39
+       continue
       }
       break label$1;
      };
@@ -14733,7 +14733,7 @@ function asmFunc(global, env, buffer) {
     $24 = i64toi32_i32$0;
     $24$hi = i64toi32_i32$1;
     $2 = 0;
-    label$40 : while (1) {
+    while (1) {
      $10 = $9;
      $9 = $7;
      $7 = $3;
@@ -14870,7 +14870,7 @@ function asmFunc(global, env, buffer) {
      $12 = $10;
      $2 = $2 + 1 | 0;
      if (($2 | 0) != ($1 | 0)) {
-      continue label$40
+      continue
      }
      break label$1;
     };
@@ -14906,7 +14906,7 @@ function asmFunc(global, env, buffer) {
      $21 = i64toi32_i32$0;
      $21$hi = i64toi32_i32$2;
      $2 = 0;
-     label$43 : while (1) {
+     while (1) {
       $3 = $6;
       $6 = $7;
       $7 = $2 << 2 | 0;
@@ -14980,7 +14980,7 @@ function asmFunc(global, env, buffer) {
       $9 = $3;
       $2 = $2 + 1 | 0;
       if (($2 | 0) != ($1 | 0)) {
-       continue label$43
+       continue
       }
       break label$1;
      };
@@ -15013,7 +15013,7 @@ function asmFunc(global, env, buffer) {
     $22 = i64toi32_i32$4;
     $22$hi = i64toi32_i32$2;
     $2 = 0;
-    label$44 : while (1) {
+    while (1) {
      $7 = $3;
      $3 = $6;
      $6 = $9;
@@ -15108,7 +15108,7 @@ function asmFunc(global, env, buffer) {
      $10 = $7;
      $2 = $2 + 1 | 0;
      if (($2 | 0) != ($1 | 0)) {
-      continue label$44
+      continue
      }
      break label$1;
     };
@@ -15130,7 +15130,7 @@ function asmFunc(global, env, buffer) {
     $18 = i64toi32_i32$0;
     $18$hi = i64toi32_i32$1;
     $2 = 0;
-    label$46 : while (1) {
+    while (1) {
      $3 = $2 << 2 | 0;
      $1442 = $5 + $3 | 0;
      $3 = HEAP32[($0 + $3 | 0) >> 2] | 0;
@@ -15161,7 +15161,7 @@ function asmFunc(global, env, buffer) {
      $6 = $3;
      $2 = $2 + 1 | 0;
      if (($2 | 0) != ($1 | 0)) {
-      continue label$46
+      continue
      }
      break label$1;
     };
@@ -15184,7 +15184,7 @@ function asmFunc(global, env, buffer) {
    $20 = i64toi32_i32$4;
    $20$hi = i64toi32_i32$0;
    $2 = 0;
-   label$47 : while (1) {
+   while (1) {
     $6 = $3;
     $3 = $2 << 2 | 0;
     $1481 = $5 + $3 | 0;
@@ -15237,9 +15237,9 @@ function asmFunc(global, env, buffer) {
     $7 = $6;
     $2 = $2 + 1 | 0;
     if (($2 | 0) != ($1 | 0)) {
-     continue label$47
+     continue
     }
-    break label$47;
+    break;
    };
   }
  }
@@ -15262,7 +15262,7 @@ function asmFunc(global, env, buffer) {
     }
     $6 = 0;
     $7 = $3 + -13 | 0;
-    label$3 : while (1) {
+    while (1) {
      $8 = 0;
      $9 = 0;
      $10 = 0;
@@ -15335,7 +15335,7 @@ function asmFunc(global, env, buffer) {
      HEAP32[($5 + $26 | 0) >> 2] = (HEAP32[($0 + $26 | 0) >> 2] | 0) + ($3 >> $4 | 0) | 0;
      $6 = $6 + 1 | 0;
      if (($6 | 0) != ($1 | 0)) {
-      continue label$3
+      continue
      }
      break label$1;
     };
@@ -15378,7 +15378,7 @@ function asmFunc(global, env, buffer) {
       $27 = HEAP32[($2 + 36 | 0) >> 2] | 0;
       $28 = HEAP32[($2 + 40 | 0) >> 2] | 0;
       $2 = 0;
-      label$28 : while (1) {
+      while (1) {
        $17 = $2 << 2 | 0;
        $16 = $19;
        $19 = $20;
@@ -15395,7 +15395,7 @@ function asmFunc(global, env, buffer) {
        $18 = $16;
        $2 = $2 + 1 | 0;
        if (($2 | 0) != ($1 | 0)) {
-        continue label$28
+        continue
        }
        break label$1;
       };
@@ -15428,7 +15428,7 @@ function asmFunc(global, env, buffer) {
      $29 = HEAP32[($2 + 40 | 0) >> 2] | 0;
      $30 = HEAP32[($2 + 44 | 0) >> 2] | 0;
      $2 = 0;
-     label$29 : while (1) {
+     while (1) {
       $16 = $2 << 2 | 0;
       $15 = $18;
       $18 = $19;
@@ -15446,7 +15446,7 @@ function asmFunc(global, env, buffer) {
       $17 = $15;
       $2 = $2 + 1 | 0;
       if (($2 | 0) != ($1 | 0)) {
-       continue label$29
+       continue
       }
       break label$1;
      };
@@ -15477,7 +15477,7 @@ function asmFunc(global, env, buffer) {
      $10 = HEAP32[($2 + 28 | 0) >> 2] | 0;
      $9 = HEAP32[($2 + 32 | 0) >> 2] | 0;
      $2 = 0;
-     label$31 : while (1) {
+     while (1) {
       $19 = $2 << 2 | 0;
       $18 = $21;
       $21 = $22;
@@ -15492,7 +15492,7 @@ function asmFunc(global, env, buffer) {
       $20 = $18;
       $2 = $2 + 1 | 0;
       if (($2 | 0) != ($1 | 0)) {
-       continue label$31
+       continue
       }
       break label$1;
      };
@@ -15521,7 +15521,7 @@ function asmFunc(global, env, buffer) {
     $8 = HEAP32[($2 + 32 | 0) >> 2] | 0;
     $7 = HEAP32[($2 + 36 | 0) >> 2] | 0;
     $2 = 0;
-    label$32 : while (1) {
+    while (1) {
      $18 = $2 << 2 | 0;
      $17 = $20;
      $20 = $21;
@@ -15537,7 +15537,7 @@ function asmFunc(global, env, buffer) {
      $19 = $17;
      $2 = $2 + 1 | 0;
      if (($2 | 0) != ($1 | 0)) {
-      continue label$32
+      continue
      }
      break label$1;
     };
@@ -15572,7 +15572,7 @@ function asmFunc(global, env, buffer) {
       $14 = HEAP32[($2 + 20 | 0) >> 2] | 0;
       $13 = HEAP32[($2 + 24 | 0) >> 2] | 0;
       $2 = 0;
-      label$36 : while (1) {
+      while (1) {
        $21 = $2 << 2 | 0;
        $20 = $23;
        $23 = $24;
@@ -15585,7 +15585,7 @@ function asmFunc(global, env, buffer) {
        $22 = $20;
        $2 = $2 + 1 | 0;
        if (($2 | 0) != ($1 | 0)) {
-        continue label$36
+        continue
        }
        break label$1;
       };
@@ -15610,7 +15610,7 @@ function asmFunc(global, env, buffer) {
      $12 = HEAP32[($2 + 24 | 0) >> 2] | 0;
      $11 = HEAP32[($2 + 28 | 0) >> 2] | 0;
      $2 = 0;
-     label$37 : while (1) {
+     while (1) {
       $20 = $2 << 2 | 0;
       $19 = $22;
       $22 = $23;
@@ -15624,7 +15624,7 @@ function asmFunc(global, env, buffer) {
       $21 = $19;
       $2 = $2 + 1 | 0;
       if (($2 | 0) != ($1 | 0)) {
-       continue label$37
+       continue
       }
       break label$1;
      };
@@ -15647,7 +15647,7 @@ function asmFunc(global, env, buffer) {
      $18 = HEAP32[($2 + 12 | 0) >> 2] | 0;
      $17 = HEAP32[($2 + 16 | 0) >> 2] | 0;
      $2 = 0;
-     label$39 : while (1) {
+     while (1) {
       $23 = $2 << 2 | 0;
       $22 = $25;
       $25 = $26;
@@ -15658,7 +15658,7 @@ function asmFunc(global, env, buffer) {
       $24 = $22;
       $2 = $2 + 1 | 0;
       if (($2 | 0) != ($1 | 0)) {
-       continue label$39
+       continue
       }
       break label$1;
      };
@@ -15679,7 +15679,7 @@ function asmFunc(global, env, buffer) {
     $16 = HEAP32[($2 + 16 | 0) >> 2] | 0;
     $15 = HEAP32[($2 + 20 | 0) >> 2] | 0;
     $2 = 0;
-    label$40 : while (1) {
+    while (1) {
      $22 = $2 << 2 | 0;
      $21 = $24;
      $24 = $25;
@@ -15691,7 +15691,7 @@ function asmFunc(global, env, buffer) {
      $23 = $21;
      $2 = $2 + 1 | 0;
      if (($2 | 0) != ($1 | 0)) {
-      continue label$40
+      continue
      }
      break label$1;
     };
@@ -15714,7 +15714,7 @@ function asmFunc(global, env, buffer) {
      $22 = HEAP32[($2 + 4 | 0) >> 2] | 0;
      $21 = HEAP32[($2 + 8 | 0) >> 2] | 0;
      $2 = 0;
-     label$43 : while (1) {
+     while (1) {
       $25 = $2 << 2 | 0;
       $24 = $3;
       $3 = $6;
@@ -15723,7 +15723,7 @@ function asmFunc(global, env, buffer) {
       $26 = $24;
       $2 = $2 + 1 | 0;
       if (($2 | 0) != ($1 | 0)) {
-       continue label$43
+       continue
       }
       break label$1;
      };
@@ -15740,7 +15740,7 @@ function asmFunc(global, env, buffer) {
     $20 = HEAP32[($2 + 8 | 0) >> 2] | 0;
     $19 = HEAP32[($2 + 12 | 0) >> 2] | 0;
     $2 = 0;
-    label$44 : while (1) {
+    while (1) {
      $24 = $2 << 2 | 0;
      $23 = $26;
      $26 = $3;
@@ -15750,7 +15750,7 @@ function asmFunc(global, env, buffer) {
      $25 = $23;
      $2 = $2 + 1 | 0;
      if (($2 | 0) != ($1 | 0)) {
-      continue label$44
+      continue
      }
      break label$1;
     };
@@ -15765,13 +15765,13 @@ function asmFunc(global, env, buffer) {
     $6 = HEAP32[($5 + -4 | 0) >> 2] | 0;
     $26 = HEAP32[$2 >> 2] | 0;
     $2 = 0;
-    label$46 : while (1) {
+    while (1) {
      $3 = $2 << 2 | 0;
      $6 = (Math_imul($6, $26) >> $4 | 0) + (HEAP32[($0 + $3 | 0) >> 2] | 0) | 0;
      HEAP32[($5 + $3 | 0) >> 2] = $6;
      $2 = $2 + 1 | 0;
      if (($2 | 0) != ($1 | 0)) {
-      continue label$46
+      continue
      }
      break label$1;
     };
@@ -15784,7 +15784,7 @@ function asmFunc(global, env, buffer) {
    $24 = HEAP32[$2 >> 2] | 0;
    $23 = HEAP32[($2 + 4 | 0) >> 2] | 0;
    $2 = 0;
-   label$47 : while (1) {
+   while (1) {
     $26 = $2 << 2 | 0;
     $25 = $6;
     $6 = ((Math_imul($6, $24) + Math_imul($3, $23) | 0) >> $4 | 0) + (HEAP32[($0 + $26 | 0) >> 2] | 0) | 0;
@@ -15792,9 +15792,9 @@ function asmFunc(global, env, buffer) {
     $3 = $25;
     $2 = $2 + 1 | 0;
     if (($2 | 0) != ($1 | 0)) {
-     continue label$47
+     continue
     }
-    break label$47;
+    break;
    };
   }
  }
@@ -15820,7 +15820,7 @@ function asmFunc(global, env, buffer) {
     $17$hi = i64toi32_i32$0;
     $6 = 0;
     $7 = $3 + -13 | 0;
-    label$3 : while (1) {
+    while (1) {
      i64toi32_i32$0 = 0;
      $18 = 0;
      $18$hi = i64toi32_i32$0;
@@ -16713,7 +16713,7 @@ function asmFunc(global, env, buffer) {
      HEAP32[$346 >> 2] = $350 + $557 | 0;
      $6 = $6 + 1 | 0;
      if (($6 | 0) != ($1 | 0)) {
-      continue label$3
+      continue
      }
      break label$1;
     };
@@ -16793,7 +16793,7 @@ function asmFunc(global, env, buffer) {
       $28 = i64toi32_i32$2;
       $28$hi = i64toi32_i32$0;
       $2 = 0;
-      label$28 : while (1) {
+      while (1) {
        $16 = $2 << 2 | 0;
        $430 = $5 + $16 | 0;
        $434 = HEAP32[($0 + $16 | 0) >> 2] | 0;
@@ -17035,7 +17035,7 @@ function asmFunc(global, env, buffer) {
        $15 = $16;
        $2 = $2 + 1 | 0;
        if (($2 | 0) != ($1 | 0)) {
-        continue label$28
+        continue
        }
        break label$1;
       };
@@ -17108,7 +17108,7 @@ function asmFunc(global, env, buffer) {
      $29 = i64toi32_i32$5;
      $29$hi = i64toi32_i32$2;
      $2 = 0;
-     label$29 : while (1) {
+     while (1) {
       $4 = $2 << 2 | 0;
       $578 = $5 + $4 | 0;
       $582 = HEAP32[($0 + $4 | 0) >> 2] | 0;
@@ -17371,7 +17371,7 @@ function asmFunc(global, env, buffer) {
       $16 = $4;
       $2 = $2 + 1 | 0;
       if (($2 | 0) != ($1 | 0)) {
-       continue label$29
+       continue
       }
       break label$1;
      };
@@ -17433,7 +17433,7 @@ function asmFunc(global, env, buffer) {
      $26 = i64toi32_i32$0;
      $26$hi = i64toi32_i32$2;
      $2 = 0;
-     label$31 : while (1) {
+     while (1) {
       $14 = $2 << 2 | 0;
       $719 = $5 + $14 | 0;
       $723 = HEAP32[($0 + $14 | 0) >> 2] | 0;
@@ -17633,7 +17633,7 @@ function asmFunc(global, env, buffer) {
       $13 = $14;
       $2 = $2 + 1 | 0;
       if (($2 | 0) != ($1 | 0)) {
-       continue label$31
+       continue
       }
       break label$1;
      };
@@ -17696,7 +17696,7 @@ function asmFunc(global, env, buffer) {
     $27 = i64toi32_i32$5;
     $27$hi = i64toi32_i32$1;
     $2 = 0;
-    label$32 : while (1) {
+    while (1) {
      $15 = $2 << 2 | 0;
      $845 = $5 + $15 | 0;
      $849 = HEAP32[($0 + $15 | 0) >> 2] | 0;
@@ -17917,7 +17917,7 @@ function asmFunc(global, env, buffer) {
      $14 = $15;
      $2 = $2 + 1 | 0;
      if (($2 | 0) != ($1 | 0)) {
-      continue label$32
+      continue
      }
      break label$1;
     };
@@ -17977,7 +17977,7 @@ function asmFunc(global, env, buffer) {
       $24 = i64toi32_i32$2;
       $24$hi = i64toi32_i32$5;
       $2 = 0;
-      label$36 : while (1) {
+      while (1) {
        $12 = $2 << 2 | 0;
        $968 = $5 + $12 | 0;
        $972 = HEAP32[($0 + $12 | 0) >> 2] | 0;
@@ -18135,7 +18135,7 @@ function asmFunc(global, env, buffer) {
        $11 = $12;
        $2 = $2 + 1 | 0;
        if (($2 | 0) != ($1 | 0)) {
-        continue label$36
+        continue
        }
        break label$1;
       };
@@ -18188,7 +18188,7 @@ function asmFunc(global, env, buffer) {
      $25 = i64toi32_i32$5;
      $25$hi = i64toi32_i32$0;
      $2 = 0;
-     label$37 : while (1) {
+     while (1) {
       $13 = $2 << 2 | 0;
       $1072 = $5 + $13 | 0;
       $1076 = HEAP32[($0 + $13 | 0) >> 2] | 0;
@@ -18367,7 +18367,7 @@ function asmFunc(global, env, buffer) {
       $12 = $13;
       $2 = $2 + 1 | 0;
       if (($2 | 0) != ($1 | 0)) {
-       continue label$37
+       continue
       }
       break label$1;
      };
@@ -18409,7 +18409,7 @@ function asmFunc(global, env, buffer) {
      $22 = i64toi32_i32$0;
      $22$hi = i64toi32_i32$4;
      $2 = 0;
-     label$39 : while (1) {
+     while (1) {
       $10 = $2 << 2 | 0;
       $1169 = $5 + $10 | 0;
       $1173 = HEAP32[($0 + $10 | 0) >> 2] | 0;
@@ -18525,7 +18525,7 @@ function asmFunc(global, env, buffer) {
       $9 = $10;
       $2 = $2 + 1 | 0;
       if (($2 | 0) != ($1 | 0)) {
-       continue label$39
+       continue
       }
       break label$1;
      };
@@ -18568,7 +18568,7 @@ function asmFunc(global, env, buffer) {
     $23 = i64toi32_i32$0;
     $23$hi = i64toi32_i32$1;
     $2 = 0;
-    label$40 : while (1) {
+    while (1) {
      $11 = $2 << 2 | 0;
      $1251 = $5 + $11 | 0;
      $1255 = HEAP32[($0 + $11 | 0) >> 2] | 0;
@@ -18705,7 +18705,7 @@ function asmFunc(global, env, buffer) {
      $10 = $11;
      $2 = $2 + 1 | 0;
      if (($2 | 0) != ($1 | 0)) {
-      continue label$40
+      continue
      }
      break label$1;
     };
@@ -18741,7 +18741,7 @@ function asmFunc(global, env, buffer) {
      $20 = i64toi32_i32$0;
      $20$hi = i64toi32_i32$2;
      $2 = 0;
-     label$43 : while (1) {
+     while (1) {
       $8 = $2 << 2 | 0;
       $1328 = $5 + $8 | 0;
       $1332 = HEAP32[($0 + $8 | 0) >> 2] | 0;
@@ -18815,7 +18815,7 @@ function asmFunc(global, env, buffer) {
       $7 = $8;
       $2 = $2 + 1 | 0;
       if (($2 | 0) != ($1 | 0)) {
-       continue label$43
+       continue
       }
       break label$1;
      };
@@ -18848,7 +18848,7 @@ function asmFunc(global, env, buffer) {
     $21 = i64toi32_i32$4;
     $21$hi = i64toi32_i32$2;
     $2 = 0;
-    label$44 : while (1) {
+    while (1) {
      $9 = $2 << 2 | 0;
      $1388 = $5 + $9 | 0;
      $1392 = HEAP32[($0 + $9 | 0) >> 2] | 0;
@@ -18943,7 +18943,7 @@ function asmFunc(global, env, buffer) {
      $8 = $9;
      $2 = $2 + 1 | 0;
      if (($2 | 0) != ($1 | 0)) {
-      continue label$44
+      continue
      }
      break label$1;
     };
@@ -18965,7 +18965,7 @@ function asmFunc(global, env, buffer) {
     $17 = i64toi32_i32$0;
     $17$hi = i64toi32_i32$1;
     $2 = 0;
-    label$46 : while (1) {
+    while (1) {
      $3 = $2 << 2 | 0;
      $1441 = $5 + $3 | 0;
      $1445 = HEAP32[($0 + $3 | 0) >> 2] | 0;
@@ -18995,7 +18995,7 @@ function asmFunc(global, env, buffer) {
      HEAP32[$1441 >> 2] = $6;
      $2 = $2 + 1 | 0;
      if (($2 | 0) != ($1 | 0)) {
-      continue label$46
+      continue
      }
      break label$1;
     };
@@ -19018,7 +19018,7 @@ function asmFunc(global, env, buffer) {
    $19 = i64toi32_i32$4;
    $19$hi = i64toi32_i32$0;
    $2 = 0;
-   label$47 : while (1) {
+   while (1) {
     $7 = $2 << 2 | 0;
     $1478 = $5 + $7 | 0;
     $1482 = HEAP32[($0 + $7 | 0) >> 2] | 0;
@@ -19071,9 +19071,9 @@ function asmFunc(global, env, buffer) {
     $3 = $7;
     $2 = $2 + 1 | 0;
     if (($2 | 0) != ($1 | 0)) {
-     continue label$47
+     continue
     }
-    break label$47;
+    break;
    };
   }
  }
@@ -19106,7 +19106,7 @@ function asmFunc(global, env, buffer) {
    $5 = 0;
    $9 = 4294967295.0;
    $6 = 0;
-   label$2 : while (1) {
+   while (1) {
     label$3 : {
      label$4 : {
       $10 = +HEAPF64[($0 + ($5 << 3 | 0) | 0) >> 3];
@@ -19126,9 +19126,9 @@ function asmFunc(global, env, buffer) {
     $4 = $4 + 1 | 0;
     $5 = $5 + 1 | 0;
     if (($5 | 0) != ($1 | 0)) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
    $4 = $6 + 1 | 0;
   }
@@ -19151,7 +19151,7 @@ function asmFunc(global, env, buffer) {
      return $0 - $0 | 0 | 0;
     }
     $1 = $0;
-    label$4 : while (1) {
+    while (1) {
      $1 = $1 + 1 | 0;
      if (!($1 & 3 | 0)) {
       break label$2
@@ -19159,17 +19159,17 @@ function asmFunc(global, env, buffer) {
      if (!(HEAPU8[$1 >> 0] | 0)) {
       break label$1
      }
-     continue label$4;
+     continue;
     };
    }
-   label$5 : while (1) {
+   while (1) {
     $2 = $1;
     $1 = $1 + 4 | 0;
     $3 = HEAP32[$2 >> 2] | 0;
     if (!((($3 ^ -1 | 0) & ($3 + -16843009 | 0) | 0) & -2139062144 | 0)) {
-     continue label$5
+     continue
     }
-    break label$5;
+    break;
    };
    label$6 : {
     if ($3 & 255 | 0) {
@@ -19177,14 +19177,14 @@ function asmFunc(global, env, buffer) {
     }
     return $2 - $0 | 0 | 0;
    }
-   label$7 : while (1) {
+   while (1) {
     $3 = HEAPU8[($2 + 1 | 0) >> 0] | 0;
     $1 = $2 + 1 | 0;
     $2 = $1;
     if ($3) {
-     continue label$7
+     continue
     }
-    break label$7;
+    break;
    };
   }
   return $1 - $0 | 0 | 0;
@@ -19204,7 +19204,7 @@ function asmFunc(global, env, buffer) {
      if (!($0 & 3 | 0)) {
       break label$3
      }
-     label$4 : while (1) {
+     while (1) {
       $3 = HEAPU8[$0 >> 0] | 0;
       if (!$3) {
        break label$1
@@ -19214,9 +19214,9 @@ function asmFunc(global, env, buffer) {
       }
       $0 = $0 + 1 | 0;
       if ($0 & 3 | 0) {
-       continue label$4
+       continue
       }
-      break label$4;
+      break;
      };
     }
     label$5 : {
@@ -19225,7 +19225,7 @@ function asmFunc(global, env, buffer) {
       break label$5
      }
      $2 = Math_imul($2, 16843009);
-     label$6 : while (1) {
+     while (1) {
       $3 = $3 ^ $2 | 0;
       if ((($3 ^ -1 | 0) & ($3 + -16843009 | 0) | 0) & -2139062144 | 0) {
        break label$5
@@ -19233,13 +19233,13 @@ function asmFunc(global, env, buffer) {
       $3 = HEAP32[($0 + 4 | 0) >> 2] | 0;
       $0 = $0 + 4 | 0;
       if (!((($3 ^ -1 | 0) & ($3 + -16843009 | 0) | 0) & -2139062144 | 0)) {
-       continue label$6
+       continue
       }
-      break label$6;
+      break;
      };
     }
     label$7 : {
-     label$8 : while (1) {
+     while (1) {
       $3 = $0;
       $2 = HEAPU8[$3 >> 0] | 0;
       if (!$2) {
@@ -19247,9 +19247,9 @@ function asmFunc(global, env, buffer) {
       }
       $0 = $3 + 1 | 0;
       if (($2 | 0) != ($1 & 255 | 0 | 0)) {
-       continue label$8
+       continue
       }
-      break label$8;
+      break;
      };
     }
     return $3 | 0;
@@ -19271,7 +19271,7 @@ function asmFunc(global, env, buffer) {
   $1 = $1 | 0;
   $2 = $2 | 0;
   var $3 = 0, $4 = 0, $5 = 0, $8 = 0, $9 = 0, $6 = 0, $7 = 0, $11 = 0, $10 = 0;
-  label$1 : {
+  {
    $3 = global$0 - 32 | 0;
    $10 = $3;
    if ($3 >>> 0 < global$86 >>> 0) {
@@ -19296,7 +19296,7 @@ function asmFunc(global, env, buffer) {
       if (__wasi_syscall_ret(__wasi_fd_write(HEAP32[($0 + 60 | 0) >> 2] | 0 | 0, $3 + 16 | 0 | 0, 2 | 0, $3 + 12 | 0 | 0) | 0 | 0) | 0) {
        break label$6
       }
-      label$7 : while (1) {
+      while (1) {
        $4 = HEAP32[($3 + 12 | 0) >> 2] | 0;
        if (($6 | 0) == ($4 | 0)) {
         break label$5
@@ -19315,9 +19315,9 @@ function asmFunc(global, env, buffer) {
        $1 = $5 ? $1 + 8 | 0 : $1;
        $7 = $7 - $5 | 0;
        if (!(__wasi_syscall_ret(__wasi_fd_write(HEAP32[($0 + 60 | 0) >> 2] | 0 | 0, $1 | 0, $7 | 0, $3 + 12 | 0 | 0) | 0 | 0) | 0)) {
-        continue label$7
+        continue
        }
-       break label$7;
+       break;
       };
      }
      HEAP32[($3 + 12 | 0) >> 2] = -1;
@@ -19342,7 +19342,7 @@ function asmFunc(global, env, buffer) {
    }
    $4 = $2 - (HEAP32[($1 + 4 | 0) >> 2] | 0) | 0;
   }
-  label$8 : {
+  {
    $11 = $3 + 32 | 0;
    if ($11 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -19535,7 +19535,7 @@ function asmFunc(global, env, buffer) {
    $6 = 0;
    $5 = 0;
    $4 = 0;
-   label$2 : while (1) {
+   while (1) {
     $10 = HEAP32[($0 + ($15 << 2 | 0) | 0) >> 2] | 0;
     $9 = $10 >> 31 | 0;
     $4 = (($10 + $9 | 0) ^ $9 | 0) + $4 | 0;
@@ -19558,9 +19558,9 @@ function asmFunc(global, env, buffer) {
     $13 = $16;
     $15 = $15 + 1 | 0;
     if (($15 | 0) != ($1 | 0)) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
   }
   label$3 : {
@@ -19669,7 +19669,7 @@ function asmFunc(global, env, buffer) {
    i64toi32_i32$0 = 0;
    $11 = 0;
    $11$hi = i64toi32_i32$0;
-   label$3 : while (1) {
+   while (1) {
     i64toi32_i32$0 = $11$hi;
     $4 = HEAP32[($0 + ($9 << 2 | 0) | 0) >> 2] | 0;
     $3 = $4 >> 31 | 0;
@@ -19757,9 +19757,9 @@ function asmFunc(global, env, buffer) {
     $7 = $10;
     $9 = $9 + 1 | 0;
     if (($9 | 0) != ($1 | 0)) {
-     continue label$3
+     continue
     }
-    break label$3;
+    break;
    };
   }
   $4 = 0;
@@ -19954,14 +19954,14 @@ function asmFunc(global, env, buffer) {
       if (($1 | 0) <= (0 | 0)) {
        break label$2
       }
-      label$7 : while (1) {
+      while (1) {
        $2 = $4 << 2 | 0;
        $12 = $3 + $2 | 0;
        $2 = $0 + $2 | 0;
        HEAP32[$12 >> 2] = ((Math_imul(HEAP32[($2 + -8 | 0) >> 2] | 0, 6) + (HEAP32[$2 >> 2] | 0) | 0) + (HEAP32[($2 + -16 | 0) >> 2] | 0) | 0) - (((HEAP32[($2 + -12 | 0) >> 2] | 0) + (HEAP32[($2 + -4 | 0) >> 2] | 0) | 0) << 2 | 0) | 0;
        $4 = $4 + 1 | 0;
        if (($4 | 0) != ($1 | 0)) {
-        continue label$7
+        continue
        }
        break label$2;
       };
@@ -19970,14 +19970,14 @@ function asmFunc(global, env, buffer) {
       if (($1 | 0) <= (0 | 0)) {
        break label$2
       }
-      label$8 : while (1) {
+      while (1) {
        $2 = $4 << 2 | 0;
        $47 = $3 + $2 | 0;
        $2 = $0 + $2 | 0;
        HEAP32[$47 >> 2] = ((HEAP32[$2 >> 2] | 0) - (HEAP32[($2 + -12 | 0) >> 2] | 0) | 0) + Math_imul((HEAP32[($2 + -8 | 0) >> 2] | 0) - (HEAP32[($2 + -4 | 0) >> 2] | 0) | 0, 3) | 0;
        $4 = $4 + 1 | 0;
        if (($4 | 0) != ($1 | 0)) {
-        continue label$8
+        continue
        }
        break label$2;
       };
@@ -19986,14 +19986,14 @@ function asmFunc(global, env, buffer) {
       if (($1 | 0) <= (0 | 0)) {
        break label$2
       }
-      label$9 : while (1) {
+      while (1) {
        $4 = $2 << 2 | 0;
        $77 = $3 + $4 | 0;
        $4 = $0 + $4 | 0;
        HEAP32[$77 >> 2] = ((HEAP32[$4 >> 2] | 0) - ((HEAP32[($4 + -4 | 0) >> 2] | 0) << 1 | 0) | 0) + (HEAP32[($4 + -8 | 0) >> 2] | 0) | 0;
        $2 = $2 + 1 | 0;
        if (($2 | 0) != ($1 | 0)) {
-        continue label$9
+        continue
        }
        break label$2;
       };
@@ -20009,16 +20009,16 @@ function asmFunc(global, env, buffer) {
     if (($1 | 0) <= (0 | 0)) {
      break label$2
     }
-    label$10 : while (1) {
+    while (1) {
      $4 = $2 << 2 | 0;
      $103 = $3 + $4 | 0;
      $4 = $0 + $4 | 0;
      HEAP32[$103 >> 2] = (HEAP32[$4 >> 2] | 0) - (HEAP32[($4 + -4 | 0) >> 2] | 0) | 0;
      $2 = $2 + 1 | 0;
      if (($2 | 0) != ($1 | 0)) {
-      continue label$10
+      continue
      }
-     break label$10;
+     break;
     };
    }
    return;
@@ -20043,7 +20043,7 @@ function asmFunc(global, env, buffer) {
       $4 = HEAP32[($3 + -12 | 0) >> 2] | 0;
       $5 = HEAP32[($3 + -4 | 0) >> 2] | 0;
       $2 = 0;
-      label$7 : while (1) {
+      while (1) {
        $6 = $2 << 2 | 0;
        $7 = $3 + $6 | 0;
        $8 = HEAP32[($7 + -8 | 0) >> 2] | 0;
@@ -20052,7 +20052,7 @@ function asmFunc(global, env, buffer) {
        $4 = $8;
        $2 = $2 + 1 | 0;
        if (($2 | 0) != ($1 | 0)) {
-        continue label$7
+        continue
        }
        break label$2;
       };
@@ -20063,7 +20063,7 @@ function asmFunc(global, env, buffer) {
       $7 = HEAP32[($3 + -12 | 0) >> 2] | 0;
       $4 = HEAP32[($3 + -4 | 0) >> 2] | 0;
       $2 = 0;
-      label$8 : while (1) {
+      while (1) {
        $5 = $2 << 2 | 0;
        $6 = $3 + $5 | 0;
        $69 = $7 + (HEAP32[($0 + $5 | 0) >> 2] | 0) | 0;
@@ -20072,7 +20072,7 @@ function asmFunc(global, env, buffer) {
        HEAP32[$6 >> 2] = $4;
        $2 = $2 + 1 | 0;
        if (($2 | 0) != ($1 | 0)) {
-        continue label$8
+        continue
        }
        break label$2;
       };
@@ -20082,14 +20082,14 @@ function asmFunc(global, env, buffer) {
       }
       $7 = HEAP32[($3 + -4 | 0) >> 2] | 0;
       $2 = 0;
-      label$9 : while (1) {
+      while (1) {
        $4 = $2 << 2 | 0;
        $5 = $3 + $4 | 0;
        $7 = (($7 << 1 | 0) + (HEAP32[($0 + $4 | 0) >> 2] | 0) | 0) - (HEAP32[($5 + -8 | 0) >> 2] | 0) | 0;
        HEAP32[$5 >> 2] = $7;
        $2 = $2 + 1 | 0;
        if (($2 | 0) != ($1 | 0)) {
-        continue label$9
+        continue
        }
        break label$2;
       };
@@ -20106,15 +20106,15 @@ function asmFunc(global, env, buffer) {
     }
     $7 = HEAP32[($3 + -4 | 0) >> 2] | 0;
     $2 = 0;
-    label$10 : while (1) {
+    while (1) {
      $4 = $2 << 2 | 0;
      $7 = $7 + (HEAP32[($0 + $4 | 0) >> 2] | 0) | 0;
      HEAP32[($3 + $4 | 0) >> 2] = $7;
      $2 = $2 + 1 | 0;
      if (($2 | 0) != ($1 | 0)) {
-      continue label$10
+      continue
      }
-     break label$10;
+     break;
     };
    }
    return;
@@ -20995,13 +20995,13 @@ function asmFunc(global, env, buffer) {
    }
    $1 = HEAP32[($0 + 4 | 0) >> 2] | 0;
    $0 = 0;
-   label$2 : while (1) {
+   while (1) {
     HEAP32[(($1 + ($0 << 2 | 0) | 0) + 608 | 0) >> 2] = 1;
     $0 = $0 + 1 | 0;
     if (($0 | 0) != (128 | 0)) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
    HEAP32[($1 + 1124 | 0) >> 2] = 0;
    $1 = 1;
@@ -21127,7 +21127,7 @@ function asmFunc(global, env, buffer) {
  function FLAC__stream_decoder_process_single($0) {
   $0 = $0 | 0;
   var $1 = 0, $2 = 0, $3 = 0, $5 = 0, $4 = 0;
-  label$1 : {
+  {
    $1 = global$0 - 16 | 0;
    $4 = $1;
    if ($1 >>> 0 < global$86 >>> 0) {
@@ -21173,14 +21173,14 @@ function asmFunc(global, env, buffer) {
       break label$4;
      }
      if (!(HEAP32[($1 + 12 | 0) >> 2] | 0)) {
-      continue label$5
+      continue
      }
-     break label$5;
+     break;
     };
    }
    $3 = $2;
   }
-  label$11 : {
+  {
    $5 = $1 + 16 | 0;
    if ($5 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -21193,7 +21193,7 @@ function asmFunc(global, env, buffer) {
  function find_metadata_($0) {
   $0 = $0 | 0;
   var $1 = 0, $4 = 0, $3 = 0, $6 = 0, $5 = 0, $2 = 0, $9 = 0, $8 = 0, $7 = 0;
-  label$1 : {
+  {
    $1 = global$0 - 16 | 0;
    $8 = $1;
    if ($1 >>> 0 < global$86 >>> 0) {
@@ -21204,10 +21204,10 @@ function asmFunc(global, env, buffer) {
   $2 = 1;
   $3 = 0;
   label$3 : {
-   label$4 : while (1) {
+   while (1) {
     $4 = 0;
     label$5 : {
-     label$6 : while (1) {
+     while (1) {
       label$7 : {
        label$8 : {
         $5 = HEAP32[($0 + 4 | 0) >> 2] | 0;
@@ -21247,7 +21247,7 @@ function asmFunc(global, env, buffer) {
        $3 = 0;
        $4 = $4 + 1 | 0;
        if (($4 | 0) != (3 | 0)) {
-        continue label$6
+        continue
        }
        label$12 : {
         label$13 : {
@@ -21275,11 +21275,11 @@ function asmFunc(global, env, buffer) {
        }
        $3 = 0;
        if (FLAC__bitreader_skip_byte_block_aligned_no_crc(HEAP32[((HEAP32[($0 + 4 | 0) >> 2] | 0) + 56 | 0) >> 2] | 0 | 0, ($7 << 7 | 0) & 16256 | 0 | (($5 & 127 | 0 | (($6 << 7 | 0) & 16256 | 0) | 0) << 14 | 0) | 0 | ((HEAP32[($1 + 12 | 0) >> 2] | 0) & 127 | 0) | 0 | 0) | 0) {
-        continue label$6
+        continue
        }
        break label$3;
       }
-      break label$6;
+      break;
      };
      label$14 : {
       if (($6 | 0) != (255 | 0)) {
@@ -21325,14 +21325,14 @@ function asmFunc(global, env, buffer) {
      $2 = 0;
     }
     if ($3 >>> 0 < 4 >>> 0) {
-     continue label$4
+     continue
     }
-    break label$4;
+    break;
    };
    $3 = 1;
    HEAP32[(HEAP32[$0 >> 2] | 0) >> 2] = 1;
   }
-  label$17 : {
+  {
    $9 = $1 + 16 | 0;
    if ($9 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -21345,7 +21345,7 @@ function asmFunc(global, env, buffer) {
  function read_metadata_($0) {
   $0 = $0 | 0;
   var $2 = 0, $5 = 0, $7 = 0, $4 = 0, $6 = 0, $1 = 0, $9 = 0, $8 = 0, i64toi32_i32$1 = 0, i64toi32_i32$2 = 0, $10 = 0, i64toi32_i32$0 = 0, $12 = 0, $14 = 0, $3 = 0, $11 = 0, i64toi32_i32$4 = 0, $13 = 0, i64toi32_i32$3 = 0, i64toi32_i32$5 = 0, $15 = 0, $45 = 0, $18 = 0, $24 = 0, $23 = 0, $81 = 0, $189 = 0, $191 = 0, $334 = 0, $349 = 0, $487 = 0, $522 = 0, $562 = 0, $734 = 0, $16 = 0, $17 = 0, $19 = 0, $20 = 0, $21 = 0, $22 = 0, $962 = 0, $1001 = 0, $1070 = 0, $1249$hi = 0, $1252$hi = 0;
-  label$1 : {
+  {
    $1 = global$0 - 192 | 0;
    $23 = $1;
    if ($1 >>> 0 < global$86 >>> 0) {
@@ -21535,7 +21535,7 @@ function asmFunc(global, env, buffer) {
         $8 = HEAP32[global$24 >> 2] | 0;
         $6 = HEAP32[global$25 >> 2] | 0;
         $5 = 0;
-        label$17 : while (1) {
+        while (1) {
          if (!(FLAC__bitreader_read_raw_uint64(HEAP32[($2 + 56 | 0) >> 2] | 0 | 0, $1 | 0, $6 | 0) | 0)) {
           break label$4
          }
@@ -21567,9 +21567,9 @@ function asmFunc(global, env, buffer) {
          $5 = $5 + 1 | 0;
          $7 = HEAP32[($2 + 448 | 0) >> 2] | 0;
          if ($5 >>> 0 < $7 >>> 0) {
-          continue label$17
+          continue
          }
-         break label$17;
+         break;
         };
         $5 = Math_imul($7, -18);
        }
@@ -21632,7 +21632,7 @@ function asmFunc(global, env, buffer) {
        $14 = HEAP32[($8 + 1120 | 0) >> 2] | 0;
        $2 = 0;
        label$21 : {
-        label$22 : while (1) {
+        while (1) {
          if (!(memcmp($14 + Math_imul($2, $5) | 0 | 0, $9 | 0, $5 | 0) | 0)) {
           break label$21
          }
@@ -21640,7 +21640,7 @@ function asmFunc(global, env, buffer) {
          if (($2 | 0) == ($12 | 0)) {
           break label$19
          }
-         continue label$22;
+         continue;
         };
        }
        $11 = ($10 | 0) != (0 | 0);
@@ -21775,7 +21775,7 @@ function asmFunc(global, env, buffer) {
                 if ($6 >>> 0 < 4 >>> 0) {
                  break label$45
                 }
-                label$46 : while (1) {
+                while (1) {
                  if (!(FLAC__bitreader_read_uint32_little_endian(HEAP32[((HEAP32[$4 >> 2] | 0) + 56 | 0) >> 2] | 0 | 0, $5 | 0) | 0)) {
                   break label$25
                  }
@@ -21838,9 +21838,9 @@ function asmFunc(global, env, buffer) {
                  HEAP32[$5 >> 2] = 0;
                  HEAP32[($5 + 4 | 0) >> 2] = i64toi32_i32$1;
                  if ($6 >>> 0 >= 4 >>> 0) {
-                  continue label$46
+                  continue
                  }
-                 break label$46;
+                 break;
                 };
                }
                HEAP32[($7 + 24 | 0) >> 2] = $2;
@@ -21916,7 +21916,7 @@ function asmFunc(global, env, buffer) {
               $15 = HEAP32[$16 >> 2] | 0;
               $13 = HEAP32[$17 >> 2] | 0;
               $6 = 0;
-              label$54 : while (1) {
+              while (1) {
                if (!(FLAC__bitreader_read_raw_uint32(HEAP32[((HEAP32[$4 >> 2] | 0) + 56 | 0) >> 2] | 0 | 0, $7 + 188 | 0 | 0, $13 | 0) | 0)) {
                 break label$24
                }
@@ -21968,7 +21968,7 @@ function asmFunc(global, env, buffer) {
                  HEAP32[(HEAP32[$0 >> 2] | 0) >> 2] = 8;
                  break label$24;
                 }
-                label$58 : while (1) {
+                while (1) {
                  if (!(FLAC__bitreader_read_raw_uint32(HEAP32[((HEAP32[$4 >> 2] | 0) + 56 | 0) >> 2] | 0 | 0, $7 + 188 | 0 | 0, $10 | 0) | 0)) {
                   break label$24
                  }
@@ -21984,7 +21984,7 @@ function asmFunc(global, env, buffer) {
                  if (!(FLAC__bitreader_read_raw_uint64(HEAP32[((HEAP32[$4 >> 2] | 0) + 56 | 0) >> 2] | 0 | 0, $5 + ($2 << 4 | 0) | 0 | 0, $8 | 0) | 0)) {
                   break label$24
                  }
-                 continue label$58;
+                 continue;
                 };
                }
                $6 = $6 + 1 | 0;
@@ -21993,7 +21993,7 @@ function asmFunc(global, env, buffer) {
                }
                $2 = HEAP32[($7 + 168 | 0) >> 2] | 0;
                if (FLAC__bitreader_read_raw_uint64(HEAP32[((HEAP32[$4 >> 2] | 0) + 56 | 0) >> 2] | 0 | 0, $2 + ($6 << 5 | 0) | 0 | 0, $18 | 0) | 0) {
-                continue label$54
+                continue
                }
                break label$24;
               };
@@ -22196,7 +22196,7 @@ function asmFunc(global, env, buffer) {
            break label$80
           }
           $2 = 0;
-          label$81 : while (1) {
+          while (1) {
            label$82 : {
             $6 = HEAP32[(((HEAP32[($7 + 28 | 0) >> 2] | 0) + ($2 << 3 | 0) | 0) + 4 | 0) >> 2] | 0;
             if (!$6) {
@@ -22207,9 +22207,9 @@ function asmFunc(global, env, buffer) {
            }
            $2 = $2 + 1 | 0;
            if ($2 >>> 0 < $5 >>> 0) {
-            continue label$81
+            continue
            }
-           break label$81;
+           break;
           };
          }
          $2 = HEAP32[($7 + 28 | 0) >> 2] | 0;
@@ -22225,7 +22225,7 @@ function asmFunc(global, env, buffer) {
            break label$83
           }
           $2 = 0;
-          label$84 : while (1) {
+          while (1) {
            label$85 : {
             $6 = HEAP32[(((HEAP32[($7 + 168 | 0) >> 2] | 0) + ($2 << 5 | 0) | 0) + 24 | 0) >> 2] | 0;
             if (!$6) {
@@ -22236,9 +22236,9 @@ function asmFunc(global, env, buffer) {
            }
            $2 = $2 + 1 | 0;
            if ($2 >>> 0 < $5 >>> 0) {
-            continue label$84
+            continue
            }
-           break label$84;
+           break;
           };
          }
          $2 = HEAP32[($7 + 168 | 0) >> 2] | 0;
@@ -22336,7 +22336,7 @@ function asmFunc(global, env, buffer) {
    }
    $2 = 0;
   }
-  label$90 : {
+  {
    $24 = $1 + 192 | 0;
    if ($24 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -22349,7 +22349,7 @@ function asmFunc(global, env, buffer) {
  function frame_sync_($0) {
   $0 = $0 | 0;
   var $3 = 0, $2 = 0, $1 = 0, i64toi32_i32$0 = 0, i64toi32_i32$1 = 0, i64toi32_i32$2 = 0, $4 = 0, $7$hi = 0, $6 = 0, $5 = 0, $7 = 0, $26$hi = 0;
-  label$1 : {
+  {
    $1 = global$0 - 16 | 0;
    $5 = $1;
    if ($1 >>> 0 < global$86 >>> 0) {
@@ -22398,7 +22398,7 @@ function asmFunc(global, env, buffer) {
      break label$3;
     }
     $2 = 0;
-    label$7 : while (1) {
+    while (1) {
      label$8 : {
       label$9 : {
        $3 = HEAP32[($0 + 4 | 0) >> 2] | 0;
@@ -22451,21 +22451,21 @@ function asmFunc(global, env, buffer) {
      $3 = $2 & 1 | 0;
      $2 = 1;
      if ($3) {
-      continue label$7
+      continue
      }
      $2 = 1;
      $3 = HEAP32[($0 + 4 | 0) >> 2] | 0;
      if (HEAP32[($3 + 3632 | 0) >> 2] | 0) {
-      continue label$7
+      continue
      }
      FUNCTION_TABLE[HEAP32[($3 + 32 | 0) >> 2] | 0]($0, 0, HEAP32[($3 + 48 | 0) >> 2] | 0);
      $2 = 1;
-     continue label$7;
+     continue;
     };
    }
    $0 = 1;
   }
-  label$14 : {
+  {
    $6 = $1 + 16 | 0;
    if ($6 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -22480,7 +22480,7 @@ function asmFunc(global, env, buffer) {
   $1 = $1 | 0;
   $2 = $2 | 0;
   var $7 = 0, $6 = 0, $5 = 0, $9 = 0, $3 = 0, $8 = 0, i64toi32_i32$2 = 0, $11 = 0, i64toi32_i32$1 = 0, $10 = 0, $4 = 0, i64toi32_i32$3 = 0, i64toi32_i32$5 = 0, $18 = 0, i64toi32_i32$0 = 0, i64toi32_i32$4 = 0, $19 = 0, $21 = 0, $25$hi = 0, $25 = 0, $17 = 0, $20 = 0, $27$hi = 0, $22 = 0, $12 = 0, $14 = 0, $15 = 0, $26$hi = 0, $27 = 0, $24 = 0, $23 = 0, $499$hi = 0, $501$hi = 0, $502 = 0, $515 = 0, $517$hi = 0, $519$hi = 0, $520 = 0, $536 = 0, $538$hi = 0, $540$hi = 0, $56 = 0, $541 = 0, $13 = 0, $16 = 0, $1758 = 0, $1854 = 0, $1860$hi = 0, $26 = 0, $1923 = 0, $1925 = 0, $1925$hi = 0, $1927 = 0, $1927$hi = 0;
-  label$1 : {
+  {
    $3 = global$0 - 64 | 0;
    $23 = $3;
    if ($3 >>> 0 < global$86 >>> 0) {
@@ -23179,7 +23179,7 @@ function asmFunc(global, env, buffer) {
        }
        $10 = $7 << 2 | 0;
        $6 = 0;
-       label$85 : while (1) {
+       while (1) {
         $7 = dlmalloc($10 | 0) | 0;
         if (!$7) {
          break label$4
@@ -23203,9 +23203,9 @@ function asmFunc(global, env, buffer) {
          if (($6 | 0) == ($9 | 0)) {
           break label$84
          }
-         continue label$85;
+         continue;
         }
-        break label$85;
+        break;
        };
        HEAP32[(HEAP32[$0 >> 2] | 0) >> 2] = 8;
        break label$5;
@@ -23226,7 +23226,7 @@ function asmFunc(global, env, buffer) {
        $15 = HEAP32[global$51 >> 2] | 0;
        $16 = HEAP32[global$6 >> 2] | 0;
        $11 = 0;
-       label$89 : while (1) {
+       while (1) {
         $6 = HEAP32[($7 + 1152 | 0) >> 2] | 0;
         label$90 : {
          label$91 : {
@@ -23306,11 +23306,11 @@ function asmFunc(global, env, buffer) {
              if (!(HEAP32[($6 + 1136 | 0) >> 2] | 0)) {
               break label$100
              }
-             label$104 : while (1) {
+             while (1) {
               HEAP32[($9 + ($7 << 2 | 0) | 0) >> 2] = HEAP32[($3 + 32 | 0) >> 2] | 0;
               $7 = $7 + 1 | 0;
               if ($7 >>> 0 < (HEAP32[($6 + 1136 | 0) >> 2] | 0) >>> 0) {
-               continue label$104
+               continue
               }
               break label$100;
              };
@@ -23326,7 +23326,7 @@ function asmFunc(global, env, buffer) {
               if (!(HEAP32[($7 + 1136 | 0) >> 2] | 0)) {
                break label$105
               }
-              label$106 : while (1) {
+              while (1) {
                if (!(FLAC__bitreader_read_raw_int32(HEAP32[($7 + 56 | 0) >> 2] | 0 | 0, $3 + 32 | 0 | 0, $6 | 0) | 0)) {
                 break label$5
                }
@@ -23335,9 +23335,9 @@ function asmFunc(global, env, buffer) {
                $7 = HEAP32[$5 >> 2] | 0;
                $10 = HEAP32[($7 + 1136 | 0) >> 2] | 0;
                if ($9 >>> 0 < $10 >>> 0) {
-                continue label$106
+                continue
                }
-               break label$106;
+               break;
               };
               $9 = $10 << 2 | 0;
              }
@@ -23385,7 +23385,7 @@ function asmFunc(global, env, buffer) {
              }
              $10 = $18 + 1196 | 0;
              $7 = 0;
-             label$112 : while (1) {
+             while (1) {
               if (!(FLAC__bitreader_read_raw_int32($9 | 0, $3 + 32 | 0 | 0, $6 | 0) | 0)) {
                break label$5
               }
@@ -23393,9 +23393,9 @@ function asmFunc(global, env, buffer) {
               $9 = HEAP32[((HEAP32[$5 >> 2] | 0) + 56 | 0) >> 2] | 0;
               $7 = $7 + 1 | 0;
               if (($7 | 0) != ($8 | 0)) {
-               continue label$112
+               continue
               }
-              break label$112;
+              break;
              };
             }
             if (!(FLAC__bitreader_read_raw_uint32($9 | 0, $3 + 16 | 0 | 0, $15 | 0) | 0)) {
@@ -23501,7 +23501,7 @@ function asmFunc(global, env, buffer) {
            HEAP32[($10 + 1460 | 0) >> 2] = $8;
            $9 = HEAP32[($7 + 56 | 0) >> 2] | 0;
            $7 = 0;
-           label$123 : while (1) {
+           while (1) {
             if (!(FLAC__bitreader_read_raw_int32($9 | 0, $3 + 32 | 0 | 0, $6 | 0) | 0)) {
              break label$5
             }
@@ -23510,9 +23510,9 @@ function asmFunc(global, env, buffer) {
             $9 = HEAP32[((HEAP32[$5 >> 2] | 0) + 56 | 0) >> 2] | 0;
             $7 = $7 + 1 | 0;
             if ($8) {
-             continue label$123
+             continue
             }
-            break label$123;
+            break;
            };
            if (!(FLAC__bitreader_read_raw_uint32($9 | 0, $3 + 16 | 0 | 0, $12 | 0) | 0)) {
             break label$5
@@ -23557,7 +23557,7 @@ function asmFunc(global, env, buffer) {
             HEAP32[$22 >> 2] = $7;
             $9 = HEAP32[((HEAP32[$5 >> 2] | 0) + 56 | 0) >> 2] | 0;
             $7 = 0;
-            label$129 : while (1) {
+            while (1) {
              if (!(FLAC__bitreader_read_raw_int32($9 | 0, $3 + 32 | 0 | 0, HEAP32[$19 >> 2] | 0 | 0) | 0)) {
               break label$5
              }
@@ -23566,9 +23566,9 @@ function asmFunc(global, env, buffer) {
              $9 = HEAP32[((HEAP32[$5 >> 2] | 0) + 56 | 0) >> 2] | 0;
              $7 = $7 + 1 | 0;
              if ($8) {
-              continue label$129
+              continue
              }
-             break label$129;
+             break;
             };
             if (!(FLAC__bitreader_read_raw_uint32($9 | 0, $3 + 16 | 0 | 0, $15 | 0) | 0)) {
              break label$5
@@ -23685,14 +23685,14 @@ function asmFunc(global, env, buffer) {
          if ((HEAP32[($9 + 1136 | 0) >> 2] | 0) >>> 0 < 2 >>> 0) {
           break label$96
          }
-         label$138 : while (1) {
+         while (1) {
           $6 = $8 + ($7 << 2 | 0) | 0;
           HEAP32[$6 >> 2] = (HEAP32[$6 >> 2] | 0) << (HEAP32[($3 + 28 | 0) >> 2] | 0) | 0;
           $7 = $7 + 1 | 0;
           if ($7 >>> 0 < (HEAP32[($9 + 1136 | 0) >> 2] | 0) >>> 0) {
-           continue label$138
+           continue
           }
-          break label$138;
+          break;
          };
         }
         if ((HEAP32[(HEAP32[$0 >> 2] | 0) >> 2] | 0 | 0) == (2 | 0)) {
@@ -23701,9 +23701,9 @@ function asmFunc(global, env, buffer) {
         $11 = $11 + 1 | 0;
         $7 = HEAP32[$5 >> 2] | 0;
         if ($11 >>> 0 < (HEAP32[($7 + 1144 | 0) >> 2] | 0) >>> 0) {
-         continue label$89
+         continue
         }
-        break label$89;
+        break;
        };
       }
       label$139 : {
@@ -23764,13 +23764,13 @@ function asmFunc(global, env, buffer) {
           $8 = HEAP32[($7 + 64 | 0) >> 2] | 0;
           $10 = HEAP32[($7 + 60 | 0) >> 2] | 0;
           $6 = 0;
-          label$146 : while (1) {
+          while (1) {
            $9 = $6 << 2 | 0;
            $11 = $10 + $9 | 0;
            HEAP32[$11 >> 2] = (HEAP32[$11 >> 2] | 0) + (HEAP32[($8 + $9 | 0) >> 2] | 0) | 0;
            $6 = $6 + 1 | 0;
            if ($6 >>> 0 < (HEAP32[($7 + 1136 | 0) >> 2] | 0) >>> 0) {
-            continue label$146
+            continue
            }
            break label$141;
           };
@@ -23781,13 +23781,13 @@ function asmFunc(global, env, buffer) {
          $8 = HEAP32[($7 + 64 | 0) >> 2] | 0;
          $10 = HEAP32[($7 + 60 | 0) >> 2] | 0;
          $6 = 0;
-         label$147 : while (1) {
+         while (1) {
           $9 = $6 << 2 | 0;
           $11 = $8 + $9 | 0;
           HEAP32[$11 >> 2] = (HEAP32[($10 + $9 | 0) >> 2] | 0) - (HEAP32[$11 >> 2] | 0) | 0;
           $6 = $6 + 1 | 0;
           if ($6 >>> 0 < (HEAP32[($7 + 1136 | 0) >> 2] | 0) >>> 0) {
-           continue label$147
+           continue
           }
           break label$141;
          };
@@ -23798,7 +23798,7 @@ function asmFunc(global, env, buffer) {
         $10 = HEAP32[($7 + 64 | 0) >> 2] | 0;
         $17 = HEAP32[($7 + 60 | 0) >> 2] | 0;
         $6 = 0;
-        label$148 : while (1) {
+        while (1) {
          $9 = $6 << 2 | 0;
          $11 = $17 + $9 | 0;
          $1758 = $11;
@@ -23809,7 +23809,7 @@ function asmFunc(global, env, buffer) {
          HEAP32[$8 >> 2] = ($11 - $9 | 0) >> 1 | 0;
          $6 = $6 + 1 | 0;
          if ($6 >>> 0 < (HEAP32[($7 + 1136 | 0) >> 2] | 0) >>> 0) {
-          continue label$148
+          continue
          }
          break label$141;
         };
@@ -23829,14 +23829,14 @@ function asmFunc(global, env, buffer) {
         break label$141
        }
        $6 = 0;
-       label$150 : while (1) {
+       while (1) {
         memset(HEAP32[(($7 + ($6 << 2 | 0) | 0) + 60 | 0) >> 2] | 0 | 0, 0 | 0, (HEAP32[($7 + 1136 | 0) >> 2] | 0) << 2 | 0 | 0) | 0;
         $6 = $6 + 1 | 0;
         $7 = HEAP32[$5 >> 2] | 0;
         if ($6 >>> 0 < (HEAP32[($7 + 1144 | 0) >> 2] | 0) >>> 0) {
-         continue label$150
+         continue
         }
-        break label$150;
+        break;
        };
       }
       HEAP32[$1 >> 2] = 1;
@@ -23938,14 +23938,14 @@ function asmFunc(global, env, buffer) {
             if (!$9) {
              break label$157
             }
-            label$158 : while (1) {
+            while (1) {
              $5 = $6 << 2 | 0;
              HEAP32[(($3 + 32 | 0) + $5 | 0) >> 2] = (HEAP32[(($7 + $5 | 0) + 60 | 0) >> 2] | 0) + ($11 << 2 | 0) | 0;
              $6 = $6 + 1 | 0;
              if (($6 | 0) != ($9 | 0)) {
-              continue label$158
+              continue
              }
-             break label$158;
+             break;
             };
            }
            HEAP32[($8 + 3752 | 0) >> 2] = (HEAP32[($8 + 3752 | 0) >> 2] | 0) - $11 | 0;
@@ -24018,7 +24018,7 @@ function asmFunc(global, env, buffer) {
    HEAP32[(HEAP32[$0 >> 2] | 0) >> 2] = 8;
    $4 = 0;
   }
-  label$161 : {
+  {
    $24 = $3 + 64 | 0;
    if ($24 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -24036,7 +24036,7 @@ function asmFunc(global, env, buffer) {
   $4 = $4 | 0;
   $5 = $5 | 0;
   var $7 = 0, $6 = 0, $8 = 0, $12 = 0, $13 = 0, $9 = 0, $10 = 0, $11 = 0, $15 = 0, $14 = 0;
-  label$1 : {
+  {
    $6 = global$0 - 16 | 0;
    $14 = $6;
    if ($6 >>> 0 < global$86 >>> 0) {
@@ -24062,7 +24062,7 @@ function asmFunc(global, env, buffer) {
      }
      $12 = 0;
      $5 = 0;
-     label$6 : while (1) {
+     while (1) {
       label$7 : {
        if (FLAC__bitreader_read_raw_uint32(HEAP32[((HEAP32[($0 + 4 | 0) >> 2] | 0) + 56 | 0) >> 2] | 0 | 0, $6 + 12 | 0 | 0, $10 | 0) | 0) {
         break label$7
@@ -24098,7 +24098,7 @@ function asmFunc(global, env, buffer) {
        if ($7 >>> 0 >= $8 >>> 0) {
         break label$8
        }
-       label$11 : while (1) {
+       while (1) {
         label$12 : {
          if (FLAC__bitreader_read_raw_int32(HEAP32[((HEAP32[($0 + 4 | 0) >> 2] | 0) + 56 | 0) >> 2] | 0 | 0, $6 + 8 | 0 | 0, HEAP32[($6 + 12 | 0) >> 2] | 0 | 0) | 0) {
           break label$12
@@ -24110,15 +24110,15 @@ function asmFunc(global, env, buffer) {
         $5 = $5 + 1 | 0;
         $7 = $7 + 1 | 0;
         if (($7 | 0) != ($8 | 0)) {
-         continue label$11
+         continue
         }
-        break label$11;
+        break;
        };
       }
       $7 = 1;
       $12 = $12 + 1 | 0;
       if (!($12 >>> $2 | 0)) {
-       continue label$6
+       continue
       }
       break label$3;
      };
@@ -24146,7 +24146,7 @@ function asmFunc(global, env, buffer) {
      }
      $5 = 0;
      $7 = 0;
-     label$15 : while (1) {
+     while (1) {
       label$16 : {
        if (FLAC__bitreader_read_raw_int32(HEAP32[((HEAP32[($0 + 4 | 0) >> 2] | 0) + 56 | 0) >> 2] | 0 | 0, $6 + 8 | 0 | 0, HEAP32[($6 + 12 | 0) >> 2] | 0 | 0) | 0) {
         break label$16
@@ -24158,7 +24158,7 @@ function asmFunc(global, env, buffer) {
       $5 = $5 + 1 | 0;
       $7 = $7 + 1 | 0;
       if (($7 | 0) != ($8 | 0)) {
-       continue label$15
+       continue
       }
       break label$13;
      };
@@ -24171,7 +24171,7 @@ function asmFunc(global, env, buffer) {
    }
    $7 = 1;
   }
-  label$17 : {
+  {
    $15 = $6 + 16 | 0;
    if ($15 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -24209,9 +24209,9 @@ function asmFunc(global, env, buffer) {
        };
       }
       if (read_metadata_($0 | 0) | 0) {
-       continue label$4
+       continue
       }
-      break label$4;
+      break;
      };
     }
     $1 = 0;
@@ -24224,7 +24224,7 @@ function asmFunc(global, env, buffer) {
  function FLAC__stream_decoder_process_until_end_of_stream($0) {
   $0 = $0 | 0;
   var $1 = 0, $2 = 0, $3 = 0, $5 = 0, $4 = 0;
-  label$1 : {
+  {
    $1 = global$0 - 16 | 0;
    $4 = $1;
    if ($1 >>> 0 < global$86 >>> 0) {
@@ -24265,16 +24265,16 @@ function asmFunc(global, env, buffer) {
        };
       }
       if (read_frame_($0 | 0, $1 + 12 | 0 | 0, 1 | 0) | 0) {
-       continue label$6
+       continue
       }
-      break label$6;
+      break;
      };
     }
     $2 = 0;
    }
    $3 = $2;
   }
-  label$11 : {
+  {
    $5 = $1 + 16 | 0;
    if ($5 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -24355,7 +24355,7 @@ function asmFunc(global, env, buffer) {
   $0 = $0 | 0;
   $1 = $1 | 0;
   var $2 = 0, $4 = 0, $3 = 0, wasm2js_i32$0 = 0, wasm2js_i32$1 = 0;
-  label$1 : {
+  {
    $2 = global$0 - 16 | 0;
    $3 = $2;
    if ($2 >>> 0 < global$86 >>> 0) {
@@ -24374,7 +24374,7 @@ function asmFunc(global, env, buffer) {
    (wasm2js_i32$0 = $1, wasm2js_i32$1 = FLAC__crc16(HEAP32[($2 + 12 | 0) >> 2] | 0 | 0, HEAP32[($2 + 8 | 0) >> 2] | 0 | 0) | 0), HEAP16[wasm2js_i32$0 >> 1] = wasm2js_i32$1;
    $0 = 1;
   }
-  label$5 : {
+  {
    $4 = $2 + 16 | 0;
    if ($4 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -24465,7 +24465,7 @@ function asmFunc(global, env, buffer) {
   $0 = $0 | 0;
   $1 = $1 | 0;
   var $2 = 0, $4 = 0, $3 = 0, wasm2js_i32$0 = 0, wasm2js_i32$1 = 0;
-  label$1 : {
+  {
    $2 = global$0 - 16 | 0;
    $3 = $2;
    if ($2 >>> 0 < global$86 >>> 0) {
@@ -24484,7 +24484,7 @@ function asmFunc(global, env, buffer) {
    (wasm2js_i32$0 = $1, wasm2js_i32$1 = FLAC__crc8(HEAP32[($2 + 12 | 0) >> 2] | 0 | 0, HEAP32[($2 + 8 | 0) >> 2] | 0 | 0) | 0), HEAP8[wasm2js_i32$0 >> 0] = wasm2js_i32$1;
    $0 = 1;
   }
-  label$5 : {
+  {
    $4 = $2 + 16 | 0;
    if ($4 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -24566,15 +24566,15 @@ function asmFunc(global, env, buffer) {
       break label$7
      }
      $2 = HEAP32[$0 >> 2] | 0;
-     label$8 : while (1) {
+     while (1) {
       $3 = HEAP32[($0 + 12 | 0) >> 2] | 0;
       HEAP32[($0 + 12 | 0) >> 2] = $3 + 1 | 0;
       HEAP32[($2 + ($3 << 2 | 0) | 0) >> 2] = 0;
       $1 = $1 + -32 | 0;
       if ($1 >>> 0 > 31 >>> 0) {
-       continue label$8
+       continue
       }
-      break label$8;
+      break;
      };
     }
     if (!$1) {
@@ -24833,15 +24833,15 @@ function asmFunc(global, env, buffer) {
    }
    $4 = 0;
    label$5 : {
-    label$6 : while (1) {
+    while (1) {
      if (!(FLAC__bitwriter_write_raw_uint32_nocheck($0 | 0, HEAPU8[($1 + $4 | 0) >> 0] | 0 | 0, 8 | 0) | 0)) {
       break label$5
      }
      $4 = $4 + 1 | 0;
      if (($4 | 0) != ($2 | 0)) {
-      continue label$6
+      continue
      }
-     break label$6;
+     break;
     };
     return 1 | 0;
    }
@@ -24882,7 +24882,7 @@ function asmFunc(global, env, buffer) {
    $5 = $3 + 1 | 0;
    $6 = -1 << $3 | 0;
    $7 = -1 >>> (31 - $3 | 0) | 0;
-   label$2 : while (1) {
+   while (1) {
     $8 = HEAP32[$1 >> 2] | 0;
     $9 = ($8 << 1 | 0) ^ ($8 >> 31 | 0) | 0;
     $8 = $9 >>> $3 | 0;
@@ -24971,15 +24971,15 @@ function asmFunc(global, env, buffer) {
         break label$11
        }
        $10 = HEAP32[$0 >> 2] | 0;
-       label$12 : while (1) {
+       while (1) {
         $11 = HEAP32[($0 + 12 | 0) >> 2] | 0;
         HEAP32[($0 + 12 | 0) >> 2] = $11 + 1 | 0;
         HEAP32[($10 + ($11 << 2 | 0) | 0) >> 2] = 0;
         $8 = $8 + -32 | 0;
         if ($8 >>> 0 > 31 >>> 0) {
-         continue label$12
+         continue
         }
-        break label$12;
+        break;
        };
       }
       if (!$8) {
@@ -25011,9 +25011,9 @@ function asmFunc(global, env, buffer) {
     $1 = $1 + 4 | 0;
     $2 = $2 + -1 | 0;
     if ($2) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
    $4 = 1;
   }
@@ -25317,7 +25317,7 @@ function asmFunc(global, env, buffer) {
   $7 = $7 | 0;
   $8 = $8 | 0;
   var i64toi32_i32$1 = 0, i64toi32_i32$5 = 0, i64toi32_i32$2 = 0, $9 = 0, i64toi32_i32$0 = 0, i64toi32_i32$4 = 0, $13$hi = 0, $30 = 0, $31 = 0, $33 = 0, $34 = 0, $35 = 0, $36 = 0, $37 = 0, $38 = 0, i64toi32_i32$3 = 0, $10 = 0, $13 = 0, $39 = 0, $12 = 0, $11 = 0, $32 = 0, $34$hi = 0, $67 = 0, $72 = 0, $77 = 0, $82 = 0, $85 = 0, $166 = 0, $168$hi = 0;
-  label$1 : {
+  {
    $9 = global$0 - 96 | 0;
    $11 = $9;
    if ($9 >>> 0 < global$86 >>> 0) {
@@ -25491,7 +25491,7 @@ function asmFunc(global, env, buffer) {
        if ($3) {
         break label$10
        }
-       label$11 : while (1) {
+       while (1) {
         if (!(ogg_stream_flush($1 | 0, $2 | 0) | 0)) {
          break label$4
         }
@@ -25499,12 +25499,12 @@ function asmFunc(global, env, buffer) {
          break label$6
         }
         if (!(FUNCTION_TABLE[$6]($7, HEAP32[($0 + 376 | 0) >> 2] | 0, HEAP32[($0 + 380 | 0) >> 2] | 0, 0, $4, $8) | 0)) {
-         continue label$11
+         continue
         }
         break label$6;
        };
       }
-      label$12 : while (1) {
+      while (1) {
        if (!(ogg_stream_pageout($1 | 0, $2 | 0) | 0)) {
         break label$4
        }
@@ -25512,9 +25512,9 @@ function asmFunc(global, env, buffer) {
         break label$6
        }
        if (!(FUNCTION_TABLE[$6]($7, HEAP32[($0 + 376 | 0) >> 2] | 0, HEAP32[($0 + 380 | 0) >> 2] | 0, 0, $4, $8) | 0)) {
-        continue label$12
+        continue
        }
-       break label$12;
+       break;
       };
      }
      $6 = 1;
@@ -25556,7 +25556,7 @@ function asmFunc(global, env, buffer) {
    HEAP32[(i64toi32_i32$1 + 396 | 0) >> 2] = i64toi32_i32$4;
    $6 = 0;
   }
-  label$13 : {
+  {
    $12 = $9 + 96 | 0;
    if ($12 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -25615,7 +25615,7 @@ function asmFunc(global, env, buffer) {
   $4 = $4 | 0;
   $5 = $5 | 0;
   var $9 = 0, $8 = 0, $6 = 0, i64toi32_i32$0 = 0, $16 = 0, $7 = 0, $11 = 0, $10 = 0, i64toi32_i32$1 = 0, i64toi32_i32$2 = 0;
-  label$1 : {
+  {
    $6 = global$0 - 16 | 0;
    $10 = $6;
    if ($6 >>> 0 < global$86 >>> 0) {
@@ -25653,7 +25653,7 @@ function asmFunc(global, env, buffer) {
     break label$3;
    }
    $8 = 27;
-   label$7 : while (1) {
+   while (1) {
     HEAP32[($6 + 12 | 0) >> 2] = $8;
     $9 = 5;
     label$8 : {
@@ -25679,9 +25679,9 @@ function asmFunc(global, env, buffer) {
     $3 = $3 + $9 | 0;
     $8 = $8 - $9 | 0;
     if ($8) {
-     continue label$7
+     continue
     }
-    break label$7;
+    break;
    };
    $3 = HEAP32[$2 >> 2] | 0;
    HEAP32[($2 + 4 | 0) >> 2] = (HEAPU8[($3 + 26 | 0) >> 0] | 0) + 27 | 0;
@@ -25709,7 +25709,7 @@ function asmFunc(global, env, buffer) {
     break label$3;
    }
    $3 = $3 + 27 | 0;
-   label$14 : while (1) {
+   while (1) {
     HEAP32[($6 + 12 | 0) >> 2] = $8;
     $9 = 5;
     label$15 : {
@@ -25735,9 +25735,9 @@ function asmFunc(global, env, buffer) {
     $3 = $3 + $9 | 0;
     $8 = $8 - $9 | 0;
     if ($8) {
-     continue label$14
+     continue
     }
-    break label$14;
+    break;
    };
    $3 = 0;
    label$19 : {
@@ -25749,7 +25749,7 @@ function asmFunc(global, env, buffer) {
      }
      $8 = $8 + -1 | 0;
      $3 = 0;
-     label$21 : while (1) {
+     while (1) {
       label$22 : {
        if ((HEAPU8[(($3 + $9 | 0) + 27 | 0) >> 0] | 0 | 0) == (255 | 0)) {
         break label$22
@@ -25759,9 +25759,9 @@ function asmFunc(global, env, buffer) {
       }
       $3 = $3 + 1 | 0;
       if ($3 >>> 0 < $8 >>> 0) {
-       continue label$21
+       continue
       }
-      break label$21;
+      break;
      };
     }
     $3 = Math_imul($3, 255) + (HEAPU8[(($3 + $9 | 0) + 27 | 0) >> 0] | 0) | 0;
@@ -25779,7 +25779,7 @@ function asmFunc(global, env, buffer) {
      if (!$3) {
       break label$24
      }
-     label$25 : while (1) {
+     while (1) {
       HEAP32[($6 + 12 | 0) >> 2] = $3;
       $9 = 5;
       label$26 : {
@@ -25805,9 +25805,9 @@ function asmFunc(global, env, buffer) {
       $8 = $8 + $9 | 0;
       $3 = $3 - $9 | 0;
       if ($3) {
-       continue label$25
+       continue
       }
-      break label$25;
+      break;
      };
      $9 = HEAP32[$2 >> 2] | 0;
     }
@@ -25825,7 +25825,7 @@ function asmFunc(global, env, buffer) {
    }
    $7 = 0;
   }
-  label$31 : {
+  {
    $11 = $6 + 16 | 0;
    if ($11 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -25911,7 +25911,7 @@ function asmFunc(global, env, buffer) {
    if (($3 | 0) != ($2 & 255 | 0 | 0)) {
     break label$1
    }
-   label$2 : while (1) {
+   while (1) {
     $2 = HEAPU8[($1 + 1 | 0) >> 0] | 0;
     $3 = HEAPU8[($0 + 1 | 0) >> 0] | 0;
     if (!$3) {
@@ -25920,9 +25920,9 @@ function asmFunc(global, env, buffer) {
     $1 = $1 + 1 | 0;
     $0 = $0 + 1 | 0;
     if (($3 | 0) == ($2 & 255 | 0 | 0)) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
   }
   return $3 - ($2 & 255 | 0) | 0 | 0;
@@ -26005,7 +26005,7 @@ function asmFunc(global, env, buffer) {
   $3 = $3 | 0;
   $4 = $4 | 0;
   var $24 = 0.0, $11 = 0, $6 = 0, $5 = 0, $25 = 0.0, $13 = 0, $14 = 0, $9 = 0, $20 = 0, $8 = 0, $10 = 0, $12 = 0, $18 = 0, $26 = 0.0, $7 = 0, $16 = 0, $19 = 0, i64toi32_i32$0 = 0, $22 = 0, $21 = 0, $15 = 0, $17 = 0, $213 = 0, $216 = 0, $545 = 0.0, $583 = 0.0, i64toi32_i32$1 = 0, $622 = 0;
-  label$1 : {
+  {
    $5 = global$0 - 560 | 0;
    $21 = $5;
    if ($5 >>> 0 < global$86 >>> 0) {
@@ -26025,7 +26025,7 @@ function asmFunc(global, env, buffer) {
    $11 = $9 + $3 | 0;
    $2 = $7 - $10 | 0;
    $6 = 0;
-   label$4 : while (1) {
+   while (1) {
     label$5 : {
      label$6 : {
       if (($2 | 0) >= (0 | 0)) {
@@ -26040,16 +26040,16 @@ function asmFunc(global, env, buffer) {
     $2 = $2 + 1 | 0;
     $6 = $6 + 1 | 0;
     if (($6 | 0) != ($11 | 0)) {
-     continue label$4
+     continue
     }
-    break label$4;
+    break;
    };
   }
   $12 = $8 + -24 | 0;
   $11 = 0;
   $13 = ($9 | 0) > (0 | 0) ? $9 : 0;
   $14 = ($3 | 0) < (1 | 0);
-  label$7 : while (1) {
+  while (1) {
    label$8 : {
     label$9 : {
      if (!$14) {
@@ -26061,29 +26061,29 @@ function asmFunc(global, env, buffer) {
     $6 = $11 + $10 | 0;
     $2 = 0;
     $24 = 0.0;
-    label$10 : while (1) {
+    while (1) {
      $24 = $24 + +HEAPF64[($0 + ($2 << 3 | 0) | 0) >> 3] * +HEAPF64[(($5 + 320 | 0) + (($6 - $2 | 0) << 3 | 0) | 0) >> 3];
      $2 = $2 + 1 | 0;
      if (($2 | 0) != ($3 | 0)) {
-      continue label$10
+      continue
      }
-     break label$10;
+     break;
     };
    }
    HEAPF64[($5 + ($11 << 3 | 0) | 0) >> 3] = $24;
    $2 = ($11 | 0) == ($13 | 0);
    $11 = $11 + 1 | 0;
    if (!$2) {
-    continue label$7
+    continue
    }
-   break label$7;
+   break;
   };
   $15 = 47 - $8 | 0;
   $16 = 48 - $8 | 0;
   $17 = $8 + -25 | 0;
   $11 = $9;
   label$11 : {
-   label$12 : while (1) {
+   while (1) {
     $24 = +HEAPF64[($5 + ($11 << 3 | 0) | 0) >> 3];
     $2 = 0;
     $6 = $11;
@@ -26092,7 +26092,7 @@ function asmFunc(global, env, buffer) {
      if ($10) {
       break label$13
      }
-     label$14 : while (1) {
+     while (1) {
       $13 = $2 << 2 | 0;
       label$15 : {
        label$16 : {
@@ -26123,9 +26123,9 @@ function asmFunc(global, env, buffer) {
       $24 = +HEAPF64[($5 + ($6 << 3 | 0) | 0) >> 3] + $25;
       $2 = $2 + 1 | 0;
       if (($2 | 0) != ($11 | 0)) {
-       continue label$14
+       continue
       }
-      break label$14;
+      break;
      };
     }
     $24 = +scalbn(+$24, $12 | 0);
@@ -26184,7 +26184,7 @@ function asmFunc(global, env, buffer) {
       if ($10) {
        break label$26
       }
-      label$27 : while (1) {
+      while (1) {
        $10 = ($5 + 480 | 0) + ($2 << 2 | 0) | 0;
        $6 = HEAP32[$10 >> 2] | 0;
        $13 = 16777215;
@@ -26205,9 +26205,9 @@ function asmFunc(global, env, buffer) {
        }
        $2 = $2 + 1 | 0;
        if (($2 | 0) != ($11 | 0)) {
-        continue label$27
+        continue
        }
-       break label$27;
+       break;
       };
      }
      label$30 : {
@@ -26250,38 +26250,38 @@ function asmFunc(global, env, buffer) {
       if (($2 | 0) <= ($9 | 0)) {
        break label$34
       }
-      label$35 : while (1) {
+      while (1) {
        $2 = $2 + -1 | 0;
        $6 = HEAP32[(($5 + 480 | 0) + ($2 << 2 | 0) | 0) >> 2] | 0 | $6 | 0;
        if (($2 | 0) > ($9 | 0)) {
-        continue label$35
+        continue
        }
-       break label$35;
+       break;
       };
       if (!$6) {
        break label$34
       }
       $8 = $12;
-      label$36 : while (1) {
+      while (1) {
        $8 = $8 + -24 | 0;
        $11 = $11 + -1 | 0;
        if (!(HEAP32[(($5 + 480 | 0) + ($11 << 2 | 0) | 0) >> 2] | 0)) {
-        continue label$36
+        continue
        }
        break label$11;
       };
      }
      $2 = 1;
-     label$37 : while (1) {
+     while (1) {
       $6 = $2;
       $2 = $2 + 1 | 0;
       if (!(HEAP32[(($5 + 480 | 0) + (($9 - $6 | 0) << 2 | 0) | 0) >> 2] | 0)) {
-       continue label$37
+       continue
       }
-      break label$37;
+      break;
      };
      $13 = $6 + $11 | 0;
-     label$38 : while (1) {
+     while (1) {
       $6 = $11 + $3 | 0;
       $11 = $11 + 1 | 0;
       HEAPF64[(($5 + 320 | 0) + ($6 << 3 | 0) | 0) >> 3] = +(HEAP32[((($11 + $7 | 0) << 2 | 0) + 7616 | 0) >> 2] | 0 | 0);
@@ -26291,25 +26291,25 @@ function asmFunc(global, env, buffer) {
        if (($3 | 0) < (1 | 0)) {
         break label$39
        }
-       label$40 : while (1) {
+       while (1) {
         $24 = $24 + +HEAPF64[($0 + ($2 << 3 | 0) | 0) >> 3] * +HEAPF64[(($5 + 320 | 0) + (($6 - $2 | 0) << 3 | 0) | 0) >> 3];
         $2 = $2 + 1 | 0;
         if (($2 | 0) != ($3 | 0)) {
-         continue label$40
+         continue
         }
-        break label$40;
+        break;
        };
       }
       HEAPF64[($5 + ($11 << 3 | 0) | 0) >> 3] = $24;
       if (($11 | 0) < ($13 | 0)) {
-       continue label$38
+       continue
       }
-      break label$38;
+      break;
      };
      $11 = $13;
-     continue label$12;
+     continue;
     }
-    break label$12;
+    break;
    };
    label$41 : {
     label$42 : {
@@ -26365,15 +26365,15 @@ function asmFunc(global, env, buffer) {
     break label$49
    }
    $2 = $11;
-   label$50 : while (1) {
+   while (1) {
     HEAPF64[($5 + ($2 << 3 | 0) | 0) >> 3] = $24 * +(HEAP32[(($5 + 480 | 0) + ($2 << 2 | 0) | 0) >> 2] | 0 | 0);
     $24 = $24 * 5.9604644775390625e-08;
     $3 = ($2 | 0) > (0 | 0);
     $2 = $2 + -1 | 0;
     if ($3) {
-     continue label$50
+     continue
     }
-    break label$50;
+    break;
    };
    $13 = 0;
    if (($11 | 0) < (0 | 0)) {
@@ -26381,28 +26381,28 @@ function asmFunc(global, env, buffer) {
    }
    $9 = ($9 | 0) > (0 | 0) ? $9 : 0;
    $6 = $11;
-   label$51 : while (1) {
+   while (1) {
     $0 = $9 >>> 0 < $13 >>> 0 ? $9 : $13;
     $14 = $11 - $6 | 0;
     $2 = 0;
     $24 = 0.0;
-    label$52 : while (1) {
+    while (1) {
      $24 = $24 + +HEAPF64[(($2 << 3 | 0) + 10384 | 0) >> 3] * +HEAPF64[($5 + (($2 + $6 | 0) << 3 | 0) | 0) >> 3];
      $3 = ($2 | 0) != ($0 | 0);
      $2 = $2 + 1 | 0;
      if ($3) {
-      continue label$52
+      continue
      }
-     break label$52;
+     break;
     };
     HEAPF64[(($5 + 160 | 0) + ($14 << 3 | 0) | 0) >> 3] = $24;
     $6 = $6 + -1 | 0;
     $2 = ($13 | 0) != ($11 | 0);
     $13 = $13 + 1 | 0;
     if ($2) {
-     continue label$51
+     continue
     }
-    break label$51;
+    break;
    };
   }
   label$53 : {
@@ -26417,7 +26417,7 @@ function asmFunc(global, env, buffer) {
        }
        $24 = +HEAPF64[(($5 + 160 | 0) + ($11 << 3 | 0) | 0) >> 3];
        $2 = $11;
-       label$59 : while (1) {
+       while (1) {
         $3 = $2 + -1 | 0;
         $6 = ($5 + 160 | 0) + ($3 << 3 | 0) | 0;
         $25 = +HEAPF64[$6 >> 3];
@@ -26429,16 +26429,16 @@ function asmFunc(global, env, buffer) {
         $24 = $25;
         $2 = $3;
         if ($6) {
-         continue label$59
+         continue
         }
-        break label$59;
+        break;
        };
        if (($11 | 0) < (2 | 0)) {
         break label$58
        }
        $24 = +HEAPF64[(($5 + 160 | 0) + ($11 << 3 | 0) | 0) >> 3];
        $2 = $11;
-       label$60 : while (1) {
+       while (1) {
         $3 = $2 + -1 | 0;
         $6 = ($5 + 160 | 0) + ($3 << 3 | 0) | 0;
         $25 = +HEAPF64[$6 >> 3];
@@ -26450,22 +26450,22 @@ function asmFunc(global, env, buffer) {
         $24 = $25;
         $2 = $3;
         if ($6) {
-         continue label$60
+         continue
         }
-        break label$60;
+        break;
        };
        $26 = 0.0;
        if (($11 | 0) <= (1 | 0)) {
         break label$58
        }
-       label$61 : while (1) {
+       while (1) {
         $26 = $26 + +HEAPF64[(($5 + 160 | 0) + ($11 << 3 | 0) | 0) >> 3];
         $2 = ($11 | 0) > (2 | 0);
         $11 = $11 + -1 | 0;
         if ($2) {
-         continue label$61
+         continue
         }
-        break label$61;
+        break;
        };
       }
       $24 = +HEAPF64[($5 + 160 | 0) >> 3];
@@ -26487,14 +26487,14 @@ function asmFunc(global, env, buffer) {
        if (($11 | 0) < (0 | 0)) {
         break label$62
        }
-       label$63 : while (1) {
+       while (1) {
         $24 = $24 + +HEAPF64[(($5 + 160 | 0) + ($11 << 3 | 0) | 0) >> 3];
         $2 = ($11 | 0) > (0 | 0);
         $11 = $11 + -1 | 0;
         if ($2) {
-         continue label$63
+         continue
         }
-        break label$63;
+        break;
        };
       }
       HEAPF64[$1 >> 3] = $20 ? -$24 : $24;
@@ -26512,14 +26512,14 @@ function asmFunc(global, env, buffer) {
       break label$64
      }
      $2 = $11;
-     label$65 : while (1) {
+     while (1) {
       $24 = $24 + +HEAPF64[(($5 + 160 | 0) + ($2 << 3 | 0) | 0) >> 3];
       $3 = ($2 | 0) > (0 | 0);
       $2 = $2 + -1 | 0;
       if ($3) {
-       continue label$65
+       continue
       }
-      break label$65;
+      break;
      };
     }
     HEAPF64[$1 >> 3] = $20 ? -$24 : $24;
@@ -26529,14 +26529,14 @@ function asmFunc(global, env, buffer) {
      if (($11 | 0) < (1 | 0)) {
       break label$66
      }
-     label$67 : while (1) {
+     while (1) {
       $24 = $24 + +HEAPF64[(($5 + 160 | 0) + ($2 << 3 | 0) | 0) >> 3];
       $3 = ($2 | 0) != ($11 | 0);
       $2 = $2 + 1 | 0;
       if ($3) {
-       continue label$67
+       continue
       }
-      break label$67;
+      break;
      };
     }
     HEAPF64[($1 + 8 | 0) >> 3] = $20 ? -$24 : $24;
@@ -26547,7 +26547,7 @@ function asmFunc(global, env, buffer) {
    HEAPF64[($1 + 16 | 0) >> 3] = -$26;
    HEAPF64[($1 + 8 | 0) >> 3] = -$24;
   }
-  label$68 : {
+  {
    $22 = $5 + 560 | 0;
    if ($22 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -26561,7 +26561,7 @@ function asmFunc(global, env, buffer) {
   $0 = +$0;
   $1 = $1 | 0;
   var $10 = 0.0, i64toi32_i32$2 = 0, i64toi32_i32$1 = 0, i64toi32_i32$3 = 0, $3 = 0, i64toi32_i32$0 = 0, i64toi32_i32$4 = 0, $2 = 0, $4 = 0, $11 = 0.0, $9 = 0, $5 = 0, $6 = 0, $9$hi = 0, $12 = 0.0, $13 = 0.0, $23 = 0, $24 = 0, $25 = 0, $26 = 0, $27 = 0, $28 = 0, $29 = 0, $30 = 0, $31 = 0, $32 = 0, $33 = 0, $34 = 0, $35 = 0, $36 = 0, $37 = 0, $38 = 0, $39 = 0, $40 = 0, $8 = 0, $7 = 0, $158 = 0, $191 = 0, $299 = 0;
-  label$1 : {
+  {
    $2 = global$0 - 48 | 0;
    $7 = $2;
    if ($2 >>> 0 < global$86 >>> 0) {
@@ -26860,7 +26860,7 @@ function asmFunc(global, env, buffer) {
    $0 = +wasm2js_scratch_load_f64();
    $3 = 0;
    $6 = 1;
-   label$19 : while (1) {
+   while (1) {
     $3 = ($2 + 16 | 0) + ($3 << 3 | 0) | 0;
     label$20 : {
      label$21 : {
@@ -26879,9 +26879,9 @@ function asmFunc(global, env, buffer) {
     $5 = $6 & 1 | 0;
     $6 = 0;
     if ($5) {
-     continue label$19
+     continue
     }
-    break label$19;
+    break;
    };
    HEAPF64[($2 + 32 | 0) >> 3] = $0;
    label$22 : {
@@ -26893,13 +26893,13 @@ function asmFunc(global, env, buffer) {
      break label$22;
     }
     $6 = 1;
-    label$24 : while (1) {
+    while (1) {
      $3 = $6;
      $6 = $3 + -1 | 0;
      if (+HEAPF64[(($2 + 16 | 0) + ($3 << 3 | 0) | 0) >> 3] == 0.0) {
-      continue label$24
+      continue
      }
-     break label$24;
+     break;
     };
    }
    $3 = __rem_pio2_large($2 + 16 | 0 | 0, $2 | 0, ($4 >>> 20 | 0) + -1046 | 0 | 0, $3 + 1 | 0 | 0, 1 | 0) | 0;
@@ -26941,7 +26941,7 @@ function asmFunc(global, env, buffer) {
    HEAP32[($1 + 8 | 0) >> 2] = $299;
    HEAP32[($1 + 12 | 0) >> 2] = i64toi32_i32$2;
   }
-  label$26 : {
+  {
    $8 = $2 + 48 | 0;
    if ($8 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -26971,7 +26971,7 @@ function asmFunc(global, env, buffer) {
  function cos($0) {
   $0 = +$0;
   var $1 = 0, $5 = 0.0, i64toi32_i32$4 = 0, $2 = 0, i64toi32_i32$0 = 0, i64toi32_i32$3 = 0, $10 = 0, $4 = 0, $3 = 0, i64toi32_i32$2 = 0;
-  label$1 : {
+  {
    $1 = global$0 - 16 | 0;
    $3 = $1;
    if ($1 >>> 0 < global$86 >>> 0) {
@@ -27026,7 +27026,7 @@ function asmFunc(global, env, buffer) {
    }
    $5 = +__sin(+(+HEAPF64[$1 >> 3]), +(+HEAPF64[($1 + 8 | 0) >> 3]), 1 | 0);
   }
-  label$10 : {
+  {
    $4 = $1 + 16 | 0;
    if ($4 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -27174,27 +27174,27 @@ function asmFunc(global, env, buffer) {
      $6 = ($3 | 0) > (0 | 0) ? $3 : 0;
      $4 = $6 + 1 | 0;
      $7 = Math_fround($2 | 0);
-     label$4 : while (1) {
+     while (1) {
       $8 = Math_fround($5 | 0);
       HEAPF32[($0 + ($5 << 2 | 0) | 0) >> 2] = Math_fround(Math_fround($8 + $8) / $7);
       $3 = ($5 | 0) == ($6 | 0);
       $5 = $5 + 1 | 0;
       if (!$3) {
-       continue label$4
+       continue
       }
-      break label$4;
+      break;
      };
     }
     if (($4 | 0) >= ($1 | 0)) {
      break label$1
     }
     $7 = Math_fround($2 | 0);
-    label$5 : while (1) {
+    while (1) {
      $8 = Math_fround($4 | 0);
      HEAPF32[($0 + ($4 << 2 | 0) | 0) >> 2] = Math_fround(Math_fround(2.0) - Math_fround(Math_fround($8 + $8) / $7));
      $4 = $4 + 1 | 0;
      if (($4 | 0) != ($1 | 0)) {
-      continue label$5
+      continue
      }
      break label$1;
     };
@@ -27207,14 +27207,14 @@ function asmFunc(global, env, buffer) {
     }
     $7 = Math_fround($2 | 0);
     $5 = 0;
-    label$7 : while (1) {
+    while (1) {
      $8 = Math_fround($5 | 0);
      HEAPF32[($0 + ($5 << 2 | 0) | 0) >> 2] = Math_fround(Math_fround($8 + $8) / $7);
      $5 = $5 + 1 | 0;
      if (($5 | 0) != ($4 | 0)) {
-      continue label$7
+      continue
      }
-     break label$7;
+     break;
     };
     $5 = $4;
    }
@@ -27222,14 +27222,14 @@ function asmFunc(global, env, buffer) {
     break label$1
    }
    $7 = Math_fround($2 | 0);
-   label$8 : while (1) {
+   while (1) {
     $8 = Math_fround($5 | 0);
     HEAPF32[($0 + ($5 << 2 | 0) | 0) >> 2] = Math_fround(Math_fround(2.0) - Math_fround(Math_fround($8 + $8) / $7));
     $5 = $5 + 1 | 0;
     if (($5 | 0) != ($1 | 0)) {
-     continue label$8
+     continue
     }
-    break label$8;
+    break;
    };
   }
  }
@@ -27244,14 +27244,14 @@ function asmFunc(global, env, buffer) {
    }
    $3 = Math_fround($1 + -1 | 0 | 0);
    $2 = 0;
-   label$2 : while (1) {
+   while (1) {
     $4 = Math_fround(Math_fround($2 | 0) / $3);
     (wasm2js_i32$0 = $0 + ($2 << 2 | 0) | 0, wasm2js_f32$0 = Math_fround(+Math_fround(Math_abs(Math_fround($4 + Math_fround(-.5)))) * -.47999998927116394 + .6200000047683716 + +cos(+(+$4 * 6.283185307179586)) * -.3799999952316284)), HEAPF32[wasm2js_i32$0 >> 2] = wasm2js_f32$0;
     $2 = $2 + 1 | 0;
     if (($2 | 0) != ($1 | 0)) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
   }
  }
@@ -27266,14 +27266,14 @@ function asmFunc(global, env, buffer) {
    }
    $3 = +($1 + -1 | 0 | 0);
    $2 = 0;
-   label$2 : while (1) {
+   while (1) {
     $4 = +($2 | 0);
     (wasm2js_i32$0 = $0 + ($2 << 2 | 0) | 0, wasm2js_f32$0 = Math_fround(+cos(+($4 * 12.566370614359172 / $3)) * .07999999821186066 + (+cos(+($4 * 6.283185307179586 / $3)) * -.5 + .41999998688697815))), HEAPF32[wasm2js_i32$0 >> 2] = wasm2js_f32$0;
     $2 = $2 + 1 | 0;
     if (($2 | 0) != ($1 | 0)) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
   }
  }
@@ -27288,14 +27288,14 @@ function asmFunc(global, env, buffer) {
    }
    $3 = +($1 + -1 | 0 | 0);
    $2 = 0;
-   label$2 : while (1) {
+   while (1) {
     $4 = +($2 | 0);
     (wasm2js_i32$0 = $0 + ($2 << 2 | 0) | 0, wasm2js_f32$0 = Math_fround(+cos(+($4 * 12.566370614359172 / $3)) * .14127999544143677 + (+cos(+($4 * 6.283185307179586 / $3)) * -.488290011882782 + .35874998569488525) + +cos(+($4 * 18.84955592153876 / $3)) * -.011680000461637974)), HEAPF32[wasm2js_i32$0 >> 2] = wasm2js_f32$0;
     $2 = $2 + 1 | 0;
     if (($2 | 0) != ($1 | 0)) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
   }
  }
@@ -27310,15 +27310,15 @@ function asmFunc(global, env, buffer) {
    }
    $3 = +($1 + -1 | 0 | 0) * .5;
    $2 = 0;
-   label$2 : while (1) {
+   while (1) {
     $4 = (+($2 | 0) - $3) / $3;
     $4 = 1.0 - $4 * $4;
     HEAPF32[($0 + ($2 << 2 | 0) | 0) >> 2] = Math_fround($4 * $4);
     $2 = $2 + 1 | 0;
     if (($2 | 0) != ($1 | 0)) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
   }
  }
@@ -27333,7 +27333,7 @@ function asmFunc(global, env, buffer) {
    }
    $3 = +($1 + -1 | 0 | 0);
    $2 = 0;
-   label$2 : while (1) {
+   while (1) {
     $4 = +($2 | 0);
     $5 = +cos(+($4 * 12.566370614359172 / $3));
     $6 = +cos(+($4 * 6.283185307179586 / $3));
@@ -27341,9 +27341,9 @@ function asmFunc(global, env, buffer) {
     (wasm2js_i32$0 = $0 + ($2 << 2 | 0) | 0, wasm2js_f32$0 = Math_fround(+cos(+($4 * 25.132741228718345 / $3)) * 6.9473679177463055e-03 + ($5 * .27726316452026367 + ($6 * -.4166315793991089 + .21557894349098206) + $7 * -.08357894420623779))), HEAPF32[wasm2js_i32$0 >> 2] = wasm2js_f32$0;
     $2 = $2 + 1 | 0;
     if (($2 | 0) != ($1 | 0)) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
   }
  }
@@ -27360,14 +27360,14 @@ function asmFunc(global, env, buffer) {
    $4 = +($1 + -1 | 0 | 0) * .5;
    $5 = $4 * +$2;
    $3 = 0;
-   label$2 : while (1) {
+   while (1) {
     $6 = (+($3 | 0) - $4) / $5;
     (wasm2js_i32$0 = $0 + ($3 << 2 | 0) | 0, wasm2js_f32$0 = Math_fround(+exp(+($6 * ($6 * -.5))))), HEAPF32[wasm2js_i32$0 >> 2] = wasm2js_f32$0;
     $3 = $3 + 1 | 0;
     if (($3 | 0) != ($1 | 0)) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
   }
  }
@@ -27382,13 +27382,13 @@ function asmFunc(global, env, buffer) {
    }
    $3 = +($1 + -1 | 0 | 0);
    $2 = 0;
-   label$2 : while (1) {
+   while (1) {
     (wasm2js_i32$0 = $0 + ($2 << 2 | 0) | 0, wasm2js_f32$0 = Math_fround(+cos(+(+($2 | 0) * 6.283185307179586 / $3)) * -.46000000834465027 + .5400000214576721)), HEAPF32[wasm2js_i32$0 >> 2] = wasm2js_f32$0;
     $2 = $2 + 1 | 0;
     if (($2 | 0) != ($1 | 0)) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
   }
  }
@@ -27403,13 +27403,13 @@ function asmFunc(global, env, buffer) {
    }
    $3 = +($1 + -1 | 0 | 0);
    $2 = 0;
-   label$2 : while (1) {
+   while (1) {
     (wasm2js_i32$0 = $0 + ($2 << 2 | 0) | 0, wasm2js_f32$0 = Math_fround(.5 - +cos(+(+($2 | 0) * 6.283185307179586 / $3)) * .5)), HEAPF32[wasm2js_i32$0 >> 2] = wasm2js_f32$0;
     $2 = $2 + 1 | 0;
     if (($2 | 0) != ($1 | 0)) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
   }
  }
@@ -27424,14 +27424,14 @@ function asmFunc(global, env, buffer) {
    }
    $3 = +($1 + -1 | 0 | 0);
    $2 = 0;
-   label$2 : while (1) {
+   while (1) {
     $4 = +($2 | 0);
     (wasm2js_i32$0 = $0 + ($2 << 2 | 0) | 0, wasm2js_f32$0 = Math_fround(+cos(+($4 * 12.566370614359172 / $3)) * .09799999743700027 + (+cos(+($4 * 6.283185307179586 / $3)) * -.49799999594688416 + .4020000100135803) + +cos(+($4 * 18.84955592153876 / $3)) * -1.0000000474974513e-03)), HEAPF32[wasm2js_i32$0 >> 2] = wasm2js_f32$0;
     $2 = $2 + 1 | 0;
     if (($2 | 0) != ($1 | 0)) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
   }
  }
@@ -27446,14 +27446,14 @@ function asmFunc(global, env, buffer) {
    }
    $3 = +($1 + -1 | 0 | 0);
    $2 = 0;
-   label$2 : while (1) {
+   while (1) {
     $4 = +($2 | 0);
     (wasm2js_i32$0 = $0 + ($2 << 2 | 0) | 0, wasm2js_f32$0 = Math_fround(+cos(+($4 * 12.566370614359172 / $3)) * .13659949600696564 + (+cos(+($4 * 6.283185307179586 / $3)) * -.48917749524116516 + .36358189582824707) + +cos(+($4 * 18.84955592153876 / $3)) * -.010641099885106087)), HEAPF32[wasm2js_i32$0 >> 2] = wasm2js_f32$0;
     $2 = $2 + 1 | 0;
     if (($2 | 0) != ($1 | 0)) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
   }
  }
@@ -27467,13 +27467,13 @@ function asmFunc(global, env, buffer) {
     break label$1
    }
    $2 = 0;
-   label$2 : while (1) {
+   while (1) {
     HEAP32[($0 + ($2 << 2 | 0) | 0) >> 2] = 1065353216;
     $2 = $2 + 1 | 0;
     if (($2 | 0) != ($1 | 0)) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
   }
  }
@@ -27497,27 +27497,27 @@ function asmFunc(global, env, buffer) {
      $4 = ($3 | 0) > (1 | 0) ? $3 : 1;
      $2 = $4 + 1 | 0;
      $3 = 1;
-     label$4 : while (1) {
+     while (1) {
       $7 = Math_fround($3 | 0);
       HEAPF32[((($3 << 2 | 0) + $0 | 0) + -4 | 0) >> 2] = Math_fround(Math_fround($7 + $7) / $6);
       $5 = ($3 | 0) == ($4 | 0);
       $3 = $3 + 1 | 0;
       if (!$5) {
-       continue label$4
+       continue
       }
-      break label$4;
+      break;
      };
     }
     if (($2 | 0) > ($1 | 0)) {
      break label$1
     }
     $7 = Math_fround(Math_fround($1 | 0) + Math_fround(1.0));
-    label$5 : while (1) {
+    while (1) {
      HEAPF32[((($2 << 2 | 0) + $0 | 0) + -4 | 0) >> 2] = Math_fround(Math_fround((($1 - $2 | 0) << 1 | 0) + 2 | 0 | 0) / $7);
      $3 = ($1 | 0) == ($2 | 0);
      $2 = $2 + 1 | 0;
      if (!$3) {
-      continue label$5
+      continue
      }
      break label$1;
     };
@@ -27531,29 +27531,29 @@ function asmFunc(global, env, buffer) {
     $3 = $4 + 1 | 0;
     $6 = Math_fround(Math_fround($1 | 0) + Math_fround(1.0));
     $2 = 1;
-    label$7 : while (1) {
+    while (1) {
      $7 = Math_fround($2 | 0);
      HEAPF32[((($2 << 2 | 0) + $0 | 0) + -4 | 0) >> 2] = Math_fround(Math_fround($7 + $7) / $6);
      $5 = ($2 | 0) == ($4 | 0);
      $2 = $2 + 1 | 0;
      if (!$5) {
-      continue label$7
+      continue
      }
-     break label$7;
+     break;
     };
    }
    if (($3 | 0) > ($1 | 0)) {
     break label$1
    }
    $7 = Math_fround(Math_fround($1 | 0) + Math_fround(1.0));
-   label$8 : while (1) {
+   while (1) {
     HEAPF32[((($3 << 2 | 0) + $0 | 0) + -4 | 0) >> 2] = Math_fround(Math_fround((($1 - $3 | 0) << 1 | 0) + 2 | 0 | 0) / $7);
     $2 = ($1 | 0) != ($3 | 0);
     $3 = $3 + 1 | 0;
     if ($2) {
-     continue label$8
+     continue
     }
-    break label$8;
+    break;
    };
   }
  }
@@ -27572,11 +27572,11 @@ function asmFunc(global, env, buffer) {
      break label$1
     }
     $3 = 0;
-    label$3 : while (1) {
+    while (1) {
      HEAP32[($0 + ($3 << 2 | 0) | 0) >> 2] = 1065353216;
      $3 = $3 + 1 | 0;
      if (($3 | 0) != ($1 | 0)) {
-      continue label$3
+      continue
      }
      break label$1;
     };
@@ -27590,11 +27590,11 @@ function asmFunc(global, env, buffer) {
     }
     $6 = +($1 + -1 | 0 | 0);
     $3 = 0;
-    label$5 : while (1) {
+    while (1) {
      (wasm2js_i32$0 = $0 + ($3 << 2 | 0) | 0, wasm2js_f32$0 = Math_fround(.5 - +cos(+(+($3 | 0) * 6.283185307179586 / $6)) * .5)), HEAPF32[wasm2js_i32$0 >> 2] = wasm2js_f32$0;
      $3 = $3 + 1 | 0;
      if (($3 | 0) != ($1 | 0)) {
-      continue label$5
+      continue
      }
      break label$1;
     };
@@ -27615,13 +27615,13 @@ function asmFunc(global, env, buffer) {
      break label$8
     }
     $3 = 0;
-    label$9 : while (1) {
+    while (1) {
      HEAP32[($0 + ($3 << 2 | 0) | 0) >> 2] = 1065353216;
      $3 = $3 + 1 | 0;
      if (($3 | 0) != ($1 | 0)) {
-      continue label$9
+      continue
      }
-     break label$9;
+     break;
     };
    }
    if (($4 | 0) < (2 | 0)) {
@@ -27631,14 +27631,14 @@ function asmFunc(global, env, buffer) {
    $5 = $4 + -1 | 0;
    $6 = +($5 | 0);
    $3 = 0;
-   label$10 : while (1) {
+   while (1) {
     (wasm2js_i32$0 = $0 + ($3 << 2 | 0) | 0, wasm2js_f32$0 = Math_fround(.5 - +cos(+(+($3 | 0) * 3.141592653589793 / $6)) * .5)), HEAPF32[wasm2js_i32$0 >> 2] = wasm2js_f32$0;
     (wasm2js_i32$0 = $0 + (($1 + $3 | 0) << 2 | 0) | 0, wasm2js_f32$0 = Math_fround(.5 - +cos(+(+($3 + $5 | 0 | 0) * 3.141592653589793 / $6)) * .5)), HEAPF32[wasm2js_i32$0 >> 2] = wasm2js_f32$0;
     $3 = $3 + 1 | 0;
     if (($3 | 0) != ($4 | 0)) {
-     continue label$10
+     continue
     }
-    break label$10;
+    break;
    };
   }
  }
@@ -27650,17 +27650,17 @@ function asmFunc(global, env, buffer) {
   $3 = Math_fround($3);
   $4 = Math_fround($4);
   var $8 = 0, $9 = 0, $7 = 0, $10 = 0, $5 = 0, $6 = 0, $12 = Math_fround(0), $11 = 0, $13 = 0.0, wasm2js_i32$0 = 0, wasm2js_f32$0 = Math_fround(0);
-  label$1 : while (1) {
+  while (1) {
    $12 = $2;
    $2 = Math_fround(.05000000074505806);
    if ($12 <= Math_fround(0.0)) {
-    continue label$1
+    continue
    }
    $2 = Math_fround(.949999988079071);
    if ($12 >= Math_fround(1.0)) {
-    continue label$1
+    continue
    }
-   break label$1;
+   break;
   };
   label$2 : {
    label$3 : {
@@ -27710,13 +27710,13 @@ function asmFunc(global, env, buffer) {
    $11 = $8 >>> 0 < $10 >>> 0 ? $8 : $10;
    memset($0 | 0, 0 | 0, ($11 << 2 | 0) + 4 | 0 | 0) | 0;
    $8 = $11 + 1 | 0;
-   label$9 : while (1) {
+   while (1) {
     $10 = ($9 | 0) == ($11 | 0);
     $9 = $9 + 1 | 0;
     if (!$10) {
-     continue label$9
+     continue
     }
-    break label$9;
+    break;
    };
   }
   label$10 : {
@@ -27729,7 +27729,7 @@ function asmFunc(global, env, buffer) {
    }
    $13 = +($7 | 0);
    $9 = 1;
-   label$11 : while (1) {
+   while (1) {
     (wasm2js_i32$0 = $0 + ($8 << 2 | 0) | 0, wasm2js_f32$0 = Math_fround(.5 - +cos(+(+($9 | 0) * 3.141592653589793 / $13)) * .5)), HEAPF32[wasm2js_i32$0 >> 2] = wasm2js_f32$0;
     $8 = $8 + 1 | 0;
     if (($8 | 0) >= ($10 | 0)) {
@@ -27737,9 +27737,9 @@ function asmFunc(global, env, buffer) {
     }
     $9 = $9 + 1 | 0;
     if (($8 | 0) < ($1 | 0)) {
-     continue label$11
+     continue
     }
-    break label$11;
+    break;
    };
   }
   label$12 : {
@@ -27750,16 +27750,16 @@ function asmFunc(global, env, buffer) {
    if (($8 | 0) >= ($1 | 0)) {
     break label$12
    }
-   label$13 : while (1) {
+   while (1) {
     HEAP32[($0 + ($8 << 2 | 0) | 0) >> 2] = 1065353216;
     $8 = $8 + 1 | 0;
     if (($8 | 0) >= ($9 | 0)) {
      break label$12
     }
     if (($8 | 0) < ($1 | 0)) {
-     continue label$13
+     continue
     }
-    break label$13;
+    break;
    };
   }
   label$14 : {
@@ -27770,7 +27770,7 @@ function asmFunc(global, env, buffer) {
     break label$14
    }
    $13 = +($7 | 0);
-   label$15 : while (1) {
+   while (1) {
     (wasm2js_i32$0 = $0 + ($8 << 2 | 0) | 0, wasm2js_f32$0 = Math_fround(.5 - +cos(+(+($7 | 0) * 3.141592653589793 / $13)) * .5)), HEAPF32[wasm2js_i32$0 >> 2] = wasm2js_f32$0;
     $8 = $8 + 1 | 0;
     if (($8 | 0) >= ($6 | 0)) {
@@ -27778,9 +27778,9 @@ function asmFunc(global, env, buffer) {
     }
     $7 = $7 + -1 | 0;
     if (($8 | 0) < ($1 | 0)) {
-     continue label$15
+     continue
     }
-    break label$15;
+    break;
    };
   }
   label$16 : {
@@ -27798,17 +27798,17 @@ function asmFunc(global, env, buffer) {
   $3 = Math_fround($3);
   $4 = Math_fround($4);
   var $10 = 0, $6 = 0, $8 = 0, $12 = Math_fround(0), $9 = 0, $13 = 0.0, $7 = 0, $5 = 0, $11 = 0, wasm2js_i32$0 = 0, wasm2js_f32$0 = Math_fround(0);
-  label$1 : while (1) {
+  while (1) {
    $12 = $2;
    $2 = Math_fround(.05000000074505806);
    if ($12 <= Math_fround(0.0)) {
-    continue label$1
+    continue
    }
    $2 = Math_fround(.949999988079071);
    if ($12 >= Math_fround(1.0)) {
-    continue label$1
+    continue
    }
-   break label$1;
+   break;
   };
   $2 = Math_fround($12 * Math_fround(.5));
   label$2 : {
@@ -27869,14 +27869,14 @@ function asmFunc(global, env, buffer) {
    $13 = +($6 | 0);
    $8 = 0;
    $11 = 1;
-   label$11 : while (1) {
+   while (1) {
     (wasm2js_i32$0 = $0 + ($8 << 2 | 0) | 0, wasm2js_f32$0 = Math_fround(.5 - +cos(+(+($11 | 0) * 3.141592653589793 / $13)) * .5)), HEAPF32[wasm2js_i32$0 >> 2] = wasm2js_f32$0;
     $11 = $11 + 1 | 0;
     $8 = $8 + 1 | 0;
     if (($8 | 0) != ($10 | 0)) {
-     continue label$11
+     continue
     }
-    break label$11;
+    break;
    };
   }
   label$12 : {
@@ -27887,16 +27887,16 @@ function asmFunc(global, env, buffer) {
    if (($10 | 0) >= ($1 | 0)) {
     break label$12
    }
-   label$13 : while (1) {
+   while (1) {
     HEAP32[($0 + ($10 << 2 | 0) | 0) >> 2] = 1065353216;
     $10 = $10 + 1 | 0;
     if (($10 | 0) >= ($8 | 0)) {
      break label$12
     }
     if (($10 | 0) < ($1 | 0)) {
-     continue label$13
+     continue
     }
-    break label$13;
+    break;
    };
   }
   label$14 : {
@@ -27907,7 +27907,7 @@ function asmFunc(global, env, buffer) {
     break label$14
    }
    $13 = +($6 | 0);
-   label$15 : while (1) {
+   while (1) {
     (wasm2js_i32$0 = $0 + ($10 << 2 | 0) | 0, wasm2js_f32$0 = Math_fround(.5 - +cos(+(+($6 | 0) * 3.141592653589793 / $13)) * .5)), HEAPF32[wasm2js_i32$0 >> 2] = wasm2js_f32$0;
     $10 = $10 + 1 | 0;
     if (($10 | 0) >= ($5 | 0)) {
@@ -27915,9 +27915,9 @@ function asmFunc(global, env, buffer) {
     }
     $6 = $6 + -1 | 0;
     if (($10 | 0) < ($1 | 0)) {
-     continue label$15
+     continue
     }
-    break label$15;
+    break;
    };
   }
   label$16 : {
@@ -27931,15 +27931,15 @@ function asmFunc(global, env, buffer) {
    $8 = $6 + $7 | 0;
    $6 = $6 + $1 | 0;
    memset($0 + ($10 << 2 | 0) | 0 | 0, 0 | 0, (($8 >>> 0 < $6 >>> 0 ? $8 : $6) << 2 | 0) + 4 | 0 | 0) | 0;
-   label$17 : while (1) {
+   while (1) {
     $10 = $10 + 1 | 0;
     if (($10 | 0) >= ($7 | 0)) {
      break label$16
     }
     if (($10 | 0) < ($1 | 0)) {
-     continue label$17
+     continue
     }
-    break label$17;
+    break;
    };
   }
   label$18 : {
@@ -27952,7 +27952,7 @@ function asmFunc(global, env, buffer) {
    }
    $13 = +($9 | 0);
    $6 = 1;
-   label$19 : while (1) {
+   while (1) {
     (wasm2js_i32$0 = $0 + ($10 << 2 | 0) | 0, wasm2js_f32$0 = Math_fround(.5 - +cos(+(+($6 | 0) * 3.141592653589793 / $13)) * .5)), HEAPF32[wasm2js_i32$0 >> 2] = wasm2js_f32$0;
     $10 = $10 + 1 | 0;
     if (($10 | 0) >= ($8 | 0)) {
@@ -27960,9 +27960,9 @@ function asmFunc(global, env, buffer) {
     }
     $6 = $6 + 1 | 0;
     if (($10 | 0) < ($1 | 0)) {
-     continue label$19
+     continue
     }
-    break label$19;
+    break;
    };
   }
   label$20 : {
@@ -27973,16 +27973,16 @@ function asmFunc(global, env, buffer) {
    if (($10 | 0) >= ($1 | 0)) {
     break label$20
    }
-   label$21 : while (1) {
+   while (1) {
     HEAP32[($0 + ($10 << 2 | 0) | 0) >> 2] = 1065353216;
     $10 = $10 + 1 | 0;
     if (($10 | 0) >= ($6 | 0)) {
      break label$20
     }
     if (($10 | 0) < ($1 | 0)) {
-     continue label$21
+     continue
     }
-    break label$21;
+    break;
    };
   }
   label$22 : {
@@ -27990,14 +27990,14 @@ function asmFunc(global, env, buffer) {
     break label$22
    }
    $13 = +($9 | 0);
-   label$23 : while (1) {
+   while (1) {
     (wasm2js_i32$0 = $0 + ($10 << 2 | 0) | 0, wasm2js_f32$0 = Math_fround(.5 - +cos(+(+($9 | 0) * 3.141592653589793 / $13)) * .5)), HEAPF32[wasm2js_i32$0 >> 2] = wasm2js_f32$0;
     $9 = $9 + -1 | 0;
     $10 = $10 + 1 | 0;
     if (($10 | 0) != ($1 | 0)) {
-     continue label$23
+     continue
     }
-    break label$23;
+    break;
    };
   }
  }
@@ -28012,14 +28012,14 @@ function asmFunc(global, env, buffer) {
    }
    $3 = +($1 + -1 | 0 | 0) * .5;
    $2 = 0;
-   label$2 : while (1) {
+   while (1) {
     $4 = (+($2 | 0) - $3) / $3;
     HEAPF32[($0 + ($2 << 2 | 0) | 0) >> 2] = Math_fround(1.0 - $4 * $4);
     $2 = $2 + 1 | 0;
     if (($2 | 0) != ($1 | 0)) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
   }
  }
@@ -28128,7 +28128,7 @@ function asmFunc(global, env, buffer) {
          }
          break label$1;
         }
-        label$13 : while (1) {
+        while (1) {
          $3 = Math_imul($2, 24);
          i64toi32_i32$2 = (HEAP32[($0 + 20 | 0) >> 2] | 0) + $3 | 0;
          i64toi32_i32$1 = HEAP32[i64toi32_i32$2 >> 2] | 0;
@@ -28149,7 +28149,7 @@ function asmFunc(global, env, buffer) {
          if ($2 >>> 0 >= (HEAP32[($0 + 16 | 0) >> 2] | 0) >>> 0) {
           break label$3
          }
-         continue label$13;
+         continue;
         };
        }
        if (!(FLAC__bitwriter_write_raw_uint32_little_endian($1 | 0, $3 | 0) | 0)) {
@@ -28166,7 +28166,7 @@ function asmFunc(global, env, buffer) {
        }
        $4 = 0;
        $2 = 0;
-       label$14 : while (1) {
+       while (1) {
         $3 = $2 << 3 | 0;
         if (!(FLAC__bitwriter_write_raw_uint32_little_endian($1 | 0, HEAP32[((HEAP32[($0 + 28 | 0) >> 2] | 0) + $3 | 0) >> 2] | 0 | 0) | 0)) {
          break label$1
@@ -28179,7 +28179,7 @@ function asmFunc(global, env, buffer) {
         if ($2 >>> 0 >= (HEAP32[($0 + 24 | 0) >> 2] | 0) >>> 0) {
          break label$3
         }
-        continue label$14;
+        continue;
        };
       }
       if (!(FLAC__bitwriter_write_byte_block($1 | 0, $0 + 16 | 0 | 0, (HEAP32[global$26 >> 2] | 0) >>> 3 | 0 | 0) | 0)) {
@@ -28216,7 +28216,7 @@ function asmFunc(global, env, buffer) {
       $15 = HEAP32[global$40 >> 2] | 0;
       $4 = 0;
       $16 = 0;
-      label$15 : while (1) {
+      while (1) {
        $2 = (HEAP32[($0 + 168 | 0) >> 2] | 0) + ($16 << 5 | 0) | 0;
        i64toi32_i32$2 = $2;
        i64toi32_i32$0 = HEAP32[$2 >> 2] | 0;
@@ -28249,7 +28249,7 @@ function asmFunc(global, env, buffer) {
         }
         $7 = $2 + 24 | 0;
         $2 = 0;
-        label$17 : while (1) {
+        while (1) {
          label$18 : {
           $3 = (HEAP32[$7 >> 2] | 0) + ($2 << 4 | 0) | 0;
           i64toi32_i32$2 = $3;
@@ -28274,15 +28274,15 @@ function asmFunc(global, env, buffer) {
           if ($2 >>> 0 >= (HEAPU8[$17 >> 0] | 0) >>> 0) {
            break label$16
           }
-          continue label$17;
+          continue;
          }
-         break label$17;
+         break;
         };
         return 0 | 0;
        }
        $16 = $16 + 1 | 0;
        if ($16 >>> 0 < (HEAP32[($0 + 164 | 0) >> 2] | 0) >>> 0) {
-        continue label$15
+        continue
        }
        break label$3;
       };
@@ -28341,7 +28341,7 @@ function asmFunc(global, env, buffer) {
   $0 = $0 | 0;
   $1 = $1 | 0;
   var $6 = 0, $3 = 0, $2 = 0, $7 = 0, $8 = 0, $4 = 0, $5 = 0, $10 = 0, $9 = 0, i64toi32_i32$1 = 0;
-  label$1 : {
+  {
    $2 = global$0 - 16 | 0;
    $9 = $2;
    if ($2 >>> 0 < global$86 >>> 0) {
@@ -28687,7 +28687,7 @@ function asmFunc(global, env, buffer) {
    $3 = global$69;
    $3 = (FLAC__bitwriter_write_raw_uint32($1 | 0, HEAPU8[($2 + 15 | 0) >> 0] | 0 | 0, HEAP32[$3 >> 2] | 0 | 0) | 0 | 0) != (0 | 0);
   }
-  label$46 : {
+  {
    $10 = $2 + 16 | 0;
    if ($10 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -28747,7 +28747,7 @@ function asmFunc(global, env, buffer) {
     }
     $3 = 0;
     label$4 : {
-     label$5 : while (1) {
+     while (1) {
       if (!(FLAC__bitwriter_write_raw_int32($4 | 0, HEAP32[(($0 + ($3 << 2 | 0) | 0) + 16 | 0) >> 2] | 0 | 0, $2 | 0) | 0)) {
        break label$4
       }
@@ -28755,7 +28755,7 @@ function asmFunc(global, env, buffer) {
       if ($3 >>> 0 >= (HEAP32[($0 + 12 | 0) >> 2] | 0) >>> 0) {
        break label$3
       }
-      continue label$5;
+      continue;
      };
     }
     return 0 | 0;
@@ -28830,7 +28830,7 @@ function asmFunc(global, env, buffer) {
      }
      $7 = 0;
      label$5 : {
-      label$6 : while (1) {
+      while (1) {
        if (!(FLAC__bitwriter_write_raw_int32($0 | 0, HEAP32[($1 + ($7 << 2 | 0) | 0) >> 2] | 0 | 0, HEAP32[$5 >> 2] | 0 | 0) | 0)) {
         break label$5
        }
@@ -28838,7 +28838,7 @@ function asmFunc(global, env, buffer) {
        if (($7 | 0) == ($2 | 0)) {
         break label$1
        }
-       continue label$6;
+       continue;
       };
      }
      return 0 | 0;
@@ -28847,7 +28847,7 @@ function asmFunc(global, env, buffer) {
     $13 = HEAP32[global$57 >> 2] | 0;
     $2 = 0;
     $14 = 0;
-    label$7 : while (1) {
+    while (1) {
      $15 = $12 - ($14 ? 0 : $3) | 0;
      $7 = $2;
      $2 = $15 + $7 | 0;
@@ -28878,23 +28878,23 @@ function asmFunc(global, env, buffer) {
       if ($7 >>> 0 >= $2 >>> 0) {
        break label$8
       }
-      label$10 : while (1) {
+      while (1) {
        if (!(FLAC__bitwriter_write_raw_int32($0 | 0, HEAP32[($1 + ($7 << 2 | 0) | 0) >> 2] | 0 | 0, HEAP32[$8 >> 2] | 0 | 0) | 0)) {
         break label$2
        }
        $7 = $7 + 1 | 0;
        if (($7 | 0) != ($2 | 0)) {
-        continue label$10
+        continue
        }
-       break label$10;
+       break;
       };
      }
      $11 = 1;
      $14 = $14 + 1 | 0;
      if (!($14 >>> $6 | 0)) {
-      continue label$7
+      continue
      }
-     break label$7;
+     break;
     };
    }
    return $11 | 0;
@@ -28928,7 +28928,7 @@ function asmFunc(global, env, buffer) {
     }
     $3 = 0;
     label$4 : {
-     label$5 : while (1) {
+     while (1) {
       if (!(FLAC__bitwriter_write_raw_int32($4 | 0, HEAP32[(($0 + ($3 << 2 | 0) | 0) + 152 | 0) >> 2] | 0 | 0, $2 | 0) | 0)) {
        break label$4
       }
@@ -28936,7 +28936,7 @@ function asmFunc(global, env, buffer) {
       if ($3 >>> 0 >= (HEAP32[($0 + 12 | 0) >> 2] | 0) >>> 0) {
        break label$3
       }
-      continue label$5;
+      continue;
      };
     }
     return 0 | 0;
@@ -28954,7 +28954,7 @@ function asmFunc(global, env, buffer) {
     }
     $3 = 0;
     label$7 : {
-     label$8 : while (1) {
+     while (1) {
       if (!(FLAC__bitwriter_write_raw_int32($4 | 0, HEAP32[(($0 + ($3 << 2 | 0) | 0) + 24 | 0) >> 2] | 0 | 0, HEAP32[($0 + 16 | 0) >> 2] | 0 | 0) | 0)) {
        break label$7
       }
@@ -28962,7 +28962,7 @@ function asmFunc(global, env, buffer) {
       if ($3 >>> 0 >= (HEAP32[($0 + 12 | 0) >> 2] | 0) >>> 0) {
        break label$6
       }
-      continue label$8;
+      continue;
      };
     }
     return 0 | 0;
@@ -29021,15 +29021,15 @@ function asmFunc(global, env, buffer) {
    }
    $3 = 0;
    label$4 : {
-    label$5 : while (1) {
+    while (1) {
      if (!(FLAC__bitwriter_write_raw_int32($4 | 0, HEAP32[($0 + ($3 << 2 | 0) | 0) >> 2] | 0 | 0, $2 | 0) | 0)) {
       break label$4
      }
      $3 = $3 + 1 | 0;
      if (($3 | 0) != ($1 | 0)) {
-      continue label$5
+      continue
      }
-     break label$5;
+     break;
     };
     return 1 | 0;
    }
@@ -29056,7 +29056,7 @@ function asmFunc(global, env, buffer) {
     break label$2
    }
    label$3 : {
-    label$4 : while (1) {
+    while (1) {
      $5 = HEAPU8[$1 >> 0] | 0;
      if (($4 & 255 | 0 | 0) != ($5 | 0)) {
       break label$3
@@ -29072,7 +29072,7 @@ function asmFunc(global, env, buffer) {
      $4 = HEAPU8[($0 + 1 | 0) >> 0] | 0;
      $0 = $0 + 1 | 0;
      if ($4) {
-      continue label$4
+      continue
      }
      break label$2;
     };
@@ -29085,7 +29085,7 @@ function asmFunc(global, env, buffer) {
  function __uflow($0) {
   $0 = $0 | 0;
   var $1 = 0, $2 = 0, $4 = 0, $3 = 0;
-  label$1 : {
+  {
    $1 = global$0 - 16 | 0;
    $3 = $1;
    if ($1 >>> 0 < global$86 >>> 0) {
@@ -29103,7 +29103,7 @@ function asmFunc(global, env, buffer) {
    }
    $2 = HEAPU8[($1 + 15 | 0) >> 0] | 0;
   }
-  label$4 : {
+  {
    $4 = $1 + 16 | 0;
    if ($4 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -29336,7 +29336,7 @@ function asmFunc(global, env, buffer) {
   $0 = $0 | 0;
   $1 = Math_fround($1);
   var i64toi32_i32$1 = 0, i64toi32_i32$5 = 0, i64toi32_i32$0 = 0, i64toi32_i32$2 = 0, i64toi32_i32$3 = 0, $4 = 0, i64toi32_i32$4 = 0, $2 = 0, $7 = 0, $7$hi = 0, $8 = 0, $8$hi = 0, $3 = 0, $26 = 0, $27 = 0, $28 = 0, $29 = 0, $6 = 0, $5 = 0, $36 = 0, $44 = 0, $44$hi = 0, $48$hi = 0, $54 = 0, $55 = 0, $55$hi = 0, $59$hi = 0, $60 = 0;
-  label$1 : {
+  {
    $2 = global$0 - 16 | 0;
    $5 = $2;
    if ($2 >>> 0 < global$86 >>> 0) {
@@ -29487,7 +29487,7 @@ function asmFunc(global, env, buffer) {
   i64toi32_i32$5 = $54;
   HEAP32[(i64toi32_i32$5 + 8 | 0) >> 2] = $60;
   HEAP32[(i64toi32_i32$5 + 12 | 0) >> 2] = i64toi32_i32$0;
-  label$7 : {
+  {
    $6 = $2 + 16 | 0;
    if ($6 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -29500,7 +29500,7 @@ function asmFunc(global, env, buffer) {
   $0 = $0 | 0;
   $1 = $1 | 0;
   var i64toi32_i32$2 = 0, i64toi32_i32$1 = 0, i64toi32_i32$0 = 0, i64toi32_i32$5 = 0, i64toi32_i32$3 = 0, $3 = 0, i64toi32_i32$4 = 0, $2 = 0, $6 = 0, $6$hi = 0, $7 = 0, $7$hi = 0, $23 = 0, $24 = 0, $5 = 0, $4 = 0, $25 = 0, $33 = 0, $33$hi = 0, $37$hi = 0, $38 = 0, $38$hi = 0, $42$hi = 0;
-  label$1 : {
+  {
    $2 = global$0 - 16 | 0;
    $4 = $2;
    if ($2 >>> 0 < global$86 >>> 0) {
@@ -29594,7 +29594,7 @@ function asmFunc(global, env, buffer) {
   i64toi32_i32$5 = $7$hi;
   HEAP32[(i64toi32_i32$2 + 8 | 0) >> 2] = $7;
   HEAP32[(i64toi32_i32$2 + 12 | 0) >> 2] = i64toi32_i32$5;
-  label$5 : {
+  {
    $5 = $2 + 16 | 0;
    if ($5 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -29614,7 +29614,7 @@ function asmFunc(global, env, buffer) {
   $4 = $4 | 0;
   $4$hi = $4$hi | 0;
   var i64toi32_i32$0 = 0, i64toi32_i32$1 = 0, i64toi32_i32$2 = 0, i64toi32_i32$3 = 0, i64toi32_i32$5 = 0, i64toi32_i32$4 = 0, $5 = 0, $16$hi = 0, $16 = 0, $14$hi = 0, $13$hi = 0, $12$hi = 0, $17$hi = 0, $14 = 0, $6 = 0, $17 = 0, $13 = 0, $12 = 0, $20$hi = 0, $8 = 0, $20 = 0, $15$hi = 0, $18$hi = 0, $19$hi = 0, $7 = 0, $15 = 0, $18 = 0, $19 = 0, $21$hi = 0, $24$hi = 0, $21 = 0, $9 = 0, $22$hi = 0, $23$hi = 0, $25$hi = 0, $26$hi = 0, $230 = 0, $231 = 0, $232 = 0, $234 = 0, $235 = 0, $236 = 0, $237 = 0, $238 = 0, $239 = 0, $240 = 0, $241 = 0, $243 = 0, $244 = 0, $245 = 0, $246 = 0, $247 = 0, $248 = 0, $250 = 0, $252 = 0, $254 = 0, $255 = 0, $257 = 0, $22 = 0, $258 = 0, $260 = 0, $23 = 0, $24 = 0, $262 = 0, $26 = 0, $263 = 0, $264 = 0, $265 = 0, $266 = 0, $267 = 0, $268 = 0, $269 = 0, $271 = 0, $272 = 0, $273 = 0, $274 = 0, $276 = 0, $277 = 0, $278 = 0, $279 = 0, $280 = 0, $11 = 0, $10 = 0, $35 = 0, $35$hi = 0, $37$hi = 0, $40 = 0, $40$hi = 0, $42$hi = 0, $45 = 0, $45$hi = 0, $49$hi = 0, $76 = 0, $80 = 0, $87 = 0, $91 = 0, $100 = 0, $100$hi = 0, $112 = 0, $112$hi = 0, $134 = 0, $135 = 0, $135$hi = 0, $136 = 0, $136$hi = 0, $143$hi = 0, $146$hi = 0, $156 = 0, $156$hi = 0, $161$hi = 0, $168 = 0, $169 = 0, $169$hi = 0, $170 = 0, $170$hi = 0, $177$hi = 0, $180$hi = 0, $192 = 0, $192$hi = 0, $197$hi = 0, $200 = 0, $200$hi = 0, $202$hi = 0, $213 = 0, $213$hi = 0, $221 = 0, $221$hi = 0, $228 = 0, $228$hi = 0, $233 = 0, $233$hi = 0, $242 = 0, $242$hi = 0, $249 = 0, $249$hi = 0, $251 = 0, $251$hi = 0, $253 = 0, $253$hi = 0, $256 = 0, $258$hi = 0, $259 = 0, $259$hi = 0, $261 = 0, $261$hi = 0, $270 = 0, $270$hi = 0, $275 = 0, $275$hi = 0, $283 = 0, $283$hi = 0, $286$hi = 0, $25 = 0, $302 = 0, $302$hi = 0, $306 = 0, $307 = 0, $307$hi = 0, $311 = 0, $311$hi = 0, $315 = 0, $316$hi = 0, $317 = 0, $317$hi = 0, $318 = 0, $318$hi = 0, $321 = 0, $322$hi = 0, $325 = 0, $326$hi = 0, $327$hi = 0, $331 = 0, $332$hi = 0, $333$hi = 0, $336 = 0, $336$hi = 0, $337 = 0, $337$hi = 0, $344 = 0, $344$hi = 0, $350 = 0, $350$hi = 0, $352$hi = 0, $353 = 0, $353$hi = 0, $354 = 0, $354$hi = 0, $355 = 0, $355$hi = 0, $357$hi = 0, $361 = 0, $362$hi = 0, $363 = 0, $363$hi = 0, $364 = 0, $364$hi = 0, $366 = 0, $366$hi = 0, $369 = 0, $370$hi = 0, $373 = 0, $374$hi = 0, $375$hi = 0, $378 = 0, $379$hi = 0, $381$hi = 0, $382 = 0, $382$hi = 0, $386 = 0, $387$hi = 0, $388 = 0, $388$hi = 0, $389 = 0, $389$hi = 0, $392 = 0, $393$hi = 0, $396 = 0, $397$hi = 0, $398$hi = 0, $402 = 0, $403$hi = 0, $413 = 0, $413$hi = 0, $415$hi = 0, $418 = 0, $418$hi = 0, $420$hi = 0, $424 = 0, $424$hi = 0, $426$hi = 0, $460 = 0, $460$hi = 0, $462 = 0, $462$hi = 0, $463 = 0, $463$hi = 0, $465 = 0, $465$hi = 0, $469 = 0, $469$hi = 0, $471 = 0, $472$hi = 0, $477 = 0, $477$hi = 0, $481 = 0, $481$hi = 0, $490$hi = 0, $492 = 0, $492$hi = 0, $498 = 0, $504 = 0, $504$hi = 0, $509 = 0, $510$hi = 0, $514 = 0, $514$hi = 0, $518 = 0, $518$hi = 0, $521 = 0, $521$hi = 0, $525 = 0, $526$hi = 0;
-  label$1 : {
+  {
    $5 = global$0 - 96 | 0;
    $10 = $5;
    if ($5 >>> 0 < global$86 >>> 0) {
@@ -31472,7 +31472,7 @@ function asmFunc(global, env, buffer) {
   i64toi32_i32$3 = $16$hi;
   HEAP32[(i64toi32_i32$4 + 8 | 0) >> 2] = $16;
   HEAP32[(i64toi32_i32$4 + 12 | 0) >> 2] = i64toi32_i32$3;
-  label$23 : {
+  {
    $11 = $5 + 96 | 0;
    if ($11 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -31492,7 +31492,7 @@ function asmFunc(global, env, buffer) {
   $4 = $4 | 0;
   $4$hi = $4$hi | 0;
   var i64toi32_i32$5 = 0, i64toi32_i32$4 = 0, i64toi32_i32$1 = 0, i64toi32_i32$2 = 0, i64toi32_i32$3 = 0, i64toi32_i32$0 = 0, $6 = 0, $7 = 0, $5 = 0, $11$hi = 0, $11 = 0, $12$hi = 0, $13$hi = 0, $12 = 0, $13 = 0, i64toi32_i32$6 = 0, $14$hi = 0, $8 = 0, $125 = 0, $126 = 0, $128 = 0, $129 = 0, $131 = 0, $132 = 0, $133 = 0, $134 = 0, $135 = 0, $14 = 0, $136 = 0, $137 = 0, $138 = 0, $139 = 0, $140 = 0, $141 = 0, $142 = 0, $143 = 0, $144 = 0, $145 = 0, $146 = 0, $147 = 0, $10 = 0, $9 = 0, $27 = 0, $33 = 0, $34$hi = 0, $38 = 0, $45 = 0, $49 = 0, $50$hi = 0, $54 = 0, $59 = 0, $61 = 0, $69 = 0, $71 = 0, $79 = 0, $79$hi = 0, $85 = 0, $85$hi = 0, $89 = 0, $89$hi = 0, $99 = 0, $99$hi = 0, $127 = 0, $130 = 0, $157 = 0, $158 = 0, $158$hi = 0, $159 = 0, $159$hi = 0, $166$hi = 0, $169$hi = 0, $189 = 0, $190 = 0, $190$hi = 0, $191 = 0, $191$hi = 0, $198$hi = 0, $201$hi = 0, $214 = 0, $214$hi = 0, $216$hi = 0, $220 = 0, $220$hi = 0, $222$hi = 0, $248 = 0, $248$hi = 0, $250 = 0, $250$hi = 0, $254 = 0, $254$hi = 0, $256 = 0, $257$hi = 0, $275$hi = 0, $278 = 0, $279$hi = 0, $288 = 0, $289 = 0, $289$hi = 0, $290 = 0, $290$hi = 0, $297$hi = 0, $300$hi = 0, $315 = 0, $315$hi = 0, $321 = 0, $322$hi = 0, $328 = 0, $328$hi = 0, $330$hi = 0, $331 = 0, $331$hi = 0, $333 = 0, $333$hi = 0, $360 = 0, $360$hi = 0, $362 = 0, $362$hi = 0, $366 = 0, $366$hi = 0, $368 = 0, $369$hi = 0, $376$hi = 0, $378 = 0, $378$hi = 0, $381$hi = 0, $382 = 0, $382$hi = 0, $384 = 0, $384$hi = 0, $386$hi = 0, $394$hi = 0, $398 = 0, $399$hi = 0, $400 = 0, $400$hi = 0, $148 = 0, $411 = 0, $412$hi = 0;
-  label$1 : {
+  {
    $5 = global$0 - 112 | 0;
    $9 = $5;
    if ($5 >>> 0 < global$86 >>> 0) {
@@ -32712,7 +32712,7 @@ function asmFunc(global, env, buffer) {
   i64toi32_i32$4 = $4$hi;
   HEAP32[(i64toi32_i32$5 + 8 | 0) >> 2] = $4;
   HEAP32[(i64toi32_i32$5 + 12 | 0) >> 2] = i64toi32_i32$4;
-  label$20 : {
+  {
    $10 = $5 + 112 | 0;
    if ($10 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -32725,7 +32725,7 @@ function asmFunc(global, env, buffer) {
   $0 = $0 | 0;
   $1 = +$1;
   var i64toi32_i32$3 = 0, i64toi32_i32$5 = 0, i64toi32_i32$4 = 0, i64toi32_i32$0 = 0, i64toi32_i32$1 = 0, i64toi32_i32$2 = 0, $7 = 0, $7$hi = 0, $2 = 0, $6 = 0, $6$hi = 0, $8 = 0, $8$hi = 0, $28 = 0, $29 = 0, $30 = 0, $31 = 0, $32 = 0, $3 = 0, $33 = 0, $5 = 0, $4 = 0, $38 = 0, $39 = 0, $39$hi = 0, $43 = 0, $56 = 0, $56$hi = 0, $60$hi = 0, $69 = 0, $69$hi = 0, $70 = 0;
-  label$1 : {
+  {
    $2 = global$0 - 16 | 0;
    $4 = $2;
    if ($2 >>> 0 < global$86 >>> 0) {
@@ -32934,7 +32934,7 @@ function asmFunc(global, env, buffer) {
   i64toi32_i32$4 = $0;
   HEAP32[(i64toi32_i32$4 + 8 | 0) >> 2] = $70;
   HEAP32[(i64toi32_i32$4 + 12 | 0) >> 2] = i64toi32_i32$5;
-  label$7 : {
+  {
    $5 = $2 + 16 | 0;
    if ($5 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -33521,7 +33521,7 @@ function asmFunc(global, env, buffer) {
   $0 = $0 | 0;
   $1 = $1 | 0;
   var i64toi32_i32$1 = 0, i64toi32_i32$0 = 0, i64toi32_i32$2 = 0, i64toi32_i32$5 = 0, i64toi32_i32$4 = 0, i64toi32_i32$3 = 0, $2 = 0, $5 = 0, $5$hi = 0, $6 = 0, $6$hi = 0, $19 = 0, $4 = 0, $3 = 0, $17 = 0, $26 = 0, $26$hi = 0, $30$hi = 0;
-  label$1 : {
+  {
    $2 = global$0 - 16 | 0;
    $3 = $2;
    if ($2 >>> 0 < global$86 >>> 0) {
@@ -33593,7 +33593,7 @@ function asmFunc(global, env, buffer) {
   i64toi32_i32$1 = $6$hi;
   HEAP32[(i64toi32_i32$5 + 8 | 0) >> 2] = $6;
   HEAP32[(i64toi32_i32$5 + 12 | 0) >> 2] = i64toi32_i32$1;
-  label$5 : {
+  {
    $4 = $2 + 16 | 0;
    if ($4 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -33613,7 +33613,7 @@ function asmFunc(global, env, buffer) {
   $4 = $4 | 0;
   $4$hi = $4$hi | 0;
   var i64toi32_i32$0 = 0, $5 = 0, i64toi32_i32$3 = 0, i64toi32_i32$2 = 0, i64toi32_i32$1 = 0, $7 = 0, $6 = 0, $20 = 0, $20$hi = 0, $23 = 0, $26 = 0;
-  label$1 : {
+  {
    $5 = global$0 - 16 | 0;
    $6 = $5;
    if ($5 >>> 0 < global$86 >>> 0) {
@@ -33650,7 +33650,7 @@ function asmFunc(global, env, buffer) {
   i64toi32_i32$0 = $0;
   HEAP32[(i64toi32_i32$0 + 8 | 0) >> 2] = $26;
   HEAP32[(i64toi32_i32$0 + 12 | 0) >> 2] = i64toi32_i32$3;
-  label$3 : {
+  {
    $7 = $5 + 16 | 0;
    if ($7 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -33667,7 +33667,7 @@ function asmFunc(global, env, buffer) {
   $2$hi = $2$hi | 0;
   $3 = $3 | 0;
   var i64toi32_i32$2 = 0, i64toi32_i32$0 = 0, i64toi32_i32$1 = 0, i64toi32_i32$3 = 0, $4 = 0, i64toi32_i32$4 = 0, $22 = 0, $6 = 0, $5 = 0, $76 = 0, $77 = 0, $77$hi = 0, $78 = 0, $78$hi = 0, $82$hi = 0, $86 = 0, $89 = 0;
-  label$1 : {
+  {
    $4 = global$0 - 80 | 0;
    $5 = $4;
    if ($4 >>> 0 < global$86 >>> 0) {
@@ -33809,7 +33809,7 @@ function asmFunc(global, env, buffer) {
   i64toi32_i32$0 = $0;
   HEAP32[i64toi32_i32$0 >> 2] = $89;
   HEAP32[(i64toi32_i32$0 + 4 | 0) >> 2] = i64toi32_i32$3;
-  label$7 : {
+  {
    $6 = i64toi32_i32$2 + 80 | 0;
    if ($6 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -34071,7 +34071,7 @@ function asmFunc(global, env, buffer) {
   $4 = $4 | 0;
   $4$hi = $4$hi | 0;
   var i64toi32_i32$0 = 0, i64toi32_i32$4 = 0, i64toi32_i32$2 = 0, i64toi32_i32$1 = 0, i64toi32_i32$3 = 0, i64toi32_i32$5 = 0, $20$hi = 0, $16$hi = 0, $18$hi = 0, $20 = 0, $21$hi = 0, $5 = 0, $16 = 0, i64toi32_i32$6 = 0, $22$hi = 0, $19$hi = 0, $18 = 0, $14$hi = 0, $21 = 0, $22 = 0, $14 = 0, $19 = 0, $15$hi = 0, $23$hi = 0, $15 = 0, $23 = 0, $13$hi = 0, $13 = 0, $8 = 0, $6 = 0, $17 = 0, $17$hi = 0, $7 = 0, $24$hi = 0, $9 = 0, $472 = 0, $473 = 0, $474 = 0, $476 = 0, $477 = 0, $478 = 0, $482 = 0, $483 = 0, $485 = 0, $486 = 0, $487 = 0, $488 = 0, $489 = 0, $491 = 0, $492 = 0, $493 = 0, $495 = 0, $496 = 0, $497 = 0, $498 = 0, $501 = 0, $502 = 0, $503 = 0, $504 = 0, $505 = 0, $506 = 0, $508 = 0, $509 = 0, $510 = 0, $512 = 0, $514 = 0, $515 = 0, $519 = 0, $520 = 0, $521 = 0, $522 = 0, $523 = 0, $525 = 0, $528 = 0, $529 = 0, $530 = 0, $531 = 0, $532 = 0, $533 = 0, $24 = 0, $534 = 0, $535 = 0, $537 = 0, $538 = 0, $539 = 0, $540 = 0, $544 = 0, $545 = 0, $546 = 0, $547 = 0, $549 = 0, $550 = 0, $551 = 0, $553 = 0, $554 = 0, $555 = 0, $556 = 0, $557 = 0, $559 = 0, $562 = 0, $563 = 0, $564 = 0, $565 = 0, $566 = 0, $567 = 0, $569 = 0, $570 = 0, $571 = 0, $572 = 0, $574 = 0, $575 = 0, $576 = 0, $577 = 0, $579 = 0, $11 = 0, $12 = 0, $10 = 0, $55 = 0, $59 = 0, $66 = 0, $70 = 0, $79 = 0, $79$hi = 0, $84 = 0, $84$hi = 0, $92 = 0, $92$hi = 0, $108 = 0, $109 = 0, $109$hi = 0, $110 = 0, $110$hi = 0, $117$hi = 0, $120$hi = 0, $135 = 0, $136 = 0, $136$hi = 0, $137 = 0, $137$hi = 0, $144$hi = 0, $147$hi = 0, $162 = 0, $164 = 0, $164$hi = 0, $168$hi = 0, $179 = 0, $179$hi = 0, $180$hi = 0, $183 = 0, $186 = 0, $186$hi = 0, $191$hi = 0, $201 = 0, $201$hi = 0, $202$hi = 0, $204 = 0, $207 = 0, $207$hi = 0, $212$hi = 0, $222 = 0, $222$hi = 0, $223$hi = 0, $225 = 0, $228 = 0, $228$hi = 0, $233$hi = 0, $243 = 0, $243$hi = 0, $244$hi = 0, $246 = 0, $249 = 0, $249$hi = 0, $254$hi = 0, $263 = 0, $263$hi = 0, $264$hi = 0, $272 = 0, $272$hi = 0, $276$hi = 0, $281 = 0, $281$hi = 0, $286 = 0, $286$hi = 0, $293 = 0, $293$hi = 0, $300 = 0, $300$hi = 0, $305 = 0, $305$hi = 0, $307 = 0, $307$hi = 0, $310 = 0, $312$hi = 0, $313 = 0, $313$hi = 0, $316 = 0, $316$hi = 0, $317$hi = 0, $318 = 0, $318$hi = 0, $319 = 0, $319$hi = 0, $320 = 0, $320$hi = 0, $326 = 0, $326$hi = 0, $327 = 0, $327$hi = 0, $332 = 0, $332$hi = 0, $339 = 0, $339$hi = 0, $340$hi = 0, $342 = 0, $343 = 0, $343$hi = 0, $345 = 0, $345$hi = 0, $348 = 0, $350$hi = 0, $351 = 0, $351$hi = 0, $354 = 0, $354$hi = 0, $355$hi = 0, $356$hi = 0, $360 = 0, $361$hi = 0, $362$hi = 0, $364 = 0, $365$hi = 0, $366$hi = 0, $373 = 0, $373$hi = 0, $377 = 0, $377$hi = 0, $378 = 0, $378$hi = 0, $382 = 0, $382$hi = 0, $385$hi = 0, $390 = 0, $390$hi = 0, $392 = 0, $392$hi = 0, $395 = 0, $397$hi = 0, $398 = 0, $398$hi = 0, $401 = 0, $401$hi = 0, $402$hi = 0, $403 = 0, $403$hi = 0, $404 = 0, $404$hi = 0, $417 = 0, $417$hi = 0, $424 = 0, $424$hi = 0, $425$hi = 0, $427 = 0, $428 = 0, $428$hi = 0, $430 = 0, $430$hi = 0, $433 = 0, $435$hi = 0, $436 = 0, $436$hi = 0, $439 = 0, $439$hi = 0, $440$hi = 0, $441$hi = 0, $445 = 0, $446$hi = 0, $447 = 0, $447$hi = 0, $452 = 0, $453$hi = 0, $458 = 0, $458$hi = 0, $460 = 0, $460$hi = 0, $462$hi = 0, $467 = 0, $467$hi = 0, $471 = 0, $471$hi = 0, $475 = 0, $475$hi = 0, $479 = 0, $480 = 0, $480$hi = 0, $481 = 0, $481$hi = 0, $484 = 0, $484$hi = 0, $490 = 0, $490$hi = 0, $494 = 0, $495$hi = 0, $496$hi = 0, $499 = 0, $499$hi = 0, $500 = 0, $500$hi = 0, $507 = 0, $507$hi = 0, $511 = 0, $513 = 0, $513$hi = 0, $515$hi = 0, $516 = 0, $516$hi = 0, $517 = 0, $517$hi = 0, $518 = 0, $518$hi = 0, $520$hi = 0, $524 = 0, $525$hi = 0, $526 = 0, $526$hi = 0, $527 = 0, $527$hi = 0, $536 = 0, $536$hi = 0, $541 = 0, $541$hi = 0, $542 = 0, $542$hi = 0, $543 = 0, $543$hi = 0, $548 = 0, $548$hi = 0, $552 = 0, $553$hi = 0, $554$hi = 0, $558 = 0, $559$hi = 0, $560 = 0, $560$hi = 0, $561 = 0, $561$hi = 0, $568 = 0, $568$hi = 0, $573 = 0, $573$hi = 0, $578 = 0, $578$hi = 0, $581 = 0, $581$hi = 0, $584 = 0, $585$hi = 0, $588 = 0, $589$hi = 0, $590$hi = 0, $593 = 0, $594$hi = 0, $596$hi = 0, $597 = 0, $597$hi = 0, $601 = 0, $602$hi = 0, $603 = 0, $603$hi = 0, $604 = 0, $604$hi = 0, $605 = 0, $605$hi = 0, $612 = 0, $612$hi = 0, $615 = 0, $615$hi = 0, $618 = 0, $620$hi = 0, $621 = 0, $621$hi = 0, $625 = 0, $626 = 0, $626$hi = 0, $627 = 0, $627$hi = 0, $629$hi = 0, $630$hi = 0, $632 = 0, $633$hi = 0, $634$hi = 0, $638 = 0, $639$hi = 0, $644$hi = 0, $653 = 0, $654$hi = 0, $655 = 0, $655$hi = 0, $658 = 0, $658$hi = 0, $664 = 0, $664$hi = 0, $665 = 0, $665$hi = 0, $669 = 0, $669$hi = 0, $674 = 0, $675$hi = 0, $676 = 0, $676$hi = 0, $678$hi = 0, $580 = 0, $680 = 0, $680$hi = 0, $683 = 0, $683$hi = 0, $684 = 0, $684$hi = 0, $685$hi = 0, $688 = 0, $688$hi = 0, $689 = 0, $689$hi = 0, $691 = 0, $691$hi = 0, $694 = 0, $696$hi = 0, $697 = 0, $697$hi = 0, $698 = 0, $698$hi = 0, $699 = 0, $699$hi = 0, $701$hi = 0, $702 = 0, $702$hi = 0, $703 = 0, $703$hi = 0, $705$hi = 0, $706 = 0, $706$hi = 0, $707$hi = 0, $710 = 0, $710$hi = 0, $711$hi = 0, $714 = 0, $714$hi = 0, $716$hi = 0, $717$hi = 0, $727 = 0, $727$hi = 0, $729 = 0, $729$hi = 0, $731$hi = 0, $741 = 0, $742$hi = 0, $743 = 0, $743$hi = 0, $746 = 0, $746$hi = 0, $747 = 0, $747$hi = 0, $752 = 0, $752$hi = 0, $753 = 0, $753$hi = 0, $755$hi = 0, $761 = 0, $761$hi = 0, $766 = 0, $767$hi = 0, $768 = 0, $768$hi = 0, $771 = 0, $771$hi = 0, $775$hi = 0, $582 = 0, $777 = 0, $777$hi = 0, $778$hi = 0, $781 = 0, $781$hi = 0, $782 = 0, $782$hi = 0, $783 = 0, $783$hi = 0, $785 = 0, $785$hi = 0, $788 = 0, $790$hi = 0, $791 = 0, $791$hi = 0, $792 = 0, $792$hi = 0, $793 = 0, $793$hi = 0, $795$hi = 0, $796 = 0, $796$hi = 0, $797 = 0, $797$hi = 0, $799$hi = 0, $800 = 0, $800$hi = 0, $801$hi = 0, $804 = 0, $804$hi = 0, $805$hi = 0, $808 = 0, $808$hi = 0, $810$hi = 0, $811$hi = 0, $827 = 0, $827$hi = 0, $828 = 0, $828$hi = 0, $830$hi = 0, $832 = 0, $834 = 0, $834$hi = 0, $836$hi = 0, $840 = 0, $844 = 0, $845$hi = 0, $849 = 0, $850$hi = 0, $860$hi = 0, $862 = 0, $862$hi = 0, $863 = 0, $863$hi = 0, $864 = 0, $864$hi = 0, $866$hi = 0, $868 = 0, $870 = 0, $870$hi = 0, $872$hi = 0, $876 = 0, $880 = 0, $881$hi = 0, $885 = 0, $886$hi = 0, $887$hi = 0, $907 = 0;
-  label$1 : {
+  {
    $5 = global$0 - 192 | 0;
    $10 = $5;
    if ($5 >>> 0 < global$86 >>> 0) {
@@ -37617,7 +37617,7 @@ function asmFunc(global, env, buffer) {
    i64toi32_i32$1 = $15$hi;
    HEAP32[(i64toi32_i32$4 + 8 | 0) >> 2] = $15;
    HEAP32[(i64toi32_i32$4 + 12 | 0) >> 2] = i64toi32_i32$1;
-   label$19 : {
+   {
     $11 = $5 + 192 | 0;
     if ($11 >>> 0 < global$86 >>> 0) {
      __handle_stack_overflow()
@@ -37647,7 +37647,7 @@ function asmFunc(global, env, buffer) {
   i64toi32_i32$2 = $0;
   HEAP32[(i64toi32_i32$2 + 8 | 0) >> 2] = $907;
   HEAP32[(i64toi32_i32$2 + 12 | 0) >> 2] = i64toi32_i32$1;
-  label$21 : {
+  {
    $12 = $5 + 192 | 0;
    if ($12 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -37723,7 +37723,7 @@ function asmFunc(global, env, buffer) {
   $4 = $4 | 0;
   $4$hi = $4$hi | 0;
   var i64toi32_i32$0 = 0, i64toi32_i32$2 = 0, i64toi32_i32$1 = 0, i64toi32_i32$3 = 0, i64toi32_i32$4 = 0, i64toi32_i32$5 = 0, $5 = 0, $12$hi = 0, $12 = 0, $13$hi = 0, $8 = 0, $13 = 0, i64toi32_i32$6 = 0, $15$hi = 0, $6 = 0, $15 = 0, $9 = 0, $14$hi = 0, $64 = 0, $7 = 0, $66 = 0, $69 = 0, $70 = 0, $71 = 0, $72 = 0, $14 = 0, $73 = 0, $74 = 0, $75 = 0, $76 = 0, $78 = 0, $79 = 0, $80 = 0, $81 = 0, $82 = 0, $83 = 0, $84 = 0, $85 = 0, $86 = 0, $87 = 0, $88 = 0, $89 = 0, $11 = 0, $10 = 0, $60 = 0, $60$hi = 0, $63$hi = 0, $65 = 0, $65$hi = 0, $67 = 0, $67$hi = 0, $68 = 0, $68$hi = 0, $75$hi = 0, $77 = 0, $77$hi = 0, $136$hi = 0, $139 = 0, $140$hi = 0, $180 = 0, $180$hi = 0, $185 = 0, $186$hi = 0, $224 = 0, $224$hi = 0, $226$hi = 0, $235 = 0, $236 = 0, $236$hi = 0, $238 = 0, $238$hi = 0, $244$hi = 0, $245 = 0, $245$hi = 0, $252 = 0, $252$hi = 0, $257$hi = 0;
-  label$1 : {
+  {
    $5 = global$0 - 128 | 0;
    $10 = $5;
    if ($5 >>> 0 < global$86 >>> 0) {
@@ -38085,7 +38085,7 @@ function asmFunc(global, env, buffer) {
     if (($8 | 0) <= ($9 | 0)) {
      break label$11
     }
-    label$12 : while (1) {
+    while (1) {
      label$13 : {
       label$14 : {
        if (!($6 & 1 | 0)) {
@@ -38271,9 +38271,9 @@ function asmFunc(global, env, buffer) {
      $13$hi = i64toi32_i32$0;
      $8 = $8 + -1 | 0;
      if (($8 | 0) > ($9 | 0)) {
-      continue label$12
+      continue
      }
-     break label$12;
+     break;
     };
     $8 = $9;
    }
@@ -38327,7 +38327,7 @@ function asmFunc(global, env, buffer) {
     if (i64toi32_i32$5 >>> 0 > i64toi32_i32$2 >>> 0 | ((i64toi32_i32$5 | 0) == (i64toi32_i32$2 | 0) & i64toi32_i32$1 >>> 0 > i64toi32_i32$0 >>> 0 | 0) | 0) {
      break label$17
     }
-    label$18 : while (1) {
+    while (1) {
      i64toi32_i32$1 = $4$hi;
      i64toi32_i32$0 = $4;
      i64toi32_i32$5 = 0;
@@ -38384,9 +38384,9 @@ function asmFunc(global, env, buffer) {
      i64toi32_i32$0 = 65536;
      i64toi32_i32$2 = 0;
      if (i64toi32_i32$5 >>> 0 < i64toi32_i32$0 >>> 0 | ((i64toi32_i32$5 | 0) == (i64toi32_i32$0 | 0) & i64toi32_i32$1 >>> 0 < i64toi32_i32$2 >>> 0 | 0) | 0) {
-      continue label$18
+      continue
      }
-     break label$18;
+     break;
     };
    }
    $6 = $7 & 32768 | 0;
@@ -38477,7 +38477,7 @@ function asmFunc(global, env, buffer) {
   i64toi32_i32$0 = $2$hi;
   HEAP32[(i64toi32_i32$2 + 8 | 0) >> 2] = $2;
   HEAP32[(i64toi32_i32$2 + 12 | 0) >> 2] = i64toi32_i32$0;
-  label$20 : {
+  {
    $11 = $5 + 128 | 0;
    if ($11 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -38512,7 +38512,7 @@ function asmFunc(global, env, buffer) {
   $2 = $2 | 0;
   $3 = $3 | 0;
   var $9 = 0, i64toi32_i32$0 = 0, $4 = 0, $5 = 0, i64toi32_i32$1 = 0, $8 = 0, i64toi32_i32$2 = 0, $13 = 0, $13$hi = 0, $12 = 0, $12$hi = 0, $6 = 0, $7 = 0, $11 = 0, $10 = 0, wasm2js_i32$0 = 0, wasm2js_i32$1 = 0;
-  label$1 : {
+  {
    $4 = global$0 - 48 | 0;
    $10 = $4;
    if ($4 >>> 0 < global$86 >>> 0) {
@@ -38532,7 +38532,7 @@ function asmFunc(global, env, buffer) {
     $2 = $2 << 2 | 0;
     $6 = HEAP32[($2 + 10572 | 0) >> 2] | 0;
     $7 = HEAP32[($2 + 10560 | 0) >> 2] | 0;
-    label$5 : while (1) {
+    while (1) {
      label$6 : {
       label$7 : {
        $2 = HEAP32[($1 + 4 | 0) >> 2] | 0;
@@ -38546,9 +38546,9 @@ function asmFunc(global, env, buffer) {
       $2 = __shgetc($1 | 0) | 0;
      }
      if (isspace($2 | 0) | 0) {
-      continue label$5
+      continue
      }
-     break label$5;
+     break;
     };
     $8 = 1;
     label$8 : {
@@ -38577,7 +38577,7 @@ function asmFunc(global, env, buffer) {
     label$11 : {
      label$12 : {
       label$13 : {
-       label$14 : while (1) {
+       while (1) {
         if (($2 | 32 | 0 | 0) != (HEAP8[($9 + 10484 | 0) >> 0] | 0 | 0)) {
          break label$13
         }
@@ -38598,7 +38598,7 @@ function asmFunc(global, env, buffer) {
         }
         $9 = $9 + 1 | 0;
         if (($9 | 0) != (8 | 0)) {
-         continue label$14
+         continue
         }
         break label$12;
        };
@@ -38633,7 +38633,7 @@ function asmFunc(global, env, buffer) {
       if ($9 >>> 0 < 4 >>> 0) {
        break label$12
       }
-      label$19 : while (1) {
+      while (1) {
        label$20 : {
         if (!$1) {
          break label$20
@@ -38642,9 +38642,9 @@ function asmFunc(global, env, buffer) {
        }
        $9 = $9 + -1 | 0;
        if ($9 >>> 0 > 3 >>> 0) {
-        continue label$19
+        continue
        }
-       break label$19;
+       break;
       };
      }
      __extendsftf2($4 | 0, Math_fround(Math_fround(Math_fround($8 | 0) * Math_fround(infinity))));
@@ -38667,7 +38667,7 @@ function asmFunc(global, env, buffer) {
         break label$23
        }
        $9 = 0;
-       label$24 : while (1) {
+       while (1) {
         if (($2 | 32 | 0 | 0) != (HEAP8[($9 + 10493 | 0) >> 0] | 0 | 0)) {
          break label$23
         }
@@ -38688,7 +38688,7 @@ function asmFunc(global, env, buffer) {
         }
         $9 = $9 + 1 | 0;
         if (($9 | 0) != (3 | 0)) {
-         continue label$24
+         continue
         }
         break label$22;
        };
@@ -38790,7 +38790,7 @@ function asmFunc(global, env, buffer) {
       HEAP32[$5 >> 2] = (HEAP32[$5 >> 2] | 0) + -1 | 0;
       break label$3;
      }
-     label$38 : while (1) {
+     while (1) {
       label$39 : {
        label$40 : {
         $2 = HEAP32[($1 + 4 | 0) >> 2] | 0;
@@ -38821,9 +38821,9 @@ function asmFunc(global, env, buffer) {
         }
        }
        $9 = $9 + 1 | 0;
-       continue label$38;
+       continue;
       }
-      break label$38;
+      break;
      };
      i64toi32_i32$0 = 2147450880;
      $13 = 0;
@@ -38845,7 +38845,7 @@ function asmFunc(global, env, buffer) {
       if (!$9) {
        break label$3
       }
-      label$45 : while (1) {
+      while (1) {
        $9 = $9 + -1 | 0;
        label$46 : {
         if (!$2) {
@@ -38854,7 +38854,7 @@ function asmFunc(global, env, buffer) {
         HEAP32[$5 >> 2] = (HEAP32[$5 >> 2] | 0) + -1 | 0;
        }
        if ($9) {
-        continue label$45
+        continue
        }
        break label$3;
       };
@@ -38878,7 +38878,7 @@ function asmFunc(global, env, buffer) {
   i64toi32_i32$0 = $13$hi;
   HEAP32[(i64toi32_i32$1 + 8 | 0) >> 2] = $13;
   HEAP32[(i64toi32_i32$1 + 12 | 0) >> 2] = i64toi32_i32$0;
-  label$47 : {
+  {
    $11 = $4 + 48 | 0;
    if ($11 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -38895,7 +38895,7 @@ function asmFunc(global, env, buffer) {
   $4 = $4 | 0;
   $5 = $5 | 0;
   var i64toi32_i32$0 = 0, i64toi32_i32$5 = 0, i64toi32_i32$1 = 0, i64toi32_i32$3 = 0, i64toi32_i32$2 = 0, $6 = 0, i64toi32_i32$4 = 0, $7 = 0, $18$hi = 0, $21$hi = 0, $18 = 0, $21 = 0, $17$hi = 0, $19$hi = 0, $16$hi = 0, $17 = 0, $19 = 0, $20$hi = 0, $16 = 0, $10 = 0, $20 = 0, $8 = 0, $9 = 0, $22$hi = 0, $22 = 0, $11 = 0, $12 = 0, $13 = 0, $109 = 0, $110 = 0, $111 = 0, $112 = 0, $113 = 0, $114 = 0, $115 = 0, $116 = 0, $117 = 0, $118 = 0, $119 = 0, $120 = 0, $121 = 0, $122 = 0, $123 = 0, $124 = 0, $125 = 0, $126 = 0, $127 = 0, $15 = 0, $14 = 0, $139 = 0, $139$hi = 0, $143 = 0, $143$hi = 0, $148 = 0, $148$hi = 0, $152 = 0, $152$hi = 0, $170 = 0, $170$hi = 0, $174 = 0, $174$hi = 0, $264$hi = 0, $271$hi = 0, $280 = 0, $280$hi = 0, $284 = 0, $284$hi = 0, $288 = 0, $288$hi = 0, $292 = 0, $292$hi = 0, $302 = 0, $302$hi = 0, $319 = 0, $319$hi = 0, $323 = 0, $323$hi = 0, $328 = 0, $328$hi = 0, $330 = 0, $330$hi = 0, $348$hi = 0, $356 = 0, $357 = 0, $360$hi = 0, $384 = 0, $384$hi = 0, $388 = 0, $388$hi = 0, $402 = 0, $422 = 0, $422$hi = 0, $426 = 0, $426$hi = 0, $430 = 0, $430$hi = 0, $434 = 0, $434$hi = 0, $441 = 0, $441$hi = 0, $444 = 0, $444$hi = 0, $450 = 0, $450$hi = 0, $454 = 0, $454$hi = 0, $456 = 0, $456$hi = 0, $460 = 0, $460$hi = 0, $464 = 0, $464$hi = 0, $468 = 0, $468$hi = 0, $498 = 0, $498$hi = 0, $502 = 0, $502$hi = 0, $506 = 0, $506$hi = 0, $510 = 0, $510$hi = 0, wasm2js_i32$0 = 0, wasm2js_i32$1 = 0;
-  label$1 : {
+  {
    $6 = global$0 - 432 | 0;
    $14 = $6;
    if ($6 >>> 0 < global$86 >>> 0) {
@@ -38923,7 +38923,7 @@ function asmFunc(global, env, buffer) {
   label$5 : {
    label$6 : {
     label$7 : {
-     label$8 : while (1) {
+     while (1) {
       label$9 : {
        if (($7 | 0) == (48 | 0)) {
         break label$9
@@ -38947,11 +38947,11 @@ function asmFunc(global, env, buffer) {
        $9 = 1;
        HEAP32[($1 + 4 | 0) >> 2] = $7 + 1 | 0;
        $7 = HEAPU8[$7 >> 0] | 0;
-       continue label$8;
+       continue;
       }
       $9 = 1;
       $7 = __shgetc($1 | 0) | 0;
-      continue label$8;
+      continue;
      };
     }
     $7 = __shgetc($1 | 0) | 0;
@@ -38963,7 +38963,7 @@ function asmFunc(global, env, buffer) {
    if (($7 | 0) != (48 | 0)) {
     break label$5
    }
-   label$11 : while (1) {
+   while (1) {
     label$12 : {
      label$13 : {
       $7 = HEAP32[($1 + 4 | 0) >> 2] | 0;
@@ -38988,9 +38988,9 @@ function asmFunc(global, env, buffer) {
     $16 = i64toi32_i32$4;
     $16$hi = i64toi32_i32$5;
     if (($7 | 0) == (48 | 0)) {
-     continue label$11
+     continue
     }
-    break label$11;
+    break;
    };
    $8 = 1;
    $9 = 1;
@@ -39013,7 +39013,7 @@ function asmFunc(global, env, buffer) {
   $21 = 0;
   $21$hi = i64toi32_i32$5;
   label$14 : {
-   label$15 : while (1) {
+   while (1) {
     $12 = $7 | 32 | 0;
     label$16 : {
      label$17 : {
@@ -39216,10 +39216,10 @@ function asmFunc(global, env, buffer) {
      }
      HEAP32[($1 + 4 | 0) >> 2] = $7 + 1 | 0;
      $7 = HEAPU8[$7 >> 0] | 0;
-     continue label$15;
+     continue;
     }
     $7 = __shgetc($1 | 0) | 0;
-    continue label$15;
+    continue;
    };
   }
   label$23 : {
@@ -39276,7 +39276,7 @@ function asmFunc(global, env, buffer) {
       i64toi32_i32$5 = $21$hi;
       $17 = $21;
       $17$hi = i64toi32_i32$5;
-      label$29 : while (1) {
+      while (1) {
        $10 = $10 << 4 | 0;
        i64toi32_i32$5 = $17$hi;
        i64toi32_i32$3 = $17;
@@ -39293,9 +39293,9 @@ function asmFunc(global, env, buffer) {
        i64toi32_i32$3 = 0;
        i64toi32_i32$0 = 8;
        if ((i64toi32_i32$5 | 0) != (i64toi32_i32$0 | 0) | (i64toi32_i32$1 | 0) != (i64toi32_i32$3 | 0) | 0) {
-        continue label$29
+        continue
        }
-       break label$29;
+       break;
       };
      }
      label$30 : {
@@ -39501,7 +39501,7 @@ function asmFunc(global, env, buffer) {
        if (($10 | 0) <= (-1 | 0)) {
         break label$36
        }
-       label$37 : while (1) {
+       while (1) {
         i64toi32_i32$0 = $18$hi;
         i64toi32_i32$0 = $19$hi;
         i64toi32_i32$0 = $18$hi;
@@ -39573,9 +39573,9 @@ function asmFunc(global, env, buffer) {
         $18$hi = i64toi32_i32$4;
         $10 = $10 << 1 | 0 | ($7 | 0) > (-1 | 0) | 0;
         if (($10 | 0) > (-1 | 0)) {
-         continue label$37
+         continue
         }
-        break label$37;
+        break;
        };
       }
       label$38 : {
@@ -39896,7 +39896,7 @@ function asmFunc(global, env, buffer) {
   i64toi32_i32$5 = $21$hi;
   HEAP32[(i64toi32_i32$1 + 8 | 0) >> 2] = $21;
   HEAP32[(i64toi32_i32$1 + 12 | 0) >> 2] = i64toi32_i32$5;
-  label$41 : {
+  {
    $15 = $6 + 432 | 0;
    if ($15 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -39914,7 +39914,7 @@ function asmFunc(global, env, buffer) {
   $5 = $5 | 0;
   $6 = $6 | 0;
   var i64toi32_i32$4 = 0, i64toi32_i32$5 = 0, i64toi32_i32$1 = 0, $7 = 0, i64toi32_i32$3 = 0, i64toi32_i32$2 = 0, $21$hi = 0, $11 = 0, $21 = 0, $22$hi = 0, $14 = 0, i64toi32_i32$0 = 0, $22 = 0, $8 = 0, $13 = 0, $15 = 0, $24$hi = 0, $16 = 0, $23$hi = 0, $24 = 0, $23 = 0, $12 = 0, $17 = 0, $25$hi = 0, $26$hi = 0, $25 = 0, $26 = 0, $9 = 0, $170 = 0, $171 = 0, $172 = 0, $173 = 0, $174 = 0, $175 = 0, $176 = 0, $177 = 0, $178 = 0, $179 = 0, $18 = 0, $27 = 0.0, $20 = 0, $19 = 0, $10 = 0, $133 = 0, $241 = 0, $241$hi = 0, $245 = 0, $245$hi = 0, $247 = 0, $247$hi = 0, $251 = 0, $251$hi = 0, $261$hi = 0, $270 = 0, $270$hi = 0, $274 = 0, $274$hi = 0, $278 = 0, $278$hi = 0, $282 = 0, $282$hi = 0, $292 = 0, $292$hi = 0, $301 = 0, $301$hi = 0, $305 = 0, $305$hi = 0, $309 = 0, $309$hi = 0, $313 = 0, $313$hi = 0, $362 = 0, $362$hi = 0, $366 = 0, $366$hi = 0, $368 = 0, $368$hi = 0, $372 = 0, $372$hi = 0, $391 = 0, $391$hi = 0, $395 = 0, $395$hi = 0, $397 = 0, $397$hi = 0, $401 = 0, $401$hi = 0, $412 = 0, $412$hi = 0, $416 = 0, $416$hi = 0, $418 = 0, $418$hi = 0, $422 = 0, $422$hi = 0, $450 = 0, $450$hi = 0, $454 = 0, $454$hi = 0, $456 = 0, $456$hi = 0, $460 = 0, $460$hi = 0, $470 = 0, $470$hi = 0, $474 = 0, $474$hi = 0, $476 = 0, $476$hi = 0, $480 = 0, $480$hi = 0, $519 = 0, $597$hi = 0, $599$hi = 0, $607 = 0, $607$hi = 0, $748 = 0, $748$hi = 0, $752 = 0, $752$hi = 0, $754 = 0, $754$hi = 0, $758 = 0, $758$hi = 0, $777 = 0, $777$hi = 0, $781 = 0, $781$hi = 0, $823 = 0, $885 = 0, $885$hi = 0, $889 = 0, $889$hi = 0, $906 = 0, $906$hi = 0, $910 = 0, $910$hi = 0, $926 = 0, $926$hi = 0, $930 = 0, $930$hi = 0, $967 = 0, $967$hi = 0, $971 = 0, $971$hi = 0, $990 = 0, $990$hi = 0, $994 = 0, $994$hi = 0, $1017 = 0, $1017$hi = 0, $1021 = 0, $1021$hi = 0, $1037 = 0, $1037$hi = 0, $1041 = 0, $1041$hi = 0, $1055 = 0, $1055$hi = 0, $1057 = 0, $1057$hi = 0, $1077 = 0, $1077$hi = 0, $1081 = 0, $1081$hi = 0, $1104 = 0, $1104$hi = 0, $1106 = 0, $1106$hi = 0, $1112 = 0, $1112$hi = 0, $1119 = 0, $1119$hi = 0, wasm2js_i32$0 = 0, wasm2js_i32$1 = 0;
-  label$1 : {
+  {
    $7 = global$0 - 8976 | 0;
    $19 = $7;
    if ($7 >>> 0 < global$86 >>> 0) {
@@ -39932,7 +39932,7 @@ function asmFunc(global, env, buffer) {
   label$3 : {
    label$4 : {
     label$5 : {
-     label$6 : while (1) {
+     while (1) {
       label$7 : {
        if (($2 | 0) == (48 | 0)) {
         break label$7
@@ -39956,11 +39956,11 @@ function asmFunc(global, env, buffer) {
        $11 = 1;
        HEAP32[($1 + 4 | 0) >> 2] = $2 + 1 | 0;
        $2 = HEAPU8[$2 >> 0] | 0;
-       continue label$6;
+       continue;
       }
       $11 = 1;
       $2 = __shgetc($1 | 0) | 0;
-      continue label$6;
+      continue;
      };
     }
     $2 = __shgetc($1 | 0) | 0;
@@ -39972,7 +39972,7 @@ function asmFunc(global, env, buffer) {
    if (($2 | 0) != (48 | 0)) {
     break label$3
    }
-   label$9 : while (1) {
+   while (1) {
     label$10 : {
      label$11 : {
       $2 = HEAP32[($1 + 4 | 0) >> 2] | 0;
@@ -39997,9 +39997,9 @@ function asmFunc(global, env, buffer) {
     $21 = i64toi32_i32$4;
     $21$hi = i64toi32_i32$5;
     if (($2 | 0) == (48 | 0)) {
-     continue label$9
+     continue
     }
-    break label$9;
+    break;
    };
    $11 = 1;
    $8 = 1;
@@ -40035,7 +40035,7 @@ function asmFunc(global, env, buffer) {
          $16 = 0;
          $15 = 0;
          $12 = 0;
-         label$20 : while (1) {
+         while (1) {
           label$21 : {
            label$22 : {
             if (!($14 & 1 | 0)) {
@@ -40110,12 +40110,12 @@ function asmFunc(global, env, buffer) {
           $13 = $2 + -48 | 0;
           $14 = ($2 | 0) == (46 | 0);
           if ($14) {
-           continue label$20
+           continue
           }
           if ($13 >>> 0 < 10 >>> 0) {
-           continue label$20
+           continue
           }
-          break label$20;
+          break;
          };
         }
         i64toi32_i32$4 = $21$hi;
@@ -40449,13 +40449,13 @@ function asmFunc(global, env, buffer) {
      }
      $2 = ($7 + 784 | 0) + ($15 << 2 | 0) | 0;
      $1 = HEAP32[$2 >> 2] | 0;
-     label$37 : while (1) {
+     while (1) {
       $1 = Math_imul($1, 10);
       $16 = $16 + 1 | 0;
       if (($16 | 0) != (9 | 0)) {
-       continue label$37
+       continue
       }
-      break label$37;
+      break;
      };
      HEAP32[$2 >> 2] = $1;
     }
@@ -40660,13 +40660,13 @@ function asmFunc(global, env, buffer) {
     $22$hi = i64toi32_i32$1;
     break label$12;
    }
-   label$42 : while (1) {
+   while (1) {
     $2 = $15;
     $15 = $2 + -1 | 0;
     if (!(HEAP32[(($7 + 784 | 0) + ($15 << 2 | 0) | 0) >> 2] | 0)) {
-     continue label$42
+     continue
     }
-    break label$42;
+    break;
    };
    $16 = 0;
    label$43 : {
@@ -40693,7 +40693,7 @@ function asmFunc(global, env, buffer) {
      $14 = 0;
      $1 = 0;
      $11 = 0;
-     label$47 : while (1) {
+     while (1) {
       $15 = ($7 + 784 | 0) + ($1 << 2 | 0) | 0;
       $519 = $15;
       $15 = HEAP32[$15 >> 2] | 0;
@@ -40706,9 +40706,9 @@ function asmFunc(global, env, buffer) {
       $14 = Math_imul($17, $15 - Math_imul($12, $13) | 0);
       $1 = $1 + 1 | 0;
       if (($1 | 0) != ($2 | 0)) {
-       continue label$47
+       continue
       }
-      break label$47;
+      break;
      };
      if (!$14) {
       break label$45
@@ -40718,10 +40718,10 @@ function asmFunc(global, env, buffer) {
     }
     $8 = ($8 - $6 | 0) + 9 | 0;
    }
-   label$48 : while (1) {
+   while (1) {
     $12 = ($7 + 784 | 0) + ($11 << 2 | 0) | 0;
     label$49 : {
-     label$50 : while (1) {
+     while (1) {
       label$51 : {
        if (($8 | 0) < (36 | 0)) {
         break label$51
@@ -40736,7 +40736,7 @@ function asmFunc(global, env, buffer) {
       $15 = $2 + 2047 | 0;
       $14 = 0;
       $13 = $2;
-      label$52 : while (1) {
+      while (1) {
        $2 = $13;
        label$53 : {
         label$54 : {
@@ -40808,15 +40808,15 @@ function asmFunc(global, env, buffer) {
        $13 = ($1 | 0) != (($2 + -1 | 0) & 2047 | 0 | 0) ? $2 : ($1 | 0) == ($11 | 0) ? $2 : $21 ? $2 : $1;
        $15 = $1 + -1 | 0;
        if (($1 | 0) != ($11 | 0)) {
-        continue label$52
+        continue
        }
-       break label$52;
+       break;
       };
       $16 = $16 + -29 | 0;
       if (!$14) {
-       continue label$50
+       continue
       }
-      break label$50;
+      break;
      };
      label$55 : {
       $11 = ($11 + -1 | 0) & 2047 | 0;
@@ -40829,23 +40829,23 @@ function asmFunc(global, env, buffer) {
      }
      $8 = $8 + 9 | 0;
      HEAP32[(($7 + 784 | 0) + ($11 << 2 | 0) | 0) >> 2] = $14;
-     continue label$48;
+     continue;
     }
-    break label$48;
+    break;
    };
    label$56 : {
     label$57 : while (1) {
      $6 = ($2 + 1 | 0) & 2047 | 0;
      $18 = ($7 + 784 | 0) + ((($2 + -1 | 0) & 2047 | 0) << 2 | 0) | 0;
-     label$58 : while (1) {
+     while (1) {
       $15 = ($8 | 0) > (45 | 0) ? 9 : 1;
       label$59 : {
-       label$60 : while (1) {
+       while (1) {
         $13 = $11;
         $1 = 0;
         label$61 : {
          label$62 : {
-          label$63 : while (1) {
+          while (1) {
            $11 = ($1 + $13 | 0) & 2047 | 0;
            if (($11 | 0) == ($2 | 0)) {
             break label$62
@@ -40860,9 +40860,9 @@ function asmFunc(global, env, buffer) {
            }
            $1 = $1 + 1 | 0;
            if (($1 | 0) != (4 | 0)) {
-            continue label$63
+            continue
            }
-           break label$63;
+           break;
           };
          }
          if (($8 | 0) != (36 | 0)) {
@@ -40875,7 +40875,7 @@ function asmFunc(global, env, buffer) {
          i64toi32_i32$3 = 0;
          $22 = 0;
          $22$hi = i64toi32_i32$3;
-         label$64 : while (1) {
+         while (1) {
           label$65 : {
            $11 = ($1 + $13 | 0) & 2047 | 0;
            if (($11 | 0) != ($2 | 0)) {
@@ -40929,9 +40929,9 @@ function asmFunc(global, env, buffer) {
           $21$hi = i64toi32_i32$3;
           $1 = $1 + 1 | 0;
           if (($1 | 0) != (4 | 0)) {
-           continue label$64
+           continue
           }
-          break label$64;
+          break;
          };
          __floatsitf($7 + 720 | 0 | 0, $5 | 0);
          i64toi32_i32$3 = $21$hi;
@@ -40985,15 +40985,15 @@ function asmFunc(global, env, buffer) {
         $16 = $15 + $16 | 0;
         $11 = $2;
         if (($13 | 0) == ($2 | 0)) {
-         continue label$60
+         continue
         }
-        break label$60;
+        break;
        };
        $12 = 1e9 >>> $15 | 0;
        $17 = (-1 << $15 | 0) ^ -1 | 0;
        $1 = 0;
        $11 = $13;
-       label$66 : while (1) {
+       while (1) {
         $14 = ($7 + 784 | 0) + ($13 << 2 | 0) | 0;
         $823 = $14;
         $14 = HEAP32[$14 >> 2] | 0;
@@ -41005,12 +41005,12 @@ function asmFunc(global, env, buffer) {
         $1 = Math_imul($14 & $17 | 0, $12);
         $13 = ($13 + 1 | 0) & 2047 | 0;
         if (($13 | 0) != ($2 | 0)) {
-         continue label$66
+         continue
         }
-        break label$66;
+        break;
        };
        if (!$1) {
-        continue label$58
+        continue
        }
        label$67 : {
         if (($6 | 0) == ($11 | 0)) {
@@ -41022,11 +41022,11 @@ function asmFunc(global, env, buffer) {
        }
        HEAP32[$18 >> 2] = HEAP32[$18 >> 2] | 0 | 1 | 0;
        $11 = $6;
-       continue label$58;
+       continue;
       }
-      break label$58;
+      break;
      };
-     break label$57;
+     break;
     };
     __extenddftf2($7 + 656 | 0 | 0, +(+scalbn(+(1.0), 225 - $11 | 0 | 0)));
     i64toi32_i32$5 = $7;
@@ -41445,7 +41445,7 @@ function asmFunc(global, env, buffer) {
   i64toi32_i32$5 = $21$hi;
   HEAP32[(i64toi32_i32$4 + 8 | 0) >> 2] = $21;
   HEAP32[(i64toi32_i32$4 + 12 | 0) >> 2] = i64toi32_i32$5;
-  label$76 : {
+  {
    $20 = $7 + 8976 | 0;
    if ($20 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -41516,7 +41516,7 @@ function asmFunc(global, env, buffer) {
      break label$10
     }
     $3 = 0;
-    label$11 : while (1) {
+    while (1) {
      $3 = $2 + Math_imul($3, 10) | 0;
      label$12 : {
       label$13 : {
@@ -41537,10 +41537,10 @@ function asmFunc(global, env, buffer) {
        break label$14
       }
       if (($3 | 0) < (214748364 | 0)) {
-       continue label$11
+       continue
       }
      }
-     break label$11;
+     break;
     };
     i64toi32_i32$1 = $3;
     i64toi32_i32$0 = i64toi32_i32$1 >> 31 | 0;
@@ -41550,7 +41550,7 @@ function asmFunc(global, env, buffer) {
      if ($5 >>> 0 >= 10 >>> 0) {
       break label$15
      }
-     label$16 : while (1) {
+     while (1) {
       i64toi32_i32$0 = 0;
       $85$hi = i64toi32_i32$0;
       i64toi32_i32$0 = $6$hi;
@@ -41617,16 +41617,16 @@ function asmFunc(global, env, buffer) {
        $18 = $20;
       }
       if ($18) {
-       continue label$16
+       continue
       }
-      break label$16;
+      break;
      };
     }
     label$19 : {
      if ($5 >>> 0 >= 10 >>> 0) {
       break label$19
      }
-     label$20 : while (1) {
+     while (1) {
       label$21 : {
        label$22 : {
         $2 = HEAP32[($0 + 4 | 0) >> 2] | 0;
@@ -41640,9 +41640,9 @@ function asmFunc(global, env, buffer) {
        $2 = __shgetc($0 | 0) | 0;
       }
       if (($2 + -48 | 0) >>> 0 < 10 >>> 0) {
-       continue label$20
+       continue
       }
-      break label$20;
+      break;
      };
     }
     label$23 : {
@@ -41694,7 +41694,7 @@ function asmFunc(global, env, buffer) {
   $2 = $2 | 0;
   $3 = $3 | 0;
   var $4 = 0, i64toi32_i32$0 = 0, i64toi32_i32$2 = 0, i64toi32_i32$1 = 0, i64toi32_i32$5 = 0, i64toi32_i32$4 = 0, i64toi32_i32$3 = 0, $6 = 0, $5 = 0, $7 = 0, $7$hi = 0, $8 = 0, $8$hi = 0, $38 = 0, $39 = 0, $40 = 0, $42 = 0, $42$hi = 0, $48 = 0, $48$hi = 0;
-  label$1 : {
+  {
    $4 = global$0 - 160 | 0;
    $5 = $4;
    if ($4 >>> 0 < global$86 >>> 0) {
@@ -41754,7 +41754,7 @@ function asmFunc(global, env, buffer) {
   i64toi32_i32$5 = $7$hi;
   HEAP32[(i64toi32_i32$2 + 8 | 0) >> 2] = $7;
   HEAP32[(i64toi32_i32$2 + 12 | 0) >> 2] = i64toi32_i32$5;
-  label$4 : {
+  {
    $6 = $4 + 160 | 0;
    if ($6 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -41767,7 +41767,7 @@ function asmFunc(global, env, buffer) {
   $0 = $0 | 0;
   $1 = $1 | 0;
   var $2 = 0, i64toi32_i32$0 = 0, i64toi32_i32$1 = 0, $4 = 0, $3 = 0, $17 = 0, $17$hi = 0, $19 = 0, $19$hi = 0, $5 = 0.0;
-  label$1 : {
+  {
    $2 = global$0 - 16 | 0;
    $3 = $2;
    if ($2 >>> 0 < global$86 >>> 0) {
@@ -41787,7 +41787,7 @@ function asmFunc(global, env, buffer) {
   i64toi32_i32$0 = $17$hi;
   i64toi32_i32$1 = $19$hi;
   $5 = +__trunctfdf2($17 | 0, i64toi32_i32$0 | 0, $19 | 0, i64toi32_i32$1 | 0);
-  label$3 : {
+  {
    $4 = $2 + 16 | 0;
    if ($4 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -42056,7 +42056,7 @@ function asmFunc(global, env, buffer) {
    }
    HEAP32[($3 + 40 | 0) >> 2] = 0;
    $4 = 0;
-   label$2 : while (1) {
+   while (1) {
     label$3 : {
      label$4 : {
       $2 = strchr($1 | 0, 59 | 0) | 0;
@@ -42305,7 +42305,7 @@ function asmFunc(global, env, buffer) {
         $10 = Math_fround(Math_fround(Math_fround(1.0) / Math_fround(Math_fround(1.0) - $8)) + Math_fround(-1.0));
         $8 = Math_fround($10 + Math_fround($6 | 0));
         $4 = 0;
-        label$33 : while (1) {
+        while (1) {
          HEAPF32[(($1 + ($5 << 4 | 0) | 0) + 48 | 0) >> 2] = $9;
          $1 = HEAP32[$0 >> 2] | 0;
          HEAPF32[(($1 + ((HEAP32[($1 + 40 | 0) >> 2] | 0) << 4 | 0) | 0) + 52 | 0) >> 2] = Math_fround(Math_fround($4 | 0) / $8);
@@ -42318,7 +42318,7 @@ function asmFunc(global, env, buffer) {
          HEAP32[($1 + 40 | 0) >> 2] = $5;
          HEAP32[(($1 + ($3 << 4 | 0) | 0) + 44 | 0) >> 2] = 14;
          if (($4 | 0) != ($6 | 0)) {
-          continue label$33
+          continue
          }
          break label$5;
         };
@@ -42380,7 +42380,7 @@ function asmFunc(global, env, buffer) {
        $10 = Math_fround(Math_fround(Math_fround(1.0) / Math_fround(Math_fround(1.0) - $8)) + Math_fround(-1.0));
        $8 = Math_fround($10 + Math_fround($6 | 0));
        $4 = 0;
-       label$39 : while (1) {
+       while (1) {
         HEAPF32[(($1 + ($5 << 4 | 0) | 0) + 48 | 0) >> 2] = $9;
         $1 = HEAP32[$0 >> 2] | 0;
         HEAPF32[(($1 + ((HEAP32[($1 + 40 | 0) >> 2] | 0) << 4 | 0) | 0) + 52 | 0) >> 2] = Math_fround(Math_fround($4 | 0) / $8);
@@ -42393,7 +42393,7 @@ function asmFunc(global, env, buffer) {
         HEAP32[($1 + 40 | 0) >> 2] = $5;
         HEAP32[(($1 + ($3 << 4 | 0) | 0) + 44 | 0) >> 2] = 15;
         if (($4 | 0) != ($6 | 0)) {
-         continue label$39
+         continue
         }
         break label$5;
        };
@@ -42427,10 +42427,10 @@ function asmFunc(global, env, buffer) {
      }
      $1 = $2 + 1 | 0;
      if (($4 | 0) != (32 | 0)) {
-      continue label$2
+      continue
      }
     }
-    break label$2;
+    break;
    };
    $2 = 1;
    if ($4) {
@@ -42493,7 +42493,7 @@ function asmFunc(global, env, buffer) {
  function FLAC__stream_encoder_finish($0) {
   $0 = $0 | 0;
   var i64toi32_i32$1 = 0, i64toi32_i32$0 = 0, $2 = 0, i64toi32_i32$2 = 0, i64toi32_i32$5 = 0, i64toi32_i32$3 = 0, i64toi32_i32$4 = 0, $3 = 0, $4 = 0, $6 = 0, $7 = 0, $1 = 0, $20 = 0, $20$hi = 0, $8 = 0, $5 = 0, $21$hi = 0, $21 = 0, $9 = 0, $120 = 0, $121 = 0, $11 = 0, $12 = 0, $122 = 0, $123 = 0, $124 = 0, $125 = 0, $126 = 0, $127 = 0, $128 = 0, $129 = 0, $130 = 0, $131 = 0, $132 = 0, $133 = 0, $134 = 0, $135 = 0, $136 = 0, $137 = 0, $138 = 0, $139 = 0, $140 = 0, $141 = 0, $142 = 0, $143 = 0, $144 = 0, $145 = 0, $146 = 0, $147 = 0, $148 = 0, $149 = 0, $150 = 0, $151 = 0, $152 = 0, $153 = 0, $154 = 0, $155 = 0, $156 = 0, $158 = 0, $159 = 0, $160 = 0, $19 = 0, $18 = 0, $157 = 0, $162 = 0, $182 = 0, $186 = 0, $190 = 0, $195 = 0, $198 = 0, $327 = 0, $330 = 0, $333 = 0, $336 = 0, $339 = 0, $342 = 0, $345 = 0, $348 = 0, $351 = 0, $354 = 0, $357 = 0, $360 = 0, $363 = 0, $366 = 0, $10 = 0, $414 = 0, $416$hi = 0, $444$hi = 0, $454 = 0, $467 = 0, $470 = 0, $473 = 0, $476 = 0, $478 = 0, $485 = 0, $488$hi = 0, $493$hi = 0, $532 = 0, $535$hi = 0, $539$hi = 0, $576 = 0, $597 = 0, $606 = 0, $606$hi = 0, $609 = 0, $609$hi = 0, $610 = 0, $610$hi = 0, $613 = 0, $613$hi = 0, $616 = 0, $616$hi = 0, $617 = 0, $617$hi = 0, $618 = 0, $618$hi = 0, $621 = 0, $621$hi = 0, $624 = 0, $624$hi = 0, $625 = 0, $625$hi = 0, $628 = 0, $628$hi = 0, $630$hi = 0, $631 = 0, $631$hi = 0, $632 = 0, $632$hi = 0, $633 = 0, $634 = 0, $641 = 0, $641$hi = 0, $644 = 0, $644$hi = 0, $645 = 0, $645$hi = 0, $648 = 0, $648$hi = 0, $651 = 0, $651$hi = 0, $652 = 0, $652$hi = 0, $653 = 0, $653$hi = 0, $656 = 0, $656$hi = 0, $659 = 0, $659$hi = 0, $660 = 0, $660$hi = 0, $663 = 0, $663$hi = 0, $665$hi = 0, $666 = 0, $666$hi = 0, $667 = 0, $667$hi = 0, $668 = 0;
-  label$1 : {
+  {
    $1 = global$0 - 32 | 0;
    $18 = $1;
    if ($1 >>> 0 < global$86 >>> 0) {
@@ -42762,7 +42762,7 @@ function asmFunc(global, env, buffer) {
           }
           $2 = (HEAP32[($1 + 8 | 0) >> 2] | 0) + 4 | 0;
           $6 = 0;
-          label$20 : while (1) {
+          while (1) {
            $7 = (HEAP32[($7 + 4 | 0) >> 2] | 0) + Math_imul($6, 24) | 0;
            i64toi32_i32$0 = $7;
            i64toi32_i32$2 = HEAP32[i64toi32_i32$0 >> 2] | 0;
@@ -42980,9 +42980,9 @@ function asmFunc(global, env, buffer) {
            $8 = HEAP32[$4 >> 2] | 0;
            $7 = HEAP32[($8 + 7048 | 0) >> 2] | 0;
            if ($6 >>> 0 < (HEAP32[$7 >> 2] | 0) >>> 0) {
-            continue label$20
+            continue
            }
-           break label$20;
+           break;
           };
          }
          i64toi32_i32$1 = HEAP32[$0 >> 2] | 0;
@@ -43238,7 +43238,7 @@ function asmFunc(global, env, buffer) {
         break label$12;
        }
        label$33 : {
-        label$34 : while (1) {
+        while (1) {
          $597 = $1;
          $7 = Math_imul($8, 24);
          i64toi32_i32$0 = (HEAP32[($2 + 4 | 0) >> 2] | 0) + $7 | 0;
@@ -43633,7 +43633,7 @@ function asmFunc(global, env, buffer) {
          if ($8 >>> 0 >= (HEAP32[$2 >> 2] | 0) >>> 0) {
           break label$12
          }
-         continue label$34;
+         continue;
         };
        }
        HEAP32[(HEAP32[$0 >> 2] | 0) >> 2] = 5;
@@ -43716,7 +43716,7 @@ function asmFunc(global, env, buffer) {
      break label$42
     }
     $3 = 0;
-    label$43 : while (1) {
+    while (1) {
      label$44 : {
       $6 = HEAP32[$4 >> 2] | 0;
       $2 = $3 << 2 | 0;
@@ -43738,9 +43738,9 @@ function asmFunc(global, env, buffer) {
      }
      $3 = $3 + 1 | 0;
      if ($3 >>> 0 < (HEAP32[((HEAP32[$0 >> 2] | 0) + 24 | 0) >> 2] | 0) >>> 0) {
-      continue label$43
+      continue
      }
-     break label$43;
+     break;
     };
    }
    label$46 : {
@@ -43786,7 +43786,7 @@ function asmFunc(global, env, buffer) {
      break label$50
     }
     $3 = 0;
-    label$51 : while (1) {
+    while (1) {
      label$52 : {
       $7 = $3 << 2 | 0;
       $8 = HEAP32[(($2 + $7 | 0) + 7408 | 0) >> 2] | 0;
@@ -43800,9 +43800,9 @@ function asmFunc(global, env, buffer) {
      }
      $3 = $3 + 1 | 0;
      if ($3 >>> 0 < (HEAP32[($6 + 40 | 0) >> 2] | 0) >>> 0) {
-      continue label$51
+      continue
      }
-     break label$51;
+     break;
     };
    }
    label$53 : {
@@ -43820,7 +43820,7 @@ function asmFunc(global, env, buffer) {
      break label$54
     }
     $6 = 0;
-    label$55 : while (1) {
+    while (1) {
      label$56 : {
       $3 = $6 << 3 | 0;
       $7 = HEAP32[(($2 + $3 | 0) + 7540 | 0) >> 2] | 0;
@@ -43842,9 +43842,9 @@ function asmFunc(global, env, buffer) {
      }
      $6 = $6 + 1 | 0;
      if ($6 >>> 0 < (HEAP32[((HEAP32[$0 >> 2] | 0) + 24 | 0) >> 2] | 0) >>> 0) {
-      continue label$55
+      continue
      }
-     break label$55;
+     break;
     };
    }
    label$58 : {
@@ -43910,7 +43910,7 @@ function asmFunc(global, env, buffer) {
      break label$64
     }
     $4 = 0;
-    label$65 : while (1) {
+    while (1) {
      label$66 : {
       $6 = $4 << 2 | 0;
       $7 = HEAP32[(($2 + $6 | 0) + 11764 | 0) >> 2] | 0;
@@ -43924,9 +43924,9 @@ function asmFunc(global, env, buffer) {
      }
      $4 = $4 + 1 | 0;
      if ($4 >>> 0 < (HEAP32[($3 + 24 | 0) >> 2] | 0) >>> 0) {
-      continue label$65
+      continue
      }
-     break label$65;
+     break;
     };
    }
    FLAC__bitwriter_free(HEAP32[($2 + 6856 | 0) >> 2] | 0 | 0);
@@ -44039,7 +44039,7 @@ function asmFunc(global, env, buffer) {
    }
    $2 = !$5;
   }
-  label$69 : {
+  {
    $19 = $1 + 32 | 0;
    if ($19 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -44054,7 +44054,7 @@ function asmFunc(global, env, buffer) {
   $1 = $1 | 0;
   $2 = $2 | 0;
   var $5 = 0, $7 = 0, $8 = 0, $4 = 0, $15 = 0, $9 = 0, $3 = 0, $14 = 0, i64toi32_i32$2 = 0, $6 = 0, $11 = 0, $12 = 0, i64toi32_i32$0 = 0, i64toi32_i32$1 = 0, $10 = 0, i64toi32_i32$5 = 0, $13 = 0, i64toi32_i32$3 = 0, i64toi32_i32$4 = 0, $17 = 0, $16 = 0, $689 = 0, $691 = 0, $691$hi = 0, $694 = 0, $694$hi = 0;
-  label$1 : {
+  {
    $3 = global$0 - 48 | 0;
    $16 = $3;
    if ($3 >>> 0 < global$86 >>> 0) {
@@ -44139,7 +44139,7 @@ function asmFunc(global, env, buffer) {
            $5 = 0;
            break label$15;
           }
-          label$17 : while (1) {
+          while (1) {
            $13 = $9 + ($12 << 2 | 0) | 0;
            $5 = 0;
            label$18 : {
@@ -44153,7 +44153,7 @@ function asmFunc(global, env, buffer) {
             $15 = HEAP32[($13 + 4 | 0) >> 2] | 0;
             $1 = 0;
             label$20 : {
-             label$21 : while (1) {
+             while (1) {
               $5 = HEAP32[($15 + ($1 << 2 | 0) | 0) >> 2] | 0 | $5 | 0;
               $7 = $5 & 1 | 0;
               $1 = $1 + 1 | 0;
@@ -44161,9 +44161,9 @@ function asmFunc(global, env, buffer) {
                break label$20
               }
               if (!$7) {
-               continue label$21
+               continue
               }
-              break label$21;
+              break;
              };
             }
             $1 = 0;
@@ -44178,27 +44178,27 @@ function asmFunc(global, env, buffer) {
             if ($7) {
              break label$18
             }
-            label$23 : while (1) {
+            while (1) {
              $1 = $1 + 1 | 0;
              $7 = $5 & 2 | 0;
              $5 = $5 >> 1 | 0;
              if (!$7) {
-              continue label$23
+              continue
              }
-             break label$23;
+             break;
             };
             $14 = 0;
             if (!$1) {
              break label$18
             }
-            label$24 : while (1) {
+            while (1) {
              $5 = $15 + ($14 << 2 | 0) | 0;
              HEAP32[$5 >> 2] = (HEAP32[$5 >> 2] | 0) >> $1 | 0;
              $14 = $14 + 1 | 0;
              if (($14 | 0) != ($8 | 0)) {
-              continue label$24
+              continue
              }
-             break label$24;
+             break;
             };
             $14 = $1;
            }
@@ -44214,7 +44214,7 @@ function asmFunc(global, env, buffer) {
             break label$15
            }
            $8 = HEAP32[($4 + 36 | 0) >> 2] | 0;
-           continue label$17;
+           continue;
           };
          }
          $8 = 1;
@@ -44234,7 +44234,7 @@ function asmFunc(global, env, buffer) {
          $1 = 0;
          $7 = 0;
          label$26 : {
-          label$27 : while (1) {
+          while (1) {
            $1 = HEAP32[($14 + ($7 << 2 | 0) | 0) >> 2] | 0 | $1 | 0;
            $15 = $1 & 1 | 0;
            $7 = $7 + 1 | 0;
@@ -44242,9 +44242,9 @@ function asmFunc(global, env, buffer) {
             break label$26
            }
            if (!$15) {
-            continue label$27
+            continue
            }
-           break label$27;
+           break;
           };
          }
          $7 = 0;
@@ -44254,14 +44254,14 @@ function asmFunc(global, env, buffer) {
          if ($15) {
           break label$25
          }
-         label$28 : while (1) {
+         while (1) {
           $7 = $7 + 1 | 0;
           $15 = $1 & 2 | 0;
           $1 = $1 >> 1 | 0;
           if (!$15) {
-           continue label$28
+           continue
           }
-          break label$28;
+          break;
          };
          $1 = 0;
          label$29 : {
@@ -44271,14 +44271,14 @@ function asmFunc(global, env, buffer) {
           $7 = 0;
           break label$25;
          }
-         label$30 : while (1) {
+         while (1) {
           $15 = $14 + ($1 << 2 | 0) | 0;
           HEAP32[$15 >> 2] = (HEAP32[$15 >> 2] | 0) >> $7 | 0;
           $1 = $1 + 1 | 0;
           if (($1 | 0) != ($8 | 0)) {
-           continue label$30
+           continue
           }
-          break label$30;
+          break;
          };
         }
         $1 = HEAP32[($4 + 28 | 0) >> 2] | 0;
@@ -44294,7 +44294,7 @@ function asmFunc(global, env, buffer) {
          $15 = HEAP32[($9 + 40 | 0) >> 2] | 0;
          $1 = 0;
          label$32 : {
-          label$33 : while (1) {
+          while (1) {
            $5 = HEAP32[($15 + ($1 << 2 | 0) | 0) >> 2] | 0 | $5 | 0;
            $7 = $5 & 1 | 0;
            $1 = $1 + 1 | 0;
@@ -44302,9 +44302,9 @@ function asmFunc(global, env, buffer) {
             break label$32
            }
            if (!$7) {
-            continue label$33
+            continue
            }
-           break label$33;
+           break;
           };
          }
          $1 = 0;
@@ -44322,27 +44322,27 @@ function asmFunc(global, env, buffer) {
           $5 = 0;
           break label$31;
          }
-         label$36 : while (1) {
+         while (1) {
           $1 = $1 + 1 | 0;
           $7 = $5 & 2 | 0;
           $5 = $5 >> 1 | 0;
           if (!$7) {
-           continue label$36
+           continue
           }
-          break label$36;
+          break;
          };
          $5 = 0;
          if (!$1) {
           break label$31
          }
-         label$37 : while (1) {
+         while (1) {
           $7 = $15 + ($5 << 2 | 0) | 0;
           HEAP32[$7 >> 2] = (HEAP32[$7 >> 2] | 0) >> $1 | 0;
           $5 = $5 + 1 | 0;
           if (($5 | 0) != ($8 | 0)) {
-           continue label$37
+           continue
           }
-          break label$37;
+          break;
          };
          $5 = $1;
         }
@@ -44362,16 +44362,16 @@ function asmFunc(global, env, buffer) {
          break label$38
         }
         $5 = 0;
-        label$39 : while (1) {
+        while (1) {
          $1 = $9 + ($5 << 2 | 0) | 0;
          $7 = $9 + ($5 << 3 | 0) | 0;
          process_subframe_($0 | 0, $10 | 0, $6 | 0, $3 + 8 | 0 | 0, HEAP32[($1 + 216 | 0) >> 2] | 0 | 0, HEAP32[($1 + 4 | 0) >> 2] | 0 | 0, $7 + 6176 | 0 | 0, $7 + 6640 | 0 | 0, $7 + 256 | 0 | 0, $1 + 6768 | 0 | 0, $1 + 6808 | 0 | 0);
          $9 = HEAP32[($0 + 4 | 0) >> 2] | 0;
          $5 = $5 + 1 | 0;
          if ($5 >>> 0 < (HEAP32[((HEAP32[$0 >> 2] | 0) + 24 | 0) >> 2] | 0) >>> 0) {
-          continue label$39
+          continue
          }
-         break label$39;
+         break;
         };
        }
        if ($8) {
@@ -44476,7 +44476,7 @@ function asmFunc(global, env, buffer) {
        break label$7
       }
       $5 = 0;
-      label$50 : while (1) {
+      while (1) {
        $1 = HEAP32[($0 + 4 | 0) >> 2] | 0;
        $7 = $1 + ($5 << 2 | 0) | 0;
        if (!(add_subframe_($0 | 0, HEAP32[($3 + 8 | 0) >> 2] | 0 | 0, HEAP32[($7 + 216 | 0) >> 2] | 0 | 0, (($1 + Math_imul($5, 584) | 0) + Math_imul(HEAP32[($7 + 6768 | 0) >> 2] | 0, 292) | 0) + 336 | 0 | 0, HEAP32[($1 + 6856 | 0) >> 2] | 0 | 0) | 0)) {
@@ -44487,7 +44487,7 @@ function asmFunc(global, env, buffer) {
        if ($5 >>> 0 >= (HEAP32[($1 + 24 | 0) >> 2] | 0) >>> 0) {
         break label$7
        }
-       continue label$50;
+       continue;
       };
      }
      HEAP32[$1 >> 2] = 7;
@@ -44564,7 +44564,7 @@ function asmFunc(global, env, buffer) {
    HEAP32[i64toi32_i32$2 >> 2] = i64toi32_i32$4;
    HEAP32[(i64toi32_i32$2 + 4 | 0) >> 2] = i64toi32_i32$5;
   }
-  label$56 : {
+  {
    $17 = $3 + 48 | 0;
    if ($17 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -44594,7 +44594,7 @@ function asmFunc(global, env, buffer) {
   $6 = $6 | 0;
   $7 = $7 | 0;
   var $9 = 0, $10 = 0, $11 = 0, i64toi32_i32$0 = 0, i64toi32_i32$1 = 0, $12 = 0, $13 = 0, $14 = 0, $16 = 0, $18 = 0, $8 = 0, $21 = 0.0, $15 = 0, $17 = 0, i64toi32_i32$2 = 0, $20 = 0, $19 = 0, $193 = 0, $1142 = 0;
-  label$1 : {
+  {
    $8 = global$0 - 176 | 0;
    $19 = $8;
    if ($8 >>> 0 < global$86 >>> 0) {
@@ -44801,7 +44801,7 @@ function asmFunc(global, env, buffer) {
      break label$21
     }
     $9 = 1;
-    label$22 : while (1) {
+    while (1) {
      label$23 : {
       $12 = HEAP32[($11 + ($9 << 2 | 0) | 0) >> 2] | 0;
       if (!$12) {
@@ -44810,15 +44810,15 @@ function asmFunc(global, env, buffer) {
       if ((HEAP32[$12 >> 2] | 0 | 0) != (4 | 0)) {
        break label$23
       }
-      label$24 : while (1) {
+      while (1) {
        $193 = $11 + ($9 << 2 | 0) | 0;
        $9 = $9 + -1 | 0;
        HEAP32[$193 >> 2] = HEAP32[($11 + ($9 << 2 | 0) | 0) >> 2] | 0;
        $11 = HEAP32[((HEAP32[$0 >> 2] | 0) + 600 | 0) >> 2] | 0;
        if ($9) {
-        continue label$24
+        continue
        }
-       break label$24;
+       break;
       };
       HEAP32[$11 >> 2] = $12;
       $10 = HEAP32[$0 >> 2] | 0;
@@ -44826,9 +44826,9 @@ function asmFunc(global, env, buffer) {
      }
      $9 = $9 + 1 | 0;
      if (($9 | 0) != ($13 | 0)) {
-      continue label$22
+      continue
      }
-     break label$22;
+     break;
     };
    }
    $13 = HEAP32[($10 + 604 | 0) >> 2] | 0;
@@ -44843,7 +44843,7 @@ function asmFunc(global, env, buffer) {
       if (!$13) {
        break label$25
       }
-      label$28 : while (1) {
+      while (1) {
        label$29 : {
         $9 = HEAP32[($11 + ($12 << 2 | 0) | 0) >> 2] | 0;
         if (!$9) {
@@ -44857,7 +44857,7 @@ function asmFunc(global, env, buffer) {
        }
        $12 = $12 + 1 | 0;
        if (($12 | 0) != ($13 | 0)) {
-        continue label$28
+        continue
        }
        break label$26;
       };
@@ -44876,7 +44876,7 @@ function asmFunc(global, env, buffer) {
     $17 = 0;
     $12 = 0;
     $18 = 0;
-    label$30 : while (1) {
+    while (1) {
      $9 = 12;
      label$31 : {
       label$32 : {
@@ -44976,7 +44976,7 @@ function asmFunc(global, env, buffer) {
      $11 = HEAP32[($10 + 600 | 0) >> 2] | 0;
      $14 = $18;
      $16 = $12;
-     continue label$30;
+     continue;
     };
    }
    $11 = 0;
@@ -44986,7 +44986,7 @@ function asmFunc(global, env, buffer) {
     if (!(HEAP32[($10 + 24 | 0) >> 2] | 0)) {
      break label$39
     }
-    label$40 : while (1) {
+    while (1) {
      $9 = $11 << 2 | 0;
      HEAP32[(($13 + $9 | 0) + 4 | 0) >> 2] = 0;
      HEAP32[(((HEAP32[($0 + 4 | 0) >> 2] | 0) + $9 | 0) + 7328 | 0) >> 2] = 0;
@@ -44995,9 +44995,9 @@ function asmFunc(global, env, buffer) {
      $13 = HEAP32[($0 + 4 | 0) >> 2] | 0;
      $11 = $11 + 1 | 0;
      if ($11 >>> 0 < (HEAP32[((HEAP32[$0 >> 2] | 0) + 24 | 0) >> 2] | 0) >>> 0) {
-      continue label$40
+      continue
      }
-     break label$40;
+     break;
     };
    }
    $10 = 0;
@@ -45015,7 +45015,7 @@ function asmFunc(global, env, buffer) {
     if (!(HEAP32[($11 + 40 | 0) >> 2] | 0)) {
      break label$41
     }
-    label$42 : while (1) {
+    while (1) {
      $11 = $10 << 2 | 0;
      HEAP32[(($9 + $11 | 0) + 84 | 0) >> 2] = 0;
      HEAP32[(((HEAP32[($0 + 4 | 0) >> 2] | 0) + $11 | 0) + 7408 | 0) >> 2] = 0;
@@ -45023,9 +45023,9 @@ function asmFunc(global, env, buffer) {
      $10 = $10 + 1 | 0;
      $11 = HEAP32[$0 >> 2] | 0;
      if ($10 >>> 0 < (HEAP32[($11 + 40 | 0) >> 2] | 0) >>> 0) {
-      continue label$42
+      continue
      }
-     break label$42;
+     break;
     };
    }
    $10 = 0;
@@ -45035,7 +45035,7 @@ function asmFunc(global, env, buffer) {
     if (!(HEAP32[($11 + 24 | 0) >> 2] | 0)) {
      break label$43
     }
-    label$44 : while (1) {
+    while (1) {
      $11 = $10 << 3 | 0;
      HEAP32[(($9 + $11 | 0) + 256 | 0) >> 2] = 0;
      HEAP32[(((HEAP32[($0 + 4 | 0) >> 2] | 0) + $11 | 0) + 7540 | 0) >> 2] = 0;
@@ -45045,9 +45045,9 @@ function asmFunc(global, env, buffer) {
      HEAP32[(($9 + ($10 << 2 | 0) | 0) + 6768 | 0) >> 2] = 0;
      $10 = $10 + 1 | 0;
      if ($10 >>> 0 < (HEAP32[((HEAP32[$0 >> 2] | 0) + 24 | 0) >> 2] | 0) >>> 0) {
-      continue label$44
+      continue
      }
-     break label$44;
+     break;
     };
    }
    HEAP32[($9 + 320 | 0) >> 2] = 0;
@@ -45137,7 +45137,7 @@ function asmFunc(global, env, buffer) {
             break label$55
            }
            $2 = 0;
-           label$56 : while (1) {
+           while (1) {
             $9 = $2 << 2 | 0;
             $3 = (HEAP32[$10 >> 2] | 0) + $9 | 0;
             $3 = FLAC__memory_alloc_aligned_int32_array($7 | 0, $3 + 7328 | 0 | 0, $3 + 4 | 0 | 0) | 0;
@@ -45157,9 +45157,9 @@ function asmFunc(global, env, buffer) {
             }
             $2 = $2 + 1 | 0;
             if ($2 >>> 0 < (HEAP32[((HEAP32[$0 >> 2] | 0) + 24 | 0) >> 2] | 0) >>> 0) {
-             continue label$56
+             continue
             }
-            break label$56;
+            break;
            };
           }
           $9 = HEAP32[$10 >> 2] | 0;
@@ -45212,7 +45212,7 @@ function asmFunc(global, env, buffer) {
              break label$60
             }
             $9 = 0;
-            label$61 : while (1) {
+            while (1) {
              $2 = $2 + ($9 << 2 | 0) | 0;
              if (!(FLAC__memory_alloc_aligned_real_array($1 | 0, $2 + 7408 | 0 | 0, $2 + 84 | 0 | 0) | 0)) {
               break label$54
@@ -45220,9 +45220,9 @@ function asmFunc(global, env, buffer) {
              $2 = HEAP32[($0 + 4 | 0) >> 2] | 0;
              $9 = $9 + 1 | 0;
              if ($9 >>> 0 < (HEAP32[((HEAP32[$0 >> 2] | 0) + 40 | 0) >> 2] | 0) >>> 0) {
-              continue label$61
+              continue
              }
-             break label$61;
+             break;
             };
            }
            if (!(FLAC__memory_alloc_aligned_real_array($1 | 0, $2 + 7536 | 0 | 0, $2 + 212 | 0 | 0) | 0)) {
@@ -45233,14 +45233,14 @@ function asmFunc(global, env, buffer) {
           $11 = 1;
           $5 = 0;
           label$62 : {
-           label$63 : while (1) {
+           while (1) {
             if ($5 >>> 0 >= (HEAP32[((HEAP32[$0 >> 2] | 0) + 24 | 0) >> 2] | 0) >>> 0) {
              break label$62
             }
             $9 = 0;
             $2 = 1;
             $3 = 0;
-            label$64 : while (1) {
+            while (1) {
              if ($9 & 1 | 0) {
               break label$54
              }
@@ -45251,26 +45251,26 @@ function asmFunc(global, env, buffer) {
              $3 = 1;
              $2 = 0;
              if ($7) {
-              continue label$64
+              continue
              }
-             break label$64;
+             break;
             };
             $5 = $5 + 1 | 0;
             if ($4) {
-             continue label$63
+             continue
             }
             break label$54;
            };
           }
           $7 = 1;
-          label$65 : while (1) {
+          while (1) {
            $9 = 0;
            $2 = 1;
            $3 = 0;
            if (!$7) {
             break label$54
            }
-           label$66 : while (1) {
+           while (1) {
             if ($9 & 1 | 0) {
              break label$54
             }
@@ -45281,18 +45281,18 @@ function asmFunc(global, env, buffer) {
             $3 = 1;
             $2 = 0;
             if ($7) {
-             continue label$66
+             continue
             }
-            break label$66;
+            break;
            };
            $7 = ($4 | 0) != (0 | 0);
            $9 = $11 & $7 | 0;
            $6 = 1;
            $11 = 0;
            if ($9) {
-            continue label$65
+            continue
            }
-           break label$65;
+           break;
           };
           if (!$4) {
            break label$54
@@ -45336,7 +45336,7 @@ function asmFunc(global, env, buffer) {
          break label$67
         }
         $9 = 0;
-        label$68 : while (1) {
+        while (1) {
          label$69 : {
           label$70 : {
            label$71 : {
@@ -45452,9 +45452,9 @@ function asmFunc(global, env, buffer) {
          $9 = $9 + 1 | 0;
          $2 = HEAP32[$0 >> 2] | 0;
          if ($9 >>> 0 < (HEAP32[($2 + 40 | 0) >> 2] | 0) >>> 0) {
-          continue label$68
+          continue
          }
-         break label$68;
+         break;
         };
         $9 = HEAP32[$10 >> 2] | 0;
        }
@@ -45493,7 +45493,7 @@ function asmFunc(global, env, buffer) {
          if (!$2) {
           break label$92
          }
-         label$93 : while (1) {
+         while (1) {
           $2 = HEAP32[$10 >> 2] | 0;
           if ($9 >>> 0 >= (HEAP32[($3 + 24 | 0) >> 2] | 0) >>> 0) {
            break label$91
@@ -45503,9 +45503,9 @@ function asmFunc(global, env, buffer) {
           $9 = $9 + 1 | 0;
           $3 = HEAP32[$0 >> 2] | 0;
           if ($2) {
-           continue label$93
+           continue
           }
-          break label$93;
+          break;
          };
         }
         HEAP32[$3 >> 2] = 8;
@@ -45678,7 +45678,7 @@ function asmFunc(global, env, buffer) {
         break label$102
        }
        $2 = 0;
-       label$103 : while (1) {
+       while (1) {
         $3 = HEAP32[((HEAP32[($3 + 600 | 0) >> 2] | 0) + ($2 << 2 | 0) | 0) >> 2] | 0;
         HEAP32[($3 + 4 | 0) >> 2] = ($2 | 0) == ($4 + -1 | 0 | 0);
         label$104 : {
@@ -45698,9 +45698,9 @@ function asmFunc(global, env, buffer) {
          if ($2 >>> 0 >= $4 >>> 0) {
           break label$102
          }
-         continue label$103;
+         continue;
         }
-        break label$103;
+        break;
        };
        $9 = 1;
        break label$3;
@@ -45738,7 +45738,7 @@ function asmFunc(global, env, buffer) {
    HEAP32[$9 >> 2] = 8;
    $9 = 1;
   }
-  label$107 : {
+  {
    $20 = $8 + 176 | 0;
    if ($20 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -45769,23 +45769,23 @@ function asmFunc(global, env, buffer) {
      break label$2
     }
     $6 = 0;
-    label$3 : while (1) {
+    while (1) {
      $3 = 0;
      label$4 : {
       $10 = $10 + $11 | 0;
       if ($9 >>> 0 >= $10 >>> 0) {
        break label$4
       }
-      label$5 : while (1) {
+      while (1) {
        $2 = HEAP32[($0 + ($9 << 2 | 0) | 0) >> 2] | 0;
        $48 = $2;
        $2 = $2 >> 31 | 0;
        $3 = (($48 + $2 | 0) ^ $2 | 0) + $3 | 0;
        $9 = $9 + 1 | 0;
        if ($9 >>> 0 < $10 >>> 0) {
-        continue label$5
+        continue
        }
-       break label$5;
+       break;
       };
       $9 = $12;
      }
@@ -45796,13 +45796,13 @@ function asmFunc(global, env, buffer) {
      $12 = $12 + $11 | 0;
      $6 = $6 + 1 | 0;
      if (($6 | 0) != ($8 | 0)) {
-      continue label$3
+      continue
      }
      break label$1;
     };
    }
    $2 = 0;
-   label$6 : while (1) {
+   while (1) {
     i64toi32_i32$0 = 0;
     $13 = 0;
     $13$hi = i64toi32_i32$0;
@@ -45811,7 +45811,7 @@ function asmFunc(global, env, buffer) {
      if ($9 >>> 0 >= $10 >>> 0) {
       break label$7
      }
-     label$8 : while (1) {
+     while (1) {
       i64toi32_i32$0 = $13$hi;
       $3 = HEAP32[($0 + ($9 << 2 | 0) | 0) >> 2] | 0;
       $89 = $3;
@@ -45831,9 +45831,9 @@ function asmFunc(global, env, buffer) {
       $13$hi = i64toi32_i32$5;
       $9 = $9 + 1 | 0;
       if ($9 >>> 0 < $10 >>> 0) {
-       continue label$8
+       continue
       }
-      break label$8;
+      break;
      };
      $9 = $12;
     }
@@ -45844,9 +45844,9 @@ function asmFunc(global, env, buffer) {
     $12 = $12 + $11 | 0;
     $2 = $2 + 1 | 0;
     if (($2 | 0) != ($8 | 0)) {
-     continue label$6
+     continue
     }
-    break label$6;
+    break;
    };
   }
   label$9 : {
@@ -45855,7 +45855,7 @@ function asmFunc(global, env, buffer) {
    }
    $9 = 0;
    $0 = $7;
-   label$10 : while (1) {
+   while (1) {
     $5 = $5 + -1 | 0;
     $10 = 0;
     label$11 : {
@@ -45863,7 +45863,7 @@ function asmFunc(global, env, buffer) {
      if (!$0) {
       break label$11
      }
-     label$12 : while (1) {
+     while (1) {
       $130 = $1 + ($7 << 3 | 0) | 0;
       $3 = $1 + ($9 << 3 | 0) | 0;
       i64toi32_i32$0 = $3 + 8 | 0;
@@ -45892,15 +45892,15 @@ function asmFunc(global, env, buffer) {
       $7 = $7 + 1 | 0;
       $10 = $10 + 1 | 0;
       if (($10 | 0) != ($0 | 0)) {
-       continue label$12
+       continue
       }
-      break label$12;
+      break;
      };
     }
     if (($5 | 0) > ($4 | 0)) {
-     continue label$10
+     continue
     }
-    break label$10;
+    break;
    };
   }
  }
@@ -45966,7 +45966,7 @@ function asmFunc(global, env, buffer) {
    }
    $7 = $4 << 2 | 0;
    $8 = 0;
-   label$2 : while (1) {
+   while (1) {
     label$3 : {
      $9 = $8 << 2 | 0;
      $10 = HEAP32[($2 + $9 | 0) >> 2] | 0;
@@ -45981,7 +45981,7 @@ function asmFunc(global, env, buffer) {
         break label$5
        }
        $6 = 0;
-       label$6 : while (1) {
+       while (1) {
         label$7 : {
          $2 = $6 << 2 | 0;
          $7 = HEAP32[($10 + $2 | 0) >> 2] | 0;
@@ -45994,9 +45994,9 @@ function asmFunc(global, env, buffer) {
         }
         $6 = $6 + 1 | 0;
         if (($6 | 0) != ($4 | 0)) {
-         continue label$6
+         continue
         }
-        break label$6;
+        break;
        };
       }
       $2 = 0;
@@ -46042,9 +46042,9 @@ function asmFunc(global, env, buffer) {
     }
     $8 = $8 + 1 | 0;
     if (($8 | 0) != ($6 | 0)) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
    $8 = $5 + 11800 | 0;
    $96 = $8;
@@ -46061,15 +46061,15 @@ function asmFunc(global, env, buffer) {
     if (($6 | 0) == (1 | 0)) {
      break label$8
     }
-    label$9 : while (1) {
+    while (1) {
      $9 = HEAP32[($3 + 4 | 0) >> 2] | 0;
      $5 = HEAP32[(($9 + ($8 << 2 | 0) | 0) + 11764 | 0) >> 2] | 0;
      memmove($5 | 0, $5 + $10 | 0 | 0, (HEAP32[($9 + 11800 | 0) >> 2] | 0) << 2 | 0 | 0) | 0;
      $8 = $8 + 1 | 0;
      if (($8 | 0) != ($6 | 0)) {
-      continue label$9
+      continue
      }
-     break label$9;
+     break;
     };
    }
    return 0 | 0;
@@ -46097,7 +46097,7 @@ function asmFunc(global, env, buffer) {
   $1 = $1 | 0;
   $2 = $2 | 0;
   var $5 = 0, i64toi32_i32$0 = 0, i64toi32_i32$2 = 0, i64toi32_i32$4 = 0, i64toi32_i32$5 = 0, i64toi32_i32$1 = 0, $4 = 0, i64toi32_i32$3 = 0, $3 = 0, $8 = 0, $17$hi = 0, $9 = 0, $15$hi = 0, $6 = 0, $7 = 0, $10 = 0, $15 = 0, $14$hi = 0, $11 = 0, $16$hi = 0, $17 = 0, $13 = 0, $12 = 0, $97 = 0, $105 = 0, $14 = 0, $130$hi = 0, $16 = 0, $199 = 0, $201$hi = 0, $203$hi = 0, $205 = 0, $207$hi = 0, $209$hi = 0, $233 = 0, $247 = 0;
-  label$1 : {
+  {
    $3 = global$0 - 16 | 0;
    $12 = $3;
    if ($3 >>> 0 < global$86 >>> 0) {
@@ -46252,7 +46252,7 @@ function asmFunc(global, env, buffer) {
       $16 = i64toi32_i32$2;
       $16$hi = i64toi32_i32$4;
       $9 = HEAP32[($8 + 4 | 0) >> 2] | 0;
-      label$14 : while (1) {
+      while (1) {
        $8 = $9 + Math_imul($4, 24) | 0;
        i64toi32_i32$5 = $8;
        i64toi32_i32$4 = HEAP32[i64toi32_i32$5 >> 2] | 0;
@@ -46302,9 +46302,9 @@ function asmFunc(global, env, buffer) {
        $4 = $4 + 1 | 0;
        HEAP32[($5 + 7292 | 0) >> 2] = $4;
        if (($4 | 0) != ($10 | 0)) {
-        continue label$14
+        continue
        }
-       break label$14;
+       break;
       };
      }
      label$16 : {
@@ -46388,7 +46388,7 @@ function asmFunc(global, env, buffer) {
    }
    $4 = 0;
   }
-  label$19 : {
+  {
    $13 = $3 + 16 | 0;
    if ($13 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -46422,7 +46422,7 @@ function asmFunc(global, env, buffer) {
   $9 = $9 | 0;
   $10 = $10 | 0;
   var $12 = 0, $13 = 0, $16 = 0, $17 = 0, $11 = 0, $18 = 0, $15 = 0, $20 = 0, $19 = 0, $49 = 0.0, $27 = 0, $14 = 0, $24 = 0, $26 = 0, $25 = 0, $23 = 0, $29 = 0, $40 = 0, $21 = 0, $22 = 0, $48 = Math_fround(0), $28 = 0, i64toi32_i32$0 = 0, $42 = 0, $30 = 0, $44 = 0, $46 = 0, $45 = 0, $47 = Math_fround(0), $253 = 0, $345 = 0, $31 = 0, $32 = 0, $33 = 0, $34 = 0, $35 = 0, $36 = 0, $50 = 0.0, $37 = 0, $38 = 0, $39 = 0, $41 = 0, $43 = 0, $577 = 0;
-  label$1 : {
+  {
    $11 = global$0 - 576 | 0;
    $45 = $11;
    if ($11 >>> 0 < global$86 >>> 0) {
@@ -46484,7 +46484,7 @@ function asmFunc(global, env, buffer) {
        if ($18 >>> 0 <= 1 >>> 0) {
         break label$10
        }
-       label$12 : while (1) {
+       while (1) {
         if (($16 | 0) != (HEAP32[($5 + ($13 << 2 | 0) | 0) >> 2] | 0 | 0)) {
          break label$11
         }
@@ -46492,7 +46492,7 @@ function asmFunc(global, env, buffer) {
         if ($13 >>> 0 >= $18 >>> 0) {
          break label$10
         }
-        continue label$12;
+        continue;
        };
       }
       $13 = HEAP32[$0 >> 2] | 0;
@@ -46541,7 +46541,7 @@ function asmFunc(global, env, buffer) {
     $24 = HEAP32[global$71 >> 2] | 0;
     $47 = Math_fround($4 >>> 0);
     $15 = 0;
-    label$15 : while (1) {
+    while (1) {
      label$16 : {
       $12 = $16 << 2 | 0;
       $48 = Math_fround(HEAPF32[(($11 + 416 | 0) + $12 | 0) >> 2]);
@@ -46586,14 +46586,14 @@ function asmFunc(global, env, buffer) {
        }
        $17 = $18 + 20 | 0;
        $12 = 0;
-       label$20 : while (1) {
+       while (1) {
         $13 = $12 << 2 | 0;
         HEAP32[($17 + $13 | 0) >> 2] = HEAP32[($5 + $13 | 0) >> 2] | 0;
         $12 = $12 + 1 | 0;
         if (($12 | 0) != ($16 | 0)) {
-         continue label$20
+         continue
         }
-        break label$20;
+        break;
        };
       }
       $12 = (((($26 + Math_imul($16, $4) | 0) + $24 | 0) + $23 | 0) + $22 | 0) + (HEAP32[($18 + 288 | 0) >> 2] | 0) | 0;
@@ -46604,9 +46604,9 @@ function asmFunc(global, env, buffer) {
      }
      $16 = $16 + 1 | 0;
      if ($16 >>> 0 <= $20 >>> 0) {
-      continue label$15
+      continue
      }
-     break label$15;
+     break;
     };
     $13 = HEAP32[$0 >> 2] | 0;
    }
@@ -46647,7 +46647,7 @@ function asmFunc(global, env, buffer) {
    $38 = $4 >>> 0 > 16 >>> 0;
    $39 = $4 >>> 0 > 17 >>> 0;
    $40 = 0;
-   label$24 : while (1) {
+   while (1) {
     $13 = HEAP32[($0 + 4 | 0) >> 2] | 0;
     FLAC__lpc_window_data($5 | 0, HEAP32[(($13 + ($40 << 2 | 0) | 0) + 84 | 0) >> 2] | 0 | 0, HEAP32[($13 + 212 | 0) >> 2] | 0 | 0, $12 | 0);
     $12 = HEAP32[($0 + 4 | 0) >> 2] | 0;
@@ -46687,7 +46687,7 @@ function asmFunc(global, env, buffer) {
      if ($17 >>> 0 > $13 >>> 0) {
       break label$25
      }
-     label$29 : while (1) {
+     while (1) {
       label$30 : {
        $23 = $17 + -1 | 0;
        $49 = +FLAC__lpc_compute_expected_bits_per_residual_sample(+(+HEAPF64[(($11 + 16 | 0) + ($23 << 3 | 0) | 0) >> 3]), $12 - $17 | 0 | 0);
@@ -46735,7 +46735,7 @@ function asmFunc(global, env, buffer) {
        $12 = Math_clz32($17);
        $43 = $12 ^ 31 | 0;
        $25 = ($12 ^ -32 | 0) + $30 | 0;
-       label$35 : while (1) {
+       while (1) {
         $27 = HEAP32[$3 >> 2] | 0;
         $26 = !$15;
         $12 = $26 << 2 | 0;
@@ -46791,14 +46791,14 @@ function asmFunc(global, env, buffer) {
           if (!$17) {
            break label$40
           }
-          label$41 : while (1) {
+          while (1) {
            $13 = $12 << 2 | 0;
            HEAP32[(($16 + $13 | 0) + 156 | 0) >> 2] = HEAP32[($5 + $13 | 0) >> 2] | 0;
            $12 = $12 + 1 | 0;
            if (($12 | 0) != ($17 | 0)) {
-            continue label$41
+            continue
            }
-           break label$41;
+           break;
           };
          }
          $12 = (((((($20 + Math_imul($27, $17) | 0) + $36 | 0) + $35 | 0) + $34 | 0) + (HEAP32[($16 + 288 | 0) >> 2] | 0) | 0) + $33 | 0) + $32 | 0;
@@ -46811,7 +46811,7 @@ function asmFunc(global, env, buffer) {
          break label$30
         }
         $13 = HEAP32[$0 >> 2] | 0;
-        continue label$35;
+        continue;
        };
       }
       $17 = $17 + 1 | 0;
@@ -46819,7 +46819,7 @@ function asmFunc(global, env, buffer) {
        break label$25
       }
       $12 = HEAP32[$3 >> 2] | 0;
-      continue label$29;
+      continue;
      };
     }
     label$42 : {
@@ -46831,7 +46831,7 @@ function asmFunc(global, env, buffer) {
      break label$3;
     }
     $12 = HEAP32[$3 >> 2] | 0;
-    continue label$24;
+    continue;
    };
   }
   label$43 : {
@@ -46846,7 +46846,7 @@ function asmFunc(global, env, buffer) {
   }
   HEAP32[$9 >> 2] = $15;
   HEAP32[$10 >> 2] = $12;
-  label$44 : {
+  {
    $46 = $11 + 576 | 0;
    if ($46 >>> 0 < global$86 >>> 0) {
     __handle_stack_overflow()
@@ -47179,7 +47179,7 @@ function asmFunc(global, env, buffer) {
   $8 = 0;
   $9 = $4 << 2 | 0;
   label$1 : {
-   label$2 : while (1) {
+   while (1) {
     $10 = $5 - (HEAP32[($6 + 7052 | 0) >> 2] | 0) | 0;
     $11 = $2 - $8 | 0;
     $12 = $10 >>> 0 < $11 >>> 0 ? $10 : $11;
@@ -47193,14 +47193,14 @@ function asmFunc(global, env, buffer) {
       }
       $13 = $12 << 2 | 0;
       $10 = 0;
-      label$5 : while (1) {
+      while (1) {
        $11 = $10 << 2 | 0;
        memcpy((HEAP32[(($6 + $11 | 0) + 11764 | 0) >> 2] | 0) + ((HEAP32[($6 + 11800 | 0) >> 2] | 0) << 2 | 0) | 0 | 0, (HEAP32[($1 + $11 | 0) >> 2] | 0) + ($8 << 2 | 0) | 0 | 0, $13 | 0) | 0;
        $10 = $10 + 1 | 0;
        if (($10 | 0) != ($7 | 0)) {
-        continue label$5
+        continue
        }
-       break label$5;
+       break;
       };
      }
      $10 = $6 + 11800 | 0;
@@ -47213,7 +47213,7 @@ function asmFunc(global, env, buffer) {
      $14 = $12 << 2 | 0;
      $15 = 0;
      $10 = 0;
-     label$7 : while (1) {
+     while (1) {
       $6 = $10 << 2 | 0;
       $11 = HEAP32[($1 + $6 | 0) >> 2] | 0;
       if (!$11) {
@@ -47223,9 +47223,9 @@ function asmFunc(global, env, buffer) {
       memcpy((HEAP32[(($13 + $6 | 0) + 4 | 0) >> 2] | 0) + ((HEAP32[($13 + 7052 | 0) >> 2] | 0) << 2 | 0) | 0 | 0, $11 + ($8 << 2 | 0) | 0 | 0, $14 | 0) | 0;
       $10 = $10 + 1 | 0;
       if (($10 | 0) != ($7 | 0)) {
-       continue label$7
+       continue
       }
-      break label$7;
+      break;
      };
     }
     label$8 : {
@@ -47246,7 +47246,7 @@ function asmFunc(global, env, buffer) {
       $16 = HEAP32[($6 + 36 | 0) >> 2] | 0;
       $17 = HEAP32[($1 + 4 | 0) >> 2] | 0;
       $18 = HEAP32[$1 >> 2] | 0;
-      label$10 : while (1) {
+      while (1) {
        $11 = $10 << 2 | 0;
        $13 = $8 << 2 | 0;
        $14 = $18 + $13 | 0;
@@ -47259,7 +47259,7 @@ function asmFunc(global, env, buffer) {
        }
        $10 = $10 + 1 | 0;
        if ($10 >>> 0 <= $4 >>> 0) {
-        continue label$10
+        continue
        }
        break label$8;
       };
@@ -47283,14 +47283,14 @@ function asmFunc(global, env, buffer) {
       }
       $11 = HEAP32[($0 + 4 | 0) >> 2] | 0;
       $10 = 0;
-      label$13 : while (1) {
+      while (1) {
        $6 = HEAP32[(($11 + ($10 << 2 | 0) | 0) + 4 | 0) >> 2] | 0;
        HEAP32[$6 >> 2] = HEAP32[($6 + $9 | 0) >> 2] | 0;
        $10 = $10 + 1 | 0;
        if (($10 | 0) != ($7 | 0)) {
-        continue label$13
+        continue
        }
-       break label$13;
+       break;
       };
      }
      $6 = HEAP32[($0 + 4 | 0) >> 2] | 0;
@@ -47307,9 +47307,9 @@ function asmFunc(global, env, buffer) {
      HEAP32[($6 + 7052 | 0) >> 2] = 1;
     }
     if ($8 >>> 0 < $2 >>> 0) {
-     continue label$2
+     continue
     }
-    break label$2;
+    break;
    };
    $15 = 1;
   }
@@ -47336,7 +47336,7 @@ function asmFunc(global, env, buffer) {
       break label$3
      }
      $8 = 0;
-     label$4 : while (1) {
+     while (1) {
       $9 = HEAP32[($0 + 4 | 0) >> 2] | 0;
       label$5 : {
        if (!(HEAP32[($3 + 4 | 0) >> 2] | 0)) {
@@ -47361,7 +47361,7 @@ function asmFunc(global, env, buffer) {
         $13 = HEAP32[($9 + 11768 | 0) >> 2] | 0;
         $14 = HEAP32[($9 + 11764 | 0) >> 2] | 0;
         $11 = 0;
-        label$8 : while (1) {
+        while (1) {
          $15 = $3 << 2 | 0;
          $16 = $10 << 2 | 0;
          HEAP32[($14 + $15 | 0) >> 2] = HEAP32[($1 + $16 | 0) >> 2] | 0;
@@ -47370,9 +47370,9 @@ function asmFunc(global, env, buffer) {
          $10 = $10 + 2 | 0;
          $11 = $11 + 1 | 0;
          if (($11 | 0) != ($12 | 0)) {
-          continue label$8
+          continue
          }
-         break label$8;
+         break;
         };
        }
        HEAP32[($9 + 11800 | 0) >> 2] = $3;
@@ -47390,7 +47390,7 @@ function asmFunc(global, env, buffer) {
        $12 = HEAP32[($9 + 8 | 0) >> 2] | 0;
        $13 = HEAP32[($9 + 36 | 0) >> 2] | 0;
        $14 = HEAP32[($9 + 4 | 0) >> 2] | 0;
-       label$10 : while (1) {
+       while (1) {
         $10 = $3 << 2 | 0;
         $15 = $1 + ($6 << 2 | 0) | 0;
         $11 = HEAP32[$15 >> 2] | 0;
@@ -47407,9 +47407,9 @@ function asmFunc(global, env, buffer) {
          break label$9
         }
         if ($3 >>> 0 <= $4 >>> 0) {
-         continue label$10
+         continue
         }
-        break label$10;
+        break;
        };
       }
       HEAP32[($9 + 7052 | 0) >> 2] = $3;
@@ -47437,11 +47437,11 @@ function asmFunc(global, env, buffer) {
        break label$2
       }
       $3 = HEAP32[$0 >> 2] | 0;
-      continue label$4;
+      continue;
      };
     }
     $15 = 0;
-    label$12 : while (1) {
+    while (1) {
      $8 = HEAP32[($0 + 4 | 0) >> 2] | 0;
      label$13 : {
       if (!(HEAP32[($3 + 4 | 0) >> 2] | 0)) {
@@ -47464,23 +47464,23 @@ function asmFunc(global, env, buffer) {
        }
        $10 = Math_imul($15, $7);
        $16 = 0;
-       label$16 : while (1) {
+       while (1) {
         $3 = 0;
-        label$17 : while (1) {
+        while (1) {
          HEAP32[((HEAP32[(($8 + ($3 << 2 | 0) | 0) + 11764 | 0) >> 2] | 0) + ($11 << 2 | 0) | 0) >> 2] = HEAP32[($1 + ($10 << 2 | 0) | 0) >> 2] | 0;
          $10 = $10 + 1 | 0;
          $3 = $3 + 1 | 0;
          if (($3 | 0) != ($7 | 0)) {
-          continue label$17
+          continue
          }
-         break label$17;
+         break;
         };
         $11 = $11 + 1 | 0;
         $16 = $16 + 1 | 0;
         if (($16 | 0) != ($12 | 0)) {
-         continue label$16
+         continue
         }
-        break label$16;
+        break;
        };
       }
       HEAP32[($8 + 11800 | 0) >> 2] = $11;
@@ -47498,16 +47498,16 @@ function asmFunc(global, env, buffer) {
        if (!$7) {
         break label$19
        }
-       label$20 : while (1) {
+       while (1) {
         $3 = 0;
-        label$21 : while (1) {
+        while (1) {
          HEAP32[((HEAP32[(($8 + ($3 << 2 | 0) | 0) + 4 | 0) >> 2] | 0) + ($10 << 2 | 0) | 0) >> 2] = HEAP32[($1 + ($6 << 2 | 0) | 0) >> 2] | 0;
          $6 = $6 + 1 | 0;
          $3 = $3 + 1 | 0;
          if (($3 | 0) != ($7 | 0)) {
-          continue label$21
+          continue
          }
-         break label$21;
+         break;
         };
         $10 = $10 + 1 | 0;
         $15 = $15 + 1 | 0;
@@ -47516,12 +47516,12 @@ function asmFunc(global, env, buffer) {
          break label$18
         }
         if ($10 >>> 0 <= $4 >>> 0) {
-         continue label$20
+         continue
         }
         break label$18;
        };
       }
-      label$22 : while (1) {
+      while (1) {
        $10 = $10 + 1 | 0;
        $15 = $15 + 1 | 0;
        $11 = $15 >>> 0 < $2 >>> 0;
@@ -47529,9 +47529,9 @@ function asmFunc(global, env, buffer) {
         break label$18
        }
        if ($10 >>> 0 <= $4 >>> 0) {
-        continue label$22
+        continue
        }
-       break label$22;
+       break;
       };
      }
      HEAP32[($8 + 7052 | 0) >> 2] = $10;
@@ -47549,14 +47549,14 @@ function asmFunc(global, env, buffer) {
         break label$24
        }
        $3 = 0;
-       label$25 : while (1) {
+       while (1) {
         $10 = HEAP32[(($8 + ($3 << 2 | 0) | 0) + 4 | 0) >> 2] | 0;
         HEAP32[$10 >> 2] = HEAP32[($10 + ($4 << 2 | 0) | 0) >> 2] | 0;
         $3 = $3 + 1 | 0;
         if (($3 | 0) != ($7 | 0)) {
-         continue label$25
+         continue
         }
-        break label$25;
+        break;
        };
       }
       HEAP32[($8 + 7052 | 0) >> 2] = 1;
@@ -47565,7 +47565,7 @@ function asmFunc(global, env, buffer) {
       break label$2
      }
      $3 = HEAP32[$0 >> 2] | 0;
-     continue label$12;
+     continue;
     };
    }
    $3 = 1;
@@ -47607,7 +47607,7 @@ function asmFunc(global, env, buffer) {
     $17 = $13 >>> $14 | 0;
     $18 = 0;
     $19 = 0;
-    label$3 : while (1) {
+    while (1) {
      $20 = 0;
      $9 = $18;
      $21 = 0;
@@ -47618,15 +47618,15 @@ function asmFunc(global, env, buffer) {
        if (!$23) {
         break label$5
        }
-       label$6 : while (1) {
+       while (1) {
         $24 = HEAP32[($1 + ($9 << 2 | 0) | 0) >> 2] | 0;
         $20 = ($24 >> 31 | 0) ^ $24 | 0 | $20 | 0;
         $9 = $9 + 1 | 0;
         $21 = $21 + 1 | 0;
         if (($21 | 0) != ($23 | 0)) {
-         continue label$6
+         continue
         }
-        break label$6;
+        break;
        };
        $18 = ($18 + $17 | 0) - $22 | 0;
        if (!$20) {
@@ -47640,19 +47640,19 @@ function asmFunc(global, env, buffer) {
      HEAP32[($3 + ($19 << 2 | 0) | 0) >> 2] = $9;
      $19 = $19 + 1 | 0;
      if (($19 | 0) != ($16 | 0)) {
-      continue label$3
+      continue
      }
-     break label$3;
+     break;
     };
    }
    if (($14 | 0) <= ($15 | 0)) {
     break label$1
    }
    $24 = $14;
-   label$7 : while (1) {
+   while (1) {
     $24 = $24 + -1 | 0;
     $9 = 0;
-    label$8 : while (1) {
+    while (1) {
      $20 = $3 + ($10 << 2 | 0) | 0;
      $21 = HEAP32[$20 >> 2] | 0;
      $20 = HEAP32[($20 + 4 | 0) >> 2] | 0;
@@ -47661,14 +47661,14 @@ function asmFunc(global, env, buffer) {
      $10 = $10 + 2 | 0;
      $9 = $9 + 1 | 0;
      if (!($9 >>> $24 | 0)) {
-      continue label$8
+      continue
      }
-     break label$8;
+     break;
     };
     if (($24 | 0) > ($15 | 0)) {
-     continue label$7
+     continue
     }
-    break label$7;
+    break;
    };
   }
   label$9 : {
@@ -47698,7 +47698,7 @@ function asmFunc(global, env, buffer) {
    $26 = 0;
    $27 = 0;
    label$11 : {
-    label$12 : while (1) {
+    while (1) {
      $32 = !$26;
      $8 = $0 + Math_imul($32, 12) | 0;
      $10 = $8 + 11724 | 0;
@@ -47724,7 +47724,7 @@ function asmFunc(global, env, buffer) {
         if ($11) {
          break label$15
         }
-        label$16 : while (1) {
+        while (1) {
          $24 = $14 - ($21 ? 0 : $5) | 0;
          label$17 : {
           label$18 : {
@@ -47780,7 +47780,7 @@ function asmFunc(global, env, buffer) {
             if (i64toi32_i32$2 >>> 0 > i64toi32_i32$0 >>> 0 | ((i64toi32_i32$2 | 0) == (i64toi32_i32$0 | 0) & i64toi32_i32$3 >>> 0 >= i64toi32_i32$1 >>> 0 | 0) | 0) {
              break label$19
             }
-            label$21 : while (1) {
+            while (1) {
              $8 = $8 + 8 | 0;
              i64toi32_i32$3 = $37$hi;
              i64toi32_i32$1 = $37;
@@ -47819,9 +47819,9 @@ function asmFunc(global, env, buffer) {
              i64toi32_i32$3 = $36$hi;
              i64toi32_i32$0 = $36;
              if (i64toi32_i32$1 >>> 0 < i64toi32_i32$3 >>> 0 | ((i64toi32_i32$1 | 0) == (i64toi32_i32$3 | 0) & i64toi32_i32$2 >>> 0 < i64toi32_i32$0 >>> 0 | 0) | 0) {
-              continue label$21
+              continue
              }
-             break label$21;
+             break;
             };
            }
            i64toi32_i32$2 = $38$hi;
@@ -47833,7 +47833,7 @@ function asmFunc(global, env, buffer) {
            if (i64toi32_i32$2 >>> 0 > i64toi32_i32$1 >>> 0 | ((i64toi32_i32$2 | 0) == (i64toi32_i32$1 | 0) & i64toi32_i32$0 >>> 0 >= i64toi32_i32$3 >>> 0 | 0) | 0) {
             break label$17
            }
-           label$22 : while (1) {
+           while (1) {
             $8 = $8 + 1 | 0;
             i64toi32_i32$0 = $38$hi;
             i64toi32_i32$3 = $38;
@@ -47855,7 +47855,7 @@ function asmFunc(global, env, buffer) {
             i64toi32_i32$3 = $36$hi;
             i64toi32_i32$1 = $36;
             if (i64toi32_i32$2 >>> 0 < i64toi32_i32$3 >>> 0 | ((i64toi32_i32$2 | 0) == (i64toi32_i32$3 | 0) & i64toi32_i32$0 >>> 0 < i64toi32_i32$1 >>> 0 | 0) | 0) {
-             continue label$22
+             continue
             }
             break label$17;
            };
@@ -47868,26 +47868,26 @@ function asmFunc(global, env, buffer) {
            if (($10 << 3 | 0) >>> 0 >= $9 >>> 0) {
             break label$23
            }
-           label$24 : while (1) {
+           while (1) {
             $8 = $8 + 4 | 0;
             $20 = $10 << 7 | 0;
             $10 = $10 << 4 | 0;
             if ($20 >>> 0 < $9 >>> 0) {
-             continue label$24
+             continue
             }
-            break label$24;
+            break;
            };
           }
           if ($10 >>> 0 >= $9 >>> 0) {
            break label$17
           }
-          label$25 : while (1) {
+          while (1) {
            $8 = $8 + 1 | 0;
            $10 = $10 << 1 | 0;
            if ($10 >>> 0 < $9 >>> 0) {
-            continue label$25
+            continue
            }
-           break label$25;
+           break;
           };
          }
          $302 = $18 + ($21 << 2 | 0) | 0;
@@ -47917,12 +47917,12 @@ function asmFunc(global, env, buffer) {
          $23 = $8 + $23 | 0;
          $21 = $21 + 1 | 0;
          if (!($21 >>> $1 | 0)) {
-          continue label$16
+          continue
          }
          break label$13;
         };
        }
-       label$26 : while (1) {
+       while (1) {
         $24 = $14 - ($21 ? 0 : $5) | 0;
         label$27 : {
          label$28 : {
@@ -47972,7 +47972,7 @@ function asmFunc(global, env, buffer) {
            if (i64toi32_i32$0 >>> 0 > i64toi32_i32$2 >>> 0 | ((i64toi32_i32$0 | 0) == (i64toi32_i32$2 | 0) & i64toi32_i32$3 >>> 0 >= i64toi32_i32$1 >>> 0 | 0) | 0) {
             break label$28
            }
-           label$30 : while (1) {
+           while (1) {
             $8 = $8 + 8 | 0;
             i64toi32_i32$3 = $38$hi;
             i64toi32_i32$1 = $38;
@@ -48011,7 +48011,7 @@ function asmFunc(global, env, buffer) {
             i64toi32_i32$3 = $36$hi;
             i64toi32_i32$2 = $36;
             if (i64toi32_i32$1 >>> 0 < i64toi32_i32$3 >>> 0 | ((i64toi32_i32$1 | 0) == (i64toi32_i32$3 | 0) & i64toi32_i32$0 >>> 0 < i64toi32_i32$2 >>> 0 | 0) | 0) {
-             continue label$30
+             continue
             }
             break label$28;
            };
@@ -48024,24 +48024,24 @@ function asmFunc(global, env, buffer) {
            if (($10 << 3 | 0) >>> 0 >= $9 >>> 0) {
             break label$31
            }
-           label$32 : while (1) {
+           while (1) {
             $8 = $8 + 4 | 0;
             $20 = $10 << 7 | 0;
             $10 = $10 << 4 | 0;
             if ($20 >>> 0 < $9 >>> 0) {
-             continue label$32
+             continue
             }
-            break label$32;
+            break;
            };
           }
           if ($10 >>> 0 >= $9 >>> 0) {
            break label$27
           }
-          label$33 : while (1) {
+          while (1) {
            $8 = $8 + 1 | 0;
            $10 = $10 << 1 | 0;
            if ($10 >>> 0 < $9 >>> 0) {
-            continue label$33
+            continue
            }
            break label$27;
           };
@@ -48055,7 +48055,7 @@ function asmFunc(global, env, buffer) {
          if (i64toi32_i32$0 >>> 0 > i64toi32_i32$1 >>> 0 | ((i64toi32_i32$0 | 0) == (i64toi32_i32$1 | 0) & i64toi32_i32$2 >>> 0 >= i64toi32_i32$3 >>> 0 | 0) | 0) {
           break label$27
          }
-         label$34 : while (1) {
+         while (1) {
           $8 = $8 + 1 | 0;
           i64toi32_i32$2 = $37$hi;
           i64toi32_i32$3 = $37;
@@ -48077,9 +48077,9 @@ function asmFunc(global, env, buffer) {
           i64toi32_i32$3 = $36$hi;
           i64toi32_i32$1 = $36;
           if (i64toi32_i32$0 >>> 0 < i64toi32_i32$3 >>> 0 | ((i64toi32_i32$0 | 0) == (i64toi32_i32$3 | 0) & i64toi32_i32$2 >>> 0 < i64toi32_i32$1 >>> 0 | 0) | 0) {
-           continue label$34
+           continue
           }
-          break label$34;
+          break;
          };
         }
         $10 = $21 << 2 | 0;
@@ -48113,7 +48113,7 @@ function asmFunc(global, env, buffer) {
         $23 = ($9 ? $24 : $20) + $23 | 0;
         $21 = $21 + 1 | 0;
         if (!($21 >>> $1 | 0)) {
-         continue label$26
+         continue
         }
         break label$13;
        };
@@ -48163,9 +48163,9 @@ function asmFunc(global, env, buffer) {
      $14 = $1 + -1 | 0;
      $31 = $31 + (1 << $1 | 0) | 0;
      if (($1 | 0) > ($15 | 0)) {
-      continue label$12
+      continue
      }
-     break label$12;
+     break;
     };
    }
    HEAP32[($12 + 4 | 0) >> 2] = $25;
@@ -48189,7 +48189,7 @@ function asmFunc(global, env, buffer) {
   $8 = 0;
   label$37 : {
    label$38 : {
-    label$39 : while (1) {
+    while (1) {
      if ((HEAP32[($9 + ($8 << 2 | 0) | 0) >> 2] | 0) >>> 0 >= $10 >>> 0) {
       break label$38
      }
@@ -48197,7 +48197,7 @@ function asmFunc(global, env, buffer) {
      if (($8 | 0) == ($20 | 0)) {
       break label$37
      }
-     continue label$39;
+     continue;
     };
    }
    HEAP32[$12 >> 2] = 1;
@@ -48222,7 +48222,7 @@ function asmFunc(global, env, buffer) {
  function stackAlloc($0) {
   $0 = $0 | 0;
   var $1 = 0, $3 = 0;
-  label$1 : {
+  {
    $1 = (global$0 - $0 | 0) & -16 | 0;
    $3 = $1;
    if ($1 >>> 0 < global$86 >>> 0) {
@@ -48516,7 +48516,7 @@ function asmFunc(global, env, buffer) {
         label$7 : {
          label$8 : {
           label$9 : {
-           label$10 : {
+           {
             label$11 : {
              i64toi32_i32$0 = var$0$hi;
              i64toi32_i32$2 = var$0;
@@ -48532,7 +48532,7 @@ function asmFunc(global, env, buffer) {
              }
              var$2 = $39;
              if (var$2) {
-              block : {
+              {
                i64toi32_i32$1 = var$1$hi;
                var$3 = var$1;
                if (!var$3) {
@@ -48743,7 +48743,7 @@ function asmFunc(global, env, buffer) {
     var$0$hi = i64toi32_i32$2;
     label$13 : {
      if (var$2) {
-      block3 : {
+      {
        i64toi32_i32$2 = var$1$hi;
        i64toi32_i32$1 = var$1;
        i64toi32_i32$3 = -1;
@@ -48755,7 +48755,7 @@ function asmFunc(global, env, buffer) {
        }
        var$8 = i64toi32_i32$4;
        var$8$hi = i64toi32_i32$5;
-       label$15 : while (1) {
+       while (1) {
         i64toi32_i32$5 = var$5$hi;
         i64toi32_i32$2 = var$5;
         i64toi32_i32$1 = 0;
@@ -48865,9 +48865,9 @@ function asmFunc(global, env, buffer) {
         var$7$hi = i64toi32_i32$3;
         var$2 = var$2 + -1 | 0;
         if (var$2) {
-         continue label$15
+         continue
         }
-        break label$15;
+        break;
        };
        break label$13;
       }
@@ -52314,7 +52314,7 @@ var ASM_CONSTS = {
           // now ensures it shows what we want.
           if (this.stack) {
             // Define the stack property for Node.js 4, which otherwise errors on the next line.
-            Object.defineProperty(this, "stack", { value: (new Error).stack, writable: true });
+            Object.defineProperty(this, "stack", { value: (new Error()).stack, writable: true });
             this.stack = demangleAll(this.stack);
           }
         };
