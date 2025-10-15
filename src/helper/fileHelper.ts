@@ -27,7 +27,9 @@ const blobToFile = (theBlob: Blob, fileName:string): File => {
   return theBlob as File;
 };
 
-export default {
+const fileHelper = {
   sizeAsHuman,
   blobToFile,
 };
+
+export default fileHelper;

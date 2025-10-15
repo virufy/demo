@@ -63,7 +63,7 @@ interface RecordProps {
   action:any,
 }
 
-const Record = ({
+const RecordComponent = ({
   onNext,
   defaultValues,
   currentLogic,
@@ -75,7 +75,7 @@ const Record = ({
       document && (document.getElementById('wizard-buttons') as HTMLDivElement),
   });
   const {
-    handleSubmit, control, getValues, formState,
+    handleSubmit, control, formState,
   } = useForm({
     mode: 'onChange',
     defaultValues,
@@ -118,4 +118,4 @@ const Record = ({
   );
 };
 
-export default React.memo(Record);
+export default React.memo(RecordComponent);

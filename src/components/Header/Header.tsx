@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom';
 
 // Styles
 import {
-  HeaderContainer, Title, ArrowLeft, CloseLeft, ArrowLefContainer, LogoSize, HeaderType, LogoDemo,
+  HeaderContainer, Title, ArrowLeft, CloseLeft, ArrowLefContainer, LogoSize, HeaderType,
   TitleContainer, Subtitle,
 } from './style';
 
@@ -69,7 +69,7 @@ export const HeaderContextProvider = ({ children }: HeaderProps) => {
 
 const Header = () => {
   const {
-    title, subtitle, type, logoSize, doGoBack,
+    title, subtitle, type, doGoBack,
   } = useContext(HeaderContext);
   const location = useLocation();
 
