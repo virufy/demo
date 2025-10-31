@@ -1,7 +1,7 @@
 /* eslint-disable */
 /* eslint-disable func-names */
 /* global Flac */
-
+// eslint-disable-next-line import/no-anonymous-default-export
 export default function () {
   const workersHost = process.env.PUBLIC_URL || process.env.REACT_APP_WORKERS_HOST || 'https://virufy.org/demo';
   importScripts(`${workersHost}/workers/encoders/libflac.dev.js`); // eslint-disable-line
