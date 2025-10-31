@@ -7,7 +7,7 @@ import EncoderWav from './encoder-wav-worker';
 import EncoderMp3 from './encoder-mp3-worker';
 import EncoderFlac from './encoder-flac-worker';
 // import EncoderOgg from './encoder-ogg-worker';
-
+// eslint-disable-next-line import/no-anonymous-default-export
 export default class RecorderService {
   constructor(config) {
     window.AudioContext = window.AudioContext || window.webkitAudioContext;
