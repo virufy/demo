@@ -83,7 +83,7 @@
     "resultNotDetectedText": "Your voice does not seem to have indicators of COVID-19. Please <strong>continue to take appropriate measures</strong> based on the advice of your healthcare professional or applicable regulatory body and reassess yourself in our app daily.",
     "resultDetected": "COVID-19: DETECTED",
     "resultNotAnalyze": "Unable to Analyze Cough",
-    "resultModalDummy": "<strong>Important note:</strong> This app is only for demonstration purposes and does not provide a true prediction. Please visit the Virufy Study to contribute your cough.",
+    "resultModalDummy": "<strong>Important note:</strong>  This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsiblity to seek medical advice from your doctor.",
     "resultNotAnalyzeText": "Our algorithm is not able to determine your COVID-19 status. <strong>Please submit another cough</strong>.",
     "resultDetectedDummy": "COVID-19: DETECTED <br/>(Dummy Example)",
     "resultDetectedText": "Your voice has indicators of possible COVID-19. <strong>Please contact your healthcare professional</strong> and take additional precautions.",

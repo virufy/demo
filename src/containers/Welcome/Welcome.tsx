@@ -25,22 +25,12 @@ const stepsWithoutDots: Wizard.Step[] = [
     props: {
       storeKey: StoreKey,
       previousStep: `${baseUrl}`,
-      nextStep: `${baseUrl}/step-3`,
-    },
-  },
-];
-
-const steps: Wizard.Step[] = [
-  {
-    path: '/step-3',
-    componentPath: 'Welcome/Step3',
-    props: {
-      storeKey: StoreKey,
-      previousStep: `${baseUrl}/step-2`,
       nextStep: '/submit-steps/step-record/cough',
     },
   },
 ];
+// No intermediate pages: Step2 goes directly into the submit-record flow
+const steps: Wizard.Step[] = [];
 
 const Welcome = () => {
   // Hooks

@@ -85,7 +85,7 @@ const Step2 = (p: Wizard.StepProps) => {
     if (state && state[p.storeKey]) {
       reset(state[p.storeKey]);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -150,27 +150,28 @@ const Step2 = (p: Wizard.StepProps) => {
             value={value}
           >
             {
-                languageData.map(({ code, label }) => (
-                  <option
-                    key={code}
-                    id={code}
-                    value={code}
-                  >
-                    {label}
-                  </option>
-                ))
-              }
+              languageData.map(({ code, label }) => (
+                <option
+                  key={code}
+                  id={code}
+                  value={code}
+                >
+                  {label}
+                </option>
+              ))
+            }
           </Dropdown>
         )}
       />
 
       <WelcomeContent>
         <WelcomeNote>
-          <Trans i18nKey="main:note">
-            <strong>Please note:</strong> This form is for data collection only. It will not predict your COVID-19
-            status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and
-            will use the information you provide for that research only. Virufy will not take place of a doctor and
-            would like to remind you it is your responsibility to seek medical advice from your doctor.
+          <Trans i18nKey="main:virufyInfo">
+            Virufy is a robust <strong>501(c)(3) nonprofit</strong> company with <strong>250 volunteers/staff</strong> and <strong>50 partner organizations</strong> including Amazon Web Services, Stanford COVID-19 Response Innovation Lab, and One Young World. We've developed a smartphone app which leverages AI to analyze the signature of recorded coughs to determine disease risk status (<strong>e.g. TB, COPD, COVID-19, flu</strong>). Virufy is supported by faculty and alumni from Stanford, MIT, and Harvard.
+            <br /><br />
+            By collecting <strong>coughs recordings</strong> from people around the world, Virufy is improving the robustness of its AI algorithm in recognizing unique disease sound patterns.
+            <br /><br />
+            <strong>Please note:</strong> This form is for data collection only. It will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.
           </Trans>
         </WelcomeNote>
 
@@ -182,7 +183,7 @@ const Step2 = (p: Wizard.StepProps) => {
           </Link>
         </BoldBlackTextPrivacy>
 
-        {activeStep && (
+               {activeStep && (
           <Portal>
             <WizardButtons
               invert
@@ -193,7 +194,10 @@ const Step2 = (p: Wizard.StepProps) => {
           </Portal>
         )}
       </WelcomeContent>
-			<SetResult/>
+
+      <div style={{ marginBottom: '50px' }}>
+        <SetResult />
+      </div>
     </WelcomeStyledFormAlternative>
   );
 };
