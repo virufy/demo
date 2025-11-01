@@ -12,7 +12,6 @@ import MicRecorder from 'components/MicRecorder';
 import WizardButtons from 'components/WizardButtons';
 
 // Images
-import UploadSVG from 'assets/icons/upload.svg';
 
 // Styles
 import {
@@ -96,15 +95,6 @@ const Record = ({
   // Refs
   const micKey = React.useRef<number>(1);
 
-  const onManualUploadWithFile = () => {
-    action({
-      [currentLogic]: {
-        recordingFile: getValues('recordingFile') || null,
-        uploadedFile: null,
-      },
-    });
-    onManualUpload?.();
-  };
 
   return (
     <>
@@ -130,11 +120,6 @@ const Record = ({
             leftDisabled={!isValid}
             leftHandler={handleSubmit(onNext)}
           />
-          {/* Upload Container */}
-          <UploadContainer onClick={onManualUploadWithFile}>
-            <UploadImage src={UploadSVG} />
-            <UploadText>{t('recordingsRecord:upload')}</UploadText>
-          </UploadContainer>
         </Portal>
       </MainContainer>
     </>

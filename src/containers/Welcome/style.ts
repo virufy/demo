@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 
 // Components
-import { ReactComponent as Logo } from 'assets/virufyLogo.svg';
 import { ReactComponent as CoupleAboutUsSVG } from 'assets/images/coupleAboutUs.svg';
 import { ReactComponent as ArrowRight } from 'assets/icons/arrowRight.svg';
 import { ReactComponent as LogoSplash } from 'assets/images/logoSplash.svg';
@@ -32,17 +31,6 @@ interface NextButtonProps {
   isDisable?: boolean;
 }
 
-export const WelcomeLogo = styled(Logo)`
-  display: none; 
-
-  @media screen and (${props => props.theme.breakpoints.tablet}){
-    display: block;
-    margin: 0 auto;
-
-    width: 156px;
-    height: 93px;
-  }
-`;
 
 export const ArrowRightSVG = styled(ArrowRight)`
     display: block;

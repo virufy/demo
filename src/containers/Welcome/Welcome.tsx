@@ -25,39 +25,32 @@ const stepsWithoutDots: Wizard.Step[] = [
     props: {
       storeKey: StoreKey,
       previousStep: `${baseUrl}`,
-      nextStep: `${baseUrl}/step-3`,
-    },
-  },
-];
-
-const steps: Wizard.Step[] = [
-  {
-    path: '/step-3',
-    componentPath: 'Welcome/Step3',
-    props: {
-      storeKey: StoreKey,
-      previousStep: `${baseUrl}/step-2`,
+      // Skip the About Us step and go directly to the submit steps flow
       nextStep: '/submit-steps/step-record/cough',
     },
   },
 ];
+
+// No additional steps (removed the About Us / Step3 page)
+const steps: Wizard.Step[] = [];
 
 const Welcome = () => {
   // Hooks
   const location = useLocation();
   const match = useRouteMatch();
 
+  const combined = [...stepsWithoutDots, ...steps];
   const url = location.pathname.replace(match.url, '');
-  const active = steps.findIndex(step => step.path === url);
+  const active = combined.findIndex(step => step.path === url);
 
   return (
     <Wizard
-      steps={[...stepsWithoutDots, ...steps]}
+      steps={combined}
     >
       {active >= 0 && (
         <DotIndicators
           current={active}
-          total={steps.length}
+          total={combined.length}
         />
       )}
     </Wizard>

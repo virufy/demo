@@ -2,9 +2,7 @@ import React, { createContext, useContext, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 // Assets
-import Logo from 'assets/virufyLogo.png';
-import Logo2x from 'assets/virufyLogo2x.png';
-import Logo3x from 'assets/virufyLogo3x.png';
+
 
 // Styles
 import {
@@ -82,10 +80,7 @@ const Header = () => {
       {(doGoBack && title && !subtitle) && <ArrowLefContainer onClick={doGoBack}><CloseLeft /></ArrowLefContainer>}
       {(doGoBack && subtitle) && <ArrowLefContainer onClick={doGoBack}><ArrowLeft /></ArrowLefContainer>}
       <TitleContainer>
-        {type === 'noShape' && <LogoDemo srcSet={`${Logo}, ${Logo2x} 2x, ${Logo3x} 3x`} src={LogoDemo} size={logoSize} />}
         {(type !== 'noShape' && title && subtitle) && <><Title>{title}</Title> <Subtitle pb={30} colorType={type}>{subtitle}</Subtitle></>}
-        {(type === 'shapeDown' && !title) && <><LogoDemo src={Logo} size={logoSize} /> <Subtitle colorType={type}>{subtitle}</Subtitle></>}
-        {(type === 'shapeUp' && !title) && <><LogoDemo src={Logo} size={logoSize} /> <Subtitle colorType={type} pb={30} mt={20}>{subtitle}</Subtitle></>}
         {(type !== 'noShape' && title && !subtitle) && <Title pb={40}>{title}</Title>}
       </TitleContainer>
     </HeaderContainer>
