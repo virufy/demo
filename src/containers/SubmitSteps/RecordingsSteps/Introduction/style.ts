@@ -74,12 +74,12 @@ export const InstructionSubtitle = styled.h2<InstructionSubtitleProps>`
   margin-top: ${({ mt }) => `${mt}px`};
   ${({ textAlign }) => textAlign && css`text-align: ${textAlign || 'left'};`}
   white-space: pre-wrap;
-  font-weight: 200;
+  font-weight: 400;
   >strong{
-    font-weight: ${({ isBold }) => (isBold ? 600 : 200)}
+    font-weight: ${({ isBold }) => (isBold ? 600 : 400)}
   }
   >p>strong{
-    font-weight: ${({ isBold }) => (isBold ? 600 : 200)}
+    font-weight: ${({ isBold }) => (isBold ? 600 : 400)}
   }
 
   max-width: 289px;
