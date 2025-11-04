@@ -1,18 +1,19 @@
 {
   "main": {
     "title": "COVID-19 咳の検出",
-    "note": "<strong>注意:</strong> このフォームはデータ収集のみを目的としています。COVID-19の状態を予測したり、病気や障害、その他の健康状態を診断するものではございません。Virufyでは研究を行っており、提供していただいた情報はその研究のためだけに使用いたします。また、Virufyは医師の代わりにはなりませんので、ご自身の責任において医師の診断を受けるようにしてください。",
+    "note": "<strong>ご注意:</strong> このフォームはデータ収集のみを目的としており、COVID-19の感染状況を予測したり、病気・障害・その他の健康状態を診断したりするものではありません。Virufyは研究を目的としており、皆さまからご提供いただいた情報はその研究にのみ使用されます。Virufyは医師の代わりにはなれません。健康に関する相談や診断は、必ずご自身の医師にお尋ねください。",
     "selectYourLanguage": "言語",
     "nextButton": "次のページ",
     "createdBy": "作成者",
     "provideAccessCode": "アクセスコード",
     "enterAccessCode": "アクセスコードの入力",
     "aboutUsTitle": "会社概要",
-    "privacyPolicy": "次に進むと、当社のプライバシーポリシーの条項に同意したことになります。"
+    "privacyPolicy": "続行することで、<strong>当社のプライバシーポリシー</strong>に同意したものとみなされます。",
+    "virufyInfo": "<strong>Virufy</strong> は、Amazon Web Services、スタンフォード大学 COVID-19 Response Innovation ラボ、One Young World などを含む <strong>50 のパートナー団体</strong>と協力し、<strong>250名のボランティア・スタッフ</strong>によって運営されている、<strong>501(c)(3) 非営利団体</strong>です。私たちは、録音された咳の音声を AI で解析し、<strong>結核、慢性閉塞性肺疾患、COVID-19、インフルエンザなどの疾患リスクを判定する</strong>スマートフォンアプリを開発しました。Virufy は、スタンフォード大学、MIT、ハーバード大学の教授や卒業生の支援を受けています。<br /><br />世界中の人々から咳の録音データを収集することで、Virufy はそれぞれの病気特有の音声パターンを認識する AI アルゴリズムの精度を向上させています。<br /><br /><strong>ご注意:</strong> このフォームはデータ収集のみを目的としており、COVID-19の感染状況を予測したり、病気・障害・その他の健康状態を診断したりするものではありません。Virufyは研究を目的としており、皆さまからご提供いただいた情報はその研究にのみ使用されます。Virufyは医師の代わりにはなれません。健康に関する相談や診断は、必ずご自身の医師にお尋ねください。"
   },
   "helpVirufy": {
-    "aboutParagraph": "<0><strong>Virufy</strong> は <strong>501(c)(3) 非営利団体</strong> であり、<strong>250人のボランティア、スタッフ</strong> と <strong>50のパートナー組織</strong>を擁しています。 パートナー組織には、アマゾンウェブサービス、スタンフォードCOVID-19対応イノベーションラボ、One Young Worldなどが含まれます。 AIを活用して記録された咳の特徴を分析し、<strong>COVID 陽性の咳データとの類似性を判断する</strong>スマートフォンアプリを開発いたしました。 Virufy は、UW、スタンフォード、UC バークレー、MIT、ハーバード、CMU の教職員や卒業生によってサポートされています。</0> <1>世界中の人々から<strong>咳の記録</strong>を収集することで、Virufy はCOVID の独特な音のパターンを認識する AI アルゴリズムの確実性を高めています。</1><2><strong>あなたには、<strong>咳をする</strong>ことで世界中の何百万人もの人々に利益をもたらす力があります</strong>。 </2>",
-    "nextButton": "同意",
+    "aboutParagraph": "<0><strong>Virufy</strong> は、Amazon Web Services、スタンフォード大学 COVID-19 Response Innovation ラボ、One Young World などを含む <strong>50 のパートナー団体</strong>と協力し、<strong>250名のボランティア・スタッフ</strong>によって運営されている、<strong>501(c)(3) 非営利団体</strong>です。私たちは、録音された咳の音声を AI で解析し、<strong>結核、慢性閉塞性肺疾患、COVID-19、インフルエンザなどの疾患リスクを判定する</strong>スマートフォンアプリを開発しました。Virufy は、スタンフォード大学、MIT、ハーバード大学の教授や卒業生の支援を受けています。</0> <1>世界中の人々から咳の録音データを収集することで、Virufy はそれぞれの病気特有の音声パターンを認識する AI アルゴリズムの精度を向上させています。</1>",
+    "nextButton": "同意する",
     "installApp": "アプリとしてインストールする"
   },
   "beforeStart": {
@@ -30,11 +31,11 @@
     "recordCough": {
       "header": "咳を記録する",
       "title": "手順",
-      "intro1": "他の人から少なくとも<strong>20フィート（6m）</strong>離れた<strong>静かな環境</strong>を見つけ、布やサージカルマスクを着用してください。体調が悪いときは、座ってください。",
-      "intro2": "デバイスを<strong>30-60 cm</strong>口から離して持ち、 プラスチックなどでデバイスを覆ったり<strong>遮ったり</strong> しないようにしてください。咳を強くしすぎないように注意しましょう。",
-      "text": "録音ボタンをタップして、携帯電話の下部に向かって<strong>意図的に</strong>咳を<strong>3回</strong>してください。終わったら、停止ボタンをタップします。",
-      "record": "記録する",
-      "stop": "停止する"
+      "intro1": "他の人から少なくとも20フィート（6m）離れた静かな環境を見つけてください。",
+      "intro2": "不織布マスクまたは布マスクを着用し、端末を顔から両手の長さほど離してください。",
+      "text": "下の録音ボタンを押し、意図的に3回咳をしてください。各咳の間には深呼吸を挟んでください。終了したら停止ボタンをタップしてください。",
+      "record": "録音",
+      "stop": "停止"
     },
     "next": "次へ",
     "retryButton": "リトライ",
@@ -48,7 +49,7 @@
     },
     "next": "続ける",
     "delete": "削除",
-    "textCount": "「続ける」をクリックして次に進みます。",
+    "textCount": "「続ける」を押して次に進んでください。",
     "upload": "自分のファイルをアップロードする"
   },
   "recordingsRecordManual": {
@@ -79,16 +80,16 @@
     "note": "注意：",
     "result": "結果",
     "resultModal": "<strong>Important note:</strong> This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor.",
-    "resultNotDetected": "COVID-19: 陰性",
-    "resultNotDetectedText": "あなたの声にはCOVID-19の指標がないようです。 医療専門家や該当する規制機関のアドバイスに基づいて、<strong>適切な対策を継続し、日々アプリで自分自身を見つめ直してください</strong>",
-    "resultNotAnalyze": "咳の分析ができない",
-    "resultModalDummy": "<strong注意：</strong> 本アプリはデモンストレーション目的であり、実際の予測結果を提供するものではございません。咳の提供はVirufy Studyで行うようお願いいたします。",
-    "resultNotAnalyzeText": "当団体のアルゴリズムでは、お客様のCOVID-19の状態を判断することができません。<strong>別の咳を提出してください</strong>.",
+    "resultNotDetected": "COVID-19: 検出されませんでした",
+    "resultNotDetectedText": "あなたの音声にはCOVID-19の兆候は見られませんでした。引き続き、医療専門家や各国の保健当局の助言に基づいて、<strong>適切な対策を行ってください。</strong>アプリでのチェックは毎日行うことをおすすめします。",
+    "resultNotAnalyze": "咳を解析できません（エラー）",
+    "resultModalDummy": "<strong>重要なお知らせ:</strong> このアプリは、COVID-19の感染有無を予測したり、病気・障害・その他の健康状態を診断したりするものではありません。Virufyは研究を目的としており、ご提供いただいた情報は研究のみに使用されます。Virufyは医師の代わりにはなれません。健康に関する判断や対応については、必ずご自身の医師にご相談ください。",
+    "resultNotAnalyzeText": "アルゴリズムがCOVID-19の兆候を判定できませんでした。<strong>別の咳を録音して送信してください。</strong>",
     "resultDetectedDummy": "COVID-19: 陽性 <br/>(ダミーの例)",
-    "resultDetectedText": "あなたの声にはCOVID-19の可能性を示す指標があります。 <strong>医療従事者</strong>に連絡し、追加の予防策を講じてください。",
+    "resultDetectedText": "あなたの音声にはCOVID-19の兆候が見られます。<strong>医療機関に相談</strong>のうえ、必要な予防措置を取ってください。",
     "testForCovid": "COVID-19のテスト",
-    "resultDetected": "COVID-19: 陽性",
-    "nextButton": "再度咳を送信する",
+    "resultDetected": "COVID-19: 検出されました",
+    "nextButton": "別の咳を提出する",
     "submitError": "エラーが発生しました。もう一度お試しください。",
     "nextSteps": "次のステップ"
   },

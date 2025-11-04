@@ -37,17 +37,18 @@ const Welcome = () => {
   const location = useLocation();
   const match = useRouteMatch();
 
+  const combined = [...stepsWithoutDots, ...steps];
   const url = location.pathname.replace(match.url, '');
-  const active = steps.findIndex(step => step.path === url);
+  const active = combined.findIndex(step => step.path === url);
 
   return (
     <Wizard
-      steps={[...stepsWithoutDots, ...steps]}
+      steps={combined}
     >
       {active >= 0 && (
         <DotIndicators
           current={active}
-          total={steps.length}
+          total={combined.length}
         />
       )}
     </Wizard>
