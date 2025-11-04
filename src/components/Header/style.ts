@@ -56,31 +56,9 @@ export const TitleContainer = styled.div`
 
 export type LogoSize = 'regular' | 'big';
 
+// Keep a minimal placeholder so other components importing LogoDemo won't break
 export const LogoDemo = styled.img<{ size?: LogoSize }>`
-  margin: 0 auto;
-  width: ${({ size }) => {
-    switch (size) {
-      case 'big':
-        return '156px';
-      case 'regular':
-      default:
-        return '75px';
-    }
-  }};
-  margin-top: ${({ size }) => {
-    switch (size) {
-      case 'big':
-        return '80px';
-      case 'regular':
-      default:
-        return '0px';
-    }
-  }};
-
-
-@media screen and (${props => props.theme.breakpoints.tablet}){
-
-  }
+  display: none;
 `;
 
 export const Subtitle = styled.h1<{ colorType?: HeaderType; pb?: number; mt?: number}>`

@@ -11,14 +11,9 @@ import * as Yup from 'yup';
 import MicRecorder from 'components/MicRecorder';
 import WizardButtons from 'components/WizardButtons';
 
-// Images
-
 // Styles
 import {
   MainContainer,
-  UploadContainer,
-  UploadImage,
-  UploadText,
   MicContainer,
 } from './style';
 
@@ -63,15 +58,13 @@ export type RecordType = Yup.InferType<typeof schema>;
 
 interface RecordProps {
   onNext: (values: RecordType) => void,
-  onManualUpload: () => void,
   defaultValues: RecordType,
   currentLogic: string,
   action:any,
 }
 
-const Record = ({
+const RecordComponent = ({
   onNext,
-  onManualUpload,
   defaultValues,
   currentLogic,
   action,
@@ -82,7 +75,7 @@ const Record = ({
       document && (document.getElementById('wizard-buttons') as HTMLDivElement),
   });
   const {
-    handleSubmit, control, getValues, formState,
+    handleSubmit, control, formState,
   } = useForm({
     mode: 'onChange',
     defaultValues,
@@ -94,7 +87,6 @@ const Record = ({
 
   // Refs
   const micKey = React.useRef<number>(1);
-
 
   return (
     <>
@@ -126,4 +118,4 @@ const Record = ({
   );
 };
 
-export default React.memo(Record);
+export default React.memo(RecordComponent);

@@ -1,4 +1,4 @@
-export default {
+const swConfig = {
   onUpdate: (registration: ServiceWorkerRegistration) => {
     // eslint-disable-next-line no-restricted-globals, no-alert
     const shouldReload = confirm('A new version is available. Do you want to update?');
@@ -13,3 +13,5 @@ export default {
     console.log(registration);
   },
 };
+
+export default swConfig;

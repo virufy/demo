@@ -1,6 +1,6 @@
 {
-  "short_name": "Virufy Demo",
-  "name": "Virufy APP Demo",
+  "short_name": "Virufy",
+  "name": "Virufy APP",
   "icons": [
     {
       "src": "manifest-icon-192.png",

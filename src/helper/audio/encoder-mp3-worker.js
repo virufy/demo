@@ -1,7 +1,7 @@
 /* eslint-disable func-names */
 // import 'babel-polyfill'
 // import lamejs from 'lamejs';
-
+// eslint-disable-next-line import/no-anonymous-default-export
 export default function () {
   // Note that relative paths don't work when loaded as a blob
   // https://stackoverflow.com/questions/22172426/using-importsscripts-within-blob-in-a-karma-environment

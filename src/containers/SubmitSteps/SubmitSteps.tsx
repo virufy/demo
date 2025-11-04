@@ -32,22 +32,7 @@ const steps: Wizard.Step[] = [
     componentPath: `${baseComponentPath}/${middleComponentPathRecording}/Introduction`,
     props: {
       storeKey: StoreKey,
-      previousStep: '/welcome/step-3',
-      nextStep: `${baseUrl}/step-listen/cough`,
-      otherSteps: {
-        manualUploadStep: `${baseUrl}/step-manual-upload/cough`,
-      },
-      metadata: {
-        currentLogic: recordYourCoughLogic,
-      },
-    },
-  },
-  {
-    path: '/step-manual-upload/cough',
-    componentPath: `${baseComponentPath}/${middleComponentPathRecording}/RecordManualUpload`,
-    props: {
-      storeKey: StoreKey,
-      previousStep: `${baseUrl}/step-record/cough`,
+      previousStep: '/welcome',
       nextStep: `${baseUrl}/step-listen/cough`,
       metadata: {
         currentLogic: recordYourCoughLogic,
@@ -100,12 +85,9 @@ const SubmitSteps = () => {
         const toTest = [];
 
         if (recordYourCough) {
-          const { recordingFile, uploadedFile } = recordYourCough;
+          const { recordingFile } = recordYourCough;
           if (recordingFile) {
             toTest.push({ file: recordingFile, route: '/step-record/cough' });
-          }
-          if (uploadedFile) {
-            toTest.push({ file: uploadedFile, route: '/step-manual-upload/cough' });
           }
         }
 

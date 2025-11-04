@@ -25,13 +25,11 @@ const stepsWithoutDots: Wizard.Step[] = [
     props: {
       storeKey: StoreKey,
       previousStep: `${baseUrl}`,
-      // Skip the About Us step and go directly to the submit steps flow
       nextStep: '/submit-steps/step-record/cough',
     },
   },
 ];
-
-// No additional steps (removed the About Us / Step3 page)
+// No intermediate pages: Step2 goes directly into the submit-record flow
 const steps: Wizard.Step[] = [];
 
 const Welcome = () => {
