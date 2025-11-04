@@ -155,8 +155,8 @@ const PredictionResult = () => {
                     )}
                     {prediction === 'positive' && (
                       <>
-                        <StyledHigh />
                         <TitleResult color="#FF4444">{t('predictionResult:resultDetected')}</TitleResult>
+                        <StyledHigh />
                         <IntroText>
                           <Trans i18nKey="predictionResult:resultDetectedText">
                             Your voice has indicators of COVID-19. Please contact your
