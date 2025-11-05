@@ -8,7 +8,8 @@
     "provideAccessCode": "Access code",
     "enterAccessCode": "Enter access  code",
     "aboutUsTitle": "About Us",
-    "privacyPolicy": "By proceeding you accept the terms of our <strong>Privacy Policy</strong>"
+    "privacyPolicy": "By proceeding you accept the terms of our <strong>Privacy Policy</strong>",
+    "virufyInfo": "<strong>Virufy</strong> partners with <strong>50 organizations</strong> including Amazon Web Services, Stanford University’s COVID-19 Response Innovation Lab, and One Young World, and is powered by <strong>250 volunteers and staff</strong> as a <strong>501(c)(3) nonprofit organization</strong>. We developed a smartphone app that leverages AI to analyze recorded cough audio and <strong>evaluate the risk of diseases such as tuberculosis, chronic obstructive pulmonary disease, COVID-19, and influenza</strong>. Virufy is supported by professors and alumni from Stanford, MIT, and Harvard.<br /><br />By collecting cough recordings from people around the world, Virufy continually improves its AI algorithm to recognize the unique acoustic patterns of each disease.<br /><br /><strong>Please note:</strong> This form is for data collection only. It will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsibility to seek medical advice from your doctor."
   },
   "helpVirufy": {
     "aboutParagraph": "<0><strong>Virufy</strong> is a robust <strong>501(c)(3) nonprofit</strong> company with <strong>250 volunteers/staff</strong> and <strong>50 partner organizations</strong> including Amazon Web Services, Stanford COVID-19 Response Innovation Lab, and One Young World. We've developed a smartphone app which leverages AI to analyze the signature of recorded coughs to <strong>determine their similarity with COVID positive cough data</strong>. Virufy is supported by faculty and alumni from UW, Stanford, UC Berkeley, MIT, Harvard, and CMU.</0> <1>By collecting <strong>coughs recordings</strong> from people around the world, Virufy is improving the robustness of its AI algorithm in recognizing COVID’s unique sound pattern.</1><2><strong>You have the power</strong> to help benefit millions of people across the globe by <strong>contributing your cough</strong> in our study.</2>",
@@ -82,9 +83,9 @@
     "resultNotDetected": "COVID-19: NOT DETECTED",
     "resultNotDetectedText": "Your voice does not seem to have indicators of COVID-19. Please <strong>continue to take appropriate measures</strong> based on the advice of your healthcare professional or applicable regulatory body and reassess yourself in our app daily.",
     "resultDetected": "COVID-19: DETECTED",
-    "resultNotAnalyze": "Unable to Analyze Cough",
+    "resultNotAnalyze": "Unable to Analyze Cough (Error)",
     "resultModalDummy": "<strong>Important note:</strong>  This app will not predict your COVID-19 status or diagnose any disease, disorder, or other health condition. Virufy is conducting research and will use the information you provide for that research only. Virufy will not take place of a doctor and would like to remind you it is your responsiblity to seek medical advice from your doctor.",
-    "resultNotAnalyzeText": "Our algorithm is not able to determine your COVID-19 status. <strong>Please submit another cough</strong>.",
+    "resultNotAnalyzeText": "Our algorithm could not determine indicators of COVID-19 from your cough. <strong>Please record and submit another cough.</strong>",
     "resultDetectedDummy": "COVID-19: DETECTED <br/>(Dummy Example)",
     "resultDetectedText": "Your voice has indicators of possible COVID-19. <strong>Please contact your healthcare professional</strong> and take additional precautions.",
     "testForCovid": "Test for COVID-19",
