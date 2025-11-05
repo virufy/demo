@@ -10,9 +10,6 @@ import RecorderService from 'helper/audio/RecorderService';
 import FileHelper from 'helper/fileHelper';
 import { getDuration } from 'helper/getDuration';
 
-// Modals
-import RecordErrorModal from 'modals/RecordErrorModal';
-
 // Images
 import StartSVG from 'assets/icons/start.svg';
 import StopSVG from 'assets/icons/stop.svg';
@@ -87,7 +84,6 @@ const MicRecorder = ({
   const [micAllowed, setMicAllowed] = React.useState<boolean>(true);
   const [recordingInProgress, setRecordingInProgress] = React.useState<boolean>();
   const [showReleaseText, setShowReleaseText] = React.useState<boolean>(false);
-  const [showShortRecordingText, setShowShortRecordingText] = React.useState<boolean>(false);
   const [longPressTriggered, setLongPressTriggered] = React.useState<boolean>(false);
 
   // Handlers
@@ -168,7 +164,6 @@ const MicRecorder = ({
         .startRecording()
         .then(() => {
           setRecordingInProgress(true);
-          setShowShortRecordingText(false);
           if (timerRef.current) {
             timerRef.current.reset();
             timerRef.current?.setTime(0);
@@ -184,9 +179,6 @@ const MicRecorder = ({
       recordingService.current.stopRecording();
       setRecordingInProgress(false);
       if (timerRef.current) {
-        if (timerRef.current.getTime() / 1000 < 2) {
-          setShowShortRecordingText(true);
-        }
         timerRef.current.stop();
       }
     }
@@ -209,7 +201,6 @@ const MicRecorder = ({
       timeout.current = setTimeout(() => {
         setShowReleaseText(true);
         setLongPressTriggered(true);
-        setShowShortRecordingText(false);
       }, delay);
     },
     [delay],
@@ -232,21 +223,11 @@ const MicRecorder = ({
   return (
     <MicRecorderContainer className={className}>
       <MicRecorderTimerReleaseTextContainer>
-        {!showShortRecordingText
-          && (
-            <MicRecorderTextP
-              show={showReleaseText}
-            >
-              {recordingInProgress ? t('recordingsIntroduction:releaseButtonStop') : t('recordingsIntroduction:releaseButtonStart')}
-            </MicRecorderTextP>
-          )}
-        <RecordErrorModal
-          isOpen={showShortRecordingText}
-          modalTitle="Oops."
-          onConfirm={handleStartRecording}
+        <MicRecorderTextP
+          show={showReleaseText}
         >
-          {t('recordingsIntroduction:shortRecording')}
-        </RecordErrorModal>
+          {recordingInProgress ? t('recordingsIntroduction:releaseButtonStop') : t('recordingsIntroduction:releaseButtonStart')}
+        </MicRecorderTextP>
       </MicRecorderTimerReleaseTextContainer>
       <MicRecorderTimerContainer>
         <Timer
