@@ -2,6 +2,7 @@
   "name": "pwa-demo",
   "version": "1.0.13",
   "private": true,
+  "homepage": "http://virufy.org/demo/",
   
   "scripts": {
     "preinstall": "npx only-allow npm",
