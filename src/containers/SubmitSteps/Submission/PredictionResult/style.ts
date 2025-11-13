@@ -129,7 +129,7 @@ export const SubmitError = styled(SubmitText)`
 
 export const IntroText = styled(IntroductionText)`
   max-width: 100%;
-  margin: 0px auto 36px auto;
+  margin: 0px auto 24px auto;
   padding-left: 20px;
   padding-right: 20px;
   font-size: 14px;

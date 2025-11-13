@@ -37,6 +37,7 @@ const PredictionResult = () => {
     bindTo: document && document.getElementById('wizard-buttons') as HTMLDivElement,
   });
   const history = useHistory();
+  const isArabic = i18n.language === 'ar';
 
   // States
   const errorCode = null;
@@ -82,7 +83,7 @@ const PredictionResult = () => {
     if (processing) {
       setSubtitle('');
     } else {
-      setSubtitle(`${t('predictionResult:result')}`);
+      setSubtitle('');
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [processing]);
@@ -108,7 +109,7 @@ const PredictionResult = () => {
             {
             (errorCode === 'invalid_access_code')
               ? (
-                <PredictionResultContainer>
+                <PredictionResultContainer style={isArabic ? { textAlign: 'center' } : undefined}>
                   <Title>
                     {t('predictionResult:result')}
                   </Title>
@@ -116,7 +117,7 @@ const PredictionResult = () => {
                     <Trans i18nKey="predictionResult:resultDetectedDummy" />
                   </TitleResult>
                   <StyledHigh />
-                  <IntroText className="instruction"  dir={i18n.language === 'ar' ? 'rtl' : undefined}>
+                  <IntroText className="instruction"  dir={isArabic ? 'rtl' : undefined} style={isArabic ? { textAlign: 'center', marginTop: 12, marginBottom: 24 } : undefined}>
                     <Trans i18nKey="predictionResult:resultDetectedText" components={{ strong: <strong className="rtl-chunk" /> }}>
                       {/* eslint-disable-next-line max-len */}
                       Your voice has indicators of COVID-19. Please contact your
@@ -127,7 +128,7 @@ const PredictionResult = () => {
                 </PredictionResultContainer>
               ) : (
                 <>
-                  <PredictionResultContainer>
+                  <PredictionResultContainer style={isArabic ? { textAlign: 'center' } : undefined}>
                     <Title>
                       {t('predictionResult:result')}
                     </Title>
@@ -136,7 +137,7 @@ const PredictionResult = () => {
                       <>
                         <TitleResult color="#4FDB76">{t('predictionResult:resultNotDetected')}</TitleResult>
                         <StyledLow />
-                        <IntroText className="instruction" dir={i18n.language === 'ar' ? 'rtl' : undefined}>
+                        <IntroText className="instruction" dir={isArabic ? 'rtl' : undefined} style={isArabic ? { textAlign: 'center', marginTop: 12, marginBottom: 24 } : undefined}>
                           <Trans i18nKey="predictionResult:resultNotDetectedText">
                           </Trans>
                         </IntroText>
@@ -145,7 +146,7 @@ const PredictionResult = () => {
                     {prediction === 'unknown' && (
                       <>
                         <TitleResult>{t('predictionResult:resultNotAnalyze')}</TitleResult>
-                        <IntroText>
+                        <IntroText dir={isArabic ? 'rtl' : undefined} style={isArabic ? { textAlign: 'center', marginTop: 12, marginBottom: 24 } : undefined}>
                           <Trans i18nKey="predictionResult:resultNotAnalyzeText">
                             Our algorithm is not able to determine your COVID-19 status.
                             <strong>Please submit another cough</strong>.
@@ -157,7 +158,7 @@ const PredictionResult = () => {
                       <>
                         <TitleResult color="#FF4444">{t('predictionResult:resultDetected')}</TitleResult>
                         <StyledHigh />
-                        <IntroText>
+                        <IntroText dir={isArabic ? 'rtl' : undefined} style={isArabic ? { textAlign: 'center', marginTop: 12, marginBottom: 24 } : undefined}>
                           <Trans i18nKey="predictionResult:resultDetectedText">
                             Your voice has indicators of COVID-19. Please contact your
                             healthcare professional and take additional precautions.
