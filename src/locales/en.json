@@ -64,17 +64,7 @@
     "fileSizeTooBig": "Please upload a file of less than 5 MB",
     "fileRequired": "Please upload a file"
   },
-  "recordingsListen": {
-    "recordCough": {
-      "header": "Record your cough",
-      "intro1": "Please cough away from others around you! Please sit down if you are feeling ill.",
-      "intro2": " In a quiet environment, please press record and intentionally cough around 3-5 times."
-    },
-    "title": "Upload Complete",
-    "subtitle": "Feel free to take a listen!",
-    "next": "Continue",
-    "retake": "Retake"
-  },
+
   "predictionResult": {
     "processingTitle": "Processing...",
     "note": "Important Note:",

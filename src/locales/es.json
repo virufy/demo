@@ -64,17 +64,6 @@
     "fileSizeTooBig": "Por favor, suba un archivo de menos de 5 MB",
     "fileRequired": "Por favor, suba un archivo"
   },
-  "recordingsListen": {
-    "recordCough": {
-      "header": "Grabe su tos",
-      "intro1": "Por favor, tosa lejos de las personas a tu alrededor. Si se siente enfermo, por favor siéntese.",
-      "intro2": "En un ambiente silencioso, por favor presione el botón de grabar y tosa intencionalmente de 3 a 5 veces."
-    },
-    "title": "Grabación completada",
-    "subtitle": "Siéntase libre de escuchar la grabación!",
-    "next": "Continuar",
-    "retake": "Retomar"
-  },
   "predictionResult": {
     "processingTitle": "Procesando...",
     "note": "Nota importante:",

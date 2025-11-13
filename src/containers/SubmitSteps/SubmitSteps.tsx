@@ -33,18 +33,6 @@ const steps: Wizard.Step[] = [
     props: {
       storeKey: StoreKey,
       previousStep: '/welcome',
-      nextStep: `${baseUrl}/step-listen/cough`,
-      metadata: {
-        currentLogic: recordYourCoughLogic,
-      },
-    },
-  },
-  {
-    path: '/step-listen/cough',
-    componentPath: `${baseComponentPath}/${middleComponentPathRecording}/ListenAudio`,
-    props: {
-      storeKey: StoreKey,
-      previousStep: `${baseUrl}/step-record/cough`,
       nextStep: `${baseUrl}/prediction-result`,
       metadata: {
         currentLogic: recordYourCoughLogic,

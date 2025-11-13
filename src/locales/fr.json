@@ -63,17 +63,6 @@
     "fileSizeTooBig": "Veuillez téléverser un fichier de moins de 5 Mo",
     "fileRequired": "Veuillez téléverser un fichier"
   },
-  "recordingsListen": {
-    "recordCough": {
-      "header": "Enregistrer votre toux",
-      "intro1": "Toussez loin des autres ! Asseyez-vous si vous vous sentez malade.",
-      "intro2": " Dans un environnement calme, appuyez sur enregistrer et toussez intentionnellement 3 à 5 fois."
-    },
-    "title": "Téléversement terminé",
-    "subtitle": "Écoutez votre enregistrement si vous le souhaitez.",
-    "next": "Continuer",
-    "retake": "Reprendre"
-  },
   "predictionResult": {
     "processingTitle": "Traitement en cours...",
     "note": "Remarque importante :",
