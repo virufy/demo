@@ -2,6 +2,7 @@
   "name": "pwa-demo",
   "version": "1.0.13",
   "private": true,
+
   
   "scripts": {
     "preinstall": "npx only-allow npm",

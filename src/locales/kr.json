@@ -63,17 +63,6 @@
       "fileSizeTooBig": "5MB 미만의 파일을 업로드해주세요",
       "fileRequired": "파일을 업로드해주세요"
     },
-    "recordingsListen": {
-      "recordCough": {
-        "header": "기침 녹음",
-        "intro1": "다른 사람에게서 멀리 떨어져 기침하세요! 몸이 불편하면 앉으세요.",
-        "intro2": "조용한 환경에서 녹음 버튼을 누르고 의도적으로 3-5번 기침하세요."
-      },
-      "title": "업로드 완료",
-      "subtitle": "편하게 들어보세요!",
-      "next": "계속",
-      "retake": "다시 녹음"
-    },
     "predictionResult": {
       "processingTitle": "처리 중...",
       "note": "중요 참고 사항:",

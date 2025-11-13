@@ -8,10 +8,8 @@ import { useTranslation } from 'react-i18next';
 // Utils
 import RecorderService from 'helper/audio/RecorderService';
 import FileHelper from 'helper/fileHelper';
+// eslint-disable-next-line
 import { getDuration } from 'helper/getDuration';
-
-// Modals
-import RecordErrorModal from 'modals/RecordErrorModal';
 
 // Images
 import StartSVG from 'assets/icons/start.svg';
@@ -87,7 +85,6 @@ const MicRecorder = ({
   const [micAllowed, setMicAllowed] = React.useState<boolean>(true);
   const [recordingInProgress, setRecordingInProgress] = React.useState<boolean>();
   const [showReleaseText, setShowReleaseText] = React.useState<boolean>(false);
-  const [showShortRecordingText, setShowShortRecordingText] = React.useState<boolean>(false);
   const [longPressTriggered, setLongPressTriggered] = React.useState<boolean>(false);
 
   // Handlers
@@ -137,19 +134,10 @@ const MicRecorder = ({
         setMicAllowed(false);
       });
 
-    if (recordingFile) {
-      const file = recordingFile as File;
-      if (file.size) {
-        const audio = new Audio(URL.createObjectURL(file));
-        audio.load();
-        const listenerFn = async () => {
-          audio.removeEventListener('loadedmetadata', listenerFn);
-          getDuration(audio, true).then(result => {
-            timerRef.current?.setTime(result * 1000);
-          });
-        };
-        audio.addEventListener('loadedmetadata', listenerFn);
-      }
+    // Always start with timer reset to 0 for a fresh recording UI,
+    // regardless of any previously saved recording file.
+    if (timerRef.current) {
+      timerRef.current?.setTime(0);
     }
 
     return () => {
@@ -168,7 +156,6 @@ const MicRecorder = ({
         .startRecording()
         .then(() => {
           setRecordingInProgress(true);
-          setShowShortRecordingText(false);
           if (timerRef.current) {
             timerRef.current.reset();
             timerRef.current?.setTime(0);
@@ -184,9 +171,6 @@ const MicRecorder = ({
       recordingService.current.stopRecording();
       setRecordingInProgress(false);
       if (timerRef.current) {
-        if (timerRef.current.getTime() / 1000 < 2) {
-          setShowShortRecordingText(true);
-        }
         timerRef.current.stop();
       }
     }
@@ -209,7 +193,6 @@ const MicRecorder = ({
       timeout.current = setTimeout(() => {
         setShowReleaseText(true);
         setLongPressTriggered(true);
-        setShowShortRecordingText(false);
       }, delay);
     },
     [delay],
@@ -232,21 +215,11 @@ const MicRecorder = ({
   return (
     <MicRecorderContainer className={className}>
       <MicRecorderTimerReleaseTextContainer>
-        {!showShortRecordingText
-          && (
-            <MicRecorderTextP
-              show={showReleaseText}
-            >
-              {recordingInProgress ? t('recordingsIntroduction:releaseButtonStop') : t('recordingsIntroduction:releaseButtonStart')}
-            </MicRecorderTextP>
-          )}
-        <RecordErrorModal
-          isOpen={showShortRecordingText}
-          modalTitle="Oops."
-          onConfirm={handleStartRecording}
+        <MicRecorderTextP
+          show={showReleaseText}
         >
-          {t('recordingsIntroduction:shortRecording')}
-        </RecordErrorModal>
+          {recordingInProgress ? t('recordingsIntroduction:releaseButtonStop') : t('recordingsIntroduction:releaseButtonStart')}
+        </MicRecorderTextP>
       </MicRecorderTimerReleaseTextContainer>
       <MicRecorderTimerContainer>
         <Timer

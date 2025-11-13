@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 // Assets
-// Logo assets intentionally not used here to remove the demo app logo from the header
+
 
 // Styles
 import {

@@ -271,7 +271,6 @@ export const WelcomeNote = styled.span<WelcomeNoteProps>`
   font-family: "Source Sans Pro";
   font-size: 12px;
   line-height: 1.42;
-  font-style: italic;
   font-weight: ${({ isBold }) => (isBold ? 700 : 400)};
   max-width: 100%;
   margin: 7px 20px 0;

@@ -64,29 +64,18 @@
     "fileSizeTooBig": "Por favor, suba un archivo de menos de 5 MB",
     "fileRequired": "Por favor, suba un archivo"
   },
-  "recordingsListen": {
-    "recordCough": {
-      "header": "Grabe su tos",
-      "intro1": "Por favor, tosa lejos de las personas a tu alrededor. Si se siente enfermo, por favor siéntese.",
-      "intro2": "En un ambiente silencioso, por favor presione el botón de grabar y tosa intencionalmente de 3 a 5 veces."
-    },
-    "title": "Grabación completada",
-    "subtitle": "Siéntase libre de escuchar la grabación!",
-    "next": "Continuar",
-    "retake": "Retomar"
-  },
   "predictionResult": {
     "processingTitle": "Procesando...",
     "note": "Nota importante:",
     "result": "Resultados",
     "resultModal": "<strong>Nota importante: </strong>Esta aplicación no predice tu estado de COVID-19 ni diagnostica ninguna enfermedad, trastorno u otra condición de salud. Virufy está llevando a cabo una investigación y utilizará la información que proporciones únicamente para dicha investigación. Virufy no sustituye a un médico y le recuerda que es su responsabilidad buscar el consejo de su médico.",
     "resultNotDetected": "COVID-19: NO DETECTADO",
-    "resultNotDetectedText": "Su voz no parece tener indicadores de COVID-19. <strong> Continúe tomando las medidas adecuadas </strong> según los consejos de su profesional sanitario o del organismo regulador correspondiente y vuelva a evaluarse en nuestra aplicación a diario.",
+    "resultNotDetectedText": "Su voz no parece tener indicadores de COVID-19. <strong>Continúe tomando las medidas adecuadas</strong> según los consejos de su profesional sanitario o del organismo regulador correspondiente y vuelva a evaluarse en nuestra aplicación a diario.",
     "resultNotAnalyze": "Incapaz de analizar la tos",
     "resultModalDummy": "<strong>Nota importante:</strong> Esta aplicación es sólo para fines de demostración y no proporciona una predicción verdadera. Por favor, visite el Estudio Virufy para contribuir con su tos.",
-    "resultNotAnalyzeText": "Nuestro algoritmo no es capaz de determinar su estado COVID-19. <strong>PPor favor, envíe otra tos</strong>.",
+    "resultNotAnalyzeText": "Nuestro algoritmo no es capaz de determinar su estado COVID-19. <strong>Por favor, envíe otra tos</strong>.",
     "resultDetectedDummy": "COVID-19: DETECTADO <br/>(Ejemplo ficticio)",
-    "resultDetectedText": "Su voz tiene indicadores de posible COVID-19.  <strong>Póngase en contacto con su profesional sanitario</strong> y tome precauciones adicionales.",
+    "resultDetectedText": "Su voz tiene indicadores de posible COVID-19. <strong>Póngase en contacto con su profesional sanitario</strong> y tome precauciones adicionales.",
     "testForCovid": "Test for COVID-19",
     "resultDetected": "COVID-19: DETECTADO",
     "predictionResultTitle": "Resultado de la Predicción",
