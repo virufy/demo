@@ -1,3 +1,5 @@
+
+
 import styled from 'styled-components';
 import { ReactComponent as ArrowftSvg } from 'assets/icons/arrowLeft.svg';
 import { ReactComponent as CloseX } from 'assets/icons/closeX.svg';
@@ -52,6 +54,7 @@ export const HeaderContainer = styled.div<{ backgroundType?: HeaderType; }>`
 export const TitleContainer = styled.div`
   display:flex;
   flex-direction: column;
+  align-items: center; /* <<< ADD THIS LINE */
 `;
 
 export type LogoSize = 'regular' | 'big';
