@@ -67,7 +67,7 @@
     "processingTitle": "Traitement en cours...",
     "note": "Remarque importante :",
     "result": "Résultats",
-    "resultModal": "<strong>Remarque importante :</strong> Cette application ne prédit pas votre statut COVID-19 et ne diagnostique aucune maladie. Virufy effectue des recherches et utilise uniquement vos informations dans ce cadre. Virufy ne remplace pas un médecin. Consultez un professionnel de santé si nécessaire.",
+      "resultModal": "<strong>Remarque importante :</strong> Cette application ne prédit pas votre statut COVID-19 et ne diagnostique aucune maladie. Virufy effectue des recherches et utilise uniquement vos informations dans ce cadre. Virufy ne remplace pas un médecin. Consultez un professionnel de santé si nécessaire.",
     "resultNotDetected": "COVID-19 : NON DÉTECTÉ",
     "resultNotDetectedText": "Votre voix ne semble pas indiquer de signes de COVID-19. <strong>Continuez à suivre les mesures appropriées</strong> et réévaluez-vous quotidiennement avec notre application.",
     "resultDetected": "COVID-19 : DÉTECTÉ",
