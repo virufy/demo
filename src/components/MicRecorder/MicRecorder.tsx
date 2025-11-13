@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next';
 // Utils
 import RecorderService from 'helper/audio/RecorderService';
 import FileHelper from 'helper/fileHelper';
+// eslint-disable-next-line
 import { getDuration } from 'helper/getDuration';
 
 // Images
