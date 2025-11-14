@@ -1,5 +1,7 @@
+// header.ts
 import React, { createContext, useContext, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 // Assets
 
@@ -72,6 +74,8 @@ const Header = () => {
     title, subtitle, type, doGoBack,
   } = useContext(HeaderContext);
   const location = useLocation();
+  const { i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
 
   if (location.pathname === '/welcome' || location.pathname === '/welcome/step-2') return null;
 
@@ -80,10 +84,25 @@ const Header = () => {
       {(doGoBack && title && !subtitle) && <ArrowLefContainer onClick={doGoBack}><CloseLeft /></ArrowLefContainer>}
       {(doGoBack && subtitle) && <ArrowLefContainer onClick={doGoBack}><ArrowLeft /></ArrowLefContainer>}
       <TitleContainer>
-  {(type !== 'noShape' && title && subtitle) && <><Title>{title}</Title> <Subtitle pb={30} colorType={type}>{subtitle}</Subtitle></>}
-  {(type === 'shapeDown' && !title) && <><Subtitle colorType={type}>{subtitle}</Subtitle></>}
-  {(type === 'shapeUp' && !title) && <><Subtitle colorType={type} pb={30} mt={20}>{subtitle}</Subtitle></>}
-        {(type !== 'noShape' && title && !subtitle) && <Title pb={40}>{title}</Title>}
+        {(type !== 'noShape' && title && subtitle) && (
+          <>
+            <Title dir={isArabic ? 'rtl' : undefined}>{title}</Title>
+            <Subtitle dir={isArabic ? 'rtl' : undefined} pb={30} colorType={type}>{subtitle}</Subtitle>
+          </>
+        )}
+        {(type === 'shapeDown' && !title) && (
+          <>
+            <Subtitle dir={isArabic ? 'rtl' : undefined} colorType={type}>{subtitle}</Subtitle>
+          </>
+        )}
+        {(type === 'shapeUp' && !title) && (
+          <>
+            <Subtitle dir={isArabic ? 'rtl' : undefined} colorType={type} pb={30} mt={20}>{subtitle}</Subtitle>
+          </>
+        )}
+        {(type !== 'noShape' && title && !subtitle) && (
+          <Title dir={isArabic ? 'rtl' : undefined} pb={40}>{title}</Title>
+        )}
       </TitleContainer>
     </HeaderContainer>
   );

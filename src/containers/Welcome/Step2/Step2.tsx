@@ -122,12 +122,23 @@ const Step2 = (p: Wizard.StepProps) => {
 
   const lang = watch('language');
 
+  // when language changes, update i18n AND set html lang/dir so CSS and browser layout follow
   React.useEffect(() => {
+    if (!lang) return;
     i18n.changeLanguage(lang);
+    try {
+      const html = document.documentElement;
+      html.lang = lang;
+      html.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    } catch (err) {
+      // ignore in non-browser contexts
+      // console.warn('Could not set html lang/dir', err);
+    }
   }, [i18n, lang]);
 
   return (
-    <WelcomeStyledFormAlternative>
+    /* set dir on top container too so children adopt proper alignment */
+    <WelcomeStyledFormAlternative dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
       <HeaderImageContainer>
         <HeaderImage
           src={HeaderSplash}
@@ -165,7 +176,7 @@ const Step2 = (p: Wizard.StepProps) => {
       />
 
       <WelcomeContent>
-        <WelcomeNote>
+        <WelcomeNote style={{ textAlign: i18n.language === 'ar' ? 'right' : 'left' }}>
           <Trans i18nKey="main:virufyInfo">
             Virufy is a robust <strong>501(c)(3) nonprofit</strong> company with <strong>250 volunteers/staff</strong> and <strong>50 partner organizations</strong> including Amazon Web Services, Stanford COVID-19 Response Innovation Lab, and One Young World. We've developed a smartphone app which leverages AI to analyze the signature of recorded coughs to determine disease risk status (<strong>e.g. TB, COPD, COVID-19, flu</strong>). Virufy is supported by faculty and alumni from Stanford, MIT, and Harvard.
             <br /><br />
@@ -203,3 +214,4 @@ const Step2 = (p: Wizard.StepProps) => {
 };
 
 export default React.memo(Step2);
+// export default Step2;

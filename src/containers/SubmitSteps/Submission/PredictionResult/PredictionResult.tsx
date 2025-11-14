@@ -1,3 +1,4 @@
+
 // Showing positive egardless of what user submits //
 
 import React from 'react';
@@ -97,6 +98,7 @@ const PredictionResult = () => {
         processing ? (
           <ProcessingContainer>
             {/* Title */}
+            {/* The title here is "processingTitle" not "result" */}
             <Title>
               {t('predictionResult:processingTitle')}
             </Title>
@@ -110,10 +112,12 @@ const PredictionResult = () => {
             (errorCode === 'invalid_access_code')
               ? (
                 <PredictionResultContainer style={isArabic ? { textAlign: 'center' } : undefined}>
-                  <Title>
+                  {/* ADDED dir={isArabic ? 'rtl' : undefined} HERE for the result Title */}
+                  <Title dir={isArabic ? 'rtl' : undefined}>
                     {t('predictionResult:result')}
                   </Title>
-                  <TitleResult color="#FF4444">
+                  {/* ADDED dir={isArabic ? 'rtl' : undefined} HERE for the TitleResult */}
+                  <TitleResult dir={isArabic ? 'rtl' : undefined} color="#FF4444">
                     <Trans i18nKey="predictionResult:resultDetectedDummy" />
                   </TitleResult>
                   <StyledHigh />
@@ -129,13 +133,15 @@ const PredictionResult = () => {
               ) : (
                 <>
                   <PredictionResultContainer style={isArabic ? { textAlign: 'center' } : undefined}>
-                    <Title>
+                    {/* ADDED dir={isArabic ? 'rtl' : undefined} HERE for the result Title */}
+                    <Title dir={isArabic ? 'rtl' : undefined}>
                       {t('predictionResult:result')}
                     </Title>
                     {/* Title, text and image conditional based on range result */}
                     {prediction === 'negative' && (
                       <>
-                        <TitleResult color="#4FDB76">{t('predictionResult:resultNotDetected')}</TitleResult>
+                        {/* ADDED dir={isArabic ? 'rtl' : undefined} HERE for the TitleResult */}
+                        <TitleResult dir={isArabic ? 'rtl' : undefined} color="#4FDB76">{t('predictionResult:resultNotDetected')}</TitleResult>
                         <StyledLow />
                         <IntroText className="instruction" dir={isArabic ? 'rtl' : undefined} style={isArabic ? { textAlign: 'center', marginTop: 12, marginBottom: 24 } : undefined}>
                           <Trans i18nKey="predictionResult:resultNotDetectedText">
@@ -145,7 +151,8 @@ const PredictionResult = () => {
                     )}
                     {prediction === 'unknown' && (
                       <>
-                        <TitleResult>{t('predictionResult:resultNotAnalyze')}</TitleResult>
+                        {/* ADDED dir={isArabic ? 'rtl' : undefined} HERE for the TitleResult */}
+                        <TitleResult dir={isArabic ? 'rtl' : undefined}>{t('predictionResult:resultNotAnalyze')}</TitleResult>
                         <IntroText dir={isArabic ? 'rtl' : undefined} style={isArabic ? { textAlign: 'center', marginTop: 12, marginBottom: 24 } : undefined}>
                           <Trans i18nKey="predictionResult:resultNotAnalyzeText">
                             Our algorithm is not able to determine your COVID-19 status.
@@ -156,7 +163,8 @@ const PredictionResult = () => {
                     )}
                     {prediction === 'positive' && (
                       <>
-                        <TitleResult color="#FF4444">{t('predictionResult:resultDetected')}</TitleResult>
+                        {/* ADDED dir={isArabic ? 'rtl' : undefined} HERE for the TitleResult */}
+                        <TitleResult dir={isArabic ? 'rtl' : undefined} color="#FF4444">{t('predictionResult:resultDetected')}</TitleResult>
                         <StyledHigh />
                         <IntroText dir={isArabic ? 'rtl' : undefined} style={isArabic ? { textAlign: 'center', marginTop: 12, marginBottom: 24 } : undefined}>
                           <Trans i18nKey="predictionResult:resultDetectedText">
