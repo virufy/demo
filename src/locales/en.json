@@ -85,5 +85,11 @@
   },
   "footerReportProblems": {
     "message": "Something wrong? Report an error"
+  },
+  "setResult": {
+    "selectResult": "Select Result",
+    "negative": "Negative",
+    "unknown": "Unknown",
+    "positive": "Positive"
   }
 }
