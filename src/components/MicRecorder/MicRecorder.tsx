@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next';
 // Utils
 import RecorderService from 'helper/audio/RecorderService';
 import FileHelper from 'helper/fileHelper';
+// eslint-disable-next-line
 import { getDuration } from 'helper/getDuration';
 
 // Images
@@ -133,19 +134,10 @@ const MicRecorder = ({
         setMicAllowed(false);
       });
 
-    if (recordingFile) {
-      const file = recordingFile as File;
-      if (file.size) {
-        const audio = new Audio(URL.createObjectURL(file));
-        audio.load();
-        const listenerFn = async () => {
-          audio.removeEventListener('loadedmetadata', listenerFn);
-          getDuration(audio, true).then(result => {
-            timerRef.current?.setTime(result * 1000);
-          });
-        };
-        audio.addEventListener('loadedmetadata', listenerFn);
-      }
+    // Always start with timer reset to 0 for a fresh recording UI,
+    // regardless of any previously saved recording file.
+    if (timerRef.current) {
+      timerRef.current?.setTime(0);
     }
 
     return () => {

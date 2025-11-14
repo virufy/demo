@@ -13,6 +13,11 @@ import { IntroductionText } from 'containers/Welcome/style';
 export const ProcessingContainer = styled.div`
   margin: 0px;
   padding: 0px;
+  /* Add centering for processing state as well */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center children horizontally */
+  width: 100%; /* Ensure it spans full width */
 `;
 
 export const Title = styled.h1`
@@ -22,15 +27,15 @@ export const Title = styled.h1`
   font-size: 30px;
   line-height: 48px;
   color: ${props => props.theme.colors.darkBlack};
-  text-align: center;
-  margin: 46px auto 0px;
+  text-align: center; /* This is already good for text inside */
+  margin: 46px auto 0px auto; /* Ensure left/right margins are auto to center the block */
 `;
 
 export const ImageProcessing = styled(ProcessingSVG)`
   width: 100%;
   height: 371px;
   display: block;
-  margin-top: 69px;
+  margin: 69px auto 0px auto; /* Add auto for horizontal centering */
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     width: 100%;
@@ -40,6 +45,10 @@ export const ImageProcessing = styled(ProcessingSVG)`
 export const PredictionResultContainer = styled.div`
   margin: 0px;
   padding: 0px;
+  display: flex; /* Make it a flex container */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally along the cross-axis */
+  width: 100%; /* Ensure it takes full available width */
 `;
 
 export const TitleResult = styled.h1<{ color?: string; }>`
@@ -49,8 +58,8 @@ export const TitleResult = styled.h1<{ color?: string; }>`
   font-size: 22px;
   line-height: 28px;
   color: ${({ theme, color }) => (color || theme.colors.mineShaft)};
-  text-align: center;
-  margin: 44px 0px 10px 0px;
+  text-align: center; /* This is already good for text inside */
+  margin: 44px auto 10px auto; /* Change left/right margin to auto to center the block */
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     text-align: center;
@@ -71,6 +80,7 @@ export const LikelihoodText = styled.div`
 
   text-align: center;
   white-space: nowrap;
+  margin: 0 auto; /* Center the block itself */
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     width: fit-content;
@@ -85,12 +95,14 @@ export const LikelihoodPercentageText = styled.span`
   font-size: 24px;
   line-height: 1.42;
   /* margin-top: 16px; */
+  text-align: center; /* Ensure text inside is centered */
 `;
 
 export const ImagePredictionResult = styled(PredictionResultSVG)`
   width: 100%;
   max-height: 330px;
-  margin-bottom: 43px;
+  margin: 0 auto 43px auto; /* Add auto for horizontal centering */
+  display: block; /* Ensure it's a block to respect margin: auto */
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     max-width: 714px;
@@ -101,7 +113,8 @@ export const ImagePredictionResult = styled(PredictionResultSVG)`
 export const VLogo = styled(VLogoSVG)`
   width: 100%;
   max-height: 195px;
-  margin-bottom: 175px;
+  margin: 0 auto 175px auto; /* Add auto for horizontal centering */
+  display: block; /* Ensure it's a block to respect margin: auto */
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     max-width: 714px;
@@ -114,8 +127,8 @@ export const SubmitText = styled.p`
   font-size: 14px;
   line-height: 20px;
   color: ${props => props.theme.colors.darkGray_70};
-  margin: 0;
-
+  margin: 0 auto; /* Center the block itself */
+  text-align: center; /* Center the text inside */
 `;
 
 export const SubmitError = styled(SubmitText)`
@@ -129,10 +142,11 @@ export const SubmitError = styled(SubmitText)`
 
 export const IntroText = styled(IntroductionText)`
   max-width: 100%;
-  margin: 0px auto 36px auto;
+  margin: 0px auto 24px auto; /* Ensure left/right margin is auto to center the block */
   padding-left: 20px;
   padding-right: 20px;
   font-size: 14px;
+  text-align: center; /* Ensure text inside is centered */
 
   >strong{
     font-weight: 600;
@@ -150,11 +164,11 @@ export const IntroText = styled(IntroductionText)`
 `;
 
 export const StyledLow = styled(LowSVG)`
-  margin: 37px auto -20px;
+  margin: 37px auto -20px auto; /* Ensure left/right margin is auto to center the SVG */
   display: block;
 `;
 
 export const StyledHigh = styled(HighSVG)`
-  margin: 37px auto -20px;
+  margin: 37px auto -20px auto; /* Ensure left/right margin is auto to center the SVG */
   display: block;
 `;

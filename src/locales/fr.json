@@ -63,22 +63,11 @@
     "fileSizeTooBig": "Veuillez téléverser un fichier de moins de 5 Mo",
     "fileRequired": "Veuillez téléverser un fichier"
   },
-  "recordingsListen": {
-    "recordCough": {
-      "header": "Enregistrer votre toux",
-      "intro1": "Toussez loin des autres ! Asseyez-vous si vous vous sentez malade.",
-      "intro2": " Dans un environnement calme, appuyez sur enregistrer et toussez intentionnellement 3 à 5 fois."
-    },
-    "title": "Téléversement terminé",
-    "subtitle": "Écoutez votre enregistrement si vous le souhaitez.",
-    "next": "Continuer",
-    "retake": "Reprendre"
-  },
   "predictionResult": {
     "processingTitle": "Traitement en cours...",
     "note": "Remarque importante :",
     "result": "Résultats",
-    "resultModal": "<strong>Remarque importante :</strong> Cette application ne prédit pas votre statut COVID-19 et ne diagnostique aucune maladie. Virufy effectue des recherches et utilise uniquement vos informations dans ce cadre. Virufy ne remplace pas un médecin. Consultez un professionnel de santé si nécessaire.",
+      "resultModal": "<strong>Remarque importante :</strong> Cette application ne prédit pas votre statut COVID-19 et ne diagnostique aucune maladie. Virufy effectue des recherches et utilise uniquement vos informations dans ce cadre. Virufy ne remplace pas un médecin. Consultez un professionnel de santé si nécessaire.",
     "resultNotDetected": "COVID-19 : NON DÉTECTÉ",
     "resultNotDetectedText": "Votre voix ne semble pas indiquer de signes de COVID-19. <strong>Continuez à suivre les mesures appropriées</strong> et réévaluez-vous quotidiennement avec notre application.",
     "resultDetected": "COVID-19 : DÉTECTÉ",

@@ -2,8 +2,8 @@
 import React from 'react';
 
 interface BeforeInstallPromptEvent extends Event {
-  prompt: () => void;
-  userChoice: Promise<string>;
+  prompt: () => Promise<void>;
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
 
 declare global {
@@ -26,13 +26,6 @@ const usePWAHelpers = (buttonId: string) => {
     const beforeInstallPromptFn = function (e: BeforeInstallPromptEvent) {
       e.preventDefault();
       deferredInstallPromptRef.current = e;
-
-      const installButton = document.getElementById(buttonId);
-      if (installButton) {
-        installButton.addEventListener('click', () => {
-          e.prompt();
-        });
-      }
     };
     window.addEventListener('beforeinstallprompt', beforeInstallPromptFn as EventListener);
 
@@ -62,13 +55,21 @@ const usePWAHelpers = (buttonId: string) => {
     }
   }, []);
 
-  const handlePrompt = React.useCallback(() => {
+  const handlePrompt = React.useCallback(async () => {
     if (deferredInstallPromptRef.current) {
-      return deferredInstallPromptRef.current.userChoice;
+      try {
+        // Show the install prompt
+        await deferredInstallPromptRef.current.prompt();
+        // Return the user's choice
+        const userChoice = await deferredInstallPromptRef.current.userChoice;
+        return userChoice;
+      } catch (error) {
+        console.error('PWA prompt error:', error);
+        return null;
+      }
     }
-    return undefined;
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [deferredInstallPromptRef.current]);
+    return null;
+  }, []);
 
   return {
     isInstalled,

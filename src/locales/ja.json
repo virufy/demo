@@ -64,17 +64,7 @@
     "fileRequired": "ファイルをアップロードしてください",
     "uploadFile": "ファイルをアップロードする"
   },
-  "recordingsListen": {
-    "recordCough": {
-      "header": "咳を録音する",
-      "intro1": "咳をするときは、周りの人に迷惑をかけないようにしてください。体調が悪いときは座ってください。",
-      "intro2": "静かな環境で、録音ボタンを押して、意図的に3～5回程度の咳をしてください。"
-    },
-    "title": "アップロード完了",
-    "subtitle": "ご自由にお聴きください。",
-    "next": "続ける",
-    "retake": "再試行"
-  },
+
   "predictionResult": {
     "processingTitle": "診断中...",
     "note": "注意：",
