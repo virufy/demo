@@ -214,3 +214,4 @@ const Step2 = (p: Wizard.StepProps) => {
 };
 
 export default React.memo(Step2);
+// export default Step2;
