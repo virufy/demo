@@ -17,7 +17,7 @@ import { scrollToTop } from 'helper/scrollHelper';
 
 // Styles
 import WizardButtons from 'components/WizardButtons';
-import { getDiseaseLabel } from 'data/diseases';
+import { DISEASES } from 'data/diseases';
 import { getDiseaseIcon } from './diseaseIcons';
 import virufyLogo from 'assets/virufyLogo.png';
 import {
@@ -90,7 +90,24 @@ const PredictionResult = () => {
   // States
   const [processing, setProcessing] = React.useState<boolean>(true);
   const [prediction, setPrediction] = React.useState<DemoResult>('unknown');
-  const [diseaseLabel, setDiseaseLabel] = React.useState<string>(getDiseaseLabel(null));
+  const getDiseaseTranslationKey = (diseaseId: string): string => {
+    const keyMap: Record<string, string> = {
+      'covid-19': 'diseaseCovid19',
+      'rsv': 'diseaseRsv',
+      'asthma': 'diseaseAsthma',
+      'flu': 'diseaseFlu',
+      'pediatric-asthma': 'diseasePediatricAsthma',
+    };
+    return keyMap[diseaseId] || diseaseId;
+  };
+
+  const getTranslatedDiseaseLabel = (id: string | null | undefined): string => {
+    const normalized = id ?? 'covid-19';
+    const disease = DISEASES.find((d) => d.id === normalized);
+    return t(`setResult:${getDiseaseTranslationKey(normalized)}`, { defaultValue: disease?.label ?? 'COVID-19' });
+  };
+
+  const [diseaseLabel, setDiseaseLabel] = React.useState<string>(getTranslatedDiseaseLabel(null));
   const [selectedDiseaseId, setSelectedDiseaseId] = React.useState<string>('covid-19');
   const submitError = null;
 
@@ -112,7 +129,7 @@ const PredictionResult = () => {
     const selectedDisease = localStorage.getItem('predictionDisease') || 'covid-19';
     setPrediction(predictionResult);
     setSelectedDiseaseId(selectedDisease);
-    setDiseaseLabel(getDiseaseLabel(selectedDisease));
+    setDiseaseLabel(getTranslatedDiseaseLabel(selectedDisease));
     await new Promise(resolve => setTimeout(resolve, 2000));
     setProcessing(false);
   };
@@ -163,7 +180,7 @@ const PredictionResult = () => {
 
       return {
         id,
-        label: getDiseaseLabel(id),
+        label: getTranslatedDiseaseLabel(id),
         percent,
         status,
       };

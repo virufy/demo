@@ -109,6 +109,11 @@
       "selectResult": "اختر النتيجة",
       "negative": "سلبي",
       "unknown": "غير معروف",
-      "positive": "إيجابي"
+      "positive": "إيجابي",
+      "diseaseCovid19": "كوفيد-19",
+      "diseaseRsv": "الفيروس المخلوي التنفسي",
+      "diseaseAsthma": "الربو",
+      "diseaseFlu": "الإنفلونزا",
+      "diseasePediatricAsthma": "ربو الأطفال"
     }
   }

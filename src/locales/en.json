@@ -104,6 +104,11 @@
     "selectResult": "Select Result",
     "negative": "Negative",
     "unknown": "Unknown",
-    "positive": "Positive"
+    "positive": "Positive",
+    "diseaseCovid19": "COVID-19",
+    "diseaseRsv": "RSV",
+    "diseaseAsthma": "Asthma",
+    "diseaseFlu": "Flu",
+    "diseasePediatricAsthma": "Pediatric Asthma"
   }
 }

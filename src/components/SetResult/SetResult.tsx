@@ -43,6 +43,17 @@ const SetResult = () => {
     console.log(`Selected result: ${selectedValue}`);
   };
 
+  const getDiseaseTranslationKey = (diseaseId: string): string => {
+    const keyMap: Record<string, string> = {
+      'covid-19': 'diseaseCovid19',
+      'rsv': 'diseaseRsv',
+      'asthma': 'diseaseAsthma',
+      'flu': 'diseaseFlu',
+      'pediatric-asthma': 'diseasePediatricAsthma',
+    };
+    return keyMap[diseaseId] || diseaseId;
+  };
+
   return (
     // set dir so browser aligns select and label for Arabic automatically
     <div className="set-result" dir={i18n.language === "ar" ? "rtl" : "ltr"}>
@@ -56,14 +67,14 @@ const SetResult = () => {
         <StyledSelector id="disease" value={disease} onChange={handleDiseaseChange}>
           {DISEASES.filter((d) => !d.group).map((d) => (
             <option key={d.id} value={d.id}>
-              {d.label}
+              {t(`setResult:${getDiseaseTranslationKey(d.id)}`, { defaultValue: d.label })}
             </option>
           ))}
           {DISEASES.some((d) => d.group === 'Pediatric') && (
             <optgroup label={t('setResult:pediatricSection', { defaultValue: 'Pediatric' })}>
               {DISEASES.filter((d) => d.group === 'Pediatric').map((d) => (
                 <option key={d.id} value={d.id}>
-                  {d.label}
+                  {t(`setResult:${getDiseaseTranslationKey(d.id)}`, { defaultValue: d.label })}
                 </option>
               ))}
             </optgroup>
