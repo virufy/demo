@@ -104,6 +104,8 @@
       "unknown": "غير معروف"
     },
     "setResult": {
+      "selectDisease": "اختر المرض",
+      "pediatricSection": "أمراض الأطفال",
       "selectResult": "اختر النتيجة",
       "negative": "سلبي",
       "unknown": "غير معروف",

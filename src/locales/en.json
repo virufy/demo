@@ -99,6 +99,8 @@
   },
   
   "setResult": {
+    "selectDisease": "Select Disease",
+    "pediatricSection": "Pediatric",
     "selectResult": "Select Result",
     "negative": "Negative",
     "unknown": "Unknown",
