@@ -28,6 +28,7 @@ import {
   IntroText,
   ResultCard,
   CardTitle,
+  PercentageDisplay,
   CardBodyText,
   SectionTitle,
   DiseaseList,
@@ -238,6 +239,10 @@ const PredictionResult = () => {
                   </span>
                 </span>
               </CardTitle>
+
+              <PercentageDisplay color={GAUGE_COLORS[riskKey]}>
+                {mainPercent}%
+              </PercentageDisplay>
 
               <GaugeWrap aria-label="risk-gauge">
                 <svg width="320" height="170" viewBox="0 0 200 120" role="img">

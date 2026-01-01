@@ -207,6 +207,17 @@ export const CardTitle = styled.div`
   margin-bottom: 12px;
 `;
 
+export const PercentageDisplay = styled.div<{ color: string }>`
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 1.2;
+  color: ${({ color }) => color};
+  text-align: center;
+  margin: 8px 0 16px 0;
+`;
+
 export const RiskText = styled.div<{ color?: string }>`
   font-family: 'Open Sans';
   font-style: normal;
