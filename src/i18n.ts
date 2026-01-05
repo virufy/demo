@@ -85,7 +85,7 @@ i18n
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     resources: locales,
-    ns: ['main', 'setResult', 'footerReportProblems'], // <-- IMPORTANT: List all your namespaces here
+    ns: ['main', 'setResult', 'footerReportProblems', 'predictionResult'],
     missingKeyHandler: false,
 
     fallbackLng: 'en',
