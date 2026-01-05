@@ -16,8 +16,11 @@ export const getDiseaseIcon = (
   if (diseaseId === 'adult-flu' || diseaseId === 'pediatric-flu') {
     return FluIcon;
   }
-  if (diseaseId === 'pediatric-rsv') {
+  if (diseaseId === 'adult-rsv' || diseaseId === 'pediatric-rsv') {
     return RsvIcon;
+  }
+  if (diseaseId === 'adult-asthma') {
+    return AsthmaIcon;
   }
   if (diseaseId === 'pediatric-asthma') {
     return PediatricAsthmaIcon;

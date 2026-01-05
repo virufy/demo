@@ -94,6 +94,8 @@ const PredictionResult = () => {
     const keyMap: Record<string, string> = {
       'adult-covid-19': 'diseaseCovid19',
       'adult-flu': 'diseaseFlu',
+      'adult-rsv': 'diseaseRsv',
+      'adult-asthma': 'diseaseAsthma',
       'pediatric-covid-19': 'diseaseCovid19',
       'pediatric-flu': 'diseaseFlu',
       'pediatric-rsv': 'diseaseRsv',
@@ -172,6 +174,8 @@ const PredictionResult = () => {
   const otherPercents: Record<string, number> = {
     'adult-covid-19': 50,
     'adult-flu': 40,
+    'adult-rsv': 60,
+    'adult-asthma': 45,
     'pediatric-covid-19': 50,
     'pediatric-flu': 40,
     'pediatric-rsv': 60,
