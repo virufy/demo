@@ -47,6 +47,8 @@ const SetResult = () => {
     const keyMap: Record<string, string> = {
       'adult-covid-19': 'diseaseCovid19',
       'adult-flu': 'diseaseFlu',
+      'adult-rsv': 'diseaseRsv',
+      'adult-asthma': 'diseaseAsthma',
       'pediatric-covid-19': 'diseaseCovid19',
       'pediatric-flu': 'diseaseFlu',
       'pediatric-rsv': 'diseaseRsv',
