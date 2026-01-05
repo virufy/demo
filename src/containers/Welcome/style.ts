@@ -409,6 +409,7 @@ export const HeaderImageContainer = styled.div`
   min-width: 375px;
   height: 325px;
   margin-bottom: 30px;
+  overflow: visible;
 
 @media screen and (${props => props.theme.breakpoints.tablet}){
   max-width: 768px;
@@ -423,10 +424,17 @@ export const HeaderImage = styled.img`
 export const LogoWhiteBG = styled(LogoSplash)`
   width: 134px;
   height: 177px;
-  margin: auto;
   position: absolute;
-  margin-left: -68%;
   top: 26%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  /* RTL support for Arabic - keep centered */
+  html[dir="rtl"] & {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     width: 212px;

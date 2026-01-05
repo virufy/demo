@@ -2,10 +2,12 @@
 // Showing positive egardless of what user submits //
 
 import React from 'react';
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import usePortal from 'react-useportal';
 // import axios from 'axios';
 import { useHistory } from 'react-router-dom';
+import { useTheme } from 'styled-components';
+import type { ThemeType } from 'theme';
 
 // Header Control
 import useHeaderContext from 'hooks/useHeaderContext';
@@ -15,18 +17,62 @@ import { scrollToTop } from 'helper/scrollHelper';
 
 // Styles
 import WizardButtons from 'components/WizardButtons';
+import { DISEASES, getDiseaseGroup } from 'data/diseases';
+import { getDiseaseIcon } from './diseaseIcons';
+import virufyLogo from 'assets/virufyLogo.png';
 import {
   Title,
   ImageProcessing,
   ProcessingContainer,
   PredictionResultContainer,
-  TitleResult,
-  ImagePredictionResult,
   IntroText,
-  StyledLow,
-  StyledHigh,
+  ResultCard,
+  CardTitle,
+  PercentageDisplay,
+  CardBodyText,
+  SectionTitle,
+  DiseaseList,
+  DiseaseRow,
+  DiseaseRowHeader,
+  BarTrack,
+  BarFill,
+  DividerLine,
+  GaugeWrap,
+  VirufyLogo,
   SubmitError,
 } from './style';
+
+type DemoResult = 'negative' | 'unknown' | 'positive';
+
+const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value));
+
+const getMainDiseasePercent = (result: DemoResult): number => {
+  if (result === 'positive') return 85;
+  if (result === 'negative') return 20;
+  return 55;
+};
+
+type RiskKey = 'high' | 'unknown' | 'low';
+const getRiskKey = (percent: number): RiskKey => {
+  if (percent > 80) return 'high';
+  if (percent < 30) return 'low';
+  return 'unknown';
+};
+
+const polarToCartesian = (cx: number, cy: number, r: number, angleDeg: number) => {
+  const angleRad = (Math.PI / 180) * angleDeg;
+  return {
+    x: cx + r * Math.cos(angleRad),
+    y: cy + r * Math.sin(angleRad),
+  };
+};
+
+const arcPath = (cx: number, cy: number, r: number, startAngle: number, endAngle: number) => {
+  const start = polarToCartesian(cx, cy, r, endAngle);
+  const end = polarToCartesian(cx, cy, r, startAngle);
+  const largeArcFlag = Math.abs(endAngle - startAngle) <= 180 ? '0' : '1';
+  return `M ${start.x} ${start.y} A ${r} ${r} 0 ${largeArcFlag} 0 ${end.x} ${end.y}`;
+};
 
 const PredictionResult = () => {
   // Hooks
@@ -34,6 +80,7 @@ const PredictionResult = () => {
     setDoGoBack, setTitle, setSubtitle, setType,
   } = useHeaderContext();
   const { t, i18n  } = useTranslation();
+  const theme = useTheme() as ThemeType;
   const { Portal } = usePortal({
     bindTo: document && document.getElementById('wizard-buttons') as HTMLDivElement,
   });
@@ -41,9 +88,30 @@ const PredictionResult = () => {
   const isArabic = i18n.language === 'ar';
 
   // States
-  const errorCode = null;
   const [processing, setProcessing] = React.useState<boolean>(true);
-  const [prediction, setPrediction] = React.useState<string>('unknown');
+  const [prediction, setPrediction] = React.useState<DemoResult>('unknown');
+  const getDiseaseTranslationKey = (diseaseId: string): string => {
+    const keyMap: Record<string, string> = {
+      'adult-covid-19': 'diseaseCovid19',
+      'adult-flu': 'diseaseFlu',
+      'adult-rsv': 'diseaseRsv',
+      'adult-asthma': 'diseaseAsthma',
+      'pediatric-covid-19': 'diseaseCovid19',
+      'pediatric-flu': 'diseaseFlu',
+      'pediatric-rsv': 'diseaseRsv',
+      'pediatric-asthma': 'diseaseAsthma',
+    };
+    return keyMap[diseaseId] || diseaseId;
+  };
+
+  const getTranslatedDiseaseLabel = (id: string | null | undefined): string => {
+    const normalized = id ?? 'adult-covid-19';
+    const disease = DISEASES.find((d) => d.id === normalized);
+    return t(`setResult:${getDiseaseTranslationKey(normalized)}`, { defaultValue: disease?.label ?? 'COVID-19' });
+  };
+
+  const [diseaseLabel, setDiseaseLabel] = React.useState<string>(getTranslatedDiseaseLabel(null));
+  const [selectedDiseaseId, setSelectedDiseaseId] = React.useState<string>('adult-covid-19');
   const submitError = null;
 
   React.useEffect(() => {
@@ -60,8 +128,11 @@ const PredictionResult = () => {
 
   // Handlers
   const handleSubmit = async () => {
-		const predictionResult = localStorage.getItem('predictionResult') || 'negative';
+    const predictionResult = (localStorage.getItem('predictionResult') || 'negative') as DemoResult;
+    const selectedDisease = localStorage.getItem('predictionDisease') || 'adult-covid-19';
     setPrediction(predictionResult);
+    setSelectedDiseaseId(selectedDisease);
+    setDiseaseLabel(getTranslatedDiseaseLabel(selectedDisease));
     await new Promise(resolve => setTimeout(resolve, 2000));
     setProcessing(false);
   };
@@ -89,14 +160,89 @@ const PredictionResult = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [processing]);
 
-  // Always positive result hardcoded
-  console.log('errorCode', errorCode);
+  const mainPercent = getMainDiseasePercent(prediction);
+  const riskKey = getRiskKey(mainPercent);
+
+  // Get the selected disease's category (Adult or Pediatric)
+  const selectedCategory = getDiseaseGroup(selectedDiseaseId);
+
+  // Filter diseases to only show those from the selected category
+  const diseaseIds: string[] = DISEASES
+    .filter((d) => d.group === selectedCategory)
+    .map((d) => d.id);
+
+  const otherPercents: Record<string, number> = {
+    'adult-covid-19': 50,
+    'adult-flu': 40,
+    'adult-rsv': 60,
+    'adult-asthma': 45,
+    'pediatric-covid-19': 50,
+    'pediatric-flu': 40,
+    'pediatric-rsv': 60,
+    'pediatric-asthma': 45,
+  };
+
+  const allDiseaseResults = diseaseIds
+    .map((id) => {
+      const percent = id === selectedDiseaseId ? mainPercent : clamp(otherPercents[id] ?? 40, 0, 80);
+      const status: DemoResult = id === selectedDiseaseId
+        ? prediction
+        : (percent < 30 ? 'negative' : 'unknown');
+
+      return {
+        id,
+        label: getTranslatedDiseaseLabel(id),
+        percent,
+        status,
+      };
+    })
+    .sort((a, b) => b.percent - a.percent);
+
+  const statusColor = (status: DemoResult) => {
+    if (status === 'positive') return '#F44';
+    if (status === 'negative') return '#A3A3A3';
+    return '#FDFF8A';
+  };
+
+  const titleSuffix = prediction === 'positive'
+    ? t('predictionResult:statusDetected')
+    : prediction === 'negative'
+      ? t('predictionResult:statusNotDetected')
+      : t('predictionResult:statusInconclusive');
+
+  const riskText = riskKey === 'high'
+    ? t('predictionResult:riskHigh')
+    : riskKey === 'low'
+      ? t('predictionResult:riskLow')
+      : t('predictionResult:riskUnknown');
+
+  // Gauge setup
+  const gaugePct = clamp(mainPercent, 0, 100);
+  const needleAngle = -180 + (gaugePct / 100) * 180;
+  const needlePos = polarToCartesian(100, 100, 70, needleAngle);
+
+  const GAUGE_COLORS = {
+    low: '#4FDB76',
+    unknown: '#FDFF8A',
+    high: '#F44',
+  } as const;
+
+  const GAUGE_OUTLINE = theme.colors.mineShaft;
+  const outlineWidth = 20;
+  const colorWidth = 16;
+  const segmentGapDeg = 0;
+  const dividerStrokeWidth = 2;
+  const dividerInnerR = 70 - colorWidth / 2 - 1;
+  const dividerOuterR = 70 + colorWidth / 2 + 1;
+  const capInnerR = 70 - outlineWidth / 2;
+  const capOuterR = 70 + outlineWidth / 2;
 
   return (
     <>
       {
         processing ? (
           <ProcessingContainer>
+            <VirufyLogo src={virufyLogo} alt="Virufy" />
             {/* Title */}
             {/* The title here is "processingTitle" not "result" */}
             <Title>
@@ -107,78 +253,150 @@ const PredictionResult = () => {
             <ImageProcessing />
           </ProcessingContainer>
         ) : (
-          <>
-            {
-            (errorCode === 'invalid_access_code')
-              ? (
-                <PredictionResultContainer style={isArabic ? { textAlign: 'center' } : undefined}>
-                  {/* ADDED dir={isArabic ? 'rtl' : undefined} HERE for the result Title */}
-                  <Title dir={isArabic ? 'rtl' : undefined}>
-                    {t('predictionResult:result')}
-                  </Title>
-                  {/* ADDED dir={isArabic ? 'rtl' : undefined} HERE for the TitleResult */}
-                  <TitleResult dir={isArabic ? 'rtl' : undefined} color="#FF4444">
-                    <Trans i18nKey="predictionResult:resultDetectedDummy" />
-                  </TitleResult>
-                  <StyledHigh />
-                  <IntroText className="instruction"  dir={isArabic ? 'rtl' : undefined} style={isArabic ? { textAlign: 'center', marginTop: 12, marginBottom: 24 } : undefined}>
-                    <Trans i18nKey="predictionResult:resultDetectedText" components={{ strong: <strong className="rtl-chunk" /> }}>
-                      {/* eslint-disable-next-line max-len */}
-                      Your voice has indicators of COVID-19. Please contact your
-                      healthcare professional and take additional precautions.
-                    </Trans>
-                  </IntroText>
-                  <ImagePredictionResult />
-                </PredictionResultContainer>
-              ) : (
-                <>
-                  <PredictionResultContainer style={isArabic ? { textAlign: 'center' } : undefined}>
-                    {/* ADDED dir={isArabic ? 'rtl' : undefined} HERE for the result Title */}
-                    <Title dir={isArabic ? 'rtl' : undefined}>
-                      {t('predictionResult:result')}
-                    </Title>
-                    {/* Title, text and image conditional based on range result */}
-                    {prediction === 'negative' && (
-                      <>
-                        {/* ADDED dir={isArabic ? 'rtl' : undefined} HERE for the TitleResult */}
-                        <TitleResult dir={isArabic ? 'rtl' : undefined} color="#4FDB76">{t('predictionResult:resultNotDetected')}</TitleResult>
-                        <StyledLow />
-                        <IntroText className="instruction" dir={isArabic ? 'rtl' : undefined} style={isArabic ? { textAlign: 'center', marginTop: 12, marginBottom: 24 } : undefined}>
-                          <Trans i18nKey="predictionResult:resultNotDetectedText">
-                          </Trans>
-                        </IntroText>
-                      </>
-                    )}
-                    {prediction === 'unknown' && (
-                      <>
-                        {/* ADDED dir={isArabic ? 'rtl' : undefined} HERE for the TitleResult */}
-                        <TitleResult dir={isArabic ? 'rtl' : undefined}>{t('predictionResult:resultNotAnalyze')}</TitleResult>
-                        <IntroText dir={isArabic ? 'rtl' : undefined} style={isArabic ? { textAlign: 'center', marginTop: 12, marginBottom: 24 } : undefined}>
-                          <Trans i18nKey="predictionResult:resultNotAnalyzeText">
-                            Our algorithm is not able to determine your COVID-19 status.
-                            <strong>Please submit another cough</strong>.
-                          </Trans>
-                        </IntroText>
-                      </>
-                    )}
-                    {prediction === 'positive' && (
-                      <>
-                        {/* ADDED dir={isArabic ? 'rtl' : undefined} HERE for the TitleResult */}
-                        <TitleResult dir={isArabic ? 'rtl' : undefined} color="#FF4444">{t('predictionResult:resultDetected')}</TitleResult>
-                        <StyledHigh />
-                        <IntroText dir={isArabic ? 'rtl' : undefined} style={isArabic ? { textAlign: 'center', marginTop: 12, marginBottom: 24 } : undefined}>
-                          <Trans i18nKey="predictionResult:resultDetectedText">
-                            Your voice has indicators of COVID-19. Please contact your
-                            healthcare professional and take additional precautions.
-                          </Trans>
-                        </IntroText>
-                      </>
-                    )}
-                  </PredictionResultContainer>
-                </>
-              )
-          }
-          </>
+          <PredictionResultContainer style={isArabic ? { textAlign: 'center' } : undefined}>
+            <VirufyLogo src={virufyLogo} alt="Virufy" />
+            <Title dir={isArabic ? 'rtl' : undefined}>
+              {t('predictionResult:result')}
+            </Title>
+
+            <ResultCard>
+              <CardTitle>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: 10 }}>
+                  <span>
+                    {t('predictionResult:cardTitle', { disease: diseaseLabel, status: titleSuffix })}
+                  </span>
+                </span>
+              </CardTitle>
+
+              <PercentageDisplay color={GAUGE_COLORS[riskKey]}>
+                {mainPercent}%
+              </PercentageDisplay>
+
+              <GaugeWrap aria-label="risk-gauge">
+                <svg width="320" height="170" viewBox="0 0 200 120" role="img">
+                  {/* Single outline arc */}
+                  <path
+                    d={arcPath(100, 100, 70, -180, 0)}
+                    stroke={GAUGE_OUTLINE}
+                    strokeWidth={outlineWidth}
+                    fill="none"
+                    strokeLinecap="butt"
+                  />
+
+                  {/* Colored arcs */}
+                  <path
+                    d={arcPath(100, 100, 70, -180 + segmentGapDeg, -120 - segmentGapDeg)}
+                    stroke={GAUGE_COLORS.low}
+                    strokeWidth={colorWidth}
+                    fill="none"
+                    strokeLinecap="butt"
+                  />
+                  <path
+                    d={arcPath(100, 100, 70, -120 + segmentGapDeg, -60 - segmentGapDeg)}
+                    stroke={GAUGE_COLORS.unknown}
+                    strokeWidth={colorWidth}
+                    fill="none"
+                    strokeLinecap="butt"
+                  />
+                  <path
+                    d={arcPath(100, 100, 70, -60 + segmentGapDeg, 0 - segmentGapDeg)}
+                    stroke={GAUGE_COLORS.high}
+                    strokeWidth={colorWidth}
+                    fill="none"
+                    strokeLinecap="butt"
+                  />
+
+                  {/* Thin dividers between segments */}
+                  {([-120, -60] as const).map((angle) => {
+                    const inner = polarToCartesian(100, 100, dividerInnerR, angle);
+                    const outer = polarToCartesian(100, 100, dividerOuterR, angle);
+                    return (
+                      <line
+                        key={angle}
+                        x1={inner.x}
+                        y1={inner.y}
+                        x2={outer.x}
+                        y2={outer.y}
+                        stroke={GAUGE_OUTLINE}
+                        strokeWidth={dividerStrokeWidth}
+                        strokeLinecap="butt"
+                      />
+                    );
+                  })}
+
+                  {/* End-cap outline lines */}
+                  {([-180, 0] as const).map((angle) => {
+                    const inner = polarToCartesian(100, 100, capInnerR, angle);
+                    const outer = polarToCartesian(100, 100, capOuterR, angle);
+                    return (
+                      <line
+                        key={`cap-${angle}`}
+                        x1={inner.x}
+                        y1={inner.y}
+                        x2={outer.x}
+                        y2={outer.y}
+                        stroke={GAUGE_OUTLINE}
+                        strokeWidth={dividerStrokeWidth}
+                        strokeLinecap="butt"
+                      />
+                    );
+                  })}
+
+                  <circle cx={needlePos.x} cy={needlePos.y} r={7} fill={theme.colors.realWhite} stroke={GAUGE_OUTLINE} strokeWidth={3} />
+
+                  {/* Risk text placed at base of arc */}
+                  {(() => {
+                    const lines = riskText.split('\n');
+                    const fill = prediction === 'positive' ? '#F44' : theme.colors.mineShaft;
+                    return (
+                      <text
+                        x={100}
+                        y={80}
+                        textAnchor="middle"
+                        fontFamily="Open Sans"
+                        fontWeight={400}
+                        fontSize={20}
+                        fill={fill}
+                      >
+                        <tspan x={100} dy={0}>{lines[0]}</tspan>
+                        {lines[1] ? <tspan x={100} dy={22}>{lines[1]}</tspan> : null}
+                      </text>
+                    );
+                  })()}
+                </svg>
+              </GaugeWrap>
+
+              <CardBodyText>
+                {t('predictionResult:analysisSummary', { percent: mainPercent, disease: diseaseLabel })}
+              </CardBodyText>
+            </ResultCard>
+
+            <DividerLine />
+
+            <SectionTitle>
+              {t('predictionResult:screeningResultsTitle')}
+            </SectionTitle>
+
+            <DiseaseList>
+              {allDiseaseResults.map((d) => (
+                <DiseaseRow key={d.id}>
+                  <DiseaseRowHeader>
+                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 10 }}>
+                      {(() => {
+                        const Icon = getDiseaseIcon(d.id);
+                        return Icon ? <Icon width={20} height={20} aria-hidden focusable={false} /> : null;
+                      })()}
+                      <span>{d.label}</span>
+                    </span>
+                    <span>{d.percent}%</span>
+                  </DiseaseRowHeader>
+                  <BarTrack>
+                    <BarFill widthPct={d.percent} color={statusColor(d.status)} />
+                  </BarTrack>
+                </DiseaseRow>
+              ))}
+            </DiseaseList>
+          </PredictionResultContainer>
         )
       }
       {/* Bottom Buttons */}
@@ -187,12 +405,12 @@ const PredictionResult = () => {
           !processing && (
             <>
               <IntroText className="instruction" dir={i18n.language === 'ar' ? 'rtl' : undefined}>
-                <Trans i18nKey="predictionResult:resultModalDummy" components={{ strong: <strong className="rtl-chunk" /> }}>
-                </Trans>
+                <strong>{t('predictionResult:note')}</strong>{' '}
+                {t('predictionResult:disclaimerText', { disease: diseaseLabel })}
               </IntroText>
               <WizardButtons
                 invert
-                leftLabel={t('predictionResult:nextButton')}
+                leftLabel={t('predictionResult:returnHome')}
                 leftHandler={handleReturnMain}
               />
             </>
