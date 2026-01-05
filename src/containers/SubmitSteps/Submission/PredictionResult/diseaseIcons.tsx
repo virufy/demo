@@ -9,6 +9,20 @@ import { ReactComponent as PediatricAsthmaIcon } from 'assets/icons/disease-pedi
 export const getDiseaseIcon = (
   diseaseId: string,
 ): React.ComponentType<React.SVGProps<SVGSVGElement>> | null => {
+  // Map disease IDs to icons (handle both adult and pediatric versions)
+  if (diseaseId === 'adult-covid-19' || diseaseId === 'pediatric-covid-19') {
+    return CovidIcon;
+  }
+  if (diseaseId === 'adult-flu' || diseaseId === 'pediatric-flu') {
+    return FluIcon;
+  }
+  if (diseaseId === 'pediatric-rsv') {
+    return RsvIcon;
+  }
+  if (diseaseId === 'pediatric-asthma') {
+    return PediatricAsthmaIcon;
+  }
+  // Legacy support for old IDs
   switch (diseaseId) {
     case 'covid-19':
       return CovidIcon;
@@ -18,8 +32,6 @@ export const getDiseaseIcon = (
       return RsvIcon;
     case 'flu':
       return FluIcon;
-    case 'pediatric-asthma':
-      return PediatricAsthmaIcon;
     default:
       return null;
   }

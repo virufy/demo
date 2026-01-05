@@ -45,11 +45,12 @@ const SetResult = () => {
 
   const getDiseaseTranslationKey = (diseaseId: string): string => {
     const keyMap: Record<string, string> = {
-      'covid-19': 'diseaseCovid19',
-      'rsv': 'diseaseRsv',
-      'asthma': 'diseaseAsthma',
-      'flu': 'diseaseFlu',
-      'pediatric-asthma': 'diseasePediatricAsthma',
+      'adult-covid-19': 'diseaseCovid19',
+      'adult-flu': 'diseaseFlu',
+      'pediatric-covid-19': 'diseaseCovid19',
+      'pediatric-flu': 'diseaseFlu',
+      'pediatric-rsv': 'diseaseRsv',
+      'pediatric-asthma': 'diseaseAsthma',
     };
     return keyMap[diseaseId] || diseaseId;
   };
@@ -65,11 +66,15 @@ const SetResult = () => {
           {t("setResult:selectDisease", { defaultValue: "Select Disease" })} :
         </label>
         <StyledSelector id="disease" value={disease} onChange={handleDiseaseChange}>
-          {DISEASES.filter((d) => !d.group).map((d) => (
-            <option key={d.id} value={d.id}>
-              {t(`setResult:${getDiseaseTranslationKey(d.id)}`, { defaultValue: d.label })}
-            </option>
-          ))}
+          {DISEASES.some((d) => d.group === 'Adult') && (
+            <optgroup label={t('setResult:adultSection', { defaultValue: 'Adult' })}>
+              {DISEASES.filter((d) => d.group === 'Adult').map((d) => (
+                <option key={d.id} value={d.id}>
+                  {t(`setResult:${getDiseaseTranslationKey(d.id)}`, { defaultValue: d.label })}
+                </option>
+              ))}
+            </optgroup>
+          )}
           {DISEASES.some((d) => d.group === 'Pediatric') && (
             <optgroup label={t('setResult:pediatricSection', { defaultValue: 'Pediatric' })}>
               {DISEASES.filter((d) => d.group === 'Pediatric').map((d) => (

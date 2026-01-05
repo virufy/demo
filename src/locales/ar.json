@@ -105,6 +105,7 @@
     },
     "setResult": {
       "selectDisease": "اختر المرض",
+      "adultSection": "البالغون",
       "pediatricSection": "أمراض الأطفال",
       "selectResult": "اختر النتيجة",
       "negative": "سلبي",

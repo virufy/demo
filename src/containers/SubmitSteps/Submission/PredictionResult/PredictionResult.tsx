@@ -17,7 +17,7 @@ import { scrollToTop } from 'helper/scrollHelper';
 
 // Styles
 import WizardButtons from 'components/WizardButtons';
-import { DISEASES } from 'data/diseases';
+import { DISEASES, getDiseaseGroup } from 'data/diseases';
 import { getDiseaseIcon } from './diseaseIcons';
 import virufyLogo from 'assets/virufyLogo.png';
 import {
@@ -92,23 +92,24 @@ const PredictionResult = () => {
   const [prediction, setPrediction] = React.useState<DemoResult>('unknown');
   const getDiseaseTranslationKey = (diseaseId: string): string => {
     const keyMap: Record<string, string> = {
-      'covid-19': 'diseaseCovid19',
-      'rsv': 'diseaseRsv',
-      'asthma': 'diseaseAsthma',
-      'flu': 'diseaseFlu',
-      'pediatric-asthma': 'diseasePediatricAsthma',
+      'adult-covid-19': 'diseaseCovid19',
+      'adult-flu': 'diseaseFlu',
+      'pediatric-covid-19': 'diseaseCovid19',
+      'pediatric-flu': 'diseaseFlu',
+      'pediatric-rsv': 'diseaseRsv',
+      'pediatric-asthma': 'diseaseAsthma',
     };
     return keyMap[diseaseId] || diseaseId;
   };
 
   const getTranslatedDiseaseLabel = (id: string | null | undefined): string => {
-    const normalized = id ?? 'covid-19';
+    const normalized = id ?? 'adult-covid-19';
     const disease = DISEASES.find((d) => d.id === normalized);
     return t(`setResult:${getDiseaseTranslationKey(normalized)}`, { defaultValue: disease?.label ?? 'COVID-19' });
   };
 
   const [diseaseLabel, setDiseaseLabel] = React.useState<string>(getTranslatedDiseaseLabel(null));
-  const [selectedDiseaseId, setSelectedDiseaseId] = React.useState<string>('covid-19');
+  const [selectedDiseaseId, setSelectedDiseaseId] = React.useState<string>('adult-covid-19');
   const submitError = null;
 
   React.useEffect(() => {
@@ -126,7 +127,7 @@ const PredictionResult = () => {
   // Handlers
   const handleSubmit = async () => {
     const predictionResult = (localStorage.getItem('predictionResult') || 'negative') as DemoResult;
-    const selectedDisease = localStorage.getItem('predictionDisease') || 'covid-19';
+    const selectedDisease = localStorage.getItem('predictionDisease') || 'adult-covid-19';
     setPrediction(predictionResult);
     setSelectedDiseaseId(selectedDisease);
     setDiseaseLabel(getTranslatedDiseaseLabel(selectedDisease));
@@ -160,14 +161,20 @@ const PredictionResult = () => {
   const mainPercent = getMainDiseasePercent(prediction);
   const riskKey = getRiskKey(mainPercent);
 
-  const diseaseIds: string[] = ['covid-19', 'asthma', 'rsv', 'flu'];
-  if (selectedDiseaseId === 'pediatric-asthma') diseaseIds.push('pediatric-asthma');
+  // Get the selected disease's category (Adult or Pediatric)
+  const selectedCategory = getDiseaseGroup(selectedDiseaseId);
+
+  // Filter diseases to only show those from the selected category
+  const diseaseIds: string[] = DISEASES
+    .filter((d) => d.group === selectedCategory)
+    .map((d) => d.id);
 
   const otherPercents: Record<string, number> = {
-    'covid-19': 50,
-    asthma: 20,
-    rsv: 60,
-    flu: 40,
+    'adult-covid-19': 50,
+    'adult-flu': 40,
+    'pediatric-covid-19': 50,
+    'pediatric-flu': 40,
+    'pediatric-rsv': 60,
     'pediatric-asthma': 45,
   };
 
