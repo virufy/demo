@@ -55,6 +55,17 @@ export function register(config?: Config) {
         // Is not localhost. Just register service worker
         registerValidSW(swUrl, config);
       }
+
+      // Periodically check for service worker updates (every 5 minutes)
+      setInterval(() => {
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.getRegistration().then(registration => {
+            if (registration) {
+              registration.update();
+            }
+          });
+        }
+      }, 5 * 60 * 1000); // Check every 5 minutes
     });
   }
 }
@@ -71,13 +82,8 @@ function registerValidSW(swUrl: string, config?: Config) {
         installingWorker.onstatechange = () => {
           if (installingWorker.state === 'installed') {
             if (navigator.serviceWorker.controller) {
-              // At this point, the updated precached content has been fetched,
-              // but the previous service worker will still serve the older
-              // content until all client tabs are closed.
-              console.log(
-                'New content is available and will be used when all '
-                  + 'tabs for this page are closed. See https://cra.link/PWA.',
-              );
+              // New service worker is available
+              console.log('New content is available. Reloading...');
 
               // Execute callback
               if (config && config.onUpdate) {
@@ -93,6 +99,11 @@ function registerValidSW(swUrl: string, config?: Config) {
               if (config && config.onSuccess) {
                 config.onSuccess(registration);
               }
+            }
+          } else if (installingWorker.state === 'activated') {
+            // Service worker activated, reload the page
+            if (navigator.serviceWorker.controller) {
+              window.location.reload();
             }
           }
         };
